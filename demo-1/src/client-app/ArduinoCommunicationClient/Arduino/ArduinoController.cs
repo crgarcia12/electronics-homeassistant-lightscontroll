@@ -1,6 +1,6 @@
 ﻿using System;
 using System.IO.Ports;
-
+using System.Threading;
 
 namespace ArduinoCommunicationClient
 {
@@ -8,14 +8,17 @@ namespace ArduinoCommunicationClient
     {
         private readonly SerialPort serialPort;
         private object serializerLock = new object();
+        Action<string> printDebugMessageAction;
 
-        public ArduinoController()
+        public ArduinoController(Action<string> printDebugMessageAction)
         {
-            serialPort = new SerialPort("COM6", 9600);
-            serialPort.DataBits = 8;
-            serialPort.StopBits = StopBits.One;
-            serialPort.Handshake = Handshake.None;
-            serialPort.Parity = Parity.None;
+            this.serialPort = new SerialPort("COM3", 9600);
+            this.serialPort.DataBits = 8;
+            this.serialPort.StopBits = StopBits.One;
+            this.serialPort.Handshake = Handshake.None;
+            this.serialPort.Parity = Parity.None;
+
+            this.printDebugMessageAction = printDebugMessageAction;
         }
 
         public void SendCommand(string command)
@@ -24,12 +27,34 @@ namespace ArduinoCommunicationClient
             {
                 try
                 {
+
                     serialPort.Open();
-                    serialPort.WriteLine(command);
-                    string confirmation = serialPort.ReadLine();
-                    if (command != confirmation)
+                    
+                    // Send command
+                    serialPort.Write(command);
+
+                    string expectedConfirmationMessage = "confirm:" + command;
+                    bool gotConfirmation = false;
+                    while(!gotConfirmation)
                     {
-                        throw new Exception($"Trying to execute '{command}'. Confirmationwas '{confirmation}'");
+                        Thread.Sleep(500);
+                        string confirmation = serialPort.ReadExisting();
+                        gotConfirmation = true;
+
+                        // Maybe it was just a dbg message, so print it and wait for the next one
+                        printDebugMessageAction(confirmation);
+                        //if (confirmation.Contains("[DBG]"))
+                        //{
+                        //    printDebugMessageAction(confirmation);
+                        //}
+                        //else if (expectedConfirmationMessage == confirmation)
+                        //{
+                        //    gotConfirmation = true;
+                        //}
+                        //else
+                        //{ 
+                        //    throw new Exception($"Trying to execute '{command}'. Confirmationwas '{confirmation}'"); 
+                        //}
                     }
                 }
                 finally

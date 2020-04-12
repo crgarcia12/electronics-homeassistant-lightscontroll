@@ -28,37 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblLight1 = new System.Windows.Forms.Label();
-            this.lblLight2 = new System.Windows.Forms.Label();
-            this.lblLight3 = new System.Windows.Forms.Label();
+            this.lblLightR = new System.Windows.Forms.Label();
+            this.lblLightY = new System.Windows.Forms.Label();
+            this.lblLightG = new System.Windows.Forms.Label();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.lstDebug = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblLight
+            // lblLightR
             // 
-            this.lblLight1.BackColor = System.Drawing.Color.Lime;
-            this.lblLight1.Location = new System.Drawing.Point(12, 9);
-            this.lblLight1.Name = "lblLight";
-            this.lblLight1.Size = new System.Drawing.Size(105, 67);
-            this.lblLight1.TabIndex = 0;
-            this.lblLight1.Click += new System.EventHandler(this.lblLight1_Click);
+            this.lblLightR.BackColor = System.Drawing.Color.Lime;
+            this.lblLightR.Location = new System.Drawing.Point(12, 9);
+            this.lblLightR.Name = "lblLightR";
+            this.lblLightR.Size = new System.Drawing.Size(105, 67);
+            this.lblLightR.TabIndex = 0;
+            this.lblLightR.Click += new System.EventHandler(this.lblLightR_Click);
             // 
-            // lblLuz2
+            // lblLightY
             // 
-            this.lblLight2.BackColor = System.Drawing.Color.Lime;
-            this.lblLight2.Location = new System.Drawing.Point(123, 9);
-            this.lblLight2.Name = "lblLuz2";
-            this.lblLight2.Size = new System.Drawing.Size(105, 67);
-            this.lblLight2.TabIndex = 1;
+            this.lblLightY.BackColor = System.Drawing.Color.Lime;
+            this.lblLightY.Location = new System.Drawing.Point(123, 9);
+            this.lblLightY.Name = "lblLightY";
+            this.lblLightY.Size = new System.Drawing.Size(105, 67);
+            this.lblLightY.TabIndex = 1;
+            this.lblLightY.Click += new System.EventHandler(this.lblLightY_Click);
             // 
-            // lblLuz3
+            // lblLightG
             // 
-            this.lblLight3.BackColor = System.Drawing.Color.Lime;
-            this.lblLight3.Location = new System.Drawing.Point(234, 9);
-            this.lblLight3.Name = "lblLuz3";
-            this.lblLight3.Size = new System.Drawing.Size(105, 67);
-            this.lblLight3.TabIndex = 2;
+            this.lblLightG.BackColor = System.Drawing.Color.Lime;
+            this.lblLightG.Location = new System.Drawing.Point(234, 9);
+            this.lblLightG.Name = "lblLightG";
+            this.lblLightG.Size = new System.Drawing.Size(105, 67);
+            this.lblLightG.TabIndex = 2;
+            this.lblLightG.Click += new System.EventHandler(this.lblLightG_Click);
             // 
             // trackBar1
             // 
@@ -67,15 +70,25 @@
             this.trackBar1.Size = new System.Drawing.Size(580, 80);
             this.trackBar1.TabIndex = 3;
             // 
+            // lstDebug
+            // 
+            this.lstDebug.FormattingEnabled = true;
+            this.lstDebug.ItemHeight = 24;
+            this.lstDebug.Location = new System.Drawing.Point(12, 193);
+            this.lstDebug.Name = "lstDebug";
+            this.lstDebug.Size = new System.Drawing.Size(1177, 460);
+            this.lstDebug.TabIndex = 4;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1201, 664);
+            this.Controls.Add(this.lstDebug);
             this.Controls.Add(this.trackBar1);
-            this.Controls.Add(this.lblLight3);
-            this.Controls.Add(this.lblLight2);
-            this.Controls.Add(this.lblLight1);
+            this.Controls.Add(this.lblLightG);
+            this.Controls.Add(this.lblLightY);
+            this.Controls.Add(this.lblLightR);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -87,10 +100,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblLight1;
-        private System.Windows.Forms.Label lblLight2;
-        private System.Windows.Forms.Label lblLight3;
+        private System.Windows.Forms.Label lblLightR;
+        private System.Windows.Forms.Label lblLightY;
+        private System.Windows.Forms.Label lblLightG;
         private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.ListBox lstDebug;
     }
 }
 
