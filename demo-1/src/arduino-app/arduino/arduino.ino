@@ -1,12 +1,17 @@
+#include <Servo.h>
+
 int RedLightPin = 7;
 int YellowLightPin = 6;
 int GreenLightPin = 5;
+
+Servo servo1;
 
 void setup() {
   Serial.begin(9600);
   pinMode(RedLightPin, OUTPUT);
   pinMode(YellowLightPin, OUTPUT);
   pinMode(GreenLightPin, OUTPUT);  
+  servo1.attach(9);
 }
 
 void loop() 
@@ -15,6 +20,8 @@ void loop()
   char command;
   char * params;
   getCommand(&device, &command, &params);
+
+  int motorAngle = 0;
 
   PrintSerial("[DBG: Start processing: ", device, "-", command, "-", params, "]\0");
   switch(device) {
@@ -47,6 +54,11 @@ void loop()
       {
         digitalWrite(GreenLightPin, LOW);
       }
+      break;
+    case 'M':
+      motorAngle = ((String)params).toInt();
+      PrintSerial("[DBG: Motor angle send: ", motorAngle, "]\0");
+      servo1.write(motorAngle);
       break;
   }
 
@@ -114,7 +126,8 @@ void getCommand(char * device, char * command, char * * paramsPtr)
     charIndex++;
   }
 
-  params[charIndex - 3] = '\0';
+  // This one is -4 because the last char (']') incremented charIndex
+  params[charIndex - 4] = '\0';
   entireCommandString[charIndex++] = '\0';
   
   
@@ -126,6 +139,13 @@ void PrintSerial(const char* str1, const char* str2)
 {
   Serial.print(str1);
   Serial.print(str2);
+}
+
+void PrintSerial(const char* str1, int int1, const char* str3)
+{
+  Serial.print(str1);
+  Serial.print(int1);
+  Serial.print(str3);
 }
 
 void PrintSerial(

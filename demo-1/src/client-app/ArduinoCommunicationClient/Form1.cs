@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO.Ports;
-
+using ArduinoCommunicationClient.Arduino;
 
 namespace ArduinoCommunicationClient
 {
@@ -18,6 +18,7 @@ namespace ArduinoCommunicationClient
         Light redLight;
         Light yellowLight;
         Light greenLight;
+        Motor motor;
 
         public Form1()
         {
@@ -30,6 +31,7 @@ namespace ArduinoCommunicationClient
             redLight = new Light("R", arduinoController);
             yellowLight = new Light("Y", arduinoController);
             greenLight = new Light("G", arduinoController);
+            motor = new Motor("M", arduinoController);
 
             lblLightR.BackColor = Color.DarkRed;
             lblLightY.BackColor = Color.DarkGoldenrod;
@@ -72,6 +74,11 @@ namespace ArduinoCommunicationClient
             {
                 lblLightG.BackColor = Color.LightGreen;
             }
+        }
+
+        private void trackMotor_Scroll(object sender, EventArgs e)
+        {
+            motor.Turn(trackMotor.Value);
         }
     }
 }

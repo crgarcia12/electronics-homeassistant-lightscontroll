@@ -29,8 +29,9 @@ namespace ArduinoCommunicationClient
                 {
 
                     serialPort.Open();
-                    
+
                     // Send command
+                    command = '[' + command + ']';
                     serialPort.Write(command);
 
                     string expectedConfirmationMessage = "confirm:" + command;

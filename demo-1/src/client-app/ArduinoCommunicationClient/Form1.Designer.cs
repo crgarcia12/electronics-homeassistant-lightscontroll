@@ -31,9 +31,9 @@
             this.lblLightR = new System.Windows.Forms.Label();
             this.lblLightY = new System.Windows.Forms.Label();
             this.lblLightG = new System.Windows.Forms.Label();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.trackMotor = new System.Windows.Forms.TrackBar();
             this.lstDebug = new System.Windows.Forms.ListBox();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackMotor)).BeginInit();
             this.SuspendLayout();
             // 
             // lblLightR
@@ -63,12 +63,14 @@
             this.lblLightG.TabIndex = 2;
             this.lblLightG.Click += new System.EventHandler(this.lblLightG_Click);
             // 
-            // trackBar1
+            // trackMotor
             // 
-            this.trackBar1.Location = new System.Drawing.Point(17, 107);
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(580, 80);
-            this.trackBar1.TabIndex = 3;
+            this.trackMotor.Location = new System.Drawing.Point(17, 107);
+            this.trackMotor.Maximum = 180;
+            this.trackMotor.Name = "trackMotor";
+            this.trackMotor.Size = new System.Drawing.Size(580, 80);
+            this.trackMotor.TabIndex = 3;
+            this.trackMotor.Scroll += new System.EventHandler(this.trackMotor_Scroll);
             // 
             // lstDebug
             // 
@@ -85,14 +87,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1201, 664);
             this.Controls.Add(this.lstDebug);
-            this.Controls.Add(this.trackBar1);
+            this.Controls.Add(this.trackMotor);
             this.Controls.Add(this.lblLightG);
             this.Controls.Add(this.lblLightY);
             this.Controls.Add(this.lblLightR);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackMotor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -103,7 +105,7 @@
         private System.Windows.Forms.Label lblLightR;
         private System.Windows.Forms.Label lblLightY;
         private System.Windows.Forms.Label lblLightG;
-        private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.TrackBar trackMotor;
         private System.Windows.Forms.ListBox lstDebug;
     }
 }
