@@ -16,7 +16,7 @@ void loop()
   char * params;
   getCommand(&device, &command, &params);
 
-  PrintSerial("[DBG: Start processing: ", device, "-", command, "-", params, "\n\0");
+  PrintSerial("[DBG: Start processing: ", device, "-", command, "-", params, "]\0");
   switch(device) {
     case 'R':
       if(command == '1')
@@ -50,7 +50,7 @@ void loop()
       break;
   }
 
-  PrintSerial("[DBG: Finished processing: ", device, "-", command, "-", params, "\n\0");
+  PrintSerial("[DBG: Finished processing: ", device, "-", command, "-", params, "]\0");
   
   free(params);
 }
@@ -59,8 +59,7 @@ void getCommand(char * device, char * command, char * * paramsPtr)
 {
   *paramsPtr  = (char*) malloc(sizeof(char) * 8);
   char * params  = * paramsPtr;
-  params[0] = '\n';
-  params[1] = '\0';
+  params[0] = '\0';
   
   char entireCommandString[12];
   
@@ -115,7 +114,9 @@ void getCommand(char * device, char * command, char * * paramsPtr)
     charIndex++;
   }
 
+  params[charIndex - 3] = '\0';
   entireCommandString[charIndex++] = '\0';
+  
   
   // Confirmation of what we are going to process
   PrintSerial("[confirm:", entireCommandString);
