@@ -4,7 +4,7 @@ int RedLightPin = 7;
 int YellowLightPin = 6;
 int GreenLightPin = 5;
 int BuzzerPin = 10;
-int photoResistorPin = A0;
+int ServoPin = 9;
 
 Servo servo1;
 
@@ -17,9 +17,7 @@ void setup() {
   
   pinMode(BuzzerPin, OUTPUT);
   
-  servo1.attach(9);
-
-  pinMode(photoResistorPin, INPUT);
+  servo1.attach(ServoPin);
 
   // Initial test
   executeCommand('R', '1', NULL);
