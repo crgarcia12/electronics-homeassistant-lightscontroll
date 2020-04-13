@@ -42,8 +42,14 @@ void loop()
   char device;
   char command;
   char * params;  
+  int value;
+  bool newCommand = false;
 
   getCommand(&device, &command, &params);
+ 
+  value = analogRead(photoResistorPin);
+    
+
   executeCommand(device, command, params);
   free(params);
 }
