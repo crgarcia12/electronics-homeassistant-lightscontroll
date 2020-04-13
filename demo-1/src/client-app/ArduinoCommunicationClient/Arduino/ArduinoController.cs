@@ -39,12 +39,14 @@ namespace ArduinoCommunicationClient
                     while(!gotConfirmation)
                     {
                         Thread.Sleep(500);
+
                         string confirmation = serialPort.ReadExisting();
+                        printDebugMessageAction(confirmation);
+
                         gotConfirmation = true;
 
-                        // Maybe it was just a dbg message, so print it and wait for the next one
-                        printDebugMessageAction(confirmation);
-                        //if (confirmation.Contains("[DBG]"))
+                        //// Maybe it was just a dbg message, so print it and wait for the next one
+                        //if (confirmation.Contains("[DBG"))
                         //{
                         //    printDebugMessageAction(confirmation);
                         //}
@@ -53,8 +55,8 @@ namespace ArduinoCommunicationClient
                         //    gotConfirmation = true;
                         //}
                         //else
-                        //{ 
-                        //    throw new Exception($"Trying to execute '{command}'. Confirmationwas '{confirmation}'"); 
+                        //{
+                        //    throw new Exception($"Trying to execute '{command}'. Confirmationwas '{confirmation}'");
                         //}
                     }
                 }

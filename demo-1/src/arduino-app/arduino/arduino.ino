@@ -3,28 +3,67 @@
 int RedLightPin = 7;
 int YellowLightPin = 6;
 int GreenLightPin = 5;
+int BuzzerPin = 10;
 
 Servo servo1;
 
 void setup() {
   Serial.begin(9600);
+  
   pinMode(RedLightPin, OUTPUT);
   pinMode(YellowLightPin, OUTPUT);
   pinMode(GreenLightPin, OUTPUT);  
+  
+  pinMode(BuzzerPin, OUTPUT);
+  
   servo1.attach(9);
+
+  // Initial test
+  executeCommand('R', '1', NULL);
+  executeCommand('Y', '1', NULL);
+  executeCommand('G', '1', NULL);
+  executeCommand('M', 'x', "180");
+  executeCommand('B', '1', "1000");
+
+  delay(1000);
+  
+  executeCommand('R', '0', NULL);
+  executeCommand('Y', '0', NULL);
+  executeCommand('G', '0', NULL);
+  executeCommand('M', 'x', "0");
+  executeCommand('B', '0', NULL); 
 }
 
 void loop() 
 { 
   char device;
   char command;
-  char * params;
+  char * params;  
+  
   getCommand(&device, &command, &params);
+  executeCommand(device, command, params);
+  free(params);
+}
 
+void executeCommand(char device, char command, char * params)
+{
+  // Aux variables
   int motorAngle = 0;
-
-  PrintSerial("[DBG: Start processing: ", device, "-", command, "-", params, "]\0");
+  int buzzerTone = 0;
+  
+  PrintSerial("[DBG: Start 2processing: ", device, "-", command, "-", params, "]\0");
   switch(device) {
+    case 'B':
+      buzzerTone = ((String)params).toInt();
+      if(command == '0')
+      {
+        noTone(BuzzerPin);
+      }
+      else
+      {
+        tone(BuzzerPin, buzzerTone); 
+      }
+      break;
     case 'R':
       if(command == '1')
       {
@@ -63,8 +102,6 @@ void loop()
   }
 
   PrintSerial("[DBG: Finished processing: ", device, "-", command, "-", params, "]\0");
-  
-  free(params);
 }
 
 void getCommand(char * device, char * command, char * * paramsPtr)

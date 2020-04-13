@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Arduino\ArduinoController.cs" />
+    <Compile Include="Arduino\Buzzel.cs" />
     <Compile Include="Arduino\Motor.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

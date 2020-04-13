@@ -23,15 +23,26 @@ namespace ArduinoCommunicationClient
 
         public void TurnOn()
         {
-            arduinoController.SendCommand($"{name}1;");
+            arduinoController.SendCommand($"{name}1");
             this.state = true;
         }
 
-
         public void TurnOff()
         {
-            arduinoController.SendCommand($"{name}0;");
+            arduinoController.SendCommand($"{name}0");
             this.state = false;
+        }
+
+        public void Turn(bool state)
+        {
+            if(state)
+            {
+                this.TurnOn();
+            }
+            else
+            {
+                TurnOff();
+            }
         }
 
         public void AlternateState()

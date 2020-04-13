@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO.Ports;
 using ArduinoCommunicationClient.Arduino;
+using System.Threading;
 
 namespace ArduinoCommunicationClient
 {
@@ -19,6 +20,7 @@ namespace ArduinoCommunicationClient
         Light yellowLight;
         Light greenLight;
         Motor motor;
+        Buzzel buzzel;
 
         public Form1()
         {
@@ -32,6 +34,7 @@ namespace ArduinoCommunicationClient
             yellowLight = new Light("Y", arduinoController);
             greenLight = new Light("G", arduinoController);
             motor = new Motor("M", arduinoController);
+            buzzel = new Buzzel("B", arduinoController);
 
             lblLightR.BackColor = Color.DarkRed;
             lblLightY.BackColor = Color.DarkGoldenrod;
@@ -79,6 +82,21 @@ namespace ArduinoCommunicationClient
         private void trackMotor_Scroll(object sender, EventArgs e)
         {
             motor.Turn(trackMotor.Value);
+        }
+
+        private void lblAlarm_Click(object sender, EventArgs e)
+        {
+            bool previousState = redLight.IsOn();
+
+            redLight.TurnOn();
+            buzzel.Play(1000);
+            buzzel.TurnOf();
+            Thread.Sleep(5000);
+            redLight.TurnOn();
+            buzzel.Play(1000);
+            buzzel.TurnOf();
+
+            redLight.Turn(previousState);
         }
     }
 }

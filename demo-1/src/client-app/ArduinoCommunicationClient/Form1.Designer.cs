@@ -33,6 +33,7 @@
             this.lblLightG = new System.Windows.Forms.Label();
             this.trackMotor = new System.Windows.Forms.TrackBar();
             this.lstDebug = new System.Windows.Forms.ListBox();
+            this.lblAlarm = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.trackMotor)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,11 +82,23 @@
             this.lstDebug.Size = new System.Drawing.Size(1177, 460);
             this.lstDebug.TabIndex = 4;
             // 
+            // lblAlarm
+            // 
+            this.lblAlarm.BackColor = System.Drawing.Color.Red;
+            this.lblAlarm.Location = new System.Drawing.Point(1084, 9);
+            this.lblAlarm.Name = "lblAlarm";
+            this.lblAlarm.Size = new System.Drawing.Size(105, 67);
+            this.lblAlarm.TabIndex = 5;
+            this.lblAlarm.Text = "ALARM";
+            this.lblAlarm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblAlarm.Click += new System.EventHandler(this.lblAlarm_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1201, 664);
+            this.Controls.Add(this.lblAlarm);
             this.Controls.Add(this.lstDebug);
             this.Controls.Add(this.trackMotor);
             this.Controls.Add(this.lblLightG);
@@ -107,6 +120,7 @@
         private System.Windows.Forms.Label lblLightG;
         private System.Windows.Forms.TrackBar trackMotor;
         private System.Windows.Forms.ListBox lstDebug;
+        private System.Windows.Forms.Label lblAlarm;
     }
 }
 
