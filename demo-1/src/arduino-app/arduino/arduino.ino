@@ -45,7 +45,7 @@ void loop()
   free(params);
 }
 
-void executeCommand(char device, char command, char * params)
+void executeCommand(const char device, const char command, const char * params)
 {
   // Aux variables
   int motorAngle = 0;

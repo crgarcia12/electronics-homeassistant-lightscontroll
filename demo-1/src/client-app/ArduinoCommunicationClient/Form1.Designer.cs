@@ -69,8 +69,11 @@
             this.trackMotor.Location = new System.Drawing.Point(17, 107);
             this.trackMotor.Maximum = 180;
             this.trackMotor.Name = "trackMotor";
-            this.trackMotor.Size = new System.Drawing.Size(580, 80);
-            this.trackMotor.TabIndex = 3;
+            this.trackMotor.Size = new System.Drawing.Size(1172, 80);
+            this.trackMotor.SmallChange = 20;
+            this.trackMotor.TabIndex = 20;
+            this.trackMotor.TickFrequency = 10;
+            this.trackMotor.TickStyle = System.Windows.Forms.TickStyle.Both;
             this.trackMotor.Scroll += new System.EventHandler(this.trackMotor_Scroll);
             // 
             // lstDebug
