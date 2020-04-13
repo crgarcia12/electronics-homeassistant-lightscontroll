@@ -2,7 +2,6 @@ int RedLightPin = 7;
 int YellowLightPin = 6;
 int GreenLightPin = 5;
 
-
 void setup() {
   Serial.begin(9600);
   pinMode(RedLightPin, OUTPUT);
@@ -17,7 +16,7 @@ void loop()
   char * params;
   getCommand(&device, &command, &params);
 
-  PrintSerial("Start processing: ", device, "-", command, "-", params, "\n\0");
+  PrintSerial("[DBG: Start processing: ", device, "-", command, "-", params, "\n\0");
   switch(device) {
     case 'R':
       if(command == '1')
@@ -51,7 +50,7 @@ void loop()
       break;
   }
 
-  PrintSerial("Finished processing: ", device, "-", command, "-", params, "\n\0");
+  PrintSerial("[DBG: Finished processing: ", device, "-", command, "-", params, "\n\0");
   
   free(params);
 }
@@ -67,46 +66,62 @@ void getCommand(char * device, char * command, char * * paramsPtr)
   
   char incommingChar;
   int charIndex = 0;
-
+  bool commandInitiated = false;
+  
   while (true) 
   {
     // wait for the char
-    while(!Serial.available()) {}
+    while (!Serial.available()) {}
     incommingChar = Serial.read();
 
-    PrintSerial("[DBG] Command char arrived. Char='", incommingChar, "'. CharIndex='", charIndex, "'\n\0");
-    if(incommingChar == ';' || charIndex > 10)
+    PrintSerial("[DBG: Command char arrived. Char='", incommingChar, "'. CharIndex='", charIndex, "']");
+
+    // Until we dont get a '[' we don't react
+    if (!commandInitiated)
+    {
+      if(incommingChar != '[')
+      {
+        continue;
+      }
+      commandInitiated = true;
+    }
+
+    // Did the command finished?
+    if (incommingChar == ']' || charIndex > 10)
     {
       entireCommandString[charIndex++] = incommingChar;
       break;
     }
-    
+
+    // Where do we put the received char?
     if(charIndex < 1)
     {
-      (*device) = incommingChar;
+      // This was the opening braket, do nothing
     }
     else if(charIndex < 2)
     {
+      (*device) = incommingChar;
+    }
+    else if(charIndex < 3)
+    {
       (*command) = incommingChar;
     }
-    else if(charIndex < 12)
+    else
     {
-      params[charIndex] = incommingChar;
+      params[charIndex - 3] = incommingChar;
     } 
 
     entireCommandString[charIndex] = incommingChar;
     charIndex++;
   }
 
-  // Make sure our strings finish properly
-  entireCommandString[charIndex++] = params[charIndex] = '\n';
-  entireCommandString[charIndex++] = params[charIndex] = '\0';
+  entireCommandString[charIndex++] = '\0';
   
   // Confirmation of what we are going to process
-  PrintSerial("confirm:", entireCommandString);
+  PrintSerial("[confirm:", entireCommandString);
 }
 
-void PrintSerial(const char* str1,const char* str2)
+void PrintSerial(const char* str1, const char* str2)
 {
   Serial.print(str1);
   Serial.print(str2);
