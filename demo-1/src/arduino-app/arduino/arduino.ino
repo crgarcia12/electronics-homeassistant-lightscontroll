@@ -1,15 +1,25 @@
 #include <Servo.h>
 
-int RedLightPin = 7;
-int YellowLightPin = 6;
+
+int RgbLedBluePin = 2;
+int RgbLedGreenPin = 3;
+int RgbLedRedPin = 4;
+
 int GreenLightPin = 5;
-int BuzzerPin = 10;
+int YellowLightPin = 6;
+int RedLightPin = 7;
+
 int ServoPin = 9;
+int BuzzerPin = 10;
 
 Servo servo1;
 
 void setup() {
   Serial.begin(9600);
+
+  pinMode(RgbLedBluePin, OUTPUT);
+  pinMode(RgbLedBluePin, OUTPUT);
+  pinMode(RgbLedBluePin, OUTPUT);
   
   pinMode(RedLightPin, OUTPUT);
   pinMode(YellowLightPin, OUTPUT);
@@ -26,6 +36,10 @@ void setup() {
   executeCommand('M', 'x', "180");
   executeCommand('B', '1', "1000");
 
+  executeCommand('L', 'R', "0");
+  executeCommand('L', 'G', "0");
+  executeCommand('L', 'B', "0");
+  
   delay(1000);
   
   executeCommand('R', '0', NULL);
@@ -33,6 +47,10 @@ void setup() {
   executeCommand('G', '0', NULL);
   executeCommand('M', 'x', "0");
   executeCommand('B', '0', NULL); 
+
+  executeCommand('L', 'R', "1");
+  executeCommand('L', 'G', "1");
+  executeCommand('L', 'B', "1");
 }
 
 void loop() 
@@ -51,8 +69,9 @@ void executeCommand(const char device, const char command, const char * params)
   // Aux variables
   int motorAngle = 0;
   int buzzerTone = 0;
+  int RgbLedPin = 0;
   
-  PrintSerial("[DBG: Start 2processing: ", device, "-", command, "-", params, "]\0");
+  // PrintSerial("[DBG: Start 2processing: ", device, "-", command, "-", params, "]\0");
   switch(device) {
     case 'B':
       buzzerTone = ((String)params).toInt();
@@ -65,6 +84,31 @@ void executeCommand(const char device, const char command, const char * params)
         tone(BuzzerPin, buzzerTone); 
       }
       break;
+    case 'L':
+      switch (command)
+      {
+        case 'R':
+          RgbLedPin = RgbLedRedPin;
+          break;
+        case 'G':
+          RgbLedPin = RgbLedGreenPin;
+          break;
+        case 'B':
+          RgbLedPin = RgbLedBluePin;
+          break;
+      }
+
+      if(params[0] == '1')
+      {
+        PrintSerial("DBG: Making high at pin: ", RgbLedPin, "\r\n");
+        digitalWrite(RgbLedPin, HIGH);
+      }
+      else
+      {
+        PrintSerial("DBG: Making low at pin: ", RgbLedPin, "\r\n");
+        digitalWrite(RgbLedPin, LOW);
+      }
+      break;      
     case 'R':
       if(command == '1')
       {
@@ -123,7 +167,7 @@ void getCommand(char * device, char * command, char * * paramsPtr)
     while (!Serial.available()) {}
     incommingChar = Serial.read();
 
-    PrintSerial("[DBG: Command char arrived. Char='", incommingChar, "'. CharIndex='", charIndex, "']");
+    // PrintSerial("[DBG: Command char arrived. Char='", incommingChar, "'. CharIndex='", charIndex, "']");
 
     // Until we dont get a '[' we don't react
     if (!commandInitiated)
@@ -170,7 +214,7 @@ void getCommand(char * device, char * command, char * * paramsPtr)
   
   
   // Confirmation of what we are going to process
-  PrintSerial("[confirm:", entireCommandString);
+  // PrintSerial("[confirm:", entireCommandString);
 }
 
 void PrintSerial(const char* str1, const char* str2)
