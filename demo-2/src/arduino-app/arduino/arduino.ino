@@ -11,7 +11,7 @@ int reading = 0;
 int lowest = 0;
 int highest = 32000;
 int changeamnt = 1;
-
+ 
 // Timing for polling the encoder
 unsigned long currentTime;
 unsigned long lastTimeEncoder;
@@ -63,17 +63,15 @@ void loop()
  
   if (currentTime >= (lastPrintedMilis + 200))
   {
-    // tell the screen to write on the top row
     lcd.setCursor(0,0);
-    // tell the screen to write “hello, from” on the top row
     concatStr = desiredValueStr + reading;
     lcd.print(concatStr);
+   
     // tell the screen to write on the bottom row
     lcd.setCursor(0,1);
-    // tell the screen to write “Arduino_uno_guy” on the bottom row
-    // you can change whats in the quotes to be what you want it to be!
     concatStr = currentValueStr + humidityValue;
     lcd.print(concatStr);
+    
     lastPrintedMilis = currentTime;
   }
 
