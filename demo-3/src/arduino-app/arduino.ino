@@ -31,7 +31,7 @@ boolean lastEncoderA = false;
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 
 // Display strings
-String desiredValueStr = "v5Desired: ";
+String desiredValueStr = "Frequency: ";
 String activatedValueStr = "Activated: ";
 String concatStr = "";
 
