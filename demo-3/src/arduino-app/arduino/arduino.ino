@@ -9,20 +9,18 @@ const int encoderPinA = 12;
 
 
 // Setting up the encoder
-int reading = 3000;
 int lowest = 0;
 int highest = 32000;
 int changeamnt = 1000;
+boolean encoderA;
+boolean encoderB;
+boolean lastEncoderA = false;
+int frequency = 3000;
  
 // Timings for polling the encoder and printing the screen
 unsigned long currentTime;
 unsigned long lastTimeEncoder;
 unsigned long lastPrintedMilis;
-
-// Storing the readings
-boolean encoderA;
-boolean encoderB;
-boolean lastEncoderA = false;
 
 //initialize the liquid crystal library
 //the first parameter is the I2C address
@@ -80,7 +78,7 @@ void loop()
   if (currentTime >= (lastPrintedMilis + 200))
   {
     lcd.setCursor(0,0);
-    concatStr = desiredValueStr + reading;
+    concatStr = desiredValueStr + frequency;
     lcd.print(concatStr);
 
     lcd.setCursor(0,1);
@@ -112,23 +110,23 @@ void loop()
       if (encoderB)
       {
         // clockwise, don't overflow
-        if (reading + changeamnt > 0 && reading + changeamnt <= highest)
+        if (frequency + changeamnt > 0 && frequency + changeamnt <= highest)
         {
-          reading = reading + changeamnt; 
-          activate(reading);
+          frequency = frequency + changeamnt; 
+          activate(frequency);
         }
       }
       else
       {
         // anti-clockwise
-        if (reading - changeamnt >= lowest)
+        if (frequency - changeamnt >= lowest)
         {
-          reading = reading - changeamnt; 
-          activate(reading);
+          frequency = frequency - changeamnt; 
+          activate(frequency);
         }
       }
-      // Output reading for debugging
-      Serial.println(reading);
+      // Output frequency for debugging
+      Serial.println(frequency);
     }
     
     // store reading of A and millis for next loop
@@ -234,15 +232,14 @@ void executeCommand(const char device, const char command, const char * params)
   // PrintSerial("[DBG: Start 2processing: ", device, "-", command, "-", params, "]\0");
   switch(device) {
     case 'B':
-      buzzerTone = ((String)params).toInt();
       if(command == '0')
       {
-        PrintSerial("[DBG: Deactivating FROM COMMAND.", '.', "-", '.', "-", " ", "]\0");
         deactivate();
       }
       else
       {
-        activate(buzzerTone);
+        frequency = ((String)params).toInt();
+        activate(frequency);
       }
       break;
     case 'M':
