@@ -48,10 +48,10 @@ int heartBeatStatus = LOW;
 UltraSonicDistanceSensor distanceSensor(TrigPin, EchoPin);
 
 // Display strings
-char* DistanceStr  = "Distancia:      \0";
-char* PumpStateStr = "Bomba:          \0";
-char* PumpStartStr = "Dist On:        \0";
-char* PumpStopStr  = "Dist Off:       \0";
+char DistanceStr[]  = "Distancia:      \0";
+char PumpStateStr[] = "Bomba:          \0";
+char PumpStartStr[] = "Dist On:        \0";
+char PumpStopStr[]  = "Dist Off:       \0";
 char* displayLine2;
 
 // Encoder configuration: https://playground.arduino.cc/Main/RotaryEncoders/
@@ -178,16 +178,16 @@ void loop()
           displayLine2 = PumpStateStr;
           break;
         case MaxDistance:
-          //printNumbersInStr(PumpStartStr, pumpStartDistance, 11);
+          printNumbersInStr(PumpStartStr, pumpStartDistance, 11);
           displayLine2 = PumpStartStr;
           break;
         case MinDistance:
-          //printNumbersInStr(PumpStopStr, pumpStartDistance, 11);
+          printNumbersInStr(PumpStopStr, pumpStartDistance, 11);
           displayLine2 = PumpStopStr;
           break;
     }
 
-    //printNumbersInStr(DistanceStr, distance, 11);
+    printNumbersInStr(DistanceStr, distance, 11);
     lcd.setCursor(0,0);
     lcd.print(DistanceStr);
   
@@ -198,5 +198,21 @@ void loop()
   timer = timer + 1;
   if(timer > UserRefreshTime) {
     timer = 0;
+  }
+}
+
+void printNumbersInStr (char *str, int number, int startPosition)
+{
+  int digit = number % 10;
+  number = number / 10;
+
+  str = str + startPosition;
+  while (digit > 0 || number > 0)
+  {
+    *str = '0' + digit;
+    str = str - 1;
+    
+    digit = number % 10;
+    number = number / 10;
   }
 }
