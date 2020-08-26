@@ -11,6 +11,7 @@
 
    7. Install Library HCSR04 by Martin Soic:https://github.com/Martinsos/arduino-lib-hc-sr04
    8. Install Library LiquidCrystal_I2C
+   9. Install Library Encoder: https://www.pjrc.com/teensy/td_libs_Encoder.html
 */
 
 // Installed libraries
@@ -20,11 +21,11 @@
 // Arduino Internal Libraries
 #include <Wire.h> 
 
-#define RelayPin 3
+#define RelayPin 6
 #define HeartBeatPin 4
 #define MenuButtonPin 5
-#define encoderPinA 6
-#define encoderPinB 7
+#define encoderPinA 2
+#define encoderPinB 3
 #define EchoPin 10
 #define TrigPin 11
 
@@ -36,8 +37,9 @@ int pumpStopDistance = 5;
 int pumpSatus = PumpOff;
 
 // Refresh and Display
-#define UserRefreshTime 500
-LiquidCrystal_I2C lcd(0x27, 16, 2);
+#define UserRefreshTime 300
+#define DisplaySize 16
+LiquidCrystal_I2C lcd(0x27, DisplaySize, 2);
 long lastRefresh;
 char DistanceStr[]  = "Distancia:      \0";
 char PumpStateStr[] = "Bomba:          \0";
@@ -52,9 +54,9 @@ int heartBeatStatus = LOW;
 UltraSonicDistanceSensor distanceSensor(TrigPin, EchoPin);
 
 // Encoder
-boolean encoderA;
-boolean encoderB;
-boolean lastEncoderA = false;
+#include <Encoder.h>
+#define ENCODER_OPTIMIZE_INTERRUPTS
+Encoder encoder(encoderPinA, encoderPinB);
 
 // Menu
 // Last Item is used to know when we should go back to the first one
@@ -69,10 +71,6 @@ void setup()
   // Initialize lcd screen
   lcd.init();
   lcd.backlight();
-
-  // Encoder 
-  pinMode (encoderPinA, INPUT_PULLUP);
-  pinMode (encoderPinB, INPUT_PULLUP);
 
   pinMode (MenuButtonPin, INPUT);
  
@@ -135,8 +133,9 @@ void loop()
   /******************************** 
    *          Encoder 
    *********************************/
-  int encoderPos = readEncoder();
-  
+  int encoderPos = encoder.read() / 4;
+  Serial.println(encoderPos);
+  encoder.write(0);
   /******************************** 
    *          Menu 
    *********************************/
@@ -176,16 +175,16 @@ void loop()
           displayLine2 = PumpStateStr;
           break;
         case MaxDistance:
-          printNumbersInStr(PumpStartStr, pumpStartDistance, 11);
+          printNumbersInStr(PumpStartStr, pumpStartDistance, DisplaySize);
           displayLine2 = PumpStartStr;
           break;
         case MinDistance:
-          printNumbersInStr(PumpStopStr, pumpStopDistance, 11);
+          printNumbersInStr(PumpStopStr, pumpStopDistance, DisplaySize);
           displayLine2 = PumpStopStr;
           break;
     }
 
-    printNumbersInStr(DistanceStr, distance, 11);
+    printNumbersInStr(DistanceStr, distance, DisplaySize);
     lcd.setCursor(0,0);
     lcd.print(DistanceStr);
   
@@ -196,48 +195,21 @@ void loop()
 
 void printNumbersInStr (char *str, int number, int startPosition)
 {
-  int digit = number % 10;
-  number = number / 10;
-
-  str = str + startPosition;
-  while (digit > 0 || number > 0)
-  {
-    *str = '0' + digit;
-    str = str - 1;
-    
-    digit = number % 10;
-    number = number / 10;
-  }
-}
-
-int readEncoder ()
-{
-    Serial.println("Reading encoder");
+  // Base 0 index
+  startPosition--;
   
-     // read the two pins
-    encoderA = digitalRead(encoderPinA);
-    encoderB = digitalRead(encoderPinB);
+  for (int index = startPosition; index >= startPosition -3; index--)
+  {       
+    int digit = number % 10;
+    number = number / 10;
 
-    Serial.println(encoderA);
-    Serial.println(encoderB);
-    Serial.println(lastEncoderA);
-    
-    // check if A has gone from high to low
-    if ((!encoderA) && (lastEncoderA))
+    if(digit == 0 && number == 0)
     {
-      // check if B is high
-      if (encoderB)
-      {
-        // clockwise
-        Serial.println(1);
-        return 1;
-      }
-      else
-      {
-        Serial.println(-1);
-        return -1;
-      }
+      str[index] = ' ';
     }
-    
-    lastEncoderA = encoderA;
+    else
+    {
+      str[index] = '0' + digit;
+    }
+  }
 }
