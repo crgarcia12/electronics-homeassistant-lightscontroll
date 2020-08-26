@@ -23,8 +23,8 @@
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 
 
-#define EchoPin 1
-#define TrigPin 2
+#define EchoPin 10
+#define TrigPin 11
 #define RelayPin 3
 #define HeartBeatPin 4
 #define MenuButtonPin 5
@@ -34,9 +34,8 @@ LiquidCrystal_I2C lcd(0x27, 16, 2);
 #define PumpOff 0
 #define PumpOn 1
 
-#define UserRefreshTime 20
-
-int timer = 0;
+#define UserRefreshTime 500
+long lastRefresh;
 
 int pumpStartDistance = 12;
 int pumpStopDistance = 5;
@@ -63,8 +62,6 @@ int encoderPinACurrent = LOW;
 enum MenuStates {Main = 0, MinDistance, MaxDistance, LastItem};
 enum MenuStates MenuCurrentState;
 
-int debugCounter = 1;
-
 void setup() 
 {
   pinMode(RelayPin, OUTPUT);
@@ -75,8 +72,8 @@ void setup()
   lcd.backlight();
 
   // Encoder 
-  pinMode (encoderPinA, INPUT);
-  pinMode (encoderPinB, INPUT);
+  pinMode (encoderPinA, INPUT_PULLUP);
+  pinMode (encoderPinB, INPUT_PULLUP);
 
   pinMode (MenuButtonPin, INPUT);
  
@@ -87,11 +84,22 @@ void setup()
   pinMode(LED_BUILTIN, OUTPUT);
 
   Serial.begin(9600);
-  Serial.println(debugCounter); debugCounter = debugCounter + 1;
+  //Serial.println(debugCounter); debugCounter = debugCounter + 1;
 }
 
 void loop()
-{            
+{     
+  /******************************** 
+  *      Refresh Time
+  *********************************/
+  bool executeRefresh = false;
+  if (millis() - lastRefresh > UserRefreshTime)
+  {
+    executeRefresh = true;
+    lastRefresh = millis();
+  }
+
+
   /******************************** 
    *      Range calculation 
    *********************************/
@@ -112,7 +120,7 @@ void loop()
   /******************************** 
   *          HeartBeat led 
   *********************************/
-  if(timer == UserRefreshTime) {
+  if(executeRefresh) {
     if (heartBeatStatus == LOW)
     {
       heartBeatStatus = HIGH;
@@ -142,9 +150,9 @@ void loop()
   /******************************** 
    *          Menu 
    *********************************/
-  if(timer == UserRefreshTime){
+  if(executeRefresh){
     if (digitalRead(MenuButtonPin) == HIGH) {
-      //MenuCurrentState = MenuCurrentState + 1;
+      MenuCurrentState = MenuCurrentState + 1;
       if(MenuCurrentState >= LastItem)
       {
         MenuCurrentState = Main;
@@ -171,7 +179,7 @@ void loop()
   /******************************** 
    *          Display 
    *********************************/
-  if(timer == UserRefreshTime)
+  if(executeRefresh)
   {
     switch (MenuCurrentState){
         case Main:
@@ -182,7 +190,7 @@ void loop()
           displayLine2 = PumpStartStr;
           break;
         case MinDistance:
-          printNumbersInStr(PumpStopStr, pumpStartDistance, 11);
+          printNumbersInStr(PumpStopStr, pumpStopDistance, 11);
           displayLine2 = PumpStopStr;
           break;
     }
@@ -193,11 +201,6 @@ void loop()
   
     lcd.setCursor(0,1);
     lcd.print(displayLine2);
-  }
-
-  timer = timer + 1;
-  if(timer > UserRefreshTime) {
-    timer = 0;
   }
 }
 
