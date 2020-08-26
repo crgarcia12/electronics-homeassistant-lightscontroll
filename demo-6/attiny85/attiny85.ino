@@ -52,7 +52,6 @@ char* DistanceStr  = "Distancia:      \0";
 char* PumpStateStr = "Bomba:          \0";
 char* PumpStartStr = "Dist On:        \0";
 char* PumpStopStr  = "Dist Off:       \0";
-char* concatStr;
 char* displayLine2;
 
 // Encoder configuration: https://playground.arduino.cc/Main/RotaryEncoders/
@@ -179,43 +178,25 @@ void loop()
           displayLine2 = PumpStateStr;
           break;
         case MaxDistance:
-          printNumbersInStr(PumpStartStr, pumpStartDistance, 11);
+          //printNumbersInStr(PumpStartStr, pumpStartDistance, 11);
           displayLine2 = PumpStartStr;
           break;
         case MinDistance:
-          printNumbersInStr(PumpStopStr, pumpStartDistance, 11);
+          //printNumbersInStr(PumpStopStr, pumpStartDistance, 11);
           displayLine2 = PumpStopStr;
           break;
     }
 
-    printNumbersInStr(DistanceStr, distance, 11);
+    //printNumbersInStr(DistanceStr, distance, 11);
     lcd.setCursor(0,0);
     lcd.print(DistanceStr);
   
     lcd.setCursor(0,1);
     lcd.print(displayLine2);
-    
-    Serial.println("DISPLAY");
   }
 
   timer = timer + 1;
   if(timer > UserRefreshTime) {
     timer = 0;
-  }
-}
-
-void printNumbersInStr(char * str, int number, int startPosition)
-{ 
-  int digit = number % 10;
-  int rest = number / 10;
-
-  str = str + startPosition;
-  while(digit > 0 || rest > 0)
-  {
-    *str = '0' + digit;
-    str = str - 1;
-
-    int digit = number % 10;
-    int rest = number / 10;
   }
 }
