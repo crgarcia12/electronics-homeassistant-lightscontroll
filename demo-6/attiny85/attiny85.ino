@@ -27,13 +27,19 @@ LiquidCrystal_I2C lcd(0x27, 16, 2);
 #define TrigPin 2
 #define RelayPin 3
 #define HeartBeatPin 4
+#define MenuButtonPin 5
+#define encoderPinA 6
+#define encoderPinB 7
 
 #define PumpOff 0
 #define PumpOn 1
 
-int pumpStartDistance = 12;
-int pumpStoptDistance = 5;
+#define UserRefreshTime 20
 
+int timer = 0;
+
+int pumpStartDistance = 12;
+int pumpStopDistance = 5;
 int distance;
 int pumpSatus = PumpOff;
 int heartBeatStatus = LOW;
@@ -41,56 +47,175 @@ int heartBeatStatus = LOW;
 // Create and initialize the Ultrasonic object.
 UltraSonicDistanceSensor distanceSensor(TrigPin, EchoPin);
 
-String DistanceStr = "Distancia: ";
-String PumpStateStr = "Bomba: ";
-String concatStr = "";
+// Display strings
+char* DistanceStr  = "Distancia:      \0";
+char* PumpStateStr = "Bomba:          \0";
+char* PumpStartStr = "Dist On:        \0";
+char* PumpStopStr  = "Dist Off:       \0";
+char* concatStr;
+char* displayLine2;
+
+// Encoder configuration: https://playground.arduino.cc/Main/RotaryEncoders/
+int encoderPos = 0;
+int encoderPinALast = LOW;
+int encoderPinACurrent = LOW;
+
+// Last Item is used to know when we should go back to the first one
+enum MenuStates {Main = 0, MinDistance, MaxDistance, LastItem};
+enum MenuStates MenuCurrentState;
+
+int debugCounter = 1;
 
 void setup() 
 {
   pinMode(RelayPin, OUTPUT);
   pinMode(HeartBeatPin, OUTPUT); 
 
-  //initialize lcd screen
+  // Initialize lcd screen
   lcd.init();
-  // turn on the backlight
   lcd.backlight();
+
+  // Encoder 
+  pinMode (encoderPinA, INPUT);
+  pinMode (encoderPinB, INPUT);
+
+  pinMode (MenuButtonPin, INPUT);
+ 
+  lcd.setCursor(0,0);
+  lcd.print("HOLA");
+ 
+  // initialize digital pin LED_BUILTIN as an output.
+  pinMode(LED_BUILTIN, OUTPUT);
+
+  Serial.begin(9600);
+  Serial.println(debugCounter); debugCounter = debugCounter + 1;
 }
 
 void loop()
-{                             
-  // Range is calculated in Centimeters.
+{            
+  /******************************** 
+   *      Range calculation 
+   *********************************/
   distance = distanceSensor.measureDistanceCm();
 
+  
   if (distance >= pumpStartDistance)
   {
     pumpSatus = PumpOn;
     digitalWrite(RelayPin, HIGH);
   }
-  if (distance <= pumpStoptDistance)
+  if (distance <= pumpStopDistance)
   {
     pumpSatus = PumpOff;
     digitalWrite(RelayPin, LOW);
   }
-  //HeartBeat led
-  if (heartBeatStatus == LOW)
-  {
-    heartBeatStatus = HIGH;
+  
+  /******************************** 
+  *          HeartBeat led 
+  *********************************/
+  if(timer == UserRefreshTime) {
+    if (heartBeatStatus == LOW)
+    {
+      heartBeatStatus = HIGH;
+    }
+    else
+    {
+      heartBeatStatus = LOW;
+    }
+    digitalWrite(LED_BUILTIN, heartBeatStatus); 
+    digitalWrite(HeartBeatPin, heartBeatStatus);
   }
-  else
-  {
-    heartBeatStatus = LOW;
+  
+  /******************************** 
+   *          Encoder 
+   *********************************/
+  encoderPos = 0;
+  encoderPinACurrent = digitalRead(encoderPinA);
+  if ((encoderPinALast == LOW) && (encoderPinACurrent == HIGH)) {
+    if (digitalRead(encoderPinB) == LOW) {
+      encoderPos = -1;
+    } else {
+      encoderPos = 1;
+    }
+  }
+  encoderPinALast = encoderPinACurrent;
+
+  /******************************** 
+   *          Menu 
+   *********************************/
+  if(timer == UserRefreshTime){
+    if (digitalRead(MenuButtonPin) == HIGH) {
+      //MenuCurrentState = MenuCurrentState + 1;
+      if(MenuCurrentState >= LastItem)
+      {
+        MenuCurrentState = Main;
+      }
+    }
   }
 
-  digitalWrite(HeartBeatPin, heartBeatStatus);
+  switch (MenuCurrentState){
+    case Main:
+      PumpStateStr[7] = '0' + pumpSatus;
+      break;
+    case MaxDistance:
+      pumpStartDistance = pumpStartDistance + encoderPos;
+      if(pumpStartDistance < pumpStopDistance) pumpStartDistance = pumpStopDistance + 1;
+      if(pumpStartDistance > 30) pumpStartDistance = 30;
+      break;
+    case MinDistance:
+      pumpStopDistance = pumpStopDistance + encoderPos;
+      if (pumpStopDistance < 5) pumpStopDistance = 5;
+      if (pumpStopDistance > pumpStartDistance) pumpStopDistance = pumpStartDistance - 1;
+      break;
+  }
+  
+  /******************************** 
+   *          Display 
+   *********************************/
+  if(timer == UserRefreshTime)
+  {
+    switch (MenuCurrentState){
+        case Main:
+          displayLine2 = PumpStateStr;
+          break;
+        case MaxDistance:
+          printNumbersInStr(PumpStartStr, pumpStartDistance, 11);
+          displayLine2 = PumpStartStr;
+          break;
+        case MinDistance:
+          printNumbersInStr(PumpStopStr, pumpStartDistance, 11);
+          displayLine2 = PumpStopStr;
+          break;
+    }
 
-  concatStr = DistanceStr + distance;
-  lcd.setCursor(0,0);
-  lcd.print(concatStr);
+    printNumbersInStr(DistanceStr, distance, 11);
+    lcd.setCursor(0,0);
+    lcd.print(DistanceStr);
+  
+    lcd.setCursor(0,1);
+    lcd.print(displayLine2);
+    
+    Serial.println("DISPLAY");
+  }
 
-  concatStr = PumpStateStr + pumpSatus;
-  lcd.setCursor(0,1);
-  lcd.print(concatStr);
+  timer = timer + 1;
+  if(timer > UserRefreshTime) {
+    timer = 0;
+  }
+}
 
-  delay(1000);
+void printNumbersInStr(char * str, int number, int startPosition)
+{ 
+  int digit = number % 10;
+  int rest = number / 10;
 
+  str = str + startPosition;
+  while(digit > 0 || rest > 0)
+  {
+    *str = '0' + digit;
+    str = str - 1;
+
+    int digit = number % 10;
+    int rest = number / 10;
+  }
 }
