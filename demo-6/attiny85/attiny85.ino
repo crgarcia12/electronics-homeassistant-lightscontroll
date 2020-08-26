@@ -20,44 +20,43 @@
 // Arduino Internal Libraries
 #include <Wire.h> 
 
-LiquidCrystal_I2C lcd(0x27, 16, 2);
-
-
-#define EchoPin 10
-#define TrigPin 11
 #define RelayPin 3
 #define HeartBeatPin 4
 #define MenuButtonPin 5
 #define encoderPinA 6
 #define encoderPinB 7
+#define EchoPin 10
+#define TrigPin 11
 
+// Pump
 #define PumpOff 0
 #define PumpOn 1
-
-#define UserRefreshTime 500
-long lastRefresh;
-
 int pumpStartDistance = 12;
 int pumpStopDistance = 5;
-int distance;
 int pumpSatus = PumpOff;
-int heartBeatStatus = LOW;
 
-// Create and initialize the Ultrasonic object.
-UltraSonicDistanceSensor distanceSensor(TrigPin, EchoPin);
-
-// Display strings
+// Refresh and Display
+#define UserRefreshTime 500
+LiquidCrystal_I2C lcd(0x27, 16, 2);
+long lastRefresh;
 char DistanceStr[]  = "Distancia:      \0";
 char PumpStateStr[] = "Bomba:          \0";
 char PumpStartStr[] = "Dist On:        \0";
 char PumpStopStr[]  = "Dist Off:       \0";
 char* displayLine2;
 
-// Encoder configuration: https://playground.arduino.cc/Main/RotaryEncoders/
-int encoderPos = 0;
-int encoderPinALast = LOW;
-int encoderPinACurrent = LOW;
+// HeartBeat
+int heartBeatStatus = LOW;
 
+// Create and initialize the Ultrasonic object.
+UltraSonicDistanceSensor distanceSensor(TrigPin, EchoPin);
+
+// Encoder
+boolean encoderA;
+boolean encoderB;
+boolean lastEncoderA = false;
+
+// Menu
 // Last Item is used to know when we should go back to the first one
 enum MenuStates {Main = 0, MinDistance, MaxDistance, LastItem};
 enum MenuStates MenuCurrentState;
@@ -103,7 +102,7 @@ void loop()
   /******************************** 
    *      Range calculation 
    *********************************/
-  distance = distanceSensor.measureDistanceCm();
+  int distance = distanceSensor.measureDistanceCm();
 
   
   if (distance >= pumpStartDistance)
@@ -136,17 +135,8 @@ void loop()
   /******************************** 
    *          Encoder 
    *********************************/
-  encoderPos = 0;
-  encoderPinACurrent = digitalRead(encoderPinA);
-  if ((encoderPinALast == LOW) && (encoderPinACurrent == HIGH)) {
-    if (digitalRead(encoderPinB) == LOW) {
-      encoderPos = -1;
-    } else {
-      encoderPos = 1;
-    }
-  }
-  encoderPinALast = encoderPinACurrent;
-
+  int encoderPos = readEncoder();
+  
   /******************************** 
    *          Menu 
    *********************************/
@@ -218,4 +208,36 @@ void printNumbersInStr (char *str, int number, int startPosition)
     digit = number % 10;
     number = number / 10;
   }
+}
+
+int readEncoder ()
+{
+    Serial.println("Reading encoder");
+  
+     // read the two pins
+    encoderA = digitalRead(encoderPinA);
+    encoderB = digitalRead(encoderPinB);
+
+    Serial.println(encoderA);
+    Serial.println(encoderB);
+    Serial.println(lastEncoderA);
+    
+    // check if A has gone from high to low
+    if ((!encoderA) && (lastEncoderA))
+    {
+      // check if B is high
+      if (encoderB)
+      {
+        // clockwise
+        Serial.println(1);
+        return 1;
+      }
+      else
+      {
+        Serial.println(-1);
+        return -1;
+      }
+    }
+    
+    lastEncoderA = encoderA;
 }
