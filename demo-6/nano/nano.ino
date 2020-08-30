@@ -3,20 +3,18 @@
    Tutorial: https://www.youtube.com/watch?v=gXXdoeu7yWw
 
    1. Install this: https://github.com/SpenceKonde/ATTinyCore/blob/master/Wiring.md
-   2. Tools -> Board -> ATTiny (not bootloader)
-   3. Tools -> Chip -> ATTiny45
-   4. Tools -> Programmer: Arduino as ISP (ATTiny Core)
-   5. Tools -> Clock -> 8Mhz Internal
-   6. Burn bootloader (sounds scary)
-
-   7. Install Library HCSR04 by Martin Soic:https://github.com/Martinsos/arduino-lib-hc-sr04
-   8. Install Library LiquidCrystal_I2C
-   9. Install Library Encoder: https://www.pjrc.com/teensy/td_libs_Encoder.html
+   2. Tools -> Board -> Arduino nano
+   3. Tools -> Processor -> ATmega 328P (no bootloader)
+   
+   4. Install Library HCSR04 by Martin Soic:https://github.com/Martinsos/arduino-lib-hc-sr04
+   5. Install Library LiquidCrystal_I2C
+   6. Install Library Encoder: https://www.pjrc.com/teensy/td_libs_Encoder.html
 */
 
 // Installed libraries
 #include <LiquidCrystal_I2C.h>
 #include <HCSR04.h>
+#include <Encoder.h>
 
 // Arduino Internal Libraries
 #include <Wire.h> 
@@ -59,7 +57,6 @@ int heartBeatStatus = LOW;
 UltraSonicDistanceSensor distanceSensor(TrigPin, EchoPin);
 
 // Encoder
-#include <Encoder.h>
 #define ENCODER_OPTIMIZE_INTERRUPTS
 Encoder encoder(encoderPinA, encoderPinB);
 
