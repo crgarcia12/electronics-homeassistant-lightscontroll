@@ -1,0 +1,360 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Module:Arduino_Nano_v3.x A1
+U 1 1 5F46CE9F
+P 8500 4100
+F 0 "A1" H 8500 3011 50  0000 C CNN
+F 1 "Arduino_Nano_v3.x" H 8500 2920 50  0000 C CNN
+F 2 "Module:Arduino_Nano_WithMountingHoles" H 8500 4100 50  0001 C CIN
+F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 8500 4100 50  0001 C CNN
+	1    8500 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5F4B88C1
+P 8600 5100
+F 0 "#PWR0102" H 8600 4850 50  0001 C CNN
+F 1 "GND" H 8605 4927 50  0000 C CNN
+F 2 "" H 8600 5100 50  0001 C CNN
+F 3 "" H 8600 5100 50  0001 C CNN
+	1    8600 5100
+	1    0    0    -1  
+$EndComp
+NoConn ~ 8400 3100
+NoConn ~ 8600 3100
+$Comp
+L power:GND #PWR0103
+U 1 1 5F4C4DA5
+P 8500 5100
+F 0 "#PWR0103" H 8500 4850 50  0001 C CNN
+F 1 "GND" H 8505 4927 50  0000 C CNN
+F 2 "" H 8500 5100 50  0001 C CNN
+F 3 "" H 8500 5100 50  0001 C CNN
+	1    8500 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x03_Female J1
+U 1 1 5F4DBF56
+P 6250 3200
+F 0 "J1" H 6142 2875 50  0000 C CNN
+F 1 "Relay" H 6142 2966 50  0000 C CNN
+F 2 "" H 6250 3200 50  0001 C CNN
+F 3 "~" H 6250 3200 50  0001 C CNN
+	1    6250 3200
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5F4DAB1F
+P 6450 4000
+F 0 "#PWR0101" H 6450 3750 50  0001 C CNN
+F 1 "GND" V 6455 3872 50  0000 R CNN
+F 2 "" H 6450 4000 50  0001 C CNN
+F 3 "" H 6450 4000 50  0001 C CNN
+	1    6450 4000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:Conn_01x05_Female J3
+U 1 1 5F4D9B77
+P 6250 3900
+F 0 "J3" H 6142 3475 50  0000 C CNN
+F 1 "Encoder" H 6142 3566 50  0000 C CNN
+F 2 "Connector_BarrelJack:BarrelJack_Horizontal" H 6250 3900 50  0001 C CNN
+F 3 "~" H 6250 3900 50  0001 C CNN
+	1    6250 3900
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 5F4E299F
+P 6450 3200
+F 0 "#PWR0106" H 6450 2950 50  0001 C CNN
+F 1 "GND" V 6455 3072 50  0000 R CNN
+F 2 "" H 6450 3200 50  0001 C CNN
+F 3 "" H 6450 3200 50  0001 C CNN
+	1    6450 3200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:Conn_01x04_Female J5
+U 1 1 5F4E310F
+P 9550 4400
+F 0 "J5" H 9578 4376 50  0000 L CNN
+F 1 "Display" H 9578 4285 50  0000 L CNN
+F 2 "" H 9550 4400 50  0001 C CNN
+F 3 "~" H 9550 4400 50  0001 C CNN
+	1    9550 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9350 4600 9000 4600
+Wire Wire Line
+	9000 4500 9350 4500
+$Comp
+L power:GND #PWR0108
+U 1 1 5F4E4EDB
+P 9350 4400
+F 0 "#PWR0108" H 9350 4150 50  0001 C CNN
+F 1 "GND" V 9355 4272 50  0000 R CNN
+F 2 "" H 9350 4400 50  0001 C CNN
+F 3 "" H 9350 4400 50  0001 C CNN
+	1    9350 4400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8000 3800 6450 3800
+Wire Wire Line
+	6450 3900 8000 3900
+$Comp
+L Connector:Conn_01x04_Female J4
+U 1 1 5F4ECAAF
+P 6250 4800
+F 0 "J4" H 6142 4375 50  0000 C CNN
+F 1 "Display" H 6142 4466 50  0000 C CNN
+F 2 "" H 6250 4800 50  0001 C CNN
+F 3 "~" H 6250 4800 50  0001 C CNN
+	1    6250 4800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8000 4500 7750 4500
+Wire Wire Line
+	7750 4500 7750 4600
+Wire Wire Line
+	7750 4600 6450 4600
+Wire Wire Line
+	8000 4600 7800 4600
+Wire Wire Line
+	7800 4600 7800 4700
+Wire Wire Line
+	7800 4700 6450 4700
+$Comp
+L power:GND #PWR0110
+U 1 1 5F4EE1CA
+P 6450 4800
+F 0 "#PWR0110" H 6450 4550 50  0001 C CNN
+F 1 "GND" V 6455 4672 50  0000 R CNN
+F 2 "" H 6450 4800 50  0001 C CNN
+F 3 "" H 6450 4800 50  0001 C CNN
+	1    6450 4800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Transistor_BJT:PN2222A Q1
+U 1 1 5F4F005B
+P 7050 2550
+F 0 "Q1" H 7241 2504 50  0000 L CNN
+F 1 "PN2222A" H 7241 2595 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 7250 2475 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/PN/PN2222A.pdf" H 7050 2550 50  0001 L CNN
+	1    7050 2550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5F4F0F93
+P 7400 2550
+F 0 "R2" V 7193 2550 50  0000 C CNN
+F 1 "220" V 7284 2550 50  0000 C CNN
+F 2 "" V 7330 2550 50  0001 C CNN
+F 3 "~" H 7400 2550 50  0001 C CNN
+	1    7400 2550
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 5F4F16AB
+P 7700 2550
+F 0 "D1" H 7693 2767 50  0000 C CNN
+F 1 "LED" H 7693 2676 50  0000 C CNN
+F 2 "" H 7700 2550 50  0001 C CNN
+F 3 "~" H 7700 2550 50  0001 C CNN
+	1    7700 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6450 3100 6950 3100
+Wire Wire Line
+	6950 3100 6950 2750
+$Comp
+L power:GND #PWR0112
+U 1 1 5F4F59BF
+P 6950 2050
+F 0 "#PWR0112" H 6950 1800 50  0001 C CNN
+F 1 "GND" H 6955 1877 50  0000 C CNN
+F 2 "" H 6950 2050 50  0001 C CNN
+F 3 "" H 6950 2050 50  0001 C CNN
+	1    6950 2050
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5F4F6D74
+P 6950 2200
+F 0 "R1" H 6880 2154 50  0000 R CNN
+F 1 "220" H 6880 2245 50  0000 R CNN
+F 2 "" V 6880 2200 50  0001 C CNN
+F 3 "~" H 6950 2200 50  0001 C CNN
+	1    6950 2200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Barrel_Jack_MountingPin J2
+U 1 1 5F4FC397
+P 1700 1500
+F 0 "J2" H 1757 1817 50  0000 C CNN
+F 1 "12v input" H 1757 1726 50  0000 C CNN
+F 2 "Connector_BarrelJack:BarrelJack_Wuerth_6941xx301002" H 1750 1460 50  0001 C CNN
+F 3 "~" H 1750 1460 50  0001 C CNN
+	1    1700 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Fuse F?
+U 1 1 5F4FF049
+P 2150 1400
+F 0 "F?" V 1953 1400 50  0000 C CNN
+F 1 "1.6A Fuse" V 2044 1400 50  0000 C CNN
+F 2 "" V 2080 1400 50  0001 C CNN
+F 3 "~" H 2150 1400 50  0001 C CNN
+	1    2150 1400
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J?
+U 1 1 5F4FFA9C
+P 1850 2150
+F 0 "J?" H 1768 1825 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 1768 1916 50  0000 C CNN
+F 2 "" H 1850 2150 50  0001 C CNN
+F 3 "~" H 1850 2150 50  0001 C CNN
+	1    1850 2150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2000 1600 2200 1600
+Wire Wire Line
+	2200 1600 2200 2050
+Wire Wire Line
+	2200 2050 2050 2050
+Wire Wire Line
+	2300 1400 2300 2150
+Wire Wire Line
+	2300 2150 2050 2150
+$Comp
+L Device:Fuse F?
+U 1 1 5F502464
+P 2450 1400
+F 0 "F?" V 2253 1400 50  0000 C CNN
+F 1 "250ma Fuse" V 2344 1400 50  0000 C CNN
+F 2 "" V 2380 1400 50  0001 C CNN
+F 3 "~" H 2450 1400 50  0001 C CNN
+	1    2450 1400
+	0    1    1    0   
+$EndComp
+Connection ~ 2300 1400
+Wire Wire Line
+	2600 1400 2800 1400
+Wire Wire Line
+	2800 1400 2800 1200
+Connection ~ 2200 1600
+Text GLabel 8700 3100 1    50   Input ~ 0
++5V
+Text GLabel 6450 3300 2    50   Input ~ 0
++5V
+Text GLabel 6450 4100 2    50   Input ~ 0
++5V
+Text GLabel 6450 4900 2    50   Input ~ 0
++5V
+Text GLabel 9350 4300 0    50   Input ~ 0
++5V
+$Comp
+L power:GND #PWR?
+U 1 1 5F5075E2
+P 4250 1600
+F 0 "#PWR?" H 4250 1350 50  0001 C CNN
+F 1 "GND" V 4255 1472 50  0000 R CNN
+F 2 "" H 4250 1600 50  0001 C CNN
+F 3 "" H 4250 1600 50  0001 C CNN
+	1    4250 1600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:CP C?
+U 1 1 5F50B6BB
+P 4200 1400
+F 0 "C?" H 4318 1446 50  0000 L CNN
+F 1 "100 mF" H 4318 1355 50  0000 L CNN
+F 2 "" H 4238 1250 50  0001 C CNN
+F 3 "~" H 4200 1400 50  0001 C CNN
+	1    4200 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Zener D?
+U 1 1 5F50FAFE
+P 4450 1200
+F 0 "D?" H 4450 1417 50  0000 C CNN
+F 1 "5V" H 4450 1326 50  0000 C CNN
+F 2 "" H 4450 1200 50  0001 C CNN
+F 3 "~" H 4450 1200 50  0001 C CNN
+	1    4450 1200
+	1    0    0    -1  
+$EndComp
+NoConn ~ 3000 1400
+Wire Wire Line
+	2200 1600 3000 1600
+Wire Wire Line
+	4250 1600 4200 1600
+Connection ~ 4200 1600
+Wire Wire Line
+	4200 1550 4200 1600
+Connection ~ 4200 1200
+Wire Wire Line
+	4200 1200 4300 1200
+Wire Wire Line
+	4200 1250 4200 1200
+Wire Wire Line
+	2800 1200 3000 1200
+$Comp
+L RY-1205S:RY-1205S PS?
+U 1 1 5F509038
+P 3600 1400
+F 0 "PS?" H 3600 1867 50  0000 C CNN
+F 1 "RY-1205S" H 3600 1776 50  0000 C CNN
+F 2 "CONV_RY-1205S" H 3600 1400 50  0001 L BNN
+F 3 "Recom" H 3600 1400 50  0001 L BNN
+F 4 "Manufacturer Recommendations" H 3600 1400 50  0001 L BNN "Field4"
+F 5 "10.2mm" H 3600 1400 50  0001 L BNN "Field5"
+F 6 "3" H 3600 1400 50  0001 L BNN "Field6"
+	1    3600 1400
+	1    0    0    -1  
+$EndComp
+Text GLabel 4600 1200 2    50   Output ~ 0
++5V
+Wire Wire Line
+	6450 3700 8000 3700
+Wire Wire Line
+	8000 4000 7900 4000
+Wire Wire Line
+	7900 4000 7900 2550
+Wire Wire Line
+	7900 2550 7850 2550
+$EndSCHEMATC

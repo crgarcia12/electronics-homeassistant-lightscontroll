@@ -1,0 +1,29 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#(c) SnapEDA 2016 (snapeda.com)
+#This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA) with Design Exception 1.0
+#
+# RY-1205S
+#
+DEF RY-1205S PS 0 40 Y Y 1 L N
+F0 "PS" -400 340 50 H V L BNN
+F1 "RY-1205S" -400 -430 50 H V L BNN
+F2 "CONV_RY-1205S" 0 0 50 H I L BNN
+F3 "Recom" 0 0 50 H I L BNN
+F4 "Manufacturer Recommendations" 0 0 50 H I L BNN
+F5 "10.2mm" 0 0 50 H I L BNN
+F6 "3" 0 0 50 H I L BNN
+DRAW
+P 2 0 0 10 -400 300 400 300 N
+P 2 0 0 10 400 300 400 -300 N
+P 2 0 0 10 400 -300 -400 -300 N
+P 2 0 0 10 -400 -300 -400 300 N
+X +VIN 1 -600 200 200 R 40 40 0 0 I 
+X +VOUT 6 600 200 200 L 40 40 0 0 O 
+X -VOUT 4 600 -200 200 L 40 40 0 0 O 
+X -VIN 2 -600 -200 200 R 40 40 0 0 I 
+X CTRL 5 -600 0 200 R 40 40 0 0 I 
+ENDDRAW
+ENDDEF
+#
+# End Library
