@@ -76,7 +76,7 @@ U 1 1 5F4D9B77
 P 6250 3900
 F 0 "J3" H 6142 3475 50  0000 C CNN
 F 1 "Encoder" H 6142 3566 50  0000 C CNN
-F 2 "Connector_BarrelJack:BarrelJack_Horizontal" H 6250 3900 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical" H 6250 3900 50  0001 C CNN
 F 3 "~" H 6250 3900 50  0001 C CNN
 	1    6250 3900
 	-1   0    0    1   
@@ -91,17 +91,6 @@ F 2 "" H 6450 3200 50  0001 C CNN
 F 3 "" H 6450 3200 50  0001 C CNN
 	1    6450 3200
 	0    -1   -1   0   
-$EndComp
-$Comp
-L Connector:Conn_01x04_Female J5
-U 1 1 5F4E310F
-P 9550 4400
-F 0 "J5" H 9578 4376 50  0000 L CNN
-F 1 "Display" H 9578 4285 50  0000 L CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" H 9550 4400 50  0001 C CNN
-F 3 "~" H 9550 4400 50  0001 C CNN
-	1    9550 4400
-	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	9350 4600 9000 4600
@@ -221,7 +210,7 @@ U 1 1 5F4FC397
 P 2950 2450
 F 0 "J2" H 3007 2767 50  0000 C CNN
 F 1 "12v input" H 3007 2676 50  0000 C CNN
-F 2 "Connector_BarrelJack:BarrelJack_Wuerth_6941xx301002" H 3000 2410 50  0001 C CNN
+F 2 "Connector_BarrelJack:BarrelJack_CUI_PJ-063AH_Horizontal" H 3000 2410 50  0001 C CNN
 F 3 "~" H 3000 2410 50  0001 C CNN
 	1    2950 2450
 	1    0    0    -1  
@@ -429,24 +418,23 @@ $EndComp
 $Comp
 L power:GND #PWR03
 U 1 1 5F4E5570
-P 7900 2250
-F 0 "#PWR03" H 7900 2000 50  0001 C CNN
-F 1 "GND" H 7905 2077 50  0000 C CNN
-F 2 "" H 7900 2250 50  0001 C CNN
-F 3 "" H 7900 2250 50  0001 C CNN
-	1    7900 2250
+P 7550 2250
+F 0 "#PWR03" H 7550 2000 50  0001 C CNN
+F 1 "GND" H 7555 2077 50  0000 C CNN
+F 2 "" H 7550 2250 50  0001 C CNN
+F 3 "" H 7550 2250 50  0001 C CNN
+	1    7550 2250
 	-1   0    0    1   
 $EndComp
-Connection ~ 7900 2550
 $Comp
 L Device:R R4
 U 1 1 5F4E50D6
-P 7900 2400
-F 0 "R4" V 7693 2400 50  0000 C CNN
-F 1 "10K" V 7784 2400 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7830 2400 50  0001 C CNN
-F 3 "~" H 7900 2400 50  0001 C CNN
-	1    7900 2400
+P 7550 2400
+F 0 "R4" V 7343 2400 50  0000 C CNN
+F 1 "10K" V 7434 2400 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7480 2400 50  0001 C CNN
+F 3 "~" H 7550 2400 50  0001 C CNN
+	1    7550 2400
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -465,4 +453,16 @@ F 6 "3" H 4850 2350 50  0001 L BNN "Field6"
 $EndComp
 Connection ~ 5450 2150
 Connection ~ 5450 2550
+Connection ~ 7550 2550
+$Comp
+L Connector:Conn_01x04_Female J5
+U 1 1 5F4E310F
+P 9550 4400
+F 0 "J5" H 9578 4376 50  0000 L CNN
+F 1 "Display" H 9578 4285 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" H 9550 4400 50  0001 C CNN
+F 3 "~" H 9550 4400 50  0001 C CNN
+	1    9550 4400
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
