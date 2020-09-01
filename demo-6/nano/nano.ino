@@ -1,14 +1,10 @@
 /*
-   To make this work, you need to:
-   Tutorial: https://www.youtube.com/watch?v=gXXdoeu7yWw
-
-   1. Install this: https://github.com/SpenceKonde/ATTinyCore/blob/master/Wiring.md
-   2. Tools -> Board -> Arduino nano
-   3. Tools -> Processor -> ATmega 328P (no bootloader)
+   1. Tools -> Board -> Arduino nano
+   2. Tools -> Processor -> ATmega 328P (no bootloader)
    
-   4. Install Library HCSR04 by Martin Soic:https://github.com/Martinsos/arduino-lib-hc-sr04
-   5. Install Library LiquidCrystal_I2C
-   6. Install Library Encoder: https://www.pjrc.com/teensy/td_libs_Encoder.html
+   3. Install Library HCSR04 by Martin Soic:https://github.com/Martinsos/arduino-lib-hc-sr04
+   4. Install Library LiquidCrystal_I2C
+   5. Install Library Encoder: https://www.pjrc.com/teensy/td_libs_Encoder.html
 */
 
 // Installed libraries
@@ -19,8 +15,14 @@
 // Arduino Internal Libraries
 #include <Wire.h> 
 
+/*******************************
+ *             PINS
+ *******************************/
+// 5V
+// GND
 // DisplaySDA A4
 // DisplaySCL A5
+
 #define encoderPinA 2
 #define encoderPinB 3
 #define MenuButtonPin 4
@@ -39,8 +41,11 @@ int pumpStartDistance = 12;
 int pumpStopDistance = 5;
 int pumpSatus = PumpOff;
 
-// Refresh and Display
+
+// Refresh
 #define UserRefreshTime 300
+
+// Display
 #define DisplaySize 16
 LiquidCrystal_I2C lcd(0x27, DisplaySize, 2);
 long lastRefresh;
@@ -53,7 +58,7 @@ char* displayLine2;
 // HeartBeat
 int heartBeatStatus = LOW;
 
-// Create and initialize the Ultrasonic object.
+// Ultrasonic distance
 UltraSonicDistanceSensor distanceSensor(TrigPin, EchoPin);
 
 // Encoder
@@ -82,7 +87,7 @@ void setup()
   // initialize digital pin LED_BUILTIN as an output.
   pinMode(LED_BUILTIN, OUTPUT);
 
-  Serial.begin(9600);
+  //Serial.begin(9600);
   //Serial.println(debugCounter); debugCounter = debugCounter + 1;
 }
 
