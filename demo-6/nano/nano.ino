@@ -4,13 +4,12 @@
    
    3. Install Library HCSR04 by Martin Soic:https://github.com/Martinsos/arduino-lib-hc-sr04
    4. Install Library LiquidCrystal_I2C
-   5. Install Library Encoder: https://www.pjrc.com/teensy/td_libs_Encoder.html
+   5. Encoder code from: https://www.instructables.com/id/Improved-Arduino-Rotary-Encoder-Reading/
 */
 
 // Installed libraries
 #include <LiquidCrystal_I2C.h>
 #include <HCSR04.h>
-#include <Encoder.h>
 
 // Arduino Internal Libraries
 #include <Wire.h> 
@@ -23,8 +22,9 @@
 // DisplaySDA A4
 // DisplaySCL A5
 
-#define encoderPinA 2
-#define encoderPinB 3
+// Encoder pins cannot be changed because arduino only have 2 pins with interrupts. Pins are hardcoded 
+#define EncoderPinA 2
+#define EncoderPinB 3
 #define MenuButtonPin 4
 
 #define RelayPin 5
@@ -61,14 +61,16 @@ int heartBeatStatus = LOW;
 // Ultrasonic distance
 UltraSonicDistanceSensor distanceSensor(TrigPin, EchoPin);
 
-// Encoder
-#define ENCODER_OPTIMIZE_INTERRUPTS
-Encoder encoder(encoderPinA, encoderPinB);
-
 // Menu
 // Last Item is used to know when we should go back to the first one
 enum MenuStates {Main = 0, MinDistance, MaxDistance, LastItem};
 enum MenuStates MenuCurrentState;
+
+// Encoder
+volatile byte aFlag = 0;
+volatile byte bFlag = 0;
+volatile byte encoderPos = 0;
+volatile byte reading = 0;
 
 void setup() 
 {
@@ -86,6 +88,12 @@ void setup()
  
   // initialize digital pin LED_BUILTIN as an output.
   pinMode(LED_BUILTIN, OUTPUT);
+
+  // Encoder
+  pinMode(EncoderPinA, INPUT_PULLUP);
+  pinMode(EncoderPinB, INPUT_PULLUP);
+  attachInterrupt(digitalPinToInterrupt(EncoderPinA), EncoderPinAChanged, RISING);
+  attachInterrupt(digitalPinToInterrupt(EncoderPinB), EncoderPinBChanged, RISING);
 
   //Serial.begin(9600);
   //Serial.println(debugCounter); debugCounter = debugCounter + 1;
@@ -138,17 +146,12 @@ void loop()
   }
   
   /******************************** 
-   *          Encoder 
-   *********************************/
-  int encoderPos = encoder.read() / 4;
-  Serial.println(encoderPos);
-  encoder.write(0);
-  /******************************** 
    *          Menu 
    *********************************/
   if(executeRefresh){
     if (digitalRead(MenuButtonPin) == HIGH) {
       MenuCurrentState = MenuCurrentState + 1;
+      encoderPos = 0;
       if(MenuCurrentState >= LastItem)
       {
         MenuCurrentState = Main;
@@ -219,4 +222,50 @@ void printNumbersInStr (char *str, int number, int startPosition)
       str[index] = '0' + digit;
     }
   }
+}
+
+void EncoderPinAChanged(){
+  //stop interrupts happening before we read pin values
+  cli(); 
+  
+  // read all eight pin values then strip away all but pinA and pinB's values
+  reading = PIND & 0xC; 
+
+  //check that we have both pins at detent (HIGH) and that we are expecting detent on this pin's rising edge
+  if(reading == B00001100 && aFlag) 
+  { 
+    encoderPos --; //decrement the encoder's position count
+    bFlag = 0; //reset flags for the next turn
+    aFlag = 0; //reset flags for the next turn
+  }
+  else if (reading == B00000100) 
+  {
+    //signal that we're expecting pinB to signal the transition to detent from free rotation
+    bFlag = 1;
+  }
+  //restart interrupts
+  sei(); 
+}
+
+void EncoderPinBChanged(){
+  //stop interrupts happening before we read pin values
+  cli();
+  
+  //read all eight pin values then strip away all but pinA and pinB's values
+  reading = PIND & 0xC;
+  
+  //check that we have both pins at detent (HIGH) and that we are expecting detent on this pin's rising edge
+  if (reading == B00001100 && bFlag)
+  {
+    encoderPos ++; //increment the encoder's position count
+    bFlag = 0; //reset flags for the next turn
+    aFlag = 0; //reset flags for the next turn
+  }
+  else if (reading == B00001000)
+  {
+    //signal that we're expecting pinA to signal the transition to detent from free rotation
+    aFlag = 1;
+  }
+  //restart interrupts
+  sei();
 }
