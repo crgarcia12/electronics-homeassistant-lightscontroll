@@ -8,6 +8,7 @@
    6. Encoder code from: https://www.instructables.com/id/Improved-Arduino-Rotary-Encoder-Reading/
 */
 
+// Enable this if you want the encoder information to be printed in the serial output
 //#define SerialDebug
 
 // Installed libraries
@@ -44,8 +45,7 @@ int pumpStartDistance = 12;
 int pumpStopDistance = 5;
 int pumpSatus = PumpOff;
 
-
-// Refresh
+// Refresh: How often the screen, button and Heartbeat are refreshed
 #define UserRefreshTime 200
 
 // Display
