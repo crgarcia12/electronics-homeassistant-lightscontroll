@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/home/carlos/gitrepos/github/crgarcia12/arduino-first-tests/demo-7/src/hello_world/build/CMakeFiles/bootloader
+/home/carlos/gitrepos/github/crgarcia12/arduino-first-tests/demo-7/src/hello_world/build/CMakeFiles/bootloader.rule
+/home/carlos/gitrepos/github/crgarcia12/arduino-first-tests/demo-7/src/hello_world/build/CMakeFiles/bootloader-complete.rule
+/home/carlos/gitrepos/github/crgarcia12/arduino-first-tests/demo-7/src/hello_world/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/home/carlos/gitrepos/github/crgarcia12/arduino-first-tests/demo-7/src/hello_world/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/home/carlos/gitrepos/github/crgarcia12/arduino-first-tests/demo-7/src/hello_world/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/home/carlos/gitrepos/github/crgarcia12/arduino-first-tests/demo-7/src/hello_world/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
+/home/carlos/gitrepos/github/crgarcia12/arduino-first-tests/demo-7/src/hello_world/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/home/carlos/gitrepos/github/crgarcia12/arduino-first-tests/demo-7/src/hello_world/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/home/carlos/gitrepos/github/crgarcia12/arduino-first-tests/demo-7/src/hello_world/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
