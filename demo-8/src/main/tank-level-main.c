@@ -12,17 +12,34 @@
 #include "freertos/task.h"
 #include "esp_system.h"
 #include "esp_spi_flash.h"
-#include "driver/gpio.h"
-#include "driver/i2c.h"
 #include "esp_log.h"
+#include "driver/gpio.h"
 #include "sdkconfig.h"
 #include "esp32/rom/uart.h"
 
+// LCD
 #include "smbus.h"
 #include "i2c-lcd1602.h"
+#include "driver/i2c.h"
 
-// Led
-#define BLINK_GPIO 2
+// Encoder
+#include "freertos/queue.h"
+#include "rotary_encoder.h"
+
+// Generics
+#define TAG "app"
+
+// Pins
+#define BLINK_GPIO         2
+#define I2C_MASTER_SDA_IO  21
+#define I2C_MASTER_SCL_IO  22
+#define ROT_ENC_A_GPIO     34    // You need a pullup 10k resistor to 5V
+#define ROT_ENC_B_GPIO     35    // You need a pullup 10k resistor to 5V
+
+// Encoder
+#define ENABLE_HALF_STEPS false  // Set to true to enable tracking of rotary encoder at half step resolution
+#define RESET_AT          0      // Set to a positive non-zero number to reset the position if this value is exceeded
+#define FLIP_DIRECTION    false  // Set to true to reverse the clockwise/counterclockwise sense
 
 // LCD1602
 #define LCD_NUM_ROWS               2
@@ -32,8 +49,6 @@
 #define I2C_MASTER_TX_BUF_LEN    0                     // disabled
 #define I2C_MASTER_RX_BUF_LEN    0                     // disabled
 #define I2C_MASTER_FREQ_HZ       100000
-#define I2C_MASTER_SDA_IO        21
-#define I2C_MASTER_SCL_IO        22
 #define CONFIG_LCD1602_I2C_ADDRESS 0x27
 
 void TaskDelayMs(int ms)
@@ -55,6 +70,47 @@ static void i2c_master_init(void)
     i2c_driver_install(i2c_master_port, conf.mode,
                        I2C_MASTER_RX_BUF_LEN,
                        I2C_MASTER_TX_BUF_LEN, 0);
+}
+
+static void encoder_init()
+{
+    // esp32-rotary-encoder requires that the GPIO ISR service is installed before calling rotary_encoder_register()
+    ESP_ERROR_CHECK(gpio_install_isr_service(0));
+    // Initialise the rotary encoder device with the GPIOs for A and B signals
+    rotary_encoder_info_t info = { 0 };
+    ESP_ERROR_CHECK(rotary_encoder_init(&info, ROT_ENC_A_GPIO, ROT_ENC_B_GPIO));
+    ESP_ERROR_CHECK(rotary_encoder_enable_half_steps(&info, ENABLE_HALF_STEPS));
+    
+    // Create a queue for events from the rotary encoder driver.
+    // Tasks can read from this queue to receive up to date position information.
+    QueueHandle_t event_queue = rotary_encoder_create_queue();
+    ESP_ERROR_CHECK(rotary_encoder_set_queue(&info, event_queue));
+
+        while (1)
+    {
+        // Wait for incoming events on the event queue.
+        rotary_encoder_event_t event = { 0 };
+        if (xQueueReceive(event_queue, &event, 1000 / portTICK_PERIOD_MS) == pdTRUE)
+        {
+            ESP_LOGI(TAG, "Event: position %d, direction %s", event.state.position,
+                     event.state.direction ? (event.state.direction == ROTARY_ENCODER_DIRECTION_CLOCKWISE ? "CW" : "CCW") : "NOT_SET");
+        }
+        else
+        {
+            // Poll current position and direction
+            rotary_encoder_state_t state = { 0 };
+            ESP_ERROR_CHECK(rotary_encoder_get_state(&info, &state));
+            ESP_LOGI(TAG, "Poll: position %d, direction %s", state.position,
+                     state.direction ? (state.direction == ROTARY_ENCODER_DIRECTION_CLOCKWISE ? "CW" : "CCW") : "NOT_SET");
+
+            // Reset the device
+            if (RESET_AT && (state.position >= RESET_AT || state.position <= -RESET_AT))
+            {
+                ESP_LOGI(TAG, "Reset");
+                ESP_ERROR_CHECK(rotary_encoder_reset(&info));
+            }
+        }
+    }
 }
 
 void hearbeat_task(void * pvParameter)
@@ -134,6 +190,7 @@ void app_main(void)
     xTaskCreate(&lcd1602_task, "lcd1602_task", 4096, NULL, 5, NULL);
     xTaskCreate(&hearbeat_task, "hearbeat_task", 2048, NULL, 5, NULL);
 
+    encoder_init();
     while(1) {
         printf("Doing nothing in app_main");
         TaskDelayMs(10000);
