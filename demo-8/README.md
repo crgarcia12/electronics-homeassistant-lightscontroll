@@ -1,4 +1,4 @@
-This are my first tries with ESP32 chip.
+This is a tank level measure system built for ESP32 dev kit.
 I am using the IDF (not Arduino) and VSCode to develope
 I never managed to make the debugger work with the VSCode extension
 
@@ -21,35 +21,44 @@ sudo apt-get install libffi-dev
 sudo apt-get install libssl-dev
 sudo apt-get install dfu-util
 
-
-# Install IDF on Linux
+## Install IDF on Linux
+```
 cd ~/esp
 git clone --recursive https://github.com/espressif/esp-idf.git
 cd ~/esp/esp-idf
 install.sh
 . ./export.sh
-
+```
 
 ## Find the port of your device
-   cd /dev/
-   $filesBefore = (gci).Name    
-   // Plug your device in here
-   $filesAfter = (gci).Name
-   $filesAfter | ? {$filesBefore -notcontains $_} # This will compare both list
+```
+powershell
+cd /dev/
+$filesBefore = (gci).Name    
+// Plug your device in here
+$filesAfter = (gci).Name
+$filesAfter | ? {$filesBefore -notcontains $_} # This will compare both list
+```
 
 ## Create a new project
+```
 cd ~/gitrepos/github/crgarcia12/arduino-first-tests/demo-7/src
 cp -r $IDF_PATH/examples/get-started/hello_world .
 idf.py set-target esp32
 idf.py menuconfig
+```
 
 ## Every time you want to run this
+```
 $HOME/esp/esp-idf/install.sh
 . $HOME/esp/esp-idf/export.sh
 
 cd ~/gitrepos/github/crgarcia/arduino-first-tests/demo-7/src
 code .
+```
 
 ## Monitor the serial
+```
 idf.py monitor
 Note: To exit the monitor you have to use Ctrl+T or Ctrl+]
+```
