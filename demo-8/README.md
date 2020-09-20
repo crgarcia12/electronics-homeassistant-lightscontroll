@@ -49,11 +49,18 @@ idf.py menuconfig
 ```
 
 ## Every time you want to run this
+
+
+
 ```
+# This git uses submodules
+git submodule update --init --recursive
+git pull --recurse-submodules
+
 $HOME/esp/esp-idf/install.sh
 . $HOME/esp/esp-idf/export.sh
 
-cd ~/gitrepos/github/crgarcia/arduino-first-tests/demo-7/src
+cd ~/gitrepos/github/crgarcia/arduino-first-tests/demo-8/src
 code .
 ```
 

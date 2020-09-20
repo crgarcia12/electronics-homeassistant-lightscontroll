@@ -4,3 +4,6 @@
 [submodule "demo-8/src/components/esp32-i2c-lcd1602"]
 	path = demo-8/src/components/esp32-i2c-lcd1602
 	url = https://github.com/DavidAntliff/esp32-i2c-lcd1602
+[submodule "demo-8/src/components/esp32-rotary-encoder"]
+	path = demo-8/src/components/esp32-rotary-encoder
+	url = https://github.com/DavidAntliff/esp32-rotary-encoder.git
