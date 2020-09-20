@@ -33,7 +33,7 @@
 // Pins
 #define BLINK_GPIO_PIN         GPIO_NUM_2
 #define I2C_MASTER_SDA_IO_PIN  GPIO_NUM_21
-#define I2C_MASTER_SCL_IO_PIN  GPIO_NUM_21
+#define I2C_MASTER_SCL_IO_PIN  GPIO_NUM_22
 #define MENU_BUTTON_PIN        GPIO_NUM_27
 #define ROT_ENC_A_GPIO_PIN     GPIO_NUM_34    // You need a pullup 10k resistor to 5V
 #define ROT_ENC_B_GPIO_PIN     GPIO_NUM_35    // You need a pullup 10k resistor to 5V
@@ -42,6 +42,8 @@
 #define ENABLE_HALF_STEPS false  // Set to true to enable tracking of rotary encoder at half step resolution
 #define RESET_AT          0      // Set to a positive non-zero number to reset the position if this value is exceeded
 #define FLIP_DIRECTION    false  // Set to true to reverse the clockwise/counterclockwise sense
+rotary_encoder_info_t encoder_info = { 0 };
+QueueHandle_t encoder_event_queue;
 
 // LCD1602
 #define LCD_NUM_ROWS               2
@@ -61,6 +63,10 @@ SemaphoreHandle_t menuButtonSemaphore = NULL;
 int menu = 0;
 
 
+void TaskDelayMs(int ms)
+{
+    vTaskDelay(ms/portTICK_PERIOD_MS);
+}
 
 // Interrupt Service Routine: code called when interrupt is triggered
 void IRAM_ATTR Menu_Button_Isr_Handler(void* arg)
@@ -75,8 +81,11 @@ void menu_button_pressed_task()
         // Blocking until ISR
         if(xSemaphoreTake(menuButtonSemaphore, portMAX_DELAY) == pdTRUE)
         {
-            printf("Botton!");
+            printf("BOTON!\n");
         }
+
+        printf("OUT LOOP\n");
+        TaskDelayMs(500);
     }
     
 }
@@ -90,7 +99,7 @@ void menubutton_init()
     // We need to install ISR services
     gpio_install_isr_service(ESP_INTR_FLAG_DEFAULT);
     // Whow is going to handle the ISR call?
-    gpio_isr_handler_add(MENU_BUTTON_PIN, Menu_Button_Isr_Handler, NULL);
+    gpio_isr_handler_add(MENU_BUTTON_PIN, &Menu_Button_Isr_Handler, NULL);
     // Interrupt when state changes from HIGH to LOW
     gpio_set_intr_type(MENU_BUTTON_PIN, GPIO_INTR_NEGEDGE);
 
@@ -99,13 +108,6 @@ void menubutton_init()
     xTaskCreate(&menu_button_pressed_task, "menu_button_pressed_task", 2048, NULL, 5, NULL);
 
 }
-
-
-void TaskDelayMs(int ms)
-{
-    vTaskDelay(ms/portTICK_PERIOD_MS);
-}
-
 static void i2c_master_init(void)
 {
     int i2c_master_port = I2C_MASTER_NUM;
@@ -122,25 +124,13 @@ static void i2c_master_init(void)
                        I2C_MASTER_TX_BUF_LEN, 0);
 }
 
-static void encoder_init()
+void encoder_task()
 {
-    // esp32-rotary-encoder requires that the GPIO ISR service is installed before calling rotary_encoder_register()
-    ESP_ERROR_CHECK(gpio_install_isr_service(0));
-    // Initialise the rotary encoder device with the GPIOs for A and B signals
-    rotary_encoder_info_t info = { 0 };
-    ESP_ERROR_CHECK(rotary_encoder_init(&info, ROT_ENC_A_GPIO_PIN, ROT_ENC_B_GPIO_PIN));
-    ESP_ERROR_CHECK(rotary_encoder_enable_half_steps(&info, ENABLE_HALF_STEPS));
-    
-    // Create a queue for events from the rotary encoder driver.
-    // Tasks can read from this queue to receive up to date position information.
-    QueueHandle_t event_queue = rotary_encoder_create_queue();
-    ESP_ERROR_CHECK(rotary_encoder_set_queue(&info, event_queue));
-
-        while (1)
+    while (1)
     {
         // Wait for incoming events on the event queue.
         rotary_encoder_event_t event = { 0 };
-        if (xQueueReceive(event_queue, &event, 1000 / portTICK_PERIOD_MS) == pdTRUE)
+        if (xQueueReceive(encoder_event_queue, &event, 1000 / portTICK_PERIOD_MS) == pdTRUE)
         {
             ESP_LOGI(TAG, "Event: position %d, direction %s", event.state.position,
                      event.state.direction ? (event.state.direction == ROTARY_ENCODER_DIRECTION_CLOCKWISE ? "CW" : "CCW") : "NOT_SET");
@@ -149,7 +139,7 @@ static void encoder_init()
         {
             // Poll current position and direction
             rotary_encoder_state_t state = { 0 };
-            ESP_ERROR_CHECK(rotary_encoder_get_state(&info, &state));
+            ESP_ERROR_CHECK(rotary_encoder_get_state(&encoder_info, &state));
             ESP_LOGI(TAG, "Poll: position %d, direction %s", state.position,
                      state.direction ? (state.direction == ROTARY_ENCODER_DIRECTION_CLOCKWISE ? "CW" : "CCW") : "NOT_SET");
 
@@ -157,10 +147,26 @@ static void encoder_init()
             if (RESET_AT && (state.position >= RESET_AT || state.position <= -RESET_AT))
             {
                 ESP_LOGI(TAG, "Reset");
-                ESP_ERROR_CHECK(rotary_encoder_reset(&info));
+                ESP_ERROR_CHECK(rotary_encoder_reset(&encoder_info));
             }
         }
     }
+}
+
+void encoder_init()
+{
+    // esp32-rotary-encoder requires that the GPIO ISR service is installed before calling rotary_encoder_register()
+    ESP_ERROR_CHECK(gpio_install_isr_service(ESP_INTR_FLAG_DEFAULT));
+    // Initialise the rotary encoder device with the GPIOs for A and B signals
+    ESP_ERROR_CHECK(rotary_encoder_init(&encoder_info, ROT_ENC_A_GPIO_PIN, ROT_ENC_B_GPIO_PIN));
+    ESP_ERROR_CHECK(rotary_encoder_enable_half_steps(&encoder_info, ENABLE_HALF_STEPS));
+    
+    // Create a queue for events from the rotary encoder driver.
+    // Tasks can read from this queue to receive up to date position information.
+    encoder_event_queue = rotary_encoder_create_queue();
+    ESP_ERROR_CHECK(rotary_encoder_set_queue(&encoder_info, encoder_event_queue));
+
+    xTaskCreate(&encoder_task, "encoder_task", 2048, NULL, 5, NULL);
 }
 
 void hearbeat_task(void * pvParameter)
@@ -244,7 +250,7 @@ void app_main(void)
 
     
     while(1) {
-        printf("Doing nothing in app_main");
+        printf("Doing nothing in app_main\n");
         TaskDelayMs(10000);
     }
     //printf("Restarting now.\n");
