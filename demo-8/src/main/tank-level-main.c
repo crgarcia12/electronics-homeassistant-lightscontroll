@@ -19,6 +19,7 @@
 #include "esp32/rom/uart.h"
 
 // LCD
+#define ENABLE_SCREEN
 #include "smbus.h"
 #include "i2c-lcd1602.h"
 #include "driver/i2c.h"
@@ -29,7 +30,6 @@
 
 // HC-SR04
 #include "ultrasonic.h"
-#define MAX_DISTANCE_CM 500 // 5m max
 
 // Generics
 #define LOG_TAG "app"
@@ -38,6 +38,7 @@
 #define BLINK_GPIO_PIN         GPIO_NUM_2
 #define I2C_MASTER_SDA_IO_PIN  GPIO_NUM_21
 #define I2C_MASTER_SCL_IO_PIN  GPIO_NUM_22
+#define PUMP_PIN               GPIO_NUM_25
 #define TRIGGER_GPIO_PIN       GPIO_NUM_26
 #define ECHO_GPIO_PIN          GPIO_NUM_27
 #define MENU_BUTTON_PIN        GPIO_NUM_32
@@ -60,6 +61,7 @@ QueueHandle_t encoder_event_queue;
 #define I2C_MASTER_RX_BUF_LEN      0                     // disabled
 #define I2C_MASTER_FREQ_HZ         100000
 #define CONFIG_LCD1602_I2C_ADDRESS 0x27
+i2c_lcd1602_info_t * lcd_info;
 
 // Button
 #define ESP_INTR_FLAG_DEFAULT 0
@@ -72,18 +74,21 @@ ultrasonic_sensor_t ultrasonic_sensor  = {
     .echo_pin = ECHO_GPIO_PIN
 };
 
-// Menu
-int menu = 0;
+// Pump
+#define PumpOff         0
+#define PumpOn          1
+int PumpStartDistance = 12;
+int PumpStopDistance  = 5;
+int PumpStatus         = PumpOff;
 
+// Menu
+// Last Item is used to know when we should go back to the first one
+enum MenuStates {Main = 0, MinDistance, MaxDistance, LastItem};
+enum MenuStates MenuCurrentState;
 
 void TaskDelayMs(int ms)
 {
     vTaskDelay(ms/portTICK_PERIOD_MS);
-}
-
-void ultrasonic_sensor_init()
-{
-    ultrasonic_init(&ultrasonic_sensor);
 }
 
 int32_t ultrasonic_measure_distance_cm()
@@ -117,7 +122,7 @@ int32_t ultrasonic_measure_distance_cm()
 }
 
 // Interrupt Service Routine: code called when interrupt is triggered
-void IRAM_ATTR Menu_Button_Isr_Handler(void* arg)
+void IRAM_ATTR menu_button_isr_handler(void* arg)
 {
     xSemaphoreGiveFromISR(menuButtonSemaphore, NULL);
 }
@@ -132,7 +137,10 @@ void menu_button_pressed_task()
             printf("BOTON!\n");
         }
 
-        printf("OUT LOOP\n");
+        // Advance the menu to next item
+        MenuCurrentState = ( MenuCurrentState + 1 ) % LastItem;    
+
+        // Skip a very fast next press
         TaskDelayMs(500);
     }
     
@@ -147,7 +155,7 @@ void menubutton_init()
     // We need to install ISR services
     gpio_install_isr_service(ESP_INTR_FLAG_DEFAULT);
     // Whow is going to handle the ISR call?
-    gpio_isr_handler_add(MENU_BUTTON_PIN, &Menu_Button_Isr_Handler, NULL);
+    gpio_isr_handler_add(MENU_BUTTON_PIN, &menu_button_isr_handler, NULL);
     // Interrupt when state changes from HIGH to LOW
     gpio_set_intr_type(MENU_BUTTON_PIN, GPIO_INTR_NEGEDGE);
 
@@ -155,21 +163,6 @@ void menubutton_init()
     menuButtonSemaphore = xSemaphoreCreateBinary();
     xTaskCreate(&menu_button_pressed_task, "menu_button_pressed_task", 2048, NULL, 5, NULL);
 
-}
-static void i2c_master_init(void)
-{
-    int i2c_master_port = I2C_MASTER_NUM;
-    i2c_config_t conf;
-    conf.mode = I2C_MODE_MASTER;
-    conf.sda_io_num = I2C_MASTER_SDA_IO_PIN;
-    conf.sda_pullup_en = GPIO_PULLUP_DISABLE;  // GY-2561 provides 10kΩ pullups
-    conf.scl_io_num = I2C_MASTER_SCL_IO_PIN;
-    conf.scl_pullup_en = GPIO_PULLUP_DISABLE;  // GY-2561 provides 10kΩ pullups
-    conf.master.clk_speed = I2C_MASTER_FREQ_HZ;
-    i2c_param_config(i2c_master_port, &conf);
-    i2c_driver_install(i2c_master_port, conf.mode,
-                       I2C_MASTER_RX_BUF_LEN,
-                       I2C_MASTER_TX_BUF_LEN, 0);
 }
 
 void encoder_task()
@@ -231,8 +224,72 @@ void hearbeat_task(void * pvParameter)
     }
 }
 
-void lcd1602_task(void * pvParameter)
+void menu_loop_task(void * pvParameter)
 {
+    while(1)
+    {
+        rotary_encoder_state_t state = { 0 };
+        ESP_ERROR_CHECK(rotary_encoder_get_state(&encoder_info, &state));
+        ESP_ERROR_CHECK(rotary_encoder_reset(&encoder_info));
+
+        char * secondLine = "01234567890123456\0";
+        
+        // this might change in the way
+        enum MenuStates local_menuCurrentState = MenuCurrentState;
+        switch (local_menuCurrentState)
+        {
+            case Main:
+                //sprintf(secondLine, "Pump: %d", (int)PumpStatus); 
+                break;
+            case MaxDistance:
+                PumpStartDistance = PumpStartDistance + state.position;
+                if(PumpStartDistance < PumpStopDistance) 
+                    PumpStartDistance = PumpStopDistance + 1;
+                if(PumpStartDistance > 30) 
+                    PumpStartDistance = 30;
+                //sprintf(secondLine, "Max dist: %d", PumpStartDistance);
+                break;
+            case MinDistance:
+                PumpStopDistance = PumpStopDistance + state.position;
+                if (PumpStopDistance < 5) 
+                    PumpStopDistance = 5;
+                if (PumpStopDistance > PumpStartDistance) 
+                    PumpStopDistance = PumpStartDistance - 1;
+                //sprintf(secondLine, "Min dist: %d", PumpStopDistance);
+                break;
+            case LastItem:
+                printf("Error, MenuCurrentState is overflowed: %d", local_menuCurrentState);
+        }
+
+        int distance = ultrasonic_measure_distance_cm();
+        distance = distance % 100;
+        char * firstLine = "01234567890123456";
+        //sprintf(firstLine, "Distance: %d", distance);
+        i2c_lcd1602_move_cursor(lcd_info, 0, 0);
+        i2c_lcd1602_write_string(lcd_info, firstLine);
+
+        i2c_lcd1602_move_cursor(lcd_info, 0, 1);
+        i2c_lcd1602_write_string(lcd_info, secondLine);
+
+        TaskDelayMs(500);
+    }
+}
+
+static void i2c_screen_init(void)
+{
+    int i2c_master_port = I2C_MASTER_NUM;
+    i2c_config_t conf;
+    conf.mode = I2C_MODE_MASTER;
+    conf.sda_io_num = I2C_MASTER_SDA_IO_PIN;
+    conf.sda_pullup_en = GPIO_PULLUP_DISABLE;  // GY-2561 provides 10kΩ pullups
+    conf.scl_io_num = I2C_MASTER_SCL_IO_PIN;
+    conf.scl_pullup_en = GPIO_PULLUP_DISABLE;  // GY-2561 provides 10kΩ pullups
+    conf.master.clk_speed = I2C_MASTER_FREQ_HZ;
+    i2c_param_config(i2c_master_port, &conf);
+    i2c_driver_install(i2c_master_port, conf.mode,
+                       I2C_MASTER_RX_BUF_LEN,
+                       I2C_MASTER_TX_BUF_LEN, 0);
+
     printf("i2c light on\n");
     i2c_port_t i2c_num = I2C_MASTER_NUM;
     uint8_t address = CONFIG_LCD1602_I2C_ADDRESS;
@@ -243,40 +300,58 @@ void lcd1602_task(void * pvParameter)
     ESP_ERROR_CHECK(smbus_set_timeout(smbus_info, 1000 / portTICK_RATE_MS));
 
     // Set up the LCD1602 device with backlight off
-    i2c_lcd1602_info_t * lcd_info = i2c_lcd1602_malloc();
-    ESP_ERROR_CHECK(i2c_lcd1602_init(lcd_info, smbus_info, true,
-                                    LCD_NUM_ROWS, LCD_NUM_COLUMNS, LCD_NUM_VISIBLE_COLUMNS));
+    lcd_info = i2c_lcd1602_malloc();
+    ESP_ERROR_CHECK(i2c_lcd1602_init(lcd_info, smbus_info, true, LCD_NUM_ROWS, LCD_NUM_COLUMNS, LCD_NUM_VISIBLE_COLUMNS));
 
     ESP_ERROR_CHECK(i2c_lcd1602_reset(lcd_info));
-
-    // turn off backlight
-    printf("backlight off\n");
-    i2c_lcd1602_set_backlight(lcd_info, false);
 
     // turn on backlight
     printf("backlight on\n");
     i2c_lcd1602_set_backlight(lcd_info, true);
 
-    printf("cursor on\n");
+    printf("cursor off\n");
     i2c_lcd1602_set_cursor(lcd_info, false);
+}
 
-    printf("display hola at 0,0\n");
-    i2c_lcd1602_move_cursor(lcd_info, 0, 0);
-    i2c_lcd1602_write_string(lcd_info, "hola");
+void pump_task()
+{
+    while(1)
+    {
+        TaskDelayMs(2000);
+        int distance = ultrasonic_measure_distance_cm();
+        if(distance >= PumpStartDistance)
+        {
+            printf("PumpOn\n");
+            PumpStatus = PumpOn;
+        }
+        // On sensor error => distance < 0
+        if(distance <= PumpStopDistance)
+        {
+            printf("PumpOff\n");
+            PumpStatus = PumpOff;
+        }
+        gpio_set_level(PUMP_PIN, PumpStatus);
+    }
+}
 
-    printf("done scrolling\n");
-
-    vTaskDelete(NULL);
+void pump_init()
+{
+    gpio_reset_pin(PUMP_PIN);
+    gpio_set_direction(PUMP_PIN, GPIO_MODE_OUTPUT);
+    gpio_set_level(PUMP_PIN, PumpOff);
+    PumpStatus = PumpOff;
+    xTaskCreate(&pump_task, "pump_task", 2048, NULL, 5, NULL);
 }
 
 void app_main(void)
 {
-    printf("Init everyting\n");
-    i2c_master_init();
+    ESP_LOGI(LOG_TAG, "Init everyting\n");
+    i2c_screen_init();
     encoder_init();
     menubutton_init();
-    ultrasonic_sensor_init();
-    printf("Done Init everything\n");
+    ultrasonic_init(&ultrasonic_sensor);
+    pump_init();
+    ESP_LOGI(LOG_TAG, "Done Init everything\n");
 
     /* Print chip information */
     esp_chip_info_t chip_info;
@@ -294,15 +369,9 @@ void app_main(void)
 
     printf("Minimum free heap size: %d bytes\n", esp_get_minimum_free_heap_size());
 
-    xTaskCreate(&lcd1602_task, "lcd1602_task", 4096, NULL, 5, NULL);
     xTaskCreate(&hearbeat_task, "hearbeat_task", 2048, NULL, 5, NULL);
-
+    xTaskCreate(&menu_loop_task, "lcd1602_task", 4096, NULL, 5, NULL);
     
-    while(1) {
-        int water_distance = ultrasonic_measure_distance_cm();
-        printf("Doing nothing in app_main. Water level: %d\n", water_distance);
-        TaskDelayMs(1000);
-    }
     //printf("Restarting now.\n");
     //fflush(stdout);
     //esp_restart();
