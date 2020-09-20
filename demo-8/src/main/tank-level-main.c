@@ -10,6 +10,7 @@
 #include "sdkconfig.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
+#include "freertos/semphr.h"
 #include "esp_system.h"
 #include "esp_spi_flash.h"
 #include "esp_log.h"
@@ -30,11 +31,12 @@
 #define TAG "app"
 
 // Pins
-#define BLINK_GPIO         2
-#define I2C_MASTER_SDA_IO  21
-#define I2C_MASTER_SCL_IO  22
-#define ROT_ENC_A_GPIO     34    // You need a pullup 10k resistor to 5V
-#define ROT_ENC_B_GPIO     35    // You need a pullup 10k resistor to 5V
+#define BLINK_GPIO_PIN         GPIO_NUM_2
+#define I2C_MASTER_SDA_IO_PIN  GPIO_NUM_21
+#define I2C_MASTER_SCL_IO_PIN  GPIO_NUM_21
+#define MENU_BUTTON_PIN        GPIO_NUM_27
+#define ROT_ENC_A_GPIO_PIN     GPIO_NUM_34    // You need a pullup 10k resistor to 5V
+#define ROT_ENC_B_GPIO_PIN     GPIO_NUM_35    // You need a pullup 10k resistor to 5V
 
 // Encoder
 #define ENABLE_HALF_STEPS false  // Set to true to enable tracking of rotary encoder at half step resolution
@@ -51,6 +53,54 @@
 #define I2C_MASTER_FREQ_HZ       100000
 #define CONFIG_LCD1602_I2C_ADDRESS 0x27
 
+// Button
+#define ESP_INTR_FLAG_DEFAULT 0
+SemaphoreHandle_t menuButtonSemaphore = NULL;
+
+// Menu
+int menu = 0;
+
+
+
+// Interrupt Service Routine: code called when interrupt is triggered
+void IRAM_ATTR Menu_Button_Isr_Handler(void* arg)
+{
+    xSemaphoreGiveFromISR(menuButtonSemaphore, NULL);
+}
+
+void menu_button_pressed_task()
+{
+    while(1)
+    {
+        // Blocking until ISR
+        if(xSemaphoreTake(menuButtonSemaphore, portMAX_DELAY) == pdTRUE)
+        {
+            printf("Botton!");
+        }
+    }
+    
+}
+
+void menubutton_init()
+{
+    // Each pin has multiple functions, we want it as GPIO
+    gpio_pad_select_gpio(MENU_BUTTON_PIN);
+    // GPIO is input
+    gpio_set_direction(MENU_BUTTON_PIN, GPIO_MODE_INPUT);
+    // We need to install ISR services
+    gpio_install_isr_service(ESP_INTR_FLAG_DEFAULT);
+    // Whow is going to handle the ISR call?
+    gpio_isr_handler_add(MENU_BUTTON_PIN, Menu_Button_Isr_Handler, NULL);
+    // Interrupt when state changes from HIGH to LOW
+    gpio_set_intr_type(MENU_BUTTON_PIN, GPIO_INTR_NEGEDGE);
+
+
+    menuButtonSemaphore = xSemaphoreCreateBinary();
+    xTaskCreate(&menu_button_pressed_task, "menu_button_pressed_task", 2048, NULL, 5, NULL);
+
+}
+
+
 void TaskDelayMs(int ms)
 {
     vTaskDelay(ms/portTICK_PERIOD_MS);
@@ -61,9 +111,9 @@ static void i2c_master_init(void)
     int i2c_master_port = I2C_MASTER_NUM;
     i2c_config_t conf;
     conf.mode = I2C_MODE_MASTER;
-    conf.sda_io_num = I2C_MASTER_SDA_IO;
+    conf.sda_io_num = I2C_MASTER_SDA_IO_PIN;
     conf.sda_pullup_en = GPIO_PULLUP_DISABLE;  // GY-2561 provides 10kΩ pullups
-    conf.scl_io_num = I2C_MASTER_SCL_IO;
+    conf.scl_io_num = I2C_MASTER_SCL_IO_PIN;
     conf.scl_pullup_en = GPIO_PULLUP_DISABLE;  // GY-2561 provides 10kΩ pullups
     conf.master.clk_speed = I2C_MASTER_FREQ_HZ;
     i2c_param_config(i2c_master_port, &conf);
@@ -78,7 +128,7 @@ static void encoder_init()
     ESP_ERROR_CHECK(gpio_install_isr_service(0));
     // Initialise the rotary encoder device with the GPIOs for A and B signals
     rotary_encoder_info_t info = { 0 };
-    ESP_ERROR_CHECK(rotary_encoder_init(&info, ROT_ENC_A_GPIO, ROT_ENC_B_GPIO));
+    ESP_ERROR_CHECK(rotary_encoder_init(&info, ROT_ENC_A_GPIO_PIN, ROT_ENC_B_GPIO_PIN));
     ESP_ERROR_CHECK(rotary_encoder_enable_half_steps(&info, ENABLE_HALF_STEPS));
     
     // Create a queue for events from the rotary encoder driver.
@@ -115,15 +165,15 @@ static void encoder_init()
 
 void hearbeat_task(void * pvParameter)
 {
-    gpio_reset_pin(BLINK_GPIO);
-    gpio_set_direction(BLINK_GPIO, GPIO_MODE_OUTPUT);
+    gpio_reset_pin(BLINK_GPIO_PIN);
+    gpio_set_direction(BLINK_GPIO_PIN, GPIO_MODE_OUTPUT);
 
     while(1)
     {
         TaskDelayMs(1000);
-        gpio_set_level(BLINK_GPIO, 0);
+        gpio_set_level(BLINK_GPIO_PIN, 0);
         TaskDelayMs(1000);
-        gpio_set_level(BLINK_GPIO, 1);
+        gpio_set_level(BLINK_GPIO_PIN, 1);
     }
 }
 
@@ -167,9 +217,11 @@ void lcd1602_task(void * pvParameter)
 
 void app_main(void)
 {
-    printf("Starting i2c\n");
+    printf("Init everyting\n");
     i2c_master_init();
-    printf("Done starting i2c\n");
+    encoder_init();
+    menubutton_init();
+    printf("Done Init everything\n");
 
     /* Print chip information */
     esp_chip_info_t chip_info;
@@ -190,7 +242,7 @@ void app_main(void)
     xTaskCreate(&lcd1602_task, "lcd1602_task", 4096, NULL, 5, NULL);
     xTaskCreate(&hearbeat_task, "hearbeat_task", 2048, NULL, 5, NULL);
 
-    encoder_init();
+    
     while(1) {
         printf("Doing nothing in app_main");
         TaskDelayMs(10000);
