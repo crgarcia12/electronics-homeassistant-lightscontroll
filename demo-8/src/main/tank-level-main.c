@@ -27,14 +27,20 @@
 #include "freertos/queue.h"
 #include "rotary_encoder.h"
 
+// HC-SR04
+#include "ultrasonic.h"
+#define MAX_DISTANCE_CM 500 // 5m max
+
 // Generics
-#define TAG "app"
+#define LOG_TAG "app"
 
 // Pins
 #define BLINK_GPIO_PIN         GPIO_NUM_2
 #define I2C_MASTER_SDA_IO_PIN  GPIO_NUM_21
 #define I2C_MASTER_SCL_IO_PIN  GPIO_NUM_22
-#define MENU_BUTTON_PIN        GPIO_NUM_27
+#define TRIGGER_GPIO_PIN       GPIO_NUM_26
+#define ECHO_GPIO_PIN          GPIO_NUM_27
+#define MENU_BUTTON_PIN        GPIO_NUM_32
 #define ROT_ENC_A_GPIO_PIN     GPIO_NUM_34    // You need a pullup 10k resistor to 5V
 #define ROT_ENC_B_GPIO_PIN     GPIO_NUM_35    // You need a pullup 10k resistor to 5V
 
@@ -49,15 +55,22 @@ QueueHandle_t encoder_event_queue;
 #define LCD_NUM_ROWS               2
 #define LCD_NUM_COLUMNS            32
 #define LCD_NUM_VISIBLE_COLUMNS    16
-#define I2C_MASTER_NUM           I2C_NUM_0
-#define I2C_MASTER_TX_BUF_LEN    0                     // disabled
-#define I2C_MASTER_RX_BUF_LEN    0                     // disabled
-#define I2C_MASTER_FREQ_HZ       100000
+#define I2C_MASTER_NUM             I2C_NUM_0
+#define I2C_MASTER_TX_BUF_LEN      0                     // disabled
+#define I2C_MASTER_RX_BUF_LEN      0                     // disabled
+#define I2C_MASTER_FREQ_HZ         100000
 #define CONFIG_LCD1602_I2C_ADDRESS 0x27
 
 // Button
 #define ESP_INTR_FLAG_DEFAULT 0
 SemaphoreHandle_t menuButtonSemaphore = NULL;
+
+// Ultrasonic
+#define MAX_DISTANCE_CM 30
+ultrasonic_sensor_t ultrasonic_sensor  = {
+    .trigger_pin = TRIGGER_GPIO_PIN,
+    .echo_pin = ECHO_GPIO_PIN
+};
 
 // Menu
 int menu = 0;
@@ -66,6 +79,41 @@ int menu = 0;
 void TaskDelayMs(int ms)
 {
     vTaskDelay(ms/portTICK_PERIOD_MS);
+}
+
+void ultrasonic_sensor_init()
+{
+    ultrasonic_init(&ultrasonic_sensor);
+}
+
+int32_t ultrasonic_measure_distance_cm()
+{
+    uint32_t distance;
+    esp_err_t res = ultrasonic_measure_cm(&ultrasonic_sensor, MAX_DISTANCE_CM, &distance);
+    if (res != ESP_OK)
+    {
+        printf("Error: ");
+        switch (res)
+        {
+            case ESP_ERR_ULTRASONIC_PING:
+                printf("Cannot ping (device is in invalid state)\n");
+                break;
+            case ESP_ERR_ULTRASONIC_PING_TIMEOUT:
+                printf("Ping timeout (no device found)\n");
+                break;
+            case ESP_ERR_ULTRASONIC_ECHO_TIMEOUT:
+                printf("Echo timeout (i.e. distance too big)\n");
+                break;
+            default:
+                printf("%d\n", res);
+        }
+    }
+    else
+    {
+        printf("Distance: %d cm\n", distance);
+    }
+
+    return distance;
 }
 
 // Interrupt Service Routine: code called when interrupt is triggered
@@ -132,7 +180,7 @@ void encoder_task()
         rotary_encoder_event_t event = { 0 };
         if (xQueueReceive(encoder_event_queue, &event, 1000 / portTICK_PERIOD_MS) == pdTRUE)
         {
-            ESP_LOGI(TAG, "Event: position %d, direction %s", event.state.position,
+            ESP_LOGI(LOG_TAG, "Event: position %d, direction %s", event.state.position,
                      event.state.direction ? (event.state.direction == ROTARY_ENCODER_DIRECTION_CLOCKWISE ? "CW" : "CCW") : "NOT_SET");
         }
         else
@@ -140,13 +188,13 @@ void encoder_task()
             // Poll current position and direction
             rotary_encoder_state_t state = { 0 };
             ESP_ERROR_CHECK(rotary_encoder_get_state(&encoder_info, &state));
-            ESP_LOGI(TAG, "Poll: position %d, direction %s", state.position,
+            ESP_LOGI(LOG_TAG, "Poll: position %d, direction %s", state.position,
                      state.direction ? (state.direction == ROTARY_ENCODER_DIRECTION_CLOCKWISE ? "CW" : "CCW") : "NOT_SET");
 
             // Reset the device
             if (RESET_AT && (state.position >= RESET_AT || state.position <= -RESET_AT))
             {
-                ESP_LOGI(TAG, "Reset");
+                ESP_LOGI(LOG_TAG, "Reset");
                 ESP_ERROR_CHECK(rotary_encoder_reset(&encoder_info));
             }
         }
@@ -227,6 +275,7 @@ void app_main(void)
     i2c_master_init();
     encoder_init();
     menubutton_init();
+    ultrasonic_sensor_init();
     printf("Done Init everything\n");
 
     /* Print chip information */
@@ -250,8 +299,9 @@ void app_main(void)
 
     
     while(1) {
-        printf("Doing nothing in app_main\n");
-        TaskDelayMs(10000);
+        int water_distance = ultrasonic_measure_distance_cm();
+        printf("Doing nothing in app_main. Water level: %d\n", water_distance);
+        TaskDelayMs(1000);
     }
     //printf("Restarting now.\n");
     //fflush(stdout);
