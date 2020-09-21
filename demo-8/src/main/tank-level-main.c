@@ -232,14 +232,15 @@ void menu_loop_task(void * pvParameter)
         ESP_ERROR_CHECK(rotary_encoder_get_state(&encoder_info, &state));
         ESP_ERROR_CHECK(rotary_encoder_reset(&encoder_info));
 
-        char * secondLine = "01234567890123456\0";
+        char secondLine[16];
         
         // this might change in the way
         enum MenuStates local_menuCurrentState = MenuCurrentState;
         switch (local_menuCurrentState)
         {
             case Main:
-                //sprintf(secondLine, "Pump: %d", (int)PumpStatus); 
+                snprintf(secondLine, 16, "Pump: %d", (int)PumpStatus); 
+                printf("Line: %s\n", secondLine); 
                 break;
             case MaxDistance:
                 PumpStartDistance = PumpStartDistance + state.position;
@@ -247,7 +248,7 @@ void menu_loop_task(void * pvParameter)
                     PumpStartDistance = PumpStopDistance + 1;
                 if(PumpStartDistance > 30) 
                     PumpStartDistance = 30;
-                //sprintf(secondLine, "Max dist: %d", PumpStartDistance);
+                snprintf(secondLine, 16, "Max dist: %d", PumpStartDistance);
                 break;
             case MinDistance:
                 PumpStopDistance = PumpStopDistance + state.position;
@@ -255,7 +256,7 @@ void menu_loop_task(void * pvParameter)
                     PumpStopDistance = 5;
                 if (PumpStopDistance > PumpStartDistance) 
                     PumpStopDistance = PumpStartDistance - 1;
-                //sprintf(secondLine, "Min dist: %d", PumpStopDistance);
+                snprintf(secondLine, 16, "Min dist: %d", PumpStopDistance);
                 break;
             case LastItem:
                 printf("Error, MenuCurrentState is overflowed: %d", local_menuCurrentState);
@@ -263,8 +264,8 @@ void menu_loop_task(void * pvParameter)
 
         int distance = ultrasonic_measure_distance_cm();
         distance = distance % 100;
-        char * firstLine = "01234567890123456";
-        //sprintf(firstLine, "Distance: %d", distance);
+        char firstLine[16];
+        snprintf(firstLine, 16, "Distance: %d", distance);
         i2c_lcd1602_move_cursor(lcd_info, 0, 0);
         i2c_lcd1602_write_string(lcd_info, firstLine);
 
@@ -370,7 +371,7 @@ void app_main(void)
     printf("Minimum free heap size: %d bytes\n", esp_get_minimum_free_heap_size());
 
     xTaskCreate(&hearbeat_task, "hearbeat_task", 2048, NULL, 5, NULL);
-    xTaskCreate(&menu_loop_task, "lcd1602_task", 4096, NULL, 5, NULL);
+    xTaskCreate(&menu_loop_task, "menu_loop_task", 6144, NULL, 5, NULL);
     
     //printf("Restarting now.\n");
     //fflush(stdout);
