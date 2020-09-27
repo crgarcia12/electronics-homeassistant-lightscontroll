@@ -41,9 +41,9 @@
 #define PUMP_PIN               GPIO_NUM_25
 #define TRIGGER_GPIO_PIN       GPIO_NUM_26
 #define ECHO_GPIO_PIN          GPIO_NUM_27
-#define MENU_BUTTON_PIN        GPIO_NUM_32
-#define ROT_ENC_A_GPIO_PIN     GPIO_NUM_34    // You need a pullup 10k resistor to 5V
-#define ROT_ENC_B_GPIO_PIN     GPIO_NUM_35    // You need a pullup 10k resistor to 5V
+#define ROT_ENC_B_GPIO_PIN     GPIO_NUM_32    // You need a pullup 10k resistor to 5V
+#define MENU_BUTTON_PIN        GPIO_NUM_34    // You need a pullup 10k resistor to 5V
+#define ROT_ENC_A_GPIO_PIN     GPIO_NUM_35
 
 // Encoder
 #define ENABLE_HALF_STEPS false  // Set to true to enable tracking of rotary encoder at half step resolution
@@ -141,7 +141,7 @@ void menu_button_pressed_task()
         MenuCurrentState = ( MenuCurrentState + 1 ) % LastItem;    
 
         // Skip a very fast next press
-        TaskDelayMs(500);
+        TaskDelayMs(100);
     }
     
 }
@@ -239,8 +239,7 @@ void menu_loop_task(void * pvParameter)
         switch (local_menuCurrentState)
         {
             case Main:
-                snprintf(secondLine, 16, "Pump: %d", (int)PumpStatus); 
-                printf("Line: %s\n", secondLine); 
+                snprintf(secondLine, 16, "Pump: %d        ", (int)PumpStatus); 
                 break;
             case MaxDistance:
                 PumpStartDistance = PumpStartDistance + state.position;
@@ -248,7 +247,7 @@ void menu_loop_task(void * pvParameter)
                     PumpStartDistance = PumpStopDistance + 1;
                 if(PumpStartDistance > 30) 
                     PumpStartDistance = 30;
-                snprintf(secondLine, 16, "Max dist: %d", PumpStartDistance);
+                snprintf(secondLine, 16, "Max dist: %d    ", PumpStartDistance);
                 break;
             case MinDistance:
                 PumpStopDistance = PumpStopDistance + state.position;
@@ -256,23 +255,22 @@ void menu_loop_task(void * pvParameter)
                     PumpStopDistance = 5;
                 if (PumpStopDistance > PumpStartDistance) 
                     PumpStopDistance = PumpStartDistance - 1;
-                snprintf(secondLine, 16, "Min dist: %d", PumpStopDistance);
+                snprintf(secondLine, 16, "Min dist: %d    ", PumpStopDistance);
                 break;
             case LastItem:
                 printf("Error, MenuCurrentState is overflowed: %d", local_menuCurrentState);
         }
 
         int distance = ultrasonic_measure_distance_cm();
-        distance = distance % 100;
         char firstLine[16];
-        snprintf(firstLine, 16, "Distance: %d", distance);
+        snprintf(firstLine, 16, "Distance: %d    ", distance);
         i2c_lcd1602_move_cursor(lcd_info, 0, 0);
         i2c_lcd1602_write_string(lcd_info, firstLine);
 
         i2c_lcd1602_move_cursor(lcd_info, 0, 1);
         i2c_lcd1602_write_string(lcd_info, secondLine);
 
-        TaskDelayMs(500);
+        TaskDelayMs(100);
     }
 }
 
@@ -322,13 +320,13 @@ void pump_task()
         int distance = ultrasonic_measure_distance_cm();
         if(distance >= PumpStartDistance)
         {
-            printf("PumpOn\n");
+            printf("PumpOn. Distance: %d\n", distance);
             PumpStatus = PumpOn;
         }
         // On sensor error => distance < 0
         if(distance <= PumpStopDistance)
         {
-            printf("PumpOff\n");
+            printf("PumpOff. Distance: %d\n", distance);
             PumpStatus = PumpOff;
         }
         gpio_set_level(PUMP_PIN, PumpStatus);
