@@ -270,7 +270,7 @@ void menu_loop_task(void * pvParameter)
         i2c_lcd1602_move_cursor(lcd_info, 0, 1);
         i2c_lcd1602_write_string(lcd_info, secondLine);
 
-        TaskDelayMs(100);
+        TaskDelayMs(200);
     }
 }
 
