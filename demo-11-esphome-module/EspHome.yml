@@ -1,21 +1,46 @@
-# ##################################
-# MOES SS01 3-Way Light Switch
-# ##################################
-# D2 GPIO04: white led (inverted)
-# D1 GPIO05: red led (inverted)
-# D6 GPIO12: relay
-# D7 GPIO13: button (inverted)
-# D5 GPIO14: power/usage sensor (inverted)
-# ##################################
-
-substitutions:
-  # https://esphome.io/guides/configuration-types.html#substitutions
-  device_name: demo-light-2      # hostname & entity_id
-  friendly_name: Demo Light 2  # Displayed in HA frontend
-  icon: mdi:ceiling-light
+# ####################################################################
+# Latching relay Light Switch with manual push buttons
+# ####################################################################
+#  
+# The circuit has a manual part, that combines multiple 
+# toggle switches (_-_) with a latching relay.
+# ESPHome acts as another toggle swithc using a standard relay, and it
+# also sense the output of the latching relay to notify HA if the light
+# is on or off, since it could have been changed manually
+#
+#  Diagram:
+#
+#         _________ _-_ ________
+#         |________ _-_ ________|
+#         |________ _-_ ________|
+# [AC] ___|                     |__[Latching Relay]___[Light]
+#         |______ [Relay] ______|                   |
+#                   |                               |
+#                   |        _______________________|
+#             ______|________|_____
+#             |   GPIO22    GPIO23|
+#             |                   |
+#             |       [ESP32]     |
+#             |___________________|
+#
+# ####################################################################
+# To make this work, ESPHome uses a Template Switch, that can receive 
+# commands and respond with a calculated state:
+#
+#              [BinarySensor] (GPIO23)
+#               |
+#               | (Read state)
+#               |
+# [HA] <-----> [Template Switch]
+#               |
+#               | (Issue actions)
+#               |
+#              [Switch] (GPIO22)
+#
+# ####################################################################
 
 esphome:
-  name: ${device_name}
+  name: demo-light
   platform: ESP32
   board: esp32dev
 
@@ -39,118 +64,49 @@ wifi:
 
 captive_portal:
 
-sensor:
-  # Uptime sensor
-  - platform: uptime
-    name: "${friendly_name} Uptime"
-
+# This sensor checks if the light is really on or off by checking the voltage
 binary_sensor:
-  - platform: status
-    name: "${friendly_name} Connectivity"
-    
   - platform: gpio
     pin:
-      number: 22
+      number: GPIO23
+      mode: INPUT_PULLUP
       inverted: True
-    id: button_id
-    on_multi_click:
-    # Double Click:
-    - timing:
-      - ON for at most 1s
-      - OFF for at most 1s
-      - ON for at most 1s
-      - OFF for at least 0.2s
-      then:
-        - logger.log: "Double Clicked"
-        - homeassistant.event:
-            event: esphome.${device_name}
-            data:
-              title: dbl_click
-    # Long Click:
-    - timing:
-      - ON for 1s to 2s
-      - OFF for at least 0.3s #0.5s
-      then:
-        - logger.log: "Single Long Clicked"
-        - homeassistant.event:
-            event: esphome.${device_name}
-            data:
-              title: long_click
-    - timing:
-      - ON for at least 2.2s
-      then:
-        - logger.log: "Click and Hold"
-        - homeassistant.event:
-            event: esphome.${device_name}
-            data:
-              title: hold
-    - timing:
-      - ON for at most 1s
-      - OFF for at least 0.3s #0.5s
-      then:
-        - switch.toggle: relay
-        - logger.log: "Single Short Clicked"
-        - homeassistant.event:
-            event: esphome.${device_name}
-            data:
-              title: single_click
-
-
-  - platform: gpio
-    # https://esphome.io/components/binary_sensor/gpio.html
-    id: power_sensor
-    pin:
-      number: GPIO14
-      inverted: True
-    filters:
-      - delayed_off: 50ms
-    on_press:
-      - switch.turn_on: red_led
-    on_release:
-      - switch.turn_off: red_led
+    name: demo_led_light_2_sensor_name
+    id: demo_led_light_2_sensor_id
 
 switch:
-  - platform: gpio
-    id: red_led
-    pin:
-      number: 21
-      inverted: True
-
-  - platform: gpio
-    pin: GPIO12
-    id: relay
-    restore_mode: RESTORE_DEFAULT_OFF
-
-  # present the state of the switch in HA based on the sensor
+  # This switch is a template (virtual). 
+  # It allows HA to send turn_on_action and turn_off_action, but the state is
+  # read directly from the binary_sensor
   - platform: template
     # https://esphome.io/components/switch/template.html
-    name: ${friendly_name}
-    id: ${device_name}
-    icon: ${icon}
+    name: demo_led_light_2_template_name
+    id: demo_led_light_2_template_id
+    icon: mdi:ceiling-light
     lambda: |-
-      if (id(power_sensor).state) {
+      if (id(demo_led_light_2_sensor_id).state) {
         return true;
       } else {
         return false;
       }
-    # https://esphome.io/guides/automations.html#if-action
     turn_on_action:
-        - if:
-            condition:
-              binary_sensor.is_off: power_sensor
-            then:
-              - switch.toggle: relay
+      - if:
+          condition:
+            binary_sensor.is_off: demo_led_light_2_sensor_id
+          then:
+            - switch.turn_on: demo_led_light_2_relay_id
     turn_off_action:
-        - if:
-            condition:
-              binary_sensor.is_on: power_sensor
-            then:
-              - switch.toggle: relay
+      - if:
+          condition:
+            binary_sensor.is_on: demo_led_light_2_sensor_id
+          then:
+            - switch.turn_on: demo_led_light_2_relay_id
 
-status_led:
-  # https://esphome.io/components/status_led
-  pin:
-    number: GPIO4   # White LED
-    inverted: True
-
-
+  # This controls the relay. It turns it on for 2 seconds and then it turns it back off
+  - platform: gpio
+    id: demo_led_light_2_relay_id  
+    name: demo_led_light_2_relay_name
+    pin: GPIO22
+    on_turn_on:
+      - delay: 2000ms
+      - switch.turn_off: demo_led_light_2_relay_id
