@@ -1,0 +1,156 @@
+# ##################################
+# MOES SS01 3-Way Light Switch
+# ##################################
+# D2 GPIO04: white led (inverted)
+# D1 GPIO05: red led (inverted)
+# D6 GPIO12: relay
+# D7 GPIO13: button (inverted)
+# D5 GPIO14: power/usage sensor (inverted)
+# ##################################
+
+substitutions:
+  # https://esphome.io/guides/configuration-types.html#substitutions
+  device_name: demo-light-2      # hostname & entity_id
+  friendly_name: Demo Light 2  # Displayed in HA frontend
+  icon: mdi:ceiling-light
+
+esphome:
+  name: ${device_name}
+  platform: ESP32
+  board: esp32dev
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:
+  password: "8a99a5ece8395aa1dc3fd9bcfd835013"
+
+wifi:
+  ssid: "LeaCarlos21Internal_2"
+  password: "LeaCarlos21I"
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Demo-Light Hotspot LeaCarlos21I"
+    password: "LeaCarlos21I"
+
+captive_portal:
+
+sensor:
+  # Uptime sensor
+  - platform: uptime
+    name: "${friendly_name} Uptime"
+
+binary_sensor:
+  - platform: status
+    name: "${friendly_name} Connectivity"
+    
+  - platform: gpio
+    pin:
+      number: 22
+      inverted: True
+    id: button_id
+    on_multi_click:
+    # Double Click:
+    - timing:
+      - ON for at most 1s
+      - OFF for at most 1s
+      - ON for at most 1s
+      - OFF for at least 0.2s
+      then:
+        - logger.log: "Double Clicked"
+        - homeassistant.event:
+            event: esphome.${device_name}
+            data:
+              title: dbl_click
+    # Long Click:
+    - timing:
+      - ON for 1s to 2s
+      - OFF for at least 0.3s #0.5s
+      then:
+        - logger.log: "Single Long Clicked"
+        - homeassistant.event:
+            event: esphome.${device_name}
+            data:
+              title: long_click
+    - timing:
+      - ON for at least 2.2s
+      then:
+        - logger.log: "Click and Hold"
+        - homeassistant.event:
+            event: esphome.${device_name}
+            data:
+              title: hold
+    - timing:
+      - ON for at most 1s
+      - OFF for at least 0.3s #0.5s
+      then:
+        - switch.toggle: relay
+        - logger.log: "Single Short Clicked"
+        - homeassistant.event:
+            event: esphome.${device_name}
+            data:
+              title: single_click
+
+
+  - platform: gpio
+    # https://esphome.io/components/binary_sensor/gpio.html
+    id: power_sensor
+    pin:
+      number: GPIO14
+      inverted: True
+    filters:
+      - delayed_off: 50ms
+    on_press:
+      - switch.turn_on: red_led
+    on_release:
+      - switch.turn_off: red_led
+
+switch:
+  - platform: gpio
+    id: red_led
+    pin:
+      number: 21
+      inverted: True
+
+  - platform: gpio
+    pin: GPIO12
+    id: relay
+    restore_mode: RESTORE_DEFAULT_OFF
+
+  # present the state of the switch in HA based on the sensor
+  - platform: template
+    # https://esphome.io/components/switch/template.html
+    name: ${friendly_name}
+    id: ${device_name}
+    icon: ${icon}
+    lambda: |-
+      if (id(power_sensor).state) {
+        return true;
+      } else {
+        return false;
+      }
+    # https://esphome.io/guides/automations.html#if-action
+    turn_on_action:
+        - if:
+            condition:
+              binary_sensor.is_off: power_sensor
+            then:
+              - switch.toggle: relay
+    turn_off_action:
+        - if:
+            condition:
+              binary_sensor.is_on: power_sensor
+            then:
+              - switch.toggle: relay
+
+status_led:
+  # https://esphome.io/components/status_led
+  pin:
+    number: GPIO4   # White LED
+    inverted: True
+
+
