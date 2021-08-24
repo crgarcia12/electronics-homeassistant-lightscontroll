@@ -4,9 +4,9 @@
 #  
 # The circuit has a manual part, that combines multiple 
 # toggle switches (_-_) with a latching relay.
-# ESPHome acts as another toggle swithc using a standard relay, and it
-# also sense the output of the latching relay to notify HA if the light
-# is on or off, since it could have been changed manually
+# ESPHome acts as another toggle switch using a standard relay. 
+# It also sense the output of the latching relay to notify HA if the
+# light is on or off, since it could have been changed manually
 #
 #  Diagram:
 #
@@ -17,11 +17,11 @@
 #         |______ [Relay] ______|                   |
 #                   |                               |
 #                   |        _______________________|
-#             ______|________|_____
-#             |   GPIO22    GPIO23|
-#             |                   |
-#             |       [ESP32]     |
-#             |___________________|
+#             ______|________|______
+#             |   GPIO22    GPIO23  |
+#             |                     |
+#             |       [ESP32]       |
+#             |_____________________|
 #
 # ####################################################################
 # To make this work, ESPHome uses a Template Switch, that can receive 
