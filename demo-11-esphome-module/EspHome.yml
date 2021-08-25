@@ -94,13 +94,19 @@ switch:
           condition:
             binary_sensor.is_off: demo_led_light_2_sensor_id
           then:
+            - logger.log: "template.turn_on.sensor==off"
             - switch.turn_on: demo_led_light_2_relay_id
+          else:
+            - logger.log: "template.turn_on.sensor==on"
     turn_off_action:
       - if:
           condition:
             binary_sensor.is_on: demo_led_light_2_sensor_id
           then:
+            - logger.log: "template.turn_off.sensor==on"
             - switch.turn_on: demo_led_light_2_relay_id
+          else:
+            - logger.log: "template.turn_off.sensor==off"
 
   # This controls the relay. It turns it on for 2 seconds and then it turns it back off
   - platform: gpio
