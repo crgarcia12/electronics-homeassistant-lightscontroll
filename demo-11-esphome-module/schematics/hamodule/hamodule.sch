@@ -1,4 +1,589 @@
-EESchema Schematic File Version 2
-EELAYER 25 0
+EESchema Schematic File Version 4
+EELAYER 30 0
 EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L RAC15-05SK:RAC15-05SK PS?
+U 1 1 61265DDA
+P 2900 6150
+F 0 "PS?" V 2854 6480 50  0000 L CNN
+F 1 "RAC15-05SK" V 2945 6480 50  0000 L CNN
+F 2 "CONV_RAC15-05SK" H 2900 6150 50  0001 L BNN
+F 3 "" H 2900 6150 50  0001 L BNN
+F 4 "23.0mm" H 2900 6150 50  0001 L BNN "MAXIMUM_PACKAGE_HEIGHT"
+F 5 "Manufacturer Recommendations" H 2900 6150 50  0001 L BNN "STANDARD"
+F 6 "3" H 2900 6150 50  0001 L BNN "PARTREV"
+F 7 "RECOM" H 2900 6150 50  0001 L BNN "MANUFACTURER"
+	1    2900 6150
+	0    1    1    0   
+$EndComp
+Text GLabel 3200 5150 2    50   Input ~ 0
+220VAC(L)
+Text GLabel 2700 5150 0    50   Input ~ 0
+220VAC(N)
+Text GLabel 4400 3900 0    50   Input ~ 0
+5VGND
+Text GLabel 6000 2100 1    50   Input ~ 0
+5V+
+Text GLabel 3100 7050 3    50   Input ~ 0
+5V+
+Text GLabel 2700 7050 3    50   Input ~ 0
+5VGND
+Wire Wire Line
+	2700 7050 2700 6850
+Wire Wire Line
+	3100 7050 3100 6850
+Wire Wire Line
+	3100 5150 3100 5450
+Wire Wire Line
+	2700 5150 2700 5450
+$Comp
+L ESP32-DEVKITC-32D:ESP32-DEVKITC-32D U?
+U 1 1 6126231E
+P 5200 3000
+F 0 "U?" H 5200 4167 50  0000 C CNN
+F 1 "ESP32-DEVKITC-32D" H 5200 4076 50  0000 C CNN
+F 2 "MODULE_ESP32-DEVKITC-32D" H 5200 3000 50  0001 L BNN
+F 3 "" H 5200 3000 50  0001 L BNN
+F 4 "4" H 5200 3000 50  0001 L BNN "PARTREV"
+F 5 "Espressif Systems" H 5200 3000 50  0001 L BNN "MANUFACTURER"
+	1    5200 3000
+	-1   0    0    1   
+$EndComp
+Text GLabel 2300 1000 2    50   Input ~ 0
+220VAC(L)
+$Comp
+L Connector:Conn_01x02_Female J?
+U 1 1 612AA46D
+P 2850 4450
+F 0 "J?" V 2788 4262 50  0000 R CNN
+F 1 "Conn_01x02_Female" V 2697 4262 50  0000 R CNN
+F 2 "" H 2850 4450 50  0001 C CNN
+F 3 "~" H 2850 4450 50  0001 C CNN
+	1    2850 4450
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2850 4650 2850 5150
+Wire Wire Line
+	2850 5150 2700 5150
+Wire Wire Line
+	2950 4650 2950 5150
+Wire Wire Line
+	2950 5150 3100 5150
+Wire Wire Line
+	2700 5150 2600 5150
+Connection ~ 2700 5150
+Wire Wire Line
+	3100 5150 3200 5150
+Connection ~ 3100 5150
+$Comp
+L Connector:Conn_01x08_Female J?
+U 1 1 612AC85B
+P 650 4150
+F 0 "J?" H 542 3525 50  0000 C CNN
+F 1 "Conn_01x08_Female" H 542 3616 50  0000 C CNN
+F 2 "" H 650 4150 50  0001 C CNN
+F 3 "~" H 650 4150 50  0001 C CNN
+	1    650  4150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	950  6700 950  4450
+Wire Wire Line
+	950  4450 850  4450
+Wire Wire Line
+	850  4350 1000 4350
+Wire Wire Line
+	1000 4350 1000 5900
+Wire Wire Line
+	1050 5100 1050 4250
+Wire Wire Line
+	1050 4250 850  4250
+Wire Wire Line
+	1100 4300 1100 4150
+Wire Wire Line
+	1100 4150 850  4150
+Wire Wire Line
+	850  4050 1100 4050
+Wire Wire Line
+	1100 4050 1100 3500
+Wire Wire Line
+	900  3750 850  3750
+Wire Wire Line
+	850  3850 950  3850
+Wire Wire Line
+	950  3850 950  1850
+Wire Wire Line
+	1000 2650 1000 3950
+Wire Wire Line
+	1000 3950 850  3950
+$Comp
+L pspice:DIODE D?
+U 1 1 612C0625
+P 2450 1550
+F 0 "D?" H 2450 1815 50  0000 C CNN
+F 1 "DIODE" H 2450 1724 50  0000 C CNN
+F 2 "" H 2450 1550 50  0001 C CNN
+F 3 "~" H 2450 1550 50  0001 C CNN
+	1    2450 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2650 1550 2650 1400
+Wire Wire Line
+	2650 1400 2300 1400
+Text GLabel 1650 1400 0    50   Input ~ 0
+5VGND
+Wire Wire Line
+	1700 1400 1650 1400
+Wire Wire Line
+	1700 1400 1700 1650
+Wire Wire Line
+	1700 1650 2250 1650
+Wire Wire Line
+	2250 1650 2250 1550
+$Comp
+L Relay:G5Q-1 K?
+U 1 1 612C4AA3
+P 2000 1200
+F 0 "K?" V 2567 1200 50  0000 C CNN
+F 1 "G5Q-1" V 2476 1200 50  0000 C CNN
+F 2 "Relay_THT:Relay_SPDT_Omron-G5Q-1" H 2450 1150 50  0001 L CNN
+F 3 "https://www.omron.com/ecb/products/pdf/en-g5q.pdf" H 2000 1200 50  0001 L CNN
+	1    2000 1200
+	0    -1   -1   0   
+$EndComp
+Connection ~ 1700 1400
+Wire Wire Line
+	1700 900  900  900 
+Wire Wire Line
+	900  900  900  3750
+$Comp
+L Transistor_BJT:2N2219 Q?
+U 1 1 612CA16E
+P 3250 1000
+F 0 "Q?" H 3441 954 50  0000 L CNN
+F 1 "2N2219" H 3441 1045 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-39-3" H 3450 925 50  0001 L CIN
+F 3 "http://www.onsemi.com/pub_link/Collateral/2N2219-D.PDF" H 3250 1000 50  0001 L CNN
+	1    3250 1000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3150 800  2800 800 
+Wire Wire Line
+	2800 800  2800 1400
+Wire Wire Line
+	2800 1400 2650 1400
+Connection ~ 2650 1400
+Text GLabel 3150 1250 3    50   Input ~ 0
+5V+
+Wire Wire Line
+	3150 1250 3150 1200
+Text GLabel 4400 2500 0    50   Input ~ 0
+GPIO
+Text GLabel 4400 2700 0    50   Input ~ 0
+GPIO
+Text GLabel 6000 2500 2    50   Input ~ 0
+GPIO
+Text GLabel 4400 3100 0    50   Input ~ 0
+GPIO
+Text GLabel 4400 2800 0    50   Input ~ 0
+GPIO
+Text GLabel 4400 2900 0    50   Input ~ 0
+GPIO
+Text GLabel 4400 3200 0    50   Input ~ 0
+GPIO
+Text GLabel 4400 3400 0    50   Input ~ 0
+GPIO
+Text GLabel 4400 3700 0    50   Input ~ 0
+GPIO
+Text GLabel 4400 3800 0    50   Input ~ 0
+GPIO
+Text GLabel 6000 3300 2    50   Input ~ 0
+GPIO
+Text GLabel 6000 3200 2    50   Input ~ 0
+GPIO
+Text GLabel 6000 3100 2    50   Input ~ 0
+GPIO
+Text GLabel 6000 3000 2    50   Input ~ 0
+GPIO
+Text GLabel 6000 2900 2    50   Input ~ 0
+GPIO
+Text GLabel 6000 3400 2    50   Input ~ 0
+IN
+Text GLabel 6000 3500 2    50   Input ~ 0
+IN
+$Comp
+L Device:R R?
+U 1 1 612DC637
+P 3450 1150
+F 0 "R?" H 3520 1196 50  0000 L CNN
+F 1 "10K" H 3520 1105 50  0000 L CNN
+F 2 "" V 3380 1150 50  0001 C CNN
+F 3 "~" H 3450 1150 50  0001 C CNN
+	1    3450 1150
+	1    0    0    -1  
+$EndComp
+Connection ~ 3450 1000
+Text GLabel 3450 1300 3    50   Input ~ 0
+5VGND
+Wire Wire Line
+	4050 1000 3450 1000
+$Comp
+L Connector:Conn_01x08_Female J?
+U 1 1 612E1211
+P 10750 4050
+F 0 "J?" H 10642 3425 50  0000 C CNN
+F 1 "Conn_01x08_Female" H 10642 3516 50  0000 C CNN
+F 2 "" H 10750 4050 50  0001 C CNN
+F 3 "~" H 10750 4050 50  0001 C CNN
+	1    10750 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Converter_ACDC:RAC05-05SK PS?
+U 1 1 612E6ABE
+P 9250 950
+F 0 "PS?" H 9250 583 50  0000 C CNN
+F 1 "RAC05-05SK" H 9250 674 50  0000 C CNN
+F 2 "Converter_ACDC:Converter_ACDC_RECOM_RAC05-xxSK_THT" H 9250 600 50  0001 C CNN
+F 3 "https://www.recom-power.com/pdf/Powerline-AC-DC/RAC05-K.pdf" H 9150 1250 50  0001 C CNN
+	1    9250 950 
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4050 1000 4050 2500
+Wire Wire Line
+	4050 2500 4400 2500
+$Comp
+L Converter_ACDC:RAC05-05SK PS?
+U 1 1 612F0ADD
+P 9250 1600
+F 0 "PS?" H 9250 1233 50  0000 C CNN
+F 1 "RAC05-05SK" H 9250 1324 50  0000 C CNN
+F 2 "Converter_ACDC:Converter_ACDC_RECOM_RAC05-xxSK_THT" H 9250 1250 50  0001 C CNN
+F 3 "https://www.recom-power.com/pdf/Powerline-AC-DC/RAC05-K.pdf" H 9150 1900 50  0001 C CNN
+	1    9250 1600
+	-1   0    0    1   
+$EndComp
+$Comp
+L Converter_ACDC:RAC05-05SK PS?
+U 1 1 612F15B0
+P 9250 2300
+F 0 "PS?" H 9250 1933 50  0000 C CNN
+F 1 "RAC05-05SK" H 9250 2024 50  0000 C CNN
+F 2 "Converter_ACDC:Converter_ACDC_RECOM_RAC05-xxSK_THT" H 9250 1950 50  0001 C CNN
+F 3 "https://www.recom-power.com/pdf/Powerline-AC-DC/RAC05-K.pdf" H 9150 2600 50  0001 C CNN
+	1    9250 2300
+	-1   0    0    1   
+$EndComp
+$Comp
+L Converter_ACDC:RAC05-05SK PS?
+U 1 1 612F1D1F
+P 9250 3000
+F 0 "PS?" H 9250 2633 50  0000 C CNN
+F 1 "RAC05-05SK" H 9250 2724 50  0000 C CNN
+F 2 "Converter_ACDC:Converter_ACDC_RECOM_RAC05-xxSK_THT" H 9250 2650 50  0001 C CNN
+F 3 "https://www.recom-power.com/pdf/Powerline-AC-DC/RAC05-K.pdf" H 9150 3300 50  0001 C CNN
+	1    9250 3000
+	-1   0    0    1   
+$EndComp
+$Comp
+L Converter_ACDC:RAC05-05SK PS?
+U 1 1 612F245F
+P 9250 3650
+F 0 "PS?" H 9250 3283 50  0000 C CNN
+F 1 "RAC05-05SK" H 9250 3374 50  0000 C CNN
+F 2 "Converter_ACDC:Converter_ACDC_RECOM_RAC05-xxSK_THT" H 9250 3300 50  0001 C CNN
+F 3 "https://www.recom-power.com/pdf/Powerline-AC-DC/RAC05-K.pdf" H 9150 3950 50  0001 C CNN
+	1    9250 3650
+	-1   0    0    1   
+$EndComp
+$Comp
+L Converter_ACDC:RAC05-05SK PS?
+U 1 1 612F3617
+P 9250 4350
+F 0 "PS?" H 9250 3983 50  0000 C CNN
+F 1 "RAC05-05SK" H 9250 4074 50  0000 C CNN
+F 2 "Converter_ACDC:Converter_ACDC_RECOM_RAC05-xxSK_THT" H 9250 4000 50  0001 C CNN
+F 3 "https://www.recom-power.com/pdf/Powerline-AC-DC/RAC05-K.pdf" H 9150 4650 50  0001 C CNN
+	1    9250 4350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Converter_ACDC:RAC05-05SK PS?
+U 1 1 612F937A
+P 9250 5050
+F 0 "PS?" H 9250 4683 50  0000 C CNN
+F 1 "RAC05-05SK" H 9250 4774 50  0000 C CNN
+F 2 "Converter_ACDC:Converter_ACDC_RECOM_RAC05-xxSK_THT" H 9250 4700 50  0001 C CNN
+F 3 "https://www.recom-power.com/pdf/Powerline-AC-DC/RAC05-K.pdf" H 9150 5350 50  0001 C CNN
+	1    9250 5050
+	-1   0    0    1   
+$EndComp
+$Comp
+L Converter_ACDC:RAC05-05SK PS?
+U 1 1 612FA2C5
+P 9250 5750
+F 0 "PS?" H 9250 5383 50  0000 C CNN
+F 1 "RAC05-05SK" H 9250 5474 50  0000 C CNN
+F 2 "Converter_ACDC:Converter_ACDC_RECOM_RAC05-xxSK_THT" H 9250 5400 50  0001 C CNN
+F 3 "https://www.recom-power.com/pdf/Powerline-AC-DC/RAC05-K.pdf" H 9150 6050 50  0001 C CNN
+	1    9250 5750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	10550 3750 10500 3750
+Wire Wire Line
+	10500 3750 10500 1050
+Wire Wire Line
+	10500 1050 9650 1050
+Wire Wire Line
+	10550 3850 10450 3850
+Wire Wire Line
+	10450 3850 10450 1700
+Wire Wire Line
+	10450 1700 9650 1700
+Wire Wire Line
+	9650 2400 10400 2400
+Wire Wire Line
+	10400 2400 10400 3950
+Wire Wire Line
+	10400 3950 10550 3950
+Wire Wire Line
+	10550 4050 10350 4050
+Wire Wire Line
+	10350 4050 10350 3100
+Wire Wire Line
+	10350 3100 9650 3100
+Wire Wire Line
+	10550 4150 10300 4150
+Wire Wire Line
+	10300 4150 10300 3750
+Wire Wire Line
+	10300 3750 9650 3750
+Wire Wire Line
+	9650 4450 10300 4450
+Wire Wire Line
+	10300 4450 10300 4250
+Wire Wire Line
+	10300 4250 10550 4250
+Wire Wire Line
+	9650 5150 10350 5150
+Wire Wire Line
+	10350 5150 10350 4350
+Wire Wire Line
+	10350 4350 10550 4350
+Wire Wire Line
+	10550 4450 10400 4450
+Wire Wire Line
+	10400 4450 10400 5850
+Wire Wire Line
+	10400 5850 9650 5850
+Text GLabel 9650 850  2    50   Input ~ 0
+220VAC(N)
+Text GLabel 9650 1500 2    50   Input ~ 0
+220VAC(N)
+Text GLabel 9650 2200 2    50   Input ~ 0
+220VAC(N)
+Text GLabel 9650 2900 2    50   Input ~ 0
+220VAC(N)
+Text GLabel 9650 3550 2    50   Input ~ 0
+220VAC(N)
+Text GLabel 9650 4250 2    50   Input ~ 0
+220VAC(N)
+Text GLabel 9650 4950 2    50   Input ~ 0
+220VAC(N)
+Text GLabel 9650 5650 2    50   Input ~ 0
+220VAC(N)
+$Comp
+L Device:R R?
+U 1 1 6134F2EE
+P 8700 5850
+F 0 "R?" V 8493 5850 50  0001 C CNN
+F 1 "340" V 8585 5850 50  0000 C CNN
+F 2 "" V 8630 5850 50  0001 C CNN
+F 3 "~" H 8700 5850 50  0001 C CNN
+	1    8700 5850
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61352338
+P 8700 5150
+F 0 "R?" V 8493 5150 50  0001 C CNN
+F 1 "340" V 8585 5150 50  0000 C CNN
+F 2 "" V 8630 5150 50  0001 C CNN
+F 3 "~" H 8700 5150 50  0001 C CNN
+	1    8700 5150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 613528C8
+P 8700 3750
+F 0 "R?" V 8493 3750 50  0001 C CNN
+F 1 "340" V 8585 3750 50  0000 C CNN
+F 2 "" V 8630 3750 50  0001 C CNN
+F 3 "~" H 8700 3750 50  0001 C CNN
+	1    8700 3750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8450 4450 8550 4450
+$Comp
+L Device:R R?
+U 1 1 6135326E
+P 8700 4450
+F 0 "R?" V 8493 4450 50  0001 C CNN
+F 1 "340" V 8585 4450 50  0000 C CNN
+F 2 "" V 8630 4450 50  0001 C CNN
+F 3 "~" H 8700 4450 50  0001 C CNN
+	1    8700 4450
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61353CF0
+P 8700 3100
+F 0 "R?" V 8493 3100 50  0001 C CNN
+F 1 "340" V 8585 3100 50  0000 C CNN
+F 2 "" V 8630 3100 50  0001 C CNN
+F 3 "~" H 8700 3100 50  0001 C CNN
+	1    8700 3100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 613540B8
+P 8700 2400
+F 0 "R?" V 8493 2400 50  0001 C CNN
+F 1 "340" V 8585 2400 50  0000 C CNN
+F 2 "" V 8630 2400 50  0001 C CNN
+F 3 "~" H 8700 2400 50  0001 C CNN
+	1    8700 2400
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 613548DB
+P 8700 1700
+F 0 "R?" V 8493 1700 50  0001 C CNN
+F 1 "340" V 8585 1700 50  0000 C CNN
+F 2 "" V 8630 1700 50  0001 C CNN
+F 3 "~" H 8700 1700 50  0001 C CNN
+	1    8700 1700
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61354B0C
+P 8700 1050
+F 0 "R?" V 8493 1050 50  0001 C CNN
+F 1 "340" V 8585 1050 50  0000 C CNN
+F 2 "" V 8630 1050 50  0001 C CNN
+F 3 "~" H 8700 1050 50  0001 C CNN
+	1    8700 1050
+	0    1    1    0   
+$EndComp
+$Comp
+L 2021-08-26_19-10-02:K847PH U?
+U 1 1 61365E02
+P 8400 2300
+F 0 "U?" H 9300 1213 60  0000 C CNN
+F 1 "K847PH" H 9300 1319 60  0000 C CNN
+F 2 "DIP16_IL_VIS" H 9300 2540 60  0001 C CNN
+F 3 "" H 8400 2300 60  0000 C CNN
+	1    8400 2300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8850 850  8400 850 
+Wire Wire Line
+	8400 850  8400 1600
+Wire Wire Line
+	8550 1050 8450 1050
+Wire Wire Line
+	8450 1050 8450 1700
+Wire Wire Line
+	8450 1700 8400 1700
+Wire Wire Line
+	8850 1500 8500 1500
+Wire Wire Line
+	8500 1500 8500 1800
+Wire Wire Line
+	8500 1800 8400 1800
+Wire Wire Line
+	8550 1700 8550 1900
+Wire Wire Line
+	8550 1900 8400 1900
+Wire Wire Line
+	8850 2200 8800 2200
+Wire Wire Line
+	8800 2200 8800 2000
+Wire Wire Line
+	8800 2000 8400 2000
+Wire Wire Line
+	8400 2100 8550 2100
+Wire Wire Line
+	8550 2100 8550 2400
+Wire Wire Line
+	8400 2200 8500 2200
+Wire Wire Line
+	8500 2200 8500 2900
+Wire Wire Line
+	8500 2900 8850 2900
+Wire Wire Line
+	8550 3100 8450 3100
+Wire Wire Line
+	8450 3100 8450 2300
+Wire Wire Line
+	8450 2300 8400 2300
+Text GLabel 6000 3900 2    50   Input ~ 0
+3.3V+
+Wire Wire Line
+	6600 1600 6300 1600
+Wire Wire Line
+	6300 1600 6300 2500
+Wire Wire Line
+	6300 2500 6000 2500
+Wire Wire Line
+	6350 2900 6000 2900
+Wire Wire Line
+	6400 3000 6000 3000
+Wire Wire Line
+	6450 3100 6000 3100
+Wire Wire Line
+	6600 1800 6350 1800
+Wire Wire Line
+	6350 1800 6350 2900
+Wire Wire Line
+	6400 3000 6400 2000
+Wire Wire Line
+	6400 2000 6600 2000
+Wire Wire Line
+	6450 3100 6450 2200
+Wire Wire Line
+	6450 2200 6600 2200
+Text GLabel 6600 2300 3    50   Input ~ 0
+3.3V+
+Text GLabel 6600 2100 0    50   Input ~ 0
+3.3V+
+Text GLabel 6600 1900 0    50   Input ~ 0
+3.3V+
+Text GLabel 6600 1700 0    50   Input ~ 0
+3.3V+
 $EndSCHEMATC
