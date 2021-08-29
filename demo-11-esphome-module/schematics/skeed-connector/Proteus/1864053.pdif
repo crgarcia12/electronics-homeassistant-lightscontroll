@@ -1,0 +1,191 @@
+;Proteus Design Interchange Format
+(PDIF
+ (vendor "SamacSys Limited")
+ (version 1 0)
+ (library
+  (part "1864053"
+   (description "Push spring connector 5mm pitch 4 way Phoenix Contact SDC Series 5mm Pitch Straight Pluggable Terminal Block, Plug with Plug In Termination, PCB Mount, 4 Way")
+   (family "CON")
+   (package "1864053")
+   (attribute "Datasheet Link" "https://www.phoenixcontact.com/online/portal/gb?uri=pxc-oc-itemdetail:pid=1864053&library=gben&tab=1")
+   (attribute "Geometry.Height" "16.2mm")
+   (attribute "Manufacturer_Name" "Phoenix Contact")
+   (attribute "Manufacturer_Part_Number" "1864053")
+   (attribute "Mouser Part Number" "651-1864053")
+   (attribute "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Phoenix-Contact/1864053?qs=k%252BwXAfPrzCnElnWx0AGzqw%3D%3D")
+   (attribute "Arrow Part Number" "1864053")
+   (attribute "Arrow Price/Stock" "https://www.arrow.com/en/products/1864053/phoenix-contact")
+   (gate
+    (symbol "1864053")
+    (pin "1" 1 PS)
+    (pin "2" 2 PS)
+    (pin "3" 3 PS)
+    (pin "4" 4 PS)
+   )
+  )
+  (symbol "1864053"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 200 100) (pt 600 100) (pt 600 -200) (pt 200 -200) (pt 200 100) (closed))
+   )
+   (terminal
+    (body (symbol "PIN") (pt 800 0) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 0) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 800 -100) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -100) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+  )
+  (symbol "PIN"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 200 0))))
+  (symbol "PINSHORT"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 100 0))))
+  (package "1864053"
+   (units MM)
+   (layer TASM
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed true)
+      (pt -6.59 2.8)
+      (pt 21.59 2.8)
+      (pt 21.59 -12.5)
+      (pt -6.59 -12.5)
+      (pt -6.59 2.8))))
+   (layer OCCA
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -8.6 3.8)
+      (pt 22.675 3.8)
+      (pt 22.675 -13.525)
+      (pt -8.6 -13.525)
+      (pt -8.6 3.8))))
+   (layer TSLK
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed false)
+      (pt -6.59 -4.5)
+      (pt -6.59 2.8)
+      (pt 21.59 2.8)
+      (pt 21.59 -4.5))))
+   (layer TSLK
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed false)
+      (pt -6.59 -7.5)
+      (pt -6.59 -12.5)
+      (pt -4 -12.5))))
+   (layer TSLK
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed false)
+      (pt -1.5 -12.5)
+      (pt 16 -12.5))))
+   (layer TSLK
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed false)
+      (pt 19 -12.5)
+      (pt 21.59 -12.5)
+      (pt 21.59 -8))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed true)
+      (pt -7.5 0)
+      (arc (pt -7.500 0.000) (pt -7.700 -0.100) (pt -7.500 0.100) (start 180.0) (sweep .0))
+      (pt -7.7 0)
+      (arc (pt -7.700 0.000) (pt -7.700 -0.100) (pt -7.500 0.100) (start 180.0) (sweep 180.0))
+      (pt -7.5 0))))
+   (leg 1 (pt 0.000 0.000) (padstack 0))
+   (leg 2 (pt 5.000 -10.000) (padstack 0))
+   (leg 3 (pt 10.000 0.000) (padstack 0))
+   (leg 4 (pt 15.000 -10.000) (padstack 0))
+   (leg MH1 (pt -2.800 -1.500) (padstack 5))
+   (leg MH2 (pt -2.800 -11.500) (padstack 6))
+   (leg MH3 (pt 17.800 1.500) (padstack 7))
+   (leg MH4 (pt 17.800 -11.500) (padstack 8))
+   (leg MH5 (pt -5.000 -6.000) (padstack 9))
+   (leg MH6 (pt 20.000 -6.000) (padstack 10))
+   (padstack 0
+    (hole 2.4)
+    (plated true)
+    (pad (layer TCOP) (round 3.735))
+    (pad (layer INNER) (round 3.735))
+    (pad (layer BCOP) (round 3.735))
+   )
+   (padstack 5
+    (hole 2)
+    (plated false)
+    (pad (layer TCOP) (round 1.000))
+    (pad (layer INNER) (round 1.000))
+    (pad (layer BCOP) (round 1.000))
+   )
+   (padstack 6
+    (hole 2)
+    (plated false)
+    (pad (layer TCOP) (round 1.000))
+    (pad (layer INNER) (round 1.000))
+    (pad (layer BCOP) (round 1.000))
+   )
+   (padstack 7
+    (hole 2)
+    (plated false)
+    (pad (layer TCOP) (round 1.000))
+    (pad (layer INNER) (round 1.000))
+    (pad (layer BCOP) (round 1.000))
+   )
+   (padstack 8
+    (hole 2)
+    (plated false)
+    (pad (layer TCOP) (round 1.000))
+    (pad (layer INNER) (round 1.000))
+    (pad (layer BCOP) (round 1.000))
+   )
+   (padstack 9
+    (hole 3.3)
+    (plated false)
+    (pad (layer TCOP) (round 1.650))
+    (pad (layer INNER) (round 1.650))
+    (pad (layer BCOP) (round 1.650))
+   )
+   (padstack 10
+    (hole 3.3)
+    (plated false)
+    (pad (layer TCOP) (round 1.650))
+    (pad (layer INNER) (round 1.650))
+    (pad (layer BCOP) (round 1.650))
+   )
+   (model "1864053.stp"
+    (euler 0 0 0)
+    (offset 0 0 0)
+   )
+  )
+ )
+)
