@@ -1,0 +1,41 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# ON Semi HCPL3700
+#
+DEF HCPL3700 U 0 40 Y Y 1 L N
+F0 "U" 0 200 50 H V L CNN 
+F1 "HCPL3700" 0 300 50 H V L CNN 
+F2 "ON_Semi-CASE_62605_ISSUE_P-0-0-*" 0 400 50 H I L CNN 
+F3 "http://www.onsemi.ru.com/pub/Collateral/HCPL3700-D.pdf" 0 500 50 H I L CNN 
+F4 "30mA" 0 600 50 H I L CNN "Current - Output / Channel"
+F5 "Darlington" 0 700 50 H I L CNN "Output Type"
+F6 "2500Vrms" 0 800 50 H I L CNN "Voltage - Isolation"
+F7 "20V" 0 900 50 H I L CNN "Voltage - Output (Max)"
+F8 "IC" 0 1000 50 H I L CNN "category"
+F9 "Optoisolator Darlington Output 2500Vrms 1 Channel 8-DIP" 0 1100 50 H I L CNN "digikey description"
+F10 "HCPL3700-ND" 0 1200 50 H I L CNN "digikey part number"
+F11 "DIP794W46P254L959H533Q8" 0 1300 50 H I L CNN "ipc land pattern name"
+F12 "yes" 0 1400 50 H I L CNN "lead free"
+F13 "eacaf3d134f71bf1" 0 1500 50 H I L CNN "library id"
+F14 "ON Semi" 0 1600 50 H I L CNN "manufacturer"
+F15 "512-HCPL-3700" 0 1700 50 H I L CNN "mouser part number"
+F16 "PDIP8" 0 1800 50 H I L CNN "package"
+F17 "yes" 0 1900 50 H I L CNN "rohs"
+F18 "+70°C" 0 2000 50 H I L CNN "temperature range high"
+F19 "0°C" 0 2100 50 H I L CNN "temperature range low"
+F20 "" 0 2200 50 H I L CNN "voltage"
+DRAW
+X VCC 8 1000 0 100 L 40 40 1 1 W 
+X DC+ 2 100 -300 100 R 40 40 1 1 U 
+X DC- 3 100 -400 100 R 40 40 1 1 U 
+X 1_AC 1 100 0 100 R 40 40 1 1 U 
+X 2_AC 4 100 -100 100 R 40 40 1 1 U 
+X NC 7 1000 -300 100 L 40 40 1 1 U 
+X VO 6 1000 -200 100 L 40 40 1 1 O 
+X GND 5 1000 -500 100 L 40 40 1 1 W 
+S 200 100 900 -600 1 1 0 f
+ENDDRAW
+ENDDEF
+#
+# End Library
