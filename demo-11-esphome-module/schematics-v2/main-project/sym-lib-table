@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name hamodule-rescue)(type Legacy)(uri ${KIPRJMOD}/hamodule-rescue.lib)(options "")(descr ""))
+  (lib (name phoenix-1017505)(type Legacy)(uri C:/gitrepos/github/crgarcia12/arduino-first-tests/demo-11-esphome-module/schematics-v2/phoenixcontacts/1017505/1017505/KiCad/1017505.lib)(options "")(descr ""))
+)

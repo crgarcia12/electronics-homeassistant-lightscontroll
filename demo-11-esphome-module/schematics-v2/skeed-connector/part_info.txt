@@ -1,0 +1,9 @@
+Manufacturer=Phoenix Contact
+PartNumber=1864053
+PartCategory=Connector
+PackageCategory=Other
+PinCount=4
+Version=2.6
+Released=2018-04-30 14:04:27
+Downloaded=2021-08-28 19:55:11
+3D=Y
