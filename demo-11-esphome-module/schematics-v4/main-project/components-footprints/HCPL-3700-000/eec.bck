@@ -4,5 +4,4 @@ $CMP HCPL3700
 D HCPL3700
 F http://www.onsemi.ru.com/pub/Collateral/HCPL3700-D.pdf
 $ENDCMP
-#
-#End Doc Library
+# end doc library
