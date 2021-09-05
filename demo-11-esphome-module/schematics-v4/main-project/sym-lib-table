@@ -1,0 +1,7 @@
+(sym_lib_table
+  (lib (name hamodule-rescue)(type Legacy)(uri ${KIPRJMOD}/hamodule-rescue.lib)(options "")(descr ""))
+  (lib (name phoenix-1017505)(type Legacy)(uri ${KIPRJMOD}/components-footprints/phoenixcontacts/1017505/1017505/KiCad/1017505.lib)(options "")(descr ""))
+  (lib (name RAC05-05SK)(type Legacy)(uri ${KIPRJMOD}/components-footprints/recom/RAC05-05SK/RAC05-05SK.lib)(options "")(descr ""))
+  (lib (name 1017505)(type Legacy)(uri ${KIPRJMOD}/components-footprints/phoenixcontacts/1017505/1017505/KiCad/1017505.lib)(options "")(descr ""))
+  (lib (name ESP32-DEVKITC-32D)(type Legacy)(uri ${KIPRJMOD}/components-footprints/esp32-footprint/ESP32-DEVKITC-32D.lib)(options "")(descr ""))
+)
