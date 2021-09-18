@@ -894,8 +894,6 @@ F 3 "~" H 4900 6450 50  0001 C CNN
 	1    4900 6450
 	0    -1   -1   0   
 $EndComp
-NoConn ~ 4350 6900
-NoConn ~ 4350 7000
 NoConn ~ 4750 7050
 NoConn ~ 4750 6950
 $Comp

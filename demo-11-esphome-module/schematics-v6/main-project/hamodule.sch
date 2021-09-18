@@ -15,8 +15,6 @@ Comment4 ""
 $EndDescr
 Text GLabel 1750 2000 2    50   Input ~ 0
 220VAC(L)
-Text GLabel 1100 2400 0    50   Input ~ 0
-GND(5V)
 $Comp
 L Relay:G5Q-1 K1
 U 1 1 612C4AA3
@@ -38,8 +36,6 @@ Wire Notes Line
 	3150 1550 700  1550
 Text GLabel 1750 3200 2    50   Input ~ 0
 220VAC(L)
-Text GLabel 1100 3600 0    50   Input ~ 0
-GND(5V)
 Wire Wire Line
 	1150 3600 1100 3600
 $Comp
@@ -63,8 +59,6 @@ Wire Notes Line
 	3150 2750 700  2750
 Text GLabel 1750 4450 2    50   Input ~ 0
 220VAC(L)
-Text GLabel 1100 4850 0    50   Input ~ 0
-GND(5V)
 Wire Wire Line
 	1150 4850 1100 4850
 $Comp
@@ -88,8 +82,6 @@ Wire Notes Line
 	3150 4000 700  4000
 Text GLabel 1750 5700 2    50   Input ~ 0
 220VAC(L)
-Text GLabel 1100 6100 0    50   Input ~ 0
-GND(5V)
 Wire Wire Line
 	1150 6100 1100 6100
 $Comp
@@ -227,7 +219,7 @@ U 1 1 61354B0C
 P 10250 2750
 F 0 "R9" V 10043 2750 50  0001 C CNN
 F 1 "47k" V 10250 2750 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P5.08mm_Vertical" V 10180 2750 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P20.32mm_Horizontal" V 10180 2750 50  0001 C CNN
 F 3 "~" H 10250 2750 50  0001 C CNN
 	1    10250 2750
 	0    1    1    0   
@@ -313,7 +305,7 @@ U 1 1 613556E0
 P 9900 2850
 F 0 "U3" H 10450 2085 50  0000 C CNN
 F 1 "HCPL3700" H 10450 2176 50  0000 C CNN
-F 2 "HCPL:ON_Semi-CASE_62605_ISSUE_P-0-0-0" H 9900 3250 50  0001 L CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket_LongPads" H 9900 3250 50  0001 L CNN
 F 3 "http://www.onsemi.ru.com/pub/Collateral/HCPL3700-D.pdf" H 9900 3350 50  0001 L CNN
 F 4 "30mA" H 9900 3450 50  0001 L CNN "Current - Output / Channel"
 F 5 "Darlington" H 9900 3550 50  0001 L CNN "Output Type"
@@ -341,7 +333,7 @@ U 1 1 6137D081
 P 10000 2500
 F 0 "22uF1" H 9912 2454 50  0000 R CNN
 F 1 "CP_Small" H 9912 2545 50  0000 R CNN
-F 2 "Capacitor_THT:CP_Radial_D17.0mm_P7.50mm" H 10000 2500 50  0001 C CNN
+F 2 "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm" H 10000 2500 50  0001 C CNN
 F 3 "~" H 10000 2500 50  0001 C CNN
 	1    10000 2500
 	-1   0    0    1   
@@ -354,12 +346,8 @@ Wire Wire Line
 	10000 2400 9800 2400
 Wire Wire Line
 	9800 2400 9800 2450
-Text GLabel 8700 2950 0    50   Input ~ 0
+Text GLabel 8150 3150 0    50   Input ~ 0
 3.3V+
-Wire Wire Line
-	8700 2950 8900 2950
-Wire Wire Line
-	8900 2950 8900 2850
 NoConn ~ 8900 2550
 Text GLabel 8900 3350 0    50   Input ~ 0
 GND(5V)
@@ -371,7 +359,7 @@ U 1 1 613B1E37
 P 10250 3750
 F 0 "R10" V 10043 3750 50  0001 C CNN
 F 1 "47k" V 10250 3750 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P5.08mm_Vertical" V 10180 3750 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P20.32mm_Horizontal" V 10180 3750 50  0001 C CNN
 F 3 "~" H 10250 3750 50  0001 C CNN
 	1    10250 3750
 	0    1    1    0   
@@ -393,7 +381,7 @@ U 1 1 613B1E55
 P 9900 3850
 F 0 "U4" H 10450 3085 50  0000 C CNN
 F 1 "HCPL3700" H 10450 3176 50  0000 C CNN
-F 2 "HCPL:ON_Semi-CASE_62605_ISSUE_P-0-0-0" H 9900 4250 50  0001 L CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket_LongPads" H 9900 4250 50  0001 L CNN
 F 3 "http://www.onsemi.ru.com/pub/Collateral/HCPL3700-D.pdf" H 9900 4350 50  0001 L CNN
 F 4 "30mA" H 9900 4450 50  0001 L CNN "Current - Output / Channel"
 F 5 "Darlington" H 9900 4550 50  0001 L CNN "Output Type"
@@ -421,7 +409,7 @@ U 1 1 613B1E5B
 P 10000 3500
 F 0 "22uF2" H 9912 3454 50  0000 R CNN
 F 1 "CP_Small" H 9912 3545 50  0000 R CNN
-F 2 "Capacitor_THT:CP_Radial_D17.0mm_P7.50mm" H 10000 3500 50  0001 C CNN
+F 2 "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm" H 10000 3500 50  0001 C CNN
 F 3 "~" H 10000 3500 50  0001 C CNN
 	1    10000 3500
 	-1   0    0    1   
@@ -434,25 +422,6 @@ Wire Wire Line
 	10000 3400 9800 3400
 Wire Wire Line
 	9800 3400 9800 3450
-Text GLabel 8700 3950 0    50   Input ~ 0
-3.3V+
-$Comp
-L Device:R R2
-U 1 1 613B1E66
-P 8700 3800
-F 0 "R2" V 8493 3800 50  0000 C CNN
-F 1 "10K" V 8584 3800 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 8630 3800 50  0001 C CNN
-F 3 "~" H 8700 3800 50  0001 C CNN
-	1    8700 3800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8700 3950 8900 3950
-Wire Wire Line
-	8900 3950 8900 3850
-Wire Wire Line
-	8700 3650 8900 3650
 NoConn ~ 8900 3550
 Text GLabel 8900 4350 0    50   Input ~ 0
 GND(5V)
@@ -464,7 +433,7 @@ U 1 1 613B6B92
 P 10250 4750
 F 0 "R11" V 10043 4750 50  0001 C CNN
 F 1 "47k" V 10250 4750 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P5.08mm_Vertical" V 10180 4750 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P20.32mm_Horizontal" V 10180 4750 50  0001 C CNN
 F 3 "~" H 10250 4750 50  0001 C CNN
 	1    10250 4750
 	0    1    1    0   
@@ -486,7 +455,7 @@ U 1 1 613B6BB0
 P 9900 4850
 F 0 "U5" H 10450 4085 50  0000 C CNN
 F 1 "HCPL3700" H 10450 4176 50  0000 C CNN
-F 2 "HCPL:ON_Semi-CASE_62605_ISSUE_P-0-0-0" H 9900 5250 50  0001 L CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket_LongPads" H 9900 5250 50  0001 L CNN
 F 3 "http://www.onsemi.ru.com/pub/Collateral/HCPL3700-D.pdf" H 9900 5350 50  0001 L CNN
 F 4 "30mA" H 9900 5450 50  0001 L CNN "Current - Output / Channel"
 F 5 "Darlington" H 9900 5550 50  0001 L CNN "Output Type"
@@ -514,7 +483,7 @@ U 1 1 613B6BB6
 P 10000 4500
 F 0 "22uF3" H 9912 4454 50  0000 R CNN
 F 1 "CP_Small" H 9912 4545 50  0000 R CNN
-F 2 "Capacitor_THT:CP_Radial_D17.0mm_P7.50mm" H 10000 4500 50  0001 C CNN
+F 2 "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm" H 10000 4500 50  0001 C CNN
 F 3 "~" H 10000 4500 50  0001 C CNN
 	1    10000 4500
 	-1   0    0    1   
@@ -527,25 +496,6 @@ Wire Wire Line
 	10000 4400 9800 4400
 Wire Wire Line
 	9800 4400 9800 4450
-Text GLabel 8700 4950 0    50   Input ~ 0
-3.3V+
-$Comp
-L Device:R R3
-U 1 1 613B6BC1
-P 8700 4800
-F 0 "R3" V 8493 4800 50  0000 C CNN
-F 1 "10K" V 8584 4800 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 8630 4800 50  0001 C CNN
-F 3 "~" H 8700 4800 50  0001 C CNN
-	1    8700 4800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8700 4950 8900 4950
-Wire Wire Line
-	8900 4950 8900 4850
-Wire Wire Line
-	8700 4650 8900 4650
 NoConn ~ 8900 4550
 Text GLabel 8900 5350 0    50   Input ~ 0
 GND(5V)
@@ -557,7 +507,7 @@ U 1 1 613BAE41
 P 10250 5750
 F 0 "R12" V 10043 5750 50  0001 C CNN
 F 1 "47k" V 10250 5750 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P5.08mm_Vertical" V 10180 5750 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P20.32mm_Horizontal" V 10180 5750 50  0001 C CNN
 F 3 "~" H 10250 5750 50  0001 C CNN
 	1    10250 5750
 	0    1    1    0   
@@ -579,7 +529,7 @@ U 1 1 613BAE5F
 P 9900 5850
 F 0 "U6" H 10450 5085 50  0000 C CNN
 F 1 "HCPL3700" H 10450 5176 50  0000 C CNN
-F 2 "HCPL:ON_Semi-CASE_62605_ISSUE_P-0-0-0" H 9900 6250 50  0001 L CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket_LongPads" H 9900 6250 50  0001 L CNN
 F 3 "http://www.onsemi.ru.com/pub/Collateral/HCPL3700-D.pdf" H 9900 6350 50  0001 L CNN
 F 4 "30mA" H 9900 6450 50  0001 L CNN "Current - Output / Channel"
 F 5 "Darlington" H 9900 6550 50  0001 L CNN "Output Type"
@@ -607,7 +557,7 @@ U 1 1 613BAE65
 P 10000 5500
 F 0 "22uF4" H 9912 5454 50  0000 R CNN
 F 1 "CP_Small" H 9912 5545 50  0000 R CNN
-F 2 "Capacitor_THT:CP_Radial_D17.0mm_P7.50mm" H 10000 5500 50  0001 C CNN
+F 2 "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm" H 10000 5500 50  0001 C CNN
 F 3 "~" H 10000 5500 50  0001 C CNN
 	1    10000 5500
 	-1   0    0    1   
@@ -620,25 +570,6 @@ Wire Wire Line
 	10000 5400 9800 5400
 Wire Wire Line
 	9800 5400 9800 5450
-Text GLabel 8700 5950 0    50   Input ~ 0
-3.3V+
-$Comp
-L Device:R R4
-U 1 1 613BAE70
-P 8700 5800
-F 0 "R4" V 8493 5800 50  0000 C CNN
-F 1 "10K" V 8584 5800 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 8630 5800 50  0001 C CNN
-F 3 "~" H 8700 5800 50  0001 C CNN
-	1    8700 5800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8700 5950 8900 5950
-Wire Wire Line
-	8900 5950 8900 5850
-Wire Wire Line
-	8700 5650 8900 5650
 NoConn ~ 8900 5550
 Wire Notes Line
 	3800 550  7000 550 
@@ -757,17 +688,6 @@ Text GLabel 8900 2350 0    50   Input ~ 0
 GND(5V)
 Wire Wire Line
 	8700 2650 8900 2650
-$Comp
-L Device:R R1
-U 1 1 6139B189
-P 8700 2800
-F 0 "R1" V 8493 2800 50  0000 C CNN
-F 1 "10K" V 8584 2800 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 8630 2800 50  0001 C CNN
-F 3 "~" H 8700 2800 50  0001 C CNN
-	1    8700 2800
-	1    0    0    -1  
-$EndComp
 NoConn ~ 800  7600
 NoConn ~ 1000 7600
 NoConn ~ 1200 7600
@@ -927,59 +847,12 @@ F 7 "N/A" H 6100 1450 50  0001 L BNN "PARTREV"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x04 J5
-U 1 1 6140A7FD
-P 7950 4250
-F 0 "J5" H 7868 3825 50  0000 C CNN
-F 1 "Conn_01x04" H 7868 3916 50  0000 C CNN
-F 2 "Connector_Molex:Molex_KK-396_A-41791-0004_1x04_P3.96mm_Vertical" H 7950 4250 50  0001 C CNN
-F 3 "~" H 7950 4250 50  0001 C CNN
-	1    7950 4250
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	8300 2650 8300 4600
-Wire Wire Line
-	8300 4650 8300 4700
-Wire Wire Line
-	8200 2650 8200 4050
-Wire Wire Line
-	8200 4050 8150 4050
-Wire Wire Line
-	8200 2650 8300 2650
-Connection ~ 8700 2650
-Connection ~ 8300 2650
-Wire Wire Line
-	8300 2650 8700 2650
-Wire Wire Line
-	8700 3650 8250 3650
-Wire Wire Line
-	8250 3650 8250 4150
-Wire Wire Line
-	8250 4150 8150 4150
-Connection ~ 8700 3650
-Wire Wire Line
-	8700 4650 8300 4650
-Wire Wire Line
-	8250 4650 8250 4250
-Wire Wire Line
-	8250 4250 8150 4250
-Connection ~ 8700 4650
-Connection ~ 8300 4650
-Wire Wire Line
-	8300 4650 8250 4650
-Wire Wire Line
-	8150 4350 8150 5650
-Wire Wire Line
-	8150 5650 8700 5650
-Connection ~ 8700 5650
-$Comp
 L Connector_Generic:Conn_01x04 J3
 U 1 1 614144AF
 P 5500 5350
 F 0 "J3" H 5580 5342 50  0000 L CNN
-F 1 "Conn_01x04" H 5580 5251 50  0000 L CNN
-F 2 "Connector_Molex:Molex_KK-396_A-41791-0004_1x04_P3.96mm_Vertical" H 5500 5350 50  0001 C CNN
+F 1 "Conn-ESP-Relays" H 5580 5251 50  0000 L CNN
+F 2 "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical" H 5500 5350 50  0001 C CNN
 F 3 "~" H 5500 5350 50  0001 C CNN
 	1    5500 5350
 	1    0    0    -1  
@@ -1002,7 +875,7 @@ U 1 1 6143ACB7
 P 5900 2750
 F 0 "J4" H 5818 2425 50  0000 C CNN
 F 1 "Conn_01x02" H 5818 2516 50  0000 C CNN
-F 2 "Connector_Molex:Molex_KK-396_A-41791-0002_1x02_P3.96mm_Vertical" H 5900 2750 50  0001 C CNN
+F 2 "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical" H 5900 2750 50  0001 C CNN
 F 3 "~" H 5900 2750 50  0001 C CNN
 	1    5900 2750
 	-1   0    0    1   
@@ -1012,7 +885,7 @@ Text GLabel 6100 2650 2    50   Input ~ 0
 Text GLabel 6100 2750 2    50   Input ~ 0
 GND(5V)
 Wire Notes Line
-	7700 6300 7700 950 
+	7800 6200 7800 850 
 Wire Notes Line
 	7700 950  11000 950 
 Wire Notes Line
@@ -1023,7 +896,7 @@ U 1 1 61434446
 P 4600 2650
 F 0 "U2" H 4600 2892 50  0000 C CNN
 F 1 "LD1117S33TR_SOT223" H 4600 2801 50  0000 C CNN
-F 2 "Package_TO_SOT_THT:TO-218-3_Vertical" H 4600 2850 50  0001 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 4600 2850 50  0001 C CNN
 F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000544.pdf" H 4700 2400 50  0001 C CNN
 	1    4600 2650
 	1    0    0    -1  
@@ -1036,4 +909,265 @@ Wire Notes Line
 	3800 550  3800 3050
 Wire Notes Line
 	7000 550  7000 3050
+Text GLabel 8150 2550 0    50   Input ~ 0
+EspSens1
+$Comp
+L Connector_Generic:Conn_01x04 J5
+U 1 1 6140A7FD
+P 6750 3800
+F 0 "J5" H 6668 3375 50  0000 C CNN
+F 1 "Conn-Esp-Sensors" H 6668 3466 50  0000 C CNN
+F 2 "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical" H 6750 3800 50  0001 C CNN
+F 3 "~" H 6750 3800 50  0001 C CNN
+	1    6750 3800
+	-1   0    0    1   
+$EndComp
+Text GLabel 6950 3600 2    50   Input ~ 0
+EspSens1
+Text GLabel 6950 3700 2    50   Input ~ 0
+EspSens2
+Text GLabel 6950 3800 2    50   Input ~ 0
+EspSens3
+Text GLabel 6950 3900 2    50   Input ~ 0
+EspSens4
+$Comp
+L Connector_Generic:Conn_01x05 J8
+U 1 1 614FF62B
+P 6750 4500
+F 0 "J8" H 6668 4075 50  0000 C CNN
+F 1 "Conn-LedIndicators" H 6668 4166 50  0000 C CNN
+F 2 "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical" H 6750 4500 50  0001 C CNN
+F 3 "~" H 6750 4500 50  0001 C CNN
+	1    6750 4500
+	-1   0    0    1   
+$EndComp
+Text GLabel 7250 4300 2    50   Input ~ 0
+EspSens1
+Text GLabel 7250 4400 2    50   Input ~ 0
+EspSens2
+Text GLabel 7250 4500 2    50   Input ~ 0
+EspSens3
+Text GLabel 7250 4600 2    50   Input ~ 0
+EspSens4
+$Comp
+L Connector_Generic:Conn_01x05 J7
+U 1 1 61516260
+P 3850 4050
+F 0 "J7" H 3768 3625 50  0000 C CNN
+F 1 "Conn-Buttons" H 3768 3716 50  0000 C CNN
+F 2 "Connector_JST:JST_XH_B5B-XH-A_1x05_P2.50mm_Vertical" H 3850 4050 50  0001 C CNN
+F 3 "~" H 3850 4050 50  0001 C CNN
+	1    3850 4050
+	-1   0    0    1   
+$EndComp
+Text GLabel 4050 3850 2    50   Input ~ 0
+EspSens1
+Text GLabel 4050 3950 2    50   Input ~ 0
+EspSens2
+Text GLabel 4050 4050 2    50   Input ~ 0
+EspSens3
+Text GLabel 4050 4150 2    50   Input ~ 0
+EspSens4
+Text GLabel 4050 4250 2    50   Input ~ 0
+GND(5V)
+Text GLabel 8200 3500 0    50   Input ~ 0
+EspSens2
+Text GLabel 8200 4500 0    50   Input ~ 0
+EspSens3
+Text GLabel 8200 5500 0    50   Input ~ 0
+EspSens4
+$Comp
+L Device:LED D1
+U 1 1 613FCCDC
+P 8150 2700
+F 0 "D1" V 8097 2780 50  0000 L CNN
+F 1 "LED" V 8188 2780 50  0000 L CNN
+F 2 "LED_THT:LED_D3.0mm" H 8150 2700 50  0001 C CNN
+F 3 "~" H 8150 2700 50  0001 C CNN
+	1    8150 2700
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 613FE2E1
+P 8150 3000
+F 0 "R1" H 8220 3046 50  0000 L CNN
+F 1 "100" H 8220 2955 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 8080 3000 50  0001 C CNN
+F 3 "~" H 8150 3000 50  0001 C CNN
+	1    8150 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8700 2550 8700 2650
+Wire Wire Line
+	8900 2850 8700 2850
+Wire Wire Line
+	8700 2850 8700 3150
+Text GLabel 8200 4100 0    50   Input ~ 0
+3.3V+
+$Comp
+L Device:LED D2
+U 1 1 61409E59
+P 8200 3650
+F 0 "D2" V 8147 3730 50  0000 L CNN
+F 1 "LED" V 8238 3730 50  0000 L CNN
+F 2 "LED_THT:LED_D3.0mm" H 8200 3650 50  0001 C CNN
+F 3 "~" H 8200 3650 50  0001 C CNN
+	1    8200 3650
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R14
+U 1 1 61409E5F
+P 8200 3950
+F 0 "R14" H 8270 3996 50  0000 L CNN
+F 1 "100" H 8270 3905 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 8130 3950 50  0001 C CNN
+F 3 "~" H 8200 3950 50  0001 C CNN
+	1    8200 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8600 4100 8200 4100
+Wire Wire Line
+	8900 3850 8600 3850
+Wire Wire Line
+	8600 3850 8600 4100
+Wire Wire Line
+	8600 3650 8600 3500
+Wire Wire Line
+	8600 3500 8200 3500
+Wire Wire Line
+	8600 3650 8900 3650
+Text GLabel 8200 5100 0    50   Input ~ 0
+3.3V+
+$Comp
+L Device:LED D3
+U 1 1 614112F5
+P 8200 4650
+F 0 "D3" V 8147 4730 50  0000 L CNN
+F 1 "LED" V 8238 4730 50  0000 L CNN
+F 2 "LED_THT:LED_D3.0mm" H 8200 4650 50  0001 C CNN
+F 3 "~" H 8200 4650 50  0001 C CNN
+	1    8200 4650
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R15
+U 1 1 614112FB
+P 8200 4950
+F 0 "R15" H 8270 4996 50  0000 L CNN
+F 1 "100" H 8270 4905 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 8130 4950 50  0001 C CNN
+F 3 "~" H 8200 4950 50  0001 C CNN
+	1    8200 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8600 5100 8200 5100
+Wire Wire Line
+	8900 4850 8600 4850
+Wire Wire Line
+	8600 4850 8600 5100
+Wire Wire Line
+	8600 4650 8600 4500
+Wire Wire Line
+	8600 4650 8900 4650
+Text GLabel 8200 6100 0    50   Input ~ 0
+3.3V+
+$Comp
+L Device:LED D4
+U 1 1 614135F2
+P 8200 5650
+F 0 "D4" V 8147 5730 50  0000 L CNN
+F 1 "LED" V 8238 5730 50  0000 L CNN
+F 2 "LED_THT:LED_D3.0mm" H 8200 5650 50  0001 C CNN
+F 3 "~" H 8200 5650 50  0001 C CNN
+	1    8200 5650
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R16
+U 1 1 614135F8
+P 8200 5950
+F 0 "R16" H 8270 5996 50  0000 L CNN
+F 1 "100" H 8270 5905 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 8130 5950 50  0001 C CNN
+F 3 "~" H 8200 5950 50  0001 C CNN
+	1    8200 5950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8600 6100 8200 6100
+Wire Wire Line
+	8900 5850 8600 5850
+Wire Wire Line
+	8600 5850 8600 6100
+Wire Wire Line
+	8600 5650 8600 5500
+Wire Wire Line
+	8600 5650 8900 5650
+Wire Wire Line
+	8600 4500 8200 4500
+Wire Wire Line
+	8200 5500 8600 5500
+Wire Wire Line
+	8150 2550 8700 2550
+Wire Wire Line
+	8150 3150 8700 3150
+Text GLabel 6950 4700 2    50   Input ~ 0
+3.3V+
+$Comp
+L Device:R R13
+U 1 1 6141E5EE
+P 7100 4600
+F 0 "R13" V 6893 4600 50  0000 C CNN
+F 1 "100" V 6984 4600 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7030 4600 50  0001 C CNN
+F 3 "~" H 7100 4600 50  0001 C CNN
+	1    7100 4600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 6141EC21
+P 7100 4500
+F 0 "R4" V 6893 4500 50  0000 C CNN
+F 1 "100" V 6984 4500 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7030 4500 50  0001 C CNN
+F 3 "~" H 7100 4500 50  0001 C CNN
+	1    7100 4500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 6141EDC4
+P 7100 4400
+F 0 "R3" V 6893 4400 50  0000 C CNN
+F 1 "100" V 6984 4400 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7030 4400 50  0001 C CNN
+F 3 "~" H 7100 4400 50  0001 C CNN
+	1    7100 4400
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 6141EF53
+P 7100 4300
+F 0 "R2" V 6893 4300 50  0000 C CNN
+F 1 "100" V 6984 4300 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7030 4300 50  0001 C CNN
+F 3 "~" H 7100 4300 50  0001 C CNN
+	1    7100 4300
+	0    1    1    0   
+$EndComp
+Text GLabel 1100 6100 0    50   Input ~ 0
+5V+
+Text GLabel 1100 4850 0    50   Input ~ 0
+5V+
+Text GLabel 1100 3600 0    50   Input ~ 0
+5V+
+Text GLabel 1100 2400 0    50   Input ~ 0
+5V+
 $EndSCHEMATC
