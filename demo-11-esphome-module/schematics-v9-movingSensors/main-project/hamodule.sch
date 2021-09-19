@@ -185,24 +185,24 @@ F 3 "~" H 1000 7500 50  0001 C CNN
 	1    1000 7500
 	1    0    0    -1  
 $EndComp
-Text GLabel 10100 3750 2    50   Input ~ 0
-Sens2
-Text GLabel 10100 4750 2    50   Input ~ 0
-Sens3
 Text GLabel 10100 5750 2    50   Input ~ 0
+Sens2
+Text GLabel 10100 3750 2    50   Input ~ 0
+Sens3
+Text GLabel 10100 2750 2    50   Input ~ 0
 Sens4
 $Comp
 L Device:R R10
 U 1 1 61354B0C
-P 9950 2850
-F 0 "R10" V 9743 2850 50  0001 C CNN
-F 1 "47k" V 9950 2850 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P20.32mm_Horizontal" V 9880 2850 50  0001 C CNN
-F 3 "~" H 9950 2850 50  0001 C CNN
-	1    9950 2850
+P 9950 4850
+F 0 "R10" V 9743 4850 50  0001 C CNN
+F 1 "47k" V 9950 4850 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P20.32mm_Horizontal" V 9880 4850 50  0001 C CNN
+F 3 "~" H 9950 4850 50  0001 C CNN
+	1    9950 4850
 	0    1    1    0   
 $EndComp
-Text GLabel 10100 2750 2    50   Input ~ 0
+Text GLabel 10100 4750 2    50   Input ~ 0
 Sens1
 $Comp
 L phoenix-1017505:1017505 J8
@@ -223,22 +223,6 @@ F 11 "https://www.arrow.com/en/products/1017505/phoenix-contact" H 11050 850 50 
 	1    10400 1650
 	-1   0    0    1   
 $EndComp
-Text GLabel 9600 1450 0    50   Input ~ 0
-Sens1
-Text GLabel 10400 1450 2    50   Input ~ 0
-Sens1
-Text GLabel 9600 1350 0    50   Input ~ 0
-Sens2
-Text GLabel 10400 1350 2    50   Input ~ 0
-Sens2
-Text GLabel 9600 1550 0    50   Input ~ 0
-Sens3
-Text GLabel 10400 1550 2    50   Input ~ 0
-Sens3
-Text GLabel 9600 1650 0    50   Input ~ 0
-Sens4
-Text GLabel 10400 1650 2    50   Input ~ 0
-Sens4
 $Comp
 L power:PWR_FLAG #FLG03
 U 1 1 61341516
@@ -329,28 +313,28 @@ Text GLabel 8150 3150 0    50   Input ~ 0
 NoConn ~ 8900 2550
 Text GLabel 8900 3350 0    50   Input ~ 0
 GND(5V)
-Text GLabel 10100 3850 2    50   Input ~ 0
+Text GLabel 10100 5850 2    50   Input ~ 0
 220VAC(N)
 $Comp
 L Device:R R12
 U 1 1 613B1E37
-P 9950 3850
-F 0 "R12" V 9743 3850 50  0001 C CNN
-F 1 "47k" V 9950 3850 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P20.32mm_Horizontal" V 9880 3850 50  0001 C CNN
-F 3 "~" H 9950 3850 50  0001 C CNN
-	1    9950 3850
+P 9950 5850
+F 0 "R12" V 9743 5850 50  0001 C CNN
+F 1 "47k" V 9950 5850 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P20.32mm_Horizontal" V 9880 5850 50  0001 C CNN
+F 3 "~" H 9950 5850 50  0001 C CNN
+	1    9950 5850
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:R R11
 U 1 1 613B1E3D
-P 9950 3750
-F 0 "R11" V 9743 3750 50  0001 C CNN
-F 1 "47k" V 9950 3750 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P20.32mm_Horizontal" V 9880 3750 50  0001 C CNN
-F 3 "~" H 9950 3750 50  0001 C CNN
-	1    9950 3750
+P 9950 5750
+F 0 "R11" V 9743 5750 50  0001 C CNN
+F 1 "47k" V 9950 5750 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P20.32mm_Horizontal" V 9880 5750 50  0001 C CNN
+F 3 "~" H 9950 5750 50  0001 C CNN
+	1    9950 5750
 	0    1    1    0   
 $EndComp
 $Comp
@@ -403,28 +387,28 @@ Wire Wire Line
 NoConn ~ 8900 3550
 Text GLabel 8900 4350 0    50   Input ~ 0
 GND(5V)
-Text GLabel 10100 4850 2    50   Input ~ 0
+Text GLabel 10100 3850 2    50   Input ~ 0
 220VAC(N)
 $Comp
 L Device:R R13
 U 1 1 613B6B92
-P 9950 4750
-F 0 "R13" V 9743 4750 50  0001 C CNN
-F 1 "47k" V 9950 4750 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P20.32mm_Horizontal" V 9880 4750 50  0001 C CNN
-F 3 "~" H 9950 4750 50  0001 C CNN
-	1    9950 4750
+P 9950 3750
+F 0 "R13" V 9743 3750 50  0001 C CNN
+F 1 "47k" V 9950 3750 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P20.32mm_Horizontal" V 9880 3750 50  0001 C CNN
+F 3 "~" H 9950 3750 50  0001 C CNN
+	1    9950 3750
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:R R14
 U 1 1 613B6B98
-P 9950 4850
-F 0 "R14" V 9743 4850 50  0001 C CNN
-F 1 "47k" V 9950 4850 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P20.32mm_Horizontal" V 9880 4850 50  0001 C CNN
-F 3 "~" H 9950 4850 50  0001 C CNN
-	1    9950 4850
+P 9950 3850
+F 0 "R14" V 9743 3850 50  0001 C CNN
+F 1 "47k" V 9950 3850 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P20.32mm_Horizontal" V 9880 3850 50  0001 C CNN
+F 3 "~" H 9950 3850 50  0001 C CNN
+	1    9950 3850
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -477,28 +461,28 @@ Wire Wire Line
 NoConn ~ 8900 4550
 Text GLabel 8900 5350 0    50   Input ~ 0
 GND(5V)
-Text GLabel 10100 5850 2    50   Input ~ 0
+Text GLabel 10100 2850 2    50   Input ~ 0
 220VAC(N)
 $Comp
 L Device:R R16
 U 1 1 613BAE41
-P 9950 5850
-F 0 "R16" V 9743 5850 50  0001 C CNN
-F 1 "47k" V 9950 5850 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P20.32mm_Horizontal" V 9880 5850 50  0001 C CNN
-F 3 "~" H 9950 5850 50  0001 C CNN
-	1    9950 5850
+P 9950 2850
+F 0 "R16" V 9743 2850 50  0001 C CNN
+F 1 "47k" V 9950 2850 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P20.32mm_Horizontal" V 9880 2850 50  0001 C CNN
+F 3 "~" H 9950 2850 50  0001 C CNN
+	1    9950 2850
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:R R15
 U 1 1 613BAE47
-P 9950 5750
-F 0 "R15" V 9743 5750 50  0001 C CNN
-F 1 "47k" V 9950 5750 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P20.32mm_Horizontal" V 9880 5750 50  0001 C CNN
-F 3 "~" H 9950 5750 50  0001 C CNN
-	1    9950 5750
+P 9950 2750
+F 0 "R15" V 9743 2750 50  0001 C CNN
+F 1 "47k" V 9950 2750 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P20.32mm_Horizontal" V 9880 2750 50  0001 C CNN
+F 3 "~" H 9950 2750 50  0001 C CNN
+	1    9950 2750
 	0    1    1    0   
 $EndComp
 $Comp
@@ -627,17 +611,17 @@ F 3 "~" H 8850 1600 50  0001 C CNN
 	1    8850 1600
 	0    1    1    0   
 $EndComp
-Text GLabel 10100 2850 2    50   Input ~ 0
+Text GLabel 10100 4850 2    50   Input ~ 0
 220VAC(N)
 $Comp
 L Device:R R9
 U 1 1 61314DEF
-P 9950 2750
-F 0 "R9" V 9743 2750 50  0001 C CNN
-F 1 "47k" V 9950 2750 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P20.32mm_Horizontal" V 9880 2750 50  0001 C CNN
-F 3 "~" H 9950 2750 50  0001 C CNN
-	1    9950 2750
+P 9950 4750
+F 0 "R9" V 9743 4750 50  0001 C CNN
+F 1 "47k" V 9950 4750 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P20.32mm_Horizontal" V 9880 4750 50  0001 C CNN
+F 3 "~" H 9950 4750 50  0001 C CNN
+	1    9950 4750
 	0    1    1    0   
 $EndComp
 Text GLabel 8900 2350 0    50   Input ~ 0
@@ -691,21 +675,21 @@ NoConn ~ 4900 1400
 $Comp
 L phoenix-1017505:1017505 J3
 U 1 1 61366C48
-P 4900 1600
-F 0 "J3" H 5300 1035 50  0000 C CNN
-F 1 "1017505" H 5300 1126 50  0000 C CNN
-F 2 "Phoenix_Conn:1017505" H 5550 1700 50  0001 L CNN
-F 3 "https://www.phoenixcontact.com/online/portal/gb/?uri=pxc-oc-itemdetail:pid=1017505&library=gben&pcck=P-11-01-05&tab=1&selectedCategory=ALL" H 5550 1600 50  0001 L CNN
-F 4 "Phoenix Contact TDPT Series 5.08mm Pitch, PCB Terminal Block, PCB Mount, 4 Way" H 5550 1500 50  0001 L CNN "Description"
-F 5 "19.2" H 5550 1400 50  0001 L CNN "Height"
-F 6 "Phoenix Contact" H 5550 1300 50  0001 L CNN "Manufacturer_Name"
-F 7 "1017505" H 5550 1200 50  0001 L CNN "Manufacturer_Part_Number"
-F 8 "651-1017505" H 5550 1100 50  0001 L CNN "Mouser Part Number"
-F 9 "https://www.mouser.co.uk/ProductDetail/Phoenix-Contact/1017505?qs=F5EMLAvA7IDSv5uM7A6HhA%3D%3D" H 5550 1000 50  0001 L CNN "Mouser Price/Stock"
-F 10 "1017505" H 5550 900 50  0001 L CNN "Arrow Part Number"
-F 11 "https://www.arrow.com/en/products/1017505/phoenix-contact" H 5550 800 50  0001 L CNN "Arrow Price/Stock"
-	1    4900 1600
-	-1   0    0    1   
+P 4100 1300
+F 0 "J3" H 4500 735 50  0000 C CNN
+F 1 "1017505" H 4500 826 50  0000 C CNN
+F 2 "Phoenix_Conn:1017505" H 4750 1400 50  0001 L CNN
+F 3 "https://www.phoenixcontact.com/online/portal/gb/?uri=pxc-oc-itemdetail:pid=1017505&library=gben&pcck=P-11-01-05&tab=1&selectedCategory=ALL" H 4750 1300 50  0001 L CNN
+F 4 "Phoenix Contact TDPT Series 5.08mm Pitch, PCB Terminal Block, PCB Mount, 4 Way" H 4750 1200 50  0001 L CNN "Description"
+F 5 "19.2" H 4750 1100 50  0001 L CNN "Height"
+F 6 "Phoenix Contact" H 4750 1000 50  0001 L CNN "Manufacturer_Name"
+F 7 "1017505" H 4750 900 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "651-1017505" H 4750 800 50  0001 L CNN "Mouser Part Number"
+F 9 "https://www.mouser.co.uk/ProductDetail/Phoenix-Contact/1017505?qs=F5EMLAvA7IDSv5uM7A6HhA%3D%3D" H 4750 700 50  0001 L CNN "Mouser Price/Stock"
+F 10 "1017505" H 4750 600 50  0001 L CNN "Arrow Part Number"
+F 11 "https://www.arrow.com/en/products/1017505/phoenix-contact" H 4750 500 50  0001 L CNN "Arrow Price/Stock"
+	1    4100 1300
+	1    0    0    -1  
 $EndComp
 Text GLabel 5500 900  2    50   UnSpc ~ 0
 220VAC(L)
@@ -717,8 +701,6 @@ Text GLabel 5500 1900 2    50   UnSpc ~ 0
 220VAC(N)
 Wire Wire Line
 	4100 1900 4900 1900
-Wire Wire Line
-	4900 1600 4900 1900
 Connection ~ 4900 1900
 Wire Wire Line
 	4900 1900 5200 1900
@@ -818,7 +800,7 @@ Text GLabel 6100 2650 2    50   Input ~ 0
 Text GLabel 6100 2750 2    50   Input ~ 0
 GND(5V)
 Wire Notes Line
-	7800 6200 7800 850 
+	6600 9250 6600 3900
 Wire Notes Line
 	7700 950  11000 950 
 Wire Notes Line
@@ -842,7 +824,7 @@ Wire Notes Line
 	3800 550  3800 3050
 Wire Notes Line
 	7000 550  7000 3050
-Text GLabel 8150 2550 0    50   Input ~ 0
+Text GLabel 8200 5500 0    50   Input ~ 0
 EspSens1
 $Comp
 L Connector_Generic:Conn_01x04 J6
@@ -901,32 +883,32 @@ Text GLabel 5750 5700 2    50   Input ~ 0
 EspRel3
 Text GLabel 5750 5800 2    50   Input ~ 0
 EspRel4
-Text GLabel 8200 3500 0    50   Input ~ 0
-EspSens2
 Text GLabel 8200 4500 0    50   Input ~ 0
+EspSens2
+Text GLabel 8200 3500 0    50   Input ~ 0
 EspSens3
-Text GLabel 8200 5500 0    50   Input ~ 0
+Text GLabel 8150 2550 0    50   Input ~ 0
 EspSens4
 $Comp
 L Device:LED D5
 U 1 1 613FCCDC
-P 8150 2700
-F 0 "D5" V 8097 2780 50  0000 L CNN
-F 1 "LED" V 8188 2780 50  0000 L CNN
-F 2 "LED_THT:LED_D3.0mm" H 8150 2700 50  0001 C CNN
-F 3 "~" H 8150 2700 50  0001 C CNN
-	1    8150 2700
+P 8200 5650
+F 0 "D5" V 8147 5730 50  0000 L CNN
+F 1 "LED" V 8238 5730 50  0000 L CNN
+F 2 "LED_THT:LED_D3.0mm" H 8200 5650 50  0001 C CNN
+F 3 "~" H 8200 5650 50  0001 C CNN
+	1    8200 5650
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:R R5
 U 1 1 613FE2E1
-P 8150 3000
-F 0 "R5" H 8220 3046 50  0000 L CNN
-F 1 "100" H 8220 2955 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 8080 3000 50  0001 C CNN
-F 3 "~" H 8150 3000 50  0001 C CNN
-	1    8150 3000
+P 8200 5950
+F 0 "R5" H 8270 5996 50  0000 L CNN
+F 1 "100" H 8270 5905 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 8130 5950 50  0001 C CNN
+F 3 "~" H 8200 5950 50  0001 C CNN
+	1    8200 5950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -940,23 +922,23 @@ Text GLabel 8200 4100 0    50   Input ~ 0
 $Comp
 L Device:LED D6
 U 1 1 61409E59
-P 8200 3650
-F 0 "D6" V 8147 3730 50  0000 L CNN
-F 1 "LED" V 8238 3730 50  0000 L CNN
-F 2 "LED_THT:LED_D3.0mm" H 8200 3650 50  0001 C CNN
-F 3 "~" H 8200 3650 50  0001 C CNN
-	1    8200 3650
+P 8200 4650
+F 0 "D6" V 8147 4730 50  0000 L CNN
+F 1 "LED" V 8238 4730 50  0000 L CNN
+F 2 "LED_THT:LED_D3.0mm" H 8200 4650 50  0001 C CNN
+F 3 "~" H 8200 4650 50  0001 C CNN
+	1    8200 4650
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:R R6
 U 1 1 61409E5F
-P 8200 3950
-F 0 "R6" H 8270 3996 50  0000 L CNN
-F 1 "100" H 8270 3905 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 8130 3950 50  0001 C CNN
-F 3 "~" H 8200 3950 50  0001 C CNN
-	1    8200 3950
+P 8200 4950
+F 0 "R6" H 8270 4996 50  0000 L CNN
+F 1 "100" H 8270 4905 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 8130 4950 50  0001 C CNN
+F 3 "~" H 8200 4950 50  0001 C CNN
+	1    8200 4950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -976,23 +958,23 @@ Text GLabel 8200 5100 0    50   Input ~ 0
 $Comp
 L Device:LED D7
 U 1 1 614112F5
-P 8200 4650
-F 0 "D7" V 8147 4730 50  0000 L CNN
-F 1 "LED" V 8238 4730 50  0000 L CNN
-F 2 "LED_THT:LED_D3.0mm" H 8200 4650 50  0001 C CNN
-F 3 "~" H 8200 4650 50  0001 C CNN
-	1    8200 4650
+P 8200 3650
+F 0 "D7" V 8147 3730 50  0000 L CNN
+F 1 "LED" V 8238 3730 50  0000 L CNN
+F 2 "LED_THT:LED_D3.0mm" H 8200 3650 50  0001 C CNN
+F 3 "~" H 8200 3650 50  0001 C CNN
+	1    8200 3650
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:R R7
 U 1 1 614112FB
-P 8200 4950
-F 0 "R7" H 8270 4996 50  0000 L CNN
-F 1 "100" H 8270 4905 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 8130 4950 50  0001 C CNN
-F 3 "~" H 8200 4950 50  0001 C CNN
-	1    8200 4950
+P 8200 3950
+F 0 "R7" H 8270 3996 50  0000 L CNN
+F 1 "100" H 8270 3905 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 8130 3950 50  0001 C CNN
+F 3 "~" H 8200 3950 50  0001 C CNN
+	1    8200 3950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1010,23 +992,23 @@ Text GLabel 8200 6100 0    50   Input ~ 0
 $Comp
 L Device:LED D8
 U 1 1 614135F2
-P 8200 5650
-F 0 "D8" V 8147 5730 50  0000 L CNN
-F 1 "LED" V 8238 5730 50  0000 L CNN
-F 2 "LED_THT:LED_D3.0mm" H 8200 5650 50  0001 C CNN
-F 3 "~" H 8200 5650 50  0001 C CNN
-	1    8200 5650
+P 8150 2700
+F 0 "D8" V 8097 2780 50  0000 L CNN
+F 1 "LED" V 8188 2780 50  0000 L CNN
+F 2 "LED_THT:LED_D3.0mm" H 8150 2700 50  0001 C CNN
+F 3 "~" H 8150 2700 50  0001 C CNN
+	1    8150 2700
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:R R8
 U 1 1 614135F8
-P 8200 5950
-F 0 "R8" H 8270 5996 50  0000 L CNN
-F 1 "100" H 8270 5905 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 8130 5950 50  0001 C CNN
-F 3 "~" H 8200 5950 50  0001 C CNN
-	1    8200 5950
+P 8150 3000
+F 0 "R8" H 8220 3046 50  0000 L CNN
+F 1 "100" H 8220 2955 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 8080 3000 50  0001 C CNN
+F 3 "~" H 8150 3000 50  0001 C CNN
+	1    8150 3000
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1190,4 +1172,22 @@ Wire Wire Line
 	4100 4300 4100 4550
 Wire Wire Line
 	4100 4550 4200 4550
+Text GLabel 9600 1650 0    50   Input ~ 0
+Sens4
+Text GLabel 9600 1550 0    50   Input ~ 0
+Sens3
+Text GLabel 9600 1350 0    50   Input ~ 0
+Sens2
+Text GLabel 9600 1450 0    50   Input ~ 0
+Sens1
+Text GLabel 10400 1350 2    50   Input ~ 0
+Sens2
+Text GLabel 10400 1550 2    50   Input ~ 0
+Sens3
+Text GLabel 10400 1650 2    50   Input ~ 0
+Sens4
+Text GLabel 10400 1450 2    50   Input ~ 0
+Sens1
+Wire Wire Line
+	4900 1600 4900 1900
 $EndSCHEMATC
