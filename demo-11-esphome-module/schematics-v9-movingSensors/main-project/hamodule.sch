@@ -728,39 +728,39 @@ Wire Wire Line
 	4100 900  4100 1300
 Wire Wire Line
 	4100 1600 4100 1900
-Text GLabel 4450 5050 2    50   Input ~ 0
+Text GLabel 4350 4000 2    50   Input ~ 0
 GND(5V)
-Text GLabel 4850 5750 2    50   Input ~ 0
+Text GLabel 4750 4700 2    50   Input ~ 0
 GND(5V)
-Text GLabel 4850 5650 2    50   Input ~ 0
+Text GLabel 4750 4600 2    50   Input ~ 0
 GND(5V)
-Text GLabel 4850 5850 2    50   Input ~ 0
+Text GLabel 4750 4800 2    50   Input ~ 0
 GND(5V)
-Text GLabel 4050 5850 0    50   Input ~ 0
+Text GLabel 3950 4800 0    50   Input ~ 0
 GND(5V)
-Text GLabel 4050 5750 0    50   Input ~ 0
+Text GLabel 3950 4700 0    50   Input ~ 0
 GND(5V)
-Text GLabel 4050 5650 0    50   Input ~ 0
+Text GLabel 3950 4600 0    50   Input ~ 0
 GND(5V)
-Text GLabel 4050 5550 0    50   Input ~ 0
+Text GLabel 3950 4500 0    50   Input ~ 0
 REI4
-Text GLabel 4050 5450 0    50   Input ~ 0
+Text GLabel 3950 4400 0    50   Input ~ 0
 REI3
-Text GLabel 4050 5350 0    50   Input ~ 0
+Text GLabel 3950 4300 0    50   Input ~ 0
 REI2
-Text GLabel 4050 5250 0    50   Input ~ 0
+Text GLabel 3950 4200 0    50   Input ~ 0
 REI1
-Text GLabel 4050 6050 0    50   Input ~ 0
+Text GLabel 3950 5000 0    50   Input ~ 0
 5V+
 $Comp
 L Transistor_Array:ULN2003A U1
 U 1 1 61374AC1
-P 4450 5650
-F 0 "U1" V 4404 6180 50  0000 L CNN
-F 1 "ULN2003A" V 4495 6180 50  0000 L CNN
-F 2 "Package_DIP:DIP-16_W7.62mm_LongPads" H 4500 5100 50  0001 L CNN
-F 3 "http://www.ti.com/lit/ds/symlink/uln2003a.pdf" H 4550 5450 50  0001 C CNN
-	1    4450 5650
+P 4350 4600
+F 0 "U1" V 4304 5130 50  0000 L CNN
+F 1 "ULN2003A" V 4395 5130 50  0000 L CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_LongPads" H 4400 4050 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/uln2003a.pdf" H 4450 4400 50  0001 C CNN
+	1    4350 4600
 	-1   0    0    1   
 $EndComp
 NoConn ~ 4100 1400
@@ -856,21 +856,21 @@ EspSens4
 $Comp
 L Connector_Generic:Conn_01x05 J4
 U 1 1 61516260
-P 5550 5600
-F 0 "J4" H 5468 5175 50  0000 C CNN
-F 1 "Conn-Buttons" H 5468 5266 50  0000 C CNN
-F 2 "Connector_JST:JST_XH_B5B-XH-A_1x05_P2.50mm_Vertical" H 5550 5600 50  0001 C CNN
-F 3 "~" H 5550 5600 50  0001 C CNN
-	1    5550 5600
+P 5450 4550
+F 0 "J4" H 5368 4125 50  0000 C CNN
+F 1 "Conn-Buttons" H 5368 4216 50  0000 C CNN
+F 2 "Connector_JST:JST_XH_B5B-XH-A_1x05_P2.50mm_Vertical" H 5450 4550 50  0001 C CNN
+F 3 "~" H 5450 4550 50  0001 C CNN
+	1    5450 4550
 	-1   0    0    1   
 $EndComp
-Text GLabel 5750 5500 2    50   Input ~ 0
+Text GLabel 5650 4450 2    50   Input ~ 0
 EspRel1
-Text GLabel 5750 5600 2    50   Input ~ 0
+Text GLabel 5650 4550 2    50   Input ~ 0
 EspRel2
-Text GLabel 5750 5700 2    50   Input ~ 0
+Text GLabel 5650 4650 2    50   Input ~ 0
 EspRel3
-Text GLabel 5750 5800 2    50   Input ~ 0
+Text GLabel 5650 4750 2    50   Input ~ 0
 EspRel4
 Text GLabel 8200 4500 0    50   Input ~ 0
 EspSens2
@@ -1072,28 +1072,28 @@ Text GLabel 1100 3600 0    50   Input ~ 0
 5V+
 Text GLabel 1100 2400 0    50   Input ~ 0
 5V+
-Text GLabel 4500 3900 2    50   Input ~ 0
+Text GLabel 4450 3300 2    50   Input ~ 0
 EspRel1
-Text GLabel 4500 4050 2    50   Input ~ 0
+Text GLabel 4450 3450 2    50   Input ~ 0
 EspRel2
-Text GLabel 4500 4250 2    50   Input ~ 0
+Text GLabel 4450 3650 2    50   Input ~ 0
 EspRel3
-Text GLabel 4500 4400 2    50   Input ~ 0
+Text GLabel 4450 3800 2    50   Input ~ 0
 EspRel4
-Text GLabel 4850 5550 2    50   Input ~ 0
+Text GLabel 4750 4500 2    50   Input ~ 0
 EspRel1
-Text GLabel 4850 5450 2    50   Input ~ 0
+Text GLabel 4750 4400 2    50   Input ~ 0
 EspRel2
-Text GLabel 4850 5350 2    50   Input ~ 0
+Text GLabel 4750 4300 2    50   Input ~ 0
 EspRel3
-Text GLabel 4850 5250 2    50   Input ~ 0
+Text GLabel 4750 4200 2    50   Input ~ 0
 EspRel4
-Text GLabel 5750 5400 2    50   Input ~ 0
+Text GLabel 5650 4350 2    50   Input ~ 0
 3.3V+
 Wire Wire Line
-	4200 4100 4100 4100
+	4150 3500 4050 3500
 Wire Wire Line
-	4100 4200 4200 4200
+	4050 3600 4150 3600
 Text GLabel 9600 1650 0    50   Input ~ 0
 Sens4
 Text GLabel 9600 1550 0    50   Input ~ 0
@@ -1138,68 +1138,68 @@ $EndComp
 $Comp
 L Connector_Generic:Conn_01x04 J2
 U 1 1 614144AF
-P 3900 4200
-F 0 "J2" H 3980 4192 50  0000 L CNN
-F 1 "Conn-ESP-Relays" H 3980 4101 50  0000 L CNN
-F 2 "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical" H 3900 4200 50  0001 C CNN
-F 3 "~" H 3900 4200 50  0001 C CNN
-	1    3900 4200
+P 3850 3600
+F 0 "J2" H 3930 3592 50  0000 L CNN
+F 1 "Conn-ESP-Relays" H 3930 3501 50  0000 L CNN
+F 2 "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical" H 3850 3600 50  0001 C CNN
+F 3 "~" H 3850 3600 50  0001 C CNN
+	1    3850 3600
 	-1   0    0    1   
 $EndComp
 $Comp
 L Device:D D1
 U 1 1 615714B6
-P 4350 3900
-F 0 "D1" H 4350 3683 50  0000 C CNN
-F 1 "D" H 4350 3774 50  0000 C CNN
-F 2 "Diode_THT:D_A-405_P7.62mm_Horizontal" H 4350 3900 50  0001 C CNN
-F 3 "~" H 4350 3900 50  0001 C CNN
-	1    4350 3900
+P 4300 3300
+F 0 "D1" H 4300 3083 50  0000 C CNN
+F 1 "D" H 4300 3174 50  0000 C CNN
+F 2 "Diode_THT:D_A-405_P7.62mm_Horizontal" H 4300 3300 50  0001 C CNN
+F 3 "~" H 4300 3300 50  0001 C CNN
+	1    4300 3300
 	-1   0    0    1   
 $EndComp
 $Comp
 L Device:D D2
 U 1 1 615764D6
-P 4350 4050
-F 0 "D2" H 4350 3833 50  0000 C CNN
-F 1 "D" H 4350 3924 50  0000 C CNN
-F 2 "Diode_THT:D_A-405_P7.62mm_Horizontal" H 4350 4050 50  0001 C CNN
-F 3 "~" H 4350 4050 50  0001 C CNN
-	1    4350 4050
+P 4300 3450
+F 0 "D2" H 4300 3233 50  0000 C CNN
+F 1 "D" H 4300 3324 50  0000 C CNN
+F 2 "Diode_THT:D_A-405_P7.62mm_Horizontal" H 4300 3450 50  0001 C CNN
+F 3 "~" H 4300 3450 50  0001 C CNN
+	1    4300 3450
 	-1   0    0    1   
 $EndComp
 $Comp
 L Device:D D3
 U 1 1 615780DE
-P 4350 4250
-F 0 "D3" H 4350 4033 50  0000 C CNN
-F 1 "D" H 4350 4124 50  0000 C CNN
-F 2 "Diode_THT:D_A-405_P7.62mm_Horizontal" H 4350 4250 50  0001 C CNN
-F 3 "~" H 4350 4250 50  0001 C CNN
-	1    4350 4250
+P 4300 3650
+F 0 "D3" H 4300 3433 50  0000 C CNN
+F 1 "D" H 4300 3524 50  0000 C CNN
+F 2 "Diode_THT:D_A-405_P7.62mm_Horizontal" H 4300 3650 50  0001 C CNN
+F 3 "~" H 4300 3650 50  0001 C CNN
+	1    4300 3650
 	-1   0    0    1   
 $EndComp
 $Comp
 L Device:D D4
 U 1 1 6157A0C6
-P 4350 4400
-F 0 "D4" H 4350 4183 50  0000 C CNN
-F 1 "D" H 4350 4274 50  0000 C CNN
-F 2 "Diode_THT:D_A-405_P7.62mm_Horizontal" H 4350 4400 50  0001 C CNN
-F 3 "~" H 4350 4400 50  0001 C CNN
-	1    4350 4400
+P 4300 3800
+F 0 "D4" H 4300 3583 50  0000 C CNN
+F 1 "D" H 4300 3674 50  0000 C CNN
+F 2 "Diode_THT:D_A-405_P7.62mm_Horizontal" H 4300 3800 50  0001 C CNN
+F 3 "~" H 4300 3800 50  0001 C CNN
+	1    4300 3800
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	4200 3900 4100 3900
+	4150 3300 4050 3300
 Wire Wire Line
-	4100 3900 4100 4000
+	4050 3300 4050 3400
 Wire Wire Line
-	4200 4400 4100 4400
+	4150 3800 4050 3800
 Wire Wire Line
-	4100 4400 4100 4300
+	4050 3800 4050 3700
 Wire Wire Line
-	4200 4250 4200 4200
+	4150 3650 4150 3600
 Wire Wire Line
-	4200 4050 4200 4100
+	4150 3450 4150 3500
 $EndSCHEMATC
