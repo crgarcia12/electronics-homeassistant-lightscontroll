@@ -668,8 +668,6 @@ F 3 "~" H 5050 900 50  0001 C CNN
 	1    5050 900 
 	0    -1   -1   0   
 $EndComp
-NoConn ~ 4500 1350
-NoConn ~ 4500 1450
 NoConn ~ 4900 1500
 NoConn ~ 4900 1400
 $Comp
@@ -780,9 +778,9 @@ F 7 "N/A" H 6100 1450 50  0001 L BNN "PARTREV"
 	1    6100 1450
 	1    0    0    -1  
 $EndComp
-Text GLabel 4300 2650 0    50   Input ~ 0
+Text GLabel 4200 2250 0    50   Input ~ 0
 5V+
-Text GLabel 4900 2650 2    50   Input ~ 0
+Text GLabel 5000 2250 2    50   Input ~ 0
 3.3V+
 $Comp
 L Connector_Generic:Conn_01x02 J5
@@ -805,18 +803,7 @@ Wire Notes Line
 	7700 950  11000 950 
 Wire Notes Line
 	7700 6300 11000 6300
-$Comp
-L Regulator_Linear:LD1117S33TR_SOT223 U2
-U 1 1 61434446
-P 4600 2650
-F 0 "U2" H 4600 2892 50  0000 C CNN
-F 1 "LD1117S33TR_SOT223" H 4600 2801 50  0000 C CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 4600 2850 50  0001 C CNN
-F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000544.pdf" H 4700 2400 50  0001 C CNN
-	1    4600 2650
-	1    0    0    -1  
-$EndComp
-Text GLabel 4600 2950 2    50   Input ~ 0
+Text GLabel 4600 2650 3    50   Input ~ 0
 GND(5V)
 Wire Notes Line
 	3800 3050 7000 3050
@@ -831,7 +818,7 @@ L Connector_Generic:Conn_01x04 J6
 U 1 1 6140A7FD
 P 6750 3800
 F 0 "J6" H 6668 3375 50  0000 C CNN
-F 1 "Conn-Esp-Sensors" H 6668 3466 50  0000 C CNN
+F 1 "Conn-Esp-Sensors" H 6450 3450 50  0000 C CNN
 F 2 "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical" H 6750 3800 50  0001 C CNN
 F 3 "~" H 6750 3800 50  0001 C CNN
 	1    6750 3800
@@ -853,25 +840,6 @@ Text GLabel 7250 4500 2    50   Input ~ 0
 EspSens3
 Text GLabel 7250 4600 2    50   Input ~ 0
 EspSens4
-$Comp
-L Connector_Generic:Conn_01x05 J4
-U 1 1 61516260
-P 5450 4550
-F 0 "J4" H 5368 4125 50  0000 C CNN
-F 1 "Conn-Buttons" H 5368 4216 50  0000 C CNN
-F 2 "Connector_JST:JST_XH_B5B-XH-A_1x05_P2.50mm_Vertical" H 5450 4550 50  0001 C CNN
-F 3 "~" H 5450 4550 50  0001 C CNN
-	1    5450 4550
-	-1   0    0    1   
-$EndComp
-Text GLabel 5650 4450 2    50   Input ~ 0
-EspRel1
-Text GLabel 5650 4550 2    50   Input ~ 0
-EspRel2
-Text GLabel 5650 4650 2    50   Input ~ 0
-EspRel3
-Text GLabel 5650 4750 2    50   Input ~ 0
-EspRel4
 Text GLabel 8200 4500 0    50   Input ~ 0
 EspSens2
 Text GLabel 8200 3500 0    50   Input ~ 0
@@ -1024,7 +992,7 @@ $Comp
 L Device:R R4
 U 1 1 6141E5EE
 P 7100 4600
-F 0 "R4" V 6893 4600 50  0000 C CNN
+F 0 "R4" V 6893 4600 50  0001 C CNN
 F 1 "100" V 7100 4600 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7030 4600 50  0001 C CNN
 F 3 "~" H 7100 4600 50  0001 C CNN
@@ -1035,7 +1003,7 @@ $Comp
 L Device:R R3
 U 1 1 6141EC21
 P 7100 4500
-F 0 "R3" V 6893 4500 50  0000 C CNN
+F 0 "R3" V 6893 4500 50  0001 C CNN
 F 1 "100" V 7100 4500 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7030 4500 50  0001 C CNN
 F 3 "~" H 7100 4500 50  0001 C CNN
@@ -1046,8 +1014,8 @@ $Comp
 L Device:R R2
 U 1 1 6141EDC4
 P 7100 4400
-F 0 "R2" V 6893 4400 50  0000 C CNN
-F 1 "100" V 6984 4400 50  0000 C CNN
+F 0 "R2" V 6893 4400 50  0001 C CNN
+F 1 "100" V 7100 4400 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7030 4400 50  0001 C CNN
 F 3 "~" H 7100 4400 50  0001 C CNN
 	1    7100 4400
@@ -1057,8 +1025,8 @@ $Comp
 L Device:R R1
 U 1 1 6141EF53
 P 7100 4300
-F 0 "R1" V 6893 4300 50  0000 C CNN
-F 1 "100" V 6984 4300 50  0000 C CNN
+F 0 "R1" V 6893 4300 50  0001 C CNN
+F 1 "100" V 7100 4300 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7030 4300 50  0001 C CNN
 F 3 "~" H 7100 4300 50  0001 C CNN
 	1    7100 4300
@@ -1072,13 +1040,13 @@ Text GLabel 1100 3600 0    50   Input ~ 0
 5V+
 Text GLabel 1100 2400 0    50   Input ~ 0
 5V+
-Text GLabel 4450 3300 2    50   Input ~ 0
+Text GLabel 5600 4100 0    50   Input ~ 0
 EspRel1
-Text GLabel 4450 3450 2    50   Input ~ 0
+Text GLabel 5600 3950 0    50   Input ~ 0
 EspRel2
-Text GLabel 4450 3650 2    50   Input ~ 0
+Text GLabel 5600 3800 0    50   Input ~ 0
 EspRel3
-Text GLabel 4450 3800 2    50   Input ~ 0
+Text GLabel 5600 3650 0    50   Input ~ 0
 EspRel4
 Text GLabel 4750 4500 2    50   Input ~ 0
 EspRel1
@@ -1086,14 +1054,10 @@ Text GLabel 4750 4400 2    50   Input ~ 0
 EspRel2
 Text GLabel 4750 4300 2    50   Input ~ 0
 EspRel3
-Text GLabel 4750 4200 2    50   Input ~ 0
-EspRel4
-Text GLabel 5650 4350 2    50   Input ~ 0
-3.3V+
 Wire Wire Line
-	4150 3500 4050 3500
+	5900 3900 6000 3900
 Wire Wire Line
-	4050 3600 4150 3600
+	6000 3800 5900 3800
 Text GLabel 9600 1650 0    50   Input ~ 0
 Sens4
 Text GLabel 9600 1550 0    50   Input ~ 0
@@ -1138,68 +1102,207 @@ $EndComp
 $Comp
 L Connector_Generic:Conn_01x04 J2
 U 1 1 614144AF
-P 3850 3600
-F 0 "J2" H 3930 3592 50  0000 L CNN
-F 1 "Conn-ESP-Relays" H 3930 3501 50  0000 L CNN
-F 2 "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical" H 3850 3600 50  0001 C CNN
-F 3 "~" H 3850 3600 50  0001 C CNN
-	1    3850 3600
-	-1   0    0    1   
+P 6200 3800
+F 0 "J2" H 6280 3792 50  0000 L CNN
+F 1 "Conn-ESP-Relays" H 5500 4050 50  0000 L CNN
+F 2 "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical" H 6200 3800 50  0001 C CNN
+F 3 "~" H 6200 3800 50  0001 C CNN
+	1    6200 3800
+	1    0    0    -1  
 $EndComp
 $Comp
 L Device:D D1
 U 1 1 615714B6
-P 4300 3300
-F 0 "D1" H 4300 3083 50  0000 C CNN
-F 1 "D" H 4300 3174 50  0000 C CNN
-F 2 "Diode_THT:D_A-405_P7.62mm_Horizontal" H 4300 3300 50  0001 C CNN
-F 3 "~" H 4300 3300 50  0001 C CNN
-	1    4300 3300
-	-1   0    0    1   
+P 5750 4100
+F 0 "D1" H 5750 3883 50  0001 C CNN
+F 1 "D" H 5750 3974 50  0001 C CNN
+F 2 "Diode_THT:D_A-405_P7.62mm_Horizontal" H 5750 4100 50  0001 C CNN
+F 3 "~" H 5750 4100 50  0001 C CNN
+	1    5750 4100
+	1    0    0    -1  
 $EndComp
 $Comp
 L Device:D D2
 U 1 1 615764D6
-P 4300 3450
-F 0 "D2" H 4300 3233 50  0000 C CNN
-F 1 "D" H 4300 3324 50  0000 C CNN
-F 2 "Diode_THT:D_A-405_P7.62mm_Horizontal" H 4300 3450 50  0001 C CNN
-F 3 "~" H 4300 3450 50  0001 C CNN
-	1    4300 3450
-	-1   0    0    1   
+P 5750 3950
+F 0 "D2" H 5750 3733 50  0001 C CNN
+F 1 "D" H 5750 3824 50  0001 C CNN
+F 2 "Diode_THT:D_A-405_P7.62mm_Horizontal" H 5750 3950 50  0001 C CNN
+F 3 "~" H 5750 3950 50  0001 C CNN
+	1    5750 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 4100 6000 4100
+Wire Wire Line
+	6000 4100 6000 4000
+Wire Wire Line
+	5900 3950 5900 3900
+$Comp
+L Device:D D4
+U 1 1 6157A0C6
+P 5750 3650
+F 0 "D4" H 5750 3433 50  0001 C CNN
+F 1 "D" H 5750 3524 50  0001 C CNN
+F 2 "Diode_THT:D_A-405_P7.62mm_Horizontal" H 5750 3650 50  0001 C CNN
+F 3 "~" H 5750 3650 50  0001 C CNN
+	1    5750 3650
+	1    0    0    -1  
+$EndComp
+Text GLabel 4750 4200 2    50   Input ~ 0
+EspRel4
+Text GLabel 5900 5750 0    50   Input ~ 0
+3.3V+
+$Comp
+L Connector_Generic:Conn_01x05 J4
+U 1 1 61516260
+P 6100 5550
+F 0 "J4" H 6018 5125 50  0000 C CNN
+F 1 "Conn-Buttons" H 6018 5216 50  0000 C CNN
+F 2 "Connector_JST:JST_XH_B5B-XH-A_1x05_P2.50mm_Vertical" H 6100 5550 50  0001 C CNN
+F 3 "~" H 6100 5550 50  0001 C CNN
+	1    6100 5550
+	1    0    0    -1  
 $EndComp
 $Comp
 L Device:D D3
 U 1 1 615780DE
-P 4300 3650
-F 0 "D3" H 4300 3433 50  0000 C CNN
-F 1 "D" H 4300 3524 50  0000 C CNN
-F 2 "Diode_THT:D_A-405_P7.62mm_Horizontal" H 4300 3650 50  0001 C CNN
-F 3 "~" H 4300 3650 50  0001 C CNN
-	1    4300 3650
-	-1   0    0    1   
+P 5750 3800
+F 0 "D3" H 5750 3583 50  0001 C CNN
+F 1 "D" H 5750 3674 50  0001 C CNN
+F 2 "Diode_THT:D_A-405_P7.62mm_Horizontal" H 5750 3800 50  0001 C CNN
+F 3 "~" H 5750 3800 50  0001 C CNN
+	1    5750 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 3650 6000 3650
+Wire Wire Line
+	6000 3650 6000 3700
+Text GLabel 5450 5650 0    50   Input ~ 0
+EspRel1
+Text GLabel 5450 5500 0    50   Input ~ 0
+EspRel2
+Text GLabel 5450 5350 0    50   Input ~ 0
+EspRel3
+Text GLabel 5450 5200 0    50   Input ~ 0
+EspRel4
+$Comp
+L Device:D D12
+U 1 1 614B7755
+P 5600 5650
+F 0 "D12" H 5600 5433 50  0001 C CNN
+F 1 "D" H 5600 5524 50  0001 C CNN
+F 2 "Diode_THT:D_A-405_P7.62mm_Horizontal" H 5600 5650 50  0001 C CNN
+F 3 "~" H 5600 5650 50  0001 C CNN
+	1    5600 5650
+	1    0    0    -1  
 $EndComp
 $Comp
-L Device:D D4
-U 1 1 6157A0C6
-P 4300 3800
-F 0 "D4" H 4300 3583 50  0000 C CNN
-F 1 "D" H 4300 3674 50  0000 C CNN
-F 2 "Diode_THT:D_A-405_P7.62mm_Horizontal" H 4300 3800 50  0001 C CNN
-F 3 "~" H 4300 3800 50  0001 C CNN
-	1    4300 3800
-	-1   0    0    1   
+L Device:D D11
+U 1 1 614B775B
+P 5600 5500
+F 0 "D11" H 5600 5283 50  0001 C CNN
+F 1 "D" H 5600 5374 50  0001 C CNN
+F 2 "Diode_THT:D_A-405_P7.62mm_Horizontal" H 5600 5500 50  0001 C CNN
+F 3 "~" H 5600 5500 50  0001 C CNN
+	1    5600 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D9
+U 1 1 614B7761
+P 5600 5200
+F 0 "D9" H 5600 4983 50  0001 C CNN
+F 1 "D" H 5600 5074 50  0001 C CNN
+F 2 "Diode_THT:D_A-405_P7.62mm_Horizontal" H 5600 5200 50  0001 C CNN
+F 3 "~" H 5600 5200 50  0001 C CNN
+	1    5600 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D10
+U 1 1 614B7767
+P 5600 5350
+F 0 "D10" H 5600 5133 50  0001 C CNN
+F 1 "D" H 5600 5224 50  0001 C CNN
+F 2 "Diode_THT:D_A-405_P7.62mm_Horizontal" H 5600 5350 50  0001 C CNN
+F 3 "~" H 5600 5350 50  0001 C CNN
+	1    5600 5350
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4150 3300 4050 3300
+	5750 5650 5900 5650
 Wire Wire Line
-	4050 3300 4050 3400
+	5900 5550 5750 5550
 Wire Wire Line
-	4150 3800 4050 3800
+	5750 5550 5750 5500
 Wire Wire Line
-	4050 3800 4050 3700
+	5750 5350 5750 5450
 Wire Wire Line
-	4150 3650 4150 3600
+	5750 5450 5900 5450
 Wire Wire Line
-	4150 3450 4150 3500
+	5900 5350 5800 5350
+Wire Wire Line
+	5800 5350 5800 5200
+Wire Wire Line
+	5800 5200 5750 5200
+$Comp
+L Device:CP C1
+U 1 1 6151DFD1
+P 4250 2500
+F 0 "C1" H 4368 2546 50  0001 L CNN
+F 1 "100uF" H 3900 2500 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 4288 2350 50  0001 C CNN
+F 3 "~" H 4250 2500 50  0001 C CNN
+	1    4250 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:LD1117S33TR_SOT223 U2
+U 1 1 61434446
+P 4600 2250
+F 0 "U2" H 4600 2492 50  0001 C CNN
+F 1 "LD1117S33TR_SOT223" H 4600 2401 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 4600 2450 50  0001 C CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000544.pdf" H 4700 2000 50  0001 C CNN
+	1    4600 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C2
+U 1 1 615251C7
+P 4950 2500
+F 0 "C2" H 5068 2546 50  0001 L CNN
+F 1 "100uF" H 5068 2500 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 4988 2350 50  0001 C CNN
+F 3 "~" H 4950 2500 50  0001 C CNN
+	1    4950 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 2250 4950 2250
+Connection ~ 4950 2250
+Wire Wire Line
+	4950 2250 4900 2250
+Wire Wire Line
+	4600 2550 4600 2650
+Wire Wire Line
+	4250 2550 4250 2650
+Wire Wire Line
+	4250 2650 4600 2650
+Wire Wire Line
+	4600 2650 4950 2650
+Wire Wire Line
+	4950 2650 4950 2550
+Connection ~ 4600 2650
+Wire Wire Line
+	4950 2350 4950 2250
+Wire Wire Line
+	4200 2250 4250 2250
+Wire Wire Line
+	4250 2350 4250 2250
+Connection ~ 4250 2250
+Wire Wire Line
+	4250 2250 4300 2250
 $EndSCHEMATC
