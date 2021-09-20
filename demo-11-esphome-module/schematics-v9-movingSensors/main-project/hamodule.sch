@@ -1305,4 +1305,16 @@ Text GLabel 10100 3750 2    50   Input ~ 0
 220VAC(N)
 Text GLabel 10100 3850 2    50   Input ~ 0
 Sens3
+$Comp
+L Mechanical:MountingHole_Pad H7
+U 1 1 615876D7
+P 2000 7500
+F 0 "H7" H 2100 7549 50  0001 L CNN
+F 1 "MountingHole_Pad" H 2100 7458 50  0001 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_ISO14580_Pad" H 2000 7500 50  0001 C CNN
+F 3 "~" H 2000 7500 50  0001 C CNN
+	1    2000 7500
+	1    0    0    -1  
+$EndComp
+NoConn ~ 2000 7600
 $EndSCHEMATC
