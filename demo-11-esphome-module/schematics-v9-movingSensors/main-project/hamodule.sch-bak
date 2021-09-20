@@ -185,11 +185,11 @@ F 3 "~" H 1000 7500 50  0001 C CNN
 	1    1000 7500
 	1    0    0    -1  
 $EndComp
-Text GLabel 10100 5750 2    50   Input ~ 0
+Text GLabel 10100 5850 2    50   Input ~ 0
 Sens2
-Text GLabel 10100 3750 2    50   Input ~ 0
+Text GLabel 10100 3850 2    50   Input ~ 0
 Sens3
-Text GLabel 10100 2750 2    50   Input ~ 0
+Text GLabel 10100 2850 2    50   Input ~ 0
 Sens4
 $Comp
 L Device:R R14
@@ -202,7 +202,7 @@ F 3 "~" H 9950 4850 50  0001 C CNN
 	1    9950 4850
 	0    1    1    0   
 $EndComp
-Text GLabel 10100 4750 2    50   Input ~ 0
+Text GLabel 10100 4850 2    50   Input ~ 0
 Sens1
 $Comp
 L phoenix-1017505:1017505 J8
@@ -313,7 +313,7 @@ Text GLabel 8150 3150 0    50   Input ~ 0
 NoConn ~ 8900 2550
 Text GLabel 8900 3350 0    50   Input ~ 0
 GND(5V)
-Text GLabel 10100 5850 2    50   Input ~ 0
+Text GLabel 10100 5750 2    50   Input ~ 0
 220VAC(N)
 $Comp
 L Device:R R16
@@ -387,7 +387,7 @@ Wire Wire Line
 NoConn ~ 8900 3550
 Text GLabel 8900 4350 0    50   Input ~ 0
 GND(5V)
-Text GLabel 10100 3850 2    50   Input ~ 0
+Text GLabel 10100 3750 2    50   Input ~ 0
 220VAC(N)
 $Comp
 L Device:R R11
@@ -461,7 +461,7 @@ Wire Wire Line
 NoConn ~ 8900 4550
 Text GLabel 8900 5350 0    50   Input ~ 0
 GND(5V)
-Text GLabel 10100 2850 2    50   Input ~ 0
+Text GLabel 10100 2750 2    50   Input ~ 0
 220VAC(N)
 $Comp
 L Device:R R10
@@ -611,7 +611,7 @@ F 3 "~" H 8850 1600 50  0001 C CNN
 	1    8850 1600
 	0    1    1    0   
 $EndComp
-Text GLabel 10100 4850 2    50   Input ~ 0
+Text GLabel 10100 4750 2    50   Input ~ 0
 220VAC(N)
 $Comp
 L Device:R R13
@@ -1248,12 +1248,12 @@ Wire Wire Line
 Wire Wire Line
 	5800 5200 5750 5200
 $Comp
-L Device:CP C?
+L Device:CP C1
 U 1 1 6151DFD1
 P 4250 2500
-F 0 "C?" H 4368 2546 50  0001 L CNN
+F 0 "C1" H 4368 2546 50  0001 L CNN
 F 1 "100uF" H 3900 2500 50  0000 L CNN
-F 2 "" H 4288 2350 50  0001 C CNN
+F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 4288 2350 50  0001 C CNN
 F 3 "~" H 4250 2500 50  0001 C CNN
 	1    4250 2500
 	1    0    0    -1  
@@ -1270,12 +1270,12 @@ F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/da
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:CP C?
+L Device:CP C2
 U 1 1 615251C7
 P 4950 2500
-F 0 "C?" H 5068 2546 50  0001 L CNN
+F 0 "C2" H 5068 2546 50  0001 L CNN
 F 1 "100uF" H 5068 2500 50  0000 L CNN
-F 2 "" H 4988 2350 50  0001 C CNN
+F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 4988 2350 50  0001 C CNN
 F 3 "~" H 4950 2500 50  0001 C CNN
 	1    4950 2500
 	1    0    0    -1  

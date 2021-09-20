@@ -185,24 +185,22 @@ F 3 "~" H 1000 7500 50  0001 C CNN
 	1    1000 7500
 	1    0    0    -1  
 $EndComp
-Text GLabel 10100 5750 2    50   Input ~ 0
+Text GLabel 10100 5850 2    50   Input ~ 0
 Sens2
-Text GLabel 10100 3750 2    50   Input ~ 0
-Sens3
-Text GLabel 10100 2750 2    50   Input ~ 0
+Text GLabel 10100 2850 2    50   Input ~ 0
 Sens4
 $Comp
 L Device:R R14
 U 1 1 61354B0C
-P 9950 4850
-F 0 "R14" V 9743 4850 50  0001 C CNN
-F 1 "39k2w" V 10050 4850 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P20.32mm_Horizontal" V 9880 4850 50  0001 C CNN
-F 3 "~" H 9950 4850 50  0001 C CNN
-	1    9950 4850
+P 9950 4750
+F 0 "R14" V 9743 4750 50  0001 C CNN
+F 1 "39k2w" V 9850 4750 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P20.32mm_Horizontal" V 9880 4750 50  0001 C CNN
+F 3 "~" H 9950 4750 50  0001 C CNN
+	1    9950 4750
 	0    1    1    0   
 $EndComp
-Text GLabel 10100 4750 2    50   Input ~ 0
+Text GLabel 10100 4850 2    50   Input ~ 0
 Sens1
 $Comp
 L phoenix-1017505:1017505 J8
@@ -313,28 +311,28 @@ Text GLabel 8150 3150 0    50   Input ~ 0
 NoConn ~ 8900 2550
 Text GLabel 8900 3350 0    50   Input ~ 0
 GND(5V)
-Text GLabel 10100 5850 2    50   Input ~ 0
+Text GLabel 10100 5750 2    50   Input ~ 0
 220VAC(N)
 $Comp
 L Device:R R16
 U 1 1 613B1E37
-P 9950 5850
-F 0 "R16" V 9743 5850 50  0001 C CNN
-F 1 "39k2w" V 10050 5850 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P20.32mm_Horizontal" V 9880 5850 50  0001 C CNN
-F 3 "~" H 9950 5850 50  0001 C CNN
-	1    9950 5850
+P 9950 5750
+F 0 "R16" V 9743 5750 50  0001 C CNN
+F 1 "39k2w" V 9850 5750 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P20.32mm_Horizontal" V 9880 5750 50  0001 C CNN
+F 3 "~" H 9950 5750 50  0001 C CNN
+	1    9950 5750
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:R R15
 U 1 1 613B1E3D
-P 9950 5750
-F 0 "R15" V 9743 5750 50  0001 C CNN
-F 1 "39k2w" V 9850 5750 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P20.32mm_Horizontal" V 9880 5750 50  0001 C CNN
-F 3 "~" H 9950 5750 50  0001 C CNN
-	1    9950 5750
+P 9950 5850
+F 0 "R15" V 9743 5850 50  0001 C CNN
+F 1 "39k2w" V 10050 5850 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P20.32mm_Horizontal" V 9880 5850 50  0001 C CNN
+F 3 "~" H 9950 5850 50  0001 C CNN
+	1    9950 5850
 	0    1    1    0   
 $EndComp
 $Comp
@@ -387,30 +385,6 @@ Wire Wire Line
 NoConn ~ 8900 3550
 Text GLabel 8900 4350 0    50   Input ~ 0
 GND(5V)
-Text GLabel 10100 3850 2    50   Input ~ 0
-220VAC(N)
-$Comp
-L Device:R R11
-U 1 1 613B6B92
-P 9950 3750
-F 0 "R11" V 9743 3750 50  0001 C CNN
-F 1 "39k2w" V 10050 3750 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P20.32mm_Horizontal" V 9880 3750 50  0001 C CNN
-F 3 "~" H 9950 3750 50  0001 C CNN
-	1    9950 3750
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:R R12
-U 1 1 613B6B98
-P 9950 3850
-F 0 "R12" V 9743 3850 50  0001 C CNN
-F 1 "39k2w" V 9850 3850 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P20.32mm_Horizontal" V 9880 3850 50  0001 C CNN
-F 3 "~" H 9950 3850 50  0001 C CNN
-	1    9950 3850
-	0    -1   -1   0   
-$EndComp
 $Comp
 L HCPL-3700-000:HCPL3700 U5
 U 1 1 613B6BB0
@@ -461,28 +435,28 @@ Wire Wire Line
 NoConn ~ 8900 4550
 Text GLabel 8900 5350 0    50   Input ~ 0
 GND(5V)
-Text GLabel 10100 2850 2    50   Input ~ 0
+Text GLabel 10100 2750 2    50   Input ~ 0
 220VAC(N)
 $Comp
 L Device:R R10
 U 1 1 613BAE41
-P 9950 2850
-F 0 "R10" V 9743 2850 50  0001 C CNN
-F 1 "39k2w" V 10050 2850 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P20.32mm_Horizontal" V 9880 2850 50  0001 C CNN
-F 3 "~" H 9950 2850 50  0001 C CNN
-	1    9950 2850
+P 9950 2750
+F 0 "R10" V 9743 2750 50  0001 C CNN
+F 1 "39k2w" V 9850 2750 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P20.32mm_Horizontal" V 9880 2750 50  0001 C CNN
+F 3 "~" H 9950 2750 50  0001 C CNN
+	1    9950 2750
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:R R9
 U 1 1 613BAE47
-P 9950 2750
-F 0 "R9" V 9743 2750 50  0001 C CNN
-F 1 "39k2w" V 9850 2750 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P20.32mm_Horizontal" V 9880 2750 50  0001 C CNN
-F 3 "~" H 9950 2750 50  0001 C CNN
-	1    9950 2750
+P 9950 2850
+F 0 "R9" V 9743 2850 50  0001 C CNN
+F 1 "39k2w" V 10050 2850 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P20.32mm_Horizontal" V 9880 2850 50  0001 C CNN
+F 3 "~" H 9950 2850 50  0001 C CNN
+	1    9950 2850
 	0    1    1    0   
 $EndComp
 $Comp
@@ -611,17 +585,17 @@ F 3 "~" H 8850 1600 50  0001 C CNN
 	1    8850 1600
 	0    1    1    0   
 $EndComp
-Text GLabel 10100 4850 2    50   Input ~ 0
+Text GLabel 10100 4750 2    50   Input ~ 0
 220VAC(N)
 $Comp
 L Device:R R13
 U 1 1 61314DEF
-P 9950 4750
-F 0 "R13" V 9743 4750 50  0001 C CNN
-F 1 "39k2w" V 9850 4750 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P20.32mm_Horizontal" V 9880 4750 50  0001 C CNN
-F 3 "~" H 9950 4750 50  0001 C CNN
-	1    9950 4750
+P 9950 4850
+F 0 "R13" V 9743 4850 50  0001 C CNN
+F 1 "39k2w" V 10050 4850 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P20.32mm_Horizontal" V 9880 4850 50  0001 C CNN
+F 3 "~" H 9950 4850 50  0001 C CNN
+	1    9950 4850
 	0    1    1    0   
 $EndComp
 Text GLabel 8900 2350 0    50   Input ~ 0
@@ -1305,4 +1279,30 @@ Wire Wire Line
 Connection ~ 4250 2250
 Wire Wire Line
 	4250 2250 4300 2250
+$Comp
+L Device:R R12
+U 1 1 613B6B98
+P 9950 3750
+F 0 "R12" V 9743 3750 50  0001 C CNN
+F 1 "39k2w" V 10050 3750 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P20.32mm_Horizontal" V 9880 3750 50  0001 C CNN
+F 3 "~" H 9950 3750 50  0001 C CNN
+	1    9950 3750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R11
+U 1 1 613B6B92
+P 9950 3850
+F 0 "R11" V 9743 3850 50  0001 C CNN
+F 1 "39k2w" V 9850 3850 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P20.32mm_Horizontal" V 9880 3850 50  0001 C CNN
+F 3 "~" H 9950 3850 50  0001 C CNN
+	1    9950 3850
+	0    -1   -1   0   
+$EndComp
+Text GLabel 10100 3750 2    50   Input ~ 0
+220VAC(N)
+Text GLabel 10100 3850 2    50   Input ~ 0
+Sens3
 $EndSCHEMATC
