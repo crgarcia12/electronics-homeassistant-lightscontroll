@@ -667,7 +667,7 @@ Text GLabel 5500 900  2    50   UnSpc ~ 0
 220VAC(L)
 Text GLabel 6800 1650 3    50   Input ~ 0
 GND(5V)
-Text GLabel 6800 1250 1    50   Input ~ 0
+Text GLabel 6900 1250 1    50   Input ~ 0
 5V+
 Text GLabel 5500 1900 2    50   UnSpc ~ 0
 220VAC(N)
@@ -1306,15 +1306,26 @@ Text GLabel 10100 3750 2    50   Input ~ 0
 Text GLabel 10100 3850 2    50   Input ~ 0
 Sens3
 $Comp
-L Mechanical:MountingHole_Pad H?
+L Mechanical:MountingHole_Pad H7
 U 1 1 615876D7
-P 2150 7500
-F 0 "H?" H 2250 7549 50  0001 L CNN
-F 1 "MountingHole_Pad" H 2250 7458 50  0001 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3_ISO14580_Pad" H 2150 7500 50  0001 C CNN
-F 3 "~" H 2150 7500 50  0001 C CNN
-	1    2150 7500
+P 2000 7500
+F 0 "H7" H 2100 7549 50  0001 L CNN
+F 1 "MountingHole_Pad" H 2100 7458 50  0001 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_ISO14580_Pad" H 2000 7500 50  0001 C CNN
+F 3 "~" H 2000 7500 50  0001 C CNN
+	1    2000 7500
 	1    0    0    -1  
 $EndComp
-NoConn ~ 2150 7600
+NoConn ~ 2000 7600
+$Comp
+L Connector:Conn_01x02_Male J?
+U 1 1 6159F81D
+P 6800 1450
+F 0 "J?" V 6954 1262 50  0000 R CNN
+F 1 "Conn_01x02_Male" V 6863 1262 50  0000 R CNN
+F 2 "" H 6800 1450 50  0001 C CNN
+F 3 "~" H 6800 1450 50  0001 C CNN
+	1    6800 1450
+	0    -1   -1   0   
+$EndComp
 $EndSCHEMATC

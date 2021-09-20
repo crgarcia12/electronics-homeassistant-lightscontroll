@@ -667,7 +667,7 @@ Text GLabel 5500 900  2    50   UnSpc ~ 0
 220VAC(L)
 Text GLabel 6800 1650 3    50   Input ~ 0
 GND(5V)
-Text GLabel 6800 1250 1    50   Input ~ 0
+Text GLabel 6900 1250 1    50   Input ~ 0
 5V+
 Text GLabel 5500 1900 2    50   UnSpc ~ 0
 220VAC(N)
@@ -1317,4 +1317,15 @@ F 3 "~" H 2000 7500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 NoConn ~ 2000 7600
+$Comp
+L Connector:Conn_01x02_Male J9
+U 1 1 6159F81D
+P 6800 1450
+F 0 "J9" V 6954 1262 50  0000 R CNN
+F 1 "Conn_01x02_Male" V 6863 1262 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6800 1450 50  0001 C CNN
+F 3 "~" H 6800 1450 50  0001 C CNN
+	1    6800 1450
+	0    -1   -1   0   
+$EndComp
 $EndSCHEMATC
