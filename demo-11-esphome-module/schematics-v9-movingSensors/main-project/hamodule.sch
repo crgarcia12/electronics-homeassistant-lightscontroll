@@ -507,9 +507,7 @@ Wire Wire Line
 Wire Wire Line
 	9800 5400 9800 5450
 NoConn ~ 8900 5550
-Wire Notes Line
-	3800 550  7000 550 
-Text Label 6500 700  0    50   ~ 0
+Text Label 6750 650  0    50   ~ 0
 PowerSupply
 Text Label 10550 1050 0    50   ~ 0
 LightInputs
@@ -665,10 +663,8 @@ F 11 "https://www.arrow.com/en/products/1017505/phoenix-contact" H 4750 500 50  
 $EndComp
 Text GLabel 5500 900  2    50   UnSpc ~ 0
 220VAC(L)
-Text GLabel 6800 1650 3    50   Input ~ 0
+Text GLabel 6800 1650 2    50   Input ~ 0
 GND(5V)
-Text GLabel 6900 1250 1    50   Input ~ 0
-5V+
 Text GLabel 5500 1900 2    50   UnSpc ~ 0
 220VAC(N)
 Wire Wire Line
@@ -737,21 +733,6 @@ F 3 "http://www.ti.com/lit/ds/symlink/uln2003a.pdf" H 4450 4400 50  0001 C CNN
 $EndComp
 NoConn ~ 4100 1400
 NoConn ~ 4100 1500
-$Comp
-L RAC05-05SK_277:RAC05-05SK_277 RA05-05-SK1
-U 1 1 6146ABA1
-P 6100 1450
-F 0 "RA05-05-SK1" H 6100 1917 50  0000 C CNN
-F 1 "RAC05-05SK_277" H 6100 1826 50  0001 C CNN
-F 2 "rac05-05sk:277" H 6100 1450 50  0001 L BNN
-F 3 "" H 6100 1450 50  0001 L BNN
-F 4 "Manufacturer Recommendations" H 6100 1450 50  0001 L BNN "STANDARD"
-F 5 "21.8mm" H 6100 1450 50  0001 L BNN "MAXIMUM_PACKAGE_HEIGHT"
-F 6 "RECOM" H 6100 1450 50  0001 L BNN "MANUFACTURER"
-F 7 "N/A" H 6100 1450 50  0001 L BNN "PARTREV"
-	1    6100 1450
-	1    0    0    -1  
-$EndComp
 Text GLabel 4200 2250 0    50   Input ~ 0
 5V+
 Text GLabel 5000 2250 2    50   Input ~ 0
@@ -780,11 +761,9 @@ Wire Notes Line
 Text GLabel 4600 2650 3    50   Input ~ 0
 GND(5V)
 Wire Notes Line
-	3800 3050 7000 3050
-Wire Notes Line
 	3800 550  3800 3050
 Wire Notes Line
-	7000 550  7000 3050
+	7250 550  7250 3050
 Text GLabel 8200 5500 0    50   Input ~ 0
 EspSens1
 $Comp
@@ -1222,10 +1201,10 @@ Wire Wire Line
 Wire Wire Line
 	5800 5200 5750 5200
 $Comp
-L Device:CP C1
+L Device:CP 100uF_1
 U 1 1 6151DFD1
 P 4250 2500
-F 0 "C1" H 4368 2546 50  0001 L CNN
+F 0 "100uF_1" H 4368 2546 50  0001 L CNN
 F 1 "100uF" H 3900 2500 50  0000 L CNN
 F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 4288 2350 50  0001 C CNN
 F 3 "~" H 4250 2500 50  0001 C CNN
@@ -1244,10 +1223,10 @@ F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/da
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:CP C2
+L Device:CP 100uF_2
 U 1 1 615251C7
 P 4950 2500
-F 0 "C2" H 5068 2546 50  0001 L CNN
+F 0 "100uF_2" H 5068 2546 50  0001 L CNN
 F 1 "100uF" H 5068 2500 50  0000 L CNN
 F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 4988 2350 50  0001 C CNN
 F 3 "~" H 4950 2500 50  0001 C CNN
@@ -1320,12 +1299,33 @@ NoConn ~ 2000 7600
 $Comp
 L Connector:Conn_01x02_Male J9
 U 1 1 6159F81D
-P 6800 1450
-F 0 "J9" V 6954 1262 50  0000 R CNN
-F 1 "Conn_01x02_Male" V 6863 1262 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6800 1450 50  0001 C CNN
-F 3 "~" H 6800 1450 50  0001 C CNN
-	1    6800 1450
-	0    -1   -1   0   
+P 6900 1050
+F 0 "J9" V 6850 1000 50  0001 R CNN
+F 1 "Current Jumper" V 6850 1300 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6900 1050 50  0001 C CNN
+F 3 "~" H 6900 1050 50  0001 C CNN
+	1    6900 1050
+	0    1    1    0   
 $EndComp
+$Comp
+L RAC05-05SK_277:RAC05-05SK_277 RA05-05-SK1
+U 1 1 6146ABA1
+P 6100 1450
+F 0 "RA05-05-SK1" H 6100 1800 50  0000 C CNN
+F 1 "RAC05-05SK_277" H 6100 1826 50  0001 C CNN
+F 2 "rac05-05sk:277" H 6100 1450 50  0001 L BNN
+F 3 "" H 6100 1450 50  0001 L BNN
+F 4 "Manufacturer Recommendations" H 6100 1450 50  0001 L BNN "STANDARD"
+F 5 "21.8mm" H 6100 1450 50  0001 L BNN "MAXIMUM_PACKAGE_HEIGHT"
+F 6 "RECOM" H 6100 1450 50  0001 L BNN "MANUFACTURER"
+F 7 "N/A" H 6100 1450 50  0001 L BNN "PARTREV"
+	1    6100 1450
+	1    0    0    -1  
+$EndComp
+Text GLabel 6900 1250 2    50   Input ~ 0
+5V+
+Wire Notes Line
+	7250 550  3800 550 
+Wire Notes Line
+	3800 3050 7250 3050
 $EndSCHEMATC
