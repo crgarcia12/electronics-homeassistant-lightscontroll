@@ -1,0 +1,18 @@
+.1864053 :1 ;Push spring connector 5mm pitch 4 way Phoenix Contact SDC Series 5mm Pitch Straight Pluggable Terminal Block, Plug with Plug In Termination, PCB Mount, 4 Way
+"1864053"
+*STM J
+*NGS
+*PLB 1="1" 2="2" 3="3" 4="4"
+*MXP 10
+*DFN 1864053
+~!Manufacturer_Name (Phoenix Contact)
+~!Manufacturer_Part_Number (1864053)
+~!Mouser Part Number (651-1864053)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Phoenix-Contact/1864053?qs=k%252BwXAfPrzCnElnWx0AGzqw%3D%3D)
+~!Arrow Part Number (1864053)
+~!Link Arrow Price/Stock (https://www.arrow.com/en/products/1864053/phoenix-contact)
+~!Link Datasheet (https://www.phoenixcontact.com/online/portal/gb?uri=pxc-oc-itemdetail:pid=1864053&library=gben&tab=1)
+~!Height (16.2mm)
+~!3D_Model (1864053)
+"1864053"
+1.1!U 2.1!U 3.1!U 4.1!U 
