@@ -16,6 +16,8 @@ This circuit (ESPHome) is a side-car to the latching relay acting as an standard
 Device schematics (under development) 
 
 ![alt text](readme-media/board-schematics.png)
+![alt text](readme-media/board-pcb.png)
+![alt text](readme-media/board-pcb-3d.png)
 
 
 
