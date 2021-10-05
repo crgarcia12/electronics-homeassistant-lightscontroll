@@ -1,4 +1,11 @@
-18634973203638737
+18634976244652058
+1017505_updated_pretty
+1017505_pretty
+1017505-1
+Connector
+0
+8
+8
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -71714,13 +71721,6 @@ TO-264-5 Vertical RM 3.81mm
 0
 5
 5
-Phoenix_Conn
-1017505
-1017505-1
-Connector
-0
-8
-8
 Potentiometer_SMD
 Potentiometer_ACP_CA6-VSMD_Vertical
 Potentiometer, vertical, ACP CA6-VSMD, http://www.acptechnologies.com/wp-content/uploads/2017/06/01-ACP-CA6.pdf

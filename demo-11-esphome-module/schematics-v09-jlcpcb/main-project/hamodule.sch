@@ -208,7 +208,7 @@ U 1 1 6133A647
 P 10400 1650
 F 0 "J8" H 10800 1085 50  0000 C CNN
 F 1 "1017505" H 10800 1176 50  0000 C CNN
-F 2 "Phoenix_Conn:1017505" H 11050 1750 50  0001 L CNN
+F 2 "1017505_updated_pretty:1017505_pretty" H 11050 1750 50  0001 L CNN
 F 3 "https://www.phoenixcontact.com/online/portal/gb/?uri=pxc-oc-itemdetail:pid=1017505&library=gben&pcck=P-11-01-05&tab=1&selectedCategory=ALL" H 11050 1650 50  0001 L CNN
 F 4 "Phoenix Contact TDPT Series 5.08mm Pitch, PCB Terminal Block, PCB Mount, 4 Way" H 11050 1550 50  0001 L CNN "Description"
 F 5 "19.2" H 11050 1450 50  0001 L CNN "Height"
@@ -238,7 +238,7 @@ U 1 1 6135584E
 P 1900 1200
 F 0 "J1" H 2300 635 50  0000 C CNN
 F 1 "1017505" H 2300 726 50  0000 C CNN
-F 2 "Phoenix_Conn:1017505" H 2550 1300 50  0001 L CNN
+F 2 "1017505_updated_pretty:1017505_pretty" H 2550 1300 50  0001 L CNN
 F 3 "https://www.phoenixcontact.com/online/portal/gb/?uri=pxc-oc-itemdetail:pid=1017505&library=gben&pcck=P-11-01-05&tab=1&selectedCategory=ALL" H 2550 1200 50  0001 L CNN
 F 4 "Phoenix Contact TDPT Series 5.08mm Pitch, PCB Terminal Block, PCB Mount, 4 Way" H 2550 1100 50  0001 L CNN "Description"
 F 5 "19.2" H 2550 1000 50  0001 L CNN "Height"
@@ -648,7 +648,7 @@ U 1 1 61366C48
 P 4100 1300
 F 0 "J3" H 4500 735 50  0000 C CNN
 F 1 "1017505" H 4500 826 50  0000 C CNN
-F 2 "Phoenix_Conn:1017505" H 4750 1400 50  0001 L CNN
+F 2 "1017505_updated_pretty:1017505_pretty" H 4750 1400 50  0001 L CNN
 F 3 "https://www.phoenixcontact.com/online/portal/gb/?uri=pxc-oc-itemdetail:pid=1017505&library=gben&pcck=P-11-01-05&tab=1&selectedCategory=ALL" H 4750 1300 50  0001 L CNN
 F 4 "Phoenix Contact TDPT Series 5.08mm Pitch, PCB Terminal Block, PCB Mount, 4 Way" H 4750 1200 50  0001 L CNN "Description"
 F 5 "19.2" H 4750 1100 50  0001 L CNN "Height"
