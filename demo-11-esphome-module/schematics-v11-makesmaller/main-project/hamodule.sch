@@ -86,11 +86,11 @@ REO4
 Wire Wire Line
 	1150 2400 1100 2400
 NoConn ~ 550  2450
-Text GLabel 10400 2850 2    50   Input ~ 0
+Text GLabel 10700 2850 2    50   Input ~ 0
 Sens2
-Text GLabel 10400 5850 2    50   Input ~ 0
+Text GLabel 10700 5850 2    50   Input ~ 0
 Sens4
-Text GLabel 10400 3850 2    50   Input ~ 0
+Text GLabel 10700 3850 2    50   Input ~ 0
 Sens1
 $Comp
 L power:PWR_FLAG #FLG03
@@ -452,7 +452,7 @@ Wire Wire Line
 	4250 2250 4300 2250
 Text GLabel 9800 3750 2    50   Input ~ 0
 220VAC(N)
-Text GLabel 10400 4850 2    50   Input ~ 0
+Text GLabel 10700 4850 2    50   Input ~ 0
 Sens3
 NoConn ~ 1800 7600
 Text GLabel 6900 1250 2    50   Input ~ 0
@@ -669,9 +669,10 @@ L Device:R R12
 U 1 1 613B6B98
 P 10250 4850
 F 0 "R12" V 10043 4850 50  0001 C CNN
-F 1 "82k3w" V 10350 4850 50  0000 C CNN
+F 1 "39k1w" V 10350 4850 50  0000 C CNN
 F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.52x3.35mm_HandSolder" V 10180 4850 50  0001 C CNN
 F 3 "https://www.distrelec.ch/en/super-high-power-smd-resistor-2512-82kohm-3w-rnd-components-rnd-155sp123wf8202t2e/p/30150189?q=*&pos=1&origPos=3001&origPageSize=50&digitalDataLayerTerm=resistor&track=true" H 10250 4850 50  0001 C CNN
+F 4 "C25723" H 10250 4850 50  0001 C CNN "JLCPCB"
 	1    10250 4850
 	0    1    1    0   
 $EndComp
@@ -932,8 +933,9 @@ U 1 1 613BAE65
 P 10000 5500
 F 0 "22uF4" H 9912 5454 50  0000 R CNN
 F 1 "22uF" H 9912 5545 50  0000 R CNN
-F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 10000 5500 50  0001 C CNN
-F 3 "~" H 10000 5500 50  0001 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 10000 5500 50  0001 C CNN
+F 3 "https://jlcpcb.com/parts/componentSearch?isSearch=true&searchTxt=22%20uf" H 10000 5500 50  0001 C CNN
+F 4 "C12891" H 10000 5500 50  0001 C CNN "JLCPCB"
 	1    10000 5500
 	-1   0    0    1   
 $EndComp
@@ -970,9 +972,10 @@ L Device:R R10
 U 1 1 613BAE41
 P 10250 5850
 F 0 "R10" V 10043 5850 50  0001 C CNN
-F 1 "82k3w" V 10350 5900 50  0000 C CNN
+F 1 "39k1w" V 10350 5900 50  0000 C CNN
 F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.52x3.35mm_HandSolder" V 10180 5850 50  0001 C CNN
 F 3 "https://www.distrelec.ch/en/super-high-power-smd-resistor-2512-82kohm-3w-rnd-components-rnd-155sp123wf8202t2e/p/30150189?q=*&pos=1&origPos=3001&origPageSize=50&digitalDataLayerTerm=resistor&track=true" H 10250 5850 50  0001 C CNN
+F 4 "C25723" H 10250 5850 50  0001 C CNN "JLCPCB"
 	1    10250 5850
 	0    1    1    0   
 $EndComp
@@ -982,8 +985,9 @@ U 1 1 613B6BB6
 P 10000 4500
 F 0 "22uF3" H 9912 4454 50  0000 R CNN
 F 1 "22uF" H 9912 4545 50  0000 R CNN
-F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 10000 4500 50  0001 C CNN
-F 3 "~" H 10000 4500 50  0001 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 10000 4500 50  0001 C CNN
+F 3 "https://jlcpcb.com/parts/componentSearch?isSearch=true&searchTxt=22%20uf" H 10000 4500 50  0001 C CNN
+F 4 "C12891" H 10000 4500 50  0001 C CNN "JLCPCB"
 	1    10000 4500
 	-1   0    0    1   
 $EndComp
@@ -1021,8 +1025,9 @@ U 1 1 613B1E5B
 P 10000 3500
 F 0 "22uF2" H 9912 3454 50  0000 R CNN
 F 1 "22uF" H 9912 3545 50  0000 R CNN
-F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 10000 3500 50  0001 C CNN
-F 3 "~" H 10000 3500 50  0001 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 10000 3500 50  0001 C CNN
+F 3 "https://jlcpcb.com/parts/componentSearch?isSearch=true&searchTxt=22%20uf" H 10000 3500 50  0001 C CNN
+F 4 "C12891" H 10000 3500 50  0001 C CNN "JLCPCB"
 	1    10000 3500
 	-1   0    0    1   
 $EndComp
@@ -1059,9 +1064,10 @@ L Device:R R16
 U 1 1 613B1E37
 P 10250 2850
 F 0 "R16" V 10043 2850 50  0001 C CNN
-F 1 "82k3w" V 10350 2850 50  0000 C CNN
+F 1 "39k1w" V 10350 2850 50  0000 C CNN
 F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.52x3.35mm_HandSolder" V 10180 2850 50  0001 C CNN
 F 3 "https://www.distrelec.ch/en/super-high-power-smd-resistor-2512-82kohm-3w-rnd-components-rnd-155sp123wf8202t2e/p/30150189?q=*&pos=1&origPos=3001&origPageSize=50&digitalDataLayerTerm=resistor&track=true" H 10250 2850 50  0001 C CNN
+F 4 "C25723" V 10250 2850 50  0001 C CNN "JLCPCB"
 	1    10250 2850
 	0    1    1    0   
 $EndComp
@@ -1071,8 +1077,9 @@ U 1 1 6137D081
 P 10000 2500
 F 0 "22uF1" H 9912 2454 50  0000 R CNN
 F 1 "22uF" H 9912 2545 50  0000 R CNN
-F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 10000 2500 50  0001 C CNN
-F 3 "~" H 10000 2500 50  0001 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 10000 2500 50  0001 C CNN
+F 3 "https://jlcpcb.com/parts/componentSearch?isSearch=true&searchTxt=22%20uf" H 10000 2500 50  0001 C CNN
+F 4 "C12891" H 10000 2500 50  0001 C CNN "JLCPCB"
 	1    10000 2500
 	-1   0    0    1   
 $EndComp
@@ -1147,9 +1154,10 @@ L Device:R R14
 U 1 1 61354B0C
 P 10250 3850
 F 0 "R14" V 10043 3850 50  0001 C CNN
-F 1 "82k3w" V 10350 3850 50  0000 C CNN
+F 1 "39k1w" V 10350 3850 50  0000 C CNN
 F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.52x3.35mm_HandSolder" V 10180 3850 50  0001 C CNN
 F 3 "https://www.distrelec.ch/en/super-high-power-smd-resistor-2512-82kohm-3w-rnd-components-rnd-155sp123wf8202t2e/p/30150189?q=*&pos=1&origPos=3001&origPageSize=50&digitalDataLayerTerm=resistor&track=true" H 10250 3850 50  0001 C CNN
+F 4 "C25723" H 10250 3850 50  0001 C CNN "JLCPCB"
 	1    10250 3850
 	0    1    1    0   
 $EndComp
@@ -1405,6 +1413,54 @@ F 1 "Current Jumper" V 5050 2300 50  0000 R CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 5100 2050 50  0001 C CNN
 F 3 "~" H 5100 2050 50  0001 C CNN
 	1    5100 2050
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61799149
+P 10550 5850
+F 0 "R?" V 10343 5850 50  0001 C CNN
+F 1 "39k1w" V 10650 5900 50  0000 C CNN
+F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.52x3.35mm_HandSolder" V 10480 5850 50  0001 C CNN
+F 3 "https://www.distrelec.ch/en/super-high-power-smd-resistor-2512-82kohm-3w-rnd-components-rnd-155sp123wf8202t2e/p/30150189?q=*&pos=1&origPos=3001&origPageSize=50&digitalDataLayerTerm=resistor&track=true" H 10550 5850 50  0001 C CNN
+F 4 "C25723" H 10550 5850 50  0001 C CNN "JLCPCB"
+	1    10550 5850
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 6179BC18
+P 10550 4850
+F 0 "R?" V 10343 4850 50  0001 C CNN
+F 1 "39k1w" V 10650 4900 50  0000 C CNN
+F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.52x3.35mm_HandSolder" V 10480 4850 50  0001 C CNN
+F 3 "https://www.distrelec.ch/en/super-high-power-smd-resistor-2512-82kohm-3w-rnd-components-rnd-155sp123wf8202t2e/p/30150189?q=*&pos=1&origPos=3001&origPageSize=50&digitalDataLayerTerm=resistor&track=true" H 10550 4850 50  0001 C CNN
+F 4 "C25723" H 10550 4850 50  0001 C CNN "JLCPCB"
+	1    10550 4850
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 6179E8C9
+P 10550 3850
+F 0 "R?" V 10343 3850 50  0001 C CNN
+F 1 "39k1w" V 10650 3900 50  0000 C CNN
+F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.52x3.35mm_HandSolder" V 10480 3850 50  0001 C CNN
+F 3 "https://www.distrelec.ch/en/super-high-power-smd-resistor-2512-82kohm-3w-rnd-components-rnd-155sp123wf8202t2e/p/30150189?q=*&pos=1&origPos=3001&origPageSize=50&digitalDataLayerTerm=resistor&track=true" H 10550 3850 50  0001 C CNN
+F 4 "C25723" H 10550 3850 50  0001 C CNN "JLCPCB"
+	1    10550 3850
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 617A141C
+P 10550 2850
+F 0 "R?" V 10343 2850 50  0001 C CNN
+F 1 "39k1w" V 10650 2900 50  0000 C CNN
+F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.52x3.35mm_HandSolder" V 10480 2850 50  0001 C CNN
+F 3 "https://www.distrelec.ch/en/super-high-power-smd-resistor-2512-82kohm-3w-rnd-components-rnd-155sp123wf8202t2e/p/30150189?q=*&pos=1&origPos=3001&origPageSize=50&digitalDataLayerTerm=resistor&track=true" H 10550 2850 50  0001 C CNN
+F 4 "C25723" H 10550 2850 50  0001 C CNN "JLCPCB"
+	1    10550 2850
 	0    1    1    0   
 $EndComp
 $EndSCHEMATC
