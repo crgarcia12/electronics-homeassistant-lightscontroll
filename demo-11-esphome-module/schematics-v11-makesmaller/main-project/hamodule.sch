@@ -316,11 +316,11 @@ NoConn ~ 4100 1400
 NoConn ~ 4100 1500
 Text GLabel 4200 2250 0    50   Input ~ 0
 5V+
-Text GLabel 5000 2250 2    50   Input ~ 0
+Text GLabel 5100 2250 2    50   Input ~ 0
 3.3V+
-Text GLabel 6100 2650 2    50   Input ~ 0
+Text GLabel 6450 2750 2    50   Input ~ 0
 5V+
-Text GLabel 6100 2750 2    50   Input ~ 0
+Text GLabel 6450 2850 2    50   Input ~ 0
 GND(5V)
 Wire Notes Line
 	7700 6300 7700 950 
@@ -735,7 +735,7 @@ L Device:R R1
 U 1 1 6141EF53
 P 7100 4300
 F 0 "R1" V 6893 4300 50  0001 C CNN
-F 1 "62" V 7100 4300 50  0000 C CNN
+F 1 "62Ω" V 7100 4300 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7030 4300 50  0001 C CNN
 F 3 "https://www.distrelec.ch/en/high-power-thick-film-smd-resistor-0805-62ohm-330mw-rnd-components-rnd-155hp05w3f620jt5e/p/30111853?q=*&pos=2&origPos=1629&origPageSize=50&track=true" H 7100 4300 50  0001 C CNN
 	1    7100 4300
@@ -746,7 +746,7 @@ L Device:R R2
 U 1 1 6141EDC4
 P 7100 4400
 F 0 "R2" V 6893 4400 50  0001 C CNN
-F 1 "62" V 7100 4400 50  0000 C CNN
+F 1 "62Ω" V 7100 4400 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7030 4400 50  0001 C CNN
 F 3 "https://www.distrelec.ch/en/high-power-thick-film-smd-resistor-0805-62ohm-330mw-rnd-components-rnd-155hp05w3f620jt5e/p/30111853?q=*&pos=2&origPos=1629&origPageSize=50&track=true" H 7100 4400 50  0001 C CNN
 	1    7100 4400
@@ -757,7 +757,7 @@ L Device:R R3
 U 1 1 6141EC21
 P 7100 4500
 F 0 "R3" V 6893 4500 50  0001 C CNN
-F 1 "62" V 7100 4500 50  0000 C CNN
+F 1 "62Ω" V 7100 4500 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7030 4500 50  0001 C CNN
 F 3 "https://www.distrelec.ch/en/high-power-thick-film-smd-resistor-0805-62ohm-330mw-rnd-components-rnd-155hp05w3f620jt5e/p/30111853?q=*&pos=2&origPos=1629&origPageSize=50&track=true" H 7100 4500 50  0001 C CNN
 	1    7100 4500
@@ -768,7 +768,7 @@ L Device:R R4
 U 1 1 6141E5EE
 P 7100 4600
 F 0 "R4" V 6893 4600 50  0001 C CNN
-F 1 "62" V 7100 4600 50  0000 C CNN
+F 1 "62Ω" V 7100 4600 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7030 4600 50  0001 C CNN
 F 3 "https://www.distrelec.ch/en/high-power-thick-film-smd-resistor-0805-62ohm-330mw-rnd-components-rnd-155hp05w3f620jt5e/p/30111853?q=*&pos=2&origPos=1629&origPageSize=50&track=true" H 7100 4600 50  0001 C CNN
 	1    7100 4600
@@ -779,7 +779,7 @@ L Device:R R5
 U 1 1 614135F8
 P 8150 3000
 F 0 "R5" H 8000 3050 50  0000 L CNN
-F 1 "62" H 7950 2950 50  0000 L CNN
+F 1 "62Ω" H 7950 2950 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 8080 3000 50  0001 C CNN
 F 3 "https://www.distrelec.ch/en/high-power-thick-film-smd-resistor-0805-62ohm-330mw-rnd-components-rnd-155hp05w3f620jt5e/p/30111853?q=*&pos=2&origPos=1629&origPageSize=50&track=true" H 8150 3000 50  0001 C CNN
 	1    8150 3000
@@ -801,7 +801,7 @@ L Device:R R6
 U 1 1 614112FB
 P 8200 3950
 F 0 "R6" H 8050 4050 50  0000 L CNN
-F 1 "62" H 8000 3950 50  0000 L CNN
+F 1 "62Ω" H 8000 3950 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 8130 3950 50  0001 C CNN
 F 3 "https://www.distrelec.ch/en/high-power-thick-film-smd-resistor-0805-62ohm-330mw-rnd-components-rnd-155hp05w3f620jt5e/p/30111853?q=*&pos=2&origPos=1629&origPageSize=50&track=true" H 8200 3950 50  0001 C CNN
 	1    8200 3950
@@ -823,7 +823,7 @@ L Device:R R7
 U 1 1 61409E5F
 P 8200 4950
 F 0 "R7" H 8000 5000 50  0000 L CNN
-F 1 "62" H 7950 4900 50  0000 L CNN
+F 1 "62Ω" H 7950 4900 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 8130 4950 50  0001 C CNN
 F 3 "https://www.distrelec.ch/en/high-power-thick-film-smd-resistor-0805-62ohm-330mw-rnd-components-rnd-155hp05w3f620jt5e/p/30111853?q=*&pos=2&origPos=1629&origPageSize=50&track=true" H 8200 4950 50  0001 C CNN
 	1    8200 4950
@@ -865,12 +865,12 @@ $EndComp
 $Comp
 L Connector_Generic:Conn_01x02 J5
 U 1 1 6143ACB7
-P 5900 2750
-F 0 "J5" H 5818 2425 50  0000 C CNN
-F 1 "Conn_01x02" H 5818 2516 50  0000 C CNN
-F 2 "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical" H 5900 2750 50  0001 C CNN
-F 3 "~" H 5900 2750 50  0001 C CNN
-	1    5900 2750
+P 6250 2850
+F 0 "J5" H 6168 2525 50  0000 C CNN
+F 1 "Conn_01x02" H 6168 2616 50  0000 C CNN
+F 2 "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical" H 6250 2850 50  0001 C CNN
+F 3 "~" H 6250 2850 50  0001 C CNN
+	1    6250 2850
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -920,7 +920,7 @@ L Device:Varistor RV1
 U 1 1 613E75CC
 P 5200 1450
 F 0 "RV1" H 5079 1404 50  0000 R CNN
-F 1 "Varistor250v" H 5079 1495 50  0000 R CNN
+F 1 "400V" H 5079 1495 50  0000 R CNN
 F 2 "Varistor:RV_Disc_D12mm_W4.2mm_P7.5mm" V 5130 1450 50  0001 C CNN
 F 3 "~" H 5200 1450 50  0001 C CNN
 	1    5200 1450
@@ -931,7 +931,7 @@ L Device:CP_Small 22uF4
 U 1 1 613BAE65
 P 10000 5500
 F 0 "22uF4" H 9912 5454 50  0000 R CNN
-F 1 "CP_Small" H 9912 5545 50  0000 R CNN
+F 1 "22uF" H 9912 5545 50  0000 R CNN
 F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 10000 5500 50  0001 C CNN
 F 3 "~" H 10000 5500 50  0001 C CNN
 	1    10000 5500
@@ -981,7 +981,7 @@ L Device:CP_Small 22uF3
 U 1 1 613B6BB6
 P 10000 4500
 F 0 "22uF3" H 9912 4454 50  0000 R CNN
-F 1 "CP_Small" H 9912 4545 50  0000 R CNN
+F 1 "22uF" H 9912 4545 50  0000 R CNN
 F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 10000 4500 50  0001 C CNN
 F 3 "~" H 10000 4500 50  0001 C CNN
 	1    10000 4500
@@ -1020,7 +1020,7 @@ L Device:CP_Small 22uF2
 U 1 1 613B1E5B
 P 10000 3500
 F 0 "22uF2" H 9912 3454 50  0000 R CNN
-F 1 "CP_Small" H 9912 3545 50  0000 R CNN
+F 1 "22uF" H 9912 3545 50  0000 R CNN
 F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 10000 3500 50  0001 C CNN
 F 3 "~" H 10000 3500 50  0001 C CNN
 	1    10000 3500
@@ -1070,7 +1070,7 @@ L Device:CP_Small 22uF1
 U 1 1 6137D081
 P 10000 2500
 F 0 "22uF1" H 9912 2454 50  0000 R CNN
-F 1 "CP_Small" H 9912 2545 50  0000 R CNN
+F 1 "22uF" H 9912 2545 50  0000 R CNN
 F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 10000 2500 50  0001 C CNN
 F 3 "~" H 10000 2500 50  0001 C CNN
 	1    10000 2500
@@ -1246,7 +1246,7 @@ L Device:R R8
 U 1 1 613FE2E1
 P 8200 5950
 F 0 "R8" H 8050 6000 50  0000 L CNN
-F 1 "62" H 8000 5900 50  0000 L CNN
+F 1 "62Ω" H 8000 5900 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 8130 5950 50  0001 C CNN
 F 3 "https://www.distrelec.ch/en/high-power-thick-film-smd-resistor-0805-62ohm-330mw-rnd-components-rnd-155hp05w3f620jt5e/p/30111853?q=*&pos=2&origPos=1629&origPageSize=50&track=true" H 8200 5950 50  0001 C CNN
 	1    8200 5950
@@ -1356,7 +1356,7 @@ L Device:R R9
 U 1 1 619CF60C
 P 7050 1400
 F 0 "R9" V 6843 1400 50  0000 C CNN
-F 1 "150" V 6934 1400 50  0000 C CNN
+F 1 "150Ω" V 6934 1400 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6980 1400 50  0001 C CNN
 F 3 "https://www.distrelec.ch/en/high-power-thick-film-smd-resistor-0805-150ohm-330mw-rnd-components-rnd-155hp05w3f1500t5e/p/30111774?q=*&pos=2&origPos=1787&origPageSize=50&track=true" H 7050 1400 50  0001 C CNN
 	1    7050 1400
@@ -1381,4 +1381,30 @@ Wire Wire Line
 	6900 1500 6800 1500
 Wire Wire Line
 	6800 1500 6800 1650
+Text GLabel 6450 2350 2    50   Input ~ 0
+GND(5V)
+$Comp
+L Connector_Generic:Conn_01x02 J10
+U 1 1 61750993
+P 6250 2350
+F 0 "J10" H 6168 2025 50  0000 C CNN
+F 1 "GND 3.3V" H 6168 2116 50  0000 C CNN
+F 2 "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical" H 6250 2350 50  0001 C CNN
+F 3 "~" H 6250 2350 50  0001 C CNN
+	1    6250 2350
+	-1   0    0    1   
+$EndComp
+Text GLabel 6450 2250 2    50   Input ~ 0
+3.3V+
+$Comp
+L Connector:Conn_01x02_Male J11
+U 1 1 6176729E
+P 5100 2050
+F 0 "J11" V 5050 2000 50  0001 R CNN
+F 1 "Current Jumper" V 5050 2300 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 5100 2050 50  0001 C CNN
+F 3 "~" H 5100 2050 50  0001 C CNN
+	1    5100 2050
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
