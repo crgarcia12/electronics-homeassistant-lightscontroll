@@ -412,6 +412,7 @@ F 0 "F3" V 9753 2650 50  0000 C CNN
 F 1 "Fuse" V 10050 2650 50  0000 C CNN
 F 2 "Fuse:Fuse_1812_4532Metric_Pad1.30x3.40mm_HandSolder" V 9880 2650 50  0001 C CNN
 F 3 "https://www.distrelec.ch/en/resettable-smd-fuse-60v-400ma-bel-fuse-0zcg0020af2c/p/30127324?q=fuse+smd&pos=4&origPos=112&origPageSize=50&track=true" H 9950 2650 50  0001 C CNN
+F 4 "C207063" H 9950 2650 50  0001 C CNN "JLCPCB"
 	1    9950 2650
 	0    1    1    0   
 $EndComp
@@ -423,6 +424,7 @@ F 0 "F4" V 9753 3850 50  0000 C CNN
 F 1 "Fuse" V 10050 3850 50  0000 C CNN
 F 2 "Fuse:Fuse_1812_4532Metric_Pad1.30x3.40mm_HandSolder" V 9880 3850 50  0001 C CNN
 F 3 "https://www.distrelec.ch/en/resettable-smd-fuse-60v-400ma-bel-fuse-0zcg0020af2c/p/30127324?q=fuse+smd&pos=4&origPos=112&origPageSize=50&track=true" H 9950 3850 50  0001 C CNN
+F 4 "C207063" H 9950 3850 50  0001 C CNN "JLCPCB"
 	1    9950 3850
 	0    1    1    0   
 $EndComp
@@ -434,6 +436,7 @@ F 0 "F6" V 9753 5850 50  0001 C CNN
 F 1 "Fuse" V 10050 5850 50  0000 C CNN
 F 2 "Fuse:Fuse_1812_4532Metric_Pad1.30x3.40mm_HandSolder" V 9880 5850 50  0001 C CNN
 F 3 "https://www.distrelec.ch/en/resettable-smd-fuse-60v-400ma-bel-fuse-0zcg0020af2c/p/30127324?q=fuse+smd&pos=4&origPos=112&origPageSize=50&track=true" H 9950 5850 50  0001 C CNN
+F 4 "C207063" H 9950 5850 50  0001 C CNN "JLCPCB"
 	1    9950 5850
 	0    1    1    0   
 $EndComp
@@ -445,6 +448,7 @@ F 0 "F5" V 9753 4850 50  0000 C CNN
 F 1 "Fuse" V 10050 4850 50  0000 C CNN
 F 2 "Fuse:Fuse_1812_4532Metric_Pad1.30x3.40mm_HandSolder" V 9880 4850 50  0001 C CNN
 F 3 "https://www.distrelec.ch/en/resettable-smd-fuse-60v-400ma-bel-fuse-0zcg0020af2c/p/30127324?q=fuse+smd&pos=4&origPos=112&origPageSize=50&track=true" H 9950 4850 50  0001 C CNN
+F 4 "C207063" H 9950 4850 50  0001 C CNN "JLCPCB"
 	1    9950 4850
 	0    1    1    0   
 $EndComp
@@ -979,6 +983,7 @@ F 0 "R9" V 6800 1550 50  0001 C CNN
 F 1 "150Ω" V 7050 1400 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6980 1400 50  0001 C CNN
 F 3 "https://www.distrelec.ch/en/high-power-thick-film-smd-resistor-0805-150ohm-330mw-rnd-components-rnd-155hp05w3f1500t5e/p/30111774?q=*&pos=2&origPos=1787&origPageSize=50&track=true" H 7050 1400 50  0001 C CNN
+F 4 "C17471" H 7050 1400 50  0001 C CNN "JLCPCB"
 	1    7050 1400
 	0    1    1    0   
 $EndComp
@@ -990,6 +995,7 @@ F 0 "D9" H 7150 1850 50  0001 C CNN
 F 1 "LED" H 7200 1450 50  0001 C CNN
 F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7050 1500 50  0001 C CNN
 F 3 "https://www.distrelec.ch/en/smd-led-green-575nm-20ma-2v-140-everlight-electronics-17-21sygc-s530-e1-tr8/p/17531205?q=*&pos=9&origPos=371&origPageSize=50&track=true" H 7050 1500 50  0001 C CNN
+F 4 "C2297" H 7050 1500 50  0001 C CNN "JLCPCB"
 	1    7050 1500
 	1    0    0    -1  
 $EndComp
@@ -1298,10 +1304,10 @@ NoConn ~ 3950 4800
 NoConn ~ 3950 4700
 NoConn ~ 3950 4600
 $Comp
-L Device:CP C?
+L Device:CP C5
 U 1 1 619D049D
 P 5200 2500
-F 0 "C?" H 5318 2546 50  0001 L CNN
+F 0 "C5" H 5318 2546 50  0001 L CNN
 F 1 "0.1uF" H 5050 2500 50  0000 R CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5238 2350 50  0001 C CNN
 F 3 "https://www.distrelec.ch/en/ceramic-capacitor-100nf-50vdc-0805-rnd-components-rnd-1500805b104j500nt/p/30086635?q=smd+capacitor+&pos=5&origPos=990&origPageSize=50&track=true" H 5200 2500 50  0001 C CNN
