@@ -1,0 +1,30 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model TMPM04253
+#/13738383/647162/2.49/7/2/Power Supply
+DEF TMPM04253 PS 0 30 Y Y 1 F N
+F0 "PS" 1150 300 50 H V L CNN
+F1 "TMPM04253" 1150 200 50 H V L CNN
+F2 "TMPM04253" 1150 100 50 H I L CNN
+F3 "https://www.tracopower.com/sites/default/files/products/datasheets/tmp_tmpm_datasheet.pdf" 1150 0 50 H I L CNN
+F4 "Enclosed AC DC Converters 2 Uitgang 5V 3.3V 600mA, 150mA 85 ~ 264 VAC, 120 ~ 370 VDC Input" 1150 -100 50 H I L CNN "Description"
+F5 "17.6" 1150 -200 50 H I L CNN "Height"
+F6 "Traco Power" 1150 -300 50 H I L CNN "Manufacturer_Name"
+F7 "TMPM04253" 1150 -400 50 H I L CNN "Manufacturer_Part_Number"
+F8 "" 1150 -500 50 H I L CNN "Mouser Part Number"
+F9 "" 1150 -600 50 H I L CNN "Mouser Price/Stock"
+F10 "" 1150 -700 50 H I L CNN "Arrow Part Number"
+F11 "" 1150 -800 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X NC_1 1 1300 -100 200 L 50 50 0 0 P
+X NC_2 2 1300 0 200 L 50 50 0 0 P
+X VOUT_1 3 0 0 200 R 50 50 0 0 P
+X COM._1/2 4 0 -100 200 R 50 50 0 0 P
+X VOUT_2 5 0 -200 200 R 50 50 0 0 P
+X AC_(N) 6 0 -300 200 R 50 50 0 0 P
+X AC_(L) 7 0 -400 200 R 50 50 0 0 P
+P 5 0 1 6 200 100 1100 100 1100 -500 200 -500 200 100 N
+ENDDRAW
+ENDDEF
+#
+#End Library
