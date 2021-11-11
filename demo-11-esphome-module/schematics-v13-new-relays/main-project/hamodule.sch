@@ -359,54 +359,6 @@ F 3 "~" H 5550 4100 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:Fuse F3
-U 1 1 61742087
-P 9950 2650
-F 0 "F3" V 9753 2650 50  0000 C CNN
-F 1 "Fuse" V 10050 2650 50  0000 C CNN
-F 2 "Fuse:Fuse_1210_3225Metric_Pad1.42x2.65mm_HandSolder" V 9880 2650 50  0001 C CNN
-F 3 "https://www.distrelec.ch/en/resettable-smd-fuse-60v-400ma-bel-fuse-0zcg0020af2c/p/30127324?q=fuse+smd&pos=4&origPos=112&origPageSize=50&track=true" H 9950 2650 50  0001 C CNN
-F 4 "C207063" H 9950 2650 50  0001 C CNN "JLCPCB"
-	1    9950 2650
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:Fuse F4
-U 1 1 6174141D
-P 9950 3850
-F 0 "F4" V 9753 3850 50  0000 C CNN
-F 1 "Fuse" V 10050 3850 50  0000 C CNN
-F 2 "Fuse:Fuse_1210_3225Metric_Pad1.42x2.65mm_HandSolder" V 9880 3850 50  0001 C CNN
-F 3 "https://www.distrelec.ch/en/resettable-smd-fuse-60v-400ma-bel-fuse-0zcg0020af2c/p/30127324?q=fuse+smd&pos=4&origPos=112&origPageSize=50&track=true" H 9950 3850 50  0001 C CNN
-F 4 "C207063" H 9950 3850 50  0001 C CNN "JLCPCB"
-	1    9950 3850
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:Fuse F6
-U 1 1 6173B2BF
-P 9950 5850
-F 0 "F6" V 9753 5850 50  0001 C CNN
-F 1 "Fuse" V 10050 5850 50  0000 C CNN
-F 2 "Fuse:Fuse_1210_3225Metric_Pad1.42x2.65mm_HandSolder" V 9880 5850 50  0001 C CNN
-F 3 "https://www.distrelec.ch/en/resettable-smd-fuse-60v-400ma-bel-fuse-0zcg0020af2c/p/30127324?q=fuse+smd&pos=4&origPos=112&origPageSize=50&track=true" H 9950 5850 50  0001 C CNN
-F 4 "C207063" H 9950 5850 50  0001 C CNN "JLCPCB"
-	1    9950 5850
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:Fuse F5
-U 1 1 6173596B
-P 9950 4850
-F 0 "F5" V 9753 4850 50  0000 C CNN
-F 1 "Fuse" V 10050 4850 50  0000 C CNN
-F 2 "Fuse:Fuse_1210_3225Metric_Pad1.42x2.65mm_HandSolder" V 9880 4850 50  0001 C CNN
-F 3 "https://www.distrelec.ch/en/resettable-smd-fuse-60v-400ma-bel-fuse-0zcg0020af2c/p/30127324?q=fuse+smd&pos=4&origPos=112&origPageSize=50&track=true" H 9950 4850 50  0001 C CNN
-F 4 "C207063" H 9950 4850 50  0001 C CNN "JLCPCB"
-	1    9950 4850
-	0    1    1    0   
-$EndComp
-$Comp
 L RAC05-05SK_277:RAC05-05SK_277 RA05.SK.277
 U 1 1 6146ABA1
 P 6100 1450
@@ -437,7 +389,7 @@ L Device:R R12
 U 1 1 613B6B98
 P 10250 4850
 F 0 "R12" V 10043 4850 50  0001 C CNN
-F 1 "39kΩ1w" V 10350 4850 50  0000 C CNN
+F 1 "39kΩ3w" V 10350 4850 50  0000 C CNN
 F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.52x3.35mm_HandSolder" V 10180 4850 50  0001 C CNN
 F 3 "https://www.distrelec.ch/en/super-high-power-smd-resistor-2512-82kohm-3w-rnd-components-rnd-155sp123wf8202t2e/p/30150189?q=*&pos=1&origPos=3001&origPageSize=50&digitalDataLayerTerm=resistor&track=true" H 10250 4850 50  0001 C CNN
 F 4 "C25723" H 10250 4850 50  0001 C CNN "JLCPCB"
@@ -632,7 +584,7 @@ L Device:R R10
 U 1 1 613BAE41
 P 10250 5850
 F 0 "R10" V 10043 5850 50  0001 C CNN
-F 1 "39kΩ1w" V 10350 5900 50  0000 C CNN
+F 1 "39kΩ3w" V 10350 5900 50  0000 C CNN
 F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.52x3.35mm_HandSolder" V 10180 5850 50  0001 C CNN
 F 3 "https://www.distrelec.ch/en/super-high-power-smd-resistor-2512-82kohm-3w-rnd-components-rnd-155sp123wf8202t2e/p/30150189?q=*&pos=1&origPos=3001&origPageSize=50&digitalDataLayerTerm=resistor&track=true" H 10250 5850 50  0001 C CNN
 F 4 "C25723" H 10250 5850 50  0001 C CNN "JLCPCB"
@@ -724,7 +676,7 @@ L Device:R R16
 U 1 1 613B1E37
 P 10250 2650
 F 0 "R16" V 10043 2650 50  0001 C CNN
-F 1 "39kΩ1w" V 10350 2650 50  0000 C CNN
+F 1 "39kΩ3w" V 10350 2650 50  0000 C CNN
 F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.52x3.35mm_HandSolder" V 10180 2650 50  0001 C CNN
 F 3 "https://www.distrelec.ch/en/super-high-power-smd-resistor-2512-82kohm-3w-rnd-components-rnd-155sp123wf8202t2e/p/30150189?q=*&pos=1&origPos=3001&origPageSize=50&digitalDataLayerTerm=resistor&track=true" H 10250 2650 50  0001 C CNN
 F 4 "C25723" V 10250 2650 50  0001 C CNN "JLCPCB"
@@ -786,7 +738,7 @@ L Device:R R14
 U 1 1 61354B0C
 P 10250 3850
 F 0 "R14" V 10043 3850 50  0001 C CNN
-F 1 "39kΩ1w" V 10350 3850 50  0000 C CNN
+F 1 "39kΩ3w" V 10350 3850 50  0000 C CNN
 F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.52x3.35mm_HandSolder" V 10180 3850 50  0001 C CNN
 F 3 "https://www.distrelec.ch/en/super-high-power-smd-resistor-2512-82kohm-3w-rnd-components-rnd-155sp123wf8202t2e/p/30150189?q=*&pos=1&origPos=3001&origPageSize=50&digitalDataLayerTerm=resistor&track=true" H 10250 3850 50  0001 C CNN
 F 4 "C25723" H 10250 3850 50  0001 C CNN "JLCPCB"
@@ -944,7 +896,7 @@ L Device:R R17
 U 1 1 61799149
 P 10550 5850
 F 0 "R17" V 10343 5850 50  0001 C CNN
-F 1 "39kΩ1w" V 10650 5900 50  0000 C CNN
+F 1 "39kΩ3w" V 10650 5900 50  0000 C CNN
 F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.52x3.35mm_HandSolder" V 10480 5850 50  0001 C CNN
 F 3 "https://www.distrelec.ch/en/super-high-power-smd-resistor-2512-82kohm-3w-rnd-components-rnd-155sp123wf8202t2e/p/30150189?q=*&pos=1&origPos=3001&origPageSize=50&digitalDataLayerTerm=resistor&track=true" H 10550 5850 50  0001 C CNN
 F 4 "C25723" H 10550 5850 50  0001 C CNN "JLCPCB"
@@ -956,7 +908,7 @@ L Device:R R15
 U 1 1 6179BC18
 P 10550 4850
 F 0 "R15" V 10343 4850 50  0001 C CNN
-F 1 "39kΩ1w" V 10650 4900 50  0000 C CNN
+F 1 "39kΩ3w" V 10650 4900 50  0000 C CNN
 F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.52x3.35mm_HandSolder" V 10480 4850 50  0001 C CNN
 F 3 "https://www.distrelec.ch/en/super-high-power-smd-resistor-2512-82kohm-3w-rnd-components-rnd-155sp123wf8202t2e/p/30150189?q=*&pos=1&origPos=3001&origPageSize=50&digitalDataLayerTerm=resistor&track=true" H 10550 4850 50  0001 C CNN
 F 4 "C25723" H 10550 4850 50  0001 C CNN "JLCPCB"
@@ -968,7 +920,7 @@ L Device:R R13
 U 1 1 6179E8C9
 P 10550 3850
 F 0 "R13" V 10343 3850 50  0001 C CNN
-F 1 "39kΩ1w" V 10650 3900 50  0000 C CNN
+F 1 "39kΩ3w" V 10650 3900 50  0000 C CNN
 F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.52x3.35mm_HandSolder" V 10480 3850 50  0001 C CNN
 F 3 "https://www.distrelec.ch/en/super-high-power-smd-resistor-2512-82kohm-3w-rnd-components-rnd-155sp123wf8202t2e/p/30150189?q=*&pos=1&origPos=3001&origPageSize=50&digitalDataLayerTerm=resistor&track=true" H 10550 3850 50  0001 C CNN
 F 4 "C25723" H 10550 3850 50  0001 C CNN "JLCPCB"
@@ -980,7 +932,7 @@ L Device:R R11
 U 1 1 617A141C
 P 10550 2650
 F 0 "R11" V 10343 2650 50  0001 C CNN
-F 1 "39kΩ1w" V 10650 2700 50  0000 C CNN
+F 1 "39kΩ3w" V 10650 2700 50  0000 C CNN
 F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.52x3.35mm_HandSolder" V 10480 2650 50  0001 C CNN
 F 3 "https://www.distrelec.ch/en/super-high-power-smd-resistor-2512-82kohm-3w-rnd-components-rnd-155sp123wf8202t2e/p/30150189?q=*&pos=1&origPos=3001&origPageSize=50&digitalDataLayerTerm=resistor&track=true" H 10550 2650 50  0001 C CNN
 F 4 "C25723" H 10550 2650 50  0001 C CNN "JLCPCB"
@@ -1038,7 +990,6 @@ Text GLabel 5750 4200 2    50   Input ~ 0
 EspRel4
 Text GLabel 5500 1900 2    50   UnSpc ~ 0
 220VAC(N)
-Connection ~ 9800 2650
 $Comp
 L power:PWR_FLAG #FLG0101
 U 1 1 61958F51
@@ -1263,7 +1214,7 @@ L eec:PCN-124D3MHZ,000 K1
 U 1 1 618622EC
 P 1450 2100
 F 0 "K1" H 1850 2325 50  0000 C CNN
-F 1 "PCN-124D3MHZ,000" H 1850 2234 50  0000 C CNN
+F 1 "PCN-105D" H 1850 2234 50  0000 C CNN
 F 2 "PCN:TE_Connectivity-PCN-124D3MHZ,000-0-0-MFG" H 1450 2500 50  0001 L CNN
 F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Data+Sheet%7FPCN_series_relay_data_sheet_E%7F1217%7Fpdf%7FEnglish%7FENG_DS_PCN_series_relay_data_sheet_E_1217.pdf%7F3-1461491-6" H 1450 2600 50  0001 L CNN
 F 4 "+85°C" H 1450 2700 50  0001 L CNN "ambient temperature range high"
@@ -1302,7 +1253,7 @@ L eec:PCN-124D3MHZ,000 K2
 U 1 1 61875C62
 P 1450 3250
 F 0 "K2" H 1850 3475 50  0000 C CNN
-F 1 "PCN-124D3MHZ,000" H 1850 3384 50  0000 C CNN
+F 1 "PCN-105D" H 1850 3384 50  0000 C CNN
 F 2 "PCN:TE_Connectivity-PCN-124D3MHZ,000-0-0-MFG" H 1450 3650 50  0001 L CNN
 F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Data+Sheet%7FPCN_series_relay_data_sheet_E%7F1217%7Fpdf%7FEnglish%7FENG_DS_PCN_series_relay_data_sheet_E_1217.pdf%7F3-1461491-6" H 1450 3750 50  0001 L CNN
 F 4 "+85°C" H 1450 3850 50  0001 L CNN "ambient temperature range high"
@@ -1343,7 +1294,7 @@ L eec:PCN-124D3MHZ,000 K4
 U 1 1 6187BE46
 P 1500 4550
 F 0 "K4" H 1900 4775 50  0000 C CNN
-F 1 "PCN-124D3MHZ,000" H 1900 4684 50  0000 C CNN
+F 1 "PCN-105D" H 1900 4684 50  0000 C CNN
 F 2 "PCN:TE_Connectivity-PCN-124D3MHZ,000-0-0-MFG" H 1500 4950 50  0001 L CNN
 F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Data+Sheet%7FPCN_series_relay_data_sheet_E%7F1217%7Fpdf%7FEnglish%7FENG_DS_PCN_series_relay_data_sheet_E_1217.pdf%7F3-1461491-6" H 1500 5050 50  0001 L CNN
 F 4 "+85°C" H 1500 5150 50  0001 L CNN "ambient temperature range high"
@@ -1384,7 +1335,7 @@ L eec:PCN-124D3MHZ,000 K3
 U 1 1 6187F6F7
 P 1450 5750
 F 0 "K3" H 1850 5975 50  0000 C CNN
-F 1 "PCN-124D3MHZ,000" H 1850 5884 50  0000 C CNN
+F 1 "PCN-105D" H 1850 5884 50  0000 C CNN
 F 2 "PCN:TE_Connectivity-PCN-124D3MHZ,000-0-0-MFG" H 1450 6150 50  0001 L CNN
 F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Data+Sheet%7FPCN_series_relay_data_sheet_E%7F1217%7Fpdf%7FEnglish%7FENG_DS_PCN_series_relay_data_sheet_E_1217.pdf%7F3-1461491-6" H 1450 6250 50  0001 L CNN
 F 4 "+85°C" H 1450 6350 50  0001 L CNN "ambient temperature range high"
@@ -1445,4 +1396,16 @@ Text GLabel 6450 2250 2    50   Input ~ 0
 3.3V+
 Text GLabel 6450 2850 2    50   Input ~ 0
 GND(5V)
+Wire Wire Line
+	9800 2650 10100 2650
+Connection ~ 9800 2650
+Wire Wire Line
+	10100 3850 9800 3850
+Connection ~ 9800 3850
+Wire Wire Line
+	10100 4850 9800 4850
+Connection ~ 9800 4850
+Wire Wire Line
+	9800 5850 10100 5850
+Connection ~ 9800 5850
 $EndSCHEMATC
