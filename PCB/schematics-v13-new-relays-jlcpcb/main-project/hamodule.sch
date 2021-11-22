@@ -369,7 +369,7 @@ L Regulator_Linear:LD1117S33TR_SOT223 U2
 U 1 1 61434446
 P 4950 2500
 F 0 "U2" H 4950 2742 50  0001 C CNN
-F 1 "LD1117S33TR_SOT223" H 4950 2651 50  0000 C CNN
+F 1 "LD1117AV33_TO220" H 4950 2651 50  0000 C CNN
 F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 4950 2700 50  0001 C CNN
 F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000544.pdf" H 5050 2250 50  0001 C CNN
 	1    4950 2500

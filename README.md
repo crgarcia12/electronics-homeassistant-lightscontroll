@@ -15,12 +15,34 @@ This circuit (ESPHome) is a side-car to the latching relay acting as an standard
 
 Device schematics (under development) 
 
-![alt text](readme-media/board-schematics.png)
-![alt text](readme-media/board-pcb.png)
-![alt text](readme-media/board-pcb-3d.png)
+![v1-board-schematics](readme-media/v1-board-schematics.png)
+![v1-board-pcb](readme-media/v1-board-pcb.png)
+![v1-board-pcb-3d](readme-media/v1-board-pcb-3d.png)
 
 
 
 
+# Version 2
 
+This version was minimized by:
+* Using SPST-NO 3A smaller relays
+* Using SMD 3W 29k resistors instead of THT
+* Removed external buttons connector
+* Removed external leds connector
+* Using SMD ULN2003A instead of THT
+* HCPL3700 THT capacitors replaced by Tantalum SMD
 
+Security additions:
+* Added fuse at the neutral return from the sensors (F2)
+* Resistors are before HCPL3700, to make them work with less than 4V to N, instead of 110V to N
+
+Stability:
+* Added filter capacitor to ULN2003A
+* Added filter capacitors to LD1117AV33
+
+Others:
+* Added led indicator when powered-on
+
+![v2-board-schematics](readme-media/v2-board-schematics.png)
+![v2-board-pcb](readme-media/v2-board-pcb.png)
+![v2-board-pcb-3d](readme-media/v2-board-pcb-3d.png)
