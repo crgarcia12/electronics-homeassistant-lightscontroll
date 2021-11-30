@@ -8,4 +8,5 @@
   (lib (name pcn-105D3)(type Legacy)(uri ${KIPRJMOD}/components-footprints/pcn-105D3/eec.lib)(options "")(descr ""))
   (lib (name wago-2604-1104)(type Legacy)(uri ${KIPRJMOD}/components-footprints/wago/wago-2604-1104/2021-11-12_14-48-51.lib)(options "")(descr ""))
   (lib (name wago-2604-1102)(type Legacy)(uri ${KIPRJMOD}/components-footprints/wago/wago-2604-1102/wago-2604-1102.lib)(options "")(descr ""))
+  (lib (name LDA210-PDIP)(type Legacy)(uri ${KIPRJMOD}/components-footprints/LDA210/LDA210-PDIP.lib)(options "")(descr ""))
 )
