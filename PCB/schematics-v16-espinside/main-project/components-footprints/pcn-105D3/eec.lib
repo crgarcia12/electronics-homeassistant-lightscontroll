@@ -1,0 +1,50 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# TE Connectivity PCN-124D3MHZ,000
+#
+DEF PCN-124D3MHZ,000 K 0 40 Y Y 1 L N
+F0 "K" 0 200 50 H V L CNN 
+F1 "PCN-124D3MHZ,000" 0 300 50 H V L CNN 
+F2 "TE_Connectivity-PCN-124D3MHZ,000-0-0-*" 0 400 50 H I L CNN 
+F3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Data+Sheet%7FPCN_series_relay_data_sheet_E%7F1217%7Fpdf%7FEnglish%7FENG_DS_PCN_series_relay_data_sheet_E_1217.pdf%7F3-1461491-6" 0 500 50 H I L CNN 
+F4 "+85°C" 0 600 50 H I L CNN "ambient temperature range high"
+F5 "-40°C" 0 700 50 H I L CNN "ambient temperature range low"
+F6 "No" 0 800 50 H I L CNN "automotive"
+F7 "Relay" 0 900 50 H I L CNN "category"
+F8 "120mW" 0 1000 50 H I L CNN "coil power"
+F9 "4800Ω" 0 1100 50 H I L CNN "coil resistance"
+F10 "Non-Latching" 0 1200 50 H I L CNN "coil type"
+F11 "24V" 0 1300 50 H I L CNN "coil voltage"
+F12 "3A" 0 1400 50 H I L CNN "current rating"
+F13 "Electromechanical" 0 1500 50 H I L CNN "device class L1"
+F14 "Relays" 0 1600 50 H I L CNN "device class L2"
+F15 "Power Relays" 0 1700 50 H I L CNN "device class L3"
+F16 "RELAY GEN PURPOSE SPST 3A 24V" 0 1800 50 H I L CNN "digikey description"
+F17 "PB906-ND" 0 1900 50 H I L CNN "digikey part number"
+F18 "12.8mm" 0 2000 50 H I L CNN "height"
+F19 "Yes" 0 2100 50 H I L CNN "lead free"
+F20 "591278d9da046128" 0 2200 50 H I L CNN "library id"
+F21 "TE Connectivity" 0 2300 50 H I L CNN "manufacturer"
+F22 "655-PCN-124D3MHZ,000" 0 2400 50 H I L CNN "mouser part number"
+F23 "1" 0 2500 50 H I L CNN "number of contacts"
+F24 "PTH_RELAY_20MM0_5MM0" 0 2600 50 H I L CNN "package"
+F25 "Yes" 0 2700 50 H I L CNN "rohs"
+F26 "3A" 0 2800 50 H I L CNN "switching current"
+F27 "SPST" 0 2900 50 H I L CNN "throw configuration"
+DRAW
+X A2 A2 700 -200 150 L 40 0 1 1 P 
+X A1 A1 100 -200 150 R 40 0 1 1 P 
+X 14 14 700 0 200 L 40 0 1 1 P 
+X 11 11 100 0 200 R 40 0 1 1 P 
+A 500 -200 50 0 1799 1 1 0 N 450 -200 550 -200
+A 400 -200 50 0 1799 1 1 0 N 350 -200 450 -200
+A 300 -200 50 0 1799 1 1 0 N 250 -200 350 -200
+P 2 1 1 0 530 -100 270 -100 N
+C 470 0 20 1 1 0 N
+C 330 0 20 1 1 0 N
+P 2 1 1 0 350 10 470 60 N
+ENDDRAW
+ENDDEF
+#
+# End Library
