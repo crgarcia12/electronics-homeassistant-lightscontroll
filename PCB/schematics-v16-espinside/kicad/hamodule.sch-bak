@@ -108,7 +108,7 @@ Wire Wire Line
 	5350 1400 5550 1400
 Text GLabel 5650 1400 2    50   UnSpc ~ 0
 220VAC(L)
-Text GLabel 6950 2150 2    50   Input ~ 0
+Text GLabel 7300 2150 2    50   Input ~ 0
 GND(5V)
 Wire Wire Line
 	5350 2100 5350 2400
@@ -148,7 +148,7 @@ Wire Wire Line
 Connection ~ 5100 3400
 Wire Wire Line
 	5450 3100 5450 3000
-Text GLabel 7050 1750 2    50   Input ~ 0
+Text GLabel 7300 1750 2    50   Input ~ 0
 5V+
 Connection ~ 5350 1400
 Wire Wire Line
@@ -199,13 +199,13 @@ $EndComp
 $Comp
 L power:PWR_FLAG #FLG06
 U 1 1 619A2B0A
-P 7050 1900
-F 0 "#FLG06" H 7050 1975 50  0001 C CNN
-F 1 "PWR_FLAG" H 7050 2073 50  0001 C CNN
-F 2 "" H 7050 1900 50  0001 C CNN
-F 3 "~" H 7050 1900 50  0001 C CNN
-	1    7050 1900
-	0    -1   -1   0   
+P 7300 1750
+F 0 "#FLG06" H 7300 1825 50  0001 C CNN
+F 1 "PWR_FLAG" H 7300 1923 50  0001 C CNN
+F 2 "" H 7300 1750 50  0001 C CNN
+F 3 "~" H 7300 1750 50  0001 C CNN
+	1    7300 1750
+	1    0    0    -1  
 $EndComp
 $Comp
 L power:PWR_FLAG #FLG04
@@ -291,16 +291,16 @@ Text GLabel 9750 1450 0    50   Input ~ 0
 Sens3
 Text GLabel 9750 1350 0    50   Input ~ 0
 Sens4
-Text GLabel 4700 1950 2    50   Input ~ 0
+Text GLabel 4200 1250 2    50   Input ~ 0
 L_IN
 Wire Wire Line
-	4700 2050 4700 1950
+	4200 1350 4200 1250
 Text GLabel 5050 1400 0    50   Input ~ 0
 L_IN
-Text GLabel 4700 1850 2    50   Input ~ 0
+Text GLabel 4200 1150 2    50   Input ~ 0
 N_IN
 Wire Wire Line
-	4700 1750 4700 1850
+	4200 1050 4200 1150
 Text GLabel 5350 2400 0    50   Input ~ 0
 N_IN
 NoConn ~ 10600 6450
@@ -567,7 +567,6 @@ NoConn ~ 1450 6350
 NoConn ~ 1450 6450
 NoConn ~ 1450 6550
 NoConn ~ 1450 6650
-Connection ~ 7050 1900
 Text GLabel 4200 6900 0    50   Input ~ 0
 VDD5V
 Text GLabel 5050 5150 3    50   Input ~ 0
@@ -759,7 +758,7 @@ U 1 1 61AE6834
 P 6000 6200
 F 0 "R8" V 5900 6200 50  0000 C CNN
 F 1 "1kΩ" V 6000 6200 50  0000 C CNN
-F 2 "Resistor_SMD:R_0201_0603Metric" V 5930 6200 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 5930 6200 50  0001 C CNN
 F 3 "~" H 6000 6200 50  0001 C CNN
 F 4 "C25585" H 6000 6200 50  0001 C CNN "JLCPCB"
 	1    6000 6200
@@ -1076,12 +1075,13 @@ $EndComp
 $Comp
 L wago-2604-1102:2604-1102 J2
 U 1 1 61964B73
-P 4300 1850
-F 0 "J2" H 4142 1463 60  0000 C CNN
-F 1 "2604-1102" H 4142 1569 60  0000 C CNN
-F 2 "wago-2604-1102:big_pads_2604-1102" H 4300 1790 60  0001 C CNN
-F 3 "" H 4300 1850 60  0000 C CNN
-	1    4300 1850
+P 3800 1150
+F 0 "J2" H 3642 763 60  0000 C CNN
+F 1 "2604-1102" H 3642 869 60  0001 C CNN
+F 2 "wago-2604-1102:big_pads_2604-1102" H 3800 1090 60  0001 C CNN
+F 3 "" H 3800 1150 60  0001 C CNN
+F 4 "Input Connector" H 3700 900 50  0000 C CNN "Text"
+	1    3800 1150
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -1493,8 +1493,6 @@ F 4 "C7512" V 2650 1450 50  0001 C CNN "JLCPCB"
 	1    2650 1450
 	-1   0    0    1   
 $EndComp
-Text GLabel 2700 100  2    50   Input ~ 0
-GND(5V)
 Text GLabel 2250 2250 3    50   Input ~ 0
 GND(5V)
 Wire Wire Line
@@ -1597,4 +1595,23 @@ Wire Wire Line
 	4850 4700 4850 5000
 Text GLabel 1450 4950 0    50   Input ~ 0
 EN
+Wire Wire Line
+	6950 2150 7300 2150
+Connection ~ 6950 2150
+Wire Wire Line
+	7050 1750 7300 1750
+Connection ~ 7050 1750
+$Comp
+L ESP32-DEVKITC-32D:ESP32-DEVKITC-32D U5
+U 1 1 61CFCE16
+P -1850 6650
+F 0 "U5" H -1850 7817 50  0000 C CNN
+F 1 "ESP32-DEVKITC-32D" H -1850 7726 50  0000 C CNN
+F 2 "esp32-footprint:MODULE_ESP32-DEVKITC-32D" H -1850 6650 50  0001 L BNN
+F 3 "" H -1850 6650 50  0001 L BNN
+F 4 "4" H -1850 6650 50  0001 L BNN "PARTREV"
+F 5 "Espressif Systems" H -1850 6650 50  0001 L BNN "MANUFACTURER"
+	1    -1850 6650
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
