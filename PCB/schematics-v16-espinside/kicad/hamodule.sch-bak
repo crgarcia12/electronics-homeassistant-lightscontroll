@@ -1630,8 +1630,40 @@ F 4 "C17477" V 6000 6300 50  0001 C CNN "JLCPCB"
 $EndComp
 Text GLabel 5050 5150 3    50   Input ~ 0
 5V+
-Text GLabel 4200 6900 0    50   Input ~ 0
-5V+
-Text Notes 7050 6800 0    50   ~ 0
-TODO:\n- VBus is missing resistors: look at ESP DevKit Schm.\n- Is VIO right? (DevKit does not has it)
+Text GLabel 3750 6600 1    50   Input ~ 0
+VBUS
+Text Notes 7050 6900 0    50   ~ 0
+TODO:\n- VBus is missing resistors: look at ESP DevKit Schm.\n- Is VIO right? (DevKit does not has it)\n- Should we add jumper or 0Ohm to the BUS->5V? We need to protect the case this cirquit is wrong
+Text GLabel 5050 4850 2    50   Input ~ 0
+VBUS
+$Comp
+L Device:R R?
+U 1 1 61CA58EC
+P 3750 7050
+F 0 "R?" V 3750 7050 50  0000 C CNN
+F 1 "47.5kΩ" V 3650 7050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0201_0603Metric" V 3680 7050 50  0001 C CNN
+F 3 "~" H 3750 7050 50  0001 C CNN
+F 4 "" H 3750 7050 50  0001 C CNN "JLCPCB"
+	1    3750 7050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61CA9AAC
+P 3750 6750
+F 0 "R?" V 3750 6750 50  0000 C CNN
+F 1 "22.1kΩ" V 3650 6750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0201_0603Metric" V 3680 6750 50  0001 C CNN
+F 3 "~" H 3750 6750 50  0001 C CNN
+F 4 "" H 3750 6750 50  0001 C CNN "JLCPCB"
+	1    3750 6750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 6900 3750 6900
+Connection ~ 4200 6900
+Connection ~ 3750 6900
+Text GLabel 3750 7200 3    50   Input ~ 0
+GND(5V)
 $EndSCHEMATC
