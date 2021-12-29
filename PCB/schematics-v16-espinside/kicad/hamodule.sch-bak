@@ -429,8 +429,6 @@ NoConn ~ 5850 6100
 NoConn ~ 4650 6300
 NoConn ~ 4650 6400
 Wire Wire Line
-	4200 6900 4650 6900
-Wire Wire Line
 	4450 4300 4450 4350
 Connection ~ 4450 4350
 Wire Wire Line
@@ -464,8 +462,6 @@ Wire Wire Line
 Wire Wire Line
 	4350 5700 4350 6000
 Connection ~ 4350 6000
-Wire Wire Line
-	4250 6000 4200 6000
 Connection ~ 4250 6000
 Wire Wire Line
 	4350 6000 4350 6600
@@ -525,9 +521,9 @@ Wire Wire Line
 	1100 4900 1100 4950
 Text GLabel 1050 4950 0    50   Input ~ 0
 EN
-Text GLabel 2650 5050 2    50   Input ~ 0
+Text GLabel 3000 5100 1    50   Input ~ 0
 TXD0
-Text GLabel 2650 5250 2    50   Input ~ 0
+Text GLabel 3000 5200 3    50   Input ~ 0
 RXD0
 NoConn ~ 1450 5250
 NoConn ~ 1450 5150
@@ -554,7 +550,6 @@ Wire Wire Line
 NoConn ~ 2650 5150
 NoConn ~ 2650 5350
 NoConn ~ 2650 5450
-NoConn ~ 2650 5550
 NoConn ~ 2650 5750
 NoConn ~ 2650 5850
 NoConn ~ 2650 5950
@@ -755,18 +750,6 @@ F 4 "" V 6000 6600 50  0001 C CNN "jlcpcb"
 F 5 "C25585" H 6000 6600 50  0001 C CNN "JLCPCB"
 	1    6000 6600
 	0    1    1    0   
-$EndComp
-$Comp
-L Device:CP C17
-U 1 1 61AE6824
-P 4200 7050
-F 0 "C17" H 3850 7100 50  0000 L CNN
-F 1 "100nF" H 3850 7000 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 4238 6900 50  0001 C CNN
-F 3 "~" H 4200 7050 50  0001 C CNN
-F 4 "C167026" H 4200 7050 50  0001 C CNN "JLCPCB"
-	1    4200 7050
-	1    0    0    -1  
 $EndComp
 $Comp
 L Device:CP C18
@@ -1444,7 +1427,7 @@ Text GLabel 2650 6750 2    50   Input ~ 0
 EspRel2
 Text GLabel 2650 6650 2    50   Input ~ 0
 EspRel1
-Text GLabel 2650 5650 2    50   Input ~ 0
+Text GLabel 2650 5550 2    50   Input ~ 0
 EspRel4
 $Comp
 L Transistor_Array:ULN2003A U1
@@ -1486,14 +1469,12 @@ Text GLabel 1100 4600 1    50   Input ~ 0
 3.3V+
 Text GLabel 4250 4350 0    50   Input ~ 0
 GND(5V)
-Text GLabel 7800 4700 3    50   Input ~ 0
+Text GLabel 7800 4700 2    50   Input ~ 0
 GND(5V)
 Wire Wire Line
 	7800 4700 7700 4700
 Connection ~ 7700 4700
 Text GLabel 4250 5700 1    50   Input ~ 0
-GND(5V)
-Text GLabel 4200 7200 3    50   Input ~ 0
 GND(5V)
 Text GLabel 5350 7600 2    50   Input ~ 0
 GND(5V)
@@ -1526,7 +1507,7 @@ F 3 "https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32d
 	1    2050 6150
 	1    0    0    -1  
 $EndComp
-Text GLabel 4200 6000 0    50   Input ~ 0
+Text GLabel 4050 6000 0    50   Input ~ 0
 3.3V+
 Wire Notes Line
 	500  3850 8050 3850
@@ -1632,15 +1613,15 @@ Text GLabel 5050 5150 3    50   Input ~ 0
 5V+
 Text GLabel 3750 6600 1    50   Input ~ 0
 VBUS
-Text Notes 7050 6900 0    50   ~ 0
-TODO:\n- VBus is missing resistors: look at ESP DevKit Schm.\n- Is VIO right? (DevKit does not has it)\n- Should we add jumper or 0Ohm to the BUS->5V? We need to protect the case this cirquit is wrong
+Text Notes 7050 7000 0    50   ~ 0
+TODO:\n- ESP pinout on the internet looks different than this module. double check\n- Is VIO right? (DevKit does not has it)\n- Should we add jumper or 0Ohm to the BUS->5V? We need to protect the case this cirquit is wrong\n- Do we need resistor in suspend for the CP2102? (check devkit NoConnect resistor)
 Text GLabel 5050 4850 2    50   Input ~ 0
 VBUS
 $Comp
-L Device:R R?
+L Device:R R9
 U 1 1 61CA58EC
 P 3750 7050
-F 0 "R?" V 3750 7050 50  0000 C CNN
+F 0 "R9" V 3750 7050 50  0000 C CNN
 F 1 "47.5kΩ" V 3650 7050 50  0000 C CNN
 F 2 "Resistor_SMD:R_0201_0603Metric" V 3680 7050 50  0001 C CNN
 F 3 "~" H 3750 7050 50  0001 C CNN
@@ -1649,10 +1630,10 @@ F 4 "" H 3750 7050 50  0001 C CNN "JLCPCB"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R7
 U 1 1 61CA9AAC
 P 3750 6750
-F 0 "R?" V 3750 6750 50  0000 C CNN
+F 0 "R7" V 3750 6750 50  0000 C CNN
 F 1 "22.1kΩ" V 3650 6750 50  0000 C CNN
 F 2 "Resistor_SMD:R_0201_0603Metric" V 3680 6750 50  0001 C CNN
 F 3 "~" H 3750 6750 50  0001 C CNN
@@ -1660,10 +1641,98 @@ F 4 "" H 3750 6750 50  0001 C CNN "JLCPCB"
 	1    3750 6750
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4200 6900 3750 6900
-Connection ~ 4200 6900
 Connection ~ 3750 6900
 Text GLabel 3750 7200 3    50   Input ~ 0
 GND(5V)
+Wire Wire Line
+	4250 6000 4050 6000
+Wire Wire Line
+	3750 6900 4650 6900
+Wire Wire Line
+	3350 6050 3350 6150
+$Comp
+L Device:R R10
+U 1 1 61D1856A
+P 3200 6050
+F 0 "R10" V 2950 6200 50  0001 C CNN
+F 1 "100Ω" V 3200 6050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3130 6050 50  0001 C CNN
+F 3 "https://www.distrelec.ch/en/high-power-thick-film-smd-resistor-0805-150ohm-330mw-rnd-components-rnd-155hp05w3f1500t5e/p/30111774?q=*&pos=2&origPos=1787&origPageSize=50&track=true" H 3200 6050 50  0001 C CNN
+F 4 "C17408" H 3200 6050 50  0001 C CNN "JLCPCB"
+	1    3200 6050
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 61D18571
+P 3200 6150
+F 0 "D1" H 3300 6500 50  0001 C CNN
+F 1 "LED" H 3350 6100 50  0001 C CNN
+F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3200 6150 50  0001 C CNN
+F 3 "https://www.distrelec.ch/en/smd-led-green-575nm-20ma-2v-140-everlight-electronics-17-21sygc-s530-e1-tr8/p/17531205?q=*&pos=9&origPos=371&origPageSize=50&track=true" H 3200 6150 50  0001 C CNN
+F 4 "C2297" H 3200 6150 50  0001 C CNN "JLCPCB"
+	1    3200 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x04_Male J10
+U 1 1 61D1E3C9
+P 10200 1250
+F 0 "J10" H 10308 1531 50  0000 C CNN
+F 1 "EspSense" H 10308 1440 50  0000 C CNN
+F 2 "Connector_PinSocket_2.00mm:PinSocket_1x04_P2.00mm_Vertical" H 10200 1250 50  0001 C CNN
+F 3 "~" H 10200 1250 50  0001 C CNN
+	1    10200 1250
+	1    0    0    -1  
+$EndComp
+Text GLabel 10400 1150 2    50   Input ~ 0
+EspSens1
+Text GLabel 10400 1250 2    50   Input ~ 0
+EspSens2
+Text GLabel 10400 1350 2    50   Input ~ 0
+EspSens3
+Text GLabel 10400 1450 2    50   Input ~ 0
+EspSens4
+$Comp
+L Connector:Conn_01x02_Male J11
+U 1 1 61D4A67A
+P 3200 5200
+F 0 "J11" H 3172 5082 50  0000 R CNN
+F 1 "Conn_01x02_Male" H 3172 5173 50  0000 R CNN
+F 2 "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical" H 3200 5200 50  0001 C CNN
+F 3 "~" H 3200 5200 50  0001 C CNN
+	1    3200 5200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2650 5050 2800 5050
+Wire Wire Line
+	2800 5050 2800 5100
+Wire Wire Line
+	2800 5100 3000 5100
+Wire Wire Line
+	3000 5200 2800 5200
+Wire Wire Line
+	2800 5200 2800 5250
+Wire Wire Line
+	2800 5250 2650 5250
+$Comp
+L Sensor_Temperature:MCP9700T-ETT U5
+U 1 1 61DD9A81
+P 9700 4950
+F 0 "U5" H 9371 4996 50  0000 R CNN
+F 1 "MCP9700T-ETT" H 9371 4905 50  0000 R CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 9700 4550 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21942e.pdf" H 9550 5200 50  0001 C CNN
+	1    9700 4950
+	1    0    0    -1  
+$EndComp
+Text GLabel 2650 5650 2    50   Input ~ 0
+TempIn
+Text GLabel 10100 4950 2    50   Input ~ 0
+TempIn
+Text GLabel 9700 5250 3    50   Input ~ 0
+GND(5V)
+Text GLabel 9700 4650 1    50   Input ~ 0
+3.3V+
 $EndSCHEMATC
