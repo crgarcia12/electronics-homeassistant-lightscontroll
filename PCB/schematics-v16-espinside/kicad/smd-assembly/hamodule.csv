@@ -1,0 +1,44 @@
+Comment,Designator,Footprint,LCSC Part #
+100uF Polarized capacitor,"100uF_1,100uF_2",Capacitor_THT,
+100nF Polarized capacitor,"C1,C2,C3",Capacitor_SMD,C28233
+100nF Polarized capacitor,"C4,C16,C18",Capacitor_SMD,C167026
+4.7uF Polarized capacitor,C5,Capacitor_SMD,C19666
+100uF Polarized capacitor  small symbol,"C7,C8,C9,C10",Capacitor_SMD,C28233
+22uF Polarized capacitor  small symbol,"C11,C12,C13,C14",Capacitor_Tantalum_SMD,C110051
+22uF Polarized capacitor,C15,Capacitor_SMD,C59461
+LED Light emitting diode,D2,LED_SMD,C2297
+D_TVS Bidirectional transient-voltage-suppression diode,"D4,D5,D6",Diode_SMD,C383211
+BAT60A-7 10V 3A High Current Recitifier Schottky Diode  SOD-323,D7,Diode_SMD,C124187
+250V1A Fuse,F1,Fuse,
+250v50mA Fuse,F2,Fuse,
+MountingHole_Pad Mounting Hole with connection,"H1,H4,H5,H6",MountingHole,
+2604-1104 ,"J1,J9",wago-2604-1104,
+2604-1102 ,J2,wago-2604-1102,
+USB_B_Micro USB Micro Type B connector,J3,Connector_USB,C132563
+ESP Relays Generic connector  single row  01x04  script generate,J4,Connector_JST,
+Current Jumper Generic connector  single row  01x02  script gene,"J5,J8",Connector_PinHeader_2.54mm,
+GND 3.3V Generic connector  single row  01x02  script generated ,J6,Connector_JST,
+Conn_01x02 Generic connector  single row  01x02  script generate,J7,Connector_JST,
+EspSense Generic connector  single row  01x04  script generated ,J10,Connector_PinSocket_2.00mm,
+Conn_01x02_Male Generic connector  single row  01x02  script gen,J11,Connector_PinHeader_2.00mm,
+PCN-105D PCN-124D3MHZ 000,"K1,K2,K3,K4",PCN,
+2N2219 800mA Ic  50V Vce  NPN Transistor  TO-39,"Q1,Q2",Package_TO_SOT_SMD,
+10k Resistor,R1,Resistor_SMD,C25804
+10k Resistor,"R2,R3",Resistor_SMD,C17902
+1k Resistor,"R4,R24",Resistor_SMD,C25585
+0 Resistor,"R5,R6",Resistor_SMD,C17477
+22.1k Resistor,R7,Resistor_SMD,C25961
+1k Resistor,R8,Resistor_SMD,C4410
+47.5k Resistor,R9,Resistor_SMD,C23061
+100 Resistor,R11,Resistor_SMD,C17408
+200k1w Resistor,"R16,R17,R18,R19,R20,R21,R22,R23",Resistor_SMD,C38961
+RAC05.05SK.277 ,RA05.SK.1,rac05-05sk,
+400V Voltage dependent resistor,RV1,Varistor,
+EN Push button switch  generic  two pins,SW1,Button_Switch_SMD,C318884
+IO0 Push button switch  generic  two pins,SW2,Button_Switch_SMD,C318884
+ULN2003A High Voltage  High Current Darlington Transistor Arrays,U1,Package_SO,C7512
+ESP32-WROOM-32D RF Module  ESP32-D0WD SoC  Wi-Fi 802.11b/g/n  Bl,U2,RF_Module,
+CP2102N-A01-GQFN24 USB to UART master bridge  QFN-24,U3,Package_DFN_QFN,C80225
+LD1117AV33_TO220 800mA Fixed Low Drop Positive Voltage Regulator,U4,Package_TO_SOT_THT,
+MCP9700T-ETT Low power  analog thermistor temperature sensor  4,U5,Package_TO_SOT_SMD,C42288
+LDA210-PDIP DC Darlington Optocoupler  Vce 35V  CTR 600%  SO-4,"U6,U7",Package_DIP,
