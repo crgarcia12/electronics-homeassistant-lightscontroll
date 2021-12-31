@@ -109,7 +109,7 @@ Wire Wire Line
 Text GLabel 5650 1400 2    50   UnSpc ~ 0
 220VAC(L)
 Text GLabel 7300 2150 2    50   Input ~ 0
-GND(5V)
+GND
 Wire Wire Line
 	5350 2100 5350 2400
 Wire Wire Line
@@ -133,7 +133,7 @@ Text GLabel 5800 3000 2    50   Input ~ 0
 Text GLabel 6600 3250 2    50   Input ~ 0
 5V+
 Text GLabel 4500 3400 0    50   Input ~ 0
-GND(5V)
+GND
 Text GLabel 1400 2000 2    50   Input ~ 0
 5V+
 Connection ~ 5450 3000
@@ -278,11 +278,11 @@ F 3 "~" H 5350 2400 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Text GLabel 6600 2850 2    50   Input ~ 0
-GND(5V)
+GND
 Text GLabel 6600 2750 2    50   Input ~ 0
 3.3V+
 Text GLabel 6600 3350 2    50   Input ~ 0
-GND(5V)
+GND
 Text GLabel 9750 1650 0    50   Input ~ 0
 Sens1
 Text GLabel 9750 1550 0    50   Input ~ 0
@@ -332,11 +332,11 @@ Sens4
 Text GLabel 10750 2050 2    50   Input ~ 0
 Sens1
 Text GLabel 8850 2600 0    50   Input ~ 0
-GND(5V)
+GND
 Text GLabel 10600 2350 2    50   Input ~ 0
 220VAC(N)
 Text GLabel 8850 2050 0    50   Input ~ 0
-GND(5V)
+GND
 Text GLabel 8850 2250 0    50   Input ~ 0
 EspSens1
 Text GLabel 10750 3200 2    50   Input ~ 0
@@ -359,11 +359,11 @@ Wire Wire Line
 	9150 2250 8850 2250
 Connection ~ 9150 2250
 Text GLabel 8850 3750 0    50   Input ~ 0
-GND(5V)
+GND
 Text GLabel 10600 3500 2    50   Input ~ 0
 220VAC(N)
 Text GLabel 8850 3200 0    50   Input ~ 0
-GND(5V)
+GND
 Wire Wire Line
 	9150 3400 9500 3400
 Wire Wire Line
@@ -615,9 +615,10 @@ L Transistor_BJT:2N2219 Q2
 U 1 1 61AE691E
 P 7850 6200
 F 0 "Q2" H 8040 6246 50  0000 L CNN
-F 1 "2N2219" H 8040 6155 50  0000 L CNN
+F 1 "SS8050" H 8040 6155 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 8050 6125 50  0001 L CIN
 F 3 "http://www.onsemi.com/pub_link/Collateral/2N2219-D.PDF" H 7850 6200 50  0001 L CNN
+F 4 "C177739" H 7850 6200 50  0001 C CNN "JLCPCB"
 	1    7850 6200
 	1    0    0    -1  
 $EndComp
@@ -629,6 +630,7 @@ F 0 "R2" V 7250 5650 50  0000 C CNN
 F 1 "10kΩ" V 7350 5650 50  0000 C CNN
 F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 7280 5650 50  0001 C CNN
 F 3 "~" H 7350 5650 50  0001 C CNN
+F 4 "C17902" H 7350 5650 50  0001 C CNN "JLCPCB"
 	1    7350 5650
 	0    1    1    0   
 $EndComp
@@ -640,6 +642,7 @@ F 0 "R3" V 7250 6200 50  0000 C CNN
 F 1 "10kΩ" V 7350 6200 50  0000 C CNN
 F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 7280 6200 50  0001 C CNN
 F 3 "~" H 7350 6200 50  0001 C CNN
+F 4 "C17902" H 7350 6200 50  0001 C CNN "JLCPCB"
 	1    7350 6200
 	0    1    1    0   
 $EndComp
@@ -648,9 +651,10 @@ L Transistor_BJT:2N2219 Q1
 U 1 1 61AE6901
 P 7850 5650
 F 0 "Q1" H 8040 5696 50  0000 L CNN
-F 1 "2N2219" H 8040 5605 50  0000 L CNN
+F 1 "SS8050" H 8040 5605 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 8050 5575 50  0001 L CIN
 F 3 "http://www.onsemi.com/pub_link/Collateral/2N2219-D.PDF" H 7850 5650 50  0001 L CNN
+F 4 "C177739" H 7850 5650 50  0001 C CNN "JLCPCB"
 	1    7850 5650
 	1    0    0    -1  
 $EndComp
@@ -732,9 +736,9 @@ U 1 1 61AE6834
 P 6000 6200
 F 0 "R8" V 5900 6200 50  0001 C CNN
 F 1 "1kΩ" V 6000 6200 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 5930 6200 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 5930 6200 50  0001 C CNN
 F 3 "~" H 6000 6200 50  0001 C CNN
-F 4 "C25585" H 6000 6200 50  0001 C CNN "JLCPCB"
+F 4 "C4410" H 6000 6200 50  0001 C CNN "JLCPCB"
 	1    6000 6200
 	0    1    1    0   
 $EndComp
@@ -744,7 +748,7 @@ U 1 1 61AE682E
 P 6000 6600
 F 0 "R24" V 6100 6600 50  0000 C CNN
 F 1 "1kΩ" V 6000 6600 50  0000 C CNN
-F 2 "Resistor_SMD:R_0201_0603Metric" V 5930 6600 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 5930 6600 50  0001 C CNN
 F 3 "~" H 6000 6600 50  0001 C CNN
 F 4 "" V 6000 6600 50  0001 C CNN "jlcpcb"
 F 5 "C25585" H 6000 6600 50  0001 C CNN "JLCPCB"
@@ -794,7 +798,7 @@ F 0 "C9" H 9350 3250 50  0000 R CNN
 F 1 "100uF" H 9400 3350 50  0000 R CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 9150 3300 50  0001 C CNN
 F 3 "https://www.distrelec.ch/en/ceramic-capacitor-100nf-50vdc-0805-rnd-components-rnd-1500805b104j500nt/p/30086635?q=smd+capacitor+&pos=5&origPos=990&origPageSize=50&track=true" H 9150 3300 50  0001 C CNN
-F 4 "C28233" H 9150 3300 50  0001 C CNN "JLCPCB"
+F 4 "" H 9150 3300 50  0001 C CNN "JLCPCB"
 	1    9150 3300
 	-1   0    0    1   
 $EndComp
@@ -806,7 +810,7 @@ F 0 "C10" H 9050 3600 50  0000 R CNN
 F 1 "100uF" H 9100 3700 50  0000 R CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 9150 3650 50  0001 C CNN
 F 3 "https://www.distrelec.ch/en/ceramic-capacitor-100nf-50vdc-0805-rnd-components-rnd-1500805b104j500nt/p/30086635?q=smd+capacitor+&pos=5&origPos=990&origPageSize=50&track=true" H 9150 3650 50  0001 C CNN
-F 4 "C28233" H 9150 3650 50  0001 C CNN "JLCPCB"
+F 4 "" H 9150 3650 50  0001 C CNN "JLCPCB"
 	1    9150 3650
 	1    0    0    -1  
 $EndComp
@@ -815,10 +819,10 @@ L Device:R R22
 U 1 1 61CD2F61
 P 10600 3200
 F 0 "R22" V 10393 3200 50  0001 C CNN
-F 1 "200kΩ3w" V 10500 3250 50  0000 C CNN
+F 1 "200kΩ1w" V 10500 3250 50  0000 C CNN
 F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.52x3.35mm_HandSolder" V 10530 3200 50  0001 C CNN
 F 3 "https://www.distrelec.ch/en/super-high-power-smd-resistor-2512-82kohm-3w-rnd-components-rnd-155sp123wf8202t2e/p/30150189?q=*&pos=1&origPos=3001&origPageSize=50&digitalDataLayerTerm=resistor&track=true" H 10600 3200 50  0001 C CNN
-F 4 "C144424" H 10600 3200 50  0001 C CNN "JLCPCB"
+F 4 "C38961" H 10600 3200 50  0001 C CNN "JLCPCB"
 	1    10600 3200
 	0    1    1    0   
 $EndComp
@@ -827,10 +831,10 @@ L Device:R R23
 U 1 1 61CD2F5A
 P 10600 3750
 F 0 "R23" V 10393 3750 50  0001 C CNN
-F 1 "200kΩ3w" V 10700 3800 50  0000 C CNN
+F 1 "200kΩ1w" V 10700 3800 50  0000 C CNN
 F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.52x3.35mm_HandSolder" V 10530 3750 50  0001 C CNN
 F 3 "https://www.distrelec.ch/en/super-high-power-smd-resistor-2512-82kohm-3w-rnd-components-rnd-155sp123wf8202t2e/p/30150189?q=*&pos=1&origPos=3001&origPageSize=50&digitalDataLayerTerm=resistor&track=true" H 10600 3750 50  0001 C CNN
-F 4 "C144424" H 10600 3750 50  0001 C CNN "JLCPCB"
+F 4 "C38961" H 10600 3750 50  0001 C CNN "JLCPCB"
 	1    10600 3750
 	0    1    1    0   
 $EndComp
@@ -839,10 +843,10 @@ L Device:R R19
 U 1 1 61CD2F52
 P 10300 3750
 F 0 "R19" V 10093 3750 50  0001 C CNN
-F 1 "200kΩ3w" V 10400 3750 50  0000 C CNN
+F 1 "200kΩ1w" V 10400 3750 50  0000 C CNN
 F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.52x3.35mm_HandSolder" V 10230 3750 50  0001 C CNN
 F 3 "https://www.distrelec.ch/en/super-high-power-smd-resistor-2512-82kohm-3w-rnd-components-rnd-155sp123wf8202t2e/p/30150189?q=*&pos=1&origPos=3001&origPageSize=50&digitalDataLayerTerm=resistor&track=true" H 10300 3750 50  0001 C CNN
-F 4 "C144424" H 10300 3750 50  0001 C CNN "JLCPCB"
+F 4 "C38961" H 10300 3750 50  0001 C CNN "JLCPCB"
 	1    10300 3750
 	0    1    1    0   
 $EndComp
@@ -863,10 +867,10 @@ L Device:R R18
 U 1 1 61CD2F44
 P 10300 3200
 F 0 "R18" V 10093 3200 50  0001 C CNN
-F 1 "200kΩ3w" V 10200 3200 50  0000 C CNN
+F 1 "200kΩ1w" V 10200 3200 50  0000 C CNN
 F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.52x3.35mm_HandSolder" V 10230 3200 50  0001 C CNN
 F 3 "https://www.distrelec.ch/en/super-high-power-smd-resistor-2512-82kohm-3w-rnd-components-rnd-155sp123wf8202t2e/p/30150189?q=*&pos=1&origPos=3001&origPageSize=50&digitalDataLayerTerm=resistor&track=true" H 10300 3200 50  0001 C CNN
-F 4 "C144424" V 10300 3200 50  0001 C CNN "JLCPCB"
+F 4 "C38961" V 10300 3200 50  0001 C CNN "JLCPCB"
 	1    10300 3200
 	0    1    1    0   
 $EndComp
@@ -890,7 +894,7 @@ F 0 "C7" H 9350 2100 50  0000 R CNN
 F 1 "100uF" H 9400 2200 50  0000 R CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 9150 2150 50  0001 C CNN
 F 3 "https://www.distrelec.ch/en/ceramic-capacitor-100nf-50vdc-0805-rnd-components-rnd-1500805b104j500nt/p/30086635?q=smd+capacitor+&pos=5&origPos=990&origPageSize=50&track=true" H 9150 2150 50  0001 C CNN
-F 4 "C28233" H 9150 2150 50  0001 C CNN "JLCPCB"
+F 4 "" H 9150 2150 50  0001 C CNN "JLCPCB"
 	1    9150 2150
 	-1   0    0    1   
 $EndComp
@@ -902,7 +906,7 @@ F 0 "C8" H 9050 2450 50  0000 R CNN
 F 1 "100uF" H 9100 2550 50  0000 R CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 9150 2500 50  0001 C CNN
 F 3 "https://www.distrelec.ch/en/ceramic-capacitor-100nf-50vdc-0805-rnd-components-rnd-1500805b104j500nt/p/30086635?q=smd+capacitor+&pos=5&origPos=990&origPageSize=50&track=true" H 9150 2500 50  0001 C CNN
-F 4 "C28233" H 9150 2500 50  0001 C CNN "JLCPCB"
+F 4 "" H 9150 2500 50  0001 C CNN "JLCPCB"
 	1    9150 2500
 	1    0    0    -1  
 $EndComp
@@ -922,10 +926,10 @@ L Device:R R20
 U 1 1 617A141C
 P 10600 2050
 F 0 "R20" V 10393 2050 50  0001 C CNN
-F 1 "200kΩ3w" V 10500 2100 50  0000 C CNN
+F 1 "200kΩ1w" V 10500 2100 50  0000 C CNN
 F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.52x3.35mm_HandSolder" V 10530 2050 50  0001 C CNN
 F 3 "https://www.distrelec.ch/en/super-high-power-smd-resistor-2512-82kohm-3w-rnd-components-rnd-155sp123wf8202t2e/p/30150189?q=*&pos=1&origPos=3001&origPageSize=50&digitalDataLayerTerm=resistor&track=true" H 10600 2050 50  0001 C CNN
-F 4 "C144424" H 10600 2050 50  0001 C CNN "JLCPCB"
+F 4 "C38961" H 10600 2050 50  0001 C CNN "JLCPCB"
 	1    10600 2050
 	0    1    1    0   
 $EndComp
@@ -934,10 +938,10 @@ L Device:R R21
 U 1 1 6179E8C9
 P 10600 2600
 F 0 "R21" V 10393 2600 50  0001 C CNN
-F 1 "200kΩ3w" V 10700 2650 50  0000 C CNN
+F 1 "200kΩ1w" V 10700 2650 50  0000 C CNN
 F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.52x3.35mm_HandSolder" V 10530 2600 50  0001 C CNN
 F 3 "https://www.distrelec.ch/en/super-high-power-smd-resistor-2512-82kohm-3w-rnd-components-rnd-155sp123wf8202t2e/p/30150189?q=*&pos=1&origPos=3001&origPageSize=50&digitalDataLayerTerm=resistor&track=true" H 10600 2600 50  0001 C CNN
-F 4 "C144424" H 10600 2600 50  0001 C CNN "JLCPCB"
+F 4 "C38961" H 10600 2600 50  0001 C CNN "JLCPCB"
 	1    10600 2600
 	0    1    1    0   
 $EndComp
@@ -946,10 +950,10 @@ L Device:R R17
 U 1 1 61354B0C
 P 10300 2600
 F 0 "R17" V 10093 2600 50  0001 C CNN
-F 1 "200kΩ3w" V 10400 2600 50  0000 C CNN
+F 1 "200kΩ1w" V 10400 2600 50  0000 C CNN
 F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.52x3.35mm_HandSolder" V 10230 2600 50  0001 C CNN
 F 3 "https://www.distrelec.ch/en/super-high-power-smd-resistor-2512-82kohm-3w-rnd-components-rnd-155sp123wf8202t2e/p/30150189?q=*&pos=1&origPos=3001&origPageSize=50&digitalDataLayerTerm=resistor&track=true" H 10300 2600 50  0001 C CNN
-F 4 "C144424" H 10300 2600 50  0001 C CNN "JLCPCB"
+F 4 "C38961" H 10300 2600 50  0001 C CNN "JLCPCB"
 	1    10300 2600
 	0    1    1    0   
 $EndComp
@@ -970,10 +974,10 @@ L Device:R R16
 U 1 1 613B1E37
 P 10300 2050
 F 0 "R16" V 10093 2050 50  0001 C CNN
-F 1 "200kΩ3w" V 10200 2050 50  0000 C CNN
+F 1 "200kΩ1w" V 10200 2050 50  0000 C CNN
 F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.52x3.35mm_HandSolder" V 10230 2050 50  0001 C CNN
 F 3 "https://www.distrelec.ch/en/super-high-power-smd-resistor-2512-82kohm-3w-rnd-components-rnd-155sp123wf8202t2e/p/30150189?q=*&pos=1&origPos=3001&origPageSize=50&digitalDataLayerTerm=resistor&track=true" H 10300 2050 50  0001 C CNN
-F 4 "C144424" V 10300 2050 50  0001 C CNN "JLCPCB"
+F 4 "C38961" V 10300 2050 50  0001 C CNN "JLCPCB"
 	1    10300 2050
 	0    1    1    0   
 $EndComp
@@ -1442,7 +1446,7 @@ F 4 "C7512" V 2650 1450 50  0001 C CNN "JLCPCB"
 	-1   0    0    1   
 $EndComp
 Text GLabel 2250 2250 3    50   Input ~ 0
-GND(5V)
+GND
 Wire Wire Line
 	2250 1850 2250 1950
 Wire Wire Line
@@ -1468,31 +1472,31 @@ Text GLabel 2050 4050 0    50   Input ~ 0
 Text GLabel 1100 4600 1    50   Input ~ 0
 3.3V+
 Text GLabel 4250 4350 0    50   Input ~ 0
-GND(5V)
+GND
 Text GLabel 7800 4700 2    50   Input ~ 0
-GND(5V)
+GND
 Wire Wire Line
 	7800 4700 7700 4700
 Connection ~ 7700 4700
 Text GLabel 4250 5700 1    50   Input ~ 0
-GND(5V)
+GND
 Text GLabel 5350 7600 2    50   Input ~ 0
-GND(5V)
+GND
 Wire Wire Line
 	5250 7500 5350 7500
 Wire Wire Line
 	5350 7500 5350 7600
 Connection ~ 5350 7500
 Text GLabel 2400 4350 2    50   Input ~ 0
-GND(5V)
+GND
 Text GLabel 1100 5350 3    50   Input ~ 0
-GND(5V)
+GND
 Text GLabel 2650 750  0    50   Input ~ 0
-GND(5V)
+GND
 Wire Wire Line
 	2650 750  2650 850 
 Text GLabel 2050 7550 2    50   Input ~ 0
-GND(5V)
+GND
 NoConn ~ 2650 6550
 NoConn ~ 2650 6350
 NoConn ~ 2650 6450
@@ -1504,6 +1508,7 @@ F 0 "U2" H 1450 4900 50  0000 C CNN
 F 1 "ESP32-WROOM-32D" H 1450 4750 50  0000 C CNN
 F 2 "RF_Module:ESP32-WROOM-32" H 2050 4650 50  0001 C CNN
 F 3 "https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32d_esp32-wroom-32u_datasheet_en.pdf" H 1750 6200 50  0001 C CNN
+F 4 "C701342" H 2050 6150 50  0001 C CNN "JLCPCB"
 	1    2050 6150
 	1    0    0    -1  
 $EndComp
@@ -1533,8 +1538,6 @@ Text Label 6050 4000 0    50   ~ 0
 UsbToSerial
 Text Label 2900 4000 0    50   ~ 0
 ESP32WRoom
-Wire Notes Line
-	3450 550  3450 7750
 Wire Wire Line
 	4550 4850 5050 4850
 Wire Wire Line
@@ -1572,14 +1575,14 @@ F 4 "C19666" H 4250 6150 50  0001 C CNN "JLCPCB"
 	1    0    0    -1  
 $EndComp
 Text GLabel 4250 6300 3    50   Input ~ 0
-GND(5V)
+GND
 $Comp
 L Device:R R4
 U 1 1 61CAA7BC
 P 4500 6000
 F 0 "R4" V 4600 6000 50  0000 C CNN
 F 1 "1kΩ" V 4500 6000 50  0000 C CNN
-F 2 "Resistor_SMD:R_0201_0603Metric" V 4430 6000 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 4430 6000 50  0001 C CNN
 F 3 "~" H 4500 6000 50  0001 C CNN
 F 4 "C25585" H 4500 6000 50  0001 C CNN "JLCPCB"
 	1    4500 6000
@@ -1623,9 +1626,9 @@ U 1 1 61CA58EC
 P 3750 7050
 F 0 "R9" V 3750 7050 50  0000 C CNN
 F 1 "47.5kΩ" V 3650 7050 50  0000 C CNN
-F 2 "Resistor_SMD:R_0201_0603Metric" V 3680 7050 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 3680 7050 50  0001 C CNN
 F 3 "~" H 3750 7050 50  0001 C CNN
-F 4 "" H 3750 7050 50  0001 C CNN "JLCPCB"
+F 4 "C23061" H 3750 7050 50  0001 C CNN "JLCPCB"
 	1    3750 7050
 	1    0    0    -1  
 $EndComp
@@ -1635,45 +1638,19 @@ U 1 1 61CA9AAC
 P 3750 6750
 F 0 "R7" V 3750 6750 50  0000 C CNN
 F 1 "22.1kΩ" V 3650 6750 50  0000 C CNN
-F 2 "Resistor_SMD:R_0201_0603Metric" V 3680 6750 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 3680 6750 50  0001 C CNN
 F 3 "~" H 3750 6750 50  0001 C CNN
-F 4 "" H 3750 6750 50  0001 C CNN "JLCPCB"
+F 4 "C25961" H 3750 6750 50  0001 C CNN "JLCPCB"
 	1    3750 6750
 	1    0    0    -1  
 $EndComp
 Connection ~ 3750 6900
 Text GLabel 3750 7200 3    50   Input ~ 0
-GND(5V)
+GND
 Wire Wire Line
 	4250 6000 4050 6000
 Wire Wire Line
 	3750 6900 4650 6900
-Wire Wire Line
-	3350 6050 3350 6150
-$Comp
-L Device:R R10
-U 1 1 61D1856A
-P 3200 6050
-F 0 "R10" V 2950 6200 50  0001 C CNN
-F 1 "100Ω" V 3200 6050 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3130 6050 50  0001 C CNN
-F 3 "https://www.distrelec.ch/en/high-power-thick-film-smd-resistor-0805-150ohm-330mw-rnd-components-rnd-155hp05w3f1500t5e/p/30111774?q=*&pos=2&origPos=1787&origPageSize=50&track=true" H 3200 6050 50  0001 C CNN
-F 4 "C17408" H 3200 6050 50  0001 C CNN "JLCPCB"
-	1    3200 6050
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:LED D1
-U 1 1 61D18571
-P 3200 6150
-F 0 "D1" H 3300 6500 50  0001 C CNN
-F 1 "LED" H 3350 6100 50  0001 C CNN
-F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3200 6150 50  0001 C CNN
-F 3 "https://www.distrelec.ch/en/smd-led-green-575nm-20ma-2v-140-everlight-electronics-17-21sygc-s530-e1-tr8/p/17531205?q=*&pos=9&origPos=371&origPageSize=50&track=true" H 3200 6150 50  0001 C CNN
-F 4 "C2297" H 3200 6150 50  0001 C CNN "JLCPCB"
-	1    3200 6150
-	1    0    0    -1  
-$EndComp
 $Comp
 L Connector:Conn_01x04_Male J10
 U 1 1 61D1E3C9
@@ -1724,6 +1701,7 @@ F 0 "U5" H 9371 4996 50  0000 R CNN
 F 1 "MCP9700T-ETT" H 9371 4905 50  0000 R CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 9700 4550 50  0001 C CNN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21942e.pdf" H 9550 5200 50  0001 C CNN
+F 4 "C42288" H 9700 4950 50  0001 C CNN "JLCPCB"
 	1    9700 4950
 	1    0    0    -1  
 $EndComp
@@ -1732,7 +1710,11 @@ TempIn
 Text GLabel 10100 4950 2    50   Input ~ 0
 TempIn
 Text GLabel 9700 5250 3    50   Input ~ 0
-GND(5V)
+GND
 Text GLabel 9700 4650 1    50   Input ~ 0
 3.3V+
+Wire Notes Line
+	3450 550  3450 7750
+Text Label 8600 4250 0    50   ~ 0
+TemperatureSensor
 $EndSCHEMATC
