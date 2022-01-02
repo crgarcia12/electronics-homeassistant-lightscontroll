@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 # coding=utf8
 
+# USAGE python3 .\kicad-to-jlcpcb-pos.py .\hamodule-top-pos.csv hamodule-top-pos-jlcpcb.csv
+
+
 # Converts a KiCad Footprint Position (.pos) File into JLCPCB compatible CPL file
 # Copyright (C) 2019, Uri Shaked. Released under the MIT license.
 # 

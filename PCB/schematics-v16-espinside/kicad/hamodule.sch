@@ -449,9 +449,6 @@ Wire Wire Line
 Connection ~ 3800 7350
 Wire Wire Line
 	3800 7350 3800 7200
-Wire Wire Line
-	4550 4450 4650 4450
-Connection ~ 4550 4450
 Text GLabel 7050 4700 0    50   Input ~ 0
 EN
 Text GLabel 7050 5150 0    50   Input ~ 0
@@ -547,6 +544,203 @@ NoConn ~ 1450 6350
 NoConn ~ 1450 6450
 NoConn ~ 1450 6550
 NoConn ~ 1450 6650
+Connection ~ 4600 7200
+Text GLabel 2650 7050 2    50   Input ~ 0
+EspSens1
+Text GLabel 2650 6950 2    50   Input ~ 0
+EspSens2
+Text GLabel 2650 7250 2    50   Input ~ 0
+EspSens3
+Text GLabel 2650 7150 2    50   Input ~ 0
+EspSens4
+Text GLabel 2650 6850 2    50   Input ~ 0
+EspRel3
+Text GLabel 2650 6750 2    50   Input ~ 0
+EspRel2
+Text GLabel 2650 6650 2    50   Input ~ 0
+EspRel1
+Text GLabel 2650 5550 2    50   Input ~ 0
+EspRel4
+Text GLabel 2250 2250 3    50   Input ~ 0
+GND
+Wire Wire Line
+	2250 1850 2250 1950
+Wire Wire Line
+	8850 3750 9150 3750
+Connection ~ 9150 3750
+Wire Wire Line
+	8850 3550 9150 3550
+Connection ~ 9150 3550
+Wire Wire Line
+	9150 3400 8850 3400
+Connection ~ 9150 3400
+Wire Wire Line
+	8850 3200 9150 3200
+Connection ~ 9150 3200
+Wire Wire Line
+	9150 2600 8850 2600
+Connection ~ 9150 2600
+Wire Wire Line
+	9150 2050 8850 2050
+Connection ~ 9150 2050
+Text GLabel 2050 4050 0    50   Input ~ 0
+3.3V+
+Text GLabel 1100 4600 1    50   Input ~ 0
+3.3V+
+Text GLabel 3800 6700 0    50   Input ~ 0
+GND
+Text GLabel 7800 4700 2    50   Input ~ 0
+GND
+Wire Wire Line
+	7800 4700 7700 4700
+Connection ~ 7700 4700
+Text GLabel 5450 6650 3    50   Input ~ 0
+GND
+Text GLabel 2400 4350 2    50   Input ~ 0
+GND
+Text GLabel 1100 5350 3    50   Input ~ 0
+GND
+Text GLabel 2650 750  0    50   Input ~ 0
+GND
+Wire Wire Line
+	2650 750  2650 850 
+Text GLabel 2050 7550 2    50   Input ~ 0
+GND
+NoConn ~ 2650 6550
+NoConn ~ 2650 6350
+NoConn ~ 2650 6450
+Text GLabel 4000 4450 0    50   Input ~ 0
+3.3V+
+Wire Notes Line
+	500  3850 8050 3850
+Wire Notes Line
+	500  550  500  7750
+Wire Notes Line
+	500  7750 6550 7750
+Wire Notes Line
+	6550 7750 6550 3850
+Wire Notes Line
+	8500 4100 8500 6500
+Wire Notes Line
+	8500 6500 6550 6500
+Wire Notes Line
+	11150 550  11150 4100
+Wire Notes Line
+	8050 4100 8050 550 
+Wire Notes Line
+	500  550  11150 550 
+Text Label 7250 4000 0    50   ~ 0
+ProgramingCircuit
+Text Label 6050 4000 0    50   ~ 0
+UsbToSerial
+Text Label 2900 4000 0    50   ~ 0
+ESP32WRoom
+Wire Wire Line
+	4100 7200 4600 7200
+Wire Wire Line
+	4400 7050 4400 7350
+Text GLabel 1450 4950 0    50   Input ~ 0
+EN
+Wire Wire Line
+	6950 2150 7300 2150
+Connection ~ 6950 2150
+Wire Wire Line
+	7050 1750 7300 1750
+Connection ~ 7050 1750
+Text GLabel 4250 4100 1    50   Input ~ 0
+GND
+Text GLabel 4600 7500 3    50   Input ~ 0
+5V+
+Text GLabel 3900 4900 0    50   Input ~ 0
+VBUS
+Text Notes 7050 7000 0    50   ~ 0
+TODO:\n- ESP pinout on the internet looks different than this module. double check\n- Is VIO right? (DevKit does not has it)\n- Should we add jumper or 0Ohm to the BUS->5V? We need to protect the case this cirquit is wrong\n- Do we need resistor in suspend for the CP2102? (check devkit NoConnect resistor)
+Text GLabel 4600 7200 2    50   Input ~ 0
+VBUS
+Text GLabel 4500 4900 2    50   Input ~ 0
+GND
+Wire Wire Line
+	4350 4450 4150 4450
+Text GLabel 10400 1150 2    50   Input ~ 0
+EspSens1
+Text GLabel 10400 1250 2    50   Input ~ 0
+EspSens2
+Text GLabel 10400 1350 2    50   Input ~ 0
+EspSens3
+Text GLabel 10400 1450 2    50   Input ~ 0
+EspSens4
+Wire Wire Line
+	2650 5050 2800 5050
+Wire Wire Line
+	2800 5050 2800 5100
+Wire Wire Line
+	2800 5100 3000 5100
+Wire Wire Line
+	3000 5200 2800 5200
+Wire Wire Line
+	2800 5200 2800 5250
+Wire Wire Line
+	2800 5250 2650 5250
+Text GLabel 2650 5650 2    50   Input ~ 0
+TempIn
+Text GLabel 10100 4950 2    50   Input ~ 0
+TempIn
+Text GLabel 9700 5250 3    50   Input ~ 0
+GND
+Text GLabel 9700 4650 1    50   Input ~ 0
+3.3V+
+Wire Notes Line
+	3450 550  3450 7750
+Text Label 8600 4250 0    50   ~ 0
+TemperatureSensor
+Text GLabel 6250 4550 2    50   Input ~ 0
+RXD0
+Text GLabel 6250 4450 2    50   Input ~ 0
+TXD0
+Text GLabel 6250 4350 2    50   Input ~ 0
+RTS
+Wire Wire Line
+	4150 4150 4250 4150
+Wire Wire Line
+	4250 4100 4250 4150
+Connection ~ 4250 4150
+Wire Wire Line
+	4250 4150 4350 4150
+Wire Wire Line
+	4000 4450 4150 4450
+Connection ~ 4150 4450
+Wire Wire Line
+	4650 4450 4650 4050
+Wire Wire Line
+	4650 4050 5350 4050
+Connection ~ 5350 4050
+Wire Wire Line
+	5350 4050 5450 4050
+NoConn ~ 5950 5250
+NoConn ~ 5950 5150
+NoConn ~ 5950 5450
+NoConn ~ 5950 5550
+NoConn ~ 5950 4950
+NoConn ~ 5950 4850
+NoConn ~ 5950 4650
+NoConn ~ 5950 4250
+Wire Wire Line
+	3950 6700 4000 6700
+Wire Wire Line
+	3800 6700 4000 6700
+Wire Wire Line
+	4950 4650 4200 4650
+Wire Wire Line
+	4200 4650 4200 4900
+Connection ~ 4200 4900
+Wire Wire Line
+	4650 4450 4350 4450
+Connection ~ 4650 4450
+Connection ~ 4350 4450
+Text GLabel 9350 6450 2    50   Input ~ 0
+HeatPad
+Wire Wire Line
+	9350 6450 9050 6450
 $Comp
 L Device:CP C16
 U 1 1 61AE6984
@@ -555,7 +749,7 @@ F 0 "C16" V 2100 4300 50  0000 L CNN
 F 1 "100nF" V 2000 4200 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 2238 4350 50  0001 C CNN
 F 3 "~" H 2200 4500 50  0001 C CNN
-F 4 "C167026" H 2200 4500 50  0001 C CNN "JLCPCB"
+F 4 "C14663" H 2200 4500 50  0001 C CNN "JLCPCB"
 	1    2200 4500
 	0    -1   -1   0   
 $EndComp
@@ -579,7 +773,7 @@ F 0 "C4" H 750 5250 50  0000 L CNN
 F 1 "100nF" H 750 5150 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 1138 5050 50  0001 C CNN
 F 3 "~" H 1100 5200 50  0001 C CNN
-F 4 "C167026" H 1100 5200 50  0001 C CNN "JLCPCB"
+F 4 "C14663" H 1100 5200 50  0001 C CNN "JLCPCB"
 	1    1100 5200
 	1    0    0    -1  
 $EndComp
@@ -613,9 +807,9 @@ U 1 1 61AE690F
 P 7350 5650
 F 0 "R2" V 7250 5650 50  0000 C CNN
 F 1 "10kΩ" V 7350 5650 50  0000 C CNN
-F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 7280 5650 50  0001 C CNN
-F 3 "~" H 7350 5650 50  0001 C CNN
-F 4 "C17902" H 7350 5650 50  0001 C CNN "JLCPCB"
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 7280 5650 50  0001 C CNN
+F 3 "0603WAF1002T5E" H 7350 5650 50  0001 C CNN
+F 4 "C25804" H 7350 5650 50  0001 C CNN "JLCPCB"
 	1    7350 5650
 	0    1    1    0   
 $EndComp
@@ -625,9 +819,9 @@ U 1 1 61AE6909
 P 7350 6200
 F 0 "R3" V 7250 6200 50  0000 C CNN
 F 1 "10kΩ" V 7350 6200 50  0000 C CNN
-F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 7280 6200 50  0001 C CNN
-F 3 "~" H 7350 6200 50  0001 C CNN
-F 4 "C17902" H 7350 6200 50  0001 C CNN "JLCPCB"
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 7280 6200 50  0001 C CNN
+F 3 "0603WAF1002T5E" H 7350 6200 50  0001 C CNN
+F 4 "C25804" H 7350 6200 50  0001 C CNN "JLCPCB"
 	1    7350 6200
 	0    1    1    0   
 $EndComp
@@ -731,13 +925,13 @@ $EndComp
 $Comp
 L Device:CP C18
 U 1 1 61AE6815
-P 4550 4300
-F 0 "C18" H 4500 4600 50  0000 L CNN
-F 1 "100nF" H 4450 4500 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 4588 4150 50  0001 C CNN
-F 3 "~" H 4550 4300 50  0001 C CNN
-F 4 "C167026" H 4550 4300 50  0001 C CNN "JLCPCB"
-	1    4550 4300
+P 4350 4300
+F 0 "C18" H 4300 4600 50  0000 L CNN
+F 1 "100nF" H 4250 4500 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 4388 4150 50  0001 C CNN
+F 3 "~" H 4350 4300 50  0001 C CNN
+F 4 "C14663" H 4350 4300 50  0001 C CNN "JLCPCB"
+	1    4350 4300
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -768,10 +962,10 @@ L Device:CP_Small C9
 U 1 1 61CD2F7F
 P 9150 3300
 F 0 "C9" H 9350 3250 50  0000 R CNN
-F 1 "100uF" H 9400 3350 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 9150 3300 50  0001 C CNN
+F 1 "100nF" H 9400 3350 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 9150 3300 50  0001 C CNN
 F 3 "https://www.distrelec.ch/en/ceramic-capacitor-100nf-50vdc-0805-rnd-components-rnd-1500805b104j500nt/p/30086635?q=smd+capacitor+&pos=5&origPos=990&origPageSize=50&track=true" H 9150 3300 50  0001 C CNN
-F 4 "" H 9150 3300 50  0001 C CNN "JLCPCB"
+F 4 "C14663" H 9150 3300 50  0001 C CNN "JLCPCB"
 	1    9150 3300
 	-1   0    0    1   
 $EndComp
@@ -780,10 +974,10 @@ L Device:CP_Small C10
 U 1 1 61CD2F74
 P 9150 3650
 F 0 "C10" H 9050 3600 50  0000 R CNN
-F 1 "100uF" H 9100 3700 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 9150 3650 50  0001 C CNN
+F 1 "100nF" H 9100 3700 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 9150 3650 50  0001 C CNN
 F 3 "https://www.distrelec.ch/en/ceramic-capacitor-100nf-50vdc-0805-rnd-components-rnd-1500805b104j500nt/p/30086635?q=smd+capacitor+&pos=5&origPos=990&origPageSize=50&track=true" H 9150 3650 50  0001 C CNN
-F 4 "" H 9150 3650 50  0001 C CNN "JLCPCB"
+F 4 "C14663" H 9150 3650 50  0001 C CNN "JLCPCB"
 	1    9150 3650
 	1    0    0    -1  
 $EndComp
@@ -864,10 +1058,10 @@ L Device:CP_Small C7
 U 1 1 61C06D87
 P 9150 2150
 F 0 "C7" H 9350 2100 50  0000 R CNN
-F 1 "100uF" H 9400 2200 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 9150 2150 50  0001 C CNN
+F 1 "100nF" H 9400 2200 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 9150 2150 50  0001 C CNN
 F 3 "https://www.distrelec.ch/en/ceramic-capacitor-100nf-50vdc-0805-rnd-components-rnd-1500805b104j500nt/p/30086635?q=smd+capacitor+&pos=5&origPos=990&origPageSize=50&track=true" H 9150 2150 50  0001 C CNN
-F 4 "" H 9150 2150 50  0001 C CNN "JLCPCB"
+F 4 "C14663" H 9150 2150 50  0001 C CNN "JLCPCB"
 	1    9150 2150
 	-1   0    0    1   
 $EndComp
@@ -876,10 +1070,10 @@ L Device:CP_Small C8
 U 1 1 61C38FE2
 P 9150 2500
 F 0 "C8" H 9050 2450 50  0000 R CNN
-F 1 "100uF" H 9100 2550 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 9150 2500 50  0001 C CNN
+F 1 "100nF" H 9100 2550 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 9150 2500 50  0001 C CNN
 F 3 "https://www.distrelec.ch/en/ceramic-capacitor-100nf-50vdc-0805-rnd-components-rnd-1500805b104j500nt/p/30086635?q=smd+capacitor+&pos=5&origPos=990&origPageSize=50&track=true" H 9150 2500 50  0001 C CNN
-F 4 "" H 9150 2500 50  0001 C CNN "JLCPCB"
+F 4 "C14663" H 9150 2500 50  0001 C CNN "JLCPCB"
 	1    9150 2500
 	1    0    0    -1  
 $EndComp
@@ -1202,9 +1396,9 @@ U 1 1 6181C340
 P 2250 2100
 F 0 "C1" H 2368 2146 50  0001 L CNN
 F 1 "100nF" H 2550 2100 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2288 1950 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 2288 1950 50  0001 C CNN
 F 3 "https://www.distrelec.ch/en/ceramic-capacitor-100nf-50vdc-0805-rnd-components-rnd-1500805b104j500nt/p/30086635?q=smd+capacitor+&pos=5&origPos=990&origPageSize=50&track=true" H 2250 2100 50  0001 C CNN
-F 4 "C28233" H 2250 2100 50  0001 C CNN "JLCPCB"
+F 4 "C14663" H 2250 2100 50  0001 C CNN "JLCPCB"
 	1    2250 2100
 	1    0    0    -1  
 $EndComp
@@ -1214,9 +1408,9 @@ U 1 1 61809E87
 P 4750 3250
 F 0 "C2" H 4868 3296 50  0001 L CNN
 F 1 "100nF" H 5050 3250 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4788 3100 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 4788 3100 50  0001 C CNN
 F 3 "https://www.distrelec.ch/en/ceramic-capacitor-100nf-50vdc-0805-rnd-components-rnd-1500805b104j500nt/p/30086635?q=smd+capacitor+&pos=5&origPos=990&origPageSize=50&track=true" H 4750 3250 50  0001 C CNN
-F 4 "C28233" H 4750 3250 50  0001 C CNN "JLCPCB"
+F 4 "C14663" H 4750 3250 50  0001 C CNN "JLCPCB"
 	1    4750 3250
 	1    0    0    -1  
 $EndComp
@@ -1226,9 +1420,9 @@ U 1 1 619D049D
 P 5700 3250
 F 0 "C3" H 5818 3296 50  0001 L CNN
 F 1 "100nF" H 6000 3250 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5738 3100 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 5738 3100 50  0001 C CNN
 F 3 "https://www.distrelec.ch/en/ceramic-capacitor-100nf-50vdc-0805-rnd-components-rnd-1500805b104j500nt/p/30086635?q=smd+capacitor+&pos=5&origPos=990&origPageSize=50&track=true" H 5700 3250 50  0001 C CNN
-F 4 "C28233" H 5700 3250 50  0001 C CNN "JLCPCB"
+F 4 "C14663" H 5700 3250 50  0001 C CNN "JLCPCB"
 	1    5700 3250
 	1    0    0    -1  
 $EndComp
@@ -1368,23 +1562,6 @@ F 3 "~" H 2600 3150 50  0001 C CNN
 	1    2600 3150
 	-1   0    0    1   
 $EndComp
-Connection ~ 4600 7200
-Text GLabel 2650 7050 2    50   Input ~ 0
-EspSens1
-Text GLabel 2650 6950 2    50   Input ~ 0
-EspSens2
-Text GLabel 2650 7250 2    50   Input ~ 0
-EspSens3
-Text GLabel 2650 7150 2    50   Input ~ 0
-EspSens4
-Text GLabel 2650 6850 2    50   Input ~ 0
-EspRel3
-Text GLabel 2650 6750 2    50   Input ~ 0
-EspRel2
-Text GLabel 2650 6650 2    50   Input ~ 0
-EspRel1
-Text GLabel 2650 5550 2    50   Input ~ 0
-EspRel4
 $Comp
 L Transistor_Array:ULN2003A U1
 U 1 1 61374AC1
@@ -1397,54 +1574,6 @@ F 4 "C7512" V 2650 1450 50  0001 C CNN "JLCPCB"
 	1    2650 1450
 	-1   0    0    1   
 $EndComp
-Text GLabel 2250 2250 3    50   Input ~ 0
-GND
-Wire Wire Line
-	2250 1850 2250 1950
-Wire Wire Line
-	8850 3750 9150 3750
-Connection ~ 9150 3750
-Wire Wire Line
-	8850 3550 9150 3550
-Connection ~ 9150 3550
-Wire Wire Line
-	9150 3400 8850 3400
-Connection ~ 9150 3400
-Wire Wire Line
-	8850 3200 9150 3200
-Connection ~ 9150 3200
-Wire Wire Line
-	9150 2600 8850 2600
-Connection ~ 9150 2600
-Wire Wire Line
-	9150 2050 8850 2050
-Connection ~ 9150 2050
-Text GLabel 2050 4050 0    50   Input ~ 0
-3.3V+
-Text GLabel 1100 4600 1    50   Input ~ 0
-3.3V+
-Text GLabel 3800 6700 0    50   Input ~ 0
-GND
-Text GLabel 7800 4700 2    50   Input ~ 0
-GND
-Wire Wire Line
-	7800 4700 7700 4700
-Connection ~ 7700 4700
-Text GLabel 5450 6650 3    50   Input ~ 0
-GND
-Text GLabel 2400 4350 2    50   Input ~ 0
-GND
-Text GLabel 1100 5350 3    50   Input ~ 0
-GND
-Text GLabel 2650 750  0    50   Input ~ 0
-GND
-Wire Wire Line
-	2650 750  2650 850 
-Text GLabel 2050 7550 2    50   Input ~ 0
-GND
-NoConn ~ 2650 6550
-NoConn ~ 2650 6350
-NoConn ~ 2650 6450
 $Comp
 L RF_Module:ESP32-WROOM-32D U2
 U 1 1 61AE698E
@@ -1457,44 +1586,6 @@ F 4 "C701342" H 2050 6150 50  0001 C CNN "JLCPCB"
 	1    2050 6150
 	1    0    0    -1  
 $EndComp
-Text GLabel 4200 4450 0    50   Input ~ 0
-3.3V+
-Wire Notes Line
-	500  3850 8050 3850
-Wire Notes Line
-	500  550  500  7750
-Wire Notes Line
-	500  7750 6550 7750
-Wire Notes Line
-	6550 7750 6550 3850
-Wire Notes Line
-	8500 4100 8500 6500
-Wire Notes Line
-	8500 6500 6550 6500
-Wire Notes Line
-	11150 550  11150 4100
-Wire Notes Line
-	8050 4100 8050 550 
-Wire Notes Line
-	500  550  11150 550 
-Text Label 7250 4000 0    50   ~ 0
-ProgramingCircuit
-Text Label 6050 4000 0    50   ~ 0
-UsbToSerial
-Text Label 2900 4000 0    50   ~ 0
-ESP32WRoom
-Wire Wire Line
-	4100 7200 4600 7200
-Wire Wire Line
-	4400 7050 4400 7350
-Text GLabel 1450 4950 0    50   Input ~ 0
-EN
-Wire Wire Line
-	6950 2150 7300 2150
-Connection ~ 6950 2150
-Wire Wire Line
-	7050 1750 7300 1750
-Connection ~ 7050 1750
 $Comp
 L Connector:USB_B_Micro J3
 U 1 1 61D7514B
@@ -1510,17 +1601,15 @@ $EndComp
 $Comp
 L Device:CP C5
 U 1 1 61CA3B02
-P 4350 4300
-F 0 "C5" H 4350 4600 50  0000 L CNN
-F 1 "4.7uF" H 4300 4500 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 4388 4150 50  0001 C CNN
-F 3 "~" H 4350 4300 50  0001 C CNN
-F 4 "C19666" H 4350 4300 50  0001 C CNN "JLCPCB"
-	1    4350 4300
+P 4150 4300
+F 0 "C5" H 4150 4600 50  0000 L CNN
+F 1 "4.7uF" H 4100 4500 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 4188 4150 50  0001 C CNN
+F 3 "~" H 4150 4300 50  0001 C CNN
+F 4 "C19666" H 4150 4300 50  0001 C CNN "JLCPCB"
+	1    4150 4300
 	-1   0    0    1   
 $EndComp
-Text GLabel 4450 4100 1    50   Input ~ 0
-GND
 $Comp
 L Device:R R4
 U 1 1 61CAA7BC
@@ -1533,14 +1622,6 @@ F 4 "C25585" H 4800 4450 50  0001 C CNN "JLCPCB"
 	1    4800 4450
 	0    1    1    0   
 $EndComp
-Text GLabel 4600 7500 3    50   Input ~ 0
-5V+
-Text GLabel 3900 4900 0    50   Input ~ 0
-VBUS
-Text Notes 7050 7000 0    50   ~ 0
-TODO:\n- ESP pinout on the internet looks different than this module. double check\n- Is VIO right? (DevKit does not has it)\n- Should we add jumper or 0Ohm to the BUS->5V? We need to protect the case this cirquit is wrong\n- Do we need resistor in suspend for the CP2102? (check devkit NoConnect resistor)
-Text GLabel 4600 7200 2    50   Input ~ 0
-VBUS
 $Comp
 L Device:R R9
 U 1 1 61CA58EC
@@ -1565,10 +1646,6 @@ F 4 "C25961" H 4050 4900 50  0001 C CNN "JLCPCB"
 	1    4050 4900
 	0    -1   -1   0   
 $EndComp
-Text GLabel 4500 4900 2    50   Input ~ 0
-GND
-Wire Wire Line
-	4550 4450 4350 4450
 $Comp
 L Connector:Conn_01x04_Male J10
 U 1 1 61D1E3C9
@@ -1580,14 +1657,6 @@ F 3 "~" H 10200 1250 50  0001 C CNN
 	1    10200 1250
 	1    0    0    -1  
 $EndComp
-Text GLabel 10400 1150 2    50   Input ~ 0
-EspSens1
-Text GLabel 10400 1250 2    50   Input ~ 0
-EspSens2
-Text GLabel 10400 1350 2    50   Input ~ 0
-EspSens3
-Text GLabel 10400 1450 2    50   Input ~ 0
-EspSens4
 $Comp
 L Connector:Conn_01x02_Male J11
 U 1 1 61D4A67A
@@ -1599,18 +1668,6 @@ F 3 "~" H 3200 5200 50  0001 C CNN
 	1    3200 5200
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	2650 5050 2800 5050
-Wire Wire Line
-	2800 5050 2800 5100
-Wire Wire Line
-	2800 5100 3000 5100
-Wire Wire Line
-	3000 5200 2800 5200
-Wire Wire Line
-	2800 5200 2800 5250
-Wire Wire Line
-	2800 5250 2650 5250
 $Comp
 L Sensor_Temperature:MCP9700T-ETT U5
 U 1 1 61DD9A81
@@ -1623,18 +1680,6 @@ F 4 "C42288" H 9700 4950 50  0001 C CNN "JLCPCB"
 	1    9700 4950
 	1    0    0    -1  
 $EndComp
-Text GLabel 2650 5650 2    50   Input ~ 0
-TempIn
-Text GLabel 10100 4950 2    50   Input ~ 0
-TempIn
-Text GLabel 9700 5250 3    50   Input ~ 0
-GND
-Text GLabel 9700 4650 1    50   Input ~ 0
-3.3V+
-Wire Notes Line
-	3450 550  3450 7750
-Text Label 8600 4250 0    50   ~ 0
-TemperatureSensor
 $Comp
 L Interface_USB:CP2102N-A01-GQFN28 U8
 U 1 1 61DAF948
@@ -1643,26 +1688,9 @@ F 0 "U8" V 5000 5150 50  0000 C CNN
 F 1 "CP2102N-A01-GQFN28" V 5000 4600 50  0000 C CNN
 F 2 "Package_DFN_QFN:QFN-28-1EP_5x5mm_P0.5mm_EP3.35x3.35mm" H 5900 4150 50  0001 L CNN
 F 3 "https://www.silabs.com/documents/public/data-sheets/cp2102n-datasheet.pdf" H 5500 4600 50  0001 C CNN
+F 4 "C105167" H 5450 5350 50  0001 C CNN "JLCPCB"
 	1    5450 5350
 	1    0    0    -1  
-$EndComp
-Text GLabel 6250 4550 2    50   Input ~ 0
-RXD0
-Text GLabel 6250 4450 2    50   Input ~ 0
-TXD0
-Text GLabel 6250 4350 2    50   Input ~ 0
-RTS
-$Comp
-L Device:R R5
-U 1 1 61DB1BB6
-P 6100 4350
-F 0 "R5" V 6000 4350 50  0001 C CNN
-F 1 "1kΩ" V 6100 4350 50  0000 C CNN
-F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 6030 4350 50  0001 C CNN
-F 3 "~" H 6100 4350 50  0001 C CNN
-F 4 "C4410" H 6100 4350 50  0001 C CNN "JLCPCB"
-	1    6100 4350
-	0    1    1    0   
 $EndComp
 $Comp
 L Device:R R8
@@ -1688,39 +1716,38 @@ F 4 "C17477" V 6100 4450 50  0001 C CNN "JLCPCB"
 	1    6100 4450
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	4350 4150 4450 4150
-Wire Wire Line
-	4450 4100 4450 4150
-Connection ~ 4450 4150
-Wire Wire Line
-	4450 4150 4550 4150
-Wire Wire Line
-	4200 4450 4350 4450
-Connection ~ 4350 4450
-Wire Wire Line
-	4650 4450 4650 4050
-Wire Wire Line
-	4650 4050 5350 4050
-Connection ~ 4650 4450
-Connection ~ 5350 4050
-Wire Wire Line
-	5350 4050 5450 4050
-NoConn ~ 5950 5250
-NoConn ~ 5950 5150
-NoConn ~ 5950 5450
-NoConn ~ 5950 5550
-NoConn ~ 5950 4950
-NoConn ~ 5950 4850
-NoConn ~ 5950 4650
-NoConn ~ 5950 4250
-Wire Wire Line
-	3950 6700 4000 6700
-Wire Wire Line
-	3800 6700 4000 6700
-Wire Wire Line
-	4950 4650 4200 4650
-Wire Wire Line
-	4200 4650 4200 4900
-Connection ~ 4200 4900
+$Comp
+L Mechanical:MountingHole_Pad H2
+U 1 1 61D119D5
+P 9050 6350
+F 0 "H2" H 9000 6500 50  0000 L CNN
+F 1 "MountingHole_Pad" H 9150 6308 50  0001 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad_TopOnly" H 9050 6350 50  0001 C CNN
+F 3 "~" H 9050 6350 50  0001 C CNN
+	1    9050 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H3
+U 1 1 61D16737
+P 9350 6350
+F 0 "H3" H 9300 6500 50  0000 L CNN
+F 1 "MountingHole_Pad" H 9450 6308 50  0001 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad_TopOnly" H 9350 6350 50  0001 C CNN
+F 3 "~" H 9350 6350 50  0001 C CNN
+	1    9350 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 61DB1BB6
+P 6100 4350
+F 0 "R5" V 6000 4350 50  0001 C CNN
+F 1 "1kΩ" V 6100 4350 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 6030 4350 50  0001 C CNN
+F 3 "~" H 6100 4350 50  0001 C CNN
+F 4 "C4410" H 6100 4350 50  0001 C CNN "JLCPCB"
+	1    6100 4350
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
