@@ -22,12 +22,12 @@ This version was minimized by:
 * Removed external leds connector
 * Using SMD ULN2003A instead of THT
 * Optocoupler THT capacitors replaced by Tantalum SMD
-* Using bidirectional optocoupler instead of HCPL3700 to reduce Power dissipation (less current needed)
-* Embedding an ESP32 into the board, and adding USB-to-Serial circuitery
+* Using bidirectional optocoupler (LDA210) instead of HCPL3700 to reduce Power dissipation (less current needed)
+* Embedding an ESP32 into the board, and adding USB-to-Serial circuitery with CP2102N
 
 Security additions:
 * Added fuse at the neutral return from the sensors (F2)
-* Resistors are before HCPL3700, to make them work with less than 4V to N, instead of 110V to N
+* Resistors are before optocoupler, to make them work with less than 2V to N, instead of 110V to N
 
 Stability:
 * Added filter capacitor to ULN2003A
