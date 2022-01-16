@@ -126,13 +126,13 @@ Wire Wire Line
 	5550 1400 5650 1400
 Text GLabel 2250 1850 0    50   Input ~ 0
 5V+
-Text GLabel 4400 3000 0    50   Input ~ 0
+Text GLabel 4150 3000 0    50   Input ~ 0
 5V+
 Text GLabel 5800 3000 2    50   Input ~ 0
 3.3V+
 Text GLabel 6600 3250 2    50   Input ~ 0
 5V+
-Text GLabel 4500 3400 0    50   Input ~ 0
+Text GLabel 4200 3400 0    50   Input ~ 0
 GND
 Text GLabel 1400 2000 2    50   Input ~ 0
 5V+
@@ -234,8 +234,6 @@ Wire Wire Line
 Connection ~ 5450 3400
 Wire Wire Line
 	4500 3100 4500 3000
-Wire Wire Line
-	4500 3000 4400 3000
 Wire Wire Line
 	4500 3000 4750 3000
 Connection ~ 4500 3000
@@ -347,12 +345,10 @@ Text GLabel 8850 3400 0    50   Input ~ 0
 EspSens3
 Text GLabel 8850 3550 0    50   Input ~ 0
 EspSens4
-Connection ~ 9500 2250
 Wire Wire Line
 	9150 2250 9500 2250
 Wire Wire Line
 	9500 2050 9150 2050
-Connection ~ 9500 2050
 Wire Wire Line
 	9500 2600 9150 2600
 Wire Wire Line
@@ -949,11 +945,12 @@ $Comp
 L Device:CP_Small C12
 U 1 1 613B1E5B
 P 9500 2500
-F 0 "C12" H 9400 2450 50  0000 R CNN
-F 1 "22uF" H 9400 2550 50  0000 R CNN
-F 2 "Capacitor_Tantalum_SMD:CP_EIA-3528-21_Kemet-B_Pad1.50x2.35mm_HandSolder" H 9500 2500 50  0001 C CNN
-F 3 "https://datasheet.lcsc.com/lcsc/1811151138_Samsung-Electro-Mechanics-CL10A226MQ8NRNC_C59461.pdf" H 9500 2500 50  0001 C CNN
-F 4 "C110051" H 9500 2500 50  0001 C CNN "JLCPCB"
+F 0 "C12" H 9400 2550 50  0000 R CNN
+F 1 "4.7uF" H 9450 2450 50  0000 R CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 9500 2500 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/lcsc/1811091112_FH-Guangdong-Fenghua-Advanced-Tech-1206B475K500NT_C29823.pdf" H 9500 2500 50  0001 C CNN
+F 4 "C29823" H 9500 2500 50  0001 C CNN "JLCPCB"
+F 5 "4.7uF" H 9500 2500 50  0001 C CNN "Value"
 	1    9500 2500
 	1    0    0    -1  
 $EndComp
@@ -986,10 +983,10 @@ L Device:R R22
 U 1 1 61CD2F61
 P 10600 3200
 F 0 "R22" V 10393 3200 50  0001 C CNN
-F 1 "200kΩ1w" V 10500 3250 50  0000 C CNN
+F 1 "150kΩ1w" V 10500 3250 50  0000 C CNN
 F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.52x3.35mm_HandSolder" V 10530 3200 50  0001 C CNN
-F 3 "https://www.distrelec.ch/en/super-high-power-smd-resistor-2512-82kohm-3w-rnd-components-rnd-155sp123wf8202t2e/p/30150189?q=*&pos=1&origPos=3001&origPageSize=50&digitalDataLayerTerm=resistor&track=true" H 10600 3200 50  0001 C CNN
-F 4 "C38961" H 10600 3200 50  0001 C CNN "JLCPCB"
+F 3 "" H 10600 3200 50  0001 C CNN
+F 4 "C25719" H 10600 3200 50  0001 C CNN "JLCPCB"
 	1    10600 3200
 	0    1    1    0   
 $EndComp
@@ -998,10 +995,10 @@ L Device:R R23
 U 1 1 61CD2F5A
 P 10600 3750
 F 0 "R23" V 10393 3750 50  0001 C CNN
-F 1 "200kΩ1w" V 10700 3800 50  0000 C CNN
+F 1 "150kΩ1w" V 10700 3800 50  0000 C CNN
 F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.52x3.35mm_HandSolder" V 10530 3750 50  0001 C CNN
-F 3 "https://www.distrelec.ch/en/super-high-power-smd-resistor-2512-82kohm-3w-rnd-components-rnd-155sp123wf8202t2e/p/30150189?q=*&pos=1&origPos=3001&origPageSize=50&digitalDataLayerTerm=resistor&track=true" H 10600 3750 50  0001 C CNN
-F 4 "C38961" H 10600 3750 50  0001 C CNN "JLCPCB"
+F 3 "" H 10600 3750 50  0001 C CNN
+F 4 "C25719" H 10600 3750 50  0001 C CNN "JLCPCB"
 	1    10600 3750
 	0    1    1    0   
 $EndComp
@@ -1010,10 +1007,10 @@ L Device:R R19
 U 1 1 61CD2F52
 P 10300 3750
 F 0 "R19" V 10093 3750 50  0001 C CNN
-F 1 "200kΩ1w" V 10400 3750 50  0000 C CNN
+F 1 "150kΩ1w" V 10400 3750 50  0000 C CNN
 F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.52x3.35mm_HandSolder" V 10230 3750 50  0001 C CNN
-F 3 "https://www.distrelec.ch/en/super-high-power-smd-resistor-2512-82kohm-3w-rnd-components-rnd-155sp123wf8202t2e/p/30150189?q=*&pos=1&origPos=3001&origPageSize=50&digitalDataLayerTerm=resistor&track=true" H 10300 3750 50  0001 C CNN
-F 4 "C38961" H 10300 3750 50  0001 C CNN "JLCPCB"
+F 3 "" H 10300 3750 50  0001 C CNN
+F 4 "C25719" H 10300 3750 50  0001 C CNN "JLCPCB"
 	1    10300 3750
 	0    1    1    0   
 $EndComp
@@ -1022,10 +1019,10 @@ L Device:CP_Small C13
 U 1 1 61CD2F4B
 P 9500 3300
 F 0 "C13" H 9700 3250 50  0000 R CNN
-F 1 "22uF" H 9750 3350 50  0000 R CNN
-F 2 "Capacitor_Tantalum_SMD:CP_EIA-3528-21_Kemet-B_Pad1.50x2.35mm_HandSolder" H 9500 3300 50  0001 C CNN
-F 3 "https://datasheet.lcsc.com/lcsc/1811151138_Samsung-Electro-Mechanics-CL10A226MQ8NRNC_C59461.pdf" H 9500 3300 50  0001 C CNN
-F 4 "C110051" H 9500 3300 50  0001 C CNN "JLCPCB"
+F 1 "4.7uF" H 9750 3350 50  0000 R CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 9500 3300 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/lcsc/1811091112_FH-Guangdong-Fenghua-Advanced-Tech-1206B475K500NT_C29823.pdf" H 9500 3300 50  0001 C CNN
+F 4 "C29823" H 9500 3300 50  0001 C CNN "JLCPCB"
 	1    9500 3300
 	-1   0    0    1   
 $EndComp
@@ -1034,10 +1031,10 @@ L Device:R R18
 U 1 1 61CD2F44
 P 10300 3200
 F 0 "R18" V 10093 3200 50  0001 C CNN
-F 1 "200kΩ1w" V 10200 3200 50  0000 C CNN
+F 1 "150kΩ1w" V 10200 3200 50  0000 C CNN
 F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.52x3.35mm_HandSolder" V 10230 3200 50  0001 C CNN
-F 3 "https://www.distrelec.ch/en/super-high-power-smd-resistor-2512-82kohm-3w-rnd-components-rnd-155sp123wf8202t2e/p/30150189?q=*&pos=1&origPos=3001&origPageSize=50&digitalDataLayerTerm=resistor&track=true" H 10300 3200 50  0001 C CNN
-F 4 "C38961" V 10300 3200 50  0001 C CNN "JLCPCB"
+F 3 "" H 10300 3200 50  0001 C CNN
+F 4 "C25719" V 10300 3200 50  0001 C CNN "JLCPCB"
 	1    10300 3200
 	0    1    1    0   
 $EndComp
@@ -1046,10 +1043,10 @@ L Device:CP_Small C14
 U 1 1 61CD2F3D
 P 9500 3650
 F 0 "C14" H 9400 3600 50  0000 R CNN
-F 1 "22uF" H 9450 3700 50  0000 R CNN
-F 2 "Capacitor_Tantalum_SMD:CP_EIA-3528-21_Kemet-B_Pad1.50x2.35mm_HandSolder" H 9500 3650 50  0001 C CNN
-F 3 "https://datasheet.lcsc.com/lcsc/1811151138_Samsung-Electro-Mechanics-CL10A226MQ8NRNC_C59461.pdf" H 9500 3650 50  0001 C CNN
-F 4 "C110051" H 9500 3650 50  0001 C CNN "JLCPCB"
+F 1 "4.7uF" H 9450 3700 50  0000 R CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 9500 3650 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/lcsc/1811091112_FH-Guangdong-Fenghua-Advanced-Tech-1206B475K500NT_C29823.pdf" H 9500 3650 50  0001 C CNN
+F 4 "C29823" H 9500 3650 50  0001 C CNN "JLCPCB"
 	1    9500 3650
 	1    0    0    -1  
 $EndComp
@@ -1093,10 +1090,10 @@ L Device:R R20
 U 1 1 617A141C
 P 10600 2050
 F 0 "R20" V 10393 2050 50  0001 C CNN
-F 1 "200kΩ1w" V 10500 2100 50  0000 C CNN
+F 1 "150kΩ1w" V 10500 2100 50  0000 C CNN
 F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.52x3.35mm_HandSolder" V 10530 2050 50  0001 C CNN
-F 3 "https://www.distrelec.ch/en/super-high-power-smd-resistor-2512-82kohm-3w-rnd-components-rnd-155sp123wf8202t2e/p/30150189?q=*&pos=1&origPos=3001&origPageSize=50&digitalDataLayerTerm=resistor&track=true" H 10600 2050 50  0001 C CNN
-F 4 "C38961" H 10600 2050 50  0001 C CNN "JLCPCB"
+F 3 "" H 10600 2050 50  0001 C CNN
+F 4 "C25719" H 10600 2050 50  0001 C CNN "JLCPCB"
 	1    10600 2050
 	0    1    1    0   
 $EndComp
@@ -1105,10 +1102,10 @@ L Device:R R21
 U 1 1 6179E8C9
 P 10600 2600
 F 0 "R21" V 10393 2600 50  0001 C CNN
-F 1 "200kΩ1w" V 10700 2650 50  0000 C CNN
+F 1 "150kΩ1w" V 10700 2650 50  0000 C CNN
 F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.52x3.35mm_HandSolder" V 10530 2600 50  0001 C CNN
-F 3 "https://www.distrelec.ch/en/super-high-power-smd-resistor-2512-82kohm-3w-rnd-components-rnd-155sp123wf8202t2e/p/30150189?q=*&pos=1&origPos=3001&origPageSize=50&digitalDataLayerTerm=resistor&track=true" H 10600 2600 50  0001 C CNN
-F 4 "C38961" H 10600 2600 50  0001 C CNN "JLCPCB"
+F 3 "" H 10600 2600 50  0001 C CNN
+F 4 "C25719" H 10600 2600 50  0001 C CNN "JLCPCB"
 	1    10600 2600
 	0    1    1    0   
 $EndComp
@@ -1117,10 +1114,10 @@ L Device:R R17
 U 1 1 61354B0C
 P 10300 2600
 F 0 "R17" V 10093 2600 50  0001 C CNN
-F 1 "200kΩ1w" V 10400 2600 50  0000 C CNN
+F 1 "150kΩ1w" V 10400 2600 50  0000 C CNN
 F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.52x3.35mm_HandSolder" V 10230 2600 50  0001 C CNN
-F 3 "https://www.distrelec.ch/en/super-high-power-smd-resistor-2512-82kohm-3w-rnd-components-rnd-155sp123wf8202t2e/p/30150189?q=*&pos=1&origPos=3001&origPageSize=50&digitalDataLayerTerm=resistor&track=true" H 10300 2600 50  0001 C CNN
-F 4 "C38961" H 10300 2600 50  0001 C CNN "JLCPCB"
+F 3 "" H 10300 2600 50  0001 C CNN
+F 4 "C25719" H 10300 2600 50  0001 C CNN "JLCPCB"
 	1    10300 2600
 	0    1    1    0   
 $EndComp
@@ -1129,10 +1126,10 @@ L Device:CP_Small C11
 U 1 1 6137D081
 P 9500 2150
 F 0 "C11" H 9700 2100 50  0000 R CNN
-F 1 "22uF" H 9750 2200 50  0000 R CNN
-F 2 "Capacitor_Tantalum_SMD:CP_EIA-3528-21_Kemet-B_Pad1.50x2.35mm_HandSolder" H 9500 2150 50  0001 C CNN
-F 3 "https://datasheet.lcsc.com/lcsc/1811151138_Samsung-Electro-Mechanics-CL10A226MQ8NRNC_C59461.pdf" H 9500 2150 50  0001 C CNN
-F 4 "C110051" H 9500 2150 50  0001 C CNN "JLCPCB"
+F 1 "4.7uF" H 9750 2200 50  0000 R CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 9500 2150 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/lcsc/1811091112_FH-Guangdong-Fenghua-Advanced-Tech-1206B475K500NT_C29823.pdf" H 9500 2150 50  0001 C CNN
+F 4 "C29823" H 9500 2150 50  0001 C CNN "JLCPCB"
 	1    9500 2150
 	-1   0    0    1   
 $EndComp
@@ -1141,10 +1138,10 @@ L Device:R R16
 U 1 1 613B1E37
 P 10300 2050
 F 0 "R16" V 10093 2050 50  0001 C CNN
-F 1 "200kΩ1w" V 10200 2050 50  0000 C CNN
+F 1 "150kΩ1w" V 10200 2050 50  0000 C CNN
 F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.52x3.35mm_HandSolder" V 10230 2050 50  0001 C CNN
-F 3 "https://www.distrelec.ch/en/super-high-power-smd-resistor-2512-82kohm-3w-rnd-components-rnd-155sp123wf8202t2e/p/30150189?q=*&pos=1&origPos=3001&origPageSize=50&digitalDataLayerTerm=resistor&track=true" H 10300 2050 50  0001 C CNN
-F 4 "C38961" V 10300 2050 50  0001 C CNN "JLCPCB"
+F 3 "" H 10300 2050 50  0001 C CNN
+F 4 "C25719" V 10300 2050 50  0001 C CNN "JLCPCB"
 	1    10300 2050
 	0    1    1    0   
 $EndComp
@@ -1407,7 +1404,7 @@ L Device:CP C2
 U 1 1 61809E87
 P 4750 3250
 F 0 "C2" H 4868 3296 50  0001 L CNN
-F 1 "100nF" H 5050 3250 50  0000 R CNN
+F 1 "100nF" H 4900 3400 50  0000 R CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 4788 3100 50  0001 C CNN
 F 3 "https://www.distrelec.ch/en/ceramic-capacitor-100nf-50vdc-0805-rnd-components-rnd-1500805b104j500nt/p/30086635?q=smd+capacitor+&pos=5&origPos=990&origPageSize=50&track=true" H 4750 3250 50  0001 C CNN
 F 4 "C14663" H 4750 3250 50  0001 C CNN "JLCPCB"
@@ -1497,7 +1494,7 @@ L Device:CP 100uF_1
 U 1 1 6151DFD1
 P 4500 3250
 F 0 "100uF_1" H 4618 3296 50  0001 L CNN
-F 1 "100uF" H 4150 3250 50  0000 L CNN
+F 1 "100uF" H 4400 3400 50  0000 L CNN
 F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 4538 3100 50  0001 C CNN
 F 3 "~" H 4500 3250 50  0001 C CNN
 	1    4500 3250
@@ -1579,10 +1576,10 @@ L RF_Module:ESP32-WROOM-32D U2
 U 1 1 61AE698E
 P 2050 6150
 F 0 "U2" H 1450 4900 50  0000 C CNN
-F 1 "ESP32-WROOM-32D" H 1450 4750 50  0000 C CNN
+F 1 "ESP32-WROOM-32E" H 1450 4750 50  0000 C CNN
 F 2 "RF_Module:ESP32-WROOM-32" H 2050 4650 50  0001 C CNN
 F 3 "https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32d_esp32-wroom-32u_datasheet_en.pdf" H 1750 6200 50  0001 C CNN
-F 4 "C701342" H 2050 6150 50  0001 C CNN "JLCPCB"
+F 4 "C701343" H 2050 6150 50  0001 C CNN "JLCPCB"
 	1    2050 6150
 	1    0    0    -1  
 $EndComp
@@ -1750,4 +1747,31 @@ F 4 "C4410" H 6100 4350 50  0001 C CNN "JLCPCB"
 	1    6100 4350
 	0    1    1    0   
 $EndComp
+Connection ~ 4500 3400
+Connection ~ 9500 2250
+Connection ~ 9500 2050
+Wire Wire Line
+	4150 3000 4250 3000
+Wire Wire Line
+	4200 3400 4250 3400
+$Comp
+L Device:CP C6
+U 1 1 61E95A47
+P 4250 3250
+F 0 "C6" V 4400 3050 50  0000 L CNN
+F 1 "22uF" V 4300 3000 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 4288 3100 50  0001 C CNN
+F 3 "CL10A226MQ8NRNC" H 4250 3250 50  0001 C CNN
+F 4 "C59461" H 4250 3250 50  0001 C CNN "JLCPCB"
+	1    4250 3250
+	1    0    0    -1  
+$EndComp
+Connection ~ 4250 3400
+Wire Wire Line
+	4250 3400 4500 3400
+Wire Wire Line
+	4250 3100 4250 3000
+Connection ~ 4250 3000
+Wire Wire Line
+	4250 3000 4500 3000
 $EndSCHEMATC

@@ -2,8 +2,8 @@ Comment,Designator,Footprint,LCSC Part #
 100uF Polarized capacitor,"100uF_1,100uF_2",Capacitor_THT,
 100nF Polarized capacitor,"C1,C2,C3,C4,C7,C8,C9,C10,C16,C18",Capacitor_SMD,C14663
 4.7uF Polarized capacitor,C5,Capacitor_SMD,C19666
-22uF Polarized capacitor  small symbol,"C11,C12,C13,C14",Capacitor_Tantalum_SMD,C110051
-22uF Polarized capacitor,C15,Capacitor_SMD,C59461
+22uF Polarized capacitor,"C6,C15",Capacitor_SMD,C59461
+4.7uF Polarized capacitor  small symbol,"C11,C12,C13,C14",Capacitor_SMD,C29823
 LED Light emitting diode,D2,LED_SMD,C2297
 D_TVS Bidirectional transient-voltage-suppression diode,"D4,D5,D6",Diode_SMD,C383211
 BAT60A-7 10V 3A High Current Recitifier Schottky Diode  SOD-323,D7,Diode_SMD,C124187
@@ -29,13 +29,13 @@ SS8050 800mA Ic  50V Vce  NPN Transistor  TO-39,"Q1,Q2",Package_TO_SOT_SMD,C1777
 22.1k Resistor,R7,Resistor_SMD,C25961
 47.5k Resistor,R9,Resistor_SMD,C23061
 100 Resistor,R11,Resistor_SMD,C17408
-200k1w Resistor,"R16,R17,R18,R19,R20,R21,R22,R23",Resistor_SMD,C38961
+150k1w Resistor,"R16,R17,R18,R19,R20,R21,R22,R23",Resistor_SMD,C25719
 RAC05.05SK.277 ,RA05.SK.1,rac05-05sk,
 400V Voltage dependent resistor,RV1,Varistor,
 EN Push button switch  generic  two pins,SW1,Button_Switch_SMD,C318884
 IO0 Push button switch  generic  two pins,SW2,Button_Switch_SMD,C318884
 ULN2003A High Voltage  High Current Darlington Transistor Arrays,U1,Package_SO,C7512
-ESP32-WROOM-32D RF Module  ESP32-D0WD SoC  Wi-Fi 802.11b/g/n  Bl,U2,RF_Module,C701342
+ESP32-WROOM-32E RF Module  ESP32-D0WD SoC  Wi-Fi 802.11b/g/n  Bl,U2,RF_Module,C701343
 LD1117AV33_TO220 800mA Fixed Low Drop Positive Voltage Regulator,U4,Package_TO_SOT_THT,
 MCP9700T-ETT Low power  analog thermistor temperature sensor  4,U5,Package_TO_SOT_SMD,C42288
 LDA210-PDIP DC Darlington Optocoupler  Vce 35V  CTR 600%  SO-4,"U6,U7",Package_DIP,
