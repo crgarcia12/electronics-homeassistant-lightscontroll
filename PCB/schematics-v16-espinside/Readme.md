@@ -6,7 +6,7 @@
  1. Follows standard instalation: This device does not require you to wire your house for it.
  1. It can be installed centrally
 
- Following those rules and using as a reference a multi-switch light controlled with a mechanical latching relay, this is the wiring idea:
+The circuit is placed close to the mains switching box, next to the latching relays. Wiring: 
 
 ![alt text](readme-media/relay-wiring.png)
 
@@ -47,8 +47,8 @@ Device schematics (under development)
 Generating fabrication files for JLCPCB
 1. Plot PCB Gerber + Drill + Map:
 
-    ![board-pcb-3d](readme-media/tutorial/plot-layers.png)
-    ![board-pcb-3d](readme-media/tutorial/plot-posdrl.png)
+    ![board-pcb-3d](readme-media/tutorial/plot-1.png)
+    ![board-pcb-3d](readme-media/tutorial/plot-2.png)
 
 1. Bom files
     ![board-pcb-3d](readme-media/tutorial/bom-1.png)
