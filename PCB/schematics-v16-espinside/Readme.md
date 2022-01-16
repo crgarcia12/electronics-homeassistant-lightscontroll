@@ -41,3 +41,22 @@ Device schematics (under development)
 ![board-schematics](readme-media/board-schematics.png)
 ![board-pcb](readme-media/board-pcb.png)
 ![board-pcb-3d](readme-media/board-pcb-3d.png)
+
+# Development notes
+
+Generating fabrication files for JLCPCB
+1. Plot PCB Gerber + Drill + Map:
+
+    ![board-pcb-3d](readme-media/tutorial/plot-layers.png)
+    ![board-pcb-3d](readme-media/tutorial/plot-posdrl.png)
+
+1. Bom files
+    ![board-pcb-3d](readme-media/tutorial/bom-1.png)
+    ![board-pcb-3d](readme-media/tutorial/bom-2.png)
+    ![board-pcb-3d](readme-media/tutorial/bom-3.png)
+
+1. Drill files
+    ![board-pcb-3d](readme-media/tutorial/pos-1.png)
+    ![board-pcb-3d](readme-media/tutorial/pos-2.png)
+    run the python script to rotate the components
+    ![board-pcb-3d](readme-media/tutorial/pos-3.png)
