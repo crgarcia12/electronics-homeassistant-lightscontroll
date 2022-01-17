@@ -1,0 +1,33 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#(c) SnapEDA 2016 (snapeda.com)
+#This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA) with Design Exception 1.0
+#
+# PCN-105D3MHZ
+#
+DEF PCN-105D3MHZ U 0 40 N N 2 L N
+F0 "U" 0 0 50 H I L BNN
+F1 "PCN-105D3MHZ" 0 0 50 H I L BNN
+F2 "PCN-105D3MHZ" 0 0 50 H I L BNN
+F3 "" 0 0 50 H I L BNN
+DRAW
+P 2 1 0 10 50 100 -50 -100 N
+P 2 1 0 10 -150 -100 -150 100 N
+P 2 1 0 10 -150 100 50 100 N
+P 2 1 0 10 50 100 150 100 N
+P 2 1 0 10 150 100 150 -100 N
+P 2 1 0 10 150 -100 -50 -100 N
+P 2 1 0 10 -50 -100 -150 -100 N
+X ~ P$1 0 -200 100 U 40 40 1 0 I 
+X ~ P$2 0 200 100 D 40 40 1 0 I 
+P 2 2 0 10 0 -200 0 -100 N
+P 2 2 0 10 0 -100 -100 100 N
+P 2 2 0 10 0 100 0 200 N
+C 0 -100 10 2 0 24 N
+C 0 100 10 2 0 24 N
+X ~ P$4 0 300 100 D 40 40 2 0 B 
+X ~ P$3 0 -300 100 U 40 40 2 0 B 
+ENDDRAW
+ENDDEF
+#
+# End Library
