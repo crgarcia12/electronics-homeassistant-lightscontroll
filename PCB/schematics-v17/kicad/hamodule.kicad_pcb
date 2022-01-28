@@ -5693,7 +5693,7 @@
     (at 167.3965 147.6619 90)
     (descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor handsolder")
-    (property "JLCPCB" "C25961")
+    (property "JLCPCB" "")
     (property "Sheetfile" "hamodule.kicad_sch")
     (property "Sheetname" "")
     (path "/2d62d8a0-7974-4a51-b882-413207201a5e")
@@ -5702,7 +5702,7 @@
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
       (tstamp 9b4238b0-35ae-4dc7-9835-cf13adb9ae0a)
     )
-    (fp_text value "22.1kΩ" (at 0 1.43 90) (layer "B.Fab") hide
+    (fp_text value "NC" (at 0 1.43 90) (layer "B.Fab") hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
       (tstamp 6508025a-f43d-4d44-b885-caef32a33ce0)
     )
@@ -7895,6 +7895,7 @@
   (segment (start 159.233 143.9189) (end 158.558489 143.244389) (width 0.25) (layer "F.Cu") (net 55) (tstamp 21ae8756-5207-4bb5-a501-71eee06b8b25))
   (segment (start 168.6245 136.1415) (end 168.6245 137.1755) (width 1) (layer "F.Cu") (net 55) (tstamp 222818d6-7932-4752-8c85-17950c2656af))
   (segment (start 189.6745 118.6815) (end 189.6745 121.4755) (width 1) (layer "F.Cu") (net 55) (tstamp 224e8890-cdee-45fd-bd2e-64fe49c2de75))
+  (segment (start 160.533 141.5654) (end 160.9765 141.1219) (width 0.25) (layer "F.Cu") (net 55) (tstamp 22a8e1bc-22fb-4e62-add4-2ae0c07ce05c))
   (segment (start 167.6065 143.8419) (end 165.0455 143.8419) (width 1) (layer "F.Cu") (net 55) (tstamp 24ccba75-12eb-4753-9f6f-f9b3a5a6fa54))
   (segment (start 128.869998 138.4935) (end 127.52249 139.841008) (width 1) (layer "F.Cu") (net 55) (tstamp 2792ed93-89db-4e51-99ff-281323e776eb))
   (segment (start 167.3965 148.5744) (end 167.3965 149.7319) (width 1) (layer "F.Cu") (net 55) (tstamp 2e125862-3f6d-4525-8def-fdaeff74a0d1))
@@ -7974,6 +7975,7 @@
   (segment (start 168.6245 136.1415) (end 168.6245 137.8715) (width 1) (layer "F.Cu") (net 55) (tstamp e99365e4-0f54-4411-9300-fda7d4cb8af1))
   (segment (start 187.946686 126.886314) (end 189.243314 126.886314) (width 0.4) (layer "F.Cu") (net 55) (tstamp ef3c2ca7-fcc8-4cff-8fc1-0c762aa25455))
   (segment (start 168.2115 116.0765) (end 168.9295 116.0765) (width 1) (layer "F.Cu") (net 55) (tstamp efd79052-e146-4d61-9e0a-ba764a5a966b))
+  (segment (start 160.533 142.4089) (end 160.533 141.5654) (width 0.25) (layer "F.Cu") (net 55) (tstamp f3749464-3429-4e5d-8e9e-7776a190bf7c))
   (segment (start 156.94649 114.40149) (end 156.6545 114.1095) (width 1) (layer "F.Cu") (net 55) (tstamp f83c7689-506f-4228-94dd-e1c4dd714e67))
   (segment (start 155.1855 127.3745) (end 155.1855 132.0685) (width 1) (layer "F.Cu") (net 55) (tstamp fad69d94-2102-440c-9d5e-3529dd7bb369))
   (segment (start 156.633 144.08) (end 156.633 143.9189) (width 0.25) (layer "F.Cu") (net 55) (tstamp fae7147c-3eec-4748-9a74-49b46eac2268))
