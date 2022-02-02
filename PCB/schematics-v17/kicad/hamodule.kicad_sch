@@ -3059,7 +3059,6 @@
     )
   )
 
-
   (junction (at 259.08 116.84) (diameter 0) (color 0 0 0 0)
     (uuid 078fd43c-3939-453e-8b65-c8d19ec41561)
   )
@@ -5942,7 +5941,7 @@
     (uuid 00000000-0000-0000-0000-000061ae682e)
     (property "Reference" "R24" (id 0) (at 177.8 123.19 90))
     (property "Value" "1kΩ" (id 1) (at 177.8 120.65 90))
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" (id 2) (at 177.8 118.872 90)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (id 2) (at 177.8 118.872 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 177.8 120.65 0)
@@ -6098,7 +6097,7 @@
     (uuid 00000000-0000-0000-0000-000061ae6909)
     (property "Reference" "R3" (id 0) (at 219.71 154.94 90))
     (property "Value" "10kΩ" (id 1) (at 219.71 157.48 90))
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" (id 2) (at 219.71 155.702 90)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (id 2) (at 219.71 155.702 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "0603WAF1002T5E" (id 3) (at 219.71 157.48 0)
@@ -6116,7 +6115,7 @@
     (uuid 00000000-0000-0000-0000-000061ae690f)
     (property "Reference" "R2" (id 0) (at 219.71 140.97 90))
     (property "Value" "10kΩ" (id 1) (at 219.71 143.51 90))
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" (id 2) (at 219.71 141.732 90)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (id 2) (at 219.71 141.732 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "0603WAF1002T5E" (id 3) (at 219.71 143.51 0)
@@ -6134,7 +6133,7 @@
     (uuid 00000000-0000-0000-0000-000061ae6949)
     (property "Reference" "R1" (id 0) (at 30.48 120.65 90))
     (property "Value" "10kΩ" (id 1) (at 27.94 120.65 90))
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" (id 2) (at 29.718 120.65 90)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (id 2) (at 29.718 120.65 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "0603WAF1002T5E" (id 3) (at 27.94 120.65 0)
@@ -6396,7 +6395,7 @@
     (uuid 00000000-0000-0000-0000-000061caa7bc)
     (property "Reference" "R4" (id 0) (at 144.78 110.49 90))
     (property "Value" "1kΩ" (id 1) (at 144.78 107.95 90))
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" (id 2) (at 144.78 106.172 90)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (id 2) (at 144.78 106.172 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 144.78 107.95 0)
@@ -6722,7 +6721,7 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "1kΩ" (id 1) (at 177.8 113.03 90))
-    (property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" (id 2) (at 177.8 111.252 90)
+    (property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" (id 2) (at 177.8 111.252 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 177.8 113.03 0)
@@ -7142,19 +7141,19 @@
       (reference "Q2") (unit 1) (value "SS8050") (footprint "Package_TO_SOT_SMD:SOT-23")
     )
     (path "/00000000-0000-0000-0000-000061ae6949"
-      (reference "R1") (unit 1) (value "10kΩ") (footprint "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder")
+      (reference "R1") (unit 1) (value "10kΩ") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
     )
     (path "/00000000-0000-0000-0000-000061ae690f"
-      (reference "R2") (unit 1) (value "10kΩ") (footprint "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder")
+      (reference "R2") (unit 1) (value "10kΩ") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
     )
     (path "/00000000-0000-0000-0000-000061ae6909"
-      (reference "R3") (unit 1) (value "10kΩ") (footprint "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder")
+      (reference "R3") (unit 1) (value "10kΩ") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
     )
     (path "/00000000-0000-0000-0000-000061caa7bc"
-      (reference "R4") (unit 1) (value "1kΩ") (footprint "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder")
+      (reference "R4") (unit 1) (value "1kΩ") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
     )
     (path "/00000000-0000-0000-0000-000061db1bb6"
-      (reference "R5") (unit 1) (value "1kΩ") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder")
+      (reference "R5") (unit 1) (value "1kΩ") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
     )
     (path "/00000000-0000-0000-0000-000061db1bc4"
       (reference "R6") (unit 1) (value "0Ω") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")
@@ -7202,7 +7201,7 @@
       (reference "R23") (unit 1) (value "150kΩ1w") (footprint "Resistor_SMD:R_2512_6332Metric_Pad1.40x3.35mm_HandSolder")
     )
     (path "/00000000-0000-0000-0000-000061ae682e"
-      (reference "R24") (unit 1) (value "1kΩ") (footprint "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder")
+      (reference "R24") (unit 1) (value "1kΩ") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
     )
     (path "/00000000-0000-0000-0000-00006146aba1"
       (reference "RA05.SK.1") (unit 1) (value "RAC05.05SK.277") (footprint "rac05-05sk:277")
