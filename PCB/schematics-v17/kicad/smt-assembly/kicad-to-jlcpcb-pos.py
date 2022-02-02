@@ -26,7 +26,14 @@ if len(sys.argv) == 4:
     with open(sys.argv[3], 'r') as overrides_file:
         overrides = json.load(overrides_file)
 
-with open(sys.argv[1], 'r') as in_file, open(sys.argv[2], 'w', newline='') as out_file:
+if len(sys.argv) >= 3:
+    in_file_path = sys.argv[1]
+    out_file_path = sys.argv[2]
+else:
+    in_file_path = ".\hamodule-top-pos.csv"
+    out_file_path = "hamodule-top-pos-jlcpcb.csv"
+    
+with open(in_file_path, 'r') as in_file, open(out_file_path, 'w', newline='') as out_file:
 
     reader = csv.DictReader(in_file)
     ordered_fieldnames = OrderedDict([('Designator',None),('Mid X',None),('Mid Y',None),('Layer',None),('Rotation',None)])
