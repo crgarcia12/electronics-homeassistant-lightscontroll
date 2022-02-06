@@ -1,46 +1,5 @@
-# ####################################################################
-# Latching relay Light Switch with manual push buttons
-# ####################################################################
-#  
-# The circuit has a manual part, that combines multiple 
-# toggle switches (_-_) with a latching relay.
-# ESPHome acts as another toggle switch using a standard relay. 
-# It also sense the output of the latching relay to notify HA if the
-# light is on or off, since it could have been changed manually
-#
-#  Diagram:
-#
-#         _________ _-_ ________
-#         |________ _-_ ________|
-#         |________ _-_ ________|
-# [AC] ___|                     |__[Latching Relay]___[Light]
-#         |______ [Relay] ______|                   |
-#                   |                               |
-#                   |        _______________________|
-#             ______|________|______
-#             |   GPIO22    GPIO23  |
-#             |                     |
-#             |       [ESP32]       |
-#             |_____________________|
-#
-# ####################################################################
-# To make this work, ESPHome uses a Template Switch, that can receive 
-# commands and respond with a calculated state:
-#
-#              [BinarySensor] (GPIO23)
-#               |
-#               | (Read state)
-#               |
-# [HA] <-----> [Template Switch]
-#               |
-#               | (Issue actions)
-#               |
-#              [Switch] (GPIO22)
-#
-# ####################################################################
-
 esphome:
-  name: demo-light
+  name: hamodule
   platform: ESP32
   board: esp32dev
 
@@ -51,7 +10,7 @@ logger:
 api:
 
 ota:
-  password: "8a99a5ece8395aa1dc3fd9bcfd835013"
+  password: "e54f26a88ddf4d58e9870a14a34bfbfa"
 
 wifi:
   ssid: "LeaCarlos21Internal_2"
@@ -59,32 +18,56 @@ wifi:
 
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
-    ssid: "Demo-Light Hotspot LeaCarlos21I"
-    password: "LeaCarlos21I"
+    ssid: "Hamodule Fallback Hotspot"
+    password: "bvFRy5WVZ131"
 
 captive_portal:
+
+###################################
+#          Chanel 1
+###################################
 
 # This sensor checks if the light is really on or off by checking the voltage
 binary_sensor:
   - platform: gpio
+    name: sensor_1
     pin:
-      number: GPIO23
+      number: GPIO33
       mode: INPUT_PULLUP
       inverted: True
-    name: demo_led_light_2_sensor_name
-    id: demo_led_light_2_sensor_id
-
+    id: sensor_1
+  - platform: gpio
+    name: sensor_2
+    pin:
+      number: GPIO32
+      mode: INPUT_PULLUP
+      inverted: True
+    id: sensor_2
+  - platform: gpio
+    name: sensor_3
+    pin:
+      number: GPIO35
+      mode: INPUT_PULLUP
+      inverted: True
+    id: sensor_3
+  - platform: gpio
+    name: sensor_4
+    pin:
+      number: GPIO34
+      mode: INPUT_PULLUP
+      inverted: True
+    id: sensor_4    
 switch:
   # This switch is a template (virtual). 
   # It allows HA to send turn_on_action and turn_off_action, but the state is
   # read directly from the binary_sensor
   - platform: template
     # https://esphome.io/components/switch/template.html
-    name: demo_led_light_2_template_name
-    id: demo_led_light_2_template_id
+    name: light_1
+    id: light_1
     icon: mdi:ceiling-light
     lambda: |-
-      if (id(demo_led_light_2_sensor_id).state) {
+      if (id(sensor_1).state) {
         return true;
       } else {
         return false;
@@ -92,27 +75,135 @@ switch:
     turn_on_action:
       - if:
           condition:
-            binary_sensor.is_off: demo_led_light_2_sensor_id
+            binary_sensor.is_off: sensor_1
           then:
             - logger.log: "template.turn_on.sensor==off"
-            - switch.turn_on: demo_led_light_2_relay_id
+            - switch.turn_on: relay_1
           else:
             - logger.log: "template.turn_on.sensor==on"
     turn_off_action:
       - if:
           condition:
-            binary_sensor.is_on: demo_led_light_2_sensor_id
+            binary_sensor.is_on: sensor_1
           then:
             - logger.log: "template.turn_off.sensor==on"
-            - switch.turn_on: demo_led_light_2_relay_id
+            - switch.turn_on: relay_1
+          else:
+            - logger.log: "template.turn_off.sensor==off"
+  - platform: template
+    # https://esphome.io/components/switch/template.html
+    name: light_2
+    id: light_2
+    icon: mdi:ceiling-light
+    lambda: |-
+      if (id(sensor_2).state) {
+        return true;
+      } else {
+        return false;
+      }
+    turn_on_action:
+      - if:
+          condition:
+            binary_sensor.is_off: sensor_2
+          then:
+            - logger.log: "template.turn_on.sensor==off"
+            - switch.turn_on: relay_2
+          else:
+            - logger.log: "template.turn_on.sensor==on"
+    turn_off_action:
+      - if:
+          condition:
+            binary_sensor.is_on: sensor_2
+          then:
+            - logger.log: "template.turn_off.sensor==on"
+            - switch.turn_on: relay_2
+          else:
+            - logger.log: "template.turn_off.sensor==off"
+  - platform: template
+    # https://esphome.io/components/switch/template.html
+    name: light_3
+    id: light_3
+    icon: mdi:ceiling-light
+    lambda: |-
+      if (id(sensor_3).state) {
+        return true;
+      } else {
+        return false;
+      }
+    turn_on_action:
+      - if:
+          condition:
+            binary_sensor.is_off: sensor_3
+          then:
+            - logger.log: "template.turn_on.sensor==off"
+            - switch.turn_on: relay_3
+          else:
+            - logger.log: "template.turn_on.sensor==on"
+    turn_off_action:
+      - if:
+          condition:
+            binary_sensor.is_on: sensor_3
+          then:
+            - logger.log: "template.turn_off.sensor==on"
+            - switch.turn_on: relay_3
+          else:
+            - logger.log: "template.turn_off.sensor==off"
+  - platform: template
+    # https://esphome.io/components/switch/template.html
+    name: light_4
+    id: light_4
+    icon: mdi:ceiling-light
+    lambda: |-
+      if (id(sensor_4).state) {
+        return true;
+      } else {
+        return false;
+      }
+    turn_on_action:
+      - if:
+          condition:
+            binary_sensor.is_off: sensor_4
+          then:
+            - logger.log: "template.turn_on.sensor==off"
+            - switch.turn_on: relay_4
+          else:
+            - logger.log: "template.turn_on.sensor==on"
+    turn_off_action:
+      - if:
+          condition:
+            binary_sensor.is_on: sensor_4
+          then:
+            - logger.log: "template.turn_off.sensor==on"
+            - switch.turn_on: relay_4
           else:
             - logger.log: "template.turn_off.sensor==off"
 
   # This controls the relay. It turns it on for 2 seconds and then it turns it back off
   - platform: gpio
-    id: demo_led_light_2_relay_id  
-    name: demo_led_light_2_relay_name
-    pin: GPIO22
+    id: relay_1
+    name: relay_1
+    pin: GPIO12
     on_turn_on:
-      - delay: 2000ms
-      - switch.turn_off: demo_led_light_2_relay_id
+      - delay: 500ms
+      - switch.turn_off: relay_1
+  - platform: gpio
+    id: relay_2  
+    name: relay_2
+    pin: GPIO27
+    on_turn_on:
+      - delay: 500ms
+      - switch.turn_off: relay_2
+  - platform: gpio
+    id: relay_3
+    name: relay_3
+    pin: GPIO26
+    on_turn_on:
+      - delay: 500ms
+      - switch.turn_off: relay_3
+  - platform: gpio
+    id: relay_4
+    name: relay_4
+    pin: GPIO25
+    on_turn_on:
+      - delay: 500ms
+      - switch.turn_off: relay_4      
