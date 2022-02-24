@@ -53,6 +53,8 @@ Generating fabrication files for JLCPCB
 1. Bom files
     ![board-pcb-3d](readme-media/tutorial/bom-1.png)
     ![board-pcb-3d](readme-media/tutorial/bom-2.png)
+
+    Command: python3 "C:\Program Files\KiCad\bin\scripting\plugins/bom_csv_jlcpcb.py" "%I" "%O.csv"
     ![board-pcb-3d](readme-media/tutorial/bom-3.png)
 
 1. Drill files
@@ -60,3 +62,5 @@ Generating fabrication files for JLCPCB
     ![board-pcb-3d](readme-media/tutorial/pos-2.png)
     run the python script to rotate the components
     ![board-pcb-3d](readme-media/tutorial/pos-3.png)
+
+    PS C:\\...\smt-assembly> python3 .\kicad-to-jlcpcb-pos.py .\hamodule-top-pos.csv .\hamodule-top-pos-jlcpcb.csv

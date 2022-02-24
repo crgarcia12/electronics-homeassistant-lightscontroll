@@ -1,45 +1,45 @@
 Comment,Designator,Footprint,LCSC Part #
-100uF Polarized capacitor  small symbol,"100uF_1,100uF_2",Capacitor_THT,
-100nF Polarized capacitor  small symbol,"C1,C2,C3,C4,C6,C7,C8,C9,C10,C16,C17,C18",Capacitor_SMD,C14663
-4.7uF Polarized capacitor  small symbol,C5,Capacitor_SMD,C19666
-4.7uF Polarized capacitor  small symbol,"C11,C12,C13,C14",Capacitor_SMD,C29823
-22uF Polarized capacitor  small symbol,C15,Capacitor_SMD,C59461
-LED Light emitting diode,D2,LED_SMD,C2297
-D_TVS Bidirectional transient-voltage-suppression diode,"D4,D5,D6",Diode_SMD,C383211
-BAT60A-7 10V 3A High Current Recitifier Schottky Diode  SOD-323,D7,Diode_SMD,C124187
-250V1A Fuse,F1,Fuse,
-250v50mA Fuse,F2,Fuse,
-MountingHole_Pad Mounting Hole with connection,"H2,H3",MountingHole,
-MountingHole_Pad Mounting Hole with connection,"H4,H5,H6",MountingHole,
-2604-1104 ,"J1,J9",wago-2604-1104,
-2604-1102 ,J2,wago-2604-1102,
-USB_C_Receptacle_USB2.0 USB 2.0-only Type-C Receptacle connector,J3,Connector_USB,
-ESP Relays Generic connector  single row  01x04  script generate,J4,Connector_JST,
-Current Jumper Generic connector  single row  01x02  script gene,"J5,J8",Connector_PinHeader_2.54mm,
-GND 3.3V Generic connector  single row  01x02  script generated ,J6,Connector_JST,
-Conn_01x02 Generic connector  single row  01x02  script generate,J7,Connector_JST,
-EspSense Generic connector  single row  01x04  script generated ,J10,Connector_PinSocket_2.00mm,
-Conn_01x02_Male Generic connector  single row  01x02  script gen,J11,Connector_PinHeader_2.00mm,
-NoCon Generic connector  single row  01x02  script generated (ki,J12,Connector_PinHeader_2.00mm,
+100nF Polarized capacitor  small symbol,"C1,C3,C5,C7,C8,C10,C11,C12,C13,C14,C19,C20",Capacitor_SMD,C14663
+22uF Polarized capacitor  small symbol,C4,Capacitor_SMD,C59461
+100uF Polarized capacitor  small symbol,C6,Capacitor_THT,
+4.7uF Polarized capacitor  small symbol,C9,Capacitor_SMD,C19666
+4.7uF Polarized capacitor  small symbol,"C15,C16,C17,C18",Capacitor_SMD,C29823
+LED Light emitting diode,D1,LED_SMD,C2297
+D_TVS Bidirectional transient-voltage-suppression diode,"D2,D3,D4",Diode_SMD,C383211
+BAT60A-7 10V 3A High Current Recitifier Schottky Diode  SOD-323,D5,Diode_SMD,C124187
+250V50mA Fuse,F1,Fuse,
+Fuse Fuse,"F2,F3,F4,F5",RST-80-AMMO,
+MountingHole_Pad Mounting Hole with connection,"H1,H2,H3",MountingHole,
+2604-1102 ,J1,wago-2604-1102,
+Current Jumper Generic connector  single row  01x02  script gene,"J2,J6",Connector_PinHeader_2.54mm,
+Conn_01x02_Male Generic connector  single row  01x02  script gen,J3,Connector_PinHeader_2.54mm,
+GND|3.3V Generic connector  single row  01x02  script generated ,J4,Connector_JST,
+GND|5V Generic connector  single row  01x02  script generated (k,J5,Connector_JST,
+USB_C_Receptacle_USB2.0 USB 2.0-only Type-C Receptacle connector,J7,Connector_USB,
+DoNotCon-> Generic connector  single row  01x02  script generate,J8,Connector_PinHeader_2.00mm,
+2604-1104 ,"J9,J11",wago-2604-1104,
+ESP Relays Generic connector  single row  01x04  script generate,J10,Connector_JST,
+EspSense Generic connector  single row  01x04  script generated ,J12,Connector_PinSocket_2.54mm,
 PCN-105D PCN-124D3MHZ 000,"K1,K2,K3,K4",PCN,
 SS8050-SMD NPN transistor  base/emitter/collector,Q1,Package_TO_SOT_SMD,C177739
 SS8050 NPN transistor  base/emitter/collector,Q2,Package_TO_SOT_SMD,C177739
-10k Resistor,"R1,R2,R3",Resistor_SMD,C25804
-1k Resistor,"R4,R24",Resistor_SMD,C25585
-1k Resistor,R5,Resistor_SMD,C4410
-0 Resistor,"R6,R8",Resistor_SMD,C17477
-22.1k Resistor,R7,Resistor_SMD,C25961
-47.5k Resistor,R9,Resistor_SMD,C23061
-50 Resistor,R10,Resistor_SMD,C17738
-100 Resistor,R11,Resistor_SMD,C17408
-150k1w Resistor,"R12,R16,R17,R18,R19,R20,R21,R22,R23",Resistor_SMD,C25719
+10k Resistor,"R1,R14,R15",Resistor_SMD,C25804
+100 Resistor,R2,Resistor_SMD,C17408
+150k1w Resistor,"R3,R20,R21,R22,R23,R24,R25,R26,R27",Resistor_SMD,C25719
+22.1k Resistor,R4,Resistor_SMD,C25961
+47.5k Resistor,"R5,R16,R17,R18,R19",Resistor_SMD,C23061
+5.1k Resistor,"R6,R7",Resistor_SMD,C23186
+50 Resistor,R8,Resistor_SMD,C17738
+1k Resistor,"R9,R13",Resistor_SMD,C25585
+0 Resistor,"R10,R11",Resistor_SMD,C17477
+1k Resistor,R12,Resistor_SMD,C4410
 RAC05.05SK.277 ,RA05.SK.1,rac05-05sk,
 400V Voltage dependent resistor,RV1,Varistor,
 EN Push button switch  generic  two pins,SW1,Button_Switch_SMD,C318884
 IO0 Push button switch  generic  two pins,SW2,Button_Switch_SMD,C318884
-ULN2003A High Voltage  High Current Darlington Transistor Arrays,U1,Package_SO,C7512
+LD1117AV33_TO220 800mA Fixed Low Drop Positive Voltage Regulator,U1,Package_TO_SOT_THT,
 ESP32-WROOM-32E RF Module  ESP32-D0WD SoC  Wi-Fi 802.11b/g/n  Bl,U2,RF_Module,C701343
-LD1117AV33_TO220 800mA Fixed Low Drop Positive Voltage Regulator,U4,Package_TO_SOT_THT,
-MCP9700T-ETT Low power  analog thermistor temperature sensor  4,U5,Package_TO_SOT_SMD,C42288
-LDA210-PDIP DC Darlington Optocoupler  Vce 35V  CTR 600%  SO-4,"U6,U7",Package_DIP,
-CP2102N-A01-GQFN28 USB to UART master bridge  QFN-28,U8,Package_DFN_QFN,C105167
+CP2102N-A01-GQFN28 USB to UART master bridge  QFN-28,U3,Package_DFN_QFN,C105167
+ULN2003A High Voltage  High Current Darlington Transistor Arrays,U4,Package_SO,C7512
+LDA210-PDIP DC Darlington Optocoupler  Vce 35V  CTR 600%  SO-4,"U5,U6",Package_DIP,
+MCP9700T-ETT Low power  analog thermistor temperature sensor  4,U7,Package_TO_SOT_SMD,C42288
