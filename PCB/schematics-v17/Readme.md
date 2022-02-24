@@ -17,17 +17,19 @@ This circuit (ESPHome) is a side-car to the latching relay acting as an standard
 
 This version was minimized by:
 * Using SPST-NO 3A smaller relays
-* Using SMD 3W 200k resistors instead of THT
+* Using SMD 1W 150k resistors instead of THT
 * Removed external buttons connector
 * Removed external leds connector
 * Using SMD ULN2003A instead of THT
 * Optocoupler THT capacitors replaced by Tantalum SMD
 * Using bidirectional optocoupler (LDA210) instead of HCPL3700 to reduce Power dissipation (less current needed)
 * Embedding an ESP32 into the board, and adding USB-to-Serial circuitery with CP2102N
+* Adding USB-C support
 
 Security additions:
-* Added fuse at the neutral return from the sensors (F2)
+* Added fuses to every sensing channel
 * Resistors are before optocoupler, to make them work with less than 2V to N, instead of 110V to N
+* Production board is coated
 
 Stability:
 * Added filter capacitor to ULN2003A
@@ -38,13 +40,13 @@ Others:
 
 Device schematics (under development) 
 
-![board-schematics](readme-media/board-schematics.png)
+![board-schematics](readme-media/board-schematics.svg)
 ![board-pcb](readme-media/board-pcb.png)
 ![board-pcb-3d](readme-media/board-pcb-3d.png)
 
 # Development notes
 
-Generating fabrication files for JLCPCB
+## Generating fabrication files for JLCPCB
 1. Plot PCB Gerber + Drill + Map:
 
     ![board-pcb-3d](readme-media/tutorial/plot-1.png)
@@ -64,3 +66,7 @@ Generating fabrication files for JLCPCB
     ![board-pcb-3d](readme-media/tutorial/pos-3.png)
 
     PS C:\\...\smt-assembly> python3 .\kicad-to-jlcpcb-pos.py .\hamodule-top-pos.csv .\hamodule-top-pos-jlcpcb.csv
+
+## Generate documents
+
+![board-pcb-3d](readme-media/tutorial/gen-images-1.png)
