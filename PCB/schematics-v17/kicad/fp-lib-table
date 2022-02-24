@@ -1,5 +1,5 @@
 (fp_lib_table
-  (lib (name "esp32-footprint")(type "KiCad")(uri "${KIPRJMOD}/components-footprints/esp32-footprint")(options "")(descr ""))
+  (lib (name "esp32-footprint")(type "KiCad")(uri "${KIPRJMOD}/components-footprints/esp32-footprint")(options "")(descr "")(disabled))
   (lib (name "icons")(type "KiCad")(uri "${KIPRJMOD}/components-footprints/icons")(options "")(descr ""))
   (lib (name "PCN")(type "KiCad")(uri "${KIPRJMOD}/components-footprints/pcn-105D3/eec.pretty")(options "")(descr ""))
   (lib (name "wago-2604-1104")(type "KiCad")(uri "${KIPRJMOD}/components-footprints/wago/wago-2604-1104/footprints.pretty")(options "")(descr ""))
