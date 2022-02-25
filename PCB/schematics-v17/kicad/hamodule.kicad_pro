@@ -50,9 +50,9 @@
       },
       "diff_pair_dimensions": [
         {
-          "gap": 0.25,
-          "via_gap": 0.25,
-          "width": 0.2
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
         }
       ],
       "drc_exclusions": [
@@ -146,7 +146,7 @@
         "use_height_for_length_calcs": true
       },
       "track_widths": [
-        0.25,
+        0.0,
         0.25,
         0.35,
         0.4,
@@ -157,8 +157,8 @@
       ],
       "via_dimensions": [
         {
-          "diameter": 0.8,
-          "drill": 0.4
+          "diameter": 0.0,
+          "drill": 0.0
         }
       ],
       "zones_allow_external_fillets": false,
@@ -400,6 +400,88 @@
         "track_width": 0.25,
         "via_diameter": 0.8,
         "via_drill": 0.4,
+        "wire_width": 6.0
+      },
+      {
+        "bus_width": 12.0,
+        "clearance": 0.8,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Mains",
+        "nets": [
+          "220VAC(L)",
+          "220VAC(N)",
+          "L_IN",
+          "Net-(F2-Pad1)",
+          "Net-(F3-Pad1)",
+          "Net-(F4-Pad1)",
+          "Net-(F5-Pad1)",
+          "Net-(R20-Pad1)",
+          "Net-(R21-Pad1)",
+          "Net-(R22-Pad1)",
+          "Net-(R23-Pad1)",
+          "REO1",
+          "REO2",
+          "REO3",
+          "REO4",
+          "Sens1",
+          "Sens2",
+          "Sens3",
+          "Sens4"
+        ],
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6.0
+      },
+      {
+        "bus_width": 12.0,
+        "clearance": 0.4,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Mains-LowVoltage",
+        "nets": [
+          "Net-(R20-Pad2)",
+          "Net-(R21-Pad2)",
+          "Net-(R22-Pad2)",
+          "Net-(R23-Pad2)"
+        ],
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6.0
+      },
+      {
+        "bus_width": 12.0,
+        "clearance": 0.15,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "USB",
+        "nets": [
+          "D+",
+          "D-"
+        ],
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.5,
+        "via_drill": 0.3,
         "wire_width": 6.0
       }
     ],
