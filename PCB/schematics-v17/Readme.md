@@ -43,30 +43,31 @@ Device schematics (under development)
 ![board-schematics](readme-media/board-schematics.svg)
 ![board-pcb](readme-media/board-pcb.png)
 ![board-pcb-3d](readme-media/board-pcb-3d.png)
+![board-pcb-3d-2](readme-media/board-pcb-3d-2.png)
 
 # Development notes
 
 ## Generating fabrication files for JLCPCB
 1. Plot PCB Gerber + Drill + Map:
 
-    ![board-pcb-3d](readme-media/tutorial/plot-1.png)
-    ![board-pcb-3d](readme-media/tutorial/plot-2.png)
+    ![screenshot](readme-media/tutorial/plot-1.png)
+    ![screenshot](readme-media/tutorial/plot-2.png)
 
 1. Bom files
-    ![board-pcb-3d](readme-media/tutorial/bom-1.png)
-    ![board-pcb-3d](readme-media/tutorial/bom-2.png)
+    ![screenshot](readme-media/tutorial/bom-1.png)
+    ![screenshot](readme-media/tutorial/bom-2.png)
 
     Command: python3 "C:\Program Files\KiCad\bin\scripting\plugins/bom_csv_jlcpcb.py" "%I" "%O.csv"
-    ![board-pcb-3d](readme-media/tutorial/bom-3.png)
+    ![screenshot](readme-media/tutorial/bom-3.png)
 
 1. Drill files
-    ![board-pcb-3d](readme-media/tutorial/pos-1.png)
-    ![board-pcb-3d](readme-media/tutorial/pos-2.png)
+    ![screenshot](readme-media/tutorial/pos-1.png)
+    ![screenshot](readme-media/tutorial/pos-2.png)
     run the python script to rotate the components
-    ![board-pcb-3d](readme-media/tutorial/pos-3.png)
+    ![screenshot](readme-media/tutorial/pos-3.png)
 
     PS C:\\...\smt-assembly> python3 .\kicad-to-jlcpcb-pos.py .\hamodule-top-pos.csv .\hamodule-top-pos-jlcpcb.csv
 
 ## Generate documents
 
-![board-pcb-3d](readme-media/tutorial/gen-images-1.png)
+![screenshot](readme-media/tutorial/gen-images-1.png)
