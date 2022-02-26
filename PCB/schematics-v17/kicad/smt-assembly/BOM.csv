@@ -18,7 +18,7 @@ Current Jumper Generic connector  single row  01x02  script gene,J4,Connector_Pi
 Jumper Generic connector  single row  01x02  script generated (k,J5,Connector_PinHeader_2.54mm,
 Conn_01x02_Male Generic connector  single row  01x02  script gen,J6,Connector_PinHeader_2.54mm,
 USB_C_Receptacle_USB2.0 USB 2.0-only Type-C Receptacle connector,J7,Connector_USB,C167321
-DoNotCon-> Generic connector  single row  01x02  script generate,J8,Connector_PinHeader_2.00mm,
+DoNotCon Generic connector  single row  01x02  script generated ,J8,Connector_PinHeader_2.54mm,
 2604-1104 ,"J9,J11",wago-2604-1104,
 ESP Relays Generic connector  single row  01x04  script generate,J10,Connector_JST,
 EspSense Generic connector  single row  01x04  script generated ,J12,Connector_PinSocket_2.54mm,

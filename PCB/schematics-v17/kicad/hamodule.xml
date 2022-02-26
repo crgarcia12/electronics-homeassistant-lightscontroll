@@ -2,8 +2,8 @@
 <export version="E">
   <design>
     <source>C:\gitrepos\github\crgarcia12\electronics-homeassistant-lightscontroll\PCB\schematics-v17\kicad\hamodule.kicad_sch</source>
-    <date>26/02/2022 11:38:19</date>
-    <tool>Eeschema (6.0.0)</tool>
+    <date>26/02/2022 21:52:01</date>
+    <tool>Eeschema (6.0.2)</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title/>
@@ -502,8 +502,8 @@
       <tstamps>71f5476f-0264-4d6e-8eb4-eeb14fb982ae</tstamps>
     </comp>
     <comp ref="J8">
-      <value>DoNotCon-&gt;</value>
-      <footprint>Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical</footprint>
+      <value>DoNotCon</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
       <fields>
         <field name="Field4">Do Not Connect</field>
       </fields>
@@ -1943,7 +1943,6 @@
       <node ref="C4" pin="1" pintype="passive"/>
       <node ref="C7" pin="1" pintype="passive"/>
       <node ref="C8" pin="1" pintype="passive"/>
-      <node ref="J3" pin="2" pinfunction="Pin_2" pintype="passive"/>
       <node ref="J4" pin="1" pinfunction="Pin_1" pintype="passive"/>
       <node ref="R1" pin="2" pintype="passive"/>
       <node ref="R14" pin="1" pintype="passive"/>
@@ -2129,6 +2128,7 @@
     <net code="20" name="Net-(C5-Pad1)">
       <node ref="C5" pin="1" pintype="passive"/>
       <node ref="C6" pin="1" pintype="passive"/>
+      <node ref="J3" pin="2" pinfunction="Pin_2" pintype="passive"/>
       <node ref="J4" pin="2" pinfunction="Pin_2" pintype="passive"/>
       <node ref="U1" pin="2" pinfunction="VO" pintype="power_out"/>
     </net>
