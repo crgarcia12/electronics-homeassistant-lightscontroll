@@ -13,14 +13,13 @@
 A normal circuit sends all push buttons to the latching relay, which controlls the lights.
 This circuit (ESPHome) is a side-car to the latching relay acting as an standard push button, but also sensing the output of the latching relay to detect if the lights are on or off.
 
+# Version 1
+
 Device schematics (under development) 
 
 ![v1-board-schematics](readme-media/v1-board-schematics.png)
 ![v1-board-pcb](readme-media/v1-board-pcb.png)
 ![v1-board-pcb-3d](readme-media/v1-board-pcb-3d.png)
-
-
-
 
 # Version 2
 
