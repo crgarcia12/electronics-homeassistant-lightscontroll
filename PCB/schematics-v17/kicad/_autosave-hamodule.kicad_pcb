@@ -71,11 +71,11 @@
       (plotinvisibletext false)
       (sketchpadsonfab false)
       (subtractmaskfromsilk true)
-      (outputformat 5)
+      (outputformat 1)
       (mirror false)
       (drillshape 0)
       (scaleselection 1)
-      (outputdirectory "smt-assembly/svg")
+      (outputdirectory "smt-assembly/")
     )
   )
 
