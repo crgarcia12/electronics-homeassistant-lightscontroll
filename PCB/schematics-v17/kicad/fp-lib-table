@@ -6,4 +6,5 @@
   (lib (name "wago-2604-1102")(type "KiCad")(uri "${KIPRJMOD}/components-footprints/wago/wago-2604-1102/footprints.pretty")(options "")(descr ""))
   (lib (name "rac05-05sk")(type "KiCad")(uri "${KIPRJMOD}/components-footprints/rac05-05sk/CONV_RAC05-05SK")(options "")(descr ""))
   (lib (name "RST-80-AMMO")(type "KiCad")(uri "${KIPRJMOD}/components-footprints/RST-80-AMMO")(options "")(descr ""))
+  (lib (name "sht40")(type "KiCad")(uri "${KIPRJMOD}/components-footprints/sht40")(options "")(descr ""))
 )

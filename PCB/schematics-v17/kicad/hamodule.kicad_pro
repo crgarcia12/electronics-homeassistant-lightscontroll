@@ -420,9 +420,6 @@
           "Net-(F4-Pad1)",
           "Net-(F5-Pad1)",
           "Net-(F6-Pad1)",
-          "Net-(R20-Pad1)",
-          "Net-(R21-Pad1)",
-          "Net-(R22-Pad1)",
           "Net-(R23-Pad1)",
           "REO1",
           "REO2",
@@ -451,9 +448,6 @@
         "microvia_drill": 0.1,
         "name": "Mains-LowVoltage",
         "nets": [
-          "Net-(R20-Pad2)",
-          "Net-(R21-Pad2)",
-          "Net-(R22-Pad2)",
           "Net-(R23-Pad2)"
         ],
         "pcb_color": "rgba(0, 0, 0, 0.000)",

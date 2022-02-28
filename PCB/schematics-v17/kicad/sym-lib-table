@@ -5,4 +5,5 @@
   (lib (name "wago-2604-1102")(type "KiCad")(uri "${KIPRJMOD}/components-footprints/wago/wago-2604-1102/wago-2604-1102.kicad_sym")(options "")(descr ""))
   (lib (name "LDA210-PDIP")(type "KiCad")(uri "${KIPRJMOD}/components-footprints/LDA210/LDA210-PDIP.kicad_sym")(options "")(descr ""))
   (lib (name "RST-80-AMMO")(type "Legacy")(uri "${KIPRJMOD}/components-footprints/RST-80-AMMO/RST-80-AMMO.lib")(options "")(descr ""))
+  (lib (name "sht40")(type "KiCad")(uri "${KIPRJMOD}/components-footprints/sht40/sht40.kicad_sym")(options "")(descr ""))
 )
