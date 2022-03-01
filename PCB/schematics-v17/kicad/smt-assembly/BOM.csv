@@ -1,12 +1,12 @@
 Comment,Designator,Footprint,LCSC Part #
-100nF Polarized capacitor  small symbol,"C1,C2,C4,C6,C7,C9,C10,C11,C12,C13,C18,C19",Capacitor_SMD,C14663
+100nF Polarized capacitor  small symbol,"C1,C2,C4,C6,C7,C9,C10,C11,C12,C13,C18",Capacitor_SMD,C14663
 22uF Polarized capacitor  small symbol,C3,Capacitor_SMD,C59461
 10uF Polarized capacitor  small symbol,C5,Capacitor_THT,
 4.7uF Polarized capacitor  small symbol,C8,Capacitor_SMD,C19666
 4.7uF Polarized capacitor  small symbol,"C14,C15,C16,C17",Capacitor_SMD,C29823
-LED Light emitting diode,D1,LED_SMD,C2297
-D_TVS Bidirectional transient-voltage-suppression diode,"D2,D3,D4",Diode_SMD,C383211
-BAT60A-7 10V 3A High Current Recitifier Schottky Diode  SOD-323,D5,Diode_SMD,C124187
+LED Light emitting diode,"D1,D2",LED_SMD,C2297
+D_TVS Bidirectional transient-voltage-suppression diode,"D3,D4,D5",Diode_SMD,C383211
+BAT60A-7 10V 3A High Current Recitifier Schottky Diode  SOD-323,D6,Diode_SMD,C124187
 250V500mA Fuse,F1,Fuse,
 250V50mA Fuse,F2,Fuse,
 Fuse Fuse,"F3,F4,F5,F6",RST-80-AMMO,
@@ -14,29 +14,28 @@ MountingHole_Pad Mounting Hole with connection,"H1,H2,H3",MountingHole,
 2604-1102 ,J1,wago-2604-1102,
 GND|5V Generic connector  single row  01x02  script generated (k,J2,Connector_JST,
 GND|3.3V Generic connector  single row  01x02  script generated ,J3,Connector_JST,
-Current Jumper Generic connector  single row  01x02  script gene,J4,Connector_PinHeader_2.54mm,
-Jumper Generic connector  single row  01x02  script generated (k,J5,Connector_PinHeader_2.54mm,
-Conn_01x02_Male Generic connector  single row  01x02  script gen,J6,Connector_PinHeader_2.54mm,
+Jumper Generic connector  single row  01x02  script generated (k,J4,Connector_PinHeader_2.54mm,
+Conn_01x02_Male Generic connector  single row  01x02  script gen,J5,Connector_PinHeader_2.54mm,
+Current Jumper Generic connector  single row  01x02  script gene,J6,Connector_PinHeader_2.54mm,
 USB_C_Receptacle_USB2.0 USB 2.0-only Type-C Receptacle connector,J7,Connector_USB,C167321
 DoNotCon Generic connector  single row  01x02  script generated ,J8,Connector_PinHeader_2.54mm,
 2604-1104 ,"J9,J11",wago-2604-1104,
 ESP Relays Generic connector  single row  01x04  script generate,J10,Connector_JST,
 EspSense Generic connector  single row  01x04  script generated ,J12,Connector_PinSocket_2.54mm,
-TempIn Generic connector  single row  01x01  script generated (k,J13,Connector_PinHeader_2.54mm,
 PCN-105D PCN-124D3MHZ 000,"K1,K2,K3,K4",PCN,
 RAC05-05SK/277 ,PS1,rac05-05sk,
 SS8050-SMD NPN transistor  base/emitter/collector,Q1,Package_TO_SOT_SMD,C177739
 SS8050 NPN transistor  base/emitter/collector,Q2,Package_TO_SOT_SMD,C177739
-10k Resistor,"R1,R18,R19",Resistor_SMD,C25804
-100 Resistor,R2,Resistor_SMD,C17408
-150k1w Resistor,"R3,R20,R21,R22,R23,R24,R25,R26,R27",Resistor_SMD,C25719
-22.1k Resistor,R4,Resistor_SMD,C25961
-47.5k Resistor,"R5,R14,R15,R16,R17",Resistor_SMD,C23061
-5.1k Resistor,"R6,R7",Resistor_SMD,C23186
-50 Resistor,R8,Resistor_SMD,C17738
-1k Resistor,"R9,R13",Resistor_SMD,C25585
-0 Resistor,"R10,R11",Resistor_SMD,C17477
-1k Resistor,R12,Resistor_SMD,C4410
+10k Resistor,"R1,R2,R3,R21,R22",Resistor_SMD,C25804
+100 Resistor,"R4,R5",Resistor_SMD,C17408
+150k1w Resistor,"R6,R23,R24,R25,R26,R27,R28,R29,R30",Resistor_SMD,C25719
+22.1k Resistor,R7,Resistor_SMD,C25961
+47.5k Resistor,"R8,R17,R18,R19,R20",Resistor_SMD,C23061
+5.1k Resistor,"R9,R10",Resistor_SMD,C23186
+50 Resistor,R11,Resistor_SMD,C17738
+1k Resistor,"R12,R16",Resistor_SMD,C25585
+0 Resistor,"R13,R14",Resistor_SMD,C17477
+1k Resistor,R15,Resistor_SMD,C4410
 400V Voltage dependent resistor,RV1,Varistor,
 EN Push button switch  generic  two pins,SW1,Button_Switch_SMD,C318884
 IO0 Push button switch  generic  two pins,SW2,Button_Switch_SMD,C318884
@@ -45,4 +44,4 @@ ESP32-WROOM-32E RF Module  ESP32-D0WD SoC  Wi-Fi 802.11b/g/n  Bl,U2,RF_Module,C7
 CP2102N-A01-GQFN28 USB to UART master bridge  QFN-28,U3,Package_DFN_QFN,C964632
 ULN2003A High Voltage  High Current Darlington Transistor Arrays,U4,Package_SO,C7512
 LDA210-PDIP DC Darlington Optocoupler  Vce 35V  CTR 600%  SO-4,"U5,U6",Package_DIP,
-MCP9700T-ETT Low power  analog thermistor temperature sensor  4,U7,Package_TO_SOT_SMD,C42288
+SHT4x Temperature and humidity module,U7,sht40,C2909890
