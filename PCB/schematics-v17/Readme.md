@@ -70,4 +70,9 @@ Device schematics (under development)
 
 ## Generate documents
 
+schematics:
 ![screenshot](readme-media/tutorial/gen-images-1.png)
+
+PCBNew:
+
+I print to PDF, and then use an online tool to get high resolution images
