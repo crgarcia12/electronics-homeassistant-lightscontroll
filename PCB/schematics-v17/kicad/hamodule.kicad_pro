@@ -152,6 +152,7 @@
         0.4,
         0.6,
         1.0,
+        1.5,
         2.0,
         3.0
       ],
@@ -404,7 +405,7 @@
       },
       {
         "bus_width": 12.0,
-        "clearance": 0.8,
+        "clearance": 1.5,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -416,11 +417,15 @@
           "220VAC(L)",
           "220VAC(N)",
           "L_IN",
+          "Net-(F2-Pad2)",
           "Net-(F3-Pad1)",
           "Net-(F4-Pad1)",
           "Net-(F5-Pad1)",
           "Net-(F6-Pad1)",
           "Net-(R23-Pad1)",
+          "Net-(R24-Pad1)",
+          "Net-(R25-Pad1)",
+          "Net-(R26-Pad1)",
           "REO1",
           "REO2",
           "REO3",
@@ -439,7 +444,7 @@
       },
       {
         "bus_width": 12.0,
-        "clearance": 0.4,
+        "clearance": 0.8,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -448,7 +453,11 @@
         "microvia_drill": 0.1,
         "name": "Mains-LowVoltage",
         "nets": [
-          "Net-(R23-Pad2)"
+          "220VAC(N)-LowV",
+          "Net-(R23-Pad2)",
+          "Net-(R24-Pad2)",
+          "Net-(R25-Pad2)",
+          "Net-(R26-Pad2)"
         ],
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
