@@ -42,7 +42,7 @@ Stability:
 Others:
 * Added led indicator when powered-on
 
-Device schematics (under development) 
+# Device schematics
 
 ![board-schematics](readme-media/board-schematics.svg)
 ![board-pcb](readme-media/board-pcb.png)
