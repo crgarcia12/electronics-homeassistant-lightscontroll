@@ -25,11 +25,15 @@ This version was minimized by:
 * Using bidirectional optocoupler (LDA210) instead of HCPL3700 to reduce Power dissipation (less current needed)
 * Embedding an ESP32 into the board, and adding USB-to-Serial circuitery with CP2102N
 * Adding USB-C support
+* Adding I2C temperature IC. To alert in case the board get hot
+* Adding debug*ging pins for I2C and Serial
+* Adding led to ESP32 pin
+* Fix bug: ESP32 cannot pull up on all pins - adding external pull-ups resistors
 
 Security additions:
 * Added fuses to every sensing channel
 * Resistors are before optocoupler, to make them work with less than 2V to N, instead of 110V to N
-* Production board is coated
+* Production board is conformal coated with a silicone resin Electrolube SCC3
 
 Stability:
 * Added filter capacitor to ULN2003A
@@ -44,6 +48,12 @@ Device schematics (under development)
 ![board-pcb](readme-media/board-pcb.png)
 ![board-pcb-3d](readme-media/board-pcb-3d.png)
 ![board-pcb-3d-2](readme-media/board-pcb-3d-2.png)
+
+# Clearance
+There are three nets. Default, LowVoltageMains and Mains. Clearance are set as:
+
+* Mains: A6 for > 300V = 1.5mm (green)
+* LowVoltageMains: A6 < 2V = 0.13. For added safety 0.8 mm is used (red) 
 
 # Development notes
 
@@ -75,4 +85,4 @@ schematics:
 
 PCBNew:
 
-I print to PDF, and then use an online tool to get high resolution images
+Print to PDF, and then use an online tool to get high resolution images
