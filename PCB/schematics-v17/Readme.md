@@ -57,6 +57,7 @@ There are three nets. Default, LowVoltageMains and Mains. Clearance are set as:
 
 ![board-pcb-3d-2](readme-media/clearance-calculation.png)
 
+![board-pcb-3d-2](readme-media/clearance-configuration.png)
 
 # Development notes
 
