@@ -50,10 +50,11 @@ Device schematics (under development)
 ![board-pcb-3d-2](readme-media/board-pcb-3d-2.png)
 
 # Clearance
-There are three nets. Default, LowVoltageMains and Mains. Clearance are set as:
+There are three nets: Default, Mains-LowVoltage and Mains. Even when conformal coating is added, Clearance are calculated without it for added safety. In practice, instead of using A7, A6 is being used to do the calculations:
 
+* Default: Low voltage - 0.2mm
+* Mains-LowVoltage: A6 < 2V = 0.13. For added safety 0.8 mm is used (red) 
 * Mains: A6 for > 300V = 1.5mm (green)
-* LowVoltageMains: A6 < 2V = 0.13. For added safety 0.8 mm is used (red) 
 
 ![board-pcb-3d-2](readme-media/clearance-calculation.png)
 
