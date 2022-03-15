@@ -55,6 +55,9 @@ There are three nets. Default, LowVoltageMains and Mains. Clearance are set as:
 * Mains: A6 for > 300V = 1.5mm (green)
 * LowVoltageMains: A6 < 2V = 0.13. For added safety 0.8 mm is used (red) 
 
+![board-pcb-3d-2](readme-media/clearance-calculation.png)
+
+
 # Development notes
 
 ## Generating fabrication files for JLCPCB
