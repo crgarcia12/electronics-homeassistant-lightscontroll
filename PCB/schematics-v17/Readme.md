@@ -90,4 +90,4 @@ schematics:
 
 PCBNew:
 
-Print to PDF, and then use an online tool to get high resolution images
+Print to PDF, and then use an online tool to get high resolution images. For example https://pdfshelter.com/pdf-to-jpg
