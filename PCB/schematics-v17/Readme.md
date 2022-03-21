@@ -46,9 +46,10 @@ Others:
 
 ![board-schematics](readme-media/board-schematics.svg)
 ![board-pcb](readme-media/board-pcb.png)
+![board-pcb-3d-4](readme-media/board-pcb-3d-4.png)
 ![board-pcb-3d](readme-media/board-pcb-3d.png)
 ![board-pcb-3d-2](readme-media/board-pcb-3d-2.png)
-
+![board-pcb-3d-2](readme-media/board-pcb-3d-3.png)
 # Clearance
 There are three nets: Default, Mains-LowVoltage and Mains. Even when conformal coating is added, Clearance are calculated without it for added safety. In practice, instead of using A7, A6 is being used to do the calculations:
 
