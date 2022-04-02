@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP TMPM04253
+D Enclosed AC DC Converters 2 Uitgang 5V 3.3V 600mA, 150mA 85 ~ 264 VAC, 120 ~ 370 VDC Input
+K
+F https://www.tracopower.com/sites/default/files/products/datasheets/tmp_tmpm_datasheet.pdf
+$ENDCMP
+#
+#End Doc Library
