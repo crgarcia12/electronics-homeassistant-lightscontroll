@@ -8,7 +8,7 @@
 
  Following those rules and using as a reference a multi-switch light controlled with a mechanical latching relay, this is the wiring idea:
 
-![alt text](PCB/schematics-v17/readme-media/relay-wiring.png)
+![alt text](PCB/schematics-v17-safety-jlcpcb/readme-media/relay-wiring.png)
 
 A normal circuit sends all push buttons to the latching relay, which controlls the lights.
 This circuit (ESPHome) is a side-car to the latching relay acting as an standard push button, but also sensing the output of the latching relay to detect if the lights are on or off.
@@ -60,6 +60,6 @@ Since Version 2 there were many changes:
 * Remove capacitors from 5v->3.3 converter, to avoid inrush current at the USB
 * Adding external pull-up resistors for ESP32, some pins do not have internal pull-ups
 * Adding mains nets with creepage and clearance  
-![board-schematics](PCB/schematics-v17/readme-media/board-schematics.svg)
-![board-pcb](PCB/schematics-v17/readme-media/board-pcb.png)
-![board-pcb-3d](PCB/schematics-v17/readme-media/board-pcb-3d.png)
+![board-schematics](PCB/schematics-v17-safety-jlcpcb/readme-media/board-schematics.svg)
+![board-pcb](PCB/schematics-v17-safety-jlcpcb/readme-media/board-pcb.png)
+![board-pcb-3d](PCB/schematics-v17-safety-jlcpcb/readme-media/board-pcb-3d.png)
