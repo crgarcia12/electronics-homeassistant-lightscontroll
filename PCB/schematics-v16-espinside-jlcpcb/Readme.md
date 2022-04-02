@@ -41,7 +41,9 @@ Device schematics (under development)
 ![board-schematics](readme-media/board-schematics.png)
 ![board-pcb](readme-media/board-pcb.png)
 ![board-pcb-3d](readme-media/board-pcb-3d.png)
-
+![board-smt-pos](readme-media/smt-possitions.png)
+![board-bill-1](readme-media/bill2.png)
+![board-bill-2](readme-media/bill.png)
 # Development notes
 
 Generating fabrication files for JLCPCB
