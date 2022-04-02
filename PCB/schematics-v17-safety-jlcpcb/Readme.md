@@ -16,31 +16,19 @@ This circuit (ESPHome) is a side-car to the latching relay acting as an standard
 # Changes in this version
 
 This version was minimized by:
-* Using SPST-NO 3A smaller relays
-* Using SMD 1W 150k resistors instead of THT
-* Removed external buttons connector
-* Removed external leds connector
-* Using SMD ULN2003A instead of THT
-* Optocoupler THT capacitors replaced by Tantalum SMD
-* Using bidirectional optocoupler (LDA210) instead of HCPL3700 to reduce Power dissipation (less current needed)
-* Embedding an ESP32 into the board, and adding USB-to-Serial circuitery with CP2102N
 * Adding USB-C support
 * Adding I2C temperature IC. To alert in case the board get hot
-* Adding debug*ging pins for I2C and Serial
+* Adding debugging pins for I2C and Serial
 * Adding led to ESP32 pin
 * Fix bug: ESP32 cannot pull up on all pins - adding external pull-ups resistors
 
 Security additions:
 * Added fuses to every sensing channel
-* Resistors are before optocoupler, to make them work with less than 2V to N, instead of 110V to N
+* Added littlefuse holders, for easier replacing of fuses
+* Increased net clearance
+* Routed N far from digital area
+* Redesigned security slots
 * Production board is conformal coated with a silicone resin Electrolube SCC3
-
-Stability:
-* Added filter capacitor to ULN2003A
-* Added filter capacitors to LD1117AV33
-
-Others:
-* Added led indicator when powered-on
 
 # Device schematics
 
