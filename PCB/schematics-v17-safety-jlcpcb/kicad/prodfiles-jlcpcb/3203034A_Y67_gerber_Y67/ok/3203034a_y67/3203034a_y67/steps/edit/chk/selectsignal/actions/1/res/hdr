@@ -1,0 +1,1089 @@
+STAT = D
+SEVERITY = 0
+LAST_TIME = 1648863279
+DURATION = 1 SECONDS
+CATEGORY {
+    NAME = p2p
+    TITLE = Pad to pad
+    DESCRIPTION = Spacing;Pad 1;Pad 2
+    SORT_ORDER = 4
+    RANGE = 0.0058268 0.0070000 0.0100000 
+}
+CATEGORY {
+    NAME = p2c
+    TITLE = Pad to circuit
+    DESCRIPTION = Spacing;Pad;Circuit
+    SORT_ORDER = 5
+    RANGE = 0.0058268 0.0070000 0.0100000 
+}
+CATEGORY {
+    NAME = smd2c
+    TITLE = SMD to circuit
+    DESCRIPTION = Spacing;SMD;Circuit
+    SORT_ORDER = 6
+    RANGE = 0.0058268 0.0070000 0.0100000 
+}
+CATEGORY {
+    NAME = c2c
+    TITLE = Circuit to circuit
+    DESCRIPTION = Spacing;Circuit 1;Circuit 2
+    SORT_ORDER = 7
+    RANGE = 0.0058268 0.0070000 0.0100000 
+}
+CATEGORY {
+    NAME = l2l
+    TITLE = Line to Line
+    DESCRIPTION = Spacing;Line;Line
+    SORT_ORDER = 8
+    RANGE = 0.0058268 0.0070000 0.0100000 
+}
+CATEGORY {
+    NAME = c2l
+    TITLE = Circuit to Line
+    DESCRIPTION = Spacing;Circuit;Line
+    SORT_ORDER = 9
+    RANGE = 0.0058268 0.0070000 0.0100000 
+}
+CATEGORY {
+    NAME = text2text
+    TITLE = Text to text
+    DESCRIPTION = Spacing;Text 1;Text 2
+    SORT_ORDER = 11
+    RANGE = 0.0040000 0.0070000 0.0100000 
+}
+CATEGORY {
+    NAME = npth2p
+    TITLE = NPTH to pad
+    DESCRIPTION = Spacing;Hole;Pad
+    SORT_ORDER = 18
+    RANGE = 0.0080000 0.0100000 0.0120000 
+}
+CATEGORY {
+    NAME = npth2c
+    TITLE = NPTH to circuit
+    DESCRIPTION = Spacing;Hole;Circuit
+    SORT_ORDER = 19
+    RANGE = 0.0080000 0.0100000 0.0120000 
+}
+CATEGORY {
+    NAME = pth2c
+    TITLE = PTH to Copper
+    DESCRIPTION = Spacing;Hole;Feature
+    SORT_ORDER = 22
+    RANGE = 0.0100000 0.0120000 0.0140000 
+}
+CATEGORY {
+    NAME = pth2l
+    TITLE = PTH to Line
+    DESCRIPTION = Spacing;Hole;Feature
+    SORT_ORDER = 23
+    RANGE = 0.0100000 0.0120000 0.0140000 
+}
+CATEGORY {
+    NAME = pth2p
+    TITLE = PTH to Pad
+    DESCRIPTION = Spacing;Hole;Feature
+    SORT_ORDER = 24
+    RANGE = 0.0100000 0.0120000 0.0140000 
+}
+CATEGORY {
+    NAME = ar
+    TITLE = PTH Annular ring
+    DESCRIPTION = Ring;Hole;Feature
+    SORT_ORDER = 28
+    RANGE = 0.0058268 0.0070000 0.0090000 
+}
+CATEGORY {
+    NAME = reg
+    TITLE = PTH Registration
+    DESCRIPTION = Distance;Hole;Feature
+    SORT_ORDER = 31
+    RANGE = 0.0030000 0.0020000 0.0000000 
+}
+CATEGORY {
+    NAME = r2c
+    TITLE = Rout to Copper
+    DESCRIPTION = Spacing;Rout;Feature
+    SORT_ORDER = 35
+    RANGE = 0.0150000 0.0200000 0.0250000 
+}
+CATEGORY {
+    NAME = pad
+    TITLE = Pads
+    DESCRIPTION = Size;Feature
+    SORT_ORDER = 36
+    RANGE = 0.0050000 0.0100000 0.5000000 
+}
+CATEGORY {
+    NAME = line
+    TITLE = Lines
+    DESCRIPTION = Size;Feature
+    SORT_ORDER = 37
+    RANGE = 0.0050000 0.0080000 0.0100000 
+}
+CATEGORY {
+    NAME = non_standard_rotated_line
+    TITLE = Non standard rotated lines
+    DESCRIPTION = Size;Angle
+    SORT_ORDER = 38
+    RANGE = 100.0000000 100.0010000 100.0020000 
+}
+CATEGORY {
+    NAME = shaved_line
+    TITLE = Shaved Lines
+    DESCRIPTION = Size;Feature
+    SORT_ORDER = 40
+    RANGE = 100.0000000 100.0010000 100.0020000 
+}
+CATEGORY {
+    NAME = inconsistent_line_width
+    TITLE = Inconsistent Line Width
+    DESCRIPTION = Size;Feature
+    SORT_ORDER = 41
+    RANGE = 100.0000000 100.0010000 100.0020000 
+}
+CATEGORY {
+    NAME = text
+    TITLE = Text
+    DESCRIPTION = Width;Feature
+    SORT_ORDER = 42
+    RANGE = 0.0040000 0.0070000 0.0090000 
+}
+CATEGORY {
+    NAME = text_fld
+    TITLE = Text Fields
+    DESCRIPTION = Size;Feature
+    SORT_ORDER = 43
+    RANGE = 0.0200000 0.0300000 0.4000000 
+}
+CATEGORY {
+    NAME = sliver
+    TITLE = Slivers
+    DESCRIPTION = Size;Feature1
+    SORT_ORDER = 44
+    RANGE = 0.0040000 0.0080000 0.0100000 
+}
+CATEGORY {
+    NAME = self_sliver
+    TITLE = ** Not Used **
+    DESCRIPTION = Size;Feature1
+    SORT_ORDER = 45
+}
+CATEGORY {
+    NAME = local_spacing
+    TITLE = Local Spacing
+    DESCRIPTION = Size;Feature1
+    SORT_ORDER = 46
+    RANGE = 0.0040000 0.0080000 0.0100000 
+}
+CATEGORY {
+    NAME = stub
+    TITLE = Stubs
+    DESCRIPTION = Shape;Feature
+    SORT_ORDER = 47
+    RANGE = 1.0000000 1.0010000 1.0020000 
+}
+CATEGORY {
+    NAME = smd_pad
+    TITLE = SMD Pads
+    DESCRIPTION = Shape
+    SORT_ORDER = 48
+    RANGE = 0.0080000 0.0150000 0.0250000 
+}
+CATEGORY {
+    NAME = shaved_smd
+    TITLE = Shaved SMD
+    DESCRIPTION = Shape
+    SORT_ORDER = 27
+    RANGE = 10.0000000 10.0010000 10.0020000 
+}
+CATEGORY {
+    NAME = smd_pitch
+    TITLE = SMD Pitch
+    DESCRIPTION = Pitch
+    SORT_ORDER = 49
+    RANGE = 0.0150000 0.0200000 0.0250000 
+}
+CATEGORY {
+    NAME = smd_package
+    TITLE = SMD Packages
+    DESCRIPTION = Package
+    SORT_ORDER = 50
+    RANGE = 0.1000000 0.2000000 1.0000000 
+}
+CATEGORY {
+    NAME = neckdown
+    TITLE = Line Neckdown
+    DESCRIPTION = Size;Line
+    SORT_ORDER = 39
+    RANGE = 0.0050000 0.0080000 0.0100000 
+}
+CATEGORY {
+    NAME = npth_ar
+    TITLE = NPTH Annular ring
+    DESCRIPTION = Ring;Hole;Feature
+    SORT_ORDER = 20
+    RANGE = 0.0090000 0.0110000 0.0140000 
+}
+CATEGORY {
+    NAME = npth_reg
+    TITLE = NPTH Registration
+    DESCRIPTION = Distance;Hole;Feature
+    SORT_ORDER = 21
+    RANGE = 0.0030000 0.0020000 0.0000000 
+}
+CATEGORY {
+    NAME = spacing_length
+    TITLE = Spacing length
+    DESCRIPTION = Distance;Circuit 1;Circuit 2
+    SORT_ORDER = 33
+    RANGE = 0.0050000 0.0070000 0.0100000 
+}
+CATEGORY {
+    NAME = self_spacing
+    TITLE = Same Net Spacing
+    DESCRIPTION = Distance
+    SORT_ORDER = 10
+    RANGE = 0.0050000 0.0070000 0.0100000 
+}
+CATEGORY {
+    NAME = cad_short
+    TITLE = CAD Short
+    DESCRIPTION = Short;Feature1;Feature2
+    SORT_ORDER = 12
+    RANGE = 1.0000000 1.0010000 1.0020000 
+}
+CATEGORY {
+    NAME = cad_self_spacing
+    TITLE = CAD Self Spacing
+    DESCRIPTION = Distance;Feature1;Feature2
+    SORT_ORDER = 13
+    RANGE = 0.0050000 0.0070000 0.0100000 
+}
+CATEGORY {
+    NAME = pth_ar
+    TITLE = PTH (Comp) Annular ring
+    DESCRIPTION = Ring;Hole;Feature
+    SORT_ORDER = 29
+    RANGE = 0.0058268 0.0070000 0.0090000 
+}
+CATEGORY {
+    NAME = via_ar
+    TITLE = VIA Annular ring
+    DESCRIPTION = Ring;Hole;Feature
+    SORT_ORDER = 30
+    RANGE = 0.0058268 0.0070000 0.0090000 
+}
+CATEGORY {
+    NAME = conductor_width
+    TITLE = Conductor width
+    DESCRIPTION = Width
+    SORT_ORDER = 51
+    RANGE = 0.0051181 0.0070000 0.0080000 
+}
+CATEGORY {
+    NAME = arc
+    TITLE = Arcs
+    DESCRIPTION = Size
+    SORT_ORDER = 52
+    RANGE = 0.0050000 0.0080000 0.0100000 
+}
+CATEGORY {
+    NAME = shaved_arc
+    TITLE = Shaved Arcs
+    DESCRIPTION = Size;Feature
+    SORT_ORDER = 53
+    RANGE = 0.0050000 0.0080000 0.0100000 
+}
+CATEGORY {
+    NAME = inconsistent_arc_width
+    TITLE = Inconsistent Arc Width
+    DESCRIPTION = Size;Feature
+    SORT_ORDER = 54
+    RANGE = 100.0000000 100.0010000 100.0020000 
+}
+CATEGORY {
+    NAME = via2c
+    TITLE = VIA to Copper
+    DESCRIPTION = Spacing;Hole;Feature
+    SORT_ORDER = 25
+    RANGE = 0.0090000 0.0110000 0.0140000 
+}
+CATEGORY {
+    NAME = via2l
+    TITLE = VIA to Line
+    DESCRIPTION = Spacing;Hole;Feature
+    SORT_ORDER = 26
+    RANGE = 0.0090000 0.0110000 0.0140000 
+}
+CATEGORY {
+    NAME = via2p
+    TITLE = VIA to Pad
+    DESCRIPTION = Spacing;Hole;Feature
+    SORT_ORDER = 27
+    RANGE = 0.0090000 0.0110000 0.0140000 
+}
+CATEGORY {
+    NAME = miss_via
+    TITLE = Missing Pad for VIA
+    DESCRIPTION = VIA
+    SORT_ORDER = 32
+    RANGE = 1.0000000 1.0010000 1.0020000 
+}
+CATEGORY {
+    NAME = miss_pth
+    TITLE = Missing Pad for PTH
+    DESCRIPTION = PTH
+    SORT_ORDER = 33
+    RANGE = 1.0000000 1.0010000 1.0020000 
+}
+CATEGORY {
+    NAME = miss_cu
+    TITLE = Missing Cu for VIA
+    DESCRIPTION = VIA
+    SORT_ORDER = 34
+    RANGE = 1.0000000 1.0010000 1.0020000 
+}
+CATEGORY {
+    NAME = toe2toe
+    TITLE = ToePrint to ToePrint
+    DESCRIPTION = Distance
+    SORT_ORDER = 0
+    RANGE = 0.0050000 0.0070000 0.0100000 
+}
+CATEGORY {
+    NAME = smd2smd
+    TITLE = SMD to SMD
+    DESCRIPTION = Distance
+    SORT_ORDER = 1
+    RANGE = 0.0080000 0.0140000 0.0160000 
+}
+CATEGORY {
+    NAME = smd2pad
+    TITLE = SMD to Pad
+    DESCRIPTION = Distance
+    SORT_ORDER = 51
+    RANGE = 0.0080000 0.0140000 0.0160000 
+}
+CATEGORY {
+    NAME = via2via
+    TITLE = Via to Via
+    DESCRIPTION = Distance
+    SORT_ORDER = 2
+    RANGE = 0.0050000 0.0070000 0.0100000 
+}
+CATEGORY {
+    NAME = pth2pth
+    TITLE = PTH to PTH
+    DESCRIPTION = Distance
+    SORT_ORDER = 3
+    RANGE = 0.0050000 0.0070000 0.0100000 
+}
+CATEGORY {
+    NAME = ex2ex
+    TITLE = Exposed to Exposed
+    DESCRIPTION = Distance
+    SORT_ORDER = 14
+    RANGE = 0.0100000 0.0120000 0.0150000 
+}
+CATEGORY {
+    NAME = cov2cov
+    TITLE = Covered to Covered
+    DESCRIPTION = Distance
+    SORT_ORDER = 15
+    RANGE = 0.0050000 0.0070000 0.0100000 
+}
+CATEGORY {
+    NAME = ex2fcov
+    TITLE = Exposed to Fully Covered
+    DESCRIPTION = Distance
+    SORT_ORDER = 16
+    RANGE = 0.0070000 0.0090000 0.0120000 
+}
+CATEGORY {
+    NAME = ex2cov
+    TITLE = Exposed to Covered
+    DESCRIPTION = Distance
+    SORT_ORDER = 17
+    RANGE = 0.0070000 0.0090000 0.0120000 
+}
+CATEGORY {
+    NAME = npthtc
+    TITLE = NPTH touches Copper
+    DESCRIPTION = Distance;Hole;Feature
+    SORT_ORDER = 55
+    RANGE = 1.0000000 1.0010000 1.0020000 
+}
+CATEGORY {
+    NAME = it2h
+    TITLE = Incoming Trace to Hole
+    DESCRIPTION = Distance;Hole;Feature
+    SORT_ORDER = 56
+    RANGE = 0.0050000 0.0070000 0.0100000 
+}
+CATEGORY {
+    NAME = pr_ar
+    TITLE = Plated Rout Annular Ring
+    DESCRIPTION = Ring;Rout
+    SORT_ORDER = 57
+    RANGE = 0.0050000 0.0070000 0.0100000 
+}
+CATEGORY {
+    NAME = net_too_large
+    TITLE = Net Too Large
+    DESCRIPTION = Shape
+    SORT_ORDER = 58
+    RANGE = 10.0000000 10.0010000 10.0020000 
+}
+CATEGORY {
+    NAME = pr_miss_cu
+    TITLE = Missing Cu for Plated Rout
+    DESCRIPTION = Rout
+    SORT_ORDER = 59
+    RANGE = 1.0000000 1.0010000 1.0020000 
+}
+CATEGORY {
+    NAME = ignored_net
+    TITLE = Ignored Net
+    DESCRIPTION = Shape
+    SORT_ORDER = 60
+    RANGE = 10.0000000 10.0010000 10.0020000 
+}
+CATEGORY {
+    NAME = p2p_con
+    TITLE = Pad to Pad Connection
+    DESCRIPTION = Shape
+    SORT_ORDER = 61
+    RANGE = 10.0000000 10.0010000 10.0020000 
+}
+CATEGORY {
+    NAME = p2c_con
+    TITLE = Pad to Cu Connection
+    DESCRIPTION = Shape
+    SORT_ORDER = 62
+    RANGE = 10.0000000 10.0010000 10.0020000 
+}
+CATEGORY {
+    NAME = p2l_con
+    TITLE = Pad to Line Connection
+    DESCRIPTION = Shape
+    SORT_ORDER = 63
+    RANGE = 10.0000000 10.0010000 10.0020000 
+}
+CATEGORY {
+    NAME = problem_con
+    TITLE = Feature too small to check
+    DESCRIPTION = Shape
+    SORT_ORDER = 64
+    RANGE = 10.0000000 10.0010000 10.0020000 
+}
+CATEGORY {
+    NAME = laser_via_ar
+    TITLE = Laser Via Annular ring
+    DESCRIPTION = Ring;Hole;Feature
+    SORT_ORDER = 65
+    RANGE = 0.0040000 0.0070000 0.0090000 
+}
+CATEGORY {
+    NAME = photo_via_ar
+    TITLE = Photo Via Annular ring
+    DESCRIPTION = Ring;Hole;Feature
+    SORT_ORDER = 66
+    RANGE = 0.0040000 0.0070000 0.0090000 
+}
+ATTRIBUTE {
+    tl_min_p2p = N/A
+    tl_typ_p2p = N/A
+    tl_min_p2p_num = N/A
+    tl_typ_p2p_num = N/A
+    tl_min_p2c = N/A
+    tl_typ_p2c = N/A
+    tl_min_p2c_num = N/A
+    tl_typ_p2c_num = N/A
+    tl_dra_smd2c = N/A
+    tl_min_smd2c = N/A
+    tl_typ_smd2c = N/A
+    tl_min_smd2c_num = N/A
+    tl_typ_smd2c_num = N/A
+    tl_min_c2c = N/A
+    tl_typ_c2c = N/A
+    tl_min_c2c_num = N/A
+    tl_typ_c2c_num = N/A
+    tl_min_l2l = N/A
+    tl_typ_l2l = N/A
+    tl_min_l2l_num = N/A
+    tl_typ_l2l_num = N/A
+    tl_min_c2l = N/A
+    tl_typ_c2l = N/A
+    tl_min_c2l_num = N/A
+    tl_typ_c2l_num = N/A
+    tl_min_self_spacing = N/A
+    tl_typ_self_spacing = N/A
+    tl_min_self_spacing_num = N/A
+    tl_typ_self_spacing_num = N/A
+    tl_min_text2text = N/A
+    tl_typ_text2text = N/A
+    tl_dra_npth2p = N/A
+    tl_min_npth2p = N/A
+    tl_typ_npth2p = N/A
+    tl_dra_npth2c = N/A
+    tl_min_npth2c = N/A
+    tl_typ_npth2c = N/A
+    tl_min_npth2c_num = N/A
+    tl_typ_npth2c_num = N/A
+    tl_dra_pth2c = N/A
+    tl_min_pth2c = N/A
+    tl_typ_pth2c = N/A
+    tl_min_pth2c_num = N/A
+    tl_typ_pth2c_num = N/A
+    tl_dra_pth2l = N/A
+    tl_min_pth2l = N/A
+    tl_typ_pth2l = N/A
+    tl_min_pth2l_num = N/A
+    tl_typ_pth2l_num = N/A
+    tl_dra_pth2p = N/A
+    tl_min_pth2p = N/A
+    tl_typ_pth2p = N/A
+    tl_min_pth2p_num = N/A
+    tl_typ_pth2p_num = N/A
+    tl_dra_via2c = N/A
+    tl_min_via2c = N/A
+    tl_typ_via2c = N/A
+    tl_min_via2c_num = N/A
+    tl_typ_via2c_num = N/A
+    tl_dra_via2l = N/A
+    tl_min_via2l = N/A
+    tl_typ_via2l = N/A
+    tl_min_via2l_num = N/A
+    tl_typ_via2l_num = N/A
+    tl_dra_via2p = N/A
+    tl_min_via2p = N/A
+    tl_typ_via2p = N/A
+    tl_min_via2p_num = N/A
+    tl_typ_via2p_num = N/A
+    tl_min_ex2ex = N/A
+    tl_typ_ex2ex = N/A
+    tl_min_ex2fcov = N/A
+    tl_typ_ex2fcov = N/A
+    tl_min_ex2cov = N/A
+    tl_typ_ex2cov = N/A
+    tl_min_cov2cov = N/A
+    tl_typ_cov2cov = N/A
+    tl_dra_ar = N/A
+    tl_min_ar = N/A
+    tl_typ_ar = N/A
+    tl_min_ar_num = N/A
+    tl_typ_ar_num = N/A
+    tl_dra_pth_ar = 30.300
+    tl_min_pth_ar = 131.900
+    tl_typ_pth_ar = 132.080
+    tl_min_pth_ar_num = 8
+    tl_typ_pth_ar_num = 8
+    tl_dra_via_ar = 28.435
+    tl_min_via_ar = 130.035
+    tl_typ_via_ar = 129.540
+    tl_min_via_ar_num = 2
+    tl_typ_via_ar_num = 2
+    tl_dra_laser_via_ar = N/A
+    tl_min_laser_via_ar = N/A
+    tl_typ_laser_via_ar = N/A
+    tl_min_laser_via_ar_num = N/A
+    tl_typ_laser_via_ar_num = N/A
+    tl_dra_photo_via_ar = N/A
+    tl_min_photo_via_ar = N/A
+    tl_typ_photo_via_ar = N/A
+    tl_min_photo_via_ar_num = N/A
+    tl_typ_photo_via_ar_num = N/A
+    tl_min_reg = N/A
+    tl_typ_reg = N/A
+    tl_max_reg = N/A
+    tl_min_reg_num = N/A
+    tl_typ_reg_num = N/A
+    tl_max_reg_num = N/A
+    tl_dra_npth_ar = N/A
+    tl_min_npth_ar = N/A
+    tl_typ_npth_ar = N/A
+    tl_min_npth_reg = N/A
+    tl_num_npth_reg = 0
+    tl_typ_npth_reg = N/A
+    tl_dra_it2h = N/A
+    tl_min_it2h = N/A
+    tl_typ_it2h = N/A
+    tl_min_r2c = N/A
+    tl_typ_r2c = N/A
+    tl_min_pad = N/A
+    tl_typ_pad = N/A
+    tl_min_line = N/A
+    tl_num_line = 0
+    tl_typ_line = N/A
+    tl_min_line_num = N/A
+    tl_typ_line_num = N/A
+    tl_min_shaved_line = N/A
+    tl_num_shaved_line = 0
+    tl_typ_shaved_line = N/A
+    tl_num_inconsistent_line_width = 0
+    tl_min_sliver = N/A
+    tl_num_sliver = 0
+    tl_typ_sliver = N/A
+    tl_min_local_spacing = N/A
+    tl_num_local_spacing = 0
+    tl_typ_local_spacing = N/A
+    tl_min_neckdown = N/A
+    tl_num_neckdown = 0
+    tl_typ_neckdown = N/A
+    tl_min_neckdown_num = N/A
+    tl_typ_neckdown_num = N/A
+    tl_num_stub = 0
+    tl_typ_stub = N/A
+    tl_min_smd_pad = N/A
+    tl_typ_smd_pad = N/A
+    tl_min_smd_pad_num = N/A
+    tl_typ_smd_pad_num = N/A
+    tl_min_shaved_smd = N/A
+    tl_typ_shaved_smd = N/A
+    tl_min_smd_pitch = N/A
+    tl_typ_smd_pitch = N/A
+    tl_min_smd_package = N/A
+    tl_typ_smd_package = N/A
+    tl_min_conductor_width = N/A
+    tl_typ_conductor_width = N/A
+    tl_min_conductor_width_num = N/A
+    tl_typ_conductor_width_num = N/A
+    tl_min_arc = N/A
+    tl_num_arc = 0
+    tl_typ_arc = N/A
+    tl_min_shaved_arc = N/A
+    tl_num_shaved_arc = 0
+    tl_typ_shaved_arc = N/A
+    tl_num_inconsistent_arc_width = 0
+    tl_min_non_standard_rotated_line = N/A
+    tl_num_non_standard_rotated_line = 0
+    tl_typ_non_standard_rotated_line = N/A
+    tl_num_miss_via = 0
+    tl_num_miss_pth = 0
+    tl_num_miss_cu = 0
+    tl_min_toe2toe = N/A
+    tl_typ_toe2toe = N/A
+    tl_min_smd2smd = N/A
+    tl_typ_smd2smd = N/A
+    tl_min_smd2smd_num = N/A
+    tl_typ_smd2smd_num = N/A
+    tl_min_smd2pad = N/A
+    tl_typ_smd2pad = N/A
+    tl_min_smd2pad_num = N/A
+    tl_typ_smd2pad_num = N/A
+    tl_min_via2via = N/A
+    tl_typ_via2via = N/A
+    tl_min_via2via_num = N/A
+    tl_typ_via2via_num = N/A
+    tl_min_pth2pth = N/A
+    tl_typ_pth2pth = N/A
+    tl_min_pth2pth_num = N/A
+    tl_typ_pth2pth_num = N/A
+    tl_num_npthtc = 0
+    tl_dra_pr_ar = N/A
+    tl_min_pr_ar = N/A
+    tl_typ_pr_ar = N/A
+    tl_num_pr_miss_cu = 0
+    tl_num_p2p_con = 0
+    tl_num_p2c_con = 0
+    tl_num_p2l_con = 0
+    tl_num_problem_con = 0
+    tl_dra = 28.435
+    bl_min_p2p = N/A
+    bl_typ_p2p = N/A
+    bl_min_p2p_num = N/A
+    bl_typ_p2p_num = N/A
+    bl_min_p2c = N/A
+    bl_typ_p2c = N/A
+    bl_min_p2c_num = N/A
+    bl_typ_p2c_num = N/A
+    bl_dra_smd2c = N/A
+    bl_min_smd2c = N/A
+    bl_typ_smd2c = N/A
+    bl_min_smd2c_num = N/A
+    bl_typ_smd2c_num = N/A
+    bl_min_c2c = N/A
+    bl_typ_c2c = N/A
+    bl_min_c2c_num = N/A
+    bl_typ_c2c_num = N/A
+    bl_min_l2l = N/A
+    bl_typ_l2l = N/A
+    bl_min_l2l_num = N/A
+    bl_typ_l2l_num = N/A
+    bl_min_c2l = N/A
+    bl_typ_c2l = N/A
+    bl_min_c2l_num = N/A
+    bl_typ_c2l_num = N/A
+    bl_min_self_spacing = N/A
+    bl_typ_self_spacing = N/A
+    bl_min_self_spacing_num = N/A
+    bl_typ_self_spacing_num = N/A
+    bl_min_text2text = N/A
+    bl_typ_text2text = N/A
+    bl_dra_npth2p = N/A
+    bl_min_npth2p = N/A
+    bl_typ_npth2p = N/A
+    bl_dra_npth2c = N/A
+    bl_min_npth2c = N/A
+    bl_typ_npth2c = N/A
+    bl_min_npth2c_num = N/A
+    bl_typ_npth2c_num = N/A
+    bl_dra_pth2c = N/A
+    bl_min_pth2c = N/A
+    bl_typ_pth2c = N/A
+    bl_min_pth2c_num = N/A
+    bl_typ_pth2c_num = N/A
+    bl_dra_pth2l = N/A
+    bl_min_pth2l = N/A
+    bl_typ_pth2l = N/A
+    bl_min_pth2l_num = N/A
+    bl_typ_pth2l_num = N/A
+    bl_dra_pth2p = N/A
+    bl_min_pth2p = N/A
+    bl_typ_pth2p = N/A
+    bl_min_pth2p_num = N/A
+    bl_typ_pth2p_num = N/A
+    bl_dra_via2c = N/A
+    bl_min_via2c = N/A
+    bl_typ_via2c = N/A
+    bl_min_via2c_num = N/A
+    bl_typ_via2c_num = N/A
+    bl_dra_via2l = N/A
+    bl_min_via2l = N/A
+    bl_typ_via2l = N/A
+    bl_min_via2l_num = N/A
+    bl_typ_via2l_num = N/A
+    bl_dra_via2p = N/A
+    bl_min_via2p = N/A
+    bl_typ_via2p = N/A
+    bl_min_via2p_num = N/A
+    bl_typ_via2p_num = N/A
+    bl_min_ex2ex = N/A
+    bl_typ_ex2ex = N/A
+    bl_min_ex2fcov = N/A
+    bl_typ_ex2fcov = N/A
+    bl_min_ex2cov = N/A
+    bl_typ_ex2cov = N/A
+    bl_min_cov2cov = N/A
+    bl_typ_cov2cov = N/A
+    bl_dra_ar = N/A
+    bl_min_ar = N/A
+    bl_typ_ar = N/A
+    bl_min_ar_num = N/A
+    bl_typ_ar_num = N/A
+    bl_dra_pth_ar = 30.300
+    bl_min_pth_ar = 131.900
+    bl_typ_pth_ar = 185.420
+    bl_min_pth_ar_num = 6
+    bl_typ_pth_ar_num = 8
+    bl_dra_via_ar = 28.435
+    bl_min_via_ar = 130.035
+    bl_typ_via_ar = 129.540
+    bl_min_via_ar_num = 2
+    bl_typ_via_ar_num = 2
+    bl_dra_laser_via_ar = N/A
+    bl_min_laser_via_ar = N/A
+    bl_typ_laser_via_ar = N/A
+    bl_min_laser_via_ar_num = N/A
+    bl_typ_laser_via_ar_num = N/A
+    bl_dra_photo_via_ar = N/A
+    bl_min_photo_via_ar = N/A
+    bl_typ_photo_via_ar = N/A
+    bl_min_photo_via_ar_num = N/A
+    bl_typ_photo_via_ar_num = N/A
+    bl_min_reg = N/A
+    bl_typ_reg = N/A
+    bl_max_reg = N/A
+    bl_min_reg_num = N/A
+    bl_typ_reg_num = N/A
+    bl_max_reg_num = N/A
+    bl_dra_npth_ar = N/A
+    bl_min_npth_ar = N/A
+    bl_typ_npth_ar = N/A
+    bl_min_npth_reg = N/A
+    bl_num_npth_reg = 0
+    bl_typ_npth_reg = N/A
+    bl_dra_it2h = N/A
+    bl_min_it2h = N/A
+    bl_typ_it2h = N/A
+    bl_min_r2c = N/A
+    bl_typ_r2c = N/A
+    bl_min_pad = N/A
+    bl_typ_pad = N/A
+    bl_min_line = N/A
+    bl_num_line = 0
+    bl_typ_line = N/A
+    bl_min_line_num = N/A
+    bl_typ_line_num = N/A
+    bl_min_shaved_line = N/A
+    bl_num_shaved_line = 0
+    bl_typ_shaved_line = N/A
+    bl_num_inconsistent_line_width = 0
+    bl_min_sliver = N/A
+    bl_num_sliver = 0
+    bl_typ_sliver = N/A
+    bl_min_local_spacing = N/A
+    bl_num_local_spacing = 0
+    bl_typ_local_spacing = N/A
+    bl_min_neckdown = N/A
+    bl_num_neckdown = 0
+    bl_typ_neckdown = N/A
+    bl_min_neckdown_num = N/A
+    bl_typ_neckdown_num = N/A
+    bl_num_stub = 0
+    bl_typ_stub = N/A
+    bl_min_smd_pad = N/A
+    bl_typ_smd_pad = N/A
+    bl_min_smd_pad_num = N/A
+    bl_typ_smd_pad_num = N/A
+    bl_min_shaved_smd = N/A
+    bl_typ_shaved_smd = N/A
+    bl_min_smd_pitch = N/A
+    bl_typ_smd_pitch = N/A
+    bl_min_smd_package = N/A
+    bl_typ_smd_package = N/A
+    bl_min_conductor_width = N/A
+    bl_typ_conductor_width = N/A
+    bl_min_conductor_width_num = N/A
+    bl_typ_conductor_width_num = N/A
+    bl_min_arc = N/A
+    bl_num_arc = 0
+    bl_typ_arc = N/A
+    bl_min_shaved_arc = N/A
+    bl_num_shaved_arc = 0
+    bl_typ_shaved_arc = N/A
+    bl_num_inconsistent_arc_width = 0
+    bl_min_non_standard_rotated_line = N/A
+    bl_num_non_standard_rotated_line = 0
+    bl_typ_non_standard_rotated_line = N/A
+    bl_num_miss_via = 0
+    bl_num_miss_pth = 0
+    bl_num_miss_cu = 0
+    bl_min_toe2toe = N/A
+    bl_typ_toe2toe = N/A
+    bl_min_smd2smd = N/A
+    bl_typ_smd2smd = N/A
+    bl_min_smd2smd_num = N/A
+    bl_typ_smd2smd_num = N/A
+    bl_min_smd2pad = N/A
+    bl_typ_smd2pad = N/A
+    bl_min_smd2pad_num = N/A
+    bl_typ_smd2pad_num = N/A
+    bl_min_via2via = N/A
+    bl_typ_via2via = N/A
+    bl_min_via2via_num = N/A
+    bl_typ_via2via_num = N/A
+    bl_min_pth2pth = N/A
+    bl_typ_pth2pth = N/A
+    bl_min_pth2pth_num = N/A
+    bl_typ_pth2pth_num = N/A
+    bl_num_npthtc = 0
+    bl_dra_pr_ar = N/A
+    bl_min_pr_ar = N/A
+    bl_typ_pr_ar = N/A
+    bl_num_pr_miss_cu = 0
+    bl_num_p2p_con = 0
+    bl_num_p2c_con = 0
+    bl_num_p2l_con = 0
+    bl_num_problem_con = 0
+    bl_dra = 28.435
+    min_p2p = N/A
+    typ_p2p = N/A
+    min_p2p_num = N/A
+    typ_p2p_num = N/A
+    min_p2c = N/A
+    typ_p2c = N/A
+    min_p2c_num = N/A
+    typ_p2c_num = N/A
+    dra_smd2c = N/A
+    min_smd2c = N/A
+    typ_smd2c = N/A
+    min_smd2c_num = N/A
+    typ_smd2c_num = N/A
+    min_c2c = N/A
+    typ_c2c = N/A
+    min_c2c_num = N/A
+    typ_c2c_num = N/A
+    min_l2l = N/A
+    typ_l2l = N/A
+    min_l2l_num = N/A
+    typ_l2l_num = N/A
+    min_c2l = N/A
+    typ_c2l = N/A
+    min_c2l_num = N/A
+    typ_c2l_num = N/A
+    min_self_spacing = N/A
+    typ_self_spacing = N/A
+    min_self_spacing_num = N/A
+    typ_self_spacing_num = N/A
+    min_text2text = N/A
+    typ_text2text = N/A
+    dra_npth2p = N/A
+    min_npth2p = N/A
+    typ_npth2p = N/A
+    dra_npth2c = N/A
+    min_npth2c = N/A
+    typ_npth2c = N/A
+    min_npth2c_num = N/A
+    typ_npth2c_num = N/A
+    dra_pth2c = N/A
+    min_pth2c = N/A
+    typ_pth2c = N/A
+    min_pth2c_num = N/A
+    typ_pth2c_num = N/A
+    dra_pth2l = N/A
+    min_pth2l = N/A
+    typ_pth2l = N/A
+    min_pth2l_num = N/A
+    typ_pth2l_num = N/A
+    dra_pth2p = N/A
+    min_pth2p = N/A
+    typ_pth2p = N/A
+    min_pth2p_num = N/A
+    typ_pth2p_num = N/A
+    dra_via2c = N/A
+    min_via2c = N/A
+    typ_via2c = N/A
+    min_via2c_num = N/A
+    typ_via2c_num = N/A
+    dra_via2l = N/A
+    min_via2l = N/A
+    typ_via2l = N/A
+    min_via2l_num = N/A
+    typ_via2l_num = N/A
+    dra_via2p = N/A
+    min_via2p = N/A
+    typ_via2p = N/A
+    min_via2p_num = N/A
+    typ_via2p_num = N/A
+    min_ex2ex = N/A
+    typ_ex2ex = N/A
+    min_ex2fcov = N/A
+    typ_ex2fcov = N/A
+    min_ex2cov = N/A
+    typ_ex2cov = N/A
+    min_cov2cov = N/A
+    typ_cov2cov = N/A
+    dra_ar = N/A
+    min_ar = N/A
+    typ_ar = N/A
+    min_ar_num = N/A
+    typ_ar_num = N/A
+    dra_pth_ar = 30.300
+    min_pth_ar = 131.900
+    typ_pth_ar = 132.080
+    min_pth_ar_num = 14
+    typ_pth_ar_num = 14
+    dra_via_ar = 28.435
+    min_via_ar = 130.035
+    typ_via_ar = 129.540
+    min_via_ar_num = 4
+    typ_via_ar_num = 4
+    dra_laser_via_ar = N/A
+    min_laser_via_ar = N/A
+    typ_laser_via_ar = N/A
+    min_laser_via_ar_num = N/A
+    typ_laser_via_ar_num = N/A
+    dra_photo_via_ar = N/A
+    min_photo_via_ar = N/A
+    typ_photo_via_ar = N/A
+    min_photo_via_ar_num = N/A
+    typ_photo_via_ar_num = N/A
+    min_reg = N/A
+    typ_reg = N/A
+    max_reg = N/A
+    min_reg_num = N/A
+    typ_reg_num = N/A
+    max_reg_num = N/A
+    dra_npth_ar = N/A
+    min_npth_ar = N/A
+    typ_npth_ar = N/A
+    min_npth_reg = N/A
+    num_npth_reg = 0
+    typ_npth_reg = N/A
+    dra_it2h = N/A
+    min_it2h = N/A
+    typ_it2h = N/A
+    min_r2c = N/A
+    typ_r2c = N/A
+    min_pad = N/A
+    typ_pad = N/A
+    min_line = N/A
+    num_line = 0
+    typ_line = N/A
+    min_line_num = N/A
+    typ_line_num = N/A
+    min_shaved_line = N/A
+    num_shaved_line = 0
+    typ_shaved_line = N/A
+    num_inconsistent_line_width = 0
+    min_sliver = N/A
+    num_sliver = 0
+    typ_sliver = N/A
+    min_local_spacing = N/A
+    num_local_spacing = 0
+    typ_local_spacing = N/A
+    min_neckdown = N/A
+    num_neckdown = 0
+    typ_neckdown = N/A
+    min_neckdown_num = N/A
+    typ_neckdown_num = N/A
+    num_stub = 0
+    typ_stub = N/A
+    min_smd_pad = N/A
+    typ_smd_pad = N/A
+    min_smd_pad_num = N/A
+    typ_smd_pad_num = N/A
+    min_shaved_smd = N/A
+    typ_shaved_smd = N/A
+    min_smd_pitch = N/A
+    typ_smd_pitch = N/A
+    min_smd_package = N/A
+    typ_smd_package = N/A
+    min_conductor_width = N/A
+    typ_conductor_width = N/A
+    min_conductor_width_num = N/A
+    typ_conductor_width_num = N/A
+    min_arc = N/A
+    num_arc = 0
+    typ_arc = N/A
+    min_shaved_arc = N/A
+    num_shaved_arc = 0
+    typ_shaved_arc = N/A
+    num_inconsistent_arc_width = 0
+    min_non_standard_rotated_line = N/A
+    num_non_standard_rotated_line = 0
+    typ_non_standard_rotated_line = N/A
+    num_miss_via = 0
+    num_miss_pth = 0
+    num_miss_cu = 0
+    min_toe2toe = N/A
+    typ_toe2toe = N/A
+    min_smd2smd = N/A
+    typ_smd2smd = N/A
+    min_smd2smd_num = N/A
+    typ_smd2smd_num = N/A
+    min_smd2pad = N/A
+    typ_smd2pad = N/A
+    min_smd2pad_num = N/A
+    typ_smd2pad_num = N/A
+    min_via2via = N/A
+    typ_via2via = N/A
+    min_via2via_num = N/A
+    typ_via2via_num = N/A
+    min_pth2pth = N/A
+    typ_pth2pth = N/A
+    min_pth2pth_num = N/A
+    typ_pth2pth_num = N/A
+    num_npthtc = 0
+    dra_pr_ar = N/A
+    min_pr_ar = N/A
+    typ_pr_ar = N/A
+    num_pr_miss_cu = 0
+    num_p2p_con = 0
+    num_p2c_con = 0
+    num_p2l_con = 0
+    num_problem_con = 0
+    dra = 28.435
+}

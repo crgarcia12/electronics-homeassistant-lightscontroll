@@ -1,0 +1,1391 @@
+form {
+   VER=-1
+   LABEL=xiongda11
+   UNITS=I
+   W=2250
+   H=7100
+   ACT=canshu
+   CLOSE_ACT=
+   AUTO_UPDATE=YES
+}
+label E26 {
+  g {
+       X=0
+       Y=6720
+       W=1648
+       H=380
+       BW=1
+       BG=7446
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=P
+       FONT=cmi14
+       LABEL=<EDIT1 SETUP>
+       JUSTIFY=CENTER
+       PIXMAP=ygzlzl.xpm
+       OR=H
+  }
+}
+button fz13 {
+  g {
+       X=1648
+       Y=6722
+       W=602
+       H=378
+       BW=1
+       BG=999999
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=L
+       FONT=cbr14
+       LABEL=input
+       JUSTIFY=CENTER
+       PIXMAP=
+       OR=H
+  }
+  cb {
+       HELP=<Empty>
+       ACT=
+  }
+}
+button fz2 {
+  g {
+       X=1750
+       Y=6202
+       W=500
+       H=520
+       BW=1
+       BG=69869
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=P
+       FONT=cbr14
+       LABEL=
+       JUSTIFY=CENTER
+       PIXMAP=tp2.xpm
+       OR=V
+  }
+  cb {
+       HELP=<Empty>
+       ACT=zdgm.csh
+  }
+}
+label E28 {
+  g {
+       X=0
+       Y=6420
+       W=973
+       H=300
+       BW=1
+       BG=69869
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=P
+       FONT=cmi14
+       LABEL=<EDIT1 SETUP>
+       JUSTIFY=CENTER
+       PIXMAP=sc2wx.xpm
+       OR=H
+  }
+}
+button run1 {
+  g {
+       X=982
+       Y=6420
+       W=518
+       H=300
+       BW=1
+       BG=69869
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=L
+       FONT=cbr14
+       LABEL=>>
+       JUSTIFY=CENTER
+       PIXMAP=
+       OR=H
+  }
+  cb {
+       HELP=<Empty>
+       ACT=ygcl.csh
+  }
+}
+label tp1 {
+  g {
+       X=1500
+       Y=6202
+       W=250
+       H=518
+       BW=1
+       BG=328068
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=P
+       FONT=cbr14
+       LABEL=
+       JUSTIFY=CENTER
+       PIXMAP=gm.xpm
+       OR=V
+  }
+}
+label E36 {
+  g {
+       X=0
+       Y=6120
+       W=973
+       H=300
+       BW=1
+       BG=69869
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=P
+       FONT=cmi14
+       LABEL=<EDIT1 SETUP>
+       JUSTIFY=CENTER
+       PIXMAP=yddld.xpm
+       OR=H
+  }
+}
+button run5 {
+  g {
+       X=974
+       Y=6120
+       W=518
+       H=300
+       BW=1
+       BG=69869
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=L
+       FONT=cbr14
+       LABEL=>>
+       JUSTIFY=CENTER
+       PIXMAP=
+       OR=H
+  }
+  cb {
+       HELP=<Empty>
+       ACT=ld.csh
+  }
+}
+label tp2 {
+  g {
+       X=1500
+       Y=5702
+       W=250
+       H=500
+       BW=1
+       BG=328068
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=P
+       FONT=cbr14
+       LABEL=
+       JUSTIFY=CENTER
+       PIXMAP=dq.xpm
+       OR=V
+  }
+}
+button fz3 {
+  g {
+       X=1750
+       Y=5702
+       W=500
+       H=500
+       BW=1
+       BG=69869
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=P
+       FONT=cbr14
+       LABEL=
+       JUSTIFY=CENTER
+       PIXMAP=tp3.xpm
+       OR=V
+  }
+  cb {
+       HELP=<Empty>
+       ACT=layer-dq.csh
+  }
+}
+label E38 {
+  g {
+       X=0
+       Y=5820
+       W=973
+       H=300
+       BW=1
+       BG=69869
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=P
+       FONT=cmi14
+       LABEL=<EDIT1 SETUP>
+       JUSTIFY=CENTER
+       PIXMAP=cjedit.xpm
+       OR=H
+  }
+}
+button run6 {
+  g {
+       X=974
+       Y=5820
+       W=518
+       H=300
+       BW=1
+       BG=69869
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=L
+       FONT=cbr14
+       LABEL=>>
+       JUSTIFY=CENTER
+       PIXMAP=
+       OR=H
+  }
+  cb {
+       HELP=<Empty>
+       ACT=copy-edit.csh
+  }
+}
+label E42 {
+  g {
+       X=0
+       Y=5520
+       W=1500
+       H=300
+       BW=1
+       BG=7446
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=P
+       FONT=cmi14
+       LABEL=<EDIT1 SETUP>
+       JUSTIFY=CENTER
+       PIXMAP=zkzlcl.xpm
+       OR=H
+  }
+}
+label E63 {
+  g {
+       X=1500
+       Y=5202
+       W=250
+       H=500
+       BW=1
+       BG=328068
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=P
+       FONT=cbr14
+       LABEL=
+       JUSTIFY=CENTER
+       PIXMAP=hp.xpm
+       OR=V
+  }
+}
+button fz10 {
+  g {
+       X=1750
+       Y=5202
+       W=500
+       H=500
+       BW=1
+       BG=69869
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=P
+       FONT=cbr14
+       LABEL=tp10.xpm
+       JUSTIFY=CENTER
+       PIXMAP=tp10.xpm
+       OR=V
+  }
+  cb {
+       HELP=<Empty>
+       ACT=donut-pad.csh
+  }
+}
+button E64 {
+  g {
+       X=0
+       Y=5220
+       W=1500
+       H=300
+       BW=1
+       BG=608585
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=P
+       FONT=cbr14
+       LABEL=
+       JUSTIFY=CENTER
+       PIXMAP=koqzk.xpm
+       OR=V
+  }
+  cb {
+       HELP=<Empty>
+       ACT=gko-drill.csh
+  }
+}
+choice via {
+  g {
+       X=0
+       Y=4920
+       W=973
+       H=300
+       BW=1
+       BG=856700
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=L
+       FONT=cbr14
+       LABEL=
+       JUSTIFY=CENTER
+       PIXMAP=
+       OR=H
+  }
+  cb {
+       HELP=<Empty>
+       ACT=v-npth.csh
+  }
+  ce {
+       LTYPE=l
+       MODE=R
+       OR=H
+       NUMCOLS=1
+     cec {
+       Via
+       NP
+     }
+  }
+}
+button run7 {
+  g {
+       X=973
+       Y=4920
+       W=527
+       H=300
+       BW=1
+       BG=69869
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=L
+       FONT=cbr14
+       LABEL=>>
+       JUSTIFY=CENTER
+       PIXMAP=
+       OR=H
+  }
+  cb {
+       HELP=<Empty>
+       ACT=via-npth.csh
+  }
+}
+label tp3 {
+  g {
+       X=1500
+       Y=4702
+       W=250
+       H=500
+       BW=1
+       BG=328068
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=P
+       FONT=cbr14
+       LABEL=
+       JUSTIFY=CENTER
+       PIXMAP=jk.xpm
+       OR=V
+  }
+}
+button fz7 {
+  g {
+       X=1750
+       Y=4702
+       W=500
+       H=500
+       BW=1
+       BG=69869
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=P
+       FONT=cbr14
+       LABEL=
+       JUSTIFY=CENTER
+       PIXMAP=tp7.xpm
+       OR=V
+  }
+  cb {
+       HELP=<Empty>
+       ACT=j-hone.csh
+  }
+}
+label E48 {
+  g {
+       X=0
+       Y=4620
+       W=973
+       H=300
+       BW=1
+       BG=69869
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=P
+       FONT=cmi14
+       LABEL=<EDIT1 SETUP>
+       JUSTIFY=CENTER
+       PIXMAP=drill.xpm
+       OR=H
+  }
+}
+button run9 {
+  g {
+       X=973
+       Y=4620
+       W=527
+       H=300
+       BW=1
+       BG=69869
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=L
+       FONT=cbr14
+       LABEL=>>
+       JUSTIFY=CENTER
+       PIXMAP=
+       OR=H
+  }
+  cb {
+       HELP=<Empty>
+       ACT=drill.csh
+  }
+}
+label E65 {
+  g {
+       X=1500
+       Y=4202
+       W=250
+       H=500
+       BW=1
+       BG=328068
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=P
+       FONT=cbr14
+       LABEL=
+       JUSTIFY=CENTER
+       PIXMAP=ld.xpm
+       OR=V
+  }
+}
+button fz8 {
+  g {
+       X=1750
+       Y=4202
+       W=500
+       H=500
+       BW=1
+       BG=69869
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=P
+       FONT=cbr14
+       LABEL=
+       JUSTIFY=CENTER
+       PIXMAP=tp8.xpm
+       OR=V
+  }
+  cb {
+       HELP=<Empty>
+       ACT=ld1.csh
+  }
+}
+button run11 {
+  g {
+       X=0
+       Y=4320
+       W=1500
+       H=300
+       BW=1
+       BG=608585
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=L
+       FONT=cbr14
+       LABEL=Pad Snapping
+       JUSTIFY=CENTER
+       PIXMAP=
+       OR=H
+  }
+  cb {
+       HELP=<Empty>
+       ACT=zhuanpad.csh
+  }
+}
+label E13 {
+  g {
+       X=0
+       Y=4020
+       W=1500
+       H=300
+       BW=1
+       BG=7446
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=P
+       FONT=cmi14
+       LABEL=<EDIT1 SETUP>
+       JUSTIFY=CENTER
+       PIXMAP=wcxlcl.xpm
+       OR=H
+  }
+}
+label E58 {
+  g {
+       X=1500
+       Y=3702
+       W=250
+       H=500
+       BW=1
+       BG=328068
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=P
+       FONT=cbr14
+       LABEL=
+       JUSTIFY=CENTER
+       PIXMAP=jj.xpm
+       OR=V
+  }
+}
+button fz9 {
+  g {
+       X=1750
+       Y=3702
+       W=500
+       H=500
+       BW=1
+       BG=69869
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=P
+       FONT=cbr14
+       LABEL=
+       JUSTIFY=CENTER
+       PIXMAP=tp9.xpm
+       OR=V
+  }
+  cb {
+       HELP=<Empty>
+       ACT=jj.csh
+  }
+}
+choice E1 {
+  g {
+       X=0
+       Y=3720
+       W=973
+       H=300
+       BW=1
+       BG=608585
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=L
+       FONT=cbr14
+       LABEL=
+       JUSTIFY=CENTER
+       PIXMAP=
+       OR=H
+  }
+  cb {
+       HELP=<Empty>
+       ACT=<Empty>
+  }
+  ce {
+       LTYPE=l
+       MODE=M
+       OR=H
+       NUMCOLS=1
+     cec {
+       Signal
+       Mask
+       Silk
+       auto
+     }
+  }
+}
+button run12 {
+  g {
+       X=973
+       Y=3720
+       W=527
+       H=300
+       BW=1
+       BG=856700
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=L
+       FONT=cbr14
+       LABEL=>>
+       JUSTIFY=CENTER
+       PIXMAP=
+       OR=H
+  }
+  cb {
+       HELP=<Empty>
+       ACT=tt.csh
+  }
+}
+label E4 {
+  g {
+       X=0
+       Y=3420
+       W=973
+       H=300
+       BW=1
+       BG=69869
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=P
+       FONT=cmi14
+       LABEL=<EDIT1 SETUP>
+       JUSTIFY=CENTER
+       PIXMAP=xlbc.xpm
+       OR=H
+  }
+}
+button run13 {
+  g {
+       X=973
+       Y=3420
+       W=527
+       H=300
+       BW=1
+       BG=69869
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=L
+       FONT=cbr14
+       LABEL=>>
+       JUSTIFY=CENTER
+       PIXMAP=
+       OR=H
+  }
+  cb {
+       HELP=<Empty>
+       ACT=outer.csh
+  }
+}
+label E57 {
+  g {
+       X=1500
+       Y=3202
+       W=250
+       H=500
+       BW=1
+       BG=328068
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=P
+       FONT=cbr14
+       LABEL=
+       JUSTIFY=CENTER
+       PIXMAP=qt.xpm
+       OR=V
+  }
+}
+button fz1 {
+  g {
+       X=1750
+       Y=3202
+       W=500
+       H=500
+       BW=1
+       BG=69869
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=P
+       FONT=cbr14
+       LABEL=
+       JUSTIFY=CENTER
+       PIXMAP=tp1.xpm
+       OR=V
+  }
+  cb {
+       HELP=<Empty>
+       ACT=clip.csh
+  }
+}
+choice bank {
+  g {
+       X=0
+       Y=3120
+       W=1500
+       H=300
+       BW=1
+       BG=856700
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=L
+       FONT=cbr14
+       LABEL=
+       JUSTIFY=CENTER
+       PIXMAP=
+       OR=H
+  }
+  cb {
+       HELP=<Empty>
+       ACT=bkcx
+  }
+  ce {
+       LTYPE=l
+       MODE=R
+       OR=H
+       NUMCOLS=1
+     cec {
+       bank
+       shave
+     }
+  }
+}
+label E55 {
+  g {
+       X=1500
+       Y=2702
+       W=250
+       H=500
+       BW=1
+       BG=328068
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=P
+       FONT=cbr14
+       LABEL=
+       JUSTIFY=CENTER
+       PIXMAP=xk.xpm
+       OR=V
+  }
+}
+button fz5 {
+  g {
+       X=1750
+       Y=2702
+       W=500
+       H=500
+       BW=1
+       BG=69869
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=P
+       FONT=cbr14
+       LABEL=
+       JUSTIFY=CENTER
+       PIXMAP=tp5.xpm
+       OR=V
+  }
+  cb {
+       HELP=<Empty>
+       ACT=xk.csh
+  }
+}
+label E60 {
+  g {
+       X=0
+       Y=2820
+       W=973
+       H=300
+       BW=1
+       BG=69869
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=P
+       FONT=cmi14
+       LABEL=<EDIT1 SETUP>
+       JUSTIFY=CENTER
+       PIXMAP=fill.xpm
+       OR=H
+  }
+}
+textf TX {
+  g {
+       X=973
+       Y=2820
+       W=500
+       H=300
+       BW=1
+       BG=999999
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=L
+       FONT=cbr14
+       LABEL=
+       JUSTIFY=CENTER
+       PIXMAP=
+       OR=H
+  }
+  cb {
+       HELP=<Empty>
+       ACT=<Empty>
+  }
+  te {
+       FONT=cbr14
+       NUMROWS=1
+       NUMCOLS=0
+       TYPE=TEXT
+       MIN=0
+       MIN_DATE_TIME=
+       MAX=0
+       MAX_DATE_TIME=
+       TEXT_FORMAT=NONE
+       DATE_FORMAT=DD/MM/YY
+       TIME_FORMAT=HH:MM:SS
+  }
+}
+choice E24 {
+  g {
+       X=0
+       Y=2520
+       W=1500
+       H=300
+       BW=1
+       BG=856700
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=L
+       FONT=cbr14
+       LABEL=
+       JUSTIFY=CENTER
+       PIXMAP=
+       OR=H
+  }
+  cb {
+       HELP=<Empty>
+       ACT=neiceng
+  }
+  ce {
+       LTYPE=l
+       MODE=R
+       OR=H
+       NUMCOLS=1
+     cec {
+       inner
+       other
+     }
+  }
+}
+label E62 {
+  g {
+       X=1500
+       Y=2202
+       W=250
+       H=500
+       BW=1
+       BG=328068
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=P
+       FONT=cbr14
+       LABEL=
+       JUSTIFY=CENTER
+       PIXMAP=net.xpm
+       OR=V
+  }
+}
+button fz11 {
+  g {
+       X=1750
+       Y=2202
+       W=500
+       H=500
+       BW=1
+       BG=69869
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=P
+       FONT=cbr14
+       LABEL=
+       JUSTIFY=CENTER
+       PIXMAP=tp11.xpm
+       OR=V
+  }
+  cb {
+       HELP=<Empty>
+       ACT=net.csh
+  }
+}
+label E51 {
+  g {
+       X=8
+       Y=2220
+       W=1492
+       H=300
+       BW=1
+       BG=7446
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=P
+       FONT=cmi14
+       LABEL=<EDIT1 SETUP>
+       JUSTIFY=CENTER
+       PIXMAP=zhzlcl.xpm
+       OR=H
+  }
+}
+label E37 {
+  g {
+       X=8
+       Y=1920
+       W=973
+       H=300
+       BW=1
+       BG=69869
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=P
+       FONT=cmi14
+       LABEL=<EDIT1 SETUP>
+       JUSTIFY=CENTER
+       PIXMAP=yjkkc.xpm
+       OR=H
+  }
+}
+button zh3 {
+  g {
+       X=981
+       Y=1620
+       W=519
+       H=600
+       BW=1
+       BG=69869
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=L
+       FONT=cbr14
+       LABEL=>>
+       JUSTIFY=CENTER
+       PIXMAP=
+       OR=H
+  }
+  cb {
+       HELP=<Empty>
+       ACT=zhyh.csh
+  }
+}
+label E56 {
+  g {
+       X=1500
+       Y=1702
+       W=250
+       H=500
+       BW=1
+       BG=328068
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=P
+       FONT=cbr14
+       LABEL=
+       JUSTIFY=CENTER
+       PIXMAP=tc.xpm
+       OR=V
+  }
+}
+button fz4 {
+  g {
+       X=1750
+       Y=1702
+       W=500
+       H=500
+       BW=1
+       BG=69869
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=P
+       FONT=cbr14
+       LABEL=
+       JUSTIFY=CENTER
+       PIXMAP=tp4.xpm
+       OR=V
+  }
+  cb {
+       HELP=<Empty>
+       ACT=ic-open.csh
+  }
+}
+button E49 {
+  g {
+       X=0
+       Y=1620
+       W=981
+       H=300
+       BW=1
+       BG=328068
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=L
+       FONT=cbr14
+       LABEL=Mask open
+       JUSTIFY=CENTER
+       PIXMAP=
+       OR=H
+  }
+  cb {
+       HELP=<Empty>
+       ACT=mask-auto.exe
+  }
+}
+label E46 {
+  g {
+       X=1500
+       Y=1202
+       W=250
+       H=500
+       BW=1
+       BG=328068
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=P
+       FONT=cbr14
+       LABEL=
+       JUSTIFY=CENTER
+       PIXMAP=sc.xpm
+       OR=V
+  }
+}
+button fz6 {
+  g {
+       X=1750
+       Y=1202
+       W=500
+       H=500
+       BW=1
+       BG=69869
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=P
+       FONT=cbr14
+       LABEL=
+       JUSTIFY=CENTER
+       PIXMAP=tp6.xpm
+       OR=V
+  }
+  cb {
+       HELP=<Empty>
+       ACT=delete.csh
+  }
+}
+label E61 {
+  g {
+       X=0
+       Y=1320
+       W=1492
+       H=300
+       BW=1
+       BG=7446
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=P
+       FONT=cmi14
+       LABEL=<EDIT1 SETUP>
+       JUSTIFY=CENTER
+       PIXMAP=zfzlcl.xpm
+       OR=H
+  }
+}
+label E71 {
+  g {
+       X=8
+       Y=1020
+       W=973
+       H=300
+       BW=1
+       BG=69869
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=P
+       FONT=cmi14
+       LABEL=<EDIT1 SETUP>
+       JUSTIFY=CENTER
+       PIXMAP=ljzf.xpm
+       OR=H
+  }
+}
+button silk {
+  g {
+       X=981
+       Y=1020
+       W=519
+       H=300
+       BW=1
+       BG=69869
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=L
+       FONT=cbr14
+       LABEL=>>
+       JUSTIFY=CENTER
+       PIXMAP=
+       OR=H
+  }
+  cb {
+       HELP=<Empty>
+       ACT=silk.csh
+  }
+}
+button fz12 {
+  g {
+       X=1500
+       Y=824
+       W=750
+       H=378
+       BW=1
+       BG=999999
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=P
+       FONT=cbr14
+       LABEL=
+       JUSTIFY=CENTER
+       PIXMAP=fzl.xpm
+       OR=V
+  }
+  cb {
+       HELP=<Empty>
+       ACT=wgyh.csh
+  }
+}
+label E53 {
+  g {
+       X=8
+       Y=720
+       W=973
+       H=300
+       BW=1
+       BG=69869
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=P
+       FONT=cmi14
+       LABEL=<EDIT1 SETUP>
+       JUSTIFY=CENTER
+       PIXMAP=wldb.xpm
+       OR=H
+  }
+}
+button analyzer {
+  g {
+       X=981
+       Y=720
+       W=519
+       H=300
+       BW=1
+       BG=69869
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=L
+       FONT=cbr14
+       LABEL=>>
+       JUSTIFY=CENTER
+       PIXMAP=
+       OR=H
+  }
+  cb {
+       HELP=<Empty>
+       ACT=analyzer.csh
+  }
+}
+choice E66 {
+  g {
+       X=1500
+       Y=500
+       W=750
+       H=324
+       BW=1
+       BG=856700
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=L
+       FONT=cbr14
+       LABEL=
+       JUSTIFY=CENTER
+       PIXMAP=
+       OR=H
+  }
+  cb {
+       HELP=<Empty>
+       ACT=bank.csh
+  }
+  ce {
+       LTYPE=l
+       MODE=M
+       OR=H
+       NUMCOLS=1
+     cec {
+       line
+       surf
+       mask
+       bank
+       shimo
+     }
+  }
+}
+choice E43 {
+  g {
+       X=0
+       Y=420
+       W=987
+       H=300
+       BW=1
+       BG=856700
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=L
+       FONT=cbr14
+       LABEL=
+       JUSTIFY=CENTER
+       PIXMAP=
+       OR=H
+  }
+  cb {
+       HELP=<Empty>
+       ACT=<Empty>
+  }
+  ce {
+       LTYPE=l
+       MODE=R
+       OR=H
+       NUMCOLS=1
+     cec {
+       Yes
+       No
+     }
+  }
+}
+textf E41 {
+  g {
+       X=987
+       Y=420
+       W=513
+       H=300
+       BW=1
+       BG=999999
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=L
+       FONT=cbr14
+       LABEL=
+       JUSTIFY=CENTER
+       PIXMAP=
+       OR=H
+  }
+  cb {
+       HELP=<Empty>
+       ACT=<Empty>
+  }
+  te {
+       FONT=cbr14
+       NUMROWS=1
+       NUMCOLS=0
+       TYPE=TEXT
+       MIN=0
+       MIN_DATE_TIME=
+       MAX=0
+       MAX_DATE_TIME=
+       TEXT_FORMAT=NONE
+       DATE_FORMAT=DD/MM/YY
+       TIME_FORMAT=HH:MM:SS
+  }
+}
+textf E68 {
+  g {
+       X=1500
+       Y=250
+       W=750
+       H=250
+       BW=1
+       BG=328068
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=L
+       FONT=cbr14
+       LABEL=x
+       JUSTIFY=CENTER
+       PIXMAP=
+       OR=V
+  }
+  cb {
+       HELP=<Empty>
+       ACT=<Empty>
+  }
+  te {
+       FONT=cbr14
+       NUMROWS=1
+       NUMCOLS=0
+       TYPE=TEXT
+       MIN=0
+       MIN_DATE_TIME=
+       MAX=0
+       MAX_DATE_TIME=
+       TEXT_FORMAT=NONE
+       DATE_FORMAT=DD/MM/YY
+       TIME_FORMAT=HH:MM:SS
+  }
+}
+button E40 {
+  g {
+       X=0
+       Y=20
+       W=1500
+       H=400
+       BW=1
+       BG=69869
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=P
+       FONT=cbr14
+       LABEL=
+       JUSTIFY=CENTER
+       PIXMAP=zhanghp.xpm
+       OR=V
+  }
+  cb {
+       HELP=<Empty>
+       ACT=pad-new.csh
+  }
+}
+textf E59 {
+  g {
+       X=1500
+       Y=0
+       W=750
+       H=250
+       BW=1
+       BG=328068
+       READABLE=YES
+       EDITABLE=YES
+       LTYPE=L
+       FONT=cbr14
+       LABEL=y
+       JUSTIFY=CENTER
+       PIXMAP=
+       OR=V
+  }
+  cb {
+       HELP=<Empty>
+       ACT=<Empty>
+  }
+  te {
+       FONT=cbr14
+       NUMROWS=1
+       NUMCOLS=0
+       TYPE=TEXT
+       MIN=0
+       MIN_DATE_TIME=
+       MAX=0
+       MAX_DATE_TIME=
+       TEXT_FORMAT=NONE
+       DATE_FORMAT=DD/MM/YY
+       TIME_FORMAT=HH:MM:SS
+  }
+}

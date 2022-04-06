@@ -1,0 +1,7 @@
+DISPLAY {
+    L0 = bl
+}
+DISPLAY {
+    L0 = bl
+    L1 = drl
+}

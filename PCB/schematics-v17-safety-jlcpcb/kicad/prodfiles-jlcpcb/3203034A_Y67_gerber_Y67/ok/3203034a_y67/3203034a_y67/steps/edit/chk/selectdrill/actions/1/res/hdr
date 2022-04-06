@@ -1,0 +1,295 @@
+STAT = D
+SEVERITY = 2
+LAST_TIME = 1648863260
+DURATION = 1 SECONDS
+CATEGORY {
+    NAME = pth
+    TITLE = PTH Summary
+    DESCRIPTION = Shape;Hole
+    SORT_ORDER = 0
+    RANGE = 0.0279921 0.0350000 0.3937008 
+}
+CATEGORY {
+    NAME = npth
+    TITLE = NPTH Summary
+    DESCRIPTION = Shape;Hole
+    SORT_ORDER = 1
+    RANGE = 0.0039370 0.0039764 0.3937008 
+}
+CATEGORY {
+    NAME = via
+    TITLE = Via Summary
+    DESCRIPTION = Shape;Hole
+    SORT_ORDER = 2
+    RANGE = 0.0120079 0.0279921 0.3937008 
+}
+CATEGORY {
+    NAME = 2drill
+    TITLE = 2nd Drilled Holes
+    DESCRIPTION = Shape;Hole
+    SORT_ORDER = 3
+    RANGE = 0.2100000 0.2500000 0.3937008 
+}
+CATEGORY {
+    NAME = pth2drill
+    TITLE = 2nd Drilled PTH Holes
+    DESCRIPTION = Shape;Hole
+    SORT_ORDER = 4
+    RANGE = 0.2100000 0.2500000 0.3937008 
+}
+CATEGORY {
+    NAME = duph
+    TITLE = Duplicate Holes
+    DESCRIPTION = Spacing;Hole 1;Hole 2
+    SORT_ORDER = 5
+    RANGE = 0.3937008 0.3937402 0.3937795 
+}
+CATEGORY {
+    NAME = touchh
+    TITLE = Touching Holes
+    DESCRIPTION = Spacing;Hole 1;Hole 2
+    SORT_ORDER = 6
+    RANGE = 0.3937008 0.3937402 0.3937795 
+}
+CATEGORY {
+    NAME = closeh
+    TITLE = Close Holes
+    DESCRIPTION = Spacing;Hole 1;Hole 2
+    SORT_ORDER = 7
+    RANGE = 0.0120079 0.0150000 0.0200000 
+}
+CATEGORY {
+    NAME = missh
+    TITLE = Missing Holes
+    DESCRIPTION = Pos;Pad
+    SORT_ORDER = 8
+    RANGE = 0.3937008 0.3937402 0.3937795 
+}
+CATEGORY {
+    NAME = extrah
+    TITLE = Extra Holes
+    DESCRIPTION = Hole
+    SORT_ORDER = 9
+    RANGE = 0.3937008 0.3937402 0.3937795 
+}
+CATEGORY {
+    NAME = pgshort_3
+    TITLE = Short_3
+    DESCRIPTION = Pos;Hole
+    SORT_ORDER = 10
+    RANGE = 0.3937008 0.3937402 0.3937795 
+}
+CATEGORY {
+    NAME = pgshort_4
+    TITLE = Short_4
+    DESCRIPTION = Pos;Hole
+    SORT_ORDER = 11
+    RANGE = 0.3937008 0.3937402 0.3937795 
+}
+CATEGORY {
+    NAME = pgshort_5
+    TITLE = Short_5
+    DESCRIPTION = Pos;Hole
+    SORT_ORDER = 12
+    RANGE = 0.3937008 0.3937402 0.3937795 
+}
+CATEGORY {
+    NAME = pgshort_6
+    TITLE = Short_6
+    DESCRIPTION = Pos;Hole
+    SORT_ORDER = 13
+    RANGE = 0.3937008 0.3937402 0.3937795 
+}
+CATEGORY {
+    NAME = pgshort_7
+    TITLE = Short_7
+    DESCRIPTION = Pos;Hole
+    SORT_ORDER = 14
+    RANGE = 0.3937008 0.3937402 0.3937795 
+}
+CATEGORY {
+    NAME = pgshort_8
+    TITLE = Short_8
+    DESCRIPTION = Pos;Hole
+    SORT_ORDER = 15
+    RANGE = 0.3937008 0.3937402 0.3937795 
+}
+CATEGORY {
+    NAME = pgshort_9
+    TITLE = Short_9
+    DESCRIPTION = Pos;Hole
+    SORT_ORDER = 16
+    RANGE = 0.3937008 0.3937402 0.3937795 
+}
+CATEGORY {
+    NAME = pgshort_10_up
+    TITLE = Short_10_up
+    DESCRIPTION = Pos;Hole
+    SORT_ORDER = 17
+    RANGE = 0.3937008 0.3937402 0.3937795 
+}
+CATEGORY {
+    NAME = npth2rout
+    TITLE = NPTH to Rout
+    DESCRIPTION = Ratio;Hole
+    SORT_ORDER = 18
+    RANGE = 0.0159843 0.0240157 0.0320079 
+}
+CATEGORY {
+    NAME = tooling_holes
+    TITLE = Tooling Holes
+    DESCRIPTION = Shape;Hole
+    SORT_ORDER = 19
+    RANGE = 0.0300000 0.0500000 0.3937008 
+}
+CATEGORY {
+    NAME = mount_holes
+    TITLE = Mounting Holes
+    DESCRIPTION = Shape;Hole
+    SORT_ORDER = 20
+    RANGE = 0.0279921 0.0350000 0.3937008 
+}
+CATEGORY {
+    NAME = slot_pt
+    TITLE = Plated Slot Summary
+    DESCRIPTION = Shape;Slot
+    SORT_ORDER = 21
+    RANGE = 0.0279921 0.0350000 0.3937008 
+}
+CATEGORY {
+    NAME = slot_npt
+    TITLE = Non Plated Slot Summary
+    DESCRIPTION = Shape;Slot
+    SORT_ORDER = 22
+    RANGE = 0.0039370 0.0039764 0.3937008 
+}
+CATEGORY {
+    NAME = non_standard
+    TITLE = Non Standard Symbol
+    DESCRIPTION = Shape;Non Standard
+    SORT_ORDER = 23
+    RANGE = 0.3937008 0.3937402 0.3937795 
+}
+CATEGORY {
+    NAME = non_standard_f
+    TITLE = Non Standard Feature
+    DESCRIPTION = Shape;Non Standard
+    SORT_ORDER = 24
+    RANGE = 0.3937008 0.3937402 0.3937795 
+}
+CATEGORY {
+    NAME = canned_text
+    TITLE = Canned Text
+    DESCRIPTION = Shape;Text
+    SORT_ORDER = 25
+    RANGE = 0.0000000 0.0000039 0.3937008 
+}
+CATEGORY {
+    NAME = pthslot2rout
+    TITLE = PTH slot to Rout
+    DESCRIPTION = Dist;Hole
+    SORT_ORDER = 26
+    RANGE = 0.0159843 0.0240157 0.0320079 
+}
+CATEGORY {
+    NAME = npthslot2rout
+    TITLE = NPTH slot to Rout
+    DESCRIPTION = Dist;Hole
+    SORT_ORDER = 27
+    RANGE = 0.0159843 0.0240157 0.0320079 
+}
+CATEGORY {
+    NAME = close_pth_same_net
+    TITLE = Same Net Close PTHs
+    DESCRIPTION = Spacing;PTH 1;PTH 2
+    SORT_ORDER = 28
+    RANGE = 0.0120000 0.0150000 0.0200000 
+}
+CATEGORY {
+    NAME = close_pth_diff_net
+    TITLE = Different Net Close PTHs
+    DESCRIPTION = Spacing;PTH 1;PTH 2
+    SORT_ORDER = 29
+    RANGE = 0.0120000 0.0150000 0.0200000 
+}
+CATEGORY {
+    NAME = close_npth
+    TITLE = Close NPTHs
+    DESCRIPTION = Spacing;NPTH 1;NPTH 2
+    SORT_ORDER = 30
+    RANGE = 0.0120000 0.0150000 0.0200000 
+}
+CATEGORY {
+    NAME = close_pth2npth_isolate
+    TITLE = Close PTH2NPTH (isolate)
+    DESCRIPTION = Spacing;PTH 1;NPTH 2
+    SORT_ORDER = 31
+    RANGE = 0.0120000 0.0150000 0.0200000 
+}
+CATEGORY {
+    NAME = close_pth2npth_conn
+    TITLE = Close PTH2NPTH (conn)
+    DESCRIPTION = Spacing;PTH 1;NPTH 2
+    SORT_ORDER = 32
+    RANGE = 0.0120000 0.0150000 0.0200000 
+}
+ATTRIBUTE {
+    drl_num_pth = 0
+    drl_num_npth = 0
+    drl_num_via = 0
+    drl_num_2drill = 0
+    drl_num_pth2drill = 0
+    drl_num_duph = 0
+    drl_num_touchh = 0
+    drl_min_closeh = 514.000
+    drl_num_closeh = 14
+    drl_typ_closeh = 515.620
+    drl_num_missh = 0
+    drl_num_extrah = 0
+    drl_min_npth2rout = N/A
+    drl_num_npth2rout = 0
+    drl_typ_npth2rout = N/A
+    drl_num_tooling_holes = 0
+    drl_num_mount_holes = 0
+    drl_num_slot_pt = 0
+    drl_num_slot_npt = 0
+    drl_num_non_standard = 0
+    drl_num_non_standard_f = 0
+    drl_num_canned_text = 0
+    drl_min_pthslot2rout = N/A
+    drl_num_pthslot2rout = 0
+    drl_typ_pthslot2rout = N/A
+    drl_min_npthslot2rout = N/A
+    drl_num_npthslot2rout = 0
+    drl_typ_npthslot2rout = N/A
+    drl_num_pgshort = 0
+    num_pth = 0
+    num_npth = 0
+    num_via = 0
+    num_2drill = 0
+    num_pth2drill = 0
+    num_duph = 0
+    num_touchh = 0
+    min_closeh = 514.000
+    num_closeh = 14
+    typ_closeh = 515.620
+    num_missh = 0
+    num_extrah = 0
+    min_npth2rout = N/A
+    num_npth2rout = 0
+    typ_npth2rout = N/A
+    num_tooling_holes = 0
+    num_mount_holes = 0
+    num_slot_pt = 0
+    num_slot_npt = 0
+    num_non_standard = 0
+    num_non_standard_f = 0
+    num_canned_text = 0
+    min_pthslot2rout = N/A
+    num_pthslot2rout = 0
+    typ_pthslot2rout = N/A
+    min_npthslot2rout = N/A
+    num_npthslot2rout = 0
+    typ_npthslot2rout = N/A
+    num_pgshort = 0
+}

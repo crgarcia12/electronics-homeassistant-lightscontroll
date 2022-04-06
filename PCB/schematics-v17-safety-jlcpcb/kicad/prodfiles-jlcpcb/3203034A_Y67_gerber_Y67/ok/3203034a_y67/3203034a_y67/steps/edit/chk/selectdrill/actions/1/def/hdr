@@ -1,0 +1,97 @@
+ROW = 0
+NAME = valor_analysis_drill
+ERF = Std (Microns)
+UNITS = mm
+PARAMS {
+    pp_drill_layer = drl
+    pp_rout_distance = 196.85
+    pp_tests = Hole Separation
+    pp_extra_hole_type = Pth;Via
+    pp_use_compensated_rout = Skeleton
+}
+LAST_PARAMS {
+    pp_drill_layer = drl
+    pp_rout_distance = 196.85
+    pp_tests = Hole Separation
+    pp_extra_hole_type = Pth;Via
+    pp_use_compensated_rout = Skeleton
+}
+ONLINE_PARAMS {
+    pp_drill_layer = .type=drill&context=board
+    pp_rout_distance = 50
+    pp_tests = Hole Separation;Missing Holes;Power/Ground Shorts
+    pp_extra_hole_type = Pth;Via
+    pp_use_compensated_rout = Skeleton
+}
+ONLINE_VALUES {
+    pth = 27.9921
+    npth = 3.9370
+    via = 12.0079
+    2drill = 210.0000
+    pth2drill = 210.0000
+    duph = 393.7008
+    touchh = 393.7008
+    closeh = 12.0079
+    missh = 393.7008
+    extrah = 393.7008
+    pgshort* = 393.7008
+    npth2rout = 15.9843
+    tooling_holes = 30.0000
+    mount_holes = 27.9921
+    slot_pt = 27.9921
+    slot_npt = 3.9370
+    non_standard = 393.7008
+    non_standard_f = 393.7008
+    canned_text = 39.3701
+    pthslot2rout = 15.9843
+    npthslot2rout = 15.9843
+    close_pth_same_net = 12.0000
+    close_pth_diff_net = 12.0000
+    close_npth = 12.0000
+    close_pth2npth_isolate = 12.0000
+    close_pth2npth_conn = 12.0000
+}
+RANGES {
+    pth = 27.9921;35.0000;393.7008
+    npth = 3.9370;3.9764;393.7008
+    via = 12.0079;27.9921;393.7008
+    2drill = 210.0000;250.0000;393.7008
+    pth2drill = 210.0000;250.0000;393.7008
+    duph = 393.7008;393.7402;393.7795
+    touchh = 393.7008;393.7402;393.7795
+    closeh = 12.0079;15.0000;20.0000
+    missh = 393.7008;393.7402;393.7795
+    extrah = 393.7008;393.7402;393.7795
+    pgshort* = 393.7008;393.7402;393.7795
+    npth2rout = 15.9843;24.0157;32.0079
+    tooling_holes = 30.0000;50.0000;393.7008
+    mount_holes = 27.9921;35.0000;393.7008
+    slot_pt = 27.9921;35.0000;393.7008
+    slot_npt = 3.9370;3.9764;393.7008
+    non_standard = 393.7008;393.7402;393.7795
+    non_standard_f = 393.7008;393.7402;393.7795
+    canned_text = 0.0000;0.0039;393.7008
+    pthslot2rout = 15.9843;24.0157;32.0079
+    npthslot2rout = 15.9843;24.0157;32.0079
+    close_pth_same_net = 12.0000;15.0000;20.0000
+    close_pth_diff_net = 12.0000;15.0000;20.0000
+    close_npth = 12.0000;15.0000;20.0000
+    close_pth2npth_isolate = 12.0000;15.0000;20.0000
+    close_pth2npth_conn = 12.0000;15.0000;20.0000
+}
+VARIABLES {
+    duph_tolerance = 13
+    close_hole_dist = 533
+    second_drill_width = 5004
+    min_hole_dist = 254
+    npth2rout_only_tool_mnt = 0
+    ignore_neg_pg_extras = 0
+    v_report_npth2rout_in_percentage = yes
+    v_perform_slot2rout_checks = no
+    v_ignore_attrs = 
+    v_use_mask_layer = no
+    v_one_side_covered_as_extra = yes
+    v_report_detailed_close_holes = no
+    v_measure_closeh_from_center = no
+    v_consider_stacked_via_in_missing_hole = no
+}
