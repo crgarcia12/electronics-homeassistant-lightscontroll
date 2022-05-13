@@ -1,4 +1,4 @@
- # Home automation led controller custom module
+ # Home automation led controller custom module v17 (printed PCB V20220221.35)
 
  This circuit controll home lights following these rules:
  1. Safe: Safety is not trade in any decision.
@@ -15,19 +15,19 @@ This circuit (ESPHome) is a side-car to the latching relay acting as an standard
 
 # Changes in this version
 
-This version was minimized by:
-* Adding USB-C support
-* Adding I2C temperature IC. To alert in case the board get hot
-* Adding debugging pins for I2C and Serial
-* Adding led to ESP32 pin
+This version adds:
+* USB-C support
+* I2C temperature IC. To alert in case the board get hot
+* Debugging pins for I2C and Serial
+* Led to ESP32 pin
 * Fix bug: ESP32 cannot pull up on all pins - adding external pull-ups resistors
 
 Security additions:
 * Added fuses to every sensing channel
 * Added littlefuse holders, for easier replacing of fuses
 * Increased net clearance
-* Routed N far from digital area
-* Redesigned security slots
+* Routed mains N far from digital area
+* Redesigned safety slots
 * Production board is conformal coated with a silicone resin Electrolube SCC3
 
 # Device schematics
@@ -38,7 +38,9 @@ Security additions:
 ![board-pcb-3d](readme-media/board-pcb-3d.png)
 ![board-pcb-3d-2](readme-media/board-pcb-3d-2.png)
 ![board-pcb-3d-2](readme-media/board-pcb-3d-3.png)
+
 # Clearance
+
 There are three nets: Default, Mains-LowVoltage and Mains. Even when conformal coating is added, Clearance are calculated without it for added safety. In practice, instead of using A7, A6 is being used to do the calculations:
 
 * Default: Low voltage - 0.2mm
