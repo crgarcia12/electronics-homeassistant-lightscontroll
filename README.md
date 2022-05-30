@@ -32,7 +32,10 @@ Since Version 2 there were many changes:
 ![board-pcb](PCB/schematics-v17-safety-jlcpcb/readme-media/board-pcb.png)
 ![board-pcb-3d](PCB/schematics-v17-safety-jlcpcb/readme-media/board-pcb-3d.png)
 
-# Version 2
+## How to order from JLCPCB:
+![how-to-order-from-jlcpcb](PCB/schematics-v17-safety-jlcpcb/readme-media/jlcpcb-how-to-order.gif)
+
+# Older versions: Version 2
 
 This version was minimized by:
 * Using SPST-NO 3A smaller relays
@@ -57,7 +60,7 @@ Others:
 ![v2-board-pcb](readme-media/v2-board-pcb.png)
 ![v2-board-pcb-3d](readme-media/v2-board-pcb-3d.png)
 
-# Version 1
+# Older versions: Version 1
 
 Device schematics (under development) 
 
