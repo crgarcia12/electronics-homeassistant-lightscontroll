@@ -15,20 +15,8 @@ This circuit (ESPHome) is a side-car to the latching relay acting as an standard
 
 # Changes in this version
 
-This version was minimized by:
-* Adding USB-C support
-* Adding I2C temperature IC. To alert in case the board get hot
-* Adding debugging pins for I2C and Serial
-* Adding led to ESP32 pin
-* Fix bug: ESP32 cannot pull up on all pins - adding external pull-ups resistors
-
-Security additions:
-* Added fuses to every sensing channel
-* Added littlefuse holders, for easier replacing of fuses
-* Increased net clearance
-* Routed N far from digital area
-* Redesigned security slots
-* Production board is conformal coated with a silicone resin Electrolube SCC3
+* flipping SHT40 and using bigger pads for easier hand-soldering
+* making nicer pad under ESP32
 
 # Device schematics
 
@@ -38,6 +26,7 @@ Security additions:
 ![board-pcb-3d](readme-media/board-pcb-3d.png)
 ![board-pcb-3d-2](readme-media/board-pcb-3d-2.png)
 ![board-pcb-3d-2](readme-media/board-pcb-3d-3.png)
+
 # Clearance
 There are three nets: Default, Mains-LowVoltage and Mains. Even when conformal coating is added, Clearance are calculated without it for added safety. In practice, instead of using A7, A6 is being used to do the calculations:
 
@@ -76,7 +65,3 @@ There are three nets: Default, Mains-LowVoltage and Mains. Even when conformal c
 
 schematics:
 ![screenshot](readme-media/tutorial/gen-images-1.png)
-
-PCBNew:
-
-Print to PDF, and then use an online tool to get high resolution images. For example https://pdfshelter.com/pdf-to-jpg
