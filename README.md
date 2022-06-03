@@ -8,7 +8,7 @@
 
  Following those rules and using as a reference a multi-switch light controlled with a mechanical latching relay, this is the wiring idea:
 
-![alt text](PCB/schematics-v17-safety-jlcpcb/readme-media/relay-wiring.png)
+![alt text](PCB/schematics-v18/readme-media/relay-wiring.png)
 
 A normal circuit sends all push buttons to the latching relay, which controlls the lights.
 This circuit (ESPHome) is a side-car to the latching relay acting as an standard push button, but also sensing the output of the latching relay to detect if the lights are on or off.
