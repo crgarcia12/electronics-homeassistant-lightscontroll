@@ -12,11 +12,25 @@
 
 A normal circuit sends all push buttons to the latching relay, which controlls the lights.
 This circuit (ESPHome) is a side-car to the latching relay acting as an standard push button, but also sensing the output of the latching relay to detect if the lights are on or off.
+# Version 18
+[Detailed information](PCB/schematics-v18/)
 
-# Version 17
+Since Version 17: 
+* Adding fuses the relay outputs, specially to protect in case two relays are closed with different voltage
+* Moving SHT40 and extending the footprint to make it easier to be solder
+* Moving LDA to make it easier to fit in the case
+
+![board-schematics](PCB/schematics-v18/readme-media/board-schematics.svg)
+![board-pcb](PCB/schematics-v18/readme-media/board-pcb.png)
+![board-pcb-3d](PCB/schematics-v18/readme-media/board-pcb-3d.png)
+
+## How to order from JLCPCB:
+![how-to-order-from-jlcpcb](PCB/schematics-v17-safety-jlcpcb/readme-media/jlcpcb-how-to-order.gif)
+
+# Older versions: Version 17
 [Detailed information](PCB/schematics-v17-safety-jlcpcb/)
 
-Since Version 2 there were many changes: 
+Since Version 13 there were many changes: 
 * Changed optocoupler for another one with less current requirements.
 * Change resistors to 150k x 2
 * Adding fuses to every sensing channel, and remove fuse in N
@@ -28,14 +42,24 @@ Since Version 2 there were many changes:
 * Remove capacitors from 5v->3.3 converter, to avoid inrush current at the USB
 * Adding external pull-up resistors for ESP32, some pins do not have internal pull-ups
 * Adding mains nets with creepage and clearance  
+* Replacing mains connectors by Wago with levers. They are super reliable and easy to use!
+* Replace analog temperature sensor by SHT40 using I2C protocol.
+* Also adding I2C terminal, so we can plug any I2C sensor
 ![board-schematics](PCB/schematics-v17-safety-jlcpcb/readme-media/board-schematics.svg)
 ![board-pcb](PCB/schematics-v17-safety-jlcpcb/readme-media/board-pcb.png)
 ![board-pcb-3d](PCB/schematics-v17-safety-jlcpcb/readme-media/board-pcb-3d.png)
 
-## How to order from JLCPCB:
-![how-to-order-from-jlcpcb](PCB/schematics-v17-safety-jlcpcb/readme-media/jlcpcb-how-to-order.gif)
+![board-pcb-3d](PCB/schematics-v17-safety-jlcpcb/readme-media/enclosure.jpg)
 
-# Older versions: Version 2
+The enclosure compared with a DIN relay. Size is perfect :)
+![board-pcb-3d](PCB/schematics-v17-safety-jlcpcb/readme-media/cage-vs-relay.jpg)
+
+# Older version: Version 16
+Size comparison between V16 and V13:
+
+![board-pcb-3d](PCB/schematics-v16-espinside-jlcpcb/readme-media/V16-v-sV2.jpg)
+
+# Older versions: Version 13
 
 This version was minimized by:
 * Using SPST-NO 3A smaller relays
@@ -59,11 +83,13 @@ Others:
 ![v2-board-schematics](readme-media/v2-board-schematics.png)
 ![v2-board-pcb](readme-media/v2-board-pcb.png)
 ![v2-board-pcb-3d](readme-media/v2-board-pcb-3d.png)
+![v2-board-pcb-3d](PCB/schematics-v13-new-relays-jlcpcb/readme-media/PCB.jpg)
 
-# Older versions: Version 1
+# Older versions: Version 9
 
 Device schematics (under development) 
 
 ![v1-board-schematics](readme-media/v1-board-schematics.png)
 ![v1-board-pcb](readme-media/v1-board-pcb.png)
 ![v1-board-pcb-3d](readme-media/v1-board-pcb-3d.png)
+![v2-board-pcb-3d](PCB/schematics-v02/readme-media/PCBs.jpg)
