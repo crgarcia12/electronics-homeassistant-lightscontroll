@@ -23,6 +23,9 @@ Since Version 17:
 ![board-schematics](PCB/schematics-v18/readme-media/board-schematics.svg)
 ![board-pcb](PCB/schematics-v18/readme-media/board-pcb.png)
 ![board-pcb-3d](PCB/schematics-v18/readme-media/board-pcb-3d.png)
+![board-pcb-3d](PCB/schematics-v18/readme-media/board-pcb-3d-3.png)
+![board-pcb-3d](PCB/schematics-v18/readme-media/board-pcb-3d-4.png)
+![board-pcb-3d](PCB/schematics-v18/readme-media/board-pcb-3d-2.png)
 
 ## How to order from JLCPCB:
 ![how-to-order-from-jlcpcb](PCB/schematics-v17-safety-jlcpcb/readme-media/jlcpcb-how-to-order.gif)
