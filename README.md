@@ -93,3 +93,9 @@ Device schematics (under development)
 ![v1-board-pcb](readme-media/v1-board-pcb.png)
 ![v1-board-pcb-3d](readme-media/v1-board-pcb-3d.png)
 ![v2-board-pcb-3d](PCB/schematics-v02/readme-media/PCBs.jpg)
+
+# Older versions: Versions 1
+I have no clue what I was thinking when I did this. I guess I put it here to show how much I had to learn :) 
+
+![v1-board-schematics](PCB/schematics-v01/readme-media/schematic.png)
+![v1-board-layouts](PCB/schematics-v01/readme-media/pcb-layout.png)
