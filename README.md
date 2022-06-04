@@ -8,27 +8,27 @@
 
  Following those rules and using as a reference a multi-switch light controlled with a mechanical latching relay, this is the wiring idea:
 
-![alt text](PCB/schematics-v18-jlcpcb/readme-media/relay-wiring.png)
+![alt text](PCB/schematics-v19-jlcpcb/readme-media/relay-wiring.png)
 
 A normal circuit sends all push buttons to the latching relay, which controlls the lights.
 This circuit (ESPHome) is a side-car to the latching relay acting as an standard push button, but also sensing the output of the latching relay to detect if the lights are on or off.
-# Version 18
-[Detailed information](PCB/schematics-v18-jlcpcb/)
+# Version 19
+[Detailed information](PCB/schematics-v19-jlcpcb/)
 
 Since Version 17: 
 * Adding fuses the relay outputs, specially to protect in case two relays are closed with different voltage
 * Moving SHT40 and extending the footprint to make it easier to be solder
 * Moving LDA to make it easier to fit in the case
 
-![board-schematics](PCB/schematics-v18-jlcpcb/readme-media/board-schematics.svg)
-![board-pcb](PCB/schematics-v18-jlcpcb/readme-media/board-pcb.png)
+![board-schematics](PCB/schematics-v19-jlcpcb/readme-media/board-schematics.svg)
+![board-pcb](PCB/schematics-v19-jlcpcb/readme-media/board-pcb.png)
 ![board-pcb-3d](PCB/schematics-v18-jlcpcbreadme-media/board-pcb-3d.png)
-![board-pcb-3d](PCB/schematics-v18-jlcpcb/readme-media/board-pcb-3d-3.png)
-![board-pcb-3d](PCB/schematics-v18-jlcpcb/readme-media/board-pcb-3d-4.png)
-![board-pcb-3d](PCB/schematics-v18-jlcpcb/readme-media/board-pcb-3d-2.png)
+![board-pcb-3d](PCB/schematics-v19-jlcpcb/readme-media/board-pcb-3d-3.png)
+![board-pcb-3d](PCB/schematics-v19-jlcpcb/readme-media/board-pcb-3d-4.png)
+![board-pcb-3d](PCB/schematics-v19-jlcpcb/readme-media/board-pcb-3d-2.png)
 
 ## How to order from JLCPCB:
-![how-to-order-from-jlcpcb](PCB/schematics-v17-safety-jlcpcb/readme-media/jlcpcb-how-to-order.gif)
+![how-to-order-from-jlcpcb](PCB/schematics-v19-jlcpcb/readme-media/jlcpcb-how-to-order.gif)
 
 # Older versions: Version 17
 [Detailed information](PCB/schematics-v17-safety-jlcpcb/)
