@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP LDA210-PDIP
+D DC Darlington Optocoupler, Vce 35V, CTR 600%, SO-4
+K NPN Darlington DC Optocoupler
+F http://optoelectronics.liteon.com/upload/download/DS70-2001-006/S_110_LTV-355T%2020140520.pdf
+$ENDCMP
+#
+#End Doc Library
