@@ -5181,6 +5181,11 @@
       (net 95 "Net-(F8-Pad1)") (pintype "passive") (tstamp cd1bac89-4bda-4b0d-b874-c1bd0e41d29c))
     (pad "2" thru_hole circle (at 2.54 0 90) (size 1.8 1.8) (drill 0.8) (layers *.Cu *.Mask)
       (net 6 "Sens2") (pintype "passive") (tstamp 28bdbffc-37b9-4d55-9ab5-172e04b00bc1))
+    (model "${KIPRJMOD}/components-footprints/RST-80-AMMO/RSTA_BEL.step"
+      (offset (xyz -2.5 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (layer "F.Cu")
@@ -5257,6 +5262,11 @@
       (net 97 "Net-(F10-Pad1)") (pintype "passive") (tstamp fea8bc41-b676-4245-bd29-39fd01a19f13))
     (pad "2" thru_hole circle (at 2.54 0 90) (size 1.8 1.8) (drill 0.8) (layers *.Cu *.Mask)
       (net 4 "Sens4") (pintype "passive") (tstamp 7e2eccce-9ce1-4e7f-b50a-d03f18caa6f9))
+    (model "${KIPRJMOD}/components-footprints/RST-80-AMMO/RSTA_BEL.step"
+      (offset (xyz -2.5 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (footprint "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" (layer "F.Cu")
@@ -5387,6 +5397,11 @@
       (net 11 "REO1") (pintype "passive") (tstamp 223aede2-dfc2-4a6f-b0b7-5729f94aa508))
     (pad "2" thru_hole circle (at 2.54 0 90) (size 1.8 1.8) (drill 0.8) (layers *.Cu *.Mask)
       (net 56 "Net-(F6-Pad2)") (pintype "passive") (tstamp 581d3769-fe5a-4e30-86d6-8cb31fdf34b3))
+    (model "${KIPRJMOD}/components-footprints/RST-80-AMMO/RSTA_BEL.step"
+      (offset (xyz -2.5 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (footprint "Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12" (layer "F.Cu")
@@ -5547,6 +5562,11 @@
       (net 96 "Net-(F9-Pad1)") (pintype "passive") (tstamp 26de6c81-b305-4701-89b3-277226af63f8))
     (pad "2" thru_hole circle (at 2.54 0 90) (size 1.8 1.8) (drill 0.8) (layers *.Cu *.Mask)
       (net 5 "Sens3") (pintype "passive") (tstamp f506dd95-68d8-4698-911b-a4d6b97b68cb))
+    (model "${KIPRJMOD}/components-footprints/RST-80-AMMO/RSTA_BEL.step"
+      (offset (xyz -2.5 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (footprint "Fuse:Fuseholder_TR5_Littelfuse_No560_No460" (layer "F.Cu")
@@ -5906,6 +5926,11 @@
       (net 9 "REO3") (pintype "passive") (tstamp 1dc22b96-9d93-4bcd-81ae-49cfeeda23fe))
     (pad "2" thru_hole circle (at 2.54 0 90) (size 1.8 1.8) (drill 0.8) (layers *.Cu *.Mask)
       (net 54 "Net-(F4-Pad2)") (pintype "passive") (tstamp 3fb98362-21d4-47ce-bfcd-b0a858312ca0))
+    (model "${KIPRJMOD}/components-footprints/RST-80-AMMO/RSTA_BEL.step"
+      (offset (xyz -2.5 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (footprint "Resistor_SMD:R_2512_6332Metric_Pad1.40x3.35mm_HandSolder" (layer "F.Cu")
@@ -6272,6 +6297,11 @@
       (net 57 "Net-(F7-Pad1)") (pintype "passive") (tstamp 38967bce-a47b-424f-9945-f8d1c2bf0c6f))
     (pad "2" thru_hole circle (at 2.54 0 90) (size 1.8 1.8) (drill 0.8) (layers *.Cu *.Mask)
       (net 7 "Sens1") (pintype "passive") (tstamp 37f31359-a193-4667-ac42-42ff9565d233))
+    (model "${KIPRJMOD}/components-footprints/RST-80-AMMO/RSTA_BEL.step"
+      (offset (xyz -2.5 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (layer "F.Cu")
@@ -6391,6 +6421,11 @@
       (net 8 "REO4") (pintype "passive") (tstamp d6d50d33-e91e-4d4e-94b7-a67cb83f8183))
     (pad "2" thru_hole circle (at 2.54 0 90) (size 1.8 1.8) (drill 0.8) (layers *.Cu *.Mask)
       (net 53 "Net-(F3-Pad2)") (pintype "passive") (tstamp d969e999-8ed7-4b26-8dfa-b58e8170861b))
+    (model "${KIPRJMOD}/components-footprints/RST-80-AMMO/RSTA_BEL.step"
+      (offset (xyz -2.5 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" (layer "F.Cu")
@@ -6561,6 +6596,11 @@
       (net 10 "REO2") (pintype "passive") (tstamp c35c0822-5f46-49b7-8c5f-b08edd39cc53))
     (pad "2" thru_hole circle (at 2.54 0 90) (size 1.8 1.8) (drill 0.8) (layers *.Cu *.Mask)
       (net 55 "Net-(F5-Pad2)") (pintype "passive") (tstamp 638c345f-f3cb-4465-811b-f572fa9d749b))
+    (model "${KIPRJMOD}/components-footprints/RST-80-AMMO/RSTA_BEL.step"
+      (offset (xyz -2.5 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (footprint "icons:danger1_negative" locked (layer "B.Cu")
