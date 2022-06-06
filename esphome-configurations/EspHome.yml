@@ -10,57 +10,83 @@ logger:
 api:
 
 ota:
-  password: "e54f26a88ddf4d58e9870a14a34bfbfa"
+  password: "OTA_PASSWORD"
 
 wifi:
-  ssid: "LeaCarlos21Internal_2"
-  password: "LeaCarlos21I"
+  ssid: "YOUR_WIFI_SSID_NAME"
+  password: "YOUR_WIFI_PASSWORD"
 
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
     ssid: "Hamodule Fallback Hotspot"
-    password: "bvFRy5WVZ131"
+    password: "RANDOM_PASSWORD_FOR_ESPHOME_CAPTIVE_PORTAL"
 
 captive_portal:
 
 ###################################
 #          Chanel 1
 ###################################
+i2c:
+  id: bus_a
+  sda: 21
+  scl: 22
+  scan: false
+  frequency: 10kHz
+
+# I2C temp sensor in the PCB (U7)
+sensor:
+  - platform: sht4x
+    id: temp_sensor
+    i2c_id: bus_a
+    address: 0x44
+    temperature:
+      name: "Temperature"
+    humidity:
+      name: "Relative Humidity"
 
 # This sensor checks if the light is really on or off by checking the voltage
 binary_sensor:
   - platform: gpio
     name: sensor_1
-    pin:
-      number: GPIO33
-      mode: INPUT_PULLUP
-      inverted: True
     id: sensor_1
-  - platform: gpio
-    name: sensor_2
     pin:
       number: GPIO32
-      mode: INPUT_PULLUP
+      mode: INPUT
       inverted: True
-    id: sensor_2
   - platform: gpio
-    name: sensor_3
+    name: sensor_2
+    id: sensor_2
     pin:
       number: GPIO35
-      mode: INPUT_PULLUP
+      mode: INPUT
       inverted: True
-    id: sensor_3
   - platform: gpio
-    name: sensor_4
+    id: sensor_3
+    name: sensor_3
     pin:
       number: GPIO34
-      mode: INPUT_PULLUP
+      mode: INPUT
       inverted: True
-    id: sensor_4    
+  - platform: gpio
+    id: sensor_4
+    name: sensor_4
+    pin:
+      number: GPIO39
+      mode: INPUT
+      inverted: True
+
 switch:
+  # This controlls the led in the PCB board (D1)
+  # Used to test if the integration works even when no relay is connected
+  - platform: gpio
+    name: test_light
+    id: test_light
+    pin: GPIO23
+    
   # This switch is a template (virtual). 
-  # It allows HA to send turn_on_action and turn_off_action, but the state is
-  # read directly from the binary_sensor
+  # It allows HA to send turn_on_action and turn_off_action.
+  # The state is actually read directly from the binary_sensor
+  # The action is sent to the relay_X
   - platform: template
     # https://esphome.io/components/switch/template.html
     name: light_1

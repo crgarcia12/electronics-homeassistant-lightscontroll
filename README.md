@@ -1,4 +1,4 @@
- # Home automation led controller custom module
+ # Home automation lights controller - ESPHome & Home Assistant compatible
 
  This circuit controll home lights following these rules:
  1. Safe: Safety is not trade in any decision.
@@ -18,6 +18,8 @@ The device is extensible:
 - 3.3V jumper: Allows to disconnect the internal ESP32, and replace it by other microcontroller
 - Relays pins: Relays can be controlled with an external microcontroller or device directly.  
 - Current sensing pins: Current sensing information is exposed through those pins. This can be used to connect any external microcontroller or other device
+- Output pins for 3.3 and 5V
+- ESPHome compatible - It's very easy to integrate to Home Assistant
 
 This device has several security measurements:
 - Input fast-blown fuse
