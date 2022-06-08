@@ -40,7 +40,7 @@ Since Version 17:
 
 ![board-schematics](PCB/schematics-v19-jlcpcb/readme-media/board-schematics.svg)
 ![board-pcb](PCB/schematics-v19-jlcpcb/readme-media/board-pcb.png)
-![board-pcb-3d](PCB/schematics-v18-jlcpcbreadme-media/board-pcb-3d.png)
+![board-pcb-3d](PCB/schematics-v19-jlcpcbreadme-media/board-pcb-3d.png)
 ![board-pcb-3d](PCB/schematics-v19-jlcpcb/readme-media/board-pcb-3d-3.png)
 ![board-pcb-3d](PCB/schematics-v19-jlcpcb/readme-media/board-pcb-3d-4.png)
 ![board-pcb-3d](PCB/schematics-v19-jlcpcb/readme-media/board-pcb-3d-2.png)
