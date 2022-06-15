@@ -10,8 +10,6 @@ logger:
 api:
 
 ota:
-  password: "OTA_PASSWORD"
-
 wifi:
   ssid: "YOUR_WIFI_SSID_NAME"
   password: "YOUR_WIFI_PASSWORD"
@@ -208,7 +206,7 @@ switch:
   - platform: gpio
     id: relay_1
     name: relay_1
-    pin: GPIO12
+    pin: GPIO13
     on_turn_on:
       - delay: 500ms
       - switch.turn_off: relay_1
