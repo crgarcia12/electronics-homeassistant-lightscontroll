@@ -38,6 +38,7 @@ Since Version 17:
 * Removed low-v fuse. Having only one fuse is enough since PS has overcurrent protection and >4kV insulation
 * Muved screwes. Now it has one extra holding point
 * Expose GPIO12 and GPIO33 for any future feature 
+* Reverted sensing, this allow to have capacitors to have a more constant reading
 
 ![board-schematics](PCB/schematics-v20/readme-media/board-schematics.svg)
 ![board-pcb](PCB/schematics-v20/readme-media/board-pcb.png)
@@ -46,7 +47,48 @@ Since Version 17:
 ![board-pcb-3d](PCB/schematics-v20/readme-media/board-pcb-3d-4.png)
 ![board-pcb-3d](PCB/schematics-v20/readme-media/board-pcb-3d-2.png)
 
-# Version 19
+# Simulate mains sensing cirquit
+
+You can simulate the circuit online at [lushprojects](http://lushprojects.com/circuitjs/circuitjs.html?ctz=CQAgjCAMB0l3BWEBmGZkDYAcmte2AJwYYgDskISClCApgLRhgBQAbiA8Stp91pUoQaIAEyookmAhYB3EABYsIAYuVgFCqCwAma8JvBhRYyMpM66AMwCGAVwA2AF137RZE8xOizYkJdtHFz0mUh9lJQMtC2t7Z1dQ0wjzDz8AuJd5SPcTSNxtLOV8rlJ8yDlOMDDfRNQtcvkvJPAMSnCCytLIaNEtOu0AJz5SVUjVSlR4coAPFAojJAVIMiMI0xAHAHsbHRYlldFe5v721nlD6KWxI-7yjgRRFJMH819BRQnoZCkoaBksuDHHzNcpDJZtVIvMSpWhTCrIYG9CaImEsADGHzavnB0JMglgUwUhGJJNJZNIaG6ogwYA8WDAWAUyAQWEIvzgZxQKNygJyHRx7Sh7XKAGcWljzEdhZJbA4RXQWGDAQjaI8ue8wFM4BUBakcSqOkLIWqDeVNpIMPUPsT1ey4GR6aIkG1JMgWObaSBLZIljbnQS4IQyBgEBgneA-J63ebxF6rb62f6pkGQ2GkN4xN83UA) 
+
+```
+$ 1 0.000005 30.13683688681966 70 5 50 5e-11
+v -96 368 -96 80 0 1 50 230 0 0 0.5
+w 48 80 48 144 0
+d 48 144 112 208 2 default
+d 48 272 112 208 2 default
+d -16 208 48 144 2 default
+d -16 208 48 272 2 default
+w 48 272 48 368 0
+w 48 368 -96 368 0
+w -16 208 -16 304 0
+w 112 208 160 208 0
+w -16 304 224 304 0
+r -96 80 48 80 0 300000
+x 370 115 407 118 4 20 load
+407 224 208 304 208 1
+w 224 240 224 304 0
+v 528 272 528 208 0 0 40 3.3 0 0 0.5
+w 400 208 320 208 0
+r 400 272 528 272 0 50000
+w 320 240 320 272 0
+c 400 208 400 272 0 0.0000049999999999999996 0.11666774048911469 0.001
+w 320 272 400 272 0
+w 400 208 528 208 0
+s 160 208 224 208 0 0 false
+r 400 320 528 320 0 1000000
+w 400 272 400 320 0
+w 528 272 528 320 0
+o 0 64 0 4099 320 0.00078125 0 2 0 3
+o 17 64 0 4099 5 0.00009765625 1 2 17 3
+o 23 64 0 4099 5 0.00009765625 2 2 23 3
+```
+
+## How to order from JLCPCB:
+![how-to-order-from-jlcpcb](PCB/schematics-v19-jlcpcb/readme-media/jlcpcb-how-to-order.gif)
+
+
+# Older versions: Version 19
 [Detailed information](PCB/schematics-v19-jlcpcb/)
 
 Since Version 17: 
@@ -62,8 +104,6 @@ Since Version 17:
 ![board-pcb-3d](PCB/schematics-v19-jlcpcb/readme-media/board-pcb-3d-4.png)
 ![board-pcb-3d](PCB/schematics-v19-jlcpcb/readme-media/board-pcb-3d-2.png)
 
-## How to order from JLCPCB:
-![how-to-order-from-jlcpcb](PCB/schematics-v19-jlcpcb/readme-media/jlcpcb-how-to-order.gif)
 
 # Older versions: Version 17
 [Detailed information](PCB/schematics-v17-safety-jlcpcb/)
