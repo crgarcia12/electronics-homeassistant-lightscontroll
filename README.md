@@ -30,17 +30,34 @@ This device has several security measurements:
 - Comformal coating with 90kV/mm2 insulation
 - High precision temperature sensor
 
+# Version 20
+[Detailed information](PCB/schematics-v20/)
+
+Since Version 17: 
+* Removed capacitors to current sensing. Not really needed after testing with Oscilloscope
+* Removed low-v fuse. Having only one fuse is enough since PS has overcurrent protection and >4kV insulation
+* Muved screwes. Now it has one extra holding point
+* Expose GPIO12 and GPIO33 for any future feature 
+
+![board-schematics](PCB/schematics-v20/readme-media/board-schematics.svg)
+![board-pcb](PCB/schematics-v20/readme-media/board-pcb.png)
+![board-pcb-3d](PCB/schematics-v20/readme-media/board-pcb-3d.png)
+![board-pcb-3d](PCB/schematics-v20/readme-media/board-pcb-3d-3.png)
+![board-pcb-3d](PCB/schematics-v20/readme-media/board-pcb-3d-4.png)
+![board-pcb-3d](PCB/schematics-v20/readme-media/board-pcb-3d-2.png)
+
 # Version 19
 [Detailed information](PCB/schematics-v19-jlcpcb/)
 
 Since Version 17: 
 * Adding fuses to every relay output. This is to protect in case two relays are closed at the same time, and one of them is accidentally wired to N. Current could flow from one to the other
 * Moving SHT40 and extending the footprint, to make it easier to solder
-* Moving LDA. Now it'seasier to fit in the case
+* Moving LD11. Now it'seasier to fit in the case
+* Tested with both optocouplers: LDA210 and ILD755-D
 
 ![board-schematics](PCB/schematics-v19-jlcpcb/readme-media/board-schematics.svg)
 ![board-pcb](PCB/schematics-v19-jlcpcb/readme-media/board-pcb.png)
-![board-pcb-3d](PCB/schematics-v19-jlcpcbreadme-media/board-pcb-3d.png)
+![board-pcb-3d](PCB/schematics-v19-jlcpcb/readme-media/board-pcb-3d.png)
 ![board-pcb-3d](PCB/schematics-v19-jlcpcb/readme-media/board-pcb-3d-3.png)
 ![board-pcb-3d](PCB/schematics-v19-jlcpcb/readme-media/board-pcb-3d-4.png)
 ![board-pcb-3d](PCB/schematics-v19-jlcpcb/readme-media/board-pcb-3d-2.png)
