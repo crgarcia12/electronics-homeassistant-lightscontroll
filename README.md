@@ -32,7 +32,8 @@ This device has several security measurements:
 
 # How does it work?
 ## Mains sensing
-Section under development. Few teaser pictures:
+Section under development. In here there will be a detailed description on how Mains is detected.
+Few teaser pictures:
 ![board-pcb-3d](PCB/schematics-v20/readme-media/osc-sens-switch-on.jpg)
 ![board-pcb-3d](PCB/schematics-v20/readme-media/osc-sens-switch-on.jpg)
 ![board-pcb-3d](PCB/schematics-v20/readme-media/osc-sens-switch-off.jpg)
