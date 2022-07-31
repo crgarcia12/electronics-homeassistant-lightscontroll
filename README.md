@@ -13,7 +13,7 @@
 A normal circuit sends all push buttons to the latching relay, which controlls the lights.
 This circuit (ESPHome) is a side-car to the latching relay acting as an standard push button, but also sensing the output of the latching relay to detect if the lights are on or off.
 
-The device is extensible:
+This device is extensible:
 - Expose I2C pins, to connect any I2C sensor
 - 3.3V jumper: Allows to disconnect the internal ESP32, and replace it by other microcontroller
 - Relays pins: Relays can be controlled with an external microcontroller or device directly.  
@@ -29,6 +29,13 @@ This device has several security measurements:
 - 4kv insulated PS for low voltage
 - Comformal coating with 90kV/mm2 insulation
 - High precision temperature sensor
+
+# How does it work?
+## Mains sensing
+Section under development. Few teaser pictures:
+![board-pcb-3d](PCB/schematics-v20/readme-media/osc-sens-switch-on.jpg)
+![board-pcb-3d](PCB/schematics-v20/readme-media/osc-sens-switch-on.jpg)
+![board-pcb-3d](PCB/schematics-v20/readme-media/osc-sens-switch-off.jpg)
 
 # Version 20
 [Detailed information](PCB/schematics-v20/)
