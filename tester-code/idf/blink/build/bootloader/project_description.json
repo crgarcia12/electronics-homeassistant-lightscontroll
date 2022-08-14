@@ -1,0 +1,21 @@
+{
+    "project_name":       "bootloader",
+    "project_path":       "C:/Users/crgar/esp/esp-idf/components/bootloader/subproject",
+    "build_dir":          "C:/gitrepos/github/crgarcia12/electronics-homeassistant-lightscontroll/tester-code/idf/blink/build/bootloader",
+    "config_file":        "C:/gitrepos/github/crgarcia12/electronics-homeassistant-lightscontroll/tester-code/idf/blink/sdkconfig",
+    "config_defaults":    "",
+    "app_elf":            "bootloader.elf",
+    "app_bin":            "bootloader.bin",
+    "git_revision":       "v4.4.2",
+    "target":             "esp32",
+    "rev":                "0",
+    "phy_data_partition": "",
+    "monitor_baud" :      "115200",
+    "monitor_toolprefix": "xtensa-esp32-elf-",
+    "config_environment" : {
+        "COMPONENT_KCONFIGS" : "C:/Users/crgar/esp/esp-idf/components/efuse/Kconfig;C:/Users/crgar/esp/esp-idf/components/esp32/Kconfig;C:/Users/crgar/esp/esp-idf/components/esp_common/Kconfig;C:/Users/crgar/esp/esp-idf/components/esp_hw_support/Kconfig;C:/Users/crgar/esp/esp-idf/components/esp_system/Kconfig;C:/Users/crgar/esp/esp-idf/components/freertos/Kconfig;C:/Users/crgar/esp/esp-idf/components/hal/Kconfig;C:/Users/crgar/esp/esp-idf/components/log/Kconfig;C:/Users/crgar/esp/esp-idf/components/newlib/Kconfig;C:/Users/crgar/esp/esp-idf/components/spi_flash/Kconfig",
+        "COMPONENT_KCONFIGS_PROJBUILD" : "C:/Users/crgar/esp/esp-idf/components/bootloader/Kconfig.projbuild;C:/Users/crgar/esp/esp-idf/components/esp_rom/Kconfig.projbuild;C:/Users/crgar/esp/esp-idf/components/esptool_py/Kconfig.projbuild;C:/Users/crgar/esp/esp-idf/components/partition_table/Kconfig.projbuild"
+    },
+    "build_components" : [ "bootloader", "bootloader_support", "efuse", "esp32", "esp_common", "esp_hw_support", "esp_rom", "esp_system", "esptool_py", "freertos", "hal", "log", "main", "micro-ecc", "newlib", "partition_table", "soc", "spi_flash", "xtensa", "" ],
+    "build_component_paths" : [ "C:/Users/crgar/esp/esp-idf/components/bootloader", "C:/Users/crgar/esp/esp-idf/components/bootloader_support", "C:/Users/crgar/esp/esp-idf/components/efuse", "C:/Users/crgar/esp/esp-idf/components/esp32", "C:/Users/crgar/esp/esp-idf/components/esp_common", "C:/Users/crgar/esp/esp-idf/components/esp_hw_support", "C:/Users/crgar/esp/esp-idf/components/esp_rom", "C:/Users/crgar/esp/esp-idf/components/esp_system", "C:/Users/crgar/esp/esp-idf/components/esptool_py", "C:/Users/crgar/esp/esp-idf/components/freertos", "C:/Users/crgar/esp/esp-idf/components/hal", "C:/Users/crgar/esp/esp-idf/components/log", "C:/Users/crgar/esp/esp-idf/components/bootloader/subproject/main", "C:/Users/crgar/esp/esp-idf/components/bootloader/subproject/components/micro-ecc", "C:/Users/crgar/esp/esp-idf/components/newlib", "C:/Users/crgar/esp/esp-idf/components/partition_table", "C:/Users/crgar/esp/esp-idf/components/soc", "C:/Users/crgar/esp/esp-idf/components/spi_flash", "C:/Users/crgar/esp/esp-idf/components/xtensa", "" ]
+}

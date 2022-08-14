@@ -1,0 +1,6 @@
+source "C:/Users/crgar/esp/esp-idf/components/app_update/Kconfig.projbuild"
+source "C:/Users/crgar/esp/esp-idf/components/bootloader/Kconfig.projbuild"
+source "C:/Users/crgar/esp/esp-idf/components/esp_rom/Kconfig.projbuild"
+source "C:/Users/crgar/esp/esp-idf/components/esptool_py/Kconfig.projbuild"
+source "C:/Users/crgar/esp/esp-idf/components/partition_table/Kconfig.projbuild"
+source "C:/gitrepos/github/crgarcia12/electronics-homeassistant-lightscontroll/tester-code/idf/blink/main/Kconfig.projbuild"

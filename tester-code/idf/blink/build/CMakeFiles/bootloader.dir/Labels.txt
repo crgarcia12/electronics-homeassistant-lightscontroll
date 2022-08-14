@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+C:/gitrepos/github/crgarcia12/electronics-homeassistant-lightscontroll/tester-code/idf/blink/build/CMakeFiles/bootloader
+C:/gitrepos/github/crgarcia12/electronics-homeassistant-lightscontroll/tester-code/idf/blink/build/CMakeFiles/bootloader.rule
+C:/gitrepos/github/crgarcia12/electronics-homeassistant-lightscontroll/tester-code/idf/blink/build/CMakeFiles/bootloader-complete.rule
+C:/gitrepos/github/crgarcia12/electronics-homeassistant-lightscontroll/tester-code/idf/blink/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+C:/gitrepos/github/crgarcia12/electronics-homeassistant-lightscontroll/tester-code/idf/blink/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+C:/gitrepos/github/crgarcia12/electronics-homeassistant-lightscontroll/tester-code/idf/blink/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+C:/gitrepos/github/crgarcia12/electronics-homeassistant-lightscontroll/tester-code/idf/blink/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+C:/gitrepos/github/crgarcia12/electronics-homeassistant-lightscontroll/tester-code/idf/blink/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+C:/gitrepos/github/crgarcia12/electronics-homeassistant-lightscontroll/tester-code/idf/blink/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+C:/gitrepos/github/crgarcia12/electronics-homeassistant-lightscontroll/tester-code/idf/blink/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
