@@ -19,37 +19,9 @@ static const char *TAG = "example";
 /* Use project configuration menu (idf.py menuconfig) to choose the GPIO to blink,
    or you can edit the following line and set a number here.
 */
-#define BLINK_GPIO CONFIG_BLINK_GPIO
-
+static int BLINK_GPIO = 23;
+static int ESP_RELAYS_GPIOS[] = {13, 27, 26, 25};
 static uint8_t s_led_state = 0;
-
-#ifdef CONFIG_BLINK_LED_RMT
-static led_strip_t *pStrip_a;
-
-static void blink_led(void)
-{
-    /* If the addressable LED is enabled */
-    if (s_led_state) {
-        /* Set the LED pixel using RGB from 0 (0%) to 255 (100%) for each color */
-        pStrip_a->set_pixel(pStrip_a, 0, 16, 16, 16);
-        /* Refresh the strip to send data */
-        pStrip_a->refresh(pStrip_a, 100);
-    } else {
-        /* Set all LED off to clear all pixels */
-        pStrip_a->clear(pStrip_a, 50);
-    }
-}
-
-static void configure_led(void)
-{
-    ESP_LOGI(TAG, "Example configured to blink addressable LED!");
-    /* LED strip initialization with the GPIO and pixels number*/
-    pStrip_a = led_strip_init(CONFIG_BLINK_LED_RMT_CHANNEL, BLINK_GPIO, 1);
-    /* Set all LED off to clear all pixels */
-    pStrip_a->clear(pStrip_a, 50);
-}
-
-#elif CONFIG_BLINK_LED_GPIO
 
 static void blink_led(void)
 {
@@ -63,21 +35,63 @@ static void configure_led(void)
     gpio_reset_pin(BLINK_GPIO);
     /* Set the GPIO as a push/pull output */
     gpio_set_direction(BLINK_GPIO, GPIO_MODE_OUTPUT);
+    gpio_set_level(BLINK_GPIO, 0);
 }
 
-#endif
+static void configure_relay(void)
+{
+    ESP_LOGI(TAG, "Configuring relays");
+
+    int number_of_relays = sizeof(ESP_RELAYS_GPIOS)/sizeof(ESP_RELAYS_GPIOS[0]);
+    for (int i = 0; i < number_of_relays; i++)
+    {
+        gpio_reset_pin(ESP_RELAYS_GPIOS[i]);
+        gpio_set_direction(ESP_RELAYS_GPIOS[i], GPIO_MODE_OUTPUT);
+    }
+    
+    /* Set the GPIO as a push/pull output */
+    
+    ESP_LOGI(TAG, "Configuring relays done");
+}
+
+static void switch_relays(void)
+{
+    ESP_LOGI(TAG, "Turning relays ON");
+
+    int number_of_relays = sizeof(ESP_RELAYS_GPIOS)/sizeof(ESP_RELAYS_GPIOS[0]);
+    for (int i = 0; i < number_of_relays; i++)
+    {
+        gpio_set_level(ESP_RELAYS_GPIOS[i], 1);
+    }
+    vTaskDelay(100 / portTICK_PERIOD_MS);
+
+    ESP_LOGI(TAG, "Turning relays OFF");
+    for (int i = 0; i < number_of_relays; i++)
+    {
+        gpio_set_level(ESP_RELAYS_GPIOS[i], 0);
+    }
+    /* Set the GPIO as a push/pull output */
+    
+    ESP_LOGI(TAG, "Turning relays done");
+}
 
 void app_main(void)
 {
 
     /* Configure the peripheral according to the LED type */
     configure_led();
+    configure_relay();
+    vTaskDelay(3000 / portTICK_PERIOD_MS);
+
+    gpio_set_level(BLINK_GPIO, 1);
 
     while (1) {
         ESP_LOGI(TAG, "Turning the LED %s!", s_led_state == true ? "ON" : "OFF");
-        blink_led();
+        //blink_led();
         /* Toggle the LED state */
         s_led_state = !s_led_state;
-        vTaskDelay(CONFIG_BLINK_PERIOD / portTICK_PERIOD_MS);
+
+        switch_relays();
+        vTaskDelay(2000 / portTICK_PERIOD_MS);
     }
 }
