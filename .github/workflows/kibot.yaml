@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - uses: INTI-CMNB/KiBot@v2
+    - uses: INTI-CMNB/KiBot@v2_k6
       with:
         # Required - kibot config file
         config: PCB/schematics-v20/kicad/config.kibot.yaml
