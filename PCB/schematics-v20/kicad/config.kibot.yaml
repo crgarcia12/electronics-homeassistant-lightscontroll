@@ -45,40 +45,6 @@ outputs:
       - layer: B.Cu
       - layer: Dwgs.User
 
-  - name: 'print_gnd'
-    comment: "Print GND+Dwgs.User"
-    type: pdf_pcb_print
-    dir: .
-    layers:
-      - layer: GND
-      - layer: Dwgs.User
-
-  - name: 'print_power'
-    comment: "Print Power_+3,3V+Dwgs.User"
-    type: pdf_pcb_print
-    dir: .
-    layers:
-      - layer: Power_+3,3V
-      - layer: Dwgs.User
-
-  - name: 'print_s1'
-    comment: "Print Señal_1+Dwgs.User"
-    type: pdf_pcb_print
-    dir: .
-    layers:
-      - layer: Señal_1
-        suffix: S1_Cu
-      - layer: Dwgs.User
-
-  - name: 'print_s2'
-    comment: "Print Señal_2+Dwgs.User"
-    type: pdf_pcb_print
-    dir: .
-    layers:
-      - layer: Señal_2
-        suffix: S2_Cu
-      - layer: Dwgs.User
-
   - name: 'interactive_bom'
     comment: "Interactive Bill of Materials (HTML)"
     type: ibom
@@ -167,14 +133,6 @@ outputs:
         suffix: F_Cu
       - layer: B.Cu
         suffix: B_Cu
-      - layer: GND
-        suffix: GND_Cu
-      - layer: Power_+3,3V
-        suffix: Power_Cu
-      - layer: Señal_1
-        suffix: S1_Cu
-      - layer: Señal_2
-        suffix: S2_Cu
       - layer: F.Paste
         suffix: F_Paste
       - layer: B.Paste
@@ -223,7 +181,7 @@ outputs:
     type: position
     dir: Position
     options:
-      format: ASCII   # CSV or ASCII format
+      format: CSV   # CSV or ASCII format
       units: millimeters  # millimeters or inches
       separate_files_for_front_and_back: true
       only_smd: true
