@@ -1,0 +1,32 @@
+name: example
+
+on:
+  push:
+    paths:
+    - '**.sch'
+    - '**.kicad_pcb'
+  pull_request:
+    paths:
+      - '**.sch'
+      - '**.kicad_pcb'
+
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: INTI-CMNB/KiBot@v2
+      with:
+        # Required - kibot config file
+        config: PCB/schematics-v20/kicad/config.kibot.yaml
+        # optional - prefix to output defined in config
+        dir: PCB/schematics-v20/kicad/fabrication
+        # optional - schematic file
+        schema: 'PCB/schematics-v20/kicad/hamodule.kicad_sch'
+        # optional - PCB design file
+        board: 'PCB/schematics-v20/kicad/hamodule.kicad_pcb'
+    - name: upload results
+      uses: actions/upload-artifact@v2
+      with:
+        name: output
+        path: PCB/schematics-v20/kicad/fabrication
