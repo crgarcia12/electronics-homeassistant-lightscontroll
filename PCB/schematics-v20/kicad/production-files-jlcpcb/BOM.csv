@@ -1,44 +1,42 @@
 Comment,Designator,Footprint,LCSC Part #
-100nF Polarized capacitor  small symbol,"C1,C2,C4,C6,C7,C9,C10,C11,C12,C13,C18",Capacitor_SMD,C14663
-22uF Polarized capacitor  small symbol,C3,Capacitor_SMD,C59461
-10uF Polarized capacitor  small symbol,C5,Capacitor_THT,
-4.7uF Polarized capacitor  small symbol,C8,Capacitor_SMD,C19666
-4.7uF Polarized capacitor  small symbol,"C14,C15,C16,C17",Capacitor_SMD,C29823
+100nF Polarized capacitor  small symbol,"C1,C2,C7,C9,C12,C14,C19",Capacitor_SMD,C14663
+NC Polarized capacitor  small symbol,"C3,C4,C5,C10,C11",Capacitor_SMD,C14663
+22uF Unpolarized capacitor  small symbol,"C6,C15,C16,C17,C18",Capacitor_SMD,C59461
+10uF Polarized capacitor  small symbol,C8,Capacitor_THT,
+4.7uF Polarized capacitor  small symbol,C13,Capacitor_SMD,C19666
 LED Light emitting diode,"D1,D2",LED_SMD,C2297
 D_TVS Bidirectional transient-voltage-suppression diode,"D3,D4,D5",Diode_SMD,C383211
 BAT60A-7 10V 3A High Current Recitifier Schottky Diode  SOD-323,D6,Diode_SMD,C124187
 250V500mA Fuse,F1,Fuse,
-250V50mA Fuse,F2,Fuse,
-Fuse Fuse,"F3,F4,F5,F6,F7,F8,F9,F10",RST-80-AMMO,
+Fuse Fuse,"F2,F3,F4,F5,F6,F7,F8,F9",RST-80-AMMO,
 MountingHole_Pad Mounting Hole with connection,"H1,H2,H3",MountingHole,
-Conn_01x02_Male Generic connector  single row  01x02  script gen,"J1,J6",Connector_PinHeader_2.54mm,
-2604-1102 ,J2,wago-2604-1102,
-GND|5V Generic connector  single row  01x02  script generated (k,J3,Connector_JST,
-GND|3.3V Generic connector  single row  01x02  script generated ,J4,Connector_JST,
-Jumper Generic connector  single row  01x02  script generated (k,J5,Connector_PinHeader_2.54mm,
-Current Jumper Generic connector  single row  01x02  script gene,J7,Connector_PinHeader_2.54mm,
-EspRelays Generic connector  single row  01x04  script generated,J8,Connector_PinSocket_2.54mm,
-USB_C_Receptacle_USB2.0 USB 2.0-only Type-C Receptacle connector,J9,Connector_USB,C167321
-DoNotCon Generic connector  single row  01x02  script generated ,J10,Connector_PinHeader_2.54mm,
+GND|5V Generic connector  single row  01x02  script generated (k,J1,Connector_JST,
+Conn_01x02_Male Generic connector  single row  01x02  script gen,"J2,J5,J7",Connector_PinHeader_2.54mm,
+2604-1102 ,J3,wago-2604-1102,
+USB | PS Generic connector  single row  01x03  script generated ,J4,Connector_PinHeader_2.54mm,
+GND|3.3V Generic connector  single row  01x02  script generated ,J6,Connector_JST,
+Current Jumper Generic connector  single row  01x02  script gene,J8,Connector_PinHeader_2.54mm,
+EspRelays Generic connector  single row  01x04  script generated,J9,Connector_PinSocket_2.54mm,
+USB_C_Receptacle_USB2.0 USB 2.0-only Type-C Receptacle connector,J10,Connector_USB,C167321
 2604-1104 ,"J11,J12",wago-2604-1104,
 EspSense Generic connector  single row  01x04  script generated ,J13,Connector_PinSocket_2.54mm,
-PCN-105D PCN-124D3MHZ 000,"K1,K2,K3,K4",PCN,
+AQG12205 Solid State Relays - PCB Mount 1A 5V Random Non-Zero Cr,"K1,K2,K3,K4",AQG12205,
 NetTie_2 Net tie  2 pins,NT1,NetTie,
 RAC05-05SK/277 ,PS1,rac05-05sk,
 SS8050-SMD NPN transistor  base/emitter/collector,Q1,Package_TO_SOT_SMD,C177739
 SS8050 NPN transistor  base/emitter/collector,Q2,Package_TO_SOT_SMD,C177739
-10k Resistor,"R1,R2,R3,R20,R21",Resistor_SMD,C25804
+10k Resistor,"R1,R2,R3,R16,R17,R18,R19,R20,R21",Resistor_SMD,C25804
 100 Resistor,"R4,R5",Resistor_SMD,C17408
 150k1w Resistor,"R6,R22,R23,R24,R25,R26,R27,R28,R29",Resistor_SMD,C25719
 22.1k Resistor,R7,Resistor_SMD,C25961
-47.5k Resistor,"R8,R16,R17,R18,R19",Resistor_SMD,C23061
+47.5k Resistor,R8,Resistor_SMD,C23061
 5.1k Resistor,"R9,R10",Resistor_SMD,C23186
 1k Resistor,"R11,R15",Resistor_SMD,C25585
 0 Resistor,"R12,R13",Resistor_SMD,C17477
 1k Resistor,R14,Resistor_SMD,C4410
 400V Voltage dependent resistor,RV1,Varistor,
 Switch Push button switch  generic  two pins,"SW1,SW2",Button_Switch_SMD,C318884
-LD1117AV33_TO220 800mA Fixed Low Drop Positive Voltage Regulator,U1,Package_TO_SOT_THT,
+LD1117AV33 800mA Fixed Low Drop Positive Voltage Regulator  Fixe,U1,Package_TO_SOT_THT,
 ESP32-WROOM-32E RF Module  ESP32-D0WD SoC  Wi-Fi 802.11b/g/n  Bl,U2,RF_Module,C701343
 CP2102N-A01-GQFN28 USB to UART master bridge  QFN-28,U3,Package_DFN_QFN,C964632
 ULN2003A High Voltage  High Current Darlington Transistor Arrays,U4,Package_SO,C7512
