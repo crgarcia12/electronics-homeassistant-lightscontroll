@@ -9,6 +9,7 @@ on:
     paths:
       - '**.sch'
       - '**.kicad_pcb'
+  workflow_dispatch:
 
 jobs:
   example:
