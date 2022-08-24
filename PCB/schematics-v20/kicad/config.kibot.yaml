@@ -252,3 +252,10 @@ outputs:
     options:
       metric_units: true
       origin: 85,66.2
+
+  - name: render_3d
+    comment: "Generate 3D model (IMG)"
+    type: render_3d
+    dir: 3D-img
+    options:
+      download: true
