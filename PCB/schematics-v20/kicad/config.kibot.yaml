@@ -11,6 +11,7 @@ preflight:
 global:
   # We want the revision added to the names for this project
   output: '%f-%i_%r.%x'
+  kiauto_time_out_scale: 10
 
 import:
   - configs/JLCPCB.kibot.yaml
