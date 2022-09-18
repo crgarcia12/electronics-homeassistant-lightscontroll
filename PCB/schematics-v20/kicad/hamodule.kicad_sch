@@ -6,8 +6,8 @@
 
   (title_block
     (title "Home Assistant module for lights control")
-    (date "2022-06-04")
-    (rev "V19")
+    (date "2022-09-18")
+    (rev "20220918.20")
   )
 
   (lib_symbols
@@ -3032,7 +3032,6 @@
       )
     )
   )
-
 
   (junction (at 224.79 78.74) (diameter 0) (color 0 0 0 0)
     (uuid 052c1a6c-dd15-4761-bb70-1bde353db083)

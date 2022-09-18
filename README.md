@@ -42,11 +42,13 @@ Few teaser pictures:
 [Detailed information](PCB/schematics-v20/)
 
 Since Version 17: 
-* Removed capacitors to current sensing. Not really needed after testing with Oscilloscope
+* Mains sensing is inverted, to make better use of rectifier capacitors and have constant reading
 * Removed low-v fuse. Having only one fuse is enough since PS has overcurrent protection and >4kV insulation
-* Muved screwes. Now it has one extra holding point
-* Expose GPIO12 and GPIO33 for any future feature 
-* Reverted sensing, this allow to have capacitors to have a more constant reading
+* Moved screwes. Now it has one extra holding point
+* Expose GPIO12 and GPIO33, for better board extenisbility 
+* Moved to SSR with integrated snubber instead of mechanical relays. The kickback of the inductive load (latching relays) was creating spikes and restarting the ESP32 
+* Adding SMD caps to the 3.3v and 5V lines in case they are needed in noisy conditions
+* Separate GND for relays and ULN from the digital signal plane, to reduce noise 
 
 ![board-schematics](PCB/schematics-v20/readme-media/board-schematics.svg)
 ![board-pcb](PCB/schematics-v20/readme-media/board-pcb.png)
