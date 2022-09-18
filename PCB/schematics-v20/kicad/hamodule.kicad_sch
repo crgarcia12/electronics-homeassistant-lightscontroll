@@ -3033,6 +3033,7 @@
     )
   )
 
+
   (junction (at 224.79 78.74) (diameter 0) (color 0 0 0 0)
     (uuid 052c1a6c-dd15-4761-bb70-1bde353db083)
   )
@@ -4226,13 +4227,6 @@
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 1c9f6fea-1796-4a2d-80b3-ae22ce51c8f5)
     (property "Intersheet References" "${INTERSHEET_REFS}" (id 0) (at -1.27 -2.54 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-  )
-  (global_label "GND" (shape input) (at 215.9 100.33 180) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify right))
-    (uuid 1cb22080-0f59-4c18-a6e6-8685ef44ec53)
-    (property "Intersheet References" "${INTERSHEET_REFS}" (id 0) (at -8.89 5.08 0)
       (effects (font (size 1.27 1.27)) hide)
     )
   )
