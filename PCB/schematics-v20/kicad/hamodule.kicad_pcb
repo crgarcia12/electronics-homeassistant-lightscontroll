@@ -5466,7 +5466,7 @@
       (net 1 "220VAC(L)") (pinfunction "OUTPUT_1") (pintype "passive") (tstamp e2cc6f29-0dbb-4171-a15f-0cd3494736b4))
     (pad "4" thru_hole circle (at 20.32 0 90) (size 2 2) (drill 1) (layers *.Cu *.Mask)
       (net 11 "REO1") (pinfunction "OUTPUT_2") (pintype "passive") (tstamp ac7b6f5e-a568-43ad-b3a1-a2122ac4c240))
-    (model "AQG12205.stp"
+    (model "${KIPRJMOD}/components-footprints/AQG12205/AQG12205/3D/AQG12205.stp"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -5522,7 +5522,7 @@
       (net 1 "220VAC(L)") (pinfunction "OUTPUT_1") (pintype "passive") (tstamp 1f01b8e3-2ae3-404c-9c7a-cafa158b158a))
     (pad "4" thru_hole circle (at 20.32 0 90) (size 2 2) (drill 1) (layers *.Cu *.Mask)
       (net 10 "REO2") (pinfunction "OUTPUT_2") (pintype "passive") (tstamp fbb93bb9-5d82-4139-b331-9533c42e40ae))
-    (model "AQG12205.stp"
+    (model "${KIPRJMOD}/components-footprints/AQG12205/AQG12205/3D/AQG12205.stp"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -5616,7 +5616,7 @@
       (net 1 "220VAC(L)") (pinfunction "OUTPUT_1") (pintype "passive") (tstamp a202c580-05e0-4f01-9e4c-bcd7dcfa76e8))
     (pad "4" thru_hole circle (at 20.32 0 90) (size 2 2) (drill 1) (layers *.Cu *.Mask)
       (net 8 "REO4") (pinfunction "OUTPUT_2") (pintype "passive") (tstamp 24dc636a-9e45-4dc3-83d6-0a8813bab4e8))
-    (model "AQG12205.stp"
+    (model "${KIPRJMOD}/components-footprints/AQG12205/AQG12205/3D/AQG12205.stp"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -5788,7 +5788,7 @@
       (net 1 "220VAC(L)") (pinfunction "OUTPUT_1") (pintype "passive") (tstamp 2a4a7065-8e64-41c2-bcbf-3e3d5abe9dfc))
     (pad "4" thru_hole circle (at 20.32 0 90) (size 2 2) (drill 1) (layers *.Cu *.Mask)
       (net 9 "REO3") (pinfunction "OUTPUT_2") (pintype "passive") (tstamp 54830cc4-376d-42e8-9110-b49710e9fff8))
-    (model "AQG12205.stp"
+    (model "${KIPRJMOD}/components-footprints/AQG12205/AQG12205/3D/AQG12205.stp"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
