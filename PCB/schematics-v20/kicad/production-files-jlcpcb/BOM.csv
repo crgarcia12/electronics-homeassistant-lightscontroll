@@ -1,6 +1,7 @@
 Comment,Designator,Footprint,LCSC Part #
 100nF Polarized capacitor  small symbol,"C1,C2,C7,C9,C12,C14,C19",Capacitor_SMD,C14663
-NC Polarized capacitor  small symbol,"C3,C4,C5,C10,C11",Capacitor_SMD,C14663
+NC Polarized capacitor  small symbol,"C3,C4,C10,C11",Capacitor_SMD,
+NC Polarized capacitor  small symbol,C5,Capacitor_SMD,
 22uF Unpolarized capacitor  small symbol,"C6,C15,C16,C17,C18",Capacitor_SMD,C59461
 10uF Polarized capacitor  small symbol,C8,Capacitor_THT,
 4.7uF Polarized capacitor  small symbol,C13,Capacitor_SMD,C19666
@@ -23,8 +24,7 @@ EspSense Generic connector  single row  01x04  script generated ,J13,Connector_P
 AQG12205 Solid State Relays - PCB Mount 1A 5V Random Non-Zero Cr,"K1,K2,K3,K4",AQG12205,
 NetTie_2 Net tie  2 pins,NT1,NetTie,
 RAC05-05SK/277 ,PS1,rac05-05sk,
-SS8050-SMD NPN transistor  base/emitter/collector,Q1,Package_TO_SOT_SMD,C177739
-SS8050 NPN transistor  base/emitter/collector,Q2,Package_TO_SOT_SMD,C177739
+SS8050 NPN transistor  base/emitter/collector,"Q1,Q2",Package_TO_SOT_SMD,C177739
 10k Resistor,"R1,R2,R3,R16,R17,R18,R19,R20,R21",Resistor_SMD,C25804
 100 Resistor,"R4,R5",Resistor_SMD,C17408
 150k1w Resistor,"R6,R22,R23,R24,R25,R26,R27,R28,R29",Resistor_SMD,C25719

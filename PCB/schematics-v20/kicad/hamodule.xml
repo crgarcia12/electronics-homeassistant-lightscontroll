@@ -2,14 +2,14 @@
 <export version="E">
   <design>
     <source>C:\gitrepos\github\crgarcia12\electronics-homeassistant-lightscontroll\PCB\schematics-v20\kicad\hamodule.kicad_sch</source>
-    <date>18/09/2022 19:47:32</date>
+    <date>21/09/2022 20:42:52</date>
     <tool>Eeschema (6.0.5)</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>Home Assistant module for lights control</title>
         <company/>
-        <rev>V19</rev>
-        <date>2022-06-04</date>
+        <rev>20220918.20</rev>
+        <date>2022-09-18</date>
         <source>hamodule.kicad_sch</source>
         <comment number="1" value=""/>
         <comment number="2" value=""/>
@@ -53,13 +53,10 @@
     </comp>
     <comp ref="C3">
       <value>NC</value>
-      <footprint>Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</footprint>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
       <datasheet>https://www.distrelec.ch/en/ceramic-capacitor-100nf-50vdc-0805-rnd-components-rnd-1500805b104j500nt/p/30086635?q=smd+capacitor+&amp;pos=5&amp;origPos=990&amp;origPageSize=50&amp;track=true</datasheet>
-      <fields>
-        <field name="JLCPCB">C14663</field>
-      </fields>
       <libsource lib="Device" part="C_Polarized_Small" description="Polarized capacitor, small symbol"/>
-      <property name="JLCPCB" value="C14663"/>
+      <property name="JLCPCB" value=""/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="hamodule.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -67,13 +64,10 @@
     </comp>
     <comp ref="C4">
       <value>NC</value>
-      <footprint>Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</footprint>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
       <datasheet>https://www.distrelec.ch/en/ceramic-capacitor-100nf-50vdc-0805-rnd-components-rnd-1500805b104j500nt/p/30086635?q=smd+capacitor+&amp;pos=5&amp;origPos=990&amp;origPageSize=50&amp;track=true</datasheet>
-      <fields>
-        <field name="JLCPCB">C14663</field>
-      </fields>
       <libsource lib="Device" part="C_Polarized_Small" description="Polarized capacitor, small symbol"/>
-      <property name="JLCPCB" value="C14663"/>
+      <property name="JLCPCB" value=""/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="hamodule.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -83,11 +77,8 @@
       <value>NC</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</footprint>
       <datasheet>CL10A226MQ8NRNC</datasheet>
-      <fields>
-        <field name="JLCPCB">C59461</field>
-      </fields>
       <libsource lib="Device" part="C_Polarized_Small" description="Polarized capacitor, small symbol"/>
-      <property name="JLCPCB" value="C59461"/>
+      <property name="JLCPCB" value=""/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="hamodule.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -149,13 +140,10 @@
     </comp>
     <comp ref="C10">
       <value>NC</value>
-      <footprint>Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</footprint>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
       <datasheet>https://www.distrelec.ch/en/ceramic-capacitor-100nf-50vdc-0805-rnd-components-rnd-1500805b104j500nt/p/30086635?q=smd+capacitor+&amp;pos=5&amp;origPos=990&amp;origPageSize=50&amp;track=true</datasheet>
-      <fields>
-        <field name="JLCPCB">C14663</field>
-      </fields>
       <libsource lib="Device" part="C_Polarized_Small" description="Polarized capacitor, small symbol"/>
-      <property name="JLCPCB" value="C14663"/>
+      <property name="JLCPCB" value=""/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="hamodule.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -163,13 +151,10 @@
     </comp>
     <comp ref="C11">
       <value>NC</value>
-      <footprint>Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</footprint>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
       <datasheet>https://www.distrelec.ch/en/ceramic-capacitor-100nf-50vdc-0805-rnd-components-rnd-1500805b104j500nt/p/30086635?q=smd+capacitor+&amp;pos=5&amp;origPos=990&amp;origPageSize=50&amp;track=true</datasheet>
-      <fields>
-        <field name="JLCPCB">C14663</field>
-      </fields>
       <libsource lib="Device" part="C_Polarized_Small" description="Polarized capacitor, small symbol"/>
-      <property name="JLCPCB" value="C14663"/>
+      <property name="JLCPCB" value=""/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="hamodule.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -744,7 +729,7 @@
       <tstamps>00000000-0000-0000-0000-00006146aba1</tstamps>
     </comp>
     <comp ref="Q1">
-      <value>SS8050-SMD</value>
+      <value>SS8050</value>
       <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
       <datasheet>http://www.onsemi.com/pub_link/Collateral/2N2219-D.PDF</datasheet>
       <fields>
@@ -1866,13 +1851,13 @@
       <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Interface_USB.kicad_sym</uri>
     </library>
     <library logical="LDA210-PDIP">
-      <uri/>
+      <uri>C:\gitrepos\github\crgarcia12\electronics-homeassistant-lightscontroll\PCB\schematics-v20\kicad/components-footprints/LDA210/LDA210-PDIP.kicad_sym</uri>
     </library>
     <library logical="Mechanical">
       <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Mechanical.kicad_sym</uri>
     </library>
     <library logical="RAC05-05SK_277">
-      <uri/>
+      <uri>C:\gitrepos\github\crgarcia12\electronics-homeassistant-lightscontroll\PCB\schematics-v20\kicad/components-footprints/rac05-05sk/RAC05-05SK_277.kicad_sym</uri>
     </library>
     <library logical="RF_Module">
       <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/RF_Module.kicad_sym</uri>
@@ -1887,13 +1872,13 @@
       <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Transistor_Array.kicad_sym</uri>
     </library>
     <library logical="sht40">
-      <uri/>
+      <uri>C:\gitrepos\github\crgarcia12\electronics-homeassistant-lightscontroll\PCB\schematics-v20\kicad/components-footprints/sht40/sht40.kicad_sym</uri>
     </library>
     <library logical="wago-2604-1102">
-      <uri/>
+      <uri>C:\gitrepos\github\crgarcia12\electronics-homeassistant-lightscontroll\PCB\schematics-v20\kicad/components-footprints/wago/wago-2604-1102/wago-2604-1102.kicad_sym</uri>
     </library>
     <library logical="wago-2604-1104">
-      <uri/>
+      <uri>C:\gitrepos\github\crgarcia12\electronics-homeassistant-lightscontroll\PCB\schematics-v20\kicad/components-footprints/wago/wago-2604-1104/2021-11-12_14-48-51.kicad_sym</uri>
     </library>
   </libraries>
   <nets>
