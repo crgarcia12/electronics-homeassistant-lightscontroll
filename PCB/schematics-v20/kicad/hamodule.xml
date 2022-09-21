@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>C:\gitrepos\github\crgarcia12\electronics-homeassistant-lightscontroll\PCB\schematics-v20\kicad\hamodule.kicad_sch</source>
-    <date>21/09/2022 20:42:52</date>
+    <date>21/09/2022 22:42:15</date>
     <tool>Eeschema (6.0.5)</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -2108,53 +2108,53 @@
       <node ref="D2" pin="2" pinfunction="A" pintype="passive"/>
       <node ref="R5" pin="1" pintype="passive"/>
     </net>
-    <net code="28" name="Net-(F2-Pad2)">
-      <node ref="F2" pin="2" pintype="passive"/>
-      <node ref="J11" pin="1" pinfunction="1" pintype="passive"/>
-      <node ref="J11" pin="2" pinfunction="2" pintype="passive"/>
-    </net>
-    <net code="29" name="Net-(F3-Pad2)">
-      <node ref="F3" pin="2" pintype="passive"/>
-      <node ref="J11" pin="3" pinfunction="3" pintype="passive"/>
-      <node ref="J11" pin="4" pinfunction="4" pintype="passive"/>
-    </net>
-    <net code="30" name="Net-(F4-Pad2)">
-      <node ref="F4" pin="2" pintype="passive"/>
-      <node ref="J11" pin="5" pinfunction="5" pintype="passive"/>
-      <node ref="J11" pin="6" pinfunction="6" pintype="passive"/>
-    </net>
-    <net code="31" name="Net-(F5-Pad2)">
-      <node ref="F5" pin="2" pintype="passive"/>
-      <node ref="J11" pin="7" pinfunction="7" pintype="passive"/>
-      <node ref="J11" pin="8" pinfunction="8" pintype="passive"/>
-    </net>
-    <net code="32" name="Net-(F6-Pad1)">
+    <net code="28" name="Net-(F6-Pad1)">
       <node ref="F6" pin="1" pintype="passive"/>
       <node ref="R26" pin="1" pintype="passive"/>
     </net>
-    <net code="33" name="Net-(F7-Pad1)">
+    <net code="29" name="Net-(F7-Pad1)">
       <node ref="F7" pin="1" pintype="passive"/>
       <node ref="R27" pin="1" pintype="passive"/>
     </net>
-    <net code="34" name="Net-(F8-Pad1)">
+    <net code="30" name="Net-(F8-Pad1)">
       <node ref="F8" pin="1" pintype="passive"/>
       <node ref="R28" pin="1" pintype="passive"/>
     </net>
-    <net code="35" name="Net-(F9-Pad1)">
+    <net code="31" name="Net-(F9-Pad1)">
       <node ref="F9" pin="1" pintype="passive"/>
       <node ref="R29" pin="1" pintype="passive"/>
     </net>
-    <net code="36" name="Net-(J10-PadA5)">
+    <net code="32" name="Net-(J10-PadA5)">
       <node ref="J10" pin="A5" pinfunction="CC1" pintype="bidirectional"/>
       <node ref="R10" pin="1" pintype="passive"/>
     </net>
-    <net code="37" name="Net-(J10-PadB5)">
+    <net code="33" name="Net-(J10-PadB5)">
       <node ref="J10" pin="B5" pinfunction="CC2" pintype="bidirectional"/>
       <node ref="R9" pin="1" pintype="passive"/>
     </net>
-    <net code="38" name="Net-(J10-PadS1)">
+    <net code="34" name="Net-(J10-PadS1)">
       <node ref="J10" pin="S1" pinfunction="SHIELD" pintype="passive"/>
       <node ref="R6" pin="1" pintype="passive"/>
+    </net>
+    <net code="35" name="Net-(J11-Pad1)">
+      <node ref="F5" pin="2" pintype="passive"/>
+      <node ref="J11" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="J11" pin="2" pinfunction="2" pintype="passive"/>
+    </net>
+    <net code="36" name="Net-(J11-Pad3)">
+      <node ref="F4" pin="2" pintype="passive"/>
+      <node ref="J11" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="J11" pin="4" pinfunction="4" pintype="passive"/>
+    </net>
+    <net code="37" name="Net-(J11-Pad5)">
+      <node ref="F3" pin="2" pintype="passive"/>
+      <node ref="J11" pin="5" pinfunction="5" pintype="passive"/>
+      <node ref="J11" pin="6" pinfunction="6" pintype="passive"/>
+    </net>
+    <net code="38" name="Net-(J11-Pad7)">
+      <node ref="F2" pin="2" pintype="passive"/>
+      <node ref="J11" pin="7" pinfunction="7" pintype="passive"/>
+      <node ref="J11" pin="8" pinfunction="8" pintype="passive"/>
     </net>
     <net code="39" name="Net-(Q1-Pad1)">
       <node ref="Q1" pin="1" pinfunction="B" pintype="input"/>
@@ -2242,19 +2242,19 @@
       <node ref="U4" pin="10" pinfunction="O7" pintype="open_collector"/>
     </net>
     <net code="60" name="REO1">
-      <node ref="F5" pin="1" pintype="passive"/>
+      <node ref="F2" pin="1" pintype="passive"/>
       <node ref="K1" pin="4" pinfunction="OUTPUT_2" pintype="passive"/>
     </net>
     <net code="61" name="REO2">
-      <node ref="F4" pin="1" pintype="passive"/>
+      <node ref="F3" pin="1" pintype="passive"/>
       <node ref="K2" pin="4" pinfunction="OUTPUT_2" pintype="passive"/>
     </net>
     <net code="62" name="REO3">
-      <node ref="F3" pin="1" pintype="passive"/>
+      <node ref="F4" pin="1" pintype="passive"/>
       <node ref="K3" pin="4" pinfunction="OUTPUT_2" pintype="passive"/>
     </net>
     <net code="63" name="REO4">
-      <node ref="F2" pin="1" pintype="passive"/>
+      <node ref="F5" pin="1" pintype="passive"/>
       <node ref="K4" pin="4" pinfunction="OUTPUT_2" pintype="passive"/>
     </net>
     <net code="64" name="RTS">
