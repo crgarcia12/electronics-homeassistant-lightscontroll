@@ -1,9 +1,9 @@
  # Home automation lights controller - ESPHome & Home Assistant compatible
 
- This circuit controll home lights following these rules:
- 1. Safe: Safety is not trade in any decision.
- 1. Fail safe: If this device fails, the ligts are still controllable using the mechanical switches.
- 1. Follows standard instalation: This device does not require you to wire your house for it.
+ This circuit controls home lights following these rules:
+ 1. Safe: Safety is first and is not traded in any decision
+ 1. Fail safe: If this device fails, the ligts are still controllable using the mechanical switches
+ 1. Follows standard instalation: This device does not require you to wire your house for it
  1. It can be installed centrally
 
  Following those rules and using as a reference a multi-switch light controlled with a mechanical latching relay, this is the wiring idea:
@@ -15,16 +15,16 @@ This circuit (ESPHome) is a side-car to the latching relay acting as an standard
 
 This device is extensible:
 - Expose I2C pins, to connect any I2C sensor
-- 3.3V jumper: Allows to disconnect the internal ESP32, and replace it by other microcontroller
-- Relays pins: Relays can be controlled with an external microcontroller or device directly.  
-- Current sensing pins: Current sensing information is exposed through those pins. This can be used to connect any external microcontroller or other device
+- 3.3V jumper: Allows to disconnect the internal ESP32, and replace it by any other microcontroller
+- Relays pins: Relays can be controlled with an external microcontroller or device directly 
+- Current sensing pins: Current sensing information is exposed through those pins. This can be used to connect any external microcontroller or any other device
 - Output pins for 3.3 and 5V
 - ESPHome compatible - It's very easy to integrate to Home Assistant
 
 This device has several security measurements:
 - Input fast-blown fuse
 - Input MOV
-- slow fuses in every relay output
+- Slow fuses in every relay output
 - Slow fuses in every mains detection input
 - 4kv insulated PS for low voltage
 - Comformal coating with 90kV/mm2 insulation
@@ -34,12 +34,12 @@ This device has several security measurements:
 ## Mains sensing
 Section under development. In here there will be a detailed description on how Mains is detected.
 Few teaser pictures:
-![board-pcb-3d](PCB/schematics-v20/readme-media/osc-sens-switch-on.jpg)
-![board-pcb-3d](PCB/schematics-v20/readme-media/osc-sens-on.jpg)
-![board-pcb-3d](PCB/schematics-v20/readme-media/osc-sens-switch-off.jpg)
+![board-pcb-3d](PCB/schematics-v20-pcbway/readme-media/osc-sens-switch-on.jpg)
+![board-pcb-3d](PCB/schematics-v20-pcbway/readme-media/osc-sens-on.jpg)
+![board-pcb-3d](PCB/schematics-v20-pcbway/readme-media/osc-sens-switch-off.jpg)
 
 # Version 20
-[Detailed information](PCB/schematics-v20/)
+[Detailed information](PCB/schematics-v20-pcbway/)
 
 Since Version 17: 
 * Mains sensing is inverted, to make better use of rectifier capacitors and have constant reading
@@ -50,12 +50,12 @@ Since Version 17:
 * Adding SMD caps to the 3.3v and 5V lines in case they are needed in noisy conditions
 * Separate GND for relays and ULN from the digital signal plane, to reduce noise 
 
-![board-schematics](PCB/schematics-v20/readme-media/board-schematics.svg)
-![board-pcb](PCB/schematics-v20/readme-media/board-pcb.png)
-![board-pcb-3d](PCB/schematics-v20/readme-media/board-pcb-3d.png)
-![board-pcb-3d](PCB/schematics-v20/readme-media/board-pcb-3d-3.png)
-![board-pcb-3d](PCB/schematics-v20/readme-media/board-pcb-3d-4.png)
-![board-pcb-3d](PCB/schematics-v20/readme-media/board-pcb-3d-2.png)
+![board-schematics](PCB/schematics-v20-pcbway/readme-media/board-schematics.svg)
+![board-pcb](PCB/schematics-v20-pcbway/readme-media/board-pcb.png)
+![board-pcb-3d](PCB/schematics-v20-pcbway/readme-media/board-pcb-3d.png)
+![board-pcb-3d](PCB/schematics-v20-pcbway/readme-media/board-pcb-3d-3.png)
+![board-pcb-3d](PCB/schematics-v20-pcbway/readme-media/board-pcb-3d-4.png)
+![board-pcb-3d](PCB/schematics-v20-pcbway/readme-media/board-pcb-3d-2.png)
 
 # Simulate mains sensing cirquit
 

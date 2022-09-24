@@ -132,10 +132,6 @@ outputs:
         suffix: F_Cu
       - layer: B.Cu
         suffix: B_Cu
-      - layer: F.Paste
-        suffix: F_Paste
-      - layer: B.Paste
-        suffix: B_Paste
       - layer: F.SilkS
         suffix: F_SilkS
       - layer: B.SilkS
@@ -144,14 +140,8 @@ outputs:
         suffix: F_Mask
       - layer: B.Mask
         suffix: B_Mask
-      - layer: Dwgs.User
-        suffix: Dwgs_User
       - layer: Edge.Cuts
         suffix: Edge_Cuts
-      - layer: F.Fab
-        suffix: F_Fab
-      - layer: B.Fab
-        suffix: B_Fab
 
   - name: excellon_drill
     comment: "Excellon drill files"
