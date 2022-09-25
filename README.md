@@ -31,12 +31,17 @@ This device has several security measurements:
 - High precision temperature sensor
 
 # How does it work?
+Section under development.
 ## Mains sensing
-Section under development. In here there will be a detailed description on how Mains is detected.
+Section under development. In here there will be a detailed description on how Mains is sensed.
 Few teaser pictures:
-![board-pcb-3d](PCB/schematics-v20-pcbway/readme-media/osc-sens-switch-on.jpg)
-![board-pcb-3d](PCB/schematics-v20-pcbway/readme-media/osc-sens-on.jpg)
-![board-pcb-3d](PCB/schematics-v20-pcbway/readme-media/osc-sens-switch-off.jpg)
+![oscilloscope-sensing-mains-1](PCB/schematics-v20-pcbway/readme-media/osc-sens-switch-on.jpg)
+![oscilloscope-sensing-mains-2](PCB/schematics-v20-pcbway/readme-media/osc-sens-on.jpg)
+![oscilloscope-sensing-mains-3](PCB/schematics-v20-pcbway/readme-media/osc-sens-switch-off.jpg)
+## Relays
+Section under development. In here there will be a detailed description on why SSR with snubber relay was selected
+![oscilloscope-relays-mechanical](readme-media/relay-analysis/Mechanical-PCN-105D.png)
+![oscilloscope-relays-ssr](readme-media/relay-analysis/SSR-AQG12105.png)
 
 # Version 20
 [Detailed information](PCB/schematics-v20-pcbway/)
