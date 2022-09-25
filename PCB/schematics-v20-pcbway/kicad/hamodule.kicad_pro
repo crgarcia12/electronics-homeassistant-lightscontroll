@@ -55,16 +55,7 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [
-        "courtyards_overlap|175504201|114065301|00000000-0000-0000-0000-000061a6f380|3183961f-0098-492d-8b2c-f6884b7338ca",
-        "courtyards_overlap|178083375|114544521|00000000-0000-0000-0000-000061a6f380|3183961f-0098-492d-8b2c-f6884b7338ca",
-        "courtyards_overlap|180004153|114065301|00000000-0000-0000-0000-000061a6f380|e242f52a-dacc-4cfc-a280-4b75b3adf14d",
-        "courtyards_overlap|182583327|114544521|00000000-0000-0000-0000-000061a6f380|e242f52a-dacc-4cfc-a280-4b75b3adf14d",
-        "courtyards_overlap|186676401|114065301|00000000-0000-0000-0000-000061a6f3a4|2bde4829-72a3-444c-befe-812c0eec9cdd",
-        "courtyards_overlap|189255575|114544521|00000000-0000-0000-0000-000061a6f3a4|2bde4829-72a3-444c-befe-812c0eec9cdd",
-        "courtyards_overlap|191180153|114065301|00000000-0000-0000-0000-000061a6f3a4|6e12f72a-a802-4c8c-8fb3-df25a0d3541c",
-        "courtyards_overlap|193759327|114544521|00000000-0000-0000-0000-000061a6f3a4|6e12f72a-a802-4c8c-8fb3-df25a0d3541c"
-      ],
+      "drc_exclusions": [],
       "meta": {
         "version": 2
       },
@@ -404,14 +395,14 @@
           "220VAC(L)",
           "220VAC(N)",
           "L_INPUT",
+          "Net-(F2-Pad2)",
+          "Net-(F3-Pad2)",
+          "Net-(F4-Pad2)",
+          "Net-(F5-Pad2)",
           "Net-(F6-Pad1)",
           "Net-(F7-Pad1)",
           "Net-(F8-Pad1)",
           "Net-(F9-Pad1)",
-          "Net-(J11-Pad1)",
-          "Net-(J11-Pad3)",
-          "Net-(J11-Pad5)",
-          "Net-(J11-Pad7)",
           "Net-(R22-Pad1)",
           "Net-(R23-Pad1)",
           "Net-(R24-Pad1)",
