@@ -23,6 +23,11 @@ This circuit (ESPHome) is a side-car to the latching relay acting as an standard
 # Device schematics
 
 ![board-schematics](readme-media/board-schematics.svg)
+
+# PCB images
+
+Solder mask color: #54006ED4
+
 ![board-pcb](readme-media/board-pcb.png)
 ![board-pcb-3d-4](readme-media/board-pcb-3d-4.png)
 ![board-pcb-3d](readme-media/board-pcb-3d.png)
