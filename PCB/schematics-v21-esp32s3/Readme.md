@@ -15,8 +15,10 @@ This circuit (ESPHome) is a side-car to the latching relay acting as an standard
 
 # Changes in this version
 
-* flipping SHT40 and using bigger pads for easier hand-soldering
-* making nicer pad under ESP32
+* Using ESP32-S3-WROOM-2
+* Using internal USB port
+* Exposing a third GPIO (3,9,16)
+* Changed USB protections by USBLC6-2SC6
 
 # Device schematics
 

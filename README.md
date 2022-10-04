@@ -100,7 +100,7 @@ o 23 64 0 4099 5 0.00009765625 2 2 23 3
 ```
 
 ## How to order from JLCPCB:
-![how-to-order-from-jlcpcb](PCB/schematics-v19-jlcpcb/readme-media/jlcpcb-how-to-order.gif)
+![how-to-order-from-jlcpcb](readme-media/jlcpcb-how-to-order.gif)
 
 
 # Older versions: Version 19
