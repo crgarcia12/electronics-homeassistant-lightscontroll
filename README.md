@@ -35,32 +35,28 @@ Section under development.
 ## Mains sensing
 Section under development. In here there will be a detailed description on how Mains is sensed.
 Few teaser pictures:
-![oscilloscope-sensing-mains-1](PCB/schematics-v20-pcbway/readme-media/osc-sens-switch-on.jpg)
-![oscilloscope-sensing-mains-2](PCB/schematics-v20-pcbway/readme-media/osc-sens-on.jpg)
-![oscilloscope-sensing-mains-3](PCB/schematics-v20-pcbway/readme-media/osc-sens-switch-off.jpg)
+![oscilloscope-sensing-mains-1](PCB/schematics-v22/readme-media/osc-sens-switch-on.jpg)
+![oscilloscope-sensing-mains-2](PCB/schematics-v22/readme-media/osc-sens-on.jpg)
+![oscilloscope-sensing-mains-3](PCB/schematics-v22/readme-media/osc-sens-switch-off.jpg)
 ## Relays
 Section under development. In here there will be a detailed description on why SSR with snubber relay was selected
 ![oscilloscope-relays-mechanical](readme-media/relay-analysis/Mechanical-PCN-105D.png)
 ![oscilloscope-relays-ssr](readme-media/relay-analysis/SSR-AQG12105.png)
 
-# Version 20
-[Detailed information](PCB/schematics-v20-pcbway/)
+# Version 22
+[Detailed information](PCB/schematics-v22-pcbway/)
 
 Since Version 17: 
-* Mains sensing is inverted, to make better use of rectifier capacitors and have constant reading
-* Removed low-v fuse. Having only one fuse is enough since PS has overcurrent protection and >4kV insulation
-* Moved screwes. Now it has one extra holding point
-* Expose GPIO12 and GPIO33, for better board extenisbility 
-* Moved to SSR with integrated snubber instead of mechanical relays. The kickback of the inductive load (latching relays) was creating spikes and restarting the ESP32 
-* Adding SMD caps to the 3.3v and 5V lines in case they are needed in noisy conditions
-* Separate GND for relays and ULN from the digital signal plane, to reduce noise 
+* Cut-out ESP32 Antena area
+* Move silkscreen for readability
 
-![board-schematics](PCB/schematics-v20-pcbway/readme-media/board-schematics.svg)
-![board-pcb](PCB/schematics-v20-pcbway/readme-media/board-pcb.png)
-![board-pcb-3d](PCB/schematics-v20-pcbway/readme-media/board-pcb-3d.png)
-![board-pcb-3d](PCB/schematics-v20-pcbway/readme-media/board-pcb-3d-3.png)
-![board-pcb-3d](PCB/schematics-v20-pcbway/readme-media/board-pcb-3d-4.png)
-![board-pcb-3d](PCB/schematics-v20-pcbway/readme-media/board-pcb-3d-2.png)
+![board-schematics](PCB/schematics-v22/readme-media/board-schematics.svg)
+![board-pcb](PCB/schematics-v22/readme-media/board-pcb.png)
+![board-pcb-3d](PCB/schematics-v22/readme-media/board-pcb-3d.png)
+![board-pcb-3d](PCB/schematics-v22/readme-media/board-pcb-3d-3.png)
+![board-pcb-3d](PCB/schematics-v22/readme-media/board-pcb-3d-4.png)
+![board-pcb-3d](PCB/schematics-v22/readme-media/board-pcb-3d-2.png)
+![board-pcb-3d](PCB/schematics-v22/readme-media/board-pcb-3d-5.png)
 
 # Simulate mains sensing cirquit
 
@@ -102,6 +98,36 @@ o 23 64 0 4099 5 0.00009765625 2 2 23 3
 ## How to order from JLCPCB:
 ![how-to-order-from-jlcpcb](readme-media/jlcpcb-how-to-order.gif)
 
+# Older versions: 21
+* Using the new ESP32-S3
+* Replace CP2102 by ESP integrated USB support
+* Replace USB protection diodes with an IC
+
+![board-schematics](PCB/schematics-v21-esp32s3-pcbway/readme-media/board-schematics.svg)
+![board-pcb](PCB/schematics-v21-esp32s3-pcbway/readme-media/board-pcb.png)
+![board-pcb-3d](PCB/schematics-v21-esp32s3-pcbway/readme-media/board-pcb-3d.png)
+![board-pcb-3d](PCB/schematics-v21-esp32s3-pcbway/readme-media/board-pcb-3d-3.png)
+![board-pcb-3d](PCB/schematics-v21-esp32s3-pcbway/readme-media/board-pcb-3d-4.png)
+![board-pcb-3d](PCB/schematics-v21-esp32s3-pcbway/readme-media/board-pcb-3d-2.png)
+
+# Older versions: 20
+[Detailed information](PCB/schematics-v20-pcbway/)
+
+Since Version 17: 
+* Mains sensing is inverted, to make better use of rectifier capacitors and have constant reading
+* Removed low-v fuse. Having only one fuse is enough since PS has overcurrent protection and >4kV insulation
+* Moved screwes. Now it has one extra holding point
+* Expose GPIO12 and GPIO33, for better board extenisbility 
+* Moved to SSR with integrated snubber instead of mechanical relays. The kickback of the inductive load (latching relays) was creating spikes and restarting the ESP32 
+* Adding SMD caps to the 3.3v and 5V lines in case they are needed in noisy conditions
+* Separate GND for relays and ULN from the digital signal plane, to reduce noise 
+
+![board-schematics](PCB/schematics-v20-pcbway/readme-media/board-schematics.svg)
+![board-pcb](PCB/schematics-v20-pcbway/readme-media/board-pcb.png)
+![board-pcb-3d](PCB/schematics-v20-pcbway/readme-media/board-pcb-3d.png)
+![board-pcb-3d](PCB/schematics-v20-pcbway/readme-media/board-pcb-3d-3.png)
+![board-pcb-3d](PCB/schematics-v20-pcbway/readme-media/board-pcb-3d-4.png)
+![board-pcb-3d](PCB/schematics-v20-pcbway/readme-media/board-pcb-3d-2.png)
 
 # Older versions: Version 19
 [Detailed information](PCB/schematics-v19-jlcpcb/)
