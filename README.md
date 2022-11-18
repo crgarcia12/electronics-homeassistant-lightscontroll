@@ -30,19 +30,6 @@ This device has several security measurements:
 - Comformal coating with 90kV/mm2 insulation
 - High precision temperature sensor
 
-# How does it work?
-Section under development.
-## Mains sensing
-Section under development. In here there will be a detailed description on how Mains is sensed.
-Few teaser pictures:
-![oscilloscope-sensing-mains-1](PCB/schematics-v22/readme-media/osc-sens-switch-on.jpg)
-![oscilloscope-sensing-mains-2](PCB/schematics-v22/readme-media/osc-sens-on.jpg)
-![oscilloscope-sensing-mains-3](PCB/schematics-v22/readme-media/osc-sens-switch-off.jpg)
-## Relays
-Section under development. In here there will be a detailed description on why SSR with snubber relay was selected
-![oscilloscope-relays-mechanical](readme-media/relay-analysis/Mechanical-PCN-105D.png)
-![oscilloscope-relays-ssr](readme-media/relay-analysis/SSR-AQG12105.png)
-
 # Version 22
 [Detailed information](PCB/schematics-v22-pcbway/)
 
@@ -57,6 +44,19 @@ Since Version 17:
 ![board-pcb-3d](PCB/schematics-v22/readme-media/board-pcb-3d-4.png)
 ![board-pcb-3d](PCB/schematics-v22/readme-media/board-pcb-3d-2.png)
 ![board-pcb-3d](PCB/schematics-v22/readme-media/board-pcb-3d-5.png)
+
+# How does it work?
+Section under development.
+## Mains sensing
+Section under development. In here there will be a detailed description on how Mains is sensed.
+Few teaser pictures:
+![oscilloscope-sensing-mains-1](PCB/schematics-v22/readme-media/osc-sens-switch-on.jpg)
+![oscilloscope-sensing-mains-2](PCB/schematics-v22/readme-media/osc-sens-on.jpg)
+![oscilloscope-sensing-mains-3](PCB/schematics-v22/readme-media/osc-sens-switch-off.jpg)
+## Relays
+Section under development. In here there will be a detailed description on why SSR with snubber relay was selected
+![oscilloscope-relays-mechanical](readme-media/relay-analysis/Mechanical-PCN-105D.png)
+![oscilloscope-relays-ssr](readme-media/relay-analysis/SSR-AQG12105.png)
 
 # Simulate mains sensing cirquit
 
