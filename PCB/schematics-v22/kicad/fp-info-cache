@@ -1,701 +1,246 @@
-165879586455589
-Capacitor_SMD
-CP_Elec_3x5.3
-SMT capacitor, aluminium electrolytic, 3x5.3, Cornell Dubilier Electronics 
-Capacitor Electrolytic
+58347773103110
+Sensor_Current
+AKM_CQ_7
+AKM Current Sensor, 7 pin, THT (http://www.akm.com/akm/en/file/datasheet/CQ-236B.pdf)
+akm current sensor tht
 0
-2
-2
-Capacitor_SMD
-CP_Elec_3x5.4
-SMD capacitor, aluminum electrolytic, Nichicon, 3.0x5.4mm
-capacitor electrolytic
+39
+7
+Sensor_Current
+AKM_CQ_7S
+AKM Current Sensor, 7 pin, SMD (http://www.akm.com/akm/en/file/datasheet/CQ-236B.pdf)
+akm current sensor smd
 0
-2
-2
-Capacitor_SMD
-CP_Elec_4x3
-SMD capacitor, aluminum electrolytic, Nichicon, 4.0x3mm
-capacitor electrolytic
+19
+7
+Sensor_Current
+AKM_CQ_VSOP-24_5.6x7.9mm_P0.65mm
+AKM VSOP-24 current sensor, 5.6x7.9mm body, 0.65mm pitch (http://www.akm.com/akm/en/file/datasheet/CQ-330J.pdf)
+akm vsop 24
 0
-2
-2
-Capacitor_SMD
-CP_Elec_4x3.9
-SMD capacitor, aluminum electrolytic, Nichicon, 4.0x3.9mm
-capacitor electrolytic
+10
+10
+Sensor_Current
+AKM_CZ_SSOP-10_6.5x8.1mm_P0.95mm
+AKM CZ-381x current sensor, 6.5x8.1mm body, 0.95mm pitch (http://www.akm.com/akm/en/product/detail/0009/)
+akm cz-381x 10
 0
-2
-2
-Capacitor_SMD
-CP_Elec_4x4.5
-SMD capacitor, aluminum electrolytic, Nichicon, 4.0x4.5mm
-capacitor electrolytic
+10
+10
+Sensor_Current
+Allegro_CB_PFF
+Allegro MicroSystems, CB-PFF Package (http://www.allegromicro.com/en/Products/Current-Sensor-ICs/Fifty-To-Two-Hundred-Amp-Integrated-Conductor-Sensor-ICs/ACS758.aspx) !PADS 4-5 DO NOT MATCH DATASHEET!
+Allegro CB-PFF
 0
-2
-2
-Capacitor_SMD
-CP_Elec_4x5.3
-SMD capacitor, aluminum electrolytic, Vishay, 4.0x5.3mm
-capacitor electrolytic
+37
+5
+Sensor_Current
+Allegro_CB_PSF
+Allegro MicroSystems, CB-PSF Package (http://www.allegromicro.com/en/Products/Current-Sensor-ICs/Fifty-To-Two-Hundred-Amp-Integrated-Conductor-Sensor-ICs/ACS758.aspx)
+Allegro CB-PSF
 0
-2
-2
-Capacitor_SMD
-CP_Elec_4x5.4
-SMD capacitor, aluminum electrolytic, Panasonic A5 / Nichicon, 4.0x5.4mm
-capacitor electrolytic
+5
+5
+Sensor_Current
+Allegro_CB_PSS
+Allegro MicroSystems, CB-PSS Package (http://www.allegromicro.com/en/Products/Current-Sensor-ICs/Fifty-To-Two-Hundred-Amp-Integrated-Conductor-Sensor-ICs/ACS758.aspx)
+Allegro CB-PSS
 0
-2
-2
-Capacitor_SMD
-CP_Elec_4x5.7
-SMD capacitor, aluminum electrolytic, United Chemi-Con, 4.0x5.7mm
-capacitor electrolytic
+5
+5
+Sensor_Current
+Allegro_PSOF-7_4.8x6.4mm_P1.60mm
+Allegro Microsystems PSOF-7, 4.8x6.4mm Body, 1.60mm Pitch (http://www.allegromicro.com/~/media/Files/Datasheets/ACS780-Datasheet.ashx)
+Allegro PSOF-7
 0
-2
-2
-Capacitor_SMD
-CP_Elec_4x5.8
-SMD capacitor, aluminum electrolytic, Panasonic, 4.0x5.8mm
-capacitor electrolytic
+7
+7
+Sensor_Current
+Allegro_QFN-12-10-1EP_3x3mm_P0.5mm
+Allegro Microsystems 12-Lead (10-Lead Populated) Quad Flat Pack, 3x3mm Body, 0.5mm Pitch (http://www.allegromicro.com/~/media/Files/Datasheets/ACS711-Datasheet.ashx)
+Allegro QFN 0.5
 0
-2
-2
-Capacitor_SMD
-CP_Elec_5x3
-SMD capacitor, aluminum electrolytic, Nichicon, 5.0x3.0mm
-capacitor electrolytic
+14
+10
+Sensor_Current
+Allegro_QSOP-24_3.9x8.7mm_P0.635mm
+Allegro Microsystems 24-Lead Plastic Shrink Small Outline Narrow Body Body [QSOP] (http://www.allegromicro.com/~/media/Files/Datasheets/ACS726-Datasheet.ashx?la=en)
+Allegro QSOP 0.635
 0
-2
-2
-Capacitor_SMD
-CP_Elec_5x3.9
-SMD capacitor, aluminum electrolytic, Nichicon, 5.0x3.9mm
-capacitor electrolytic
+24
+24
+Sensor_Current
+Allegro_SIP-3
+Allegro Microsystems SIP-3, 1.27mm Pitch (http://www.allegromicro.com/~/media/Files/Datasheets/A1369-Datasheet.ashx)
+Allegro SIP-3
 0
-2
-2
-Capacitor_SMD
-CP_Elec_5x4.4
-SMD capacitor, aluminum electrolytic, Panasonic B45, 5.0x4.4mm
-capacitor electrolytic
-0
-2
-2
-Capacitor_SMD
-CP_Elec_5x4.5
-SMD capacitor, aluminum electrolytic, Nichicon, 5.0x4.5mm
-capacitor electrolytic
-0
-2
-2
-Capacitor_SMD
-CP_Elec_5x5.3
-SMD capacitor, aluminum electrolytic, Nichicon, 5.0x5.3mm
-capacitor electrolytic
-0
-2
-2
-Capacitor_SMD
-CP_Elec_5x5.4
-SMD capacitor, aluminum electrolytic, Nichicon, 5.0x5.4mm
-capacitor electrolytic
-0
-2
-2
-Capacitor_SMD
-CP_Elec_5x5.7
-SMD capacitor, aluminum electrolytic, United Chemi-Con, 5.0x5.7mm
-capacitor electrolytic
-0
-2
-2
-Capacitor_SMD
-CP_Elec_5x5.8
-SMD capacitor, aluminum electrolytic, Panasonic, 5.0x5.8mm
-capacitor electrolytic
-0
-2
-2
-Capacitor_SMD
-CP_Elec_5x5.9
-SMD capacitor, aluminum electrolytic, Panasonic B6, 5.0x5.9mm
-capacitor electrolytic
-0
-2
-2
-Capacitor_SMD
-CP_Elec_6.3x3
-SMD capacitor, aluminum electrolytic, Nichicon, 6.3x3.0mm
-capacitor electrolytic
-0
-2
-2
-Capacitor_SMD
-CP_Elec_6.3x3.9
-SMD capacitor, aluminum electrolytic, Nichicon, 6.3x3.9mm
-capacitor electrolytic
-0
-2
-2
-Capacitor_SMD
-CP_Elec_6.3x4.5
-SMD capacitor, aluminum electrolytic, Nichicon, 6.3x4.5mm
-capacitor electrolytic
-0
-2
-2
-Capacitor_SMD
-CP_Elec_6.3x4.9
-SMD capacitor, aluminum electrolytic, Panasonic C5, 6.3x4.9mm
-capacitor electrolytic
-0
-2
-2
-Capacitor_SMD
-CP_Elec_6.3x5.2
-SMD capacitor, aluminum electrolytic, United Chemi-Con, 6.3x5.2mm
-capacitor electrolytic
-0
-2
-2
-Capacitor_SMD
-CP_Elec_6.3x5.3
-SMD capacitor, aluminum electrolytic, Cornell Dubilier, 6.3x5.3mm
-capacitor electrolytic
-0
-2
-2
-Capacitor_SMD
-CP_Elec_6.3x5.4
-SMD capacitor, aluminum electrolytic, Panasonic C55, 6.3x5.4mm
-capacitor electrolytic
-0
-2
-2
-Capacitor_SMD
-CP_Elec_6.3x5.4_Nichicon
-SMD capacitor, aluminum electrolytic, Nichicon, 6.3x5.4mm
-capacitor electrolytic
-0
-2
-2
-Capacitor_SMD
-CP_Elec_6.3x5.7
-SMD capacitor, aluminum electrolytic, United Chemi-Con, 6.3x5.7mm
-capacitor electrolytic
-0
-2
-2
-Capacitor_SMD
-CP_Elec_6.3x5.8
-SMD capacitor, aluminum electrolytic, Nichicon, 6.3x5.8mm
-capacitor electrolytic
-0
-2
-2
-Capacitor_SMD
-CP_Elec_6.3x5.9
-SMD capacitor, aluminum electrolytic, Panasonic C6, 6.3x5.9mm
-capacitor electrolytic
-0
-2
-2
-Capacitor_SMD
-CP_Elec_6.3x7.7
-SMD capacitor, aluminum electrolytic, Nichicon, 6.3x7.7mm
-capacitor electrolytic
-0
-2
-2
-Capacitor_SMD
-CP_Elec_6.3x9.9
-SMD capacitor, aluminum electrolytic, Panasonic C10, 6.3x9.9mm
-capacitor electrolytic
-0
-2
-2
-Capacitor_SMD
-CP_Elec_8x5.4
-SMD capacitor, aluminum electrolytic, Nichicon, 8.0x5.4mm
-capacitor electrolytic
-0
-2
-2
-Capacitor_SMD
-CP_Elec_8x6.2
-SMD capacitor, aluminum electrolytic, Nichicon, 8.0x6.2mm
-capacitor electrolytic
-0
-2
-2
-Capacitor_SMD
-CP_Elec_8x6.5
-SMD capacitor, aluminum electrolytic, Rubycon, 8.0x6.5mm
-capacitor electrolytic
-0
-2
-2
-Capacitor_SMD
-CP_Elec_8x6.7
-SMD capacitor, aluminum electrolytic, United Chemi-Con, 8.0x6.7mm
-capacitor electrolytic
-0
-2
-2
-Capacitor_SMD
-CP_Elec_8x6.9
-SMD capacitor, aluminum electrolytic, Panasonic E7, 8.0x6.9mm
-capacitor electrolytic
-0
-2
-2
-Capacitor_SMD
-CP_Elec_8x10
-SMD capacitor, aluminum electrolytic, Nichicon, 8.0x10mm
-capacitor electrolytic
-0
-2
-2
-Capacitor_SMD
-CP_Elec_8x10.5
-SMD capacitor, aluminum electrolytic, Vishay 0810, 8.0x10.5mm, http://www.vishay.com/docs/28395/150crz.pdf
-capacitor electrolytic
-0
-2
-2
-Capacitor_SMD
-CP_Elec_8x11.9
-SMD capacitor, aluminum electrolytic, Panasonic E12, 8.0x11.9mm
-capacitor electrolytic
-0
-2
-2
-Capacitor_SMD
-CP_Elec_10x7.7
-SMD capacitor, aluminum electrolytic, Nichicon, 10.0x7.7mm
-capacitor electrolytic
-0
-2
-2
-Capacitor_SMD
-CP_Elec_10x7.9
-SMD capacitor, aluminum electrolytic, Panasonic F8, 10.0x7.9mm
-capacitor electrolytic
-0
-2
-2
-Capacitor_SMD
-CP_Elec_10x10
-SMD capacitor, aluminum electrolytic, Nichicon, 10.0x10.0mm
-capacitor electrolytic
-0
-2
-2
-Capacitor_SMD
-CP_Elec_10x10.5
-SMD capacitor, aluminum electrolytic, Vishay 1010, 10.0x10.5mm, http://www.vishay.com/docs/28395/150crz.pdf
-capacitor electrolytic
-0
-2
-2
-Capacitor_SMD
-CP_Elec_10x12.5
-SMD capacitor, aluminum electrolytic, Vishay 1012, 10.0x12.5mm, http://www.vishay.com/docs/28395/150crz.pdf
-capacitor electrolytic
-0
-2
-2
-Capacitor_SMD
-CP_Elec_10x12.6
-SMD capacitor, aluminum electrolytic, Panasonic F12, 10.0x12.6mm
-capacitor electrolytic
-0
-2
-2
-Capacitor_SMD
-CP_Elec_10x14.3
-SMD capacitor, aluminum electrolytic, Vishay 1014, 10.0x14.3mm, http://www.vishay.com/docs/28395/150crz.pdf
-capacitor electrolytic
-0
-2
-2
-Capacitor_SMD
-CP_Elec_16x17.5
-SMD capacitor, aluminum electrolytic, Vishay 1616, 16.0x17.5mm, http://www.vishay.com/docs/28395/150crz.pdf
-capacitor electrolytic
-0
-2
-2
-Capacitor_SMD
-CP_Elec_16x22
-SMD capacitor, aluminum electrolytic, Vishay 1621, 16.0x22.0mm, http://www.vishay.com/docs/28395/150crz.pdf
-capacitor electrolytic
-0
-2
-2
-Capacitor_SMD
-CP_Elec_18x17.5
-SMD capacitor, aluminum electrolytic, Vishay 1816, 18.0x17.5mm, http://www.vishay.com/docs/28395/150crz.pdf
-capacitor electrolytic
-0
-2
-2
-Capacitor_SMD
-CP_Elec_18x22
-SMD capacitor, aluminum electrolytic, Vishay 1821, 18.0x22.0mm, http://www.vishay.com/docs/28395/150crz.pdf
-capacitor electrolytic
-0
-2
-2
-Capacitor_SMD
-C_0201_0603Metric
-Capacitor SMD 0201 (0603 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: https://www.vishay.com/docs/20052/crcw0201e3.pdf), generated with kicad-footprint-generator
-capacitor
+3
+3
+Sensor_Current
+Allegro_SIP-4
+Allegro Microsystems SIP-4, 1.27mm Pitch (http://www.allegromicro.com/~/media/Files/Datasheets/A1363-Datasheet.ashx)
+Allegro SIP-4
 0
 4
-2
-Capacitor_SMD
-C_0201_0603Metric_Pad0.64x0.40mm_HandSolder
-Capacitor SMD 0201 (0603 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: https://www.vishay.com/docs/20052/crcw0201e3.pdf), generated with kicad-footprint-generator
-capacitor handsolder
+4
+Sensor_Current
+Diodes_SIP-3_4.1x1.5mm_P1.27mm
+Diodes SIP-3 Bulk Pack, 1.27mm Pitch (https://www.diodes.com/assets/Package-Files/SIP-3-Bulk-Pack.pdf)
+Diodes SIP-3 Bulk Pack
+0
+3
+3
+Sensor_Current
+Diodes_SIP-3_4.1x1.5mm_P2.65mm
+Diodes SIP-3 Ammo Pack, 2.65mm Pitch (https://www.diodes.com/assets/Package-Files/SIP-3-Ammo-Pack.pdf)
+Diodes SIP-3 Ammo Pack
+0
+3
+3
+Sensor_Current
+Honeywell_CSLW
+https://sensing.honeywell.com/honeywell-sensing-cslw-series-product-sheet-005861-1-en.pdf
+Miniature Wired Open-Loop Current Sensor
+0
+5
+5
+Sensor_Current
+LEM_CKSR
+LEM CKSR 6/15/25/50/75-NP Current Transducer, https://www.lem.com/sites/default/files/products_datasheets/cksr_75-np.pdf
+current transducer LEM
+0
+14
+14
+Sensor_Current
+LEM_HO8-NP
+LEM HO 8/15/25-NP Current Transducer (https://www.lem.com/sites/default/files/products_datasheets/ho-np-0000_series.pdf)
+current transducer
+0
+13
+13
+Sensor_Current
+LEM_HO8-NSM
+LEM HO 8/15/25-NSM Current Transducer (https://www.lem.com/sites/default/files/products_datasheets/ho-nsm-0000_series.pdf)
+current transducer
+0
+13
+13
+Sensor_Current
+LEM_HO40-NP
+LEM HO 40/60/120/150-NP Current Transducer (https://www.lem.com/sites/default/files/products_datasheets/ho-np_0100__1100_series.pdf)
+current transducer
+0
+13
+13
+Sensor_Current
+LEM_HTFS
+LEM HTFS x00-P current transducer (https://www.lem.com/sites/default/files/products_datasheets/htfs_200_800-p.pdf)
+HTFS current transducer
 0
 4
-2
-Capacitor_SMD
-C_0402_1005Metric
-Capacitor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator
-capacitor
-0
-2
-2
-Capacitor_SMD
-C_0402_1005Metric_Pad0.74x0.62mm_HandSolder
-Capacitor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator
-capacitor handsolder
-0
-2
-2
-Capacitor_SMD
-C_0504_1310Metric
-Capacitor SMD 0504 (1310 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator
-capacitor
-0
-2
-2
-Capacitor_SMD
-C_0504_1310Metric_Pad0.83x1.28mm_HandSolder
-Capacitor SMD 0504 (1310 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator
-capacitor handsolder
-0
-2
-2
-Capacitor_SMD
-C_0603_1608Metric
-Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator
-capacitor
-0
-2
-2
-Capacitor_SMD
-C_0603_1608Metric_Pad1.08x0.95mm_HandSolder
-Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator
-capacitor handsolder
-0
-2
-2
-Capacitor_SMD
-C_0805_2012Metric
-Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator
-capacitor
-0
-2
-2
-Capacitor_SMD
-C_0805_2012Metric_Pad1.18x1.45mm_HandSolder
-Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator
-capacitor handsolder
-0
-2
-2
-Capacitor_SMD
-C_01005_0402Metric
-Capacitor SMD 01005 (0402 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.vishay.com/docs/20056/crcw01005e3.pdf), generated with kicad-footprint-generator
-capacitor
-0
 4
-2
-Capacitor_SMD
-C_01005_0402Metric_Pad0.57x0.30mm_HandSolder
-Capacitor SMD 01005 (0402 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: http://www.vishay.com/docs/20056/crcw01005e3.pdf), generated with kicad-footprint-generator
-capacitor handsolder
+Sensor_Current
+LEM_HX02-P
+LEM HX02-P hall effect current transducer (https://www.lem.com/sites/default/files/products_datasheets/hx%202_6-p_e%20v5.pdf)
+hall current
 0
-4
-2
-Capacitor_SMD
-C_1206_3216Metric
-Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator
-capacitor
+6
+6
+Sensor_Current
+LEM_HX03-P-SP2
+LEM HX03-P-SP2 hall effect current transducer (https://www.lem.com/sites/default/files/products_datasheets/hx%203_50-p_sp2_e%20v07.pdf)
+hall current
 0
-2
-2
-Capacitor_SMD
-C_1206_3216Metric_Pad1.33x1.80mm_HandSolder
-Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator
-capacitor handsolder
+6
+6
+Sensor_Current
+LEM_HX04-P
+LEM HX04-P hall effect current transducer (https://www.lem.com/sites/default/files/products_datasheets/hx%202_6-p_e%20v5.pdf)
+hall current
 0
-2
-2
-Capacitor_SMD
-C_1210_3225Metric
-Capacitor SMD 1210 (3225 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator
-capacitor
+6
+6
+Sensor_Current
+LEM_HX05-NP
+LEM HX05-NP hall effect current transducer (https://www.lem.com/sites/default/files/products_datasheets/hx%205_15-np_e%20v10.pdf)
+hall current
 0
-2
-2
-Capacitor_SMD
-C_1210_3225Metric_Pad1.33x2.70mm_HandSolder
-Capacitor SMD 1210 (3225 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator
-capacitor handsolder
+8
+8
+Sensor_Current
+LEM_HX05-P-SP2
+LEM HX05-P-SP2 hall effect current transducer (https://www.lem.com/sites/default/files/products_datasheets/hx%203_50-p_sp2_e%20v07.pdf)
+hall current
 0
-2
-2
-Capacitor_SMD
-C_1812_4532Metric
-Capacitor SMD 1812 (4532 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator
-capacitor
+6
+6
+Sensor_Current
+LEM_HX06-P
+LEM HX06-P hall effect current transducer (https://www.lem.com/sites/default/files/products_datasheets/hx%202_6-p_e%20v5.pdf)
+hall current
 0
-2
-2
-Capacitor_SMD
-C_1812_4532Metric_Pad1.57x3.40mm_HandSolder
-Capacitor SMD 1812 (4532 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator
-capacitor handsolder
+6
+6
+Sensor_Current
+LEM_HX10-NP
+LEM HX10-NP hall effect current transducer (https://www.lem.com/sites/default/files/products_datasheets/hx%205_15-np_e%20v10.pdf)
+hall current
 0
-2
-2
-Capacitor_SMD
-C_1825_4564Metric
-Capacitor SMD 1825 (4564 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size from: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator
-capacitor
+8
+8
+Sensor_Current
+LEM_HX10-P-SP2
+LEM HX10-P-SP2 hall effect current transducer (https://www.lem.com/sites/default/files/products_datasheets/hx%203_50-p_sp2_e%20v07.pdf)
+hall current
 0
-2
-2
-Capacitor_SMD
-C_1825_4564Metric_Pad1.57x6.80mm_HandSolder
-Capacitor SMD 1825 (4564 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size from: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator
-capacitor handsolder
+6
+6
+Sensor_Current
+LEM_HX15-NP
+LEM HX15-NP hall effect current transducer (https://www.lem.com/sites/default/files/products_datasheets/hx%205_15-np_e%20v10.pdf)
+hall current
 0
-2
-2
-Capacitor_SMD
-C_2220_5650Metric
-Capacitor SMD 2220 (5650 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size from: http://datasheets.avx.com/AVX-HV_MLCC.pdf), generated with kicad-footprint-generator
-capacitor
+8
+8
+Sensor_Current
+LEM_HX15-P-SP2
+LEM HX15-P-SP2 hall effect current transducer (https://www.lem.com/sites/default/files/products_datasheets/hx%203_50-p_sp2_e%20v07.pdf)
+hall current
 0
-2
-2
-Capacitor_SMD
-C_2220_5650Metric_Pad1.97x5.40mm_HandSolder
-Capacitor SMD 2220 (5650 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size from: http://datasheets.avx.com/AVX-HV_MLCC.pdf), generated with kicad-footprint-generator
-capacitor handsolder
+6
+6
+Sensor_Current
+LEM_HX20-P-SP2
+LEM HX20-P-SP2 hall effect current transducer (https://www.lem.com/sites/default/files/products_datasheets/hx%203_50-p_sp2_e%20v07.pdf)
+hall current
 0
-2
-2
-Capacitor_SMD
-C_2225_5664Metric
-Capacitor SMD 2225 (5664 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size from: http://datasheets.avx.com/AVX-HV_MLCC.pdf), generated with kicad-footprint-generator
-capacitor
+6
+6
+Sensor_Current
+LEM_HX25-P-SP2
+LEM HX25-P-SP2 hall effect current transducer (https://www.lem.com/sites/default/files/products_datasheets/hx%203_50-p_sp2_e%20v07.pdf)
+hall current
 0
-2
-2
-Capacitor_SMD
-C_2225_5664Metric_Pad1.80x6.60mm_HandSolder
-Capacitor SMD 2225 (5664 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size from: http://datasheets.avx.com/AVX-HV_MLCC.pdf), generated with kicad-footprint-generator
-capacitor handsolder
+6
+6
+Sensor_Current
+LEM_HX50-P-SP2
+LEM HX50-P-SP2 hall effect current transducer (https://www.lem.com/sites/default/files/products_datasheets/hx%203_50-p_sp2_e%20v07.pdf)
+hall current
 0
-2
-2
-Capacitor_SMD
-C_3640_9110Metric
-Capacitor SMD 3640 (9110 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size from: http://datasheets.avx.com/AVX-HV_MLCC.pdf), generated with kicad-footprint-generator
-capacitor
+6
+6
+Sensor_Current
+LEM_LA25-P
+LEM Current Transducer (https://www.lem.com/sites/default/files/products_datasheets/la_25-p.pdf)
+current transducer
 0
-2
-2
-Capacitor_SMD
-C_3640_9110Metric_Pad2.10x10.45mm_HandSolder
-Capacitor SMD 3640 (9110 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size from: http://datasheets.avx.com/AVX-HV_MLCC.pdf), generated with kicad-footprint-generator
-capacitor handsolder
+3
+3
+Sensor_Current
+LEM_LTSR-NP
+LEM current transducer LEM_LTSR-NP 5V supply voltage series https://www.lem.com/sites/default/files/products_datasheets/ltsr_6-np.pdf
+Current transducer
 0
-2
-2
-Capacitor_SMD
-C_Elec_3x5.4
-SMD capacitor, aluminum electrolytic nonpolar, 3.0x5.4mm
-capacitor electrolyic nonpolar
-0
-2
-2
-Capacitor_SMD
-C_Elec_4x5.4
-SMD capacitor, aluminum electrolytic nonpolar, 4.0x5.4mm
-capacitor electrolyic nonpolar
-0
-2
-2
-Capacitor_SMD
-C_Elec_4x5.8
-SMD capacitor, aluminum electrolytic nonpolar, 4.0x5.8mm
-capacitor electrolyic nonpolar
-0
-2
-2
-Capacitor_SMD
-C_Elec_5x5.4
-SMD capacitor, aluminum electrolytic nonpolar, 5.0x5.4mm
-capacitor electrolyic nonpolar
-0
-2
-2
-Capacitor_SMD
-C_Elec_5x5.8
-SMD capacitor, aluminum electrolytic nonpolar, 5.0x5.8mm
-capacitor electrolyic nonpolar
-0
-2
-2
-Capacitor_SMD
-C_Elec_6.3x5.4
-SMD capacitor, aluminum electrolytic nonpolar, 6.3x5.4mm
-capacitor electrolyic nonpolar
-0
-2
-2
-Capacitor_SMD
-C_Elec_6.3x5.8
-SMD capacitor, aluminum electrolytic nonpolar, 6.3x5.8mm
-capacitor electrolyic nonpolar
-0
-2
-2
-Capacitor_SMD
-C_Elec_6.3x7.7
-SMD capacitor, aluminum electrolytic nonpolar, 6.3x7.7mm
-capacitor electrolyic nonpolar
-0
-2
-2
-Capacitor_SMD
-C_Elec_8x5.4
-SMD capacitor, aluminum electrolytic nonpolar, 8.0x5.4mm
-capacitor electrolyic nonpolar
-0
-2
-2
-Capacitor_SMD
-C_Elec_8x6.2
-SMD capacitor, aluminum electrolytic nonpolar, 8.0x6.2mm
-capacitor electrolyic nonpolar
-0
-2
-2
-Capacitor_SMD
-C_Elec_8x10.2
-SMD capacitor, aluminum electrolytic nonpolar, 8.0x10.2mm
-capacitor electrolyic nonpolar
-0
-2
-2
-Capacitor_SMD
-C_Elec_10x10.2
-SMD capacitor, aluminum electrolytic nonpolar, 10.0x10.2mm
-capacitor electrolyic nonpolar
-0
-2
-2
-Capacitor_SMD
-C_Trimmer_Murata_TZB4-A
-trimmer capacitor SMD horizontal, http://www.murata.com/~/media/webrenewal/support/library/catalog/products/capacitor/trimmer/t13e.ashx?la=en-gb
- Murata TZB4 TZB4-A
-0
-2
-2
-Capacitor_SMD
-C_Trimmer_Murata_TZB4-B
-trimmer capacitor SMD horizontal, http://www.murata.com/~/media/webrenewal/support/library/catalog/products/capacitor/trimmer/t13e.ashx?la=en-gb
- Murata TZB4 TZB4-A
-0
-2
-2
-Capacitor_SMD
-C_Trimmer_Murata_TZC3
-trimmer capacitor SMD horizontal, http://www.murata.com/~/media/webrenewal/support/library/catalog/products/capacitor/trimmer/t13e.ashx?la=en-gb
- Murata TZC3
-0
-2
-2
-Capacitor_SMD
-C_Trimmer_Murata_TZR1
-trimmer capacitor SMD horizontal, http://www.murata.com/~/media/webrenewal/support/library/catalog/products/capacitor/trimmer/t13e.ashx?la=en-gb
- Murata TZR1
-0
-2
-2
-Capacitor_SMD
-C_Trimmer_Murata_TZW4
-trimmer capacitor SMD horizontal, http://www.murata.com/~/media/webrenewal/support/library/catalog/products/capacitor/trimmer/t13e.ashx?la=en-gb
- Murata TZW4
-0
-2
-2
-Capacitor_SMD
-C_Trimmer_Murata_TZY2
-trimmer capacitor SMD horizontal, http://www.murata.com/~/media/webrenewal/support/library/catalog/products/capacitor/trimmer/t13e.ashx?la=en-gb
- Murata TZY2
-0
-2
-2
-Capacitor_SMD
-C_Trimmer_Sprague-Goodman_SGC3
-trimmer capacitor SMD horizontal, http://media.wix.com/ugd/d86717_38d9821e12823a7aa9cef38c6c2a73cc.pdf
- Sprague Goodman SGC3
-0
-2
-2
-Capacitor_SMD
-C_Trimmer_Voltronics_JN
-trimmer capacitor SMD horizontal, http://www.knowlescapacitors.com/File%20Library/Voltronics/English/GlobalNavigation/Products/Trimmer%20Capacitors/CerChipTrimCap.pdf
- Voltronics JN
-0
-2
-2
-Capacitor_SMD
-C_Trimmer_Voltronics_JQ
-trimmer capacitor SMD horizontal, http://www.knowlescapacitors.com/File%20Library/Voltronics/English/GlobalNavigation/Products/Trimmer%20Capacitors/CerChipTrimCap.pdf
- Voltronics JQ
-0
-2
-2
-Capacitor_SMD
-C_Trimmer_Voltronics_JR
-trimmer capacitor SMD horizontal, http://www.knowlescapacitors.com/File%20Library/Voltronics/English/GlobalNavigation/Products/Trimmer%20Capacitors/CerChipTrimCap.pdf
- Voltronics JR
-0
-2
-2
-Capacitor_SMD
-C_Trimmer_Voltronics_JV
-trimmer capacitor SMD horizontal, http://www.knowlescapacitors.com/File%20Library/Voltronics/English/GlobalNavigation/Products/Trimmer%20Capacitors/CerChipTrimCap.pdf
- Voltronics JV
-0
-2
-2
-Capacitor_SMD
-C_Trimmer_Voltronics_JZ
-trimmer capacitor SMD horizontal, http://www.knowlescapacitors.com/File%20Library/Voltronics/English/GlobalNavigation/Products/Trimmer%20Capacitors/CerChipTrimCap.pdf
- Voltronics JR
-0
-2
-2
+10
+10
