@@ -14,11 +14,13 @@ A normal circuit sends all push buttons to the latching relay, which controlls t
 This circuit (ESPHome) is a side-car to the latching relay acting as an standard push button, but also sensing the output of the latching relay to detect if the lights are on or off.
 
 This device is extensible:
-- Expose I2C pins, to connect any I2C sensor
+- Expose I2C pins
+- Expose Serial pins
+- Expose 3 GPIO
 - 3.3V jumper: Allows to disconnect the internal ESP32, and replace it by any other microcontroller
 - Relays pins: Relays can be controlled with an external microcontroller or device directly 
 - Current sensing pins: Current sensing information is exposed through those pins. This can be used to connect any external microcontroller or any other device
-- Output pins for 3.3 and 5V
+- Provides 3.3V and 5V
 - ESPHome compatible - It's very easy to integrate to Home Assistant
 
 This device has several security measurements:
