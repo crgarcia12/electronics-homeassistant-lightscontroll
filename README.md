@@ -36,6 +36,7 @@ This device has several security measurements:
 Since Version 17: 
 * Cut-out ESP32 Antena area
 * Move silkscreen for readability
+* Improved schematic readability
 
 ![board-schematics](PCB/schematics-v22/readme-media/board-schematics.svg)
 ![board-pcb](PCB/schematics-v22/readme-media/board-pcb.png)
