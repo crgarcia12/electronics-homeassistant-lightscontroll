@@ -7,6 +7,7 @@ NC Polarized capacitor  small symbol,"C6,C7,C10,C11",Capacitor_SMD,
 20p Unpolarized capacitor  small symbol,"C12,C13",Capacitor_SMD,C1648
 LED Light emitting diode,"D1,D2",LED_SMD,C2297
 BAT60A 10V 3A High Current Recitifier Schottky Diode  SOD-323,D3,Diode_SMD,C124187
+LED Light emitting diode,"D4,D5,D6,D7",LED_SMD,C72041
 250V500mA Fuse,F1,Fuse,
 Fuse Fuse,"F2,F3,F4,F5,F6,F7,F8,F9",RST-80-AMMO,
 MountingHole_Pad Mounting Hole with connection,"H1,H2,H3",MountingHole,
@@ -29,9 +30,11 @@ RAC05-05SK/277 ,PS1,rac05-05sk,
 22 Resistor  small symbol,"R3,R4",Resistor_SMD,C23345
 150k1w Resistor,"R8,R15,R16,R17,R18,R19,R20,R21,R22",Resistor_SMD,C25719
 5.1k Resistor,"R9,R10",Resistor_SMD,C23186
+100 Resistor,"R23,R24,R25,R26",Resistor_SMD,C22775
 400V Voltage dependent resistor,RV1,Varistor,
 Switch Push button switch  generic  two pins,"SW1,SW2",Button_Switch_SMD,C318884
 USB | PS Switch  dual pole double throw  separate symbols,SW3,Connector_PinHeader_2.54mm,
+TestPoint_Probe test point (alternative probe-style design),TP1,TestPoint,
 LD1117AV33 800mA Fixed Low Drop Positive Voltage Regulator  Fixe,U1,Package_TO_SOT_THT,
 ESP32-S3-WROOM-2 2.4 GHz WiFi (802.11 b/g/n) and Bluetooth  5 (,U2,Espressif,
 ULN2003A High Voltage  High Current Darlington Transistor Arrays,U3,Package_SO,C7512

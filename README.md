@@ -39,31 +39,40 @@ Since Version 17:
 * Cut-out ESP32 Antena area
 * Move silkscreen for readability
 * Improved schematic readability
+* Add leds to indicate when relays are ON
 
 ![board-schematics](PCB/schematics-v22/readme-media/board-schematics.svg)
-![board-pcb](PCB/schematics-v22/readme-media/board-pcb.png)
+![board-pcb](PCB/schematics-v22/readme-media/board-pcb.jpg)
+![board-pcb-3d](PCB/schematics-v22/readme-media/board-pcb-3d-4.png)
+![board-pcb-3d](PCB/schematics-v22/readme-media/board-pcb-3d-5.png)
+![board-pcb-3d](PCB/schematics-v22/readme-media/board-pcb-3d-2.png)
 ![board-pcb-3d](PCB/schematics-v22/readme-media/board-pcb-3d.png)
 ![board-pcb-3d](PCB/schematics-v22/readme-media/board-pcb-3d-3.png)
-![board-pcb-3d](PCB/schematics-v22/readme-media/board-pcb-3d-4.png)
-![board-pcb-3d](PCB/schematics-v22/readme-media/board-pcb-3d-2.png)
-![board-pcb-3d](PCB/schematics-v22/readme-media/board-pcb-3d-5.png)
+
 
 # How does it work?
 Section under development.
 ## Mains sensing
-Section under development. In here there will be a detailed description on how Mains is sensed.
-Few teaser pictures:
+Section under development.
+
+In here there will be a detailed description on how Mains is sensed.
+
+Few teaser pictures that show how optocouplers with darlington behave. This allows the board to use very large resistors, very little current, and hence small fuses. All that improves safety and lowers the board consumption: 
 ![oscilloscope-sensing-mains-1](PCB/schematics-v22/readme-media/osc-sens-switch-on.jpg)
 ![oscilloscope-sensing-mains-2](PCB/schematics-v22/readme-media/osc-sens-on.jpg)
 ![oscilloscope-sensing-mains-3](PCB/schematics-v22/readme-media/osc-sens-switch-off.jpg)
 ## Relays
 Section under development. In here there will be a detailed description on why SSR with snubber relay was selected
+
+This picture shows standard relays. Those have very large spikes
 ![oscilloscope-relays-mechanical](readme-media/relay-analysis/Mechanical-PCN-105D.png)
+
+This picture shows SSR relays with snubber. Spikes still exist, but they are much smaller and more isolated, reducing noise-related issues
 ![oscilloscope-relays-ssr](readme-media/relay-analysis/SSR-AQG12105.png)
 
 # Simulate mains sensing cirquit
 
-You can simulate the circuit online at [lushprojects](http://lushprojects.com/circuitjs/circuitjs.html?ctz=CQAgjCAMB0l3BWEBmGZkDYAcmte2AJwYYgDskISClCApgLRhgBQAbiA8Stp91pUoQaIAEyookmAhYB3EABYsIAYuVgFCqCwAma8JvBhRYyMpM66AMwCGAVwA2AF137RZE8xOizYkJdtHFz0mUh9lJQMtC2t7Z1dQ0wjzDz8AuJd5SPcTSNxtLOV8rlJ8yDlOMDDfRNQtcvkvJPAMSnCCytLIaNEtOu0AJz5SVUjVSlR4coAPFAojJAVIMiMI0xAHAHsbHRYlldFe5v721nlD6KWxI-7yjgRRFJMH819BRQnoZCkoaBksuDHHzNcpDJZtVIvMSpWhTCrIYG9CaImEsADGHzavnB0JMglgUwUhGJJNJZNIaG6ogwYA8WDAWAUyAQWEIvzgZxQKNygJyHRx7Sh7XKAGcWljzEdhZJbA4RXQWGDAQjaI8ue8wFM4BUBakcSqOkLIWqDeVNpIMPUPsT1ey4GR6aIkG1JMgWObaSBLZIljbnQS4IQyBgEBgneA-J63ebxF6rb62f6pkGQ2GkN4xN83UA) 
+The mains sensing circuit can be simulated online at [lushprojects](http://lushprojects.com/circuitjs/circuitjs.html?ctz=CQAgjCAMB0l3BWEBmGZkDYAcmte2AJwYYgDskISClCApgLRhgBQAbiA8Stp91pUoQaIAEyookmAhYB3EABYsIAYuVgFCqCwAma8JvBhRYyMpM66AMwCGAVwA2AF137RZE8xOizYkJdtHFz0mUh9lJQMtC2t7Z1dQ0wjzDz8AuJd5SPcTSNxtLOV8rlJ8yDlOMDDfRNQtcvkvJPAMSnCCytLIaNEtOu0AJz5SVUjVSlR4coAPEAxkZBQECDIRZAQtaMoAUQBlAAVkUQAdAGcAcX2ASQB5FgVIMkVs3wRRc19WeVFesQexX79cocVbeVKg5qCRQTaCLKHSCoYX7tDZbZTlIZI6Lgt5iVK0KYVVF-WiGHLaADGc2RvixeJMglgUwUhFZbPZHNIaDAZkwGh5ZiwZAoXKZXyoZNSdPJDWpaPIuPa5VO9OaC2q6MktgcpzoLExgJ8CpMRyhAsJ8mlUsNggqEPJENN2lmPkI4CwSAeWjAeEUphAAFkbABLAB2pzOuzo4bDAHNI7Jg04KQALCqaD5FTCQirk9pVNq+WUZkkA6L-coAe0kGHq0NZKCNMHgZCwxiQbUkyBY1bAT1rkgeDY7TLghDIGAQSKQEE8T271fEczrQ7dI6m48n0783kW3aAA). 
 
 ```
 $ 1 0.000005 30.13683688681966 70 5 50 5e-11
@@ -79,20 +88,24 @@ w -16 208 -16 304 0
 w 112 208 160 208 0
 w -16 304 224 304 0
 r -96 80 48 80 0 300000
-x 370 115 407 118 4 20 load
-407 224 208 304 208 1
+x 633 351 750 354 4 20 ESP32\sGPIO
+407 448 208 528 208 1
 w 224 240 224 304 0
-v 528 272 528 208 0 0 40 3.3 0 0 0.5
-w 400 208 320 208 0
-r 400 272 528 272 0 50000
-w 320 240 320 272 0
-c 400 208 400 272 0 0.0000049999999999999996 0.11666774048911469 0.001
-w 320 272 400 272 0
-w 400 208 528 208 0
-s 160 208 224 208 0 0 false
-r 400 320 528 320 0 1000000
-w 400 272 400 320 0
-w 528 272 528 320 0
+v 752 272 752 208 0 0 40 3.3 0 0 0.5
+w 624 208 544 208 0
+r 624 272 752 272 0 50000
+w 544 240 544 272 0
+c 624 208 624 272 0 0.0000049999999999999996 0.08913507182464649 0.001
+w 544 272 624 272 0
+w 624 208 752 208 0
+s 272 208 336 208 0 0 false
+r 624 320 752 320 0 1000000
+w 624 272 624 320 0
+w 752 272 752 320 0
+x 209 185 404 188 4 20 Mains\sSensing\sSwitch
+w 448 208 336 208 0
+w 272 208 160 208 0
+w 448 240 224 240 0
 o 0 64 0 4099 320 0.00078125 0 2 0 3
 o 17 64 0 4099 5 0.00009765625 1 2 17 3
 o 23 64 0 4099 5 0.00009765625 2 2 23 3
@@ -100,6 +113,37 @@ o 23 64 0 4099 5 0.00009765625 2 2 23 3
 
 ## How to order from JLCPCB:
 ![how-to-order-from-jlcpcb](readme-media/jlcpcb-how-to-order.gif)
+
+# Development notes
+
+## Generating fabrication files for JLCPCB
+1. Plot PCB Gerber + Drill + Map:
+
+    ![screenshot](readme-media/tutorial/plot-1.png)
+    ![screenshot](readme-media/tutorial/plot-2.png)
+
+1. Bom files
+    ![screenshot](readme-media/tutorial/bom-1.png)
+    ![screenshot](readme-media/tutorial/bom-2.png)
+
+    Command: python3 "C:\Program Files\KiCad\bin\scripting\plugins/bom_csv_jlcpcb.py" "%I" "%O.csv"
+    ![screenshot](readme-media/tutorial/bom-3.png)
+
+1. Drill files
+    ![screenshot](readme-media/tutorial/pos-1.png)
+    ![screenshot](readme-media/tutorial/pos-2.png)
+    run the python script to rotate the components
+    ![screenshot](readme-media/tutorial/pos-3.png)
+
+    PS C:\\...\smt-assembly> python3 .\kicad-to-jlcpcb-pos.py .\hamodule-top-pos.csv .\hamodule-top-pos-jlcpcb.csv
+
+## Generate documents
+
+schematics:
+![screenshot](readme-media/tutorial/gen-images-1.png)
+
+PCB:
+Print to PDF, and use a high-resolution PDF to JPG converting website like: https://pdf2jpg.net/
 
 # Older versions: 21
 * Using the new ESP32-S3
