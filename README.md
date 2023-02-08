@@ -33,7 +33,7 @@ This device has several security measurements:
 - High precision temperature sensor
 
 # Version 22
-[Detailed information](PCB/schematics-v22-pcbway/)
+[Detailed information](PCB/schematics-v22-jlcpcb/)
 
 Since Version 17: 
 * Cut-out ESP32 Antena area
@@ -41,13 +41,13 @@ Since Version 17:
 * Improved schematic readability
 * Add leds to indicate when relays are ON
 
-![board-schematics](PCB/schematics-v22/readme-media/board-schematics.svg)
-![board-pcb](PCB/schematics-v22/readme-media/board-pcb.jpg)
-![board-pcb-3d](PCB/schematics-v22/readme-media/board-pcb-3d-4.png)
-![board-pcb-3d](PCB/schematics-v22/readme-media/board-pcb-3d-5.png)
-![board-pcb-3d](PCB/schematics-v22/readme-media/board-pcb-3d-2.png)
-![board-pcb-3d](PCB/schematics-v22/readme-media/board-pcb-3d.png)
-![board-pcb-3d](PCB/schematics-v22/readme-media/board-pcb-3d-3.png)
+![board-schematics](PCB/schematics-v22-jlcpcb/readme-media/board-schematics.svg)
+![board-pcb](PCB/schematics-v22-jlcpcb/readme-media/board-pcb.jpg)
+![board-pcb-3d](PCB/schematics-v22-jlcpcb/readme-media/board-pcb-3d-4.png)
+![board-pcb-3d](PCB/schematics-v22-jlcpcb/readme-media/board-pcb-3d-5.png)
+![board-pcb-3d](PCB/schematics-v22-jlcpcb/readme-media/board-pcb-3d-2.png)
+![board-pcb-3d](PCB/schematics-v22-jlcpcb/readme-media/board-pcb-3d.png)
+![board-pcb-3d](PCB/schematics-v22-jlcpcb/readme-media/board-pcb-3d-3.png)
 
 
 # How does it work?
@@ -58,9 +58,9 @@ Section under development.
 In here there will be a detailed description on how Mains is sensed.
 
 Few teaser pictures that show how optocouplers with darlington behave. This allows the board to use very large resistors, very little current, and hence small fuses. All that improves safety and lowers the board consumption: 
-![oscilloscope-sensing-mains-1](PCB/schematics-v22/readme-media/osc-sens-switch-on.jpg)
-![oscilloscope-sensing-mains-2](PCB/schematics-v22/readme-media/osc-sens-on.jpg)
-![oscilloscope-sensing-mains-3](PCB/schematics-v22/readme-media/osc-sens-switch-off.jpg)
+![oscilloscope-sensing-mains-1](PCB/schematics-v22-jlcpcb/readme-media/osc-sens-switch-on.jpg)
+![oscilloscope-sensing-mains-2](PCB/schematics-v22-jlcpcb/readme-media/osc-sens-on.jpg)
+![oscilloscope-sensing-mains-3](PCB/schematics-v22-jlcpcb/readme-media/osc-sens-switch-off.jpg)
 ## Relays
 Section under development. In here there will be a detailed description on why SSR with snubber relay was selected
 
