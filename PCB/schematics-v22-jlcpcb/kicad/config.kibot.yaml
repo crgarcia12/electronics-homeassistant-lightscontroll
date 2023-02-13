@@ -25,6 +25,10 @@ filters:
        regex: '^(G|#|TP|F).*'
 
 outputs:
+  - name: 'diff'
+    type: 'diff'
+    dir: ./diff
+    
   - name: 'print_sch'
     comment: "Print schematic (PDF)"
     type: pdf_sch_print
