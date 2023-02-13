@@ -396,8 +396,7 @@
           "220VAC(N)",
           "Net-(F6-Pad1)",
           "Net-(F7-Pad1)",
-          "Net-(F8-Pad1)",
-          "Net-(F9-Pad1)"
+          "Net-(F8-Pad1)"
         ],
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
