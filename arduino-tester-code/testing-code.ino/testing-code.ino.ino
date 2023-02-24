@@ -1,30 +1,47 @@
 #include "Adafruit_SHT4x.h"
-Adafruit_SHT4x sht4 = Adafruit_SHT4x();
+#include "Wire.h"
+Adafruit_SHT4x sht4;
+
+#define PIN_LED 1
+
+int PIN_RELAYS[] = {
+  46, 8, 18, 17
+};    
+
+int PIN_SENSING[] = {
+  15, 7, 6, 5
+};    
+
+int i = 0;
+bool SHT_is_working = false;
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(115200);
 
+  // SET SDA, SCL pins
+  int sda_pin = 42;
+  int scl_pin = 41;
+  Wire.begin(sda_pin, scl_pin);
+  sht4 = Adafruit_SHT4x();
+  
   // PINS
-  pinMode(23, OUTPUT);
+  pinMode(PIN_LED, OUTPUT);
 
-  pinMode(32, INPUT);
-  pinMode(34, INPUT);
-  pinMode(35, INPUT);
-  pinMode(39, INPUT);
-
-  pinMode(13, OUTPUT);
-  pinMode(25, OUTPUT);
-  pinMode(26, OUTPUT);
-  pinMode(27, OUTPUT);
-
+  for(i = 0; i < 4; i++) {
+    pinMode(PIN_RELAYS[i], OUTPUT);
+    pinMode(PIN_SENSING[i], INPUT);
+  }
+  
   ////////////////////////////////////////////////////////////
   // SHT 40
   ////////////////////////////////////////////////////////////
   
   if (! sht4.begin()) {
     Serial.println("Couldn't find SHT4x");
-    while (1) delay(1);
+    return;
   }
+  
+  SHT_is_working = true;
   Serial.println("Found SHT4x sensor");
   Serial.print("Serial number 0x");
   Serial.println(sht4.readSerial(), HEX);
@@ -77,48 +94,45 @@ void loop() {
   // put your main code here, to run repeatedly:
   delay(1000);
   // Led
-  digitalWrite(23, HIGH);
-
+  digitalWrite(PIN_LED, HIGH);
+  Serial.println("#######################");
   // Relay
-  digitalWrite(13, HIGH);
-  digitalWrite(25, HIGH);
-  digitalWrite(26, HIGH);
-  digitalWrite(27, HIGH);
+  for(i = 0; i < 4; i++) {
+    Serial.print("Relay High: "); Serial.println(PIN_RELAYS[i]);
+    digitalWrite(PIN_RELAYS[i], HIGH);
+  }
 
   Serial.println("#######################");
-  int i = 0;
-  i = digitalRead(32);
-  Serial.print("pin 32: "); Serial.println(i);
-  i = digitalRead(34);
-  Serial.print("pin 34: "); Serial.println(i);
-  i = digitalRead(35);
-  Serial.print("pin 35: "); Serial.println(i);
-  i = digitalRead(39);
-  Serial.print("pin 39: "); Serial.println(i);
-
-  delay(1000);
-  digitalWrite(23, LOW);
+  int j = 0;
+  for(i = 0; i < 4; i++) {
+    j = digitalRead(PIN_SENSING[i]);
+    Serial.print("pin "); Serial.print(PIN_SENSING[i]); Serial.print(": "); Serial.println(j);
+  }
+  delay(3000);
+  digitalWrite(PIN_LED, LOW);
 
   // Relay
-  digitalWrite(13, LOW);
-  digitalWrite(25, LOW);
-  digitalWrite(26, LOW);
-  digitalWrite(27, LOW);
+  for(i = 0; i < 4; i++) {
+    Serial.print("Relay Low: "); Serial.println(PIN_RELAYS[i]);
+    digitalWrite(PIN_RELAYS[i], LOW);
+  }
 
 
   ////////////////////////////////////////
   // SHT 40
   ////////////////////////////////////////
-  sensors_event_t humidity, temp;
-  
-  uint32_t timestamp = millis();
-  sht4.getEvent(&humidity, &temp);// populate temp and humidity objects with fresh data
-  timestamp = millis() - timestamp;
+  if(SHT_is_working)
+  {
+    sensors_event_t humidity, temp;
+    
+    uint32_t timestamp = millis();
+    sht4.getEvent(&humidity, &temp);// populate temp and humidity objects with fresh data
+    timestamp = millis() - timestamp;
 
-  Serial.print("Temperature: "); Serial.print(temp.temperature); Serial.println(" degrees C");
-  Serial.print("Humidity: "); Serial.print(humidity.relative_humidity); Serial.println("% rH");
+    Serial.print("Temperature: "); Serial.print(temp.temperature); Serial.println(" degrees C");
+    Serial.print("Humidity: "); Serial.print(humidity.relative_humidity); Serial.println("% rH");
 
-  Serial.print("Read duration (ms): ");
-  Serial.println(timestamp);
-
+    Serial.print("Read duration (ms): ");
+    Serial.println(timestamp);
+  }
 }

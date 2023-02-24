@@ -1,0 +1,262 @@
+substitutions:
+  devicename: lightscontrol-3
+  friendly_devicename: Lights Control 3
+
+esphome:
+  name:  ${devicename}
+  friendly_name: ${friendly_devicename}
+
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: arduino
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "...."
+
+ota:
+  password: "...."
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Lightscontrol-3 Fallback Hotspot"
+    password: "...."
+
+captive_portal:
+
+# text_sensor:
+#   - platform: debug
+#     device:
+#       name: "Device Info"
+  
+###################################
+#          Sensors
+###################################
+i2c:
+  id: bus_a
+  sda: 42
+  scl: 41
+  scan: false
+  frequency: 10kHz
+
+# I2C temp sensor in the PCB (U7)
+sensor:
+  - platform: sht4x
+    id: temp_sensor
+    i2c_id: bus_a
+    address: 0x44
+    temperature:
+      name: Temperature
+    humidity:
+      name: Relative Humidity
+  # - platform: debug
+  #   free:
+  #     name: Heap Free
+  #   block:
+  #     name: Heap Max Block
+  #   loop_time:
+  #     name: Loop Time
+
+# This sensor checks if the light is really on or off by checking the voltage
+binary_sensor:
+  - platform: gpio
+    name: sensor_1
+    id: sensor_1
+    pin:
+      number: GPIO15
+      mode: INPUT
+      inverted: false
+  - platform: gpio
+    name: sensor_2
+    id: sensor_2
+    pin:
+      number: GPIO7
+      mode: INPUT
+      inverted: false
+  - platform: gpio
+    id: sensor_3
+    name: sensor_3
+    pin:
+      number: GPIO6
+      mode: INPUT
+      inverted: false
+  - platform: gpio
+    id: sensor_4
+    name: sensor_4
+    pin:
+      number: GPIO5
+      mode: INPUT
+      inverted: false
+
+status_led:
+  pin:
+    number: GPIO1
+    inverted: true
+
+switch:
+  # This controlls the led in the PCB board (D1)
+  # Used to test if the integration works even when no relay is connected
+  # - platform: gpio
+  #   name: ${friendly_devicename} test light
+  #   id: test_light
+  #   pin: GPIO1
+    
+  # This switch is a template (virtual). 
+  # It allows HA to send turn_on_action and turn_off_action.
+  # The state is actually read directly from the binary_sensor
+  # The action is sent to the relay_X
+  - platform: template
+    # https://esphome.io/components/switch/template.html
+    name: Light 1
+    id: light_1
+    icon: mdi:ceiling-light
+    lambda: |-
+      if (id(sensor_1).state) {
+        return true;
+      } else {
+        return false;
+      }
+    turn_on_action:
+      - if:
+          condition:
+            binary_sensor.is_off: sensor_1
+          then:
+            - logger.log: "template.turn_on.sensor==off"
+            - switch.turn_on: relay_1
+          else:
+            - logger.log: "template.turn_on.sensor==on"
+    turn_off_action:
+      - if:
+          condition:
+            binary_sensor.is_on: sensor_1
+          then:
+            - logger.log: "template.turn_off.sensor==on"
+            - switch.turn_on: relay_1
+          else:
+            - logger.log: "template.turn_off.sensor==off"
+  - platform: template
+    # https://esphome.io/components/switch/template.html
+    name: Light 2
+    id: light_2
+    icon: mdi:ceiling-light
+    lambda: |-
+      if (id(sensor_2).state) {
+        return true;
+      } else {
+        return false;
+      }
+    turn_on_action:
+      - if:
+          condition:
+            binary_sensor.is_off: sensor_2
+          then:
+            - logger.log: "template.turn_on.sensor==off"
+            - switch.turn_on: relay_2
+          else:
+            - logger.log: "template.turn_on.sensor==on"
+    turn_off_action:
+      - if:
+          condition:
+            binary_sensor.is_on: sensor_2
+          then:
+            - logger.log: "template.turn_off.sensor==on"
+            - switch.turn_on: relay_2
+          else:
+            - logger.log: "template.turn_off.sensor==off"
+  - platform: template
+    # https://esphome.io/components/switch/template.html
+    name: Light 3
+    id: light_3
+    icon: mdi:ceiling-light
+    lambda: |-
+      if (id(sensor_3).state) {
+        return true;
+      } else {
+        return false;
+      }
+    turn_on_action:
+      - if:
+          condition:
+            binary_sensor.is_off: sensor_3
+          then:
+            - logger.log: "template.turn_on.sensor==off"
+            - switch.turn_on: relay_3
+          else:
+            - logger.log: "template.turn_on.sensor==on"
+    turn_off_action:
+      - if:
+          condition:
+            binary_sensor.is_on: sensor_3
+          then:
+            - logger.log: "template.turn_off.sensor==on"
+            - switch.turn_on: relay_3
+          else:
+            - logger.log: "template.turn_off.sensor==off"
+  - platform: template
+    # https://esphome.io/components/switch/template.html
+    name: Light 4
+    id: light_4
+    icon: mdi:ceiling-light
+    lambda: |-
+      if (id(sensor_4).state) {
+        return true;
+      } else {
+        return false;
+      }
+    turn_on_action:
+      - if:
+          condition:
+            binary_sensor.is_off: sensor_4
+          then:
+            - logger.log: "template.turn_on.sensor==off"
+            - switch.turn_on: relay_4
+          else:
+            - logger.log: "template.turn_on.sensor==on"
+    turn_off_action:
+      - if:
+          condition:
+            binary_sensor.is_on: sensor_4
+          then:
+            - logger.log: "template.turn_off.sensor==on"
+            - switch.turn_on: relay_4
+          else:
+            - logger.log: "template.turn_off.sensor==off"
+
+  # This controls the relay. It turns it on for 2 seconds and then it turns it back off
+  - platform: gpio
+    id: relay_1
+    name: Relay 1
+    pin: GPIO46
+    on_turn_on:
+      - delay: 500ms
+      - switch.turn_off: relay_1
+  - platform: gpio
+    id: relay_2  
+    name: Relay 2
+    pin: GPIO8
+    on_turn_on:
+      - delay: 500ms
+      - switch.turn_off: relay_2
+  - platform: gpio
+    id: relay_3
+    name: Relay 3
+    pin: GPIO18
+    on_turn_on:
+      - delay: 500ms
+      - switch.turn_off: relay_3
+  - platform: gpio
+    id: relay_4
+    name: Relay 4
+    pin: GPIO17
+    on_turn_on:
+      - delay: 500ms
+      - switch.turn_off: relay_4
