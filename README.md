@@ -46,7 +46,7 @@ Since Version 17:
 ![board-pcb-3d](PCB/schematics-v22-jlcpcb/readme-media/board-pcb-3d-4.png)
 ![board-pcb-3d](PCB/schematics-v22-jlcpcb/readme-media/board-pcb-3d-5.png)
 ![board-pcb-3d](PCB/schematics-v22-jlcpcb/readme-media/board-pcb-3d-2.png)
-![board-pcb-3d](PCB/schematics-v22-jlcpcb/readme-media/board-pcb-3d.png)
+![board-pcb-3d](PCB/schematics-v22-jlcpcb/readme-media/board-pcb-3d.jpg)
 ![board-pcb-3d](PCB/schematics-v22-jlcpcb/readme-media/board-pcb-3d-3.png)
 ![board-real-image](PCB/schematics-v22-jlcpcb/readme-media/board-real-1.jpg)
 ![board-real-image](PCB/schematics-v22-jlcpcb/readme-media/board-real-2.jpg)
