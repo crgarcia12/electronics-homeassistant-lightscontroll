@@ -1,0 +1,10 @@
+(fp_lib_table
+  (lib (name "icons")(type "KiCad")(uri "${KIPRJMOD}/components-footprints/icons")(options "")(descr ""))
+  (lib (name "wago-2604-1104")(type "KiCad")(uri "${KIPRJMOD}/components-footprints/wago/wago-2604-1104/footprints.pretty")(options "")(descr ""))
+  (lib (name "wago-2604-1102")(type "KiCad")(uri "${KIPRJMOD}/components-footprints/wago/wago-2604-1102/footprints.pretty")(options "")(descr ""))
+  (lib (name "rac05-05sk")(type "KiCad")(uri "${KIPRJMOD}/components-footprints/rac05-05sk/CONV_RAC05-05SK")(options "")(descr ""))
+  (lib (name "RST-80-AMMO")(type "KiCad")(uri "${KIPRJMOD}/components-footprints/RST-80-AMMO")(options "")(descr ""))
+  (lib (name "sht40")(type "KiCad")(uri "${KIPRJMOD}/components-footprints/sht40")(options "")(descr ""))
+  (lib (name "AQG12205")(type "KiCad")(uri "${KIPRJMOD}/components-footprints/AQG12205/AQG12205/KiCad")(options "")(descr ""))
+  (lib (name "Espressif")(type "KiCad")(uri "${KIPRJMOD}/components-footprints/ESP32-S3/kicad-libraries-main/footprints/Espressif.pretty")(options "")(descr ""))
+)
