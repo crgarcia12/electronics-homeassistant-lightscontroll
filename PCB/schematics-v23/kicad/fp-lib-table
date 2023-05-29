@@ -1,4 +1,5 @@
 (fp_lib_table
+  (version 7)
   (lib (name "icons")(type "KiCad")(uri "${KIPRJMOD}/components-footprints/icons")(options "")(descr ""))
   (lib (name "wago-2604-1104")(type "KiCad")(uri "${KIPRJMOD}/components-footprints/wago/wago-2604-1104/footprints.pretty")(options "")(descr ""))
   (lib (name "wago-2604-1102")(type "KiCad")(uri "${KIPRJMOD}/components-footprints/wago/wago-2604-1102/footprints.pretty")(options "")(descr ""))
@@ -7,4 +8,6 @@
   (lib (name "sht40")(type "KiCad")(uri "${KIPRJMOD}/components-footprints/sht40")(options "")(descr ""))
   (lib (name "AQG12205")(type "KiCad")(uri "${KIPRJMOD}/components-footprints/AQG12205/AQG12205/KiCad")(options "")(descr ""))
   (lib (name "Espressif")(type "KiCad")(uri "${KIPRJMOD}/components-footprints/ESP32-S3/kicad-libraries-main/footprints/Espressif.pretty")(options "")(descr ""))
+  (lib (name "hamodule_SW_SPST_SKQG_WithStem")(type "KiCad")(uri "${KIPRJMOD}/components-footprints/hamodule_SW_SPST_SKQG_WithStem/hamodule_SW_SPST_SKQG_WithStem.pretty")(options "")(descr ""))
+  (lib (name "usb-c")(type "KiCad")(uri "${KIPRJMOD}/components-footprints/usb-c/usb-c.pretty")(options "")(descr ""))
 )
