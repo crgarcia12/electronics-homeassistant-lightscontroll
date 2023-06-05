@@ -16,18 +16,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - uses: INTI-CMNB/KiBot@v2_k6
+    - uses: INTI-CMNB/KiBot@v2_k7
       with:
         # Required - kibot config file
-        config: PCB/schematics-v22-jlcpcb/kicad/config.kibot.yaml
+        config: PCB/schematics-v23.4/kicad/config.kibot.yaml
         # optional - prefix to output defined in config
-        dir: PCB/schematics-v22-jlcpcb/kicad/fabrication
+        dir: PCB/schematics-v23.4/kicad/fabrication
         # optional - schematic file
-        schema: 'PCB/schematics-v22-jlcpcb/kicad/hamodule.kicad_sch'
+        schema: 'PCB/schematics-v23.4/kicad/hamodule.kicad_sch'
         # optional - PCB design file
-        board: 'PCB/schematics-v22-jlcpcb/kicad/hamodule.kicad_pcb'
+        board: 'PCB/schematics-v23.4/kicad/hamodule.kicad_pcb'
     - name: upload results
       uses: actions/upload-artifact@v2
       with:
         name: output
-        path: PCB/schematics-v22-jlcpcb/kicad/fabrication
+        path: PCB/schematics-v23.4/kicad/fabrication
