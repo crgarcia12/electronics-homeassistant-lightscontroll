@@ -5587,6 +5587,10 @@
     (stroke (width 0) (type default))
     (uuid b5f6605a-5f50-489f-b9ce-c0510ee45d9c)
   )
+  (wire (pts (xy 285.115 135.89) (xy 285.115 137.795))
+    (stroke (width 0) (type default))
+    (uuid b6163a9a-649f-49bf-91e4-1f1dbec34c61)
+  )
   (wire (pts (xy 212.09 61.595) (xy 209.55 61.595))
     (stroke (width 0) (type default))
     (uuid b7050415-8e1b-4322-9393-d026ff11c59c)
@@ -6084,7 +6088,7 @@
     (uuid 8960cf98-3b18-4904-9e03-a0a8eeef8b77)
     (data
       iVBORw0KGgoAAAANSUhEUgAAAngAAAMbCAIAAABR4n8tAAAAA3NCSVQICAjb4U/gAAAACXBIWXMA
-      AA7DAAAOwwHHb6hkAAAgAElEQVR4nGy9Xa8kSXIldo6Ze0Tee6uqP2aaHHFFailSggBRD4L0P7S7
+      AA50AAAOdAFrJLPWAAAgAElEQVR4nGy9Xa8kSXIldo6Ze0Tee6uqP2aaHHFFailSggBRD4L0P7S7
       5Epa/UBBz/oPAgQsBAh8ECVitSuI3OH0TE9XdVXdezPC3cz0YO6eWU1lNwp5MyMjPNzN7Zgd+wj+
       z//T/2hmtdbjOMpW3Z0kgPFvwN3NDICIAFhveu+OEBFVVdU8hoGIcPeIAKCqEALIP0mKiJmtU60T
       xnyZ2TqMZCklh0SJdZ58QxeS+avxlcYavLsDoIuI5IcRQRL0/AlJCO+vSDLHnwdHhKqSAcAdJKkC
@@ -23084,10 +23088,10 @@
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
-  (global_label "GND" (shape input) (at 286.385 135.89 270) (fields_autoplaced)
+  (global_label "GND" (shape input) (at 285.115 137.795 270) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid d02c1113-d63f-482c-b069-6dd1862366af)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 234.315 360.68 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 233.045 362.585 0)
       (effects (font (size 1.27 1.27)) hide)
     )
   )
