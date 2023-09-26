@@ -6,8 +6,8 @@
 
   (title_block
     (title "Home Assistant module for lights control")
-    (date "2023-02-01")
-    (rev "20230201.22")
+    (date "2023-09-26")
+    (rev "20230926.22")
   )
 
   (lib_symbols
@@ -24337,7 +24337,7 @@
     (property "Reference" "SW1" (at 98.425 155.575 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "Switch" (at 98.425 158.2674 0)
+    (property "Value" "Reset" (at 98.425 158.2674 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Footprint" "hamodule_SW_SPST_SKQG_WithStem:SW_SPST_SKQG_WithStem" (at 98.425 158.115 0)
@@ -24375,7 +24375,7 @@
     (property "Reference" "SW2" (at 98.425 172.085 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "Switch" (at 98.425 164.6174 0)
+    (property "Value" "Boot" (at 98.425 164.6174 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Footprint" "hamodule_SW_SPST_SKQG_WithStem:SW_SPST_SKQG_WithStem" (at 98.425 164.465 0)
