@@ -1,0 +1,48 @@
+name: production-files
+
+on:
+  push:
+    paths:
+    - '**.sch'
+    - '**.kicad_pcb'
+  pull_request:
+    paths:
+      - '**.sch'
+      - '**.kicad_pcb'
+  workflow_dispatch:
+
+jobs:
+  production-files-4:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: INTI-CMNB/KiBot@v2_k7
+      with:
+        # Required - kibot config file
+        config: PCB/schematics-v23.4/kicad/config.kibot.yaml 
+        # optional - prefix to output defined in config
+        dir: PCB/schematics-v23.4/kicad/fabrication
+        # optional - schematic file
+        schema: 'PCB/schematics-v23.4/kicad/hamodule.kicad_sch'
+        # optional - PCB design file
+        board: 'PCB/schematics-v23.4/kicad/hamodule.kicad_pcb'
+    - name: upload results
+      uses: actions/upload-artifact@v2
+      with:
+        name: output-4
+        path: PCB/schematics-v23.4/kicad/fabrication
+    - uses: INTI-CMNB/KiBot@v2_k7
+      with:
+        # Required - kibot config file
+        config: PCB/schematics-v23.8/kicad/config.kibot.yaml 
+        # optional - prefix to output defined in config
+        dir: PCB/schematics-v23.8/kicad/fabrication
+        # optional - schematic file
+        schema: 'PCB/schematics-v23.8/kicad/hamodule.kicad_sch'
+        # optional - PCB design file
+        board: 'PCB/schematics-v23.8/kicad/hamodule.kicad_pcb'
+    - name: upload results
+      uses: actions/upload-artifact@v2
+      with:
+        name: output-8
+        path: PCB/schematics-v23.8/kicad/fabrication
