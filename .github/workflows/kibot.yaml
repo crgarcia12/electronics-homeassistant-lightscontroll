@@ -5,10 +5,12 @@ on:
     paths:
     - '**.sch'
     - '**.kicad_pcb'
+    - '**.yaml'
   pull_request:
     paths:
       - '**.sch'
       - '**.kicad_pcb'
+      - '**.yaml'
   workflow_dispatch:
 
 jobs:
@@ -17,6 +19,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: INTI-CMNB/KiBot@v2_k7
+      name: generating files for 4 channels PCB
       with:
         # Required - kibot config file
         config: PCB/schematics-v23.4/kicad/config.kibot.yaml 
@@ -26,12 +29,13 @@ jobs:
         schema: 'PCB/schematics-v23.4/kicad/hamodule.kicad_sch'
         # optional - PCB design file
         board: 'PCB/schematics-v23.4/kicad/hamodule.kicad_pcb'
-    - name: upload results
+    - name: upload results for 4 channels PCB
       uses: actions/upload-artifact@v2
       with:
-        name: output-4
+        name: output-4-channels-PCB
         path: PCB/schematics-v23.4/kicad/fabrication
     - uses: INTI-CMNB/KiBot@v2_k7
+      name: generating files for 8 channels PCB
       with:
         # Required - kibot config file
         config: PCB/schematics-v23.8/kicad/config.kibot.yaml 
@@ -41,8 +45,8 @@ jobs:
         schema: 'PCB/schematics-v23.8/kicad/hamodule.kicad_sch'
         # optional - PCB design file
         board: 'PCB/schematics-v23.8/kicad/hamodule.kicad_pcb'
-    - name: upload results
+    - name: upload results for 8 channels PCB
       uses: actions/upload-artifact@v2
       with:
-        name: output-8
+        name: output-8-channels-PCB
         path: PCB/schematics-v23.8/kicad/fabrication
