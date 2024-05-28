@@ -505,6 +505,7 @@
       "220VAC(N)": "Mains",
       "220VAC(N)-LowV": "Mains-LowVoltage",
       "Net-(D3-A)": "USB",
+      "Net-(F1-Pad1)": "Mains",
       "Net-(F10-Pad1)": "Mains",
       "Net-(F10-Pad2)": "Mains",
       "Net-(F11-Pad1)": "Mains",
