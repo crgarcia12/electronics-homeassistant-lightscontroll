@@ -68,7 +68,6 @@ Compared to version 22:
 ![board-pcb](PCB/schematics-v23.8/readme-media/board.png)
 ![board-pcb](PCB/schematics-v23.8/readme-media/3d_board_2.png)
 ![board-pcb](PCB/schematics-v23.8/readme-media/3d_board_3.png)
-![board-pcb](PCB/schematics-v23.8/readme-media/3d_board_1.png)
 ![board-pcb](PCB/schematics-v23.8/readme-media/3d_board_4.png)
 
 # How does it work?
