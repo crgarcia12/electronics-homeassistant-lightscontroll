@@ -6,8 +6,8 @@
 
   (title_block
     (title "Home Assistant module for lights control")
-    (date "2023-09-30")
-    (rev "20230930.23")
+    (date "2024-05-28")
+    (rev "20240528.23.8")
   )
 
   (lib_symbols
