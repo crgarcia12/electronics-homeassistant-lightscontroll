@@ -40034,7 +40034,7 @@
 				)
 			)
 		)
-		(property "Value" "7|15|GND|3.3v"
+		(property "Value" "15|7|GND|3.3v"
 			(at 391.16 228.6 90)
 			(effects
 				(font
