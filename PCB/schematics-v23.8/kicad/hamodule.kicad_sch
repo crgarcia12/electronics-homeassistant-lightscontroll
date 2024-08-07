@@ -6,790 +6,10 @@
 	(paper "A3")
 	(title_block
 		(title "Home Assistant module for lights control")
-		(date "2024-05-28")
-		(rev "20240528.23.8")
+		(date "2024-08-07")
+		(rev "20240807.23.8")
 	)
 	(lib_symbols
-		(symbol "2604-1104_1"
-			(pin_names
-				(offset 0.254) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "J"
-				(at -1.27 16.51 0)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-				)
-			)
-			(property "Value" "2604-1104_1"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-				)
-			)
-			(property "Footprint" "CONN_2604-1104_8_WAG"
-				(at -1.27 -12.7 0)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "CONN_2604-1104_8_WAG"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "2604-1104_1_1_1"
-				(circle
-					(center -1.778 -7.62)
-					(radius 0.254)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center -1.778 -5.08)
-					(radius 0.254)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center -1.778 -2.54)
-					(radius 0.254)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center -1.778 0)
-					(radius 0.254)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center -1.778 2.54)
-					(radius 0.254)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center -1.778 5.08)
-					(radius 0.254)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center -1.778 7.62)
-					(radius 0.254)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center -1.778 10.16)
-					(radius 0.254)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -1.524 -7.62)
-					(mid -1.524 -7.62)
-					(end -1.524 -7.62)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -1.524 -5.08)
-					(mid -1.524 -5.08)
-					(end -1.524 -5.08)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -1.524 -2.54)
-					(mid -1.524 -2.54)
-					(end -1.524 -2.54)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -1.524 0)
-					(mid -1.524 0)
-					(end -1.524 0)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -1.524 2.54)
-					(mid -1.524 2.54)
-					(end -1.524 2.54)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -1.524 5.08)
-					(mid -1.524 5.08)
-					(end -1.524 5.08)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -1.524 7.62)
-					(mid -1.524 7.62)
-					(end -1.524 7.62)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -1.524 10.16)
-					(mid -1.524 10.16)
-					(end -1.524 10.16)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -5.08 -10.16) (xy 2.54 -10.16)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -5.08 12.7) (xy -5.08 -10.16)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.778 -5.334) (xy -1.778 -7.366)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.778 -0.254) (xy -1.778 -2.286)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.778 4.826) (xy -1.778 2.794)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.778 9.906) (xy -1.778 7.874)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -7.62) (xy -5.08 -7.62)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -7.62) (xy -1.27 -8.4582)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -7.62) (xy -1.27 -6.7818)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -5.08) (xy -5.08 -5.08)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -5.08) (xy -1.27 -5.9182)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -5.08) (xy -1.27 -4.2418)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -2.54) (xy -5.08 -2.54)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -2.54) (xy -1.27 -3.3782)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -2.54) (xy -1.27 -1.7018)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy -5.08 0)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy -1.27 -0.8382)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy -1.27 0.8382)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy -5.08 2.54)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy -1.27 1.7018)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy -1.27 3.3782)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 5.08) (xy -5.08 5.08)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 5.08) (xy -1.27 4.2418)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 5.08) (xy -1.27 5.9182)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 7.62) (xy -5.08 7.62)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 7.62) (xy -1.27 6.7818)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 7.62) (xy -1.27 8.4582)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 10.16) (xy -5.08 10.16)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 10.16) (xy -1.27 9.3218)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 10.16) (xy -1.27 10.9982)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 -10.16) (xy 2.54 12.7)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 12.7) (xy -5.08 12.7)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -10.16 -7.62 0)
-					(length 5.08)
-					(name "1"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -10.16 -5.08 0)
-					(length 5.08)
-					(name "2"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -10.16 -2.54 0)
-					(length 5.08)
-					(name "3"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -10.16 0 0)
-					(length 5.08)
-					(name "4"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -10.16 2.54 0)
-					(length 5.08)
-					(name "5"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -10.16 5.08 0)
-					(length 5.08)
-					(name "6"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -10.16 7.62 0)
-					(length 5.08)
-					(name "7"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -10.16 10.16 0)
-					(length 5.08)
-					(name "8"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "AQG12205:AQG12205"
 			(pin_names
 				(offset 0.762)
@@ -1132,838 +352,6 @@
 				)
 			)
 			(symbol "AQG12205_1_1"
-				(pin passive line
-					(at -11.43 -3.81 0)
-					(length 2.54)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -11.43 3.81 0)
-					(length 2.54)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 11.43 3.81 180)
-					(length 2.54)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 11.43 -3.81 180)
-					(length 2.54)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
-		(symbol "AQG12205_1"
-			(pin_names
-				(offset 0.762)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "K"
-				(at -8.89 6.35 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "AQG12205_1"
-				(at -1.27 6.35 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" "AQG12205"
-				(at -8.89 -7.62 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://www3.panasonic.biz/ac/e_download/control/relay/solid-state/catalog/semi_eng_aqg.pdf"
-				(at -8.89 -10.16 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Description" "Solid State Relays - PCB Mount 1A 5V Random Non-Zero Cross"
-				(at -8.89 -12.7 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Height" "13.5"
-				(at -8.89 -15.24 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Manufacturer_Name" "Panasonic"
-				(at -8.89 -17.78 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Manufacturer_Part_Number" "AQG12205"
-				(at -8.89 -20.32 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Mouser Part Number" "769-AQG12205"
-				(at -8.89 -22.86 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Panasonic-Industrial-Devices/AQG12205?qs=g5ciJ0jwZaFrZwmjjqozuQ%3D%3D"
-				(at -8.89 -25.4 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Arrow Part Number" ""
-				(at 11.43 7.62 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Arrow Price/Stock" ""
-				(at 11.43 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(symbol "AQG12205_1_0_1"
-				(rectangle
-					(start -8.89 5.08)
-					(end 8.89 -5.08)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(polyline
-					(pts
-						(xy -7.62 0) (xy -5.08 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 1.27) (xy 2.54 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 5.08 -2.54) (xy 7.62 -2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 5.08 -1.27) (xy 7.62 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 6.35 -2.54) (xy 6.35 -3.81)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 6.35 0) (xy 6.35 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 6.35 3.81) (xy 6.35 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 0) (xy 1.27 -3.81) (xy 8.89 -3.81)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 1.27) (xy 1.27 3.81) (xy 8.89 3.81)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -8.89 3.81) (xy -6.35 3.81) (xy -6.35 -3.81) (xy -8.89 -3.81)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -6.35 0) (xy -7.62 1.27) (xy -5.08 1.27) (xy -6.35 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 0) (xy 3.81 0) (xy 2.54 1.27) (xy 1.27 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 1.27) (xy -1.27 1.27) (xy 0 0) (xy 1.016 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -3.81 0) (xy -2.54 0) (xy -2.921 -0.127) (xy -2.921 0.127) (xy -2.54 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -3.81 1.27) (xy -2.54 1.27) (xy -2.921 1.143) (xy -2.921 1.397) (xy -2.54 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 5.08 2.54)
-					(end 7.62 0)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "AQG12205_1_1_1"
-				(pin passive line
-					(at -11.43 -3.81 0)
-					(length 2.54)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -11.43 3.81 0)
-					(length 2.54)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 11.43 3.81 180)
-					(length 2.54)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 11.43 -3.81 180)
-					(length 2.54)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
-		(symbol "AQG12205_2"
-			(pin_names
-				(offset 0.762)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "K"
-				(at -8.89 6.35 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "AQG12205_2"
-				(at -1.27 6.35 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" "AQG12205"
-				(at -8.89 -7.62 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://www3.panasonic.biz/ac/e_download/control/relay/solid-state/catalog/semi_eng_aqg.pdf"
-				(at -8.89 -10.16 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Description" "Solid State Relays - PCB Mount 1A 5V Random Non-Zero Cross"
-				(at -8.89 -12.7 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Height" "13.5"
-				(at -8.89 -15.24 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Manufacturer_Name" "Panasonic"
-				(at -8.89 -17.78 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Manufacturer_Part_Number" "AQG12205"
-				(at -8.89 -20.32 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Mouser Part Number" "769-AQG12205"
-				(at -8.89 -22.86 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Panasonic-Industrial-Devices/AQG12205?qs=g5ciJ0jwZaFrZwmjjqozuQ%3D%3D"
-				(at -8.89 -25.4 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Arrow Part Number" ""
-				(at 11.43 7.62 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Arrow Price/Stock" ""
-				(at 11.43 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(symbol "AQG12205_2_0_1"
-				(rectangle
-					(start -8.89 5.08)
-					(end 8.89 -5.08)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(polyline
-					(pts
-						(xy -7.62 0) (xy -5.08 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 1.27) (xy 2.54 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 5.08 -2.54) (xy 7.62 -2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 5.08 -1.27) (xy 7.62 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 6.35 -2.54) (xy 6.35 -3.81)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 6.35 0) (xy 6.35 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 6.35 3.81) (xy 6.35 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 0) (xy 1.27 -3.81) (xy 8.89 -3.81)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 1.27) (xy 1.27 3.81) (xy 8.89 3.81)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -8.89 3.81) (xy -6.35 3.81) (xy -6.35 -3.81) (xy -8.89 -3.81)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -6.35 0) (xy -7.62 1.27) (xy -5.08 1.27) (xy -6.35 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 0) (xy 3.81 0) (xy 2.54 1.27) (xy 1.27 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 1.27) (xy -1.27 1.27) (xy 0 0) (xy 1.016 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -3.81 0) (xy -2.54 0) (xy -2.921 -0.127) (xy -2.921 0.127) (xy -2.54 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -3.81 1.27) (xy -2.54 1.27) (xy -2.921 1.143) (xy -2.921 1.397) (xy -2.54 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 5.08 2.54)
-					(end 7.62 0)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "AQG12205_2_1_1"
 				(pin passive line
 					(at -11.43 -3.81 0)
 					(length 2.54)
@@ -2756,7 +1144,7 @@
 				)
 			)
 		)
-		(symbol "Connector:USB_C_Receptacle_USB2.0"
+		(symbol "Connector:USB_C_Receptacle_USB2.0_16P"
 			(pin_names
 				(offset 1.016)
 			)
@@ -2764,21 +1152,19 @@
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "J"
-				(at -10.16 19.05 0)
+				(at 0 22.225 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
-			(property "Value" "USB_C_Receptacle_USB2.0"
-				(at 19.05 19.05 0)
+			(property "Value" "USB_C_Receptacle_USB2.0_16P"
+				(at 0 19.685 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify right)
 				)
 			)
 			(property "Footprint" ""
@@ -2799,7 +1185,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "USB 2.0-only Type-C Receptacle connector"
+			(property "Description" "USB 2.0-only 16P Type-C Receptacle connector"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2826,7 +1212,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "USB_C_Receptacle_USB2.0_0_0"
+			(symbol "USB_C_Receptacle_USB2.0_16P_0_0"
 				(rectangle
 					(start -0.254 -17.78)
 					(end 0.254 -16.764)
@@ -2938,7 +1324,7 @@
 					)
 				)
 			)
-			(symbol "USB_C_Receptacle_USB2.0_0_1"
+			(symbol "USB_C_Receptacle_USB2.0_16P_0_1"
 				(rectangle
 					(start -10.16 17.78)
 					(end 10.16 -17.78)
@@ -3139,7 +1525,7 @@
 					)
 				)
 			)
-			(symbol "USB_C_Receptacle_USB2.0_1_1"
+			(symbol "USB_C_Receptacle_USB2.0_16P_1_1"
 				(pin passive line
 					(at 0 -22.86 90)
 					(length 5.08)
@@ -4407,6 +2793,127 @@
 				)
 			)
 		)
+		(symbol "Device:NetTie_2"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(property "Reference" "NT"
+				(at 0 1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "NetTie_2"
+				(at 0 -1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Net tie, 2 pins"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "net tie short"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Net*Tie*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "NetTie_2_0_1"
+				(polyline
+					(pts
+						(xy -1.27 0) (xy 1.27 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "NetTie_2_1_1"
+				(pin passive line
+					(at -2.54 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Device:R"
 			(pin_numbers hide)
 			(pin_names
@@ -4693,6 +3200,51 @@
 				)
 			)
 			(property "Description" "Voltage dependent resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Name" "kicad_builtin_varistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Device" "SUBCKT"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Pins" "1=A 2=B"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Params" "threshold=1k"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Library" "${KICAD7_SYMBOL_DIR}/Simulation_SPICE.sp"
 				(at 0 0 0)
 				(effects
 					(font
@@ -7805,8 +6357,8 @@
 			(pin_numbers hide)
 			(pin_names
 				(offset 1.016) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
+			(exclude_from_sim yes)
+			(in_bom no)
 			(on_board yes)
 			(property "Reference" "H"
 				(at 0 6.35 0)
@@ -7903,230 +6455,13 @@
 				)
 			)
 		)
-		(symbol "NetTie_2_1"
-			(pin_numbers hide)
-			(pin_names
-				(offset 0) hide)
-			(exclude_from_sim no)
-			(in_bom no)
-			(on_board yes)
-			(property "Reference" "NT"
-				(at 0 1.27 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "NetTie_2"
-				(at 0 -1.27 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Net tie, 2 pins"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "net tie short"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "Net*Tie*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "NetTie_2_1_0_1"
-				(polyline
-					(pts
-						(xy -1.27 0) (xy 1.27 0)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "NetTie_2_1_1_1"
-				(pin passive line
-					(at -2.54 0 0)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 0 180)
-					(length 2.54)
-					(name "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
-		(symbol "PWR_FLAG_1"
-			(power)
-			(pin_numbers hide)
-			(pin_names
-				(offset 0) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "#FLG"
-				(at 0 1.905 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" "PWR_FLAG"
-				(at 0 3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Special symbol for telling ERC where power comes from"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "flag power"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "PWR_FLAG_1_0_0"
-				(pin power_out line
-					(at 0 0 90)
-					(length 0)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "PWR_FLAG_1_0_1"
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-		)
 		(symbol "Power_Protection:USBLC6-2SC6"
 			(pin_names hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "U"
-				(at 2.54 8.89 0)
+				(at 0.635 5.715 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -8135,7 +6470,7 @@
 				)
 			)
 			(property "Value" "USBLC6-2SC6"
-				(at 2.54 -8.89 0)
+				(at 0.635 3.81 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -8144,20 +6479,23 @@
 				)
 			)
 			(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
-				(at 0 -12.7 0)
+				(at 1.27 -6.35 0)
 				(effects
 					(font
 						(size 1.27 1.27)
+						(italic yes)
 					)
+					(justify left)
 					(hide yes)
 				)
 			)
 			(property "Datasheet" "https://www.st.com/resource/en/datasheet/usblc6-2.pdf"
-				(at 5.08 8.89 0)
+				(at 1.27 -8.255 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 					(hide yes)
 				)
 			)
@@ -8188,10 +6526,237 @@
 					(hide yes)
 				)
 			)
+			(symbol "USBLC6-2SC6_0_0"
+				(circle
+					(center -1.524 0)
+					(radius 0.0001)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center -0.508 -4.572)
+					(radius 0.0001)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center -0.508 2.032)
+					(radius 0.0001)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0.508 -4.572)
+					(radius 0.0001)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0.508 2.032)
+					(radius 0.0001)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 1.524 -2.54)
+					(radius 0.0001)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
 			(symbol "USBLC6-2SC6_0_1"
+				(polyline
+					(pts
+						(xy -2.54 -2.54) (xy 2.54 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 0) (xy 2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 -3.048) (xy -1.016 -3.048)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.016 1.524) (xy -2.032 1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 -3.048) (xy 2.032 -3.048)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 1.524) (xy 2.032 1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.508 -1.143) (xy -0.508 -0.762) (xy 0.508 -0.762)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 0.508) (xy -1.016 0.508) (xy -1.524 1.524) (xy -2.032 0.508)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.016 -4.064) (xy -2.032 -4.064) (xy -1.524 -3.048) (xy -1.016 -4.064)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.508 -1.778) (xy -0.508 -1.778) (xy 0 -0.762) (xy 0.508 -1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.032 -4.064) (xy 1.016 -4.064) (xy 1.524 -3.048) (xy 2.032 -4.064)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.032 0.508) (xy 1.016 0.508) (xy 1.524 1.524) (xy 2.032 0.508)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy -0.508 2.032) (xy 0.508 2.032) (xy 0 1.524) (xy 0 -4.064) (xy -0.508 -4.572) (xy 0.508 -4.572)
+						(xy 0 -5.08)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "USBLC6-2SC6_1_1"
 				(rectangle
-					(start -7.62 -7.62)
-					(end 7.62 7.62)
+					(start -2.54 2.794)
+					(end 2.54 -5.334)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -8200,53 +6765,9 @@
 						(type background)
 					)
 				)
-				(circle
-					(center -5.08 0)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(circle
-					(center -2.54 0)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start -2.54 6.35)
-					(end 2.54 -6.35)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 0 -6.35)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
 				(polyline
 					(pts
-						(xy -5.08 -2.54) (xy -7.62 -2.54)
+						(xy -0.508 2.032) (xy -1.524 2.032) (xy -1.524 -4.572) (xy -0.508 -4.572)
 					)
 					(stroke
 						(width 0)
@@ -8258,7 +6779,7 @@
 				)
 				(polyline
 					(pts
-						(xy -5.08 0) (xy -5.08 -2.54)
+						(xy 0.508 -4.572) (xy 1.524 -4.572) (xy 1.524 2.032) (xy 0.508 2.032)
 					)
 					(stroke
 						(width 0)
@@ -8268,283 +6789,8 @@
 						(type none)
 					)
 				)
-				(polyline
-					(pts
-						(xy -5.08 2.54) (xy -7.62 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.524 -2.794) (xy -3.556 -2.794)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.524 4.826) (xy -3.556 4.826)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -7.62) (xy 0 -6.35)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -6.35) (xy 0 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 1.27) (xy 0 6.35)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 6.35) (xy 0 7.62)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.524 -2.794) (xy 3.556 -2.794)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.524 4.826) (xy 3.556 4.826)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 5.08 -2.54) (xy 7.62 -2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 5.08 0) (xy 5.08 -2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 5.08 2.54) (xy 7.62 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.54 0) (xy -5.08 0) (xy -5.08 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 0) (xy 5.08 0) (xy 5.08 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -3.556 -4.826) (xy -1.524 -4.826) (xy -2.54 -2.794) (xy -3.556 -4.826)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -3.556 2.794) (xy -1.524 2.794) (xy -2.54 4.826) (xy -3.556 2.794)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.016 -1.016) (xy 1.016 -1.016) (xy 0 1.016) (xy -1.016 -1.016)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.016 1.016) (xy 0.762 1.016) (xy -1.016 1.016) (xy -1.016 0.508)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.556 -4.826) (xy 1.524 -4.826) (xy 2.54 -2.794) (xy 3.556 -4.826)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.556 2.794) (xy 1.524 2.794) (xy 2.54 4.826) (xy 3.556 2.794)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 0 6.35)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(circle
-					(center 2.54 0)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(circle
-					(center 5.08 0)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-			)
-			(symbol "USBLC6-2SC6_1_1"
 				(pin passive line
-					(at -10.16 -2.54 0)
+					(at -5.08 0 0)
 					(length 2.54)
 					(name "I/O1"
 						(effects
@@ -8562,7 +6808,7 @@
 					)
 				)
 				(pin passive line
-					(at 0 -10.16 90)
+					(at 0 -7.62 90)
 					(length 2.54)
 					(name "GND"
 						(effects
@@ -8580,7 +6826,7 @@
 					)
 				)
 				(pin passive line
-					(at 10.16 -2.54 180)
+					(at -5.08 -2.54 0)
 					(length 2.54)
 					(name "I/O2"
 						(effects
@@ -8598,7 +6844,7 @@
 					)
 				)
 				(pin passive line
-					(at 10.16 2.54 180)
+					(at 5.08 -2.54 180)
 					(length 2.54)
 					(name "I/O2"
 						(effects
@@ -8616,7 +6862,7 @@
 					)
 				)
 				(pin passive line
-					(at 0 10.16 270)
+					(at 0 5.08 270)
 					(length 2.54)
 					(name "VBUS"
 						(effects
@@ -8634,7 +6880,7 @@
 					)
 				)
 				(pin passive line
-					(at -10.16 2.54 0)
+					(at 5.08 0 180)
 					(length 2.54)
 					(name "I/O1"
 						(effects
@@ -9129,7 +7375,7 @@
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "SW"
-				(at 0 4.318 0)
+				(at 0 5.08 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -9154,7 +7400,7 @@
 				)
 			)
 			(property "Datasheet" "~"
-				(at 0 0 0)
+				(at 0 -7.62 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -9180,10 +7426,22 @@
 					(hide yes)
 				)
 			)
-			(symbol "SW_SPDT_0_0"
+			(symbol "SW_SPDT_0_1"
 				(circle
 					(center -2.032 0)
-					(radius 0.508)
+					(radius 0.4572)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.651 0.254) (xy 1.651 2.286)
+					)
 					(stroke
 						(width 0)
 						(type default)
@@ -9194,21 +7452,7 @@
 				)
 				(circle
 					(center 2.032 -2.54)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "SW_SPDT_0_1"
-				(polyline
-					(pts
-						(xy -1.524 0.254) (xy 1.651 2.286)
-					)
+					(radius 0.4572)
 					(stroke
 						(width 0)
 						(type default)
@@ -9219,7 +7463,7 @@
 				)
 				(circle
 					(center 2.032 2.54)
-					(radius 0.508)
+					(radius 0.4572)
 					(stroke
 						(width 0)
 						(type default)
@@ -9230,6 +7474,17 @@
 				)
 			)
 			(symbol "SW_SPDT_1_1"
+				(rectangle
+					(start -3.175 3.81)
+					(end 3.175 -3.81)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
 				(pin passive line
 					(at 5.08 2.54 180)
 					(length 2.54)
@@ -9884,7 +8139,7 @@
 				(pin power_out line
 					(at 0 0 90)
 					(length 0)
-					(name "pwr"
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -11634,6 +9889,12 @@
 		(uuid "6cc9066b-b756-42bb-ae20-92b61378a62a")
 	)
 	(junction
+		(at 162.56 43.18)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6e51bbd9-e4aa-41a7-bec3-1919724744ad")
+	)
+	(junction
 		(at 82.55 77.47)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -11650,6 +9911,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "74d75225-d020-479a-b599-83b224bfce58")
+	)
+	(junction
+		(at 81.28 118.11)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7ea250ad-34ca-4293-8a85-2287eeb41273")
 	)
 	(junction
 		(at 393.7 88.9)
@@ -11832,6 +10099,12 @@
 		(uuid "bea88064-aebc-4d8f-bc9b-af943deee7c7")
 	)
 	(junction
+		(at 162.56 48.26)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "beef61a5-5f6c-4c9f-9f81-6d7f5fdeab23")
+	)
+	(junction
 		(at 397.51 207.01)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -11986,12 +10259,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "fa7797be-4080-4d7b-86e6-0427d60e2a02")
-	)
-	(junction
-		(at 91.44 118.11)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "fe78fcea-2bec-409d-abf7-91115d4967bf")
 	)
 	(junction
 		(at 290.83 101.6)
@@ -12150,6 +10417,16 @@
 			(type default)
 		)
 		(uuid "00d8247a-8bf0-4808-b9b8-7ba2b12cb9b8")
+	)
+	(wire
+		(pts
+			(xy 162.56 48.26) (xy 165.1 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "00e0d7e9-9155-4340-8843-a51620e809ad")
 	)
 	(wire
 		(pts
@@ -12420,16 +10697,6 @@
 			(type default)
 		)
 		(uuid "0d97a3b1-bcf2-4946-acf0-f39d4f037d93")
-	)
-	(wire
-		(pts
-			(xy 76.2 124.46) (xy 86.36 124.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0d98bb3c-4f12-4f21-acf4-81dd22cde6a8")
 	)
 	(wire
 		(pts
@@ -12943,6 +11210,16 @@
 	)
 	(wire
 		(pts
+			(xy 86.36 135.89) (xy 88.9 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "29a9c1e1-f875-476c-9ee6-238442764a6a")
+	)
+	(wire
+		(pts
 			(xy 320.04 91.44) (xy 330.2 91.44)
 		)
 		(stroke
@@ -13050,6 +11327,16 @@
 			(type default)
 		)
 		(uuid "30281826-6a36-4dba-a5dd-aa46f3a30cf0")
+	)
+	(wire
+		(pts
+			(xy 160.02 48.26) (xy 162.56 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "30f01b25-6574-487d-b163-65e5d2058c04")
 	)
 	(wire
 		(pts
@@ -13470,16 +11757,6 @@
 			(type default)
 		)
 		(uuid "4c2053dd-663d-4c1f-9df8-ae18d49ec568")
-	)
-	(wire
-		(pts
-			(xy 76.2 135.89) (xy 76.2 144.78)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4c8f57cc-8ce2-4759-bb08-310f7e12dd2c")
 	)
 	(wire
 		(pts
@@ -14323,16 +12600,6 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 144.78) (xy 76.2 144.78)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "765123a0-7963-4e24-a070-0271256b99dc")
-	)
-	(wire
-		(pts
 			(xy 173.99 102.87) (xy 187.96 102.87)
 		)
 		(stroke
@@ -14490,16 +12757,6 @@
 			(type default)
 		)
 		(uuid "852d75b7-2ea8-4721-96cd-71f0ef9ff6ae")
-	)
-	(wire
-		(pts
-			(xy 99.06 144.78) (xy 91.44 144.78)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "85d5b55d-d022-46d3-8adc-880507ba95a5")
 	)
 	(wire
 		(pts
@@ -14750,6 +13007,16 @@
 			(type default)
 		)
 		(uuid "975a1e16-f9ca-4c7a-bab1-41a2de9cddf6")
+	)
+	(wire
+		(pts
+			(xy 162.56 41.91) (xy 162.56 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "97a626a1-0e7f-40f7-b797-8a485e8a0c81")
 	)
 	(wire
 		(pts
@@ -15013,6 +13280,16 @@
 	)
 	(wire
 		(pts
+			(xy 81.28 118.11) (xy 82.55 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aa32fb03-ed00-411d-b26b-d55b42d1342b")
+	)
+	(wire
+		(pts
 			(xy 278.13 88.9) (xy 278.13 116.84)
 		)
 		(stroke
@@ -15070,16 +13347,6 @@
 			(type default)
 		)
 		(uuid "ac894478-f9d0-41c7-97a7-5196333a2485")
-	)
-	(wire
-		(pts
-			(xy 91.44 121.92) (xy 91.44 118.11)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "acb50259-df3a-4bbd-a303-d344af39abca")
 	)
 	(wire
 		(pts
@@ -15323,16 +13590,6 @@
 	)
 	(wire
 		(pts
-			(xy 76.2 124.46) (xy 76.2 133.35)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b7ec387b-5a01-425d-a1b9-8b2c8dde7593")
-	)
-	(wire
-		(pts
 			(xy 172.72 240.03) (xy 170.18 240.03)
 		)
 		(stroke
@@ -15380,16 +13637,6 @@
 			(type default)
 		)
 		(uuid "bb0496f2-c052-4759-b395-6b12258dfa09")
-	)
-	(wire
-		(pts
-			(xy 99.06 134.62) (xy 105.41 134.62)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bb1d765d-f430-474e-9e11-6c7ad5a0fb7e")
 	)
 	(wire
 		(pts
@@ -15490,6 +13737,16 @@
 			(type default)
 		)
 		(uuid "c3c16bd9-93f8-4994-abc3-a53c4290a74b")
+	)
+	(wire
+		(pts
+			(xy 86.36 133.35) (xy 88.9 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c40f4dc5-4ea7-427e-adc6-a8df469a6785")
 	)
 	(wire
 		(pts
@@ -15603,6 +13860,16 @@
 	)
 	(wire
 		(pts
+			(xy 162.56 43.18) (xy 165.1 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ccd11241-bb58-4a6a-b5f5-9a2c1ce78cfd")
+	)
+	(wire
+		(pts
 			(xy 393.7 81.28) (xy 393.7 83.82)
 		)
 		(stroke
@@ -15640,6 +13907,16 @@
 			(type default)
 		)
 		(uuid "ce9e2cd9-fab3-4e4d-978a-b3652f88d931")
+	)
+	(wire
+		(pts
+			(xy 81.28 118.11) (xy 81.28 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ce9fbd03-526d-4ff3-a704-6f4bc27e9b13")
 	)
 	(wire
 		(pts
@@ -15813,6 +14090,16 @@
 	)
 	(wire
 		(pts
+			(xy 160.02 43.18) (xy 162.56 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d75ffbf5-b0c3-48a5-99d7-b4ec63b38d1f")
+	)
+	(wire
+		(pts
 			(xy 326.39 101.6) (xy 326.39 139.7)
 		)
 		(stroke
@@ -15843,7 +14130,7 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 118.11) (xy 91.44 118.11)
+			(xy 60.96 118.11) (xy 81.28 118.11)
 		)
 		(stroke
 			(width 0)
@@ -15873,13 +14160,13 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 124.46) (xy 91.44 124.46)
+			(xy 162.56 48.26) (xy 162.56 49.53)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "da8589cc-eea9-4504-a338-6712dffc6251")
+		(uuid "d9fa0111-1ba9-4863-b117-e761d6f25e36")
 	)
 	(wire
 		(pts
@@ -16423,16 +14710,6 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 134.62) (xy 105.41 121.92)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f84e8c3e-d4b9-4e70-a9ad-5d91e2ab6a64")
-	)
-	(wire
-		(pts
 			(xy 66.04 168.91) (xy 66.04 170.18)
 		)
 		(stroke
@@ -16450,16 +14727,6 @@
 			(type default)
 		)
 		(uuid "f9a92edc-518e-4820-8652-8fc1b1a8e797")
-	)
-	(wire
-		(pts
-			(xy 105.41 121.92) (xy 91.44 121.92)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fa67d420-909c-4723-bbe9-3e7bb8bba571")
 	)
 	(wire
 		(pts
@@ -33229,6 +31496,28 @@
 			)
 		)
 	)
+	(global_label "5V+"
+		(shape input)
+		(at 162.56 41.91 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "083c9a29-4093-4310-bcef-b05c90c5280f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 162.56 35.7085 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "220VAC(L)"
 		(shape output)
 		(at 100.33 22.86 0)
@@ -33837,7 +32126,7 @@
 	)
 	(global_label "D+"
 		(shape output)
-		(at 99.06 144.78 0)
+		(at 88.9 135.89 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -33847,7 +32136,7 @@
 		)
 		(uuid "3efa2ece-8f3f-4a8c-96e9-6ab3ec6f1f70")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 104.2266 144.7006 0)
+			(at 94.0666 135.8106 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -34373,7 +32662,7 @@
 	)
 	(global_label "VBUS"
 		(shape output)
-		(at 99.06 118.11 0)
+		(at 90.17 118.11 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -34383,7 +32672,7 @@
 		)
 		(uuid "73d9ca7e-e334-40ef-be60-5cb0ab05b85e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 106.2828 118.0306 0)
+			(at 97.3928 118.0306 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -35295,7 +33584,7 @@
 	)
 	(global_label "GND"
 		(shape input)
-		(at 78.74 134.62 270)
+		(at 81.28 140.97 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -35305,7 +33594,7 @@
 		)
 		(uuid "bf804bfe-889e-4e34-aa39-39c0afc83213")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at -59.69 -34.29 0)
+			(at -57.15 -27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -35314,9 +33603,31 @@
 			)
 		)
 	)
+	(global_label "GND"
+		(shape input)
+		(at 162.56 49.53 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "c3b847d4-576a-42bb-a245-786c230f65f4")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 162.56 55.7315 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "D-"
 		(shape output)
-		(at 99.06 124.46 0)
+		(at 88.9 133.35 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -35326,7 +33637,7 @@
 		)
 		(uuid "cb083d38-4f11-4a80-8b19-ab751c405e4a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 104.2266 124.3806 0)
+			(at 94.0666 133.2706 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -36065,7 +34376,7 @@
 	(netclass_flag ""
 		(length 1)
 		(shape diamond)
-		(at 63.5 118.11 0)
+		(at 62.23 118.11 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -36075,7 +34386,7 @@
 		)
 		(uuid "30948c4a-96cf-42c6-b565-9ce81bb3ecfc")
 		(property "Netclass" "USB"
-			(at 64.6176 117.11 0)
+			(at 63.3476 117.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -37081,7 +35392,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 179.07 156.21 0)
 			(effects
 				(font
@@ -37090,7 +35401,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 179.07 156.21 0)
 			(effects
 				(font
@@ -37167,7 +35478,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 179.07 170.18 0)
 			(effects
 				(font
@@ -37176,7 +35487,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 179.07 170.18 0)
 			(effects
 				(font
@@ -37261,7 +35572,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Fuse"
 			(at 54.61 22.86 0)
 			(effects
 				(font
@@ -37330,7 +35641,52 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Voltage dependent resistor"
+			(at 58.42 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "kicad_builtin_varistor"
+			(at 58.42 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "SUBCKT"
+			(at 58.42 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=A 2=B"
+			(at 58.42 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Params" "threshold=1k"
+			(at 58.42 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "${KICAD7_SYMBOL_DIR}/Simulation_SPICE.sp"
 			(at 58.42 36.83 0)
 			(effects
 				(font
@@ -37369,7 +35725,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "LD1117AV33"
@@ -37398,7 +35753,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "800mA Fixed Low Drop Positive Voltage Regulator, Fixed Output 3.3V, SOT-223"
 			(at 63.5 77.47 0)
 			(effects
 				(font
@@ -37451,12 +35806,11 @@
 			)
 		)
 		(property "Value" "GND|5V"
-			(at 31.242 83.312 0)
+			(at 27.432 87.63 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical"
@@ -37477,13 +35831,21 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
 			(at 30.48 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "PcbText" ""
+			(at 30.48 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -37596,6 +35958,14 @@
 				(hide yes)
 			)
 		)
+		(property "PcbText" ""
+			(at 81.28 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "3305e307-de95-4d42-8ffe-bf89560922d0")
 		)
@@ -37662,7 +36032,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Polarized capacitor, small symbol"
 			(at 72.39 86.36 0)
 			(effects
 				(font
@@ -37737,7 +36107,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
 			(at 102.87 87.63 0)
 			(effects
 				(font
@@ -37806,7 +36176,25 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Generic connector, single row, 01x02, script generated"
+			(at 115.57 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB" "C492401"
+			(at 115.57 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C492401"
 			(at 115.57 72.39 0)
 			(effects
 				(font
@@ -37865,7 +36253,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 168.91 156.21 0)
 			(effects
 				(font
@@ -37874,7 +36262,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 168.91 156.21 0)
 			(effects
 				(font
@@ -37951,7 +36339,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 168.91 170.18 0)
 			(effects
 				(font
@@ -37960,7 +36348,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 168.91 170.18 0)
 			(effects
 				(font
@@ -38038,7 +36426,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.distrelec.ch/en/ceramic-capacitor-100nf-50vdc-0805-rnd-components-rnd-1500805b104j500nt/p/30086635?q=smd+capacitor+&pos=5&origPos=990&origPageSize=50&track=true"
+		(property "Datasheet" "~"
 			(at 54.61 86.36 0)
 			(effects
 				(font
@@ -38047,7 +36435,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Polarized capacitor, small symbol"
 			(at 54.61 86.36 0)
 			(effects
 				(font
@@ -38056,7 +36444,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C28323"
+		(property "JLCPCB" "C45783"
 			(at 54.61 86.36 0)
 			(effects
 				(font
@@ -38065,7 +36453,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C28323"
+		(property "LCSC" "C45783"
 			(at 54.61 86.36 0)
 			(effects
 				(font
@@ -38126,7 +36514,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.distrelec.ch/en/ceramic-capacitor-100nf-50vdc-0805-rnd-components-rnd-1500805b104j500nt/p/30086635?q=smd+capacitor+&pos=5&origPos=990&origPageSize=50&track=true"
+		(property "Datasheet" "~"
 			(at 321.31 81.28 0)
 			(effects
 				(font
@@ -38135,7 +36523,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Polarized capacitor, small symbol"
 			(at 321.31 81.28 0)
 			(effects
 				(font
@@ -38236,6 +36624,14 @@
 				(hide yes)
 			)
 		)
+		(property "PcbText" ""
+			(at 140.97 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "536f520d-0ac1-4be7-8db4-77812585612c")
 		)
@@ -38270,7 +36666,6 @@
 		)
 	)
 	(symbol
-		(lib_name "2604-1104_1")
 		(lib_id "wago-2604-1104:2604-1104")
 		(at 403.86 91.44 0)
 		(unit 1)
@@ -38319,6 +36714,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "PcbText" ""
+			(at 403.86 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -38399,7 +36802,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Special symbol for telling ERC where power comes from"
 			(at 63.5 48.26 0)
 			(effects
 				(font
@@ -38481,6 +36884,14 @@
 				)
 			)
 		)
+		(property "PcbText" ""
+			(at 36.83 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "f0aadf09-b0c1-48d7-80f4-5996f1cb1b10")
 		)
@@ -38547,7 +36958,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Special symbol for telling ERC where power comes from"
 			(at 63.5 22.86 0)
 			(effects
 				(font
@@ -38613,7 +37024,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Special symbol for telling ERC where power comes from"
 			(at 115.57 77.47 0)
 			(effects
 				(font
@@ -38669,7 +37080,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.distrelec.ch/en/high-power-thick-film-smd-resistor-0805-150ohm-330mw-rnd-components-rnd-155hp05w3f1500t5e/p/30111774?q=*&pos=2&origPos=1787&origPageSize=50&track=true"
+		(property "Datasheet" "~"
 			(at 88.9 59.69 0)
 			(effects
 				(font
@@ -38678,7 +37089,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 88.9 59.69 0)
 			(effects
 				(font
@@ -38756,7 +37167,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.distrelec.ch/en/ceramic-capacitor-100nf-50vdc-0805-rnd-components-rnd-1500805b104j500nt/p/30086635?q=smd+capacitor+&pos=5&origPos=990&origPageSize=50&track=true"
+		(property "Datasheet" "~"
 			(at 77.47 86.36 0)
 			(effects
 				(font
@@ -38765,7 +37176,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Polarized capacitor, small symbol"
 			(at 77.47 86.36 0)
 			(effects
 				(font
@@ -38851,7 +37262,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.distrelec.ch/en/smd-led-green-575nm-20ma-2v-140-everlight-electronics-17-21sygc-s530-e1-tr8/p/17531205?q=*&pos=9&origPos=371&origPageSize=50&track=true"
+		(property "Datasheet" "~"
 			(at 96.52 59.69 0)
 			(effects
 				(font
@@ -38860,7 +37271,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Light emitting diode"
 			(at 96.52 59.69 0)
 			(effects
 				(font
@@ -38956,7 +37367,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mounting Hole with connection"
 			(at 208.28 267.97 0)
 			(effects
 				(font
@@ -39023,7 +37434,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mounting Hole with connection"
 			(at 213.36 267.97 0)
 			(effects
 				(font
@@ -39088,7 +37499,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Push button switch, generic, two pins"
 			(at 99.06 162.56 0)
 			(effects
 				(font
@@ -39190,7 +37601,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Push button switch, generic, two pins"
 			(at 99.06 168.91 0)
 			(effects
 				(font
@@ -39282,7 +37693,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "0603WAF1002T5E"
+		(property "Datasheet" "~"
 			(at 29.21 203.2 0)
 			(effects
 				(font
@@ -39291,7 +37702,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 29.21 203.2 0)
 			(effects
 				(font
@@ -39378,7 +37789,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Polarized capacitor, small symbol"
 			(at 29.21 209.55 0)
 			(effects
 				(font
@@ -39456,7 +37867,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 25.4 264.16 0)
 			(effects
 				(font
@@ -39465,7 +37876,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Polarized capacitor, small symbol"
 			(at 25.4 264.16 0)
 			(effects
 				(font
@@ -39543,7 +37954,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Polarized capacitor, small symbol"
 			(at 33.02 264.16 0)
 			(effects
 				(font
@@ -39631,7 +38042,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "DC Darlington Optocoupler, Vce 35V, CTR 600%, SO-4"
 			(at 195.58 161.29 0)
 			(effects
 				(font
@@ -39708,7 +38119,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 180.34 140.97 0)
 			(effects
 				(font
@@ -39717,7 +38128,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 180.34 140.97 0)
 			(effects
 				(font
@@ -39794,7 +38205,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 180.34 127 0)
 			(effects
 				(font
@@ -39803,7 +38214,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 180.34 127 0)
 			(effects
 				(font
@@ -39880,7 +38291,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 168.91 127 0)
 			(effects
 				(font
@@ -39889,7 +38300,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 168.91 127 0)
 			(effects
 				(font
@@ -39966,7 +38377,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 168.91 140.97 0)
 			(effects
 				(font
@@ -39975,7 +38386,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 168.91 140.97 0)
 			(effects
 				(font
@@ -40063,7 +38474,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "DC Darlington Optocoupler, Vce 35V, CTR 600%, SO-4"
 			(at 195.58 132.08 0)
 			(effects
 				(font
@@ -40149,7 +38560,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Generic connector, single row, 01x02, script generated"
 			(at 335.28 223.52 0)
 			(effects
 				(font
@@ -40164,6 +38575,24 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "JLCPCB" "C492401"
+			(at 335.28 223.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C492401"
+			(at 335.28 223.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -40226,7 +38655,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Polarized capacitor, small symbol"
 			(at 207.01 220.98 0)
 			(effects
 				(font
@@ -40313,7 +38742,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Generic connector, single row, 01x03, script generated"
 			(at 361.95 223.52 0)
 			(effects
 				(font
@@ -40324,6 +38753,24 @@
 		)
 		(property "PcbText" "9|16|3"
 			(at 367.03 218.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB" "C49257"
+			(at 361.95 223.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C49257"
+			(at 361.95 223.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -40350,7 +38797,6 @@
 		)
 	)
 	(symbol
-		(lib_name "2604-1104_1")
 		(lib_id "wago-2604-1104:2604-1104")
 		(at 403.86 146.05 0)
 		(unit 1)
@@ -40399,6 +38845,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "PcbText" ""
+			(at 403.86 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -40468,7 +38922,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "0603WAF1002T5E"
+		(property "Datasheet" "~"
 			(at 209.55 144.78 0)
 			(effects
 				(font
@@ -40477,7 +38931,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 209.55 144.78 0)
 			(effects
 				(font
@@ -40603,6 +39057,101 @@
 	)
 	(symbol
 		(lib_id "Device:C_Polarized_Small")
+		(at 165.1 45.72 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "02d2a9dd-fbea-4873-9f78-4b209bf5d00f")
+		(property "Reference" "C36"
+			(at 167.894 44.704 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "22uF"
+			(at 168.148 46.482 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 166.0652 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 165.1 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Polarized capacitor, small symbol"
+			(at 165.1 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB" "C45783"
+			(at 165.1 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C45783"
+			(at 165.1 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PcbText" ""
+			(at 165.1 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ef0ea6a3-4eb7-4f63-b464-a71b24b84b6f")
+		)
+		(pin "2"
+			(uuid "48028d17-45d7-4945-8d6d-c6aae63b6109")
+		)
+		(instances
+			(project "hamodule"
+				(path "/e5217a0c-7f55-4c30-adda-7f8d95709d1b"
+					(reference "C36")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Polarized_Small")
 		(at 29.21 264.16 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -40637,7 +39186,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 29.21 264.16 0)
 			(effects
 				(font
@@ -40646,7 +39195,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Polarized capacitor, small symbol"
 			(at 29.21 264.16 0)
 			(effects
 				(font
@@ -40725,7 +39274,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 205.74 143.51 0)
 			(effects
 				(font
@@ -40734,7 +39283,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 205.74 143.51 0)
 			(effects
 				(font
@@ -40820,7 +39369,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Fuse"
 			(at 158.75 170.18 0)
 			(effects
 				(font
@@ -40879,7 +39428,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.distrelec.ch/en/high-power-thick-film-smd-resistor-0805-150ohm-330mw-rnd-components-rnd-155hp05w3f1500t5e/p/30111774?q=*&pos=2&origPos=1787&origPageSize=50&track=true"
+		(property "Datasheet" "~"
 			(at 285.75 120.65 0)
 			(effects
 				(font
@@ -40888,7 +39437,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 285.75 120.65 0)
 			(effects
 				(font
@@ -40965,7 +39514,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.distrelec.ch/en/high-power-thick-film-smd-resistor-0805-150ohm-330mw-rnd-components-rnd-155hp05w3f1500t5e/p/30111774?q=*&pos=2&origPos=1787&origPageSize=50&track=true"
+		(property "Datasheet" "~"
 			(at 278.13 120.65 0)
 			(effects
 				(font
@@ -40974,7 +39523,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 278.13 120.65 0)
 			(effects
 				(font
@@ -41052,7 +39601,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.distrelec.ch/en/smd-led-green-575nm-20ma-2v-140-everlight-electronics-17-21sygc-s530-e1-tr8/p/17531205?q=*&pos=9&origPos=371&origPageSize=50&track=true"
+		(property "Datasheet" "~"
 			(at 280.67 128.27 0)
 			(effects
 				(font
@@ -41061,7 +39610,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Light emitting diode"
 			(at 280.67 128.27 0)
 			(effects
 				(font
@@ -41148,7 +39697,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "16-bit I/O expander, I2C, interrupts, w pull-ups, SOIC-28"
 			(at 255.27 49.53 0)
 			(effects
 				(font
@@ -41304,7 +39853,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "CL10A226MQ8NRNC"
+		(property "Datasheet" "~"
 			(at 289.56 52.07 0)
 			(effects
 				(font
@@ -41313,7 +39862,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Polarized capacitor, small symbol"
 			(at 289.56 52.07 0)
 			(effects
 				(font
@@ -41406,7 +39955,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Fuse"
 			(at 378.46 143.51 0)
 			(effects
 				(font
@@ -41466,7 +40015,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.distrelec.ch/en/ceramic-capacitor-100nf-50vdc-0805-rnd-components-rnd-1500805b104j500nt/p/30086635?q=smd+capacitor+&pos=5&origPos=990&origPageSize=50&track=true"
+		(property "Datasheet" "~"
 			(at 41.91 86.36 0)
 			(effects
 				(font
@@ -41475,7 +40024,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Polarized capacitor, small symbol"
 			(at 41.91 86.36 0)
 			(effects
 				(font
@@ -41639,7 +40188,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.distrelec.ch/en/smd-led-green-575nm-20ma-2v-140-everlight-electronics-17-21sygc-s530-e1-tr8/p/17531205?q=*&pos=9&origPos=371&origPageSize=50&track=true"
+		(property "Datasheet" "~"
 			(at 293.37 128.27 0)
 			(effects
 				(font
@@ -41648,7 +40197,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Light emitting diode"
 			(at 293.37 128.27 0)
 			(effects
 				(font
@@ -41725,7 +40274,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "0603WAF1002T5E"
+		(property "Datasheet" "~"
 			(at 279.4 222.25 0)
 			(effects
 				(font
@@ -41734,7 +40283,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 279.4 222.25 0)
 			(effects
 				(font
@@ -41818,7 +40367,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "0603WAF1002T5E"
+		(property "Datasheet" "~"
 			(at 209.55 115.57 0)
 			(effects
 				(font
@@ -41827,7 +40376,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 209.55 115.57 0)
 			(effects
 				(font
@@ -41905,7 +40454,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "CL10A226MQ8NRNC"
+		(property "Datasheet" "~"
 			(at 393.7 207.01 0)
 			(effects
 				(font
@@ -41914,7 +40463,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Polarized capacitor, small symbol"
 			(at 393.7 207.01 0)
 			(effects
 				(font
@@ -41999,7 +40548,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.distrelec.ch/en/high-power-thick-film-smd-resistor-0805-150ohm-330mw-rnd-components-rnd-155hp05w3f1500t5e/p/30111774?q=*&pos=2&origPos=1787&origPageSize=50&track=true"
+		(property "Datasheet" "~"
 			(at 88.9 64.77 0)
 			(effects
 				(font
@@ -42008,7 +40557,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 88.9 64.77 0)
 			(effects
 				(font
@@ -42084,7 +40633,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "0603WAF1002T5E"
+		(property "Datasheet" "~"
 			(at 209.55 93.98 0)
 			(effects
 				(font
@@ -42093,7 +40642,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 209.55 93.98 0)
 			(effects
 				(font
@@ -42136,6 +40685,101 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C_Polarized_Small")
+		(at 160.02 45.72 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2c23691e-e1d8-45c1-86ba-c4499facd760")
+		(property "Reference" "C35"
+			(at 153.416 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF"
+			(at 157.48 46.482 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 160.9852 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 160.02 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Polarized capacitor, small symbol"
+			(at 160.02 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB" "C49678"
+			(at 160.02 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C49678"
+			(at 160.02 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PcbText" ""
+			(at 160.02 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d5ad285e-e780-4667-87ec-86ab7d62908a")
+		)
+		(pin "2"
+			(uuid "f696aed6-df67-46d5-acd8-884ebcda415c")
+		)
+		(instances
+			(project "hamodule"
+				(path "/e5217a0c-7f55-4c30-adda-7f8d95709d1b"
+					(reference "C35")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 295.91 120.65 180)
 		(unit 1)
@@ -42170,7 +40814,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.distrelec.ch/en/high-power-thick-film-smd-resistor-0805-150ohm-330mw-rnd-components-rnd-155hp05w3f1500t5e/p/30111774?q=*&pos=2&origPos=1787&origPageSize=50&track=true"
+		(property "Datasheet" "~"
 			(at 295.91 120.65 0)
 			(effects
 				(font
@@ -42179,7 +40823,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 295.91 120.65 0)
 			(effects
 				(font
@@ -42264,7 +40908,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 66.04 125.73 0)
 			(effects
 				(font
@@ -42341,7 +40985,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 170.18 111.76 0)
 			(effects
 				(font
@@ -42350,7 +40994,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 170.18 111.76 0)
 			(effects
 				(font
@@ -42428,7 +41072,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.distrelec.ch/en/smd-led-green-575nm-20ma-2v-140-everlight-electronics-17-21sygc-s530-e1-tr8/p/17531205?q=*&pos=9&origPos=371&origPageSize=50&track=true"
+		(property "Datasheet" "~"
 			(at 283.21 128.27 0)
 			(effects
 				(font
@@ -42437,7 +41081,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Light emitting diode"
 			(at 283.21 128.27 0)
 			(effects
 				(font
@@ -42522,7 +41166,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Fuse"
 			(at 378.46 148.59 0)
 			(effects
 				(font
@@ -42589,7 +41233,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Fuse"
 			(at 378.46 99.06 0)
 			(effects
 				(font
@@ -42803,7 +41447,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Fuse"
 			(at 378.46 93.98 0)
 			(effects
 				(font
@@ -42876,6 +41520,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "PcbText" ""
+			(at 140.97 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -42956,7 +41608,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 66.04 166.37 0)
 			(effects
 				(font
@@ -43033,7 +41685,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.distrelec.ch/en/high-power-thick-film-smd-resistor-0805-150ohm-330mw-rnd-components-rnd-155hp05w3f1500t5e/p/30111774?q=*&pos=2&origPos=1787&origPageSize=50&track=true"
+		(property "Datasheet" "~"
 			(at 283.21 120.65 0)
 			(effects
 				(font
@@ -43042,7 +41694,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 283.21 120.65 0)
 			(effects
 				(font
@@ -43130,7 +41782,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "DC Darlington Optocoupler, Vce 35V, CTR 600%, SO-4"
 			(at 195.58 102.87 0)
 			(effects
 				(font
@@ -43208,7 +41860,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "CL10A226MQ8NRNC"
+		(property "Datasheet" "~"
 			(at 255.27 226.06 0)
 			(effects
 				(font
@@ -43217,7 +41869,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Polarized capacitor, small symbol"
 			(at 255.27 226.06 0)
 			(effects
 				(font
@@ -43301,7 +41953,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "0603WAF1002T5E"
+		(property "Datasheet" "~"
 			(at 209.55 123.19 0)
 			(effects
 				(font
@@ -43310,7 +41962,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 209.55 123.19 0)
 			(effects
 				(font
@@ -43396,7 +42048,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 66.04 123.19 0)
 			(effects
 				(font
@@ -43482,7 +42134,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Fuse"
 			(at 161.29 97.79 0)
 			(effects
 				(font
@@ -43543,7 +42195,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 205.74 153.67 0)
 			(effects
 				(font
@@ -43552,7 +42204,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 205.74 153.67 0)
 			(effects
 				(font
@@ -43595,7 +42247,6 @@
 		)
 	)
 	(symbol
-		(lib_name "AQG12205_1")
 		(lib_id "AQG12205:AQG12205")
 		(at 347.98 109.22 0)
 		(unit 1)
@@ -43779,7 +42430,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 205.74 114.3 0)
 			(effects
 				(font
@@ -43788,7 +42439,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 205.74 114.3 0)
 			(effects
 				(font
@@ -43866,7 +42517,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.distrelec.ch/en/smd-led-green-575nm-20ma-2v-140-everlight-electronics-17-21sygc-s530-e1-tr8/p/17531205?q=*&pos=9&origPos=371&origPageSize=50&track=true"
+		(property "Datasheet" "~"
 			(at 288.29 128.27 0)
 			(effects
 				(font
@@ -43875,7 +42526,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Light emitting diode"
 			(at 288.29 128.27 0)
 			(effects
 				(font
@@ -43960,7 +42611,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Fuse"
 			(at 378.46 88.9 0)
 			(effects
 				(font
@@ -44020,7 +42671,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "CL10A226MQ8NRNC"
+		(property "Datasheet" "~"
 			(at 36.83 264.16 0)
 			(effects
 				(font
@@ -44029,7 +42680,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Polarized capacitor, small symbol"
 			(at 36.83 264.16 0)
 			(effects
 				(font
@@ -44038,7 +42689,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C28323"
+		(property "JLCPCB" "C49678"
 			(at 36.83 264.16 0)
 			(effects
 				(font
@@ -44047,7 +42698,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C28323"
+		(property "LCSC" "C49678"
 			(at 36.83 264.16 0)
 			(effects
 				(font
@@ -44108,7 +42759,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 205.74 172.72 0)
 			(effects
 				(font
@@ -44117,7 +42768,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 205.74 172.72 0)
 			(effects
 				(font
@@ -44193,7 +42844,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "0603WAF1002T5E"
+		(property "Datasheet" "~"
 			(at 170.18 245.11 0)
 			(effects
 				(font
@@ -44202,7 +42853,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 170.18 245.11 0)
 			(effects
 				(font
@@ -44287,7 +42938,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small symbol"
 			(at 74.93 158.75 0)
 			(effects
 				(font
@@ -44364,7 +43015,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 181.61 111.76 0)
 			(effects
 				(font
@@ -44373,7 +43024,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 181.61 111.76 0)
 			(effects
 				(font
@@ -44596,7 +43247,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "0603WAF1002T5E"
+		(property "Datasheet" "~"
 			(at 209.55 86.36 0)
 			(effects
 				(font
@@ -44605,7 +43256,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 209.55 86.36 0)
 			(effects
 				(font
@@ -44648,7 +43299,6 @@
 		)
 	)
 	(symbol
-		(lib_name "PWR_FLAG_1")
 		(lib_id "power:PWR_FLAG")
 		(at 59.69 62.23 0)
 		(unit 1)
@@ -44751,7 +43401,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 205.74 66.04 0)
 			(effects
 				(font
@@ -44760,7 +43410,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 205.74 66.04 0)
 			(effects
 				(font
@@ -44837,7 +43487,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.distrelec.ch/en/high-power-thick-film-smd-resistor-0805-150ohm-330mw-rnd-components-rnd-155hp05w3f1500t5e/p/30111774?q=*&pos=2&origPos=1787&origPageSize=50&track=true"
+		(property "Datasheet" "~"
 			(at 280.67 120.65 0)
 			(effects
 				(font
@@ -44846,7 +43496,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 280.67 120.65 0)
 			(effects
 				(font
@@ -44923,7 +43573,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 170.18 68.58 0)
 			(effects
 				(font
@@ -44932,7 +43582,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 170.18 68.58 0)
 			(effects
 				(font
@@ -44975,7 +43625,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:USB_C_Receptacle_USB2.0")
+		(lib_id "Connector:USB_C_Receptacle_USB2.0_16P")
 		(at 45.72 133.35 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -45019,7 +43669,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "USB 2.0-only 16P Type-C Receptacle connector"
 			(at 45.72 133.35 0)
 			(effects
 				(font
@@ -45150,7 +43800,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 181.61 68.58 0)
 			(effects
 				(font
@@ -45159,7 +43809,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 181.61 68.58 0)
 			(effects
 				(font
@@ -45247,7 +43897,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "test point (alternative probe-style design)"
 			(at 193.04 265.43 0)
 			(effects
 				(font
@@ -45303,7 +43953,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.distrelec.ch/en/high-power-thick-film-smd-resistor-0805-150ohm-330mw-rnd-components-rnd-155hp05w3f1500t5e/p/30111774?q=*&pos=2&origPos=1787&origPageSize=50&track=true"
+		(property "Datasheet" "~"
 			(at 356.87 241.3 0)
 			(effects
 				(font
@@ -45312,7 +43962,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 356.87 241.3 0)
 			(effects
 				(font
@@ -45389,7 +44039,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 170.18 82.55 0)
 			(effects
 				(font
@@ -45398,7 +44048,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 170.18 82.55 0)
 			(effects
 				(font
@@ -45476,7 +44126,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.distrelec.ch/en/ceramic-capacitor-100nf-50vdc-0805-rnd-components-rnd-1500805b104j500nt/p/30086635?q=smd+capacitor+&pos=5&origPos=990&origPageSize=50&track=true"
+		(property "Datasheet" "~"
 			(at 87.63 86.36 0)
 			(effects
 				(font
@@ -45485,7 +44135,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Polarized capacitor, small symbol"
 			(at 87.63 86.36 0)
 			(effects
 				(font
@@ -45494,7 +44144,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C28323"
+		(property "JLCPCB" "C45783"
 			(at 87.63 86.36 0)
 			(effects
 				(font
@@ -45503,7 +44153,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C28323"
+		(property "LCSC" "C45783"
 			(at 87.63 86.36 0)
 			(effects
 				(font
@@ -45572,7 +44222,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Polarized capacitor, small symbol"
 			(at 99.06 36.83 0)
 			(effects
 				(font
@@ -45598,7 +44248,7 @@
 	)
 	(symbol
 		(lib_id "Diode:BAT60A")
-		(at 95.25 118.11 180)
+		(at 86.36 118.11 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -45606,7 +44256,7 @@
 		(dnp no)
 		(uuid "82d2a8da-2553-4d18-8eae-894d06c82be8")
 		(property "Reference" "D3"
-			(at 93.98 120.65 0)
+			(at 85.09 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -45615,7 +44265,7 @@
 			)
 		)
 		(property "Value" "BAT60A"
-			(at 91.44 115.57 0)
+			(at 82.55 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -45624,7 +44274,7 @@
 			)
 		)
 		(property "Footprint" "Diode_SMD:D_SOD-323"
-			(at 95.25 113.665 0)
+			(at 86.36 113.665 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -45633,7 +44283,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.infineon.com/dgdl/Infineon-BAT60ASERIES-DS-v01_01-en.pdf?fileId=db3a304313d846880113def70c9304a9"
-			(at 95.25 118.11 0)
+			(at 86.36 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -45641,8 +44291,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 95.25 118.11 0)
+		(property "Description" "10V 3A High Current Recitifier Schottky Diode, SOD-323"
+			(at 86.36 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -45651,7 +44301,7 @@
 			)
 		)
 		(property "JLCPCB" "C124187"
-			(at 95.25 118.11 0)
+			(at 86.36 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -45660,7 +44310,7 @@
 			)
 		)
 		(property "LCSC" "C124187"
-			(at 95.25 118.11 0)
+			(at 86.36 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -45718,7 +44368,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.distrelec.ch/en/high-power-thick-film-smd-resistor-0805-150ohm-330mw-rnd-components-rnd-155hp05w3f1500t5e/p/30111774?q=*&pos=2&origPos=1787&origPageSize=50&track=true"
+		(property "Datasheet" "~"
 			(at 288.29 120.65 0)
 			(effects
 				(font
@@ -45727,7 +44377,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 288.29 120.65 0)
 			(effects
 				(font
@@ -45803,7 +44453,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "0603WAF1002T5E"
+		(property "Datasheet" "~"
 			(at 209.55 64.77 0)
 			(effects
 				(font
@@ -45812,7 +44462,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 209.55 64.77 0)
 			(effects
 				(font
@@ -45898,7 +44548,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Fuse"
 			(at 161.29 82.55 0)
 			(effects
 				(font
@@ -45966,7 +44616,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Fuse"
 			(at 161.29 68.58 0)
 			(effects
 				(font
@@ -46025,7 +44675,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.distrelec.ch/en/high-power-thick-film-smd-resistor-0805-150ohm-330mw-rnd-components-rnd-155hp05w3f1500t5e/p/30111774?q=*&pos=2&origPos=1787&origPageSize=50&track=true"
+		(property "Datasheet" "~"
 			(at 290.83 120.65 0)
 			(effects
 				(font
@@ -46034,7 +44684,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 290.83 120.65 0)
 			(effects
 				(font
@@ -46265,7 +44915,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Single Power Supply, Single Buffer GATE, CMOS Logic, Level Shifter, SOT-23-5"
 			(at 287.02 218.44 0)
 			(effects
 				(font
@@ -46360,7 +45010,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "2.4 GHz WiFi (802.11 b/g/n) and Bluetooth ® 5 (LE) module Built around ESP32S3 series of SoCs, Xtensa ® dualcore 32bit LX7 microprocessor Flash up to 16 MB, PSRAM up to 8 MB 36 GPIOs, rich set of peripherals Onboard PCB antenna"
 			(at 104.14 231.14 0)
 			(effects
 				(font
@@ -46554,7 +45204,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 181.61 97.79 0)
 			(effects
 				(font
@@ -46563,7 +45213,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 181.61 97.79 0)
 			(effects
 				(font
@@ -46642,7 +45292,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 205.74 95.25 0)
 			(effects
 				(font
@@ -46651,7 +45301,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 205.74 95.25 0)
 			(effects
 				(font
@@ -46729,7 +45379,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.distrelec.ch/en/ceramic-capacitor-100nf-50vdc-0805-rnd-components-rnd-1500805b104j500nt/p/30086635?q=smd+capacitor+&pos=5&origPos=990&origPageSize=50&track=true"
+		(property "Datasheet" "~"
 			(at 311.15 212.09 0)
 			(effects
 				(font
@@ -46738,7 +45388,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Polarized capacitor, small symbol"
 			(at 311.15 212.09 0)
 			(effects
 				(font
@@ -46834,7 +45484,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mounting Hole with connection"
 			(at 218.44 267.97 0)
 			(effects
 				(font
@@ -46890,7 +45540,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 41.91 156.21 0)
 			(effects
 				(font
@@ -46899,7 +45549,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 41.91 156.21 0)
 			(effects
 				(font
@@ -46992,7 +45642,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Fuse"
 			(at 378.46 83.82 0)
 			(effects
 				(font
@@ -47050,7 +45700,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "0603WAF1002T5E"
+		(property "Datasheet" "~"
 			(at 172.72 245.11 0)
 			(effects
 				(font
@@ -47059,7 +45709,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 172.72 245.11 0)
 			(effects
 				(font
@@ -47102,7 +45752,6 @@
 		)
 	)
 	(symbol
-		(lib_name "AQG12205_1")
 		(lib_id "AQG12205:AQG12205")
 		(at 347.98 163.83 0)
 		(unit 1)
@@ -47292,7 +45941,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"
 			(at 245.11 215.9 0)
 			(effects
 				(font
@@ -47368,7 +46017,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "0603WAF1002T5E"
+		(property "Datasheet" "~"
 			(at 209.55 173.99 0)
 			(effects
 				(font
@@ -47377,7 +46026,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 209.55 173.99 0)
 			(effects
 				(font
@@ -47455,7 +46104,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.distrelec.ch/en/smd-led-green-575nm-20ma-2v-140-everlight-electronics-17-21sygc-s530-e1-tr8/p/17531205?q=*&pos=9&origPos=371&origPageSize=50&track=true"
+		(property "Datasheet" "~"
 			(at 278.13 128.27 0)
 			(effects
 				(font
@@ -47464,7 +46113,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Light emitting diode"
 			(at 278.13 128.27 0)
 			(effects
 				(font
@@ -47631,6 +46280,14 @@
 				(hide yes)
 			)
 		)
+		(property "PcbText" ""
+			(at 347.98 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "82210e12-0d9e-40e3-851d-46d8ad570536")
 		)
@@ -47654,7 +46311,7 @@
 	)
 	(symbol
 		(lib_id "Power_Protection:USBLC6-2SC6")
-		(at 88.9 134.62 270)
+		(at 81.28 133.35 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -47662,7 +46319,7 @@
 		(dnp no)
 		(uuid "ae61a140-fa8e-4180-86bd-d145af95ffb6")
 		(property "Reference" "U4"
-			(at 97.79 130.81 0)
+			(at 77.47 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -47671,7 +46328,7 @@
 			)
 		)
 		(property "Value" "USBLC6-2SC6"
-			(at 95.25 147.32 90)
+			(at 96.012 129.032 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -47680,7 +46337,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
-			(at 76.2 134.62 0)
+			(at 81.28 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -47689,7 +46346,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.st.com/resource/en/datasheet/usblc6-2.pdf"
-			(at 97.79 139.7 0)
+			(at 86.36 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -47697,8 +46354,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 88.9 134.62 0)
+		(property "Description" "Very low capacitance ESD protection diode, 2 data-line, SOT-23-6"
+			(at 81.28 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -47707,7 +46364,7 @@
 			)
 		)
 		(property "JLCPCB" "C2827654"
-			(at 88.9 134.62 0)
+			(at 81.28 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -47716,7 +46373,7 @@
 			)
 		)
 		(property "LCSC" "C2827654"
-			(at 88.9 134.62 0)
+			(at 81.28 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -47796,7 +46453,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Polarized capacitor, small symbol"
 			(at 119.38 90.17 0)
 			(effects
 				(font
@@ -47856,7 +46513,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 21.59 264.16 0)
 			(effects
 				(font
@@ -47865,7 +46522,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Polarized capacitor, small symbol"
 			(at 21.59 264.16 0)
 			(effects
 				(font
@@ -47942,7 +46599,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Fuse"
 			(at 158.75 156.21 0)
 			(effects
 				(font
@@ -48002,7 +46659,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.distrelec.ch/en/smd-led-green-575nm-20ma-2v-140-everlight-electronics-17-21sygc-s530-e1-tr8/p/17531205?q=*&pos=9&origPos=371&origPageSize=50&track=true"
+		(property "Datasheet" "~"
 			(at 285.75 128.27 0)
 			(effects
 				(font
@@ -48011,7 +46668,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Light emitting diode"
 			(at 285.75 128.27 0)
 			(effects
 				(font
@@ -48096,7 +46753,25 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Switch, single pole double throw"
+			(at 50.8 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB" "C49257"
+			(at 50.8 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C49257"
 			(at 50.8 62.23 0)
 			(effects
 				(font
@@ -48166,7 +46841,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small symbol"
 			(at 74.93 161.29 0)
 			(effects
 				(font
@@ -48252,7 +46927,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Generic connector, single row, 01x02, script generated"
 			(at 375.92 223.52 0)
 			(effects
 				(font
@@ -48267,6 +46942,24 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "JLCPCB" "C492401"
+			(at 375.92 223.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C492401"
+			(at 375.92 223.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -48320,7 +47013,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.distrelec.ch/en/ceramic-capacitor-100nf-50vdc-0805-rnd-components-rnd-1500805b104j500nt/p/30086635?q=smd+capacitor+&pos=5&origPos=990&origPageSize=50&track=true"
+		(property "Datasheet" "~"
 			(at 314.96 212.09 0)
 			(effects
 				(font
@@ -48329,7 +47022,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Polarized capacitor, small symbol"
 			(at 314.96 212.09 0)
 			(effects
 				(font
@@ -48425,7 +47118,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "5050 RGB LED 4-Pin with integrated IC"
 			(at 302.26 218.44 0)
 			(effects
 				(font
@@ -48509,7 +47202,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mounting Hole with connection"
 			(at 223.52 267.97 0)
 			(effects
 				(font
@@ -48576,7 +47269,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Generic connector, single row, 01x03, script generated"
 			(at 326.39 215.9 0)
 			(effects
 				(font
@@ -48585,8 +47278,26 @@
 				(hide yes)
 			)
 		)
-		(property "PcbText" "9|16|3"
+		(property "PcbText" ""
 			(at 321.31 210.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB" "C49257"
+			(at 326.39 215.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C49257"
+			(at 326.39 215.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -48648,7 +47359,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 251.46 226.06 0)
 			(effects
 				(font
@@ -48657,7 +47368,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Polarized capacitor, small symbol"
 			(at 251.46 226.06 0)
 			(effects
 				(font
@@ -48750,7 +47461,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Fuse"
 			(at 378.46 153.67 0)
 			(effects
 				(font
@@ -48810,7 +47521,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.distrelec.ch/en/ceramic-capacitor-100nf-50vdc-0805-rnd-components-rnd-1500805b104j500nt/p/30086635?q=smd+capacitor+&pos=5&origPos=990&origPageSize=50&track=true"
+		(property "Datasheet" "~"
 			(at 48.26 86.36 0)
 			(effects
 				(font
@@ -48819,7 +47530,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Polarized capacitor, small symbol"
 			(at 48.26 86.36 0)
 			(effects
 				(font
@@ -48828,7 +47539,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C28323"
+		(property "JLCPCB" "C49678"
 			(at 48.26 86.36 0)
 			(effects
 				(font
@@ -48837,7 +47548,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C28323"
+		(property "LCSC" "C49678"
 			(at 48.26 86.36 0)
 			(effects
 				(font
@@ -48897,7 +47608,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.distrelec.ch/en/ceramic-capacitor-100nf-50vdc-0805-rnd-components-rnd-1500805b104j500nt/p/30086635?q=smd+capacitor+&pos=5&origPos=990&origPageSize=50&track=true"
+		(property "Datasheet" "~"
 			(at 82.55 86.36 0)
 			(effects
 				(font
@@ -48906,7 +47617,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Polarized capacitor, small symbol"
 			(at 82.55 86.36 0)
 			(effects
 				(font
@@ -48915,7 +47626,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C28323"
+		(property "JLCPCB" "C49678"
 			(at 82.55 86.36 0)
 			(effects
 				(font
@@ -48924,7 +47635,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C28323"
+		(property "LCSC" "C49678"
 			(at 82.55 86.36 0)
 			(effects
 				(font
@@ -48982,7 +47693,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "0603WAF1002T5E"
+		(property "Datasheet" "~"
 			(at 209.55 152.4 0)
 			(effects
 				(font
@@ -48991,7 +47702,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 209.55 152.4 0)
 			(effects
 				(font
@@ -49076,7 +47787,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small symbol"
 			(at 252.73 29.21 0)
 			(effects
 				(font
@@ -49119,7 +47830,6 @@
 		)
 	)
 	(symbol
-		(lib_name "AQG12205_2")
 		(lib_id "AQG12205:AQG12205")
 		(at 347.98 95.25 0)
 		(unit 1)
@@ -49301,7 +48011,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 170.18 97.79 0)
 			(effects
 				(font
@@ -49310,7 +48020,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 170.18 97.79 0)
 			(effects
 				(font
@@ -49388,7 +48098,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.distrelec.ch/en/smd-led-green-575nm-20ma-2v-140-everlight-electronics-17-21sygc-s530-e1-tr8/p/17531205?q=*&pos=9&origPos=371&origPageSize=50&track=true"
+		(property "Datasheet" "~"
 			(at 364.49 241.3 0)
 			(effects
 				(font
@@ -49397,7 +48107,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Light emitting diode"
 			(at 364.49 241.3 0)
 			(effects
 				(font
@@ -49476,7 +48186,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 205.74 124.46 0)
 			(effects
 				(font
@@ -49485,7 +48195,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 205.74 124.46 0)
 			(effects
 				(font
@@ -49563,7 +48273,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 293.37 52.07 0)
 			(effects
 				(font
@@ -49572,7 +48282,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Polarized capacitor, small symbol"
 			(at 293.37 52.07 0)
 			(effects
 				(font
@@ -49640,7 +48350,7 @@
 				)
 			)
 		)
-		(property "Footprint" "sht40:XDCR_SHT40-AD1B-R2"
+		(property "Footprint" "Sensor_Humidity:Sensirion_DFN-4_1.5x1.5mm_P0.8mm_SHT4x_NoCentralPad"
 			(at 226.06 208.28 0)
 			(effects
 				(font
@@ -49658,7 +48368,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Temperature and humidity module"
 			(at 217.17 213.36 0)
 			(effects
 				(font
@@ -49683,6 +48393,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "PcbText" ""
+			(at 217.17 213.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -49750,7 +48468,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Generic connector, single row, 01x02, script generated"
 			(at 346.71 223.52 0)
 			(effects
 				(font
@@ -49765,6 +48483,24 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "JLCPCB" "C492401"
+			(at 346.71 223.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C492401"
+			(at 346.71 223.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -49825,7 +48561,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Fuse"
 			(at 378.46 138.43 0)
 			(effects
 				(font
@@ -49885,7 +48621,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.distrelec.ch/en/smd-led-green-575nm-20ma-2v-140-everlight-electronics-17-21sygc-s530-e1-tr8/p/17531205?q=*&pos=9&origPos=371&origPageSize=50&track=true"
+		(property "Datasheet" "~"
 			(at 96.52 64.77 0)
 			(effects
 				(font
@@ -49894,7 +48630,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Light emitting diode"
 			(at 96.52 64.77 0)
 			(effects
 				(font
@@ -49980,7 +48716,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.distrelec.ch/en/smd-led-green-575nm-20ma-2v-140-everlight-electronics-17-21sygc-s530-e1-tr8/p/17531205?q=*&pos=9&origPos=371&origPageSize=50&track=true"
+		(property "Datasheet" "~"
 			(at 295.91 128.27 0)
 			(effects
 				(font
@@ -49989,7 +48725,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Light emitting diode"
 			(at 295.91 128.27 0)
 			(effects
 				(font
@@ -50075,7 +48811,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Fuse"
 			(at 161.29 111.76 0)
 			(effects
 				(font
@@ -50145,7 +48881,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "DC Darlington Optocoupler, Vce 35V, CTR 600%, SO-4"
 			(at 195.58 73.66 0)
 			(effects
 				(font
@@ -50222,7 +48958,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.distrelec.ch/en/high-power-thick-film-smd-resistor-0805-150ohm-330mw-rnd-components-rnd-155hp05w3f1500t5e/p/30111774?q=*&pos=2&origPos=1787&origPageSize=50&track=true"
+		(property "Datasheet" "~"
 			(at 293.37 120.65 0)
 			(effects
 				(font
@@ -50231,7 +48967,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 293.37 120.65 0)
 			(effects
 				(font
@@ -50274,7 +49010,6 @@
 		)
 	)
 	(symbol
-		(lib_name "AQG12205_2")
 		(lib_id "AQG12205:AQG12205")
 		(at 347.98 149.86 0)
 		(unit 1)
@@ -50422,7 +49157,6 @@
 		)
 	)
 	(symbol
-		(lib_name "NetTie_2_1")
 		(lib_id "Device:NetTie_2")
 		(at 162.56 31.75 0)
 		(unit 1)
@@ -50534,7 +49268,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.distrelec.ch/en/smd-led-green-575nm-20ma-2v-140-everlight-electronics-17-21sygc-s530-e1-tr8/p/17531205?q=*&pos=9&origPos=371&origPageSize=50&track=true"
+		(property "Datasheet" "~"
 			(at 290.83 128.27 0)
 			(effects
 				(font
@@ -50543,7 +49277,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Light emitting diode"
 			(at 290.83 128.27 0)
 			(effects
 				(font
@@ -50630,7 +49364,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 69.85 166.37 0)
 			(effects
 				(font
@@ -50707,7 +49441,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 181.61 82.55 0)
 			(effects
 				(font
@@ -50716,7 +49450,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 181.61 82.55 0)
 			(effects
 				(font
@@ -50802,7 +49536,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Fuse"
 			(at 158.75 140.97 0)
 			(effects
 				(font
@@ -50870,7 +49604,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Fuse"
 			(at 158.75 127 0)
 			(effects
 				(font
@@ -50931,7 +49665,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 205.74 85.09 0)
 			(effects
 				(font
@@ -50940,7 +49674,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 205.74 85.09 0)
 			(effects
 				(font
@@ -51027,7 +49761,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Darlington Transistor Arrays, SOIC18/DIP18"
 			(at 309.88 93.98 0)
 			(effects
 				(font
