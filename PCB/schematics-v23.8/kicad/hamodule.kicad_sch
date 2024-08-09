@@ -9649,34 +9649,22 @@
 		(uuid "2087502e-6e8d-4546-885c-296a32ebc8dc")
 	)
 	(junction
-		(at 209.55 156.21)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "21afd8f2-a4a5-44fe-a891-0a2ebfe49595")
-	)
-	(junction
 		(at 314.96 208.28)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "23825915-ac25-4fc6-bbc3-fb08f7b1981f")
 	)
 	(junction
-		(at 209.55 127)
+		(at 209.55 111.76)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "23f59f25-43e6-4353-9369-f781a8353da7")
+		(uuid "24d5d81c-e0f7-46a9-a1cf-b1f2bea98028")
 	)
 	(junction
 		(at 21.59 261.62)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2bb10364-f1c0-43ad-ab2f-858e4f7f1695")
-	)
-	(junction
-		(at 209.55 111.76)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "2c2a9fa3-7b7e-4382-b10f-6f79bcc4e7dc")
 	)
 	(junction
 		(at 119.38 77.47)
@@ -9799,12 +9787,6 @@
 		(uuid "4e86eed9-5b7a-49b2-85ee-d31fa30a99ea")
 	)
 	(junction
-		(at 209.55 140.97)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "5205cdab-5a46-4bfb-b7ab-93362a43dc37")
-	)
-	(junction
 		(at 283.21 135.89)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -9829,6 +9811,12 @@
 		(uuid "5bcf0b5c-8337-4bd4-82ba-427f4a69106f")
 	)
 	(junction
+		(at 209.55 140.97)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "60c6be60-029f-431b-9852-7245ed3aef1f")
+	)
+	(junction
 		(at 58.42 48.26)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -9851,12 +9839,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "66959760-4558-40e2-9636-ba97ac03edde")
-	)
-	(junction
-		(at 209.55 97.79)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "674c75bd-f3d7-4f67-9bf8-31647ca441ff")
 	)
 	(junction
 		(at 217.17 226.06)
@@ -9913,6 +9895,18 @@
 		(uuid "74d75225-d020-479a-b599-83b224bfce58")
 	)
 	(junction
+		(at 209.55 170.18)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "76caafb7-0d29-4920-a3a7-9661563adde7")
+	)
+	(junction
+		(at 209.55 156.21)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7c56e4be-c12d-40dc-b036-f12a295e2dad")
+	)
+	(junction
 		(at 81.28 118.11)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -9935,6 +9929,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7f8042b1-a015-4f3a-a1e6-7cbe5421203d")
+	)
+	(junction
+		(at 209.55 97.79)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7fbb3f27-7eb5-45c5-b899-ab9f4c0aa55a")
 	)
 	(junction
 		(at 25.4 261.62)
@@ -10009,6 +10009,12 @@
 		(uuid "a49418dc-3829-430a-a552-9e4bcbca1823")
 	)
 	(junction
+		(at 209.55 127)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a5745304-18c5-4899-83da-f3bfe99f3e5a")
+	)
+	(junction
 		(at 151.13 156.21)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -10039,12 +10045,6 @@
 		(uuid "b0e4a262-9e3b-4292-9783-db87ff51a7eb")
 	)
 	(junction
-		(at 209.55 170.18)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b294b784-14fb-4268-afb9-4f8a82163f35")
-	)
-	(junction
 		(at 205.74 68.58)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -10061,6 +10061,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b678c8bb-ff00-4cb7-b6d8-3c45ff3c2c94")
+	)
+	(junction
+		(at 278.13 135.89)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ba8ec3c6-25f7-4839-a7d0-efd6040827b2")
 	)
 	(junction
 		(at 63.5 92.71)
@@ -10740,16 +10746,6 @@
 	)
 	(wire
 		(pts
-			(xy 280.67 135.89) (xy 283.21 135.89)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0e935c2d-bf35-4e04-9ad1-b070cab7bddd")
-	)
-	(wire
-		(pts
 			(xy 152.4 127) (xy 154.94 127)
 		)
 		(stroke
@@ -10980,6 +10976,16 @@
 	)
 	(wire
 		(pts
+			(xy 283.21 135.89) (xy 285.75 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1e2102bd-524d-403c-9272-dca685d8df27")
+	)
+	(wire
+		(pts
 			(xy 115.57 77.47) (xy 119.38 77.47)
 		)
 		(stroke
@@ -11087,16 +11093,6 @@
 			(type default)
 		)
 		(uuid "235daada-0163-4d4d-917d-eb4f84e12b73")
-	)
-	(wire
-		(pts
-			(xy 209.55 140.97) (xy 240.03 140.97)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "237df47e-f545-444e-bd68-93e2a881d9ef")
 	)
 	(wire
 		(pts
@@ -11227,16 +11223,6 @@
 			(type default)
 		)
 		(uuid "29f49c36-feef-4df5-9e94-480de8378ad7")
-	)
-	(wire
-		(pts
-			(xy 209.55 156.21) (xy 237.49 156.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2ac9f0e4-9614-42c7-b8d7-23f90fdf3115")
 	)
 	(wire
 		(pts
@@ -11440,13 +11426,13 @@
 	)
 	(wire
 		(pts
-			(xy 283.21 135.89) (xy 285.75 135.89)
+			(xy 217.17 127) (xy 242.57 127)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "39d17215-ba58-4819-9a0e-b939a8f4f641")
+		(uuid "39e91d6a-313e-4031-9b6d-06eec49ee076")
 	)
 	(wire
 		(pts
@@ -11630,16 +11616,6 @@
 	)
 	(wire
 		(pts
-			(xy 252.73 68.58) (xy 209.55 68.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "44354917-a953-44f2-bf9e-72b6c605a934")
-	)
-	(wire
-		(pts
 			(xy 311.15 227.33) (xy 311.15 215.9)
 		)
 		(stroke
@@ -11790,6 +11766,16 @@
 	)
 	(wire
 		(pts
+			(xy 217.17 82.55) (xy 250.19 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4d844322-d597-49d1-99be-fe2306621093")
+	)
+	(wire
+		(pts
 			(xy 152.4 80.01) (xy 151.13 80.01)
 		)
 		(stroke
@@ -11827,16 +11813,6 @@
 			(type default)
 		)
 		(uuid "4f18468a-39a1-461f-aa39-9027337f12f4")
-	)
-	(wire
-		(pts
-			(xy 209.55 170.18) (xy 234.95 170.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4ff25cf0-fe5f-482f-9cc3-ac38c1dc5552")
 	)
 	(wire
 		(pts
@@ -11880,6 +11856,16 @@
 	)
 	(wire
 		(pts
+			(xy 217.17 97.79) (xy 247.65 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5227a566-fa43-40db-ab01-0199b9d4638e")
+	)
+	(wire
+		(pts
 			(xy 288.29 135.89) (xy 290.83 135.89)
 		)
 		(stroke
@@ -11917,16 +11903,6 @@
 			(type default)
 		)
 		(uuid "5733b9fa-9326-4d5f-9f3b-8e927ec4c78b")
-	)
-	(wire
-		(pts
-			(xy 245.11 111.76) (xy 209.55 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "575a178b-afcc-4033-bba7-0809c4efd0d4")
 	)
 	(wire
 		(pts
@@ -12017,6 +11993,16 @@
 			(type default)
 		)
 		(uuid "5cdd041d-dd8b-46f4-a193-4d484d6bd65f")
+	)
+	(wire
+		(pts
+			(xy 217.17 68.58) (xy 252.73 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5d0ade1b-9ac9-4771-92b1-d33f485f959c")
 	)
 	(wire
 		(pts
@@ -12120,6 +12106,16 @@
 	)
 	(wire
 		(pts
+			(xy 217.17 156.21) (xy 237.49 156.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "606d7db1-01d3-413c-b4e8-d18e6bd64fda")
+	)
+	(wire
+		(pts
 			(xy 82.55 77.47) (xy 82.55 83.82)
 		)
 		(stroke
@@ -12157,16 +12153,6 @@
 			(type default)
 		)
 		(uuid "6450c088-b728-4dde-8e32-2467c752fc2c")
-	)
-	(wire
-		(pts
-			(xy 209.55 127) (xy 242.57 127)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "64a02d5e-4082-4ed8-82d2-5dcd1ad37c25")
 	)
 	(wire
 		(pts
@@ -12287,6 +12273,16 @@
 			(type default)
 		)
 		(uuid "6a3d1a1b-5acf-4be1-8fb3-ceaea6ee8951")
+	)
+	(wire
+		(pts
+			(xy 280.67 135.89) (xy 283.21 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6b0a5f1a-4bee-4b3b-ae9d-861936361ab8")
 	)
 	(wire
 		(pts
@@ -12447,16 +12443,6 @@
 			(type default)
 		)
 		(uuid "70ddb22a-b421-465f-bd47-41b1b9b34492")
-	)
-	(wire
-		(pts
-			(xy 278.13 135.89) (xy 280.67 135.89)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "71c8b647-b409-4aa3-b309-32a3ea25492e")
 	)
 	(wire
 		(pts
@@ -13130,6 +13116,16 @@
 	)
 	(wire
 		(pts
+			(xy 278.13 135.89) (xy 280.67 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a2df852f-ddc4-43dd-a74e-1c1fbffa7871")
+	)
+	(wire
+		(pts
 			(xy 290.83 101.6) (xy 299.72 101.6)
 		)
 		(stroke
@@ -13330,13 +13326,13 @@
 	)
 	(wire
 		(pts
-			(xy 247.65 97.79) (xy 209.55 97.79)
+			(xy 217.17 170.18) (xy 234.95 170.18)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "ac48ef48-5d31-4d0d-88f6-1616a88193b8")
+		(uuid "ac670ce4-6196-421e-822d-5a6a32215f15")
 	)
 	(wire
 		(pts
@@ -13550,7 +13546,7 @@
 	)
 	(wire
 		(pts
-			(xy 285.75 135.89) (xy 285.75 137.16)
+			(xy 278.13 135.89) (xy 278.13 137.16)
 		)
 		(stroke
 			(width 0)
@@ -13647,6 +13643,16 @@
 			(type default)
 		)
 		(uuid "bb4f28fb-5341-4d3a-b98f-83eb5004e317")
+	)
+	(wire
+		(pts
+			(xy 217.17 111.76) (xy 245.11 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bbcd4219-e70a-40e0-8238-93acf0d310a9")
 	)
 	(wire
 		(pts
@@ -13827,16 +13833,6 @@
 			(type default)
 		)
 		(uuid "cbdf2e17-920e-433e-8cff-e7bce9c73025")
-	)
-	(wire
-		(pts
-			(xy 250.19 82.55) (xy 209.55 82.55)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cbee62cd-ed01-4f67-a32c-0ae2582fcb6f")
 	)
 	(wire
 		(pts
@@ -14787,6 +14783,16 @@
 			(type default)
 		)
 		(uuid "fca12949-3718-40c0-b65c-aee9353d1d2f")
+	)
+	(wire
+		(pts
+			(xy 217.17 140.97) (xy 240.03 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ff31b051-eab3-427b-a9f0-d571ad3aa13f")
 	)
 	(wire
 		(pts
@@ -31259,6 +31265,17 @@
 		)
 		(uuid "ace6d91c-45a0-491c-bfc6-9062634f5238")
 	)
+	(text "Resistors act as pulldown\nMax output of MCP is 25mA per pin\nMax output MCP is 125mA per chip\nULN2008 requires very little current (2mA)\nUse low current LED! (Ex 5mA)\n\n"
+		(exclude_from_sim no)
+		(at 280.162 143.002 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b6904942-89d0-4e64-ba4c-9f80b5e72681")
+	)
 	(text "Connectors & Peripherals"
 		(exclude_from_sim no)
 		(at 299.72 187.96 0)
@@ -33715,7 +33732,7 @@
 	)
 	(global_label "GND"
 		(shape input)
-		(at 285.75 137.16 270)
+		(at 278.13 137.16 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -33725,7 +33742,7 @@
 		)
 		(uuid "d02c1113-d63f-482c-b069-6dd1862366af")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 233.68 361.95 0)
+			(at 226.06 361.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -39411,7 +39428,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "100Ω"
+		(property "Value" "660Ω"
 			(at 285.75 120.65 90)
 			(effects
 				(font
@@ -39446,7 +39463,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C22775"
+		(property "JLCPCB" "C23193"
 			(at 285.75 120.65 0)
 			(effects
 				(font
@@ -39455,7 +39472,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C22775"
+		(property "LCSC" "C23193"
 			(at 285.75 120.65 0)
 			(effects
 				(font
@@ -39497,7 +39514,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "100Ω"
+		(property "Value" "660Ω"
 			(at 278.13 120.65 90)
 			(effects
 				(font
@@ -39532,7 +39549,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C22775"
+		(property "JLCPCB" "C23193"
 			(at 278.13 120.65 0)
 			(effects
 				(font
@@ -39541,7 +39558,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C22775"
+		(property "LCSC" "C23193"
 			(at 278.13 120.65 0)
 			(effects
 				(font
@@ -39619,7 +39636,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C72038"
+		(property "JLCPCB" "C7496819"
 			(at 280.67 128.27 0)
 			(effects
 				(font
@@ -39628,7 +39645,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C72038"
+		(property "LCSC" "C7496819"
 			(at 280.67 128.27 0)
 			(effects
 				(font
@@ -39647,6 +39664,99 @@
 			(project "hamodule"
 				(path "/e5217a0c-7f55-4c30-adda-7f8d95709d1b"
 					(reference "D9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 213.36 68.58 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "17d43ec6-10ba-4280-a957-5a2ca2880603")
+		(property "Reference" "R46"
+			(at 213.36 68.58 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "33Ω"
+			(at 213.614 71.12 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 213.36 70.358 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 213.36 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 213.36 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB" "C23140"
+			(at 213.36 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C23140"
+			(at 213.36 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PcbText" ""
+			(at 213.36 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d6cd300b-1203-4108-82d5-ecb77ae0cd44")
+		)
+		(pin "2"
+			(uuid "08d0dc32-b856-40db-914e-d52ccedb0376")
+		)
+		(instances
+			(project "hamodule"
+				(path "/e5217a0c-7f55-4c30-adda-7f8d95709d1b"
+					(reference "R46")
 					(unit 1)
 				)
 			)
@@ -40206,7 +40316,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C72038"
+		(property "JLCPCB" "C7496819"
 			(at 293.37 128.27 0)
 			(effects
 				(font
@@ -40215,7 +40325,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C72038"
+		(property "LCSC" "C7496819"
 			(at 293.37 128.27 0)
 			(effects
 				(font
@@ -40797,7 +40907,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "100Ω"
+		(property "Value" "660Ω"
 			(at 295.91 120.65 90)
 			(effects
 				(font
@@ -40832,7 +40942,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C22775"
+		(property "JLCPCB" "C23193"
 			(at 295.91 120.65 0)
 			(effects
 				(font
@@ -40841,7 +40951,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C22775"
+		(property "LCSC" "C23193"
 			(at 295.91 120.65 0)
 			(effects
 				(font
@@ -41090,7 +41200,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C72038"
+		(property "JLCPCB" "C7496819"
 			(at 283.21 128.27 0)
 			(effects
 				(font
@@ -41099,7 +41209,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C72038"
+		(property "LCSC" "C7496819"
 			(at 283.21 128.27 0)
 			(effects
 				(font
@@ -41668,7 +41778,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "100Ω"
+		(property "Value" "660Ω"
 			(at 283.21 120.65 90)
 			(effects
 				(font
@@ -41703,7 +41813,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C22775"
+		(property "JLCPCB" "C23193"
 			(at 283.21 120.65 0)
 			(effects
 				(font
@@ -41712,7 +41822,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C22775"
+		(property "LCSC" "C23193"
 			(at 283.21 120.65 0)
 			(effects
 				(font
@@ -41819,6 +41929,99 @@
 			(project "hamodule"
 				(path "/e5217a0c-7f55-4c30-adda-7f8d95709d1b"
 					(reference "U8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 213.36 156.21 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "51179269-30d8-4806-8ebb-15936560f73b")
+		(property "Reference" "R52"
+			(at 213.36 156.21 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "33Ω"
+			(at 213.614 158.75 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 213.36 157.988 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 213.36 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 213.36 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB" "C23140"
+			(at 213.36 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C23140"
+			(at 213.36 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PcbText" ""
+			(at 213.36 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c460fecd-2d64-4fd8-9857-c72414437a08")
+		)
+		(pin "2"
+			(uuid "c60ec2f8-e10b-4764-bc0d-d088dd587fd4")
+		)
+		(instances
+			(project "hamodule"
+				(path "/e5217a0c-7f55-4c30-adda-7f8d95709d1b"
+					(reference "R52")
 					(unit 1)
 				)
 			)
@@ -42535,7 +42738,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C72038"
+		(property "JLCPCB" "C7496819"
 			(at 288.29 128.27 0)
 			(effects
 				(font
@@ -42544,13 +42747,21 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C72038"
+		(property "LCSC" "C7496819"
 			(at 288.29 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "PcbText" ""
+			(at 288.29 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -43470,7 +43681,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "100Ω"
+		(property "Value" "660Ω"
 			(at 280.67 120.65 90)
 			(effects
 				(font
@@ -43505,7 +43716,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C22775"
+		(property "JLCPCB" "C23193"
 			(at 280.67 120.65 0)
 			(effects
 				(font
@@ -43514,7 +43725,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C22775"
+		(property "LCSC" "C23193"
 			(at 280.67 120.65 0)
 			(effects
 				(font
@@ -44091,6 +44302,99 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 213.36 82.55 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7b807335-7ac1-41db-9205-f53e57a5c02c")
+		(property "Reference" "R47"
+			(at 213.36 82.55 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "33Ω"
+			(at 213.36 80.264 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 213.36 84.328 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 213.36 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 213.36 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB" "C23140"
+			(at 213.36 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C23140"
+			(at 213.36 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PcbText" ""
+			(at 213.36 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "fa373457-c259-4ce1-ad7f-f2ad796c6af9")
+		)
+		(pin "2"
+			(uuid "d791b2fc-c331-4f4e-bee8-4da153004e66")
+		)
+		(instances
+			(project "hamodule"
+				(path "/e5217a0c-7f55-4c30-adda-7f8d95709d1b"
+					(reference "R47")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Polarized_Small")
 		(at 87.63 86.36 0)
 		(unit 1)
@@ -44351,7 +44655,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "100Ω"
+		(property "Value" "660Ω"
 			(at 288.29 120.65 90)
 			(effects
 				(font
@@ -44386,7 +44690,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C22775"
+		(property "JLCPCB" "C23193"
 			(at 288.29 120.65 0)
 			(effects
 				(font
@@ -44395,7 +44699,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C22775"
+		(property "LCSC" "C23193"
 			(at 288.29 120.65 0)
 			(effects
 				(font
@@ -44499,6 +44803,99 @@
 			(project "hamodule"
 				(path "/e5217a0c-7f55-4c30-adda-7f8d95709d1b"
 					(reference "R35")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 213.36 127 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "871f3fd4-d66e-4127-a72c-ed4123a8e8e7")
+		(property "Reference" "R50"
+			(at 213.36 127 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "33Ω"
+			(at 213.614 129.54 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 213.36 128.778 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 213.36 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 213.36 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB" "C23140"
+			(at 213.36 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C23140"
+			(at 213.36 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PcbText" ""
+			(at 213.36 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ff4daf09-16a8-4842-94aa-2a57058a3d88")
+		)
+		(pin "2"
+			(uuid "26f0939f-4bd4-4e30-a542-bbe0fc0c0a79")
+		)
+		(instances
+			(project "hamodule"
+				(path "/e5217a0c-7f55-4c30-adda-7f8d95709d1b"
+					(reference "R50")
 					(unit 1)
 				)
 			)
@@ -44658,7 +45055,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "100Ω"
+		(property "Value" "660Ω"
 			(at 290.83 120.65 90)
 			(effects
 				(font
@@ -44693,7 +45090,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C22775"
+		(property "JLCPCB" "C23193"
 			(at 290.83 120.65 0)
 			(effects
 				(font
@@ -44702,7 +45099,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C22775"
+		(property "LCSC" "C23193"
 			(at 290.83 120.65 0)
 			(effects
 				(font
@@ -46122,7 +46519,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C72038"
+		(property "JLCPCB" "C7496819"
 			(at 278.13 128.27 0)
 			(effects
 				(font
@@ -46131,7 +46528,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C72038"
+		(property "LCSC" "C7496819"
 			(at 278.13 128.27 0)
 			(effects
 				(font
@@ -46677,7 +47074,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C72038"
+		(property "JLCPCB" "C7496819"
 			(at 285.75 128.27 0)
 			(effects
 				(font
@@ -46686,7 +47083,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C72038"
+		(property "LCSC" "C7496819"
 			(at 285.75 128.27 0)
 			(effects
 				(font
@@ -46705,6 +47102,99 @@
 			(project "hamodule"
 				(path "/e5217a0c-7f55-4c30-adda-7f8d95709d1b"
 					(reference "D11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 213.36 170.18 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b9e330d4-8632-4d79-b3ae-6030a6e75a4e")
+		(property "Reference" "R53"
+			(at 213.36 170.18 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "33Ω"
+			(at 213.36 168.148 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 213.36 171.958 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 213.36 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 213.36 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB" "C23140"
+			(at 213.36 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C23140"
+			(at 213.36 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PcbText" ""
+			(at 213.36 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "eaa22a4b-2a88-455d-a5d6-617439d5a37f")
+		)
+		(pin "2"
+			(uuid "b9b54ee8-0398-4d41-8a01-f127e8ea819e")
+		)
+		(instances
+			(project "hamodule"
+				(path "/e5217a0c-7f55-4c30-adda-7f8d95709d1b"
+					(reference "R53")
 					(unit 1)
 				)
 			)
@@ -47067,6 +47557,99 @@
 			(project "hamodule"
 				(path "/e5217a0c-7f55-4c30-adda-7f8d95709d1b"
 					(reference "C25")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 213.36 111.76 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c5b35a90-4364-4b5c-a556-3b1f8bccd46b")
+		(property "Reference" "R49"
+			(at 213.36 111.76 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "33Ω"
+			(at 213.36 109.474 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 213.36 113.538 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 213.36 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 213.36 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB" "C23140"
+			(at 213.36 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C23140"
+			(at 213.36 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PcbText" ""
+			(at 213.36 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "77001b2d-4ee1-4595-b87b-001a94e3f22b")
+		)
+		(pin "2"
+			(uuid "3ffcb331-9695-4c1b-aa80-efbeaec8bd80")
+		)
+		(instances
+			(project "hamodule"
+				(path "/e5217a0c-7f55-4c30-adda-7f8d95709d1b"
+					(reference "R49")
 					(unit 1)
 				)
 			)
@@ -48734,7 +49317,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C72038"
+		(property "JLCPCB" "C7496819"
 			(at 295.91 128.27 0)
 			(effects
 				(font
@@ -48743,7 +49326,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C72038"
+		(property "LCSC" "C7496819"
 			(at 295.91 128.27 0)
 			(effects
 				(font
@@ -48941,7 +49524,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "100Ω"
+		(property "Value" "660Ω"
 			(at 293.37 120.65 90)
 			(effects
 				(font
@@ -48976,7 +49559,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C22775"
+		(property "JLCPCB" "C23193"
 			(at 293.37 120.65 0)
 			(effects
 				(font
@@ -48985,7 +49568,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C22775"
+		(property "LCSC" "C23193"
 			(at 293.37 120.65 0)
 			(effects
 				(font
@@ -49233,6 +49816,99 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 213.36 97.79 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "eba2173c-4d50-4572-9729-fa281d441b16")
+		(property "Reference" "R48"
+			(at 213.36 97.79 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "33Ω"
+			(at 213.614 100.33 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 213.36 99.568 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 213.36 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 213.36 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB" "C23140"
+			(at 213.36 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C23140"
+			(at 213.36 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PcbText" ""
+			(at 213.36 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "021cca38-1500-4a38-b3bf-3a197b6abf71")
+		)
+		(pin "2"
+			(uuid "4681dca9-9d9d-4225-8c88-4efc9fbfb0e7")
+		)
+		(instances
+			(project "hamodule"
+				(path "/e5217a0c-7f55-4c30-adda-7f8d95709d1b"
+					(reference "R48")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED")
 		(at 290.83 128.27 90)
 		(unit 1)
@@ -49286,7 +49962,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C72038"
+		(property "JLCPCB" "C7496819"
 			(at 290.83 128.27 0)
 			(effects
 				(font
@@ -49295,7 +49971,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C72038"
+		(property "LCSC" "C7496819"
 			(at 290.83 128.27 0)
 			(effects
 				(font
@@ -49314,6 +49990,99 @@
 			(project "hamodule"
 				(path "/e5217a0c-7f55-4c30-adda-7f8d95709d1b"
 					(reference "D6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 213.36 140.97 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f10a52c7-3f5c-4769-939b-dd6268f017d5")
+		(property "Reference" "R51"
+			(at 213.36 140.97 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "33Ω"
+			(at 213.36 138.684 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 213.36 142.748 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 213.36 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 213.36 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB" "C23140"
+			(at 213.36 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C23140"
+			(at 213.36 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PcbText" ""
+			(at 213.36 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e367ccc5-762b-4f21-aee4-c4db412c0b5a")
+		)
+		(pin "2"
+			(uuid "87c5a4c8-eea2-450e-ab1d-a0552e0d18d1")
+		)
+		(instances
+			(project "hamodule"
+				(path "/e5217a0c-7f55-4c30-adda-7f8d95709d1b"
+					(reference "R51")
 					(unit 1)
 				)
 			)
@@ -49742,7 +50511,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SO:SSOP-18_4.4x6.5mm_P0.65mm"
+		(property "Footprint" "Package_SO:SOP-18_7x12.5mm_P1.27mm"
 			(at 311.15 110.49 0)
 			(effects
 				(font
@@ -49786,6 +50555,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "PcbText" ""
+			(at 309.88 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
