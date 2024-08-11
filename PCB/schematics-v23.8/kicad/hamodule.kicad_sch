@@ -9553,6 +9553,12 @@
 		)
 	)
 	(junction
+		(at 82.55 92.71)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "02ee02dd-b46c-4a37-8347-df55ebe8ab0b")
+	)
+	(junction
 		(at 290.83 135.89)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -9577,7 +9583,7 @@
 		(uuid "06e6fe50-59e4-4ee7-965e-9c46e4494b2a")
 	)
 	(junction
-		(at 53.34 77.47)
+		(at 50.8 77.47)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "08ebce20-fc49-45a8-b9f8-b7122a40b3d4")
@@ -9631,6 +9637,12 @@
 		(uuid "16bae610-5502-4b01-a9c0-d518c530ccf4")
 	)
 	(junction
+		(at 95.25 92.71)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "17da7ee8-b1cc-40da-bf7f-83375e8ba2d1")
+	)
+	(junction
 		(at 209.55 68.58)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -9641,12 +9653,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "1ca671d6-0100-4543-999d-72c9d622f234")
-	)
-	(junction
-		(at 86.36 92.71)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "1eed1ad1-cc67-46e7-9f2e-fe6b0ddcc643")
 	)
 	(junction
 		(at 205.74 111.76)
@@ -9665,6 +9671,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2bb10364-f1c0-43ad-ab2f-858e4f7f1695")
+	)
+	(junction
+		(at 82.55 77.47)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2dea6586-ba90-4af3-9014-f53b10525a25")
 	)
 	(junction
 		(at 119.38 77.47)
@@ -9715,7 +9727,7 @@
 		(uuid "3d87925a-17fc-4508-a3f0-1aa050f4773f")
 	)
 	(junction
-		(at 72.39 77.47)
+		(at 69.85 77.47)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "414b44a2-42f0-4f86-907f-f6f3c7c53da0")
@@ -9775,7 +9787,7 @@
 		(uuid "52673e62-8ef8-4155-a981-c0d548ecfa54")
 	)
 	(junction
-		(at 39.37 92.71)
+		(at 31.75 92.71)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "53a74f32-bf6d-4ec6-bc38-7687befa5eb1")
@@ -9799,7 +9811,7 @@
 		(uuid "5bcf0b5c-8337-4bd4-82ba-427f4a69106f")
 	)
 	(junction
-		(at 78.74 77.47)
+		(at 76.2 77.47)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5f0b63fa-422f-41cf-8ae4-e98e54fceb12")
@@ -9823,6 +9835,12 @@
 		(uuid "653b1372-6865-4945-8d84-4009696a6cd6")
 	)
 	(junction
+		(at 88.9 92.71)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "68265ec8-ef09-4574-bc57-7981ef97eec5")
+	)
+	(junction
 		(at 217.17 226.06)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -9841,7 +9859,7 @@
 		(uuid "6b9ec9a8-e3be-40c2-815f-4f941ce8f0ec")
 	)
 	(junction
-		(at 45.72 77.47)
+		(at 38.1 77.47)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6cc9066b-b756-42bb-ae20-92b61378a62a")
@@ -9925,7 +9943,13 @@
 		(uuid "88445986-5692-499b-9ea4-6abe1a6197f4")
 	)
 	(junction
-		(at 39.37 77.47)
+		(at 95.25 77.47)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8aeefdad-dcde-4c13-869d-d21c70f8667a")
+	)
+	(junction
+		(at 31.75 77.47)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8b178b9c-e4a5-4efd-94cc-2e0afd466ec0")
@@ -9949,7 +9973,7 @@
 		(uuid "97268e42-8f61-46f1-a385-e3106277f080")
 	)
 	(junction
-		(at 53.34 92.71)
+		(at 50.8 92.71)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9786d42f-df7b-4e11-91c0-0158668495f4")
@@ -9961,22 +9985,10 @@
 		(uuid "9855793e-bab6-479d-9bd8-78864aed3906")
 	)
 	(junction
-		(at 93.98 77.47)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9a9aae99-7c5d-4eeb-9729-060ee33a6589")
-	)
-	(junction
-		(at 45.72 92.71)
+		(at 38.1 92.71)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9c9c5a8b-34a0-44c1-80e4-4bb01f46cf6e")
-	)
-	(junction
-		(at 86.36 77.47)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9e5951d3-5a4a-4b23-9101-133bd447c491")
 	)
 	(junction
 		(at 209.55 177.8)
@@ -10063,7 +10075,7 @@
 		(uuid "ba8ec3c6-25f7-4839-a7d0-efd6040827b2")
 	)
 	(junction
-		(at 63.5 92.71)
+		(at 60.96 92.71)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "bbccfd7a-0fa2-4d80-8f43-fa6341f2cd15")
@@ -10081,7 +10093,7 @@
 		(uuid "bc597d9e-b530-43a8-a10b-f2aa121e7443")
 	)
 	(junction
-		(at 72.39 92.71)
+		(at 69.85 92.71)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "bd7197b1-88df-480c-a5fd-2d28481f5b0f")
@@ -10121,6 +10133,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c3492e6f-d45c-4768-b219-cacbff0067cd")
+	)
+	(junction
+		(at 88.9 77.47)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c5d59d17-f9d9-4ad9-8cb7-f59606b3250c")
 	)
 	(junction
 		(at 29.21 261.62)
@@ -10183,7 +10201,13 @@
 		(uuid "d99b4f75-960a-4c27-ac4c-1a2c4c6ace68")
 	)
 	(junction
-		(at 78.74 92.71)
+		(at 43.18 77.47)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "db4defe6-a0ab-4830-be0d-1575ea43bb38")
+	)
+	(junction
+		(at 76.2 92.71)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "db9898df-e784-415d-a0c6-db58f953d6a9")
@@ -10211,6 +10235,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e58fc7f4-f700-464e-8eac-de5ec4afeb92")
+	)
+	(junction
+		(at 43.18 92.71)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e6c0e0d6-c329-4161-878c-d775b1b5ce2d")
 	)
 	(junction
 		(at 285.75 135.89)
@@ -10259,12 +10289,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "fa1b61c5-6a5b-4c66-b361-8655796089f9")
-	)
-	(junction
-		(at 93.98 92.71)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "fe3fc63b-80f4-40d0-b094-e757f60c3c28")
 	)
 	(junction
 		(at 290.83 101.6)
@@ -10506,7 +10530,7 @@
 	)
 	(wire
 		(pts
-			(xy 72.39 92.71) (xy 78.74 92.71)
+			(xy 69.85 92.71) (xy 76.2 92.71)
 		)
 		(stroke
 			(width 0)
@@ -10516,7 +10540,7 @@
 	)
 	(wire
 		(pts
-			(xy 33.02 77.47) (xy 39.37 77.47)
+			(xy 25.4 77.47) (xy 31.75 77.47)
 		)
 		(stroke
 			(width 0)
@@ -10596,7 +10620,7 @@
 	)
 	(wire
 		(pts
-			(xy 39.37 77.47) (xy 39.37 83.82)
+			(xy 31.75 77.47) (xy 31.75 83.82)
 		)
 		(stroke
 			(width 0)
@@ -10706,7 +10730,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 88.9) (xy 86.36 92.71)
+			(xy 82.55 88.9) (xy 82.55 92.71)
 		)
 		(stroke
 			(width 0)
@@ -10813,6 +10837,16 @@
 			(type default)
 		)
 		(uuid "13635dfc-4c93-4651-a2a3-992a42498508")
+	)
+	(wire
+		(pts
+			(xy 88.9 77.47) (xy 95.25 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "13c278b7-6ad9-43cc-8654-e6a0388fab07")
 	)
 	(wire
 		(pts
@@ -11006,7 +11040,7 @@
 	)
 	(wire
 		(pts
-			(xy 33.02 86.36) (xy 33.02 77.47)
+			(xy 25.4 86.36) (xy 25.4 77.47)
 		)
 		(stroke
 			(width 0)
@@ -11096,17 +11130,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 77.47) (xy 93.98 77.47)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2568be77-a3fc-4e6a-a492-82909a120e94")
-	)
-	(wire
-		(pts
-			(xy 78.74 88.9) (xy 78.74 92.71)
+			(xy 76.2 88.9) (xy 76.2 92.71)
 		)
 		(stroke
 			(width 0)
@@ -11126,7 +11150,7 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 88.9) (xy 53.34 92.71)
+			(xy 50.8 88.9) (xy 50.8 92.71)
 		)
 		(stroke
 			(width 0)
@@ -11186,13 +11210,13 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 92.71) (xy 93.98 92.71)
+			(xy 95.25 88.9) (xy 95.25 92.71)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "2b0bab08-1d08-45fa-bb6a-af8e52808458")
+		(uuid "2a520979-5e62-4a76-b7d6-25b728a44c6b")
 	)
 	(wire
 		(pts
@@ -11236,7 +11260,7 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 77.47) (xy 78.74 83.82)
+			(xy 76.2 77.47) (xy 76.2 83.82)
 		)
 		(stroke
 			(width 0)
@@ -11326,7 +11350,7 @@
 	)
 	(wire
 		(pts
-			(xy 39.37 92.71) (xy 45.72 92.71)
+			(xy 31.75 92.71) (xy 38.1 92.71)
 		)
 		(stroke
 			(width 0)
@@ -11546,7 +11570,7 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 77.47) (xy 53.34 77.47)
+			(xy 38.1 77.47) (xy 43.18 77.47)
 		)
 		(stroke
 			(width 0)
@@ -11606,7 +11630,7 @@
 	)
 	(wire
 		(pts
-			(xy 72.39 77.47) (xy 78.74 77.47)
+			(xy 69.85 77.47) (xy 76.2 77.47)
 		)
 		(stroke
 			(width 0)
@@ -11626,7 +11650,7 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 92.71) (xy 53.34 92.71)
+			(xy 38.1 92.71) (xy 43.18 92.71)
 		)
 		(stroke
 			(width 0)
@@ -11716,7 +11740,7 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 77.47) (xy 55.88 77.47)
+			(xy 50.8 77.47) (xy 53.34 77.47)
 		)
 		(stroke
 			(width 0)
@@ -11856,7 +11880,7 @@
 	)
 	(wire
 		(pts
-			(xy 39.37 77.47) (xy 45.72 77.47)
+			(xy 31.75 77.47) (xy 38.1 77.47)
 		)
 		(stroke
 			(width 0)
@@ -11886,13 +11910,23 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 77.47) (xy 86.36 77.47)
+			(xy 76.2 77.47) (xy 82.55 77.47)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "558e0625-f7ae-44d6-95e0-d157ff3c4e2a")
+	)
+	(wire
+		(pts
+			(xy 88.9 92.71) (xy 95.25 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "57169308-1ce0-41cc-964c-19207e36d878")
 	)
 	(wire
 		(pts
@@ -11903,16 +11937,6 @@
 			(type default)
 		)
 		(uuid "5733b9fa-9326-4d5f-9f3b-8e927ec4c78b")
-	)
-	(wire
-		(pts
-			(xy 93.98 92.71) (xy 109.22 92.71)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "57df2d64-8cf9-4823-b38f-6d06122de59a")
 	)
 	(wire
 		(pts
@@ -12036,7 +12060,7 @@
 	)
 	(wire
 		(pts
-			(xy 33.02 92.71) (xy 39.37 92.71)
+			(xy 25.4 92.71) (xy 31.75 92.71)
 		)
 		(stroke
 			(width 0)
@@ -12096,13 +12120,23 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 77.47) (xy 86.36 83.82)
+			(xy 82.55 77.47) (xy 82.55 83.82)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "60fa98ab-aedc-4b8f-9588-b0dece8701db")
+	)
+	(wire
+		(pts
+			(xy 95.25 77.47) (xy 109.22 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "620535d4-6a3a-4cd6-9a78-a26b9dfda189")
 	)
 	(wire
 		(pts
@@ -12133,6 +12167,16 @@
 			(type default)
 		)
 		(uuid "6450c088-b728-4dde-8e32-2467c752fc2c")
+	)
+	(wire
+		(pts
+			(xy 95.25 77.47) (xy 95.25 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "65476dc5-cfc0-4041-ac34-16f282c4b491")
 	)
 	(wire
 		(pts
@@ -12266,7 +12310,7 @@
 	)
 	(wire
 		(pts
-			(xy 63.5 85.09) (xy 63.5 92.71)
+			(xy 60.96 85.09) (xy 60.96 92.71)
 		)
 		(stroke
 			(width 0)
@@ -12386,6 +12430,16 @@
 	)
 	(wire
 		(pts
+			(xy 43.18 77.47) (xy 43.18 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6e105a56-01d9-4f36-a2f7-8aee51b73ed4")
+	)
+	(wire
+		(pts
 			(xy 166.37 111.76) (xy 165.1 111.76)
 		)
 		(stroke
@@ -12423,6 +12477,16 @@
 			(type default)
 		)
 		(uuid "70ddb22a-b421-465f-bd47-41b1b9b34492")
+	)
+	(wire
+		(pts
+			(xy 82.55 77.47) (xy 88.9 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7198898f-77f9-46f4-a6ca-23d1a13689d6")
 	)
 	(wire
 		(pts
@@ -12536,7 +12600,7 @@
 	)
 	(wire
 		(pts
-			(xy 93.98 88.9) (xy 93.98 92.71)
+			(xy 88.9 88.9) (xy 88.9 92.71)
 		)
 		(stroke
 			(width 0)
@@ -12626,7 +12690,7 @@
 	)
 	(wire
 		(pts
-			(xy 93.98 77.47) (xy 93.98 83.82)
+			(xy 88.9 77.47) (xy 88.9 83.82)
 		)
 		(stroke
 			(width 0)
@@ -12693,16 +12757,6 @@
 			(type default)
 		)
 		(uuid "81d49077-1e67-4c08-9f61-60e63fb70407")
-	)
-	(wire
-		(pts
-			(xy 93.98 77.47) (xy 109.22 77.47)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "82652905-9c88-4e26-94e7-1ae6633c6baa")
 	)
 	(wire
 		(pts
@@ -12806,7 +12860,7 @@
 	)
 	(wire
 		(pts
-			(xy 33.02 88.9) (xy 33.02 92.71)
+			(xy 25.4 88.9) (xy 25.4 92.71)
 		)
 		(stroke
 			(width 0)
@@ -12946,7 +13000,7 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 92.71) (xy 86.36 92.71)
+			(xy 76.2 92.71) (xy 82.55 92.71)
 		)
 		(stroke
 			(width 0)
@@ -13096,6 +13150,16 @@
 	)
 	(wire
 		(pts
+			(xy 43.18 88.9) (xy 43.18 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9dfeb9c1-12ab-4822-9be2-0dc1b08a8ed9")
+	)
+	(wire
+		(pts
 			(xy 63.5 41.91) (xy 63.5 48.26)
 		)
 		(stroke
@@ -13156,7 +13220,7 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 83.82) (xy 45.72 77.47)
+			(xy 38.1 83.82) (xy 38.1 77.47)
 		)
 		(stroke
 			(width 0)
@@ -13166,7 +13230,7 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 77.47) (xy 53.34 83.82)
+			(xy 50.8 77.47) (xy 50.8 83.82)
 		)
 		(stroke
 			(width 0)
@@ -13576,7 +13640,7 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 77.47) (xy 72.39 77.47)
+			(xy 68.58 77.47) (xy 69.85 77.47)
 		)
 		(stroke
 			(width 0)
@@ -13686,7 +13750,17 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 88.9) (xy 45.72 92.71)
+			(xy 95.25 92.71) (xy 109.22 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "be8653de-a60f-498c-a6ee-2f0245957270")
+	)
+	(wire
+		(pts
+			(xy 38.1 88.9) (xy 38.1 92.71)
 		)
 		(stroke
 			(width 0)
@@ -13703,6 +13777,16 @@
 			(type default)
 		)
 		(uuid "c007a245-8f61-49af-bb7e-9eaa89682fc8")
+	)
+	(wire
+		(pts
+			(xy 82.55 92.71) (xy 88.9 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c1010de2-9968-4d96-98d4-ee26df4cdd3e")
 	)
 	(wire
 		(pts
@@ -13786,7 +13870,7 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 92.71) (xy 63.5 92.71)
+			(xy 50.8 92.71) (xy 60.96 92.71)
 		)
 		(stroke
 			(width 0)
@@ -14126,6 +14210,16 @@
 	)
 	(wire
 		(pts
+			(xy 43.18 92.71) (xy 50.8 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d8d776c1-bfeb-4dae-bbbe-2521bc34f64f")
+	)
+	(wire
+		(pts
 			(xy 60.96 118.11) (xy 81.28 118.11)
 		)
 		(stroke
@@ -14376,7 +14470,7 @@
 	)
 	(wire
 		(pts
-			(xy 39.37 88.9) (xy 39.37 92.71)
+			(xy 31.75 88.9) (xy 31.75 92.71)
 		)
 		(stroke
 			(width 0)
@@ -14496,13 +14590,23 @@
 	)
 	(wire
 		(pts
-			(xy 72.39 88.9) (xy 72.39 92.71)
+			(xy 69.85 88.9) (xy 69.85 92.71)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "ed5d2888-90ba-4dac-ae01-0836d1553106")
+	)
+	(wire
+		(pts
+			(xy 43.18 77.47) (xy 50.8 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eda68c7c-f4db-4145-8613-2e4153ba6748")
 	)
 	(wire
 		(pts
@@ -14516,7 +14620,7 @@
 	)
 	(wire
 		(pts
-			(xy 63.5 92.71) (xy 72.39 92.71)
+			(xy 60.96 92.71) (xy 69.85 92.71)
 		)
 		(stroke
 			(width 0)
@@ -14596,7 +14700,7 @@
 	)
 	(wire
 		(pts
-			(xy 72.39 77.47) (xy 72.39 83.82)
+			(xy 69.85 77.47) (xy 69.85 83.82)
 		)
 		(stroke
 			(width 0)
@@ -14839,8 +14943,8 @@
 		(uuid 35305160-8686-4105-99b6-026165047902)
 	)
 	(rectangle
-		(start 35.56 73.66)
-		(end 49.53 99.06)
+		(start 27.94 73.66)
+		(end 46.99 99.06)
 		(stroke
 			(width 0)
 			(type dash)
@@ -14913,8 +15017,8 @@
 		(uuid c2a642c6-5cbf-4cc4-b393-2f6cf19f2620)
 	)
 	(rectangle
-		(start 74.93 74.93)
-		(end 96.52 100.33)
+		(start 72.39 73.66)
+		(end 97.79 99.06)
 		(stroke
 			(width 0)
 			(type dash)
@@ -31329,7 +31433,7 @@
 	)
 	(text "Not required"
 		(exclude_from_sim no)
-		(at 86.36 73.66 0)
+		(at 85.852 72.644 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -31406,7 +31510,7 @@
 	)
 	(text "Not required"
 		(exclude_from_sim no)
-		(at 41.91 72.39 0)
+		(at 37.592 72.644 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -32604,7 +32708,7 @@
 	)
 	(global_label "GND"
 		(shape input)
-		(at 33.02 92.71 270)
+		(at 25.4 92.71 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -32614,7 +32718,7 @@
 		)
 		(uuid "6325c32f-c82a-4357-b022-f9c7e76f412e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at -53.34 199.39 0)
+			(at -60.96 199.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -33805,7 +33909,7 @@
 	)
 	(global_label "5V+"
 		(shape input)
-		(at 33.02 77.47 90)
+		(at 25.4 77.47 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -33815,7 +33919,7 @@
 		)
 		(uuid "cdea6243-bb89-4d5b-b0df-297a4d2a8656")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 33.02 71.2685 90)
+			(at 25.4 71.2685 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -35540,6 +35644,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 179.07 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "aac2e49d-74e9-4959-880b-64485b14373c")
 		)
@@ -35626,6 +35739,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 179.07 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "b2f1edcf-a8d1-4a7b-9510-645d11b352a0")
 		)
@@ -35685,6 +35807,15 @@
 			)
 		)
 		(property "Description" "Fuse"
+			(at 54.61 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 54.61 22.86 0)
 			(effects
 				(font
@@ -35807,6 +35938,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 58.42 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "70735ab1-678d-4f2f-bb5d-bdc9edafe003")
 		)
@@ -35824,7 +35964,7 @@
 	)
 	(symbol
 		(lib_id "Regulator_Linear:LD1117S33TR_SOT223")
-		(at 63.5 77.47 0)
+		(at 60.96 77.47 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -35832,7 +35972,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000061434446")
 		(property "Reference" "U1"
-			(at 63.5 71.3232 0)
+			(at 60.96 71.3232 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -35840,7 +35980,7 @@
 			)
 		)
 		(property "Value" "LD1117AV33"
-			(at 63.5 73.6346 0)
+			(at 60.96 73.6346 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -35848,7 +35988,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
-			(at 63.5 72.39 0)
+			(at 60.96 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -35857,7 +35997,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000544.pdf"
-			(at 66.04 83.82 0)
+			(at 63.5 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -35866,7 +36006,7 @@
 			)
 		)
 		(property "Description" "800mA Fixed Low Drop Positive Voltage Regulator, Fixed Output 3.3V, SOT-223"
-			(at 63.5 77.47 0)
+			(at 60.96 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -35875,11 +36015,20 @@
 			)
 		)
 		(property "PcbText" ""
-			(at 63.5 77.47 0)
+			(at 60.96 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Field4" ""
+			(at 60.96 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -35902,7 +36051,7 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
-		(at 27.94 88.9 180)
+		(at 20.32 88.9 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -35910,7 +36059,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00006143acb7")
 		(property "Reference" "J1"
-			(at 27.94 83.566 0)
+			(at 20.32 83.566 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -35918,7 +36067,7 @@
 			)
 		)
 		(property "Value" "GND|5V"
-			(at 24.892 87.63 90)
+			(at 17.272 87.63 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -35926,7 +36075,7 @@
 			)
 		)
 		(property "Footprint" "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical"
-			(at 27.94 88.9 0)
+			(at 20.32 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -35935,7 +36084,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 27.94 88.9 0)
+			(at 20.32 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -35944,7 +36093,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 27.94 88.9 0)
+			(at 20.32 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -35953,11 +36102,20 @@
 			)
 		)
 		(property "PcbText" ""
-			(at 27.94 88.9 0)
+			(at 20.32 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Field4" ""
+			(at 20.32 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -36078,6 +36236,15 @@
 				)
 			)
 		)
+		(property "Field4" ""
+			(at 81.28 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "3305e307-de95-4d42-8ffe-bf89560922d0")
 		)
@@ -36101,7 +36268,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Polarized_Small")
-		(at 72.39 86.36 0)
+		(at 69.85 86.36 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -36109,7 +36276,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-0000615251c7")
 		(property "Reference" "C8"
-			(at 69.85 96.52 0)
+			(at 67.31 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -36118,7 +36285,7 @@
 			)
 		)
 		(property "Value" "10uF"
-			(at 68.58 93.98 0)
+			(at 66.04 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -36127,7 +36294,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm"
-			(at 73.3552 90.17 0)
+			(at 70.8152 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -36136,7 +36303,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 72.39 86.36 0)
+			(at 69.85 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -36145,7 +36312,16 @@
 			)
 		)
 		(property "Description" "Polarized capacitor, small symbol"
-			(at 72.39 86.36 0)
+			(at 69.85 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
+			(at 69.85 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -36212,6 +36388,15 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 102.87 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 102.87 87.63 0)
 			(effects
 				(font
@@ -36307,6 +36492,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 115.57 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "eeb5bff0-5681-4c93-9b8e-26fa355ace59")
 		)
@@ -36385,6 +36579,15 @@
 			)
 		)
 		(property "LCSC" "C25719"
+			(at 168.91 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 168.91 156.21 0)
 			(effects
 				(font
@@ -36479,6 +36682,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 168.91 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "b7d7c5f1-8488-4f40-a46d-b0fcbccd5f17")
 		)
@@ -36496,7 +36708,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Polarized_Small")
-		(at 45.72 86.36 0)
+		(at 38.1 86.36 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -36504,7 +36716,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000061809e87")
 		(property "Reference" "C7"
-			(at 44.45 96.52 0)
+			(at 36.83 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -36513,7 +36725,7 @@
 			)
 		)
 		(property "Value" "22uF"
-			(at 48.26 93.98 0)
+			(at 40.64 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -36522,7 +36734,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 46.6852 90.17 0)
+			(at 39.0652 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -36531,7 +36743,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 45.72 86.36 0)
+			(at 38.1 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -36540,7 +36752,7 @@
 			)
 		)
 		(property "Description" "Polarized capacitor, small symbol"
-			(at 45.72 86.36 0)
+			(at 38.1 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -36549,7 +36761,7 @@
 			)
 		)
 		(property "JLCPCB" "C45783"
-			(at 45.72 86.36 0)
+			(at 38.1 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -36558,7 +36770,16 @@
 			)
 		)
 		(property "LCSC" "C45783"
-			(at 45.72 86.36 0)
+			(at 38.1 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
+			(at 38.1 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -36662,6 +36883,15 @@
 				)
 			)
 		)
+		(property "Field4" ""
+			(at 321.31 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "ad54a3a9-8f3b-4f3d-89a1-c50ee44c679c")
 		)
@@ -36734,6 +36964,15 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Field4" ""
+			(at 140.97 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -36826,6 +37065,15 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Field4" ""
+			(at 403.86 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -36994,6 +37242,15 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Field4" ""
+			(at 36.83 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -37220,6 +37477,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 88.9 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "b2e39f87-8092-48b3-9b9f-74d524ece3f4")
 		)
@@ -37237,7 +37503,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Polarized_Small")
-		(at 78.74 86.36 0)
+		(at 76.2 86.36 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -37245,7 +37511,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-0000619d049d")
 		(property "Reference" "C9"
-			(at 77.47 96.52 0)
+			(at 74.93 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -37254,7 +37520,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 81.28 93.98 0)
+			(at 78.74 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -37263,7 +37529,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 79.7052 90.17 0)
+			(at 77.1652 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -37272,7 +37538,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 78.74 86.36 0)
+			(at 76.2 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -37281,7 +37547,7 @@
 			)
 		)
 		(property "Description" "Polarized capacitor, small symbol"
-			(at 78.74 86.36 0)
+			(at 76.2 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -37290,7 +37556,7 @@
 			)
 		)
 		(property "JLCPCB" "C49678"
-			(at 78.74 86.36 0)
+			(at 76.2 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -37299,7 +37565,7 @@
 			)
 		)
 		(property "LCSC" "C49678"
-			(at 78.74 86.36 0)
+			(at 76.2 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -37308,11 +37574,20 @@
 			)
 		)
 		(property "PcbText" ""
-			(at 78.74 86.36 0)
+			(at 76.2 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Field4" ""
+			(at 76.2 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -37410,6 +37685,15 @@
 				)
 			)
 		)
+		(property "Field4" ""
+			(at 96.52 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "5f406c10-3d8f-4523-83b9-c4c17247863b")
 		)
@@ -37480,6 +37764,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 208.28 267.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "294d5227-7f46-4768-a6a5-227d83e88962")
 		)
@@ -37539,6 +37832,15 @@
 			)
 		)
 		(property "Description" "Mounting Hole with connection"
+			(at 213.36 267.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 213.36 267.97 0)
 			(effects
 				(font
@@ -37646,6 +37948,15 @@
 				)
 			)
 		)
+		(property "Field4" ""
+			(at 99.06 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "b3c33da2-4a7d-409d-9c4f-2cdcb209d91f")
 		)
@@ -37748,6 +38059,15 @@
 				)
 			)
 		)
+		(property "Field4" ""
+			(at 99.06 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "e339209d-a8f4-4b14-b7d9-2915540105b5")
 		)
@@ -37825,6 +38145,15 @@
 			)
 		)
 		(property "LCSC" "C25804"
+			(at 29.21 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 29.21 203.2 0)
 			(effects
 				(font
@@ -37920,6 +38249,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 29.21 209.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "58b77342-ba2d-4796-b6fd-dc7dbffb8cfc")
 		)
@@ -37990,6 +38328,15 @@
 			)
 		)
 		(property "JLCPCB" ""
+			(at 25.4 264.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 25.4 264.16 0)
 			(effects
 				(font
@@ -38085,6 +38432,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 33.02 264.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "7f74e3b3-0eeb-4455-a766-15862cddc46c")
 		)
@@ -38147,6 +38503,15 @@
 			)
 		)
 		(property "Description" "DC Darlington Optocoupler, Vce 35V, CTR 600%, SO-4"
+			(at 195.58 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 195.58 161.29 0)
 			(effects
 				(font
@@ -38259,6 +38624,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 180.34 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "d5ba6f50-7297-421e-81a2-41445e76e4d9")
 		)
@@ -38337,6 +38711,15 @@
 			)
 		)
 		(property "LCSC" "C25719"
+			(at 180.34 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 180.34 127 0)
 			(effects
 				(font
@@ -38431,6 +38814,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 168.91 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "40950ffb-2258-4e48-8ded-9b6c620751a5")
 		)
@@ -38517,6 +38909,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 168.91 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "73fbb30b-5b26-4a3d-bc43-50057031c337")
 		)
@@ -38579,6 +38980,15 @@
 			)
 		)
 		(property "Description" "DC Darlington Optocoupler, Vce 35V, CTR 600%, SO-4"
+			(at 195.58 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 195.58 132.08 0)
 			(effects
 				(font
@@ -38699,6 +39109,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 335.28 223.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "5c788ba3-1b7e-4660-9f3d-775a3c4b7dca")
 		)
@@ -38778,6 +39197,15 @@
 			)
 		)
 		(property "LCSC" "C14663"
+			(at 207.01 220.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 207.01 220.98 0)
 			(effects
 				(font
@@ -38882,6 +39310,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 361.95 223.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "bf891391-9d0a-448f-8358-3c9dd415a49c")
 		)
@@ -38957,6 +39394,15 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Field4" ""
+			(at 403.86 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -39062,6 +39508,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 209.55 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "582d3bb4-26ee-48be-9cd5-69f965dcc3a8")
 		)
@@ -39136,6 +39591,15 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Field4" ""
+			(at 389.89 223.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "2"
@@ -39239,6 +39703,15 @@
 				)
 			)
 		)
+		(property "Field4" ""
+			(at 166.37 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "ef0ea6a3-4eb7-4f63-b464-a71b24b84b6f")
 		)
@@ -39318,6 +39791,15 @@
 			)
 		)
 		(property "LCSC" "C59461"
+			(at 29.21 264.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 29.21 264.16 0)
 			(effects
 				(font
@@ -39414,6 +39896,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 205.74 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "eedeb341-0ae6-4132-bcf6-6e4331679070")
 		)
@@ -39474,6 +39965,15 @@
 			)
 		)
 		(property "Description" "Fuse"
+			(at 158.75 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 158.75 170.18 0)
 			(effects
 				(font
@@ -39568,6 +40068,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 285.75 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "48a354ed-00ad-4814-85e1-70f134c0ca68")
 		)
@@ -39646,6 +40155,15 @@
 			)
 		)
 		(property "LCSC" "C23193"
+			(at 278.13 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 278.13 120.65 0)
 			(effects
 				(font
@@ -39733,6 +40251,15 @@
 			)
 		)
 		(property "LCSC" "C7496819"
+			(at 280.67 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 280.67 128.27 0)
 			(effects
 				(font
@@ -39834,6 +40361,15 @@
 				)
 			)
 		)
+		(property "Field4" ""
+			(at 213.36 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "d6cd300b-1203-4108-82d5-ecb77ae0cd44")
 		)
@@ -39913,6 +40449,15 @@
 			)
 		)
 		(property "LCSC" "C5446705"
+			(at 276.86 218.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 276.86 218.44 0)
 			(effects
 				(font
@@ -40006,6 +40551,15 @@
 			)
 		)
 		(property "LCSC" "C47023"
+			(at 255.27 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 255.27 49.53 0)
 			(effects
 				(font
@@ -40187,6 +40741,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 289.56 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "d88c45cd-c3e9-4c20-9cf7-4928fde06a2e")
 		)
@@ -40197,6 +40760,102 @@
 			(project "hamodule"
 				(path "/e5217a0c-7f55-4c30-adda-7f8d95709d1b"
 					(reference "C30")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 95.25 86.36 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1bf908d7-f174-427c-9e6d-94a94f5ca910")
+		(property "Reference" "C38"
+			(at 93.218 96.266 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "20p"
+			(at 93.218 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 95.25 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 95.25 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 95.25 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C1648"
+			(at 95.25 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB" "C1648"
+			(at 95.25 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
+			(at 95.25 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f193348d-3da6-46c0-a341-8202bf9dcfa5")
+		)
+		(pin "2"
+			(uuid "bd96c026-82de-477c-b450-54c50fdd8971")
+		)
+		(instances
+			(project "hamodule"
+				(path "/e5217a0c-7f55-4c30-adda-7f8d95709d1b"
+					(reference "C38")
 					(unit 1)
 				)
 			)
@@ -40254,6 +40913,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 378.46 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "5c67e4d3-ac22-47ba-81e4-5b9ff8323f1d")
 		)
@@ -40271,7 +40939,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Polarized_Small")
-		(at 53.34 86.36 0)
+		(at 50.8 86.36 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -40280,7 +40948,7 @@
 		(dnp no)
 		(uuid "1e3ee1fa-c784-417a-bea9-c2fe8c32bddf")
 		(property "Reference" "C4"
-			(at 54.61 96.52 0)
+			(at 52.07 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -40289,7 +40957,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 50.8 93.98 0)
+			(at 48.26 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -40298,7 +40966,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 52.3748 90.17 0)
+			(at 49.8348 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -40307,7 +40975,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 53.34 86.36 0)
+			(at 50.8 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -40316,7 +40984,7 @@
 			)
 		)
 		(property "Description" "Polarized capacitor, small symbol"
-			(at 53.34 86.36 0)
+			(at 50.8 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -40325,7 +40993,7 @@
 			)
 		)
 		(property "JLCPCB" "C49678"
-			(at 53.34 86.36 0)
+			(at 50.8 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -40334,7 +41002,7 @@
 			)
 		)
 		(property "LCSC" "C49678"
-			(at 53.34 86.36 0)
+			(at 50.8 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -40343,11 +41011,20 @@
 			)
 		)
 		(property "PcbText" ""
-			(at 53.34 86.36 0)
+			(at 50.8 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Field4" ""
+			(at 50.8 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -40426,6 +41103,15 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Field4" ""
+			(at 119.38 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -40507,6 +41193,15 @@
 			)
 		)
 		(property "LCSC" "C7496819"
+			(at 293.37 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 293.37 128.27 0)
 			(effects
 				(font
@@ -40609,6 +41304,15 @@
 				)
 			)
 		)
+		(property "Field4" ""
+			(at 254 222.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "1ba2ee43-36f6-4acd-a081-104f19c6b1f9")
 		)
@@ -40686,6 +41390,15 @@
 			)
 		)
 		(property "LCSC" "C25804"
+			(at 209.55 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 209.55 115.57 0)
 			(effects
 				(font
@@ -40789,6 +41502,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 393.7 207.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "144ab370-151b-4b94-b4fd-8e76e4ab2578")
 		)
@@ -40875,6 +41597,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 88.9 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "f2db119c-cdbd-4325-8fe8-4ccc6df2dc04")
 		)
@@ -40952,6 +41683,15 @@
 			)
 		)
 		(property "LCSC" "C25804"
+			(at 209.55 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 209.55 93.98 0)
 			(effects
 				(font
@@ -41055,6 +41795,15 @@
 				)
 			)
 		)
+		(property "Field4" ""
+			(at 161.29 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "d5ad285e-e780-4667-87ec-86ab7d62908a")
 		)
@@ -41133,6 +41882,15 @@
 			)
 		)
 		(property "LCSC" "C23193"
+			(at 295.91 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 295.91 120.65 0)
 			(effects
 				(font
@@ -41226,6 +41984,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 66.04 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "1433699e-6408-48ff-8e3a-786ab98bf4a0")
 		)
@@ -41304,6 +42071,15 @@
 			)
 		)
 		(property "LCSC" "C25719"
+			(at 170.18 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 170.18 111.76 0)
 			(effects
 				(font
@@ -41399,6 +42175,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 283.21 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "774fe349-3936-4dfb-af14-d927fcc9b981")
 		)
@@ -41466,6 +42251,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 378.46 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "50e83ea9-f565-4d8c-91b4-be5cedde31ef")
 		)
@@ -41525,6 +42319,15 @@
 			)
 		)
 		(property "Description" "Fuse"
+			(at 378.46 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 378.46 99.06 0)
 			(effects
 				(font
@@ -41674,6 +42477,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 347.98 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "9b92c575-4fdd-4ad2-8521-6a28bdb0da4d")
 		)
@@ -41739,6 +42551,15 @@
 			)
 		)
 		(property "Description" "Fuse"
+			(at 378.46 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 378.46 93.98 0)
 			(effects
 				(font
@@ -41821,6 +42642,15 @@
 				)
 			)
 		)
+		(property "Field4" ""
+			(at 140.97 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "733f5d1b-c1b7-4458-b730-0acb8d004feb")
 		)
@@ -41881,7 +42711,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 66.04 166.37 0)
 			(effects
 				(font
@@ -41918,6 +42748,15 @@
 			)
 		)
 		(property "JLCPCB" "C1648"
+			(at 66.04 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 66.04 166.37 0)
 			(effects
 				(font
@@ -42012,6 +42851,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 283.21 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "2eed0305-2c64-4445-af36-72edee979076")
 		)
@@ -42074,6 +42922,15 @@
 			)
 		)
 		(property "Description" "DC Darlington Optocoupler, Vce 35V, CTR 600%, SO-4"
+			(at 195.58 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 195.58 102.87 0)
 			(effects
 				(font
@@ -42193,6 +43050,15 @@
 				)
 			)
 		)
+		(property "Field4" ""
+			(at 213.36 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "c460fecd-2d64-4fd8-9857-c72414437a08")
 		)
@@ -42288,6 +43154,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 320.04 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "c5494cf8-3c50-4e60-aa83-a4cce534c5dd")
 		)
@@ -42365,6 +43240,15 @@
 			)
 		)
 		(property "LCSC" "C25804"
+			(at 209.55 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 209.55 123.19 0)
 			(effects
 				(font
@@ -42459,6 +43343,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 66.04 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "b3f1ef60-8ff0-4809-86be-088204b229cd")
 		)
@@ -42519,6 +43412,15 @@
 			)
 		)
 		(property "Description" "Fuse"
+			(at 161.29 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 161.29 97.79 0)
 			(effects
 				(font
@@ -42607,6 +43509,15 @@
 			)
 		)
 		(property "LCSC" "C59461"
+			(at 205.74 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 205.74 153.67 0)
 			(effects
 				(font
@@ -42756,6 +43667,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 347.98 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "6233d8f5-288e-4eff-8726-3eba7346f305")
 		)
@@ -42842,6 +43762,15 @@
 			)
 		)
 		(property "LCSC" "C59461"
+			(at 205.74 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 205.74 114.3 0)
 			(effects
 				(font
@@ -42945,6 +43874,15 @@
 				)
 			)
 		)
+		(property "Field4" ""
+			(at 288.29 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "dd18833a-c293-48c3-a675-91c5071284ec")
 		)
@@ -43012,6 +43950,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 378.46 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "0569e29d-a2bf-4795-b657-a2cf997bbf88")
 		)
@@ -43045,7 +43992,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100nF"
+		(property "Value" "22uF"
 			(at 36.83 255.27 90)
 			(effects
 				(font
@@ -43081,7 +44028,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C49678"
+		(property "JLCPCB" "C45783"
 			(at 36.83 264.16 0)
 			(effects
 				(font
@@ -43090,7 +44037,16 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C49678"
+		(property "LCSC" "C45783"
+			(at 36.83 264.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 36.83 264.16 0)
 			(effects
 				(font
@@ -43187,6 +44143,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 205.74 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "5305eaf1-b64f-4d36-9ac4-e6bb0c6e288e")
 		)
@@ -43264,6 +44229,15 @@
 			)
 		)
 		(property "LCSC" "C25804"
+			(at 170.18 245.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 170.18 245.11 0)
 			(effects
 				(font
@@ -43357,6 +44331,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 74.93 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "a8add202-5adc-470f-a2d7-e4b53bcb8cb5")
 		)
@@ -43435,6 +44418,15 @@
 			)
 		)
 		(property "LCSC" "C25719"
+			(at 181.61 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 181.61 111.76 0)
 			(effects
 				(font
@@ -43584,6 +44576,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 347.98 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "d8ec6f48-5500-4989-8c39-4a2d0a278fc7")
 		)
@@ -43667,6 +44668,15 @@
 			)
 		)
 		(property "LCSC" "C25804"
+			(at 209.55 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 209.55 86.36 0)
 			(effects
 				(font
@@ -43829,6 +44839,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 205.74 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "d6e9c69d-c64c-4402-9aff-fd374ead35a3")
 		)
@@ -43915,6 +44934,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 280.67 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "fbe47749-97d2-4d22-8945-f5c75063e9b9")
 		)
@@ -43993,6 +45021,15 @@
 			)
 		)
 		(property "LCSC" "C25719"
+			(at 170.18 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 170.18 68.58 0)
 			(effects
 				(font
@@ -44089,6 +45126,15 @@
 			)
 		)
 		(property "PcbText" "USB-C"
+			(at 45.72 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 45.72 133.35 0)
 			(effects
 				(font
@@ -44228,6 +45274,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 181.61 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "8edd1334-d5ca-4be4-82c8-633617ec4f13")
 		)
@@ -44290,6 +45345,15 @@
 			)
 		)
 		(property "Description" "test point (alternative probe-style design)"
+			(at 193.04 265.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 193.04 265.43 0)
 			(effects
 				(font
@@ -44381,6 +45445,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 356.87 241.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "6a6738e2-91bf-4ece-855e-10dd7be6cf32")
 		)
@@ -44459,6 +45532,15 @@
 			)
 		)
 		(property "LCSC" "C25719"
+			(at 170.18 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 170.18 82.55 0)
 			(effects
 				(font
@@ -44560,6 +45642,15 @@
 				)
 			)
 		)
+		(property "Field4" ""
+			(at 213.36 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "fa373457-c259-4ce1-ad7f-f2ad796c6af9")
 		)
@@ -44577,7 +45668,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Polarized_Small")
-		(at 93.98 86.36 0)
+		(at 88.9 86.36 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -44585,7 +45676,7 @@
 		(dnp no)
 		(uuid "7d1ce015-1143-47cc-90f8-424b9e49c343")
 		(property "Reference" "C11"
-			(at 92.71 96.52 0)
+			(at 86.868 96.266 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -44594,7 +45685,7 @@
 			)
 		)
 		(property "Value" "22uF"
-			(at 95.25 93.98 0)
+			(at 91.44 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -44603,7 +45694,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 94.9452 90.17 0)
+			(at 89.8652 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -44612,7 +45703,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 93.98 86.36 0)
+			(at 88.9 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -44621,7 +45712,7 @@
 			)
 		)
 		(property "Description" "Polarized capacitor, small symbol"
-			(at 93.98 86.36 0)
+			(at 88.9 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -44630,7 +45721,7 @@
 			)
 		)
 		(property "JLCPCB" "C45783"
-			(at 93.98 86.36 0)
+			(at 88.9 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -44639,7 +45730,16 @@
 			)
 		)
 		(property "LCSC" "C45783"
-			(at 93.98 86.36 0)
+			(at 88.9 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
+			(at 88.9 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -44708,6 +45808,15 @@
 			)
 		)
 		(property "Description" "Polarized capacitor, small symbol"
+			(at 99.06 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 99.06 36.83 0)
 			(effects
 				(font
@@ -44803,6 +45912,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 86.36 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "5886df4e-ad14-4ea0-933e-ead53c1236b1")
 		)
@@ -44889,6 +46007,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 288.29 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "250f93c1-3ed9-4fb6-a1d0-15695b143393")
 		)
@@ -44966,6 +46093,15 @@
 			)
 		)
 		(property "LCSC" "C25804"
+			(at 209.55 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 209.55 64.77 0)
 			(effects
 				(font
@@ -45067,6 +46203,15 @@
 				)
 			)
 		)
+		(property "Field4" ""
+			(at 213.36 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "ff4daf09-16a8-4842-94aa-2a57058a3d88")
 		)
@@ -45135,6 +46280,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 161.29 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "4bc5a066-9983-4ce9-ad1a-b949e34b10b3")
 		)
@@ -45195,6 +46349,15 @@
 			)
 		)
 		(property "Description" "Fuse"
+			(at 161.29 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 161.29 68.58 0)
 			(effects
 				(font
@@ -45281,6 +46444,15 @@
 			)
 		)
 		(property "LCSC" "C23193"
+			(at 290.83 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 290.83 120.65 0)
 			(effects
 				(font
@@ -45429,6 +46601,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 347.98 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "89035715-1e9a-4258-aa96-fc7102562720")
 		)
@@ -45512,6 +46693,15 @@
 			)
 		)
 		(property "LCSC" "C100024"
+			(at 261.62 218.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 261.62 218.44 0)
 			(effects
 				(font
@@ -45607,6 +46797,15 @@
 			)
 		)
 		(property "LCSC" "C2913202"
+			(at 104.14 231.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 104.14 231.14 0)
 			(effects
 				(font
@@ -45818,6 +47017,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 181.61 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "4659ef86-c831-4ea4-9bda-edf2ba5ff5f0")
 		)
@@ -45898,6 +47106,15 @@
 			)
 		)
 		(property "LCSC" "C59461"
+			(at 205.74 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 205.74 95.25 0)
 			(effects
 				(font
@@ -46001,6 +47218,15 @@
 				)
 			)
 		)
+		(property "Field4" ""
+			(at 288.29 212.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "fc86f28b-4fae-4e9f-9f1e-3fc4b67f24df")
 		)
@@ -46063,6 +47289,15 @@
 			)
 		)
 		(property "Description" "Mounting Hole with connection"
+			(at 218.44 267.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 218.44 267.97 0)
 			(effects
 				(font
@@ -46162,6 +47397,15 @@
 				)
 			)
 		)
+		(property "Field4" ""
+			(at 41.91 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "409a437e-49bc-4b43-a168-504ddf738da1")
 		)
@@ -46221,6 +47465,15 @@
 			)
 		)
 		(property "Description" "Fuse"
+			(at 378.46 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 378.46 83.82 0)
 			(effects
 				(font
@@ -46306,6 +47559,15 @@
 			)
 		)
 		(property "LCSC" "C25804"
+			(at 172.72 245.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 172.72 245.11 0)
 			(effects
 				(font
@@ -46455,6 +47717,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 347.98 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "ab5d0dd6-7cd4-400d-b9de-e91286d0e315")
 		)
@@ -46471,6 +47742,102 @@
 			(project "hamodule"
 				(path "/e5217a0c-7f55-4c30-adda-7f8d95709d1b"
 					(reference "K8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 43.18 86.36 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a3683073-342e-4240-8ebf-371b6a169185")
+		(property "Reference" "C37"
+			(at 41.148 96.266 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "20p"
+			(at 41.148 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 43.18 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 43.18 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 43.18 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C1648"
+			(at 43.18 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB" "C1648"
+			(at 43.18 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
+			(at 43.18 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a43906a7-d4e0-426d-87bb-ca0c71fb8bff")
+		)
+		(pin "2"
+			(uuid "2a4d0198-5b84-4fbb-a286-1eee81ad2f4c")
+		)
+		(instances
+			(project "hamodule"
+				(path "/e5217a0c-7f55-4c30-adda-7f8d95709d1b"
+					(reference "C37")
 					(unit 1)
 				)
 			)
@@ -46529,6 +47896,15 @@
 			)
 		)
 		(property "PcbText" ""
+			(at 309.88 218.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 309.88 218.44 0)
 			(effects
 				(font
@@ -46631,6 +48007,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 209.55 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "05c737e9-5ffb-4c8f-8ccc-11225b2911ca")
 		)
@@ -46710,6 +48095,15 @@
 			)
 		)
 		(property "LCSC" "C7496819"
+			(at 278.13 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 278.13 128.27 0)
 			(effects
 				(font
@@ -46866,6 +48260,15 @@
 				)
 			)
 		)
+		(property "Field4" ""
+			(at 347.98 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "82210e12-0d9e-40e3-851d-46d8ad570536")
 		)
@@ -46959,6 +48362,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 81.28 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "cbef34b2-7774-405e-be69-7a4bf8bed397")
 		)
@@ -47032,6 +48444,15 @@
 			)
 		)
 		(property "Description" "Polarized capacitor, small symbol"
+			(at 119.38 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 119.38 90.17 0)
 			(effects
 				(font
@@ -47118,6 +48539,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 21.59 264.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "b1464221-1ed4-4a4f-aac2-a938937f44f0")
 		)
@@ -47178,6 +48608,15 @@
 			)
 		)
 		(property "Description" "Fuse"
+			(at 158.75 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 158.75 156.21 0)
 			(effects
 				(font
@@ -47265,6 +48704,15 @@
 			)
 		)
 		(property "LCSC" "C7496819"
+			(at 285.75 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 285.75 128.27 0)
 			(effects
 				(font
@@ -47366,6 +48814,15 @@
 				)
 			)
 		)
+		(property "Field4" ""
+			(at 213.36 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "eaa22a4b-2a88-455d-a5d6-617439d5a37f")
 		)
@@ -47443,6 +48900,15 @@
 			)
 		)
 		(property "LCSC" "C49257"
+			(at 50.8 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 50.8 62.23 0)
 			(effects
 				(font
@@ -47539,6 +49005,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 74.93 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "4fa51a28-0d52-433b-beb4-7af3aad08259")
 		)
@@ -47625,6 +49100,15 @@
 			)
 		)
 		(property "LCSC" "C492401"
+			(at 375.92 223.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 375.92 223.52 0)
 			(effects
 				(font
@@ -47728,6 +49212,15 @@
 				)
 			)
 		)
+		(property "Field4" ""
+			(at 292.1 212.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "676b3f8e-6269-4096-ab18-86f2d55805ff")
 		)
@@ -47821,6 +49314,15 @@
 				)
 			)
 		)
+		(property "Field4" ""
+			(at 213.36 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "77001b2d-4ee1-4595-b87b-001a94e3f22b")
 		)
@@ -47883,6 +49385,15 @@
 			)
 		)
 		(property "Description" "Mounting Hole with connection"
+			(at 223.52 267.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 223.52 267.97 0)
 			(effects
 				(font
@@ -47977,6 +49488,15 @@
 			)
 		)
 		(property "LCSC" "C49257"
+			(at 300.99 215.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 300.99 215.9 0)
 			(effects
 				(font
@@ -48083,6 +49603,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 316.23 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "00334bc9-9590-4326-a526-0e76b1052b4b")
 		)
@@ -48150,6 +49679,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 378.46 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "b544f7ca-583b-4b6b-84d2-ce73a557f5fd")
 		)
@@ -48167,7 +49705,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Polarized_Small")
-		(at 39.37 86.36 0)
+		(at 31.75 86.36 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -48175,7 +49713,7 @@
 		(dnp no)
 		(uuid "cb0c92d3-3c84-4d0c-91a1-3c379de2b40a")
 		(property "Reference" "C6"
-			(at 38.1 96.52 0)
+			(at 30.48 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -48184,7 +49722,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 42.418 93.98 0)
+			(at 34.798 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -48193,7 +49731,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 40.3352 90.17 0)
+			(at 32.7152 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -48202,7 +49740,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 39.37 86.36 0)
+			(at 31.75 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -48211,7 +49749,7 @@
 			)
 		)
 		(property "Description" "Polarized capacitor, small symbol"
-			(at 39.37 86.36 0)
+			(at 31.75 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -48220,7 +49758,7 @@
 			)
 		)
 		(property "JLCPCB" "C49678"
-			(at 39.37 86.36 0)
+			(at 31.75 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -48229,7 +49767,7 @@
 			)
 		)
 		(property "LCSC" "C49678"
-			(at 39.37 86.36 0)
+			(at 31.75 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -48238,11 +49776,20 @@
 			)
 		)
 		(property "PcbText" ""
-			(at 39.37 86.36 0)
+			(at 31.75 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Field4" ""
+			(at 31.75 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -48262,7 +49809,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Polarized_Small")
-		(at 86.36 86.36 0)
+		(at 82.55 86.36 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -48270,7 +49817,7 @@
 		(dnp no)
 		(uuid "cd49fbe3-c633-4212-bcfd-55f0dac09f89")
 		(property "Reference" "C10"
-			(at 84.328 96.52 0)
+			(at 80.518 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -48279,7 +49826,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 89.408 93.98 0)
+			(at 85.598 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -48288,7 +49835,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 87.3252 90.17 0)
+			(at 83.5152 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -48297,7 +49844,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 86.36 86.36 0)
+			(at 82.55 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -48306,7 +49853,7 @@
 			)
 		)
 		(property "Description" "Polarized capacitor, small symbol"
-			(at 86.36 86.36 0)
+			(at 82.55 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -48315,7 +49862,7 @@
 			)
 		)
 		(property "JLCPCB" "C49678"
-			(at 86.36 86.36 0)
+			(at 82.55 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -48324,7 +49871,16 @@
 			)
 		)
 		(property "LCSC" "C49678"
-			(at 86.36 86.36 0)
+			(at 82.55 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
+			(at 82.55 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -48417,6 +49973,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 209.55 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "2099f436-53ef-416d-ac73-9bfb3a26c700")
 		)
@@ -48494,6 +50059,15 @@
 			)
 		)
 		(property "JLCPCB" "C23345"
+			(at 252.73 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 252.73 29.21 0)
 			(effects
 				(font
@@ -48643,6 +50217,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 347.98 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "ad4453e1-67b9-4a30-83c7-a9507a784dd8")
 		)
@@ -48735,6 +50318,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 170.18 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "76947389-8186-4a75-a218-aababa82b858")
 		)
@@ -48814,6 +50406,15 @@
 			)
 		)
 		(property "LCSC" "C2297"
+			(at 364.49 241.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 364.49 241.3 0)
 			(effects
 				(font
@@ -48910,6 +50511,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 205.74 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "2f41990c-3959-43b4-8dac-8eda749072b5")
 		)
@@ -48989,6 +50599,15 @@
 			)
 		)
 		(property "LCSC" "C59461"
+			(at 293.37 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 293.37 52.07 0)
 			(effects
 				(font
@@ -49091,6 +50710,15 @@
 				)
 			)
 		)
+		(property "Field4" ""
+			(at 217.17 213.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "0d296020-5902-407e-81d7-ac6cc928ea61")
 		)
@@ -49191,6 +50819,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 346.71 223.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "4a608145-1cdc-4487-80e1-84343103ad68")
 		)
@@ -49250,6 +50887,15 @@
 			)
 		)
 		(property "Description" "Fuse"
+			(at 378.46 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 378.46 138.43 0)
 			(effects
 				(font
@@ -49353,6 +50999,15 @@
 				)
 			)
 		)
+		(property "Field4" ""
+			(at 96.52 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "99878326-373f-4eb0-80b2-8d9b3be5e05f")
 		)
@@ -49440,6 +51095,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 295.91 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "e5269aeb-4f21-4639-9d16-cb98ab7d0de6")
 		)
@@ -49500,6 +51164,15 @@
 			)
 		)
 		(property "Description" "Fuse"
+			(at 161.29 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 161.29 111.76 0)
 			(effects
 				(font
@@ -49570,6 +51243,15 @@
 			)
 		)
 		(property "Description" "DC Darlington Optocoupler, Vce 35V, CTR 600%, SO-4"
+			(at 195.58 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 195.58 73.66 0)
 			(effects
 				(font
@@ -49674,6 +51356,15 @@
 			)
 		)
 		(property "LCSC" "C23193"
+			(at 293.37 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 293.37 120.65 0)
 			(effects
 				(font
@@ -49823,6 +51514,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 347.98 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "acb134c2-6051-4f40-9d4f-77e229f46811")
 		)
@@ -49903,6 +51603,15 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Field4" ""
+			(at 162.56 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -49998,6 +51707,15 @@
 				)
 			)
 		)
+		(property "Field4" ""
+			(at 213.36 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "021cca38-1500-4a38-b3bf-3a197b6abf71")
 		)
@@ -50077,6 +51795,15 @@
 			)
 		)
 		(property "LCSC" "C7496819"
+			(at 290.83 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 290.83 128.27 0)
 			(effects
 				(font
@@ -50178,6 +51905,15 @@
 				)
 			)
 		)
+		(property "Field4" ""
+			(at 213.36 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "e367ccc5-762b-4f21-aee4-c4db412c0b5a")
 		)
@@ -50220,7 +51956,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 69.85 166.37 0)
 			(effects
 				(font
@@ -50257,6 +51993,15 @@
 			)
 		)
 		(property "JLCPCB" "C1648"
+			(at 69.85 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 69.85 166.37 0)
 			(effects
 				(font
@@ -50351,6 +52096,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 181.61 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "4825cd6a-bb01-489c-8c9a-2c9ff61b27c8")
 		)
@@ -50419,6 +52173,15 @@
 				(hide yes)
 			)
 		)
+		(property "Field4" ""
+			(at 158.75 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "2bc14883-9c59-44d8-b100-43b2a435faf3")
 		)
@@ -50479,6 +52242,15 @@
 			)
 		)
 		(property "Description" "Fuse"
+			(at 158.75 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 158.75 127 0)
 			(effects
 				(font
@@ -50567,6 +52339,15 @@
 			)
 		)
 		(property "LCSC" "C59461"
+			(at 205.74 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
 			(at 205.74 85.09 0)
 			(effects
 				(font
@@ -50668,6 +52449,15 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Field4" ""
+			(at 309.88 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
