@@ -10164,6 +10164,12 @@
 		(uuid "e26d7e27-1846-424e-a3ad-1f4ce568d3af")
 	)
 	(junction
+		(at 495.3 86.36)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e3f94d40-8d47-4062-81e4-fcc0610ac5d9")
+	)
+	(junction
 		(at 58.42 22.86)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -10222,6 +10228,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "fa1b61c5-6a5b-4c66-b361-8655796089f9")
+	)
+	(junction
+		(at 499.11 86.36)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fb9a2084-95e3-4662-a726-7510cab80ad0")
 	)
 	(junction
 		(at 289.56 74.93)
@@ -11298,6 +11310,16 @@
 			(type default)
 		)
 		(uuid "335fd1c2-2d0a-47d8-99d3-175b378f4384")
+	)
+	(wire
+		(pts
+			(xy 499.11 93.98) (xy 499.11 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "341e3af6-33a7-4447-8145-b43f9dfb7ce0")
 	)
 	(wire
 		(pts
@@ -12891,6 +12913,16 @@
 	)
 	(wire
 		(pts
+			(xy 495.3 91.44) (xy 495.3 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9164da75-d9f2-4a41-90a1-6283210c5084")
+	)
+	(wire
+		(pts
 			(xy 275.59 91.44) (xy 280.67 91.44)
 		)
 		(stroke
@@ -13108,6 +13140,16 @@
 			(type default)
 		)
 		(uuid "9cd41db5-dd18-4af1-b48b-0fe8a22a2c36")
+	)
+	(wire
+		(pts
+			(xy 488.95 86.36) (xy 495.3 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9d1dc963-f9c7-4b19-aeab-d61e0f44f48f")
 	)
 	(wire
 		(pts
@@ -13488,6 +13530,16 @@
 			(type default)
 		)
 		(uuid "b1ab4ceb-02bb-4156-b7e8-7a360629fc20")
+	)
+	(wire
+		(pts
+			(xy 499.11 86.36) (xy 505.46 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b3d46fc3-8b74-497a-acb5-173cd884336c")
 	)
 	(wire
 		(pts
@@ -14041,6 +14093,16 @@
 	)
 	(wire
 		(pts
+			(xy 495.3 81.28) (xy 488.95 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d4ace4c0-24fd-4fd7-ac66-dbccd36b886b")
+	)
+	(wire
+		(pts
 			(xy 372.11 148.59) (xy 374.65 148.59)
 		)
 		(stroke
@@ -14541,6 +14603,16 @@
 	)
 	(wire
 		(pts
+			(xy 495.3 96.52) (xy 499.11 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ea5335fc-1ac5-46a9-a333-12680dbe626e")
+	)
+	(wire
+		(pts
 			(xy 292.1 214.63) (xy 292.1 215.9)
 		)
 		(stroke
@@ -14681,6 +14753,16 @@
 	)
 	(wire
 		(pts
+			(xy 495.3 77.47) (xy 495.3 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f08954dc-b969-41c8-9434-7fc1b3bebb24")
+	)
+	(wire
+		(pts
 			(xy 69.85 77.47) (xy 69.85 83.82)
 		)
 		(stroke
@@ -14808,6 +14890,16 @@
 			(type default)
 		)
 		(uuid "f9a92edc-518e-4820-8652-8fc1b1a8e797")
+	)
+	(wire
+		(pts
+			(xy 495.3 86.36) (xy 499.11 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fa0ca897-79f2-43fa-9132-539035728da7")
 	)
 	(wire
 		(pts
@@ -15904,6 +15996,28 @@
 			)
 		)
 	)
+	(global_label "GND"
+		(shape input)
+		(at 496.57 96.52 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "29a8aace-bfe5-47c0-ac7a-4fab7614ebf9")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 496.57 102.7215 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "SDA"
 		(shape input)
 		(at 214.63 205.74 90)
@@ -16118,6 +16232,28 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "3.3V+"
+		(shape input)
+		(at 495.3 77.47 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "46c0cc45-54f8-49a1-8b7d-5160f48ec6cb")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 495.3 69.4542 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -23735,6 +23871,100 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 499.11 90.17 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0b3de309-06fe-4c64-9849-5588cc27c230")
+		(property "Reference" "R56"
+			(at 499.11 90.17 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10kΩ"
+			(at 501.65 90.17 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 497.332 90.17 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 499.11 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 499.11 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB" "C25804"
+			(at 499.11 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C25804"
+			(at 499.11 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
+			(at 499.11 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5256993b-c80c-48d7-a7fd-50ab0aef74e1")
+		)
+		(pin "2"
+			(uuid "2d220e19-32f5-4da2-855d-e89f9dd6f67d")
+		)
+		(instances
+			(project "hamodule"
+				(path "/e5217a0c-7f55-4c30-adda-7f8d95709d1b"
+					(reference "R56")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:Fuse")
 		(at 158.75 170.18 270)
 		(unit 1)
@@ -28306,6 +28536,167 @@
 		)
 	)
 	(symbol
+		(lib_id "MCP23018:MCP23018-E_SO")
+		(at 523.24 93.98 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "63540289-0816-44b6-8192-3cca7702b560")
+		(property "Reference" "U12"
+			(at 523.24 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "MCP23018-E_SO"
+			(at 523.24 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-28W_7.5x17.9mm_P1.27mm"
+			(at 523.24 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 523.24 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 523.24 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PcbText" ""
+			(at 523.24 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" "C646064"
+			(at 523.24 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C646064"
+			(at 523.24 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "5"
+			(uuid "4adb0bef-7845-4018-a2b5-89202429187f")
+		)
+		(pin "25"
+			(uuid "b7945d85-6ab9-4547-ba0b-55f0e43e19dd")
+		)
+		(pin "7"
+			(uuid "7ff0181d-9002-4fd5-9d86-00d5e4dfdf6c")
+		)
+		(pin "8"
+			(uuid "1e10a878-e29f-4814-863f-065893f2d17c")
+		)
+		(pin "12"
+			(uuid "319a339f-9da5-4808-8c90-d5897468b343")
+		)
+		(pin "13"
+			(uuid "7ac3e362-cb8e-43d1-8025-15b9f76774bb")
+		)
+		(pin "21"
+			(uuid "62d44333-d84b-449f-b92d-70c4581cc480")
+		)
+		(pin "3"
+			(uuid "e01f6a33-063c-4844-8d8c-12a3d845cca0")
+		)
+		(pin "20"
+			(uuid "84294283-1531-4c2f-bdfe-ad056dcf3821")
+		)
+		(pin "15"
+			(uuid "53e16bda-4ca4-4bbe-b19f-71f7a44d49a7")
+		)
+		(pin "1"
+			(uuid "7e7736d5-2cf0-4b47-a1aa-86b520fca20c")
+		)
+		(pin "24"
+			(uuid "fdfacd20-44f5-4e76-9fd0-40f2f0396630")
+		)
+		(pin "26"
+			(uuid "f82fbfc8-1c9e-4141-bc5b-426aeeea4ac8")
+		)
+		(pin "18"
+			(uuid "c92ee5d5-7ad6-486b-a845-5e446a1a66a0")
+		)
+		(pin "10"
+			(uuid "8818be3e-709e-4e42-a5c0-7324bc7d88dc")
+		)
+		(pin "4"
+			(uuid "2a2e2917-81cb-421d-9cdb-dff9c803ec02")
+		)
+		(pin "9"
+			(uuid "1ad6c924-c5a4-4132-ac21-8da4dd535aac")
+		)
+		(pin "6"
+			(uuid "40d1b250-4c94-496e-9e23-c1c8338c65ff")
+		)
+		(pin "11"
+			(uuid "c41d2c9c-09c2-4dfe-b0f8-d350cb84b70c")
+		)
+		(pin "19"
+			(uuid "61186481-7765-4130-b1bb-66ab166c6187")
+		)
+		(pin "16"
+			(uuid "4b0b9312-6bfd-4a6d-89f8-754fd3e8464c")
+		)
+		(pin "22"
+			(uuid "705ddcda-5ef6-470f-a7ab-bd5a397c4c30")
+		)
+		(pin "23"
+			(uuid "99dcfbec-eefe-4264-864f-941fd7f725cb")
+		)
+		(pin "27"
+			(uuid "a9b132c0-16bc-4e6f-acab-2f16defc3519")
+		)
+		(instances
+			(project "hamodule"
+				(path "/e5217a0c-7f55-4c30-adda-7f8d95709d1b"
+					(reference "U12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_Small")
 		(at 109.22 133.35 270)
 		(unit 1)
@@ -29092,6 +29483,103 @@
 			(project "hamodule"
 				(path "/e5217a0c-7f55-4c30-adda-7f8d95709d1b"
 					(reference "R13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "LDA210-PDIP:LDA210-PDIP")
+		(at 480.06 77.47 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6e4876ce-3a3b-4d93-8f07-c2dd374f523d")
+		(property "Reference" "U9"
+			(at 480.695 65.6082 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LDA210-PDIP"
+			(at 480.695 67.9196 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_DIP:DIP-8_W7.62mm_Socket_LongPads"
+			(at 459.232 92.837 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://optoelectronics.liteon.com/upload/download/DS70-2001-006/S_110_LTV-355T%2020140520.pdf"
+			(at 481.33 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "DC Darlington Optocoupler, Vce 35V, CTR 600%, SO-4"
+			(at 480.06 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
+			(at 480.06 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5853695b-67bd-41a6-8e09-5cfa8036fc98")
+		)
+		(pin "2"
+			(uuid "c695e434-30e8-47ec-953d-392617d390bb")
+		)
+		(pin "3"
+			(uuid "5ab3e460-ade9-4515-99ae-9e9251d49884")
+		)
+		(pin "4"
+			(uuid "e3ed096f-a38a-4fba-a123-c95d833f7765")
+		)
+		(pin "5"
+			(uuid "b6e017c7-c65c-4955-b275-2ee88c77174b")
+		)
+		(pin "6"
+			(uuid "9c5c2cc0-8ba2-4dfa-ab16-eb5359c9d7b3")
+		)
+		(pin "7"
+			(uuid "b1b88df5-51cc-4b1e-a402-63e62d0b7dd7")
+		)
+		(pin "8"
+			(uuid "58d3d226-1a0d-47c5-bf1d-aff989acb16b")
+		)
+		(instances
+			(project "hamodule"
+				(path "/e5217a0c-7f55-4c30-adda-7f8d95709d1b"
+					(reference "U9")
 					(unit 1)
 				)
 			)
@@ -35353,6 +35841,103 @@
 			(project "hamodule"
 				(path "/e5217a0c-7f55-4c30-adda-7f8d95709d1b"
 					(reference "J11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 495.3 88.9 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "dbf9dc7a-86e7-451a-9ed1-f4a52ca2edcd")
+		(property "Reference" "C45"
+			(at 494.03 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "22uF"
+			(at 491.49 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 495.3 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 495.3 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 495.3 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB" "C59461"
+			(at 495.3 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C59461"
+			(at 495.3 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
+			(at 495.3 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c297c289-a690-4eb2-8a01-3b0660996d39")
+		)
+		(pin "2"
+			(uuid "4f03da12-335b-4fdb-8490-8114d756a247")
+		)
+		(instances
+			(project "hamodule"
+				(path "/e5217a0c-7f55-4c30-adda-7f8d95709d1b"
+					(reference "C45")
 					(unit 1)
 				)
 			)
