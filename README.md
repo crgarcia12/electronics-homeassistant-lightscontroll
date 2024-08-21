@@ -35,6 +35,21 @@ This device has several security measurements:
 There are two versions of the board, one with four channels and another with eight channels.
 Latest versions use ESP32-S3, which is a very powerful microcontroller with a lot of features.
 
+# Version 23: Eight channels
+
+Compared to version 22:
+* Eight channels controlled via I2C for relays and mains sensing
+* Added RGB Led controller
+* Capacitor for 5v line
+* Compatible with case: RS PRO Modular Enclosure for DIN rail Stock number: 1862291 (https://uk.rs-online.com/web/p/din-rail-enclosures/1862291/)
+* Added MCP23018 as IO expander and TXB0108PW to shift the output of the darlington (~2.5V) to the logical high (3.3V)
+![board-schematics](PCB/schematics-v23.8/readme-media/hamodule.svg)
+![board-pcb](PCB/schematics-v23.8/readme-media/board.png)
+![board-pcb](PCB/schematics-v23.8/readme-media/3d_board_2.png)
+![board-pcb](PCB/schematics-v23.8/readme-media/3d_board_3.png)
+![board-pcb](PCB/schematics-v23.8/readme-media/3d_board_4.png)
+
+
 # Version 22: Four channels
 [Detailed information](PCB/schematics-v22-jlcpcb/)
 
@@ -55,20 +70,6 @@ Since Version 17:
 ![board-real-image](PCB/schematics-v22-jlcpcb/readme-media/board-real-2.jpg)
 ![board-real-image](PCB/schematics-v22-jlcpcb/readme-media/board-real-3.jpg)
 ![board-real-image](PCB/schematics-v22-jlcpcb/readme-media/board-real-4.jpg)
-
-# Version 23: Eight channels
-
-Compared to version 22:
-* Eight channels controlled via I2C for relays and mains sensing
-* Added RGB Led controller
-* Capacitor for 5v line
-* Compatible with case: RS PRO Modular Enclosure for DIN rail Stock number: 1862291 (https://uk.rs-online.com/web/p/din-rail-enclosures/1862291/)
-
-![board-schematics](PCB/schematics-v23.8/readme-media/board-schematics.svg)
-![board-pcb](PCB/schematics-v23.8/readme-media/board.png)
-![board-pcb](PCB/schematics-v23.8/readme-media/3d_board_2.png)
-![board-pcb](PCB/schematics-v23.8/readme-media/3d_board_3.png)
-![board-pcb](PCB/schematics-v23.8/readme-media/3d_board_4.png)
 
 # How does it work?
 Section under development.
