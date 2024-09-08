@@ -43,11 +43,16 @@ Compared to version 22:
 * Capacitor for 5v line
 * Compatible with case: RS PRO Modular Enclosure for DIN rail Stock number: 1862291 (https://uk.rs-online.com/web/p/din-rail-enclosures/1862291/)
 * Added MCP23018 as IO expander and TXB0108PW to shift the output of the darlington (~2.5V) to the logical high (3.3V)
-![board-schematics](PCB/schematics-v23.8/readme-media/hamodule.svg)
-![board-pcb](PCB/schematics-v23.8/readme-media/board.png)
-![board-pcb](PCB/schematics-v23.8/readme-media/3d_board_2.png)
-![board-pcb](PCB/schematics-v23.8/readme-media/3d_board_3.png)
-![board-pcb](PCB/schematics-v23.8/readme-media/3d_board_4.png)
+
+Bugs
+* MCP23018 is open drain and not a direct replace from MCP23017: Outputs are GND or disconnected, not Vcc
+* Mid-PCB mounting hole in the cuted version is not properly placed
+
+![board-schematics](PCB/schematics-v23.8/-jlcpcbreadme-media/hamodule.svg)
+![board-pcb](PCB/schematics-v23.8-jlcpcb/readme-media/board.png)
+![board-pcb](PCB/schematics-v23.8-jlcpcb/readme-media/3d_board_2.png)
+![board-pcb](PCB/schematics-v23.8-jlcpcb/readme-media/3d_board_3.png)
+![board-pcb](PCB/schematics-v23.8-jlcpcb/readme-media/3d_board_4.png)
 
 
 # Version 22: Four channels
