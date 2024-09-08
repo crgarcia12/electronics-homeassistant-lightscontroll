@@ -35,6 +35,11 @@ This device has several security measurements:
 There are two versions of the board, one with four channels and another with eight channels.
 Latest versions use ESP32-S3, which is a very powerful microcontroller with a lot of features.
 
+# Version 24: Eight channels
+Compared to version 22:
+* Using TCAL6416A instead of MCP23108 due to having push-pull instead of open-drain ouputs
+* Adjust the border cut-outs to fit the middle mounting hole
+
 # Version 23: Eight channels
 
 Compared to version 22:
