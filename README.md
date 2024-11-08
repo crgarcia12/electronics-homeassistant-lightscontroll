@@ -35,58 +35,23 @@ This device has several security measurements:
 There are two versions of the board, one with four channels and another with eight channels.
 Latest versions use ESP32-S3, which is a very powerful microcontroller with a lot of features.
 
-# Version 24: Eight channels
+# Version 24: Eight channels with IO expander
 Compared to version 23:
 * Using TCAL6416A instead of MCP23108 due to having push-pull instead of open-drain ouputs
 * Adjust the border cut-outs to fit the middle mounting hole
+* There are two versions of this board, the only difference is the size of the cutouts. After having the board printed and the case I will test out which one fits better
 
+Version 24.8-1
+![board-schematics](PCB/schematics-v24-1-jlcpcb/readme-media/schematics.svg)
+![board-pcb](PCB/schematics-v24-1-jlcpcb/readme-media/board.png)
+
+Version 24.8-2
 ![board-schematics](PCB/schematics-v24-2-jlcpcb/readme-media/schematics.svg)
 ![board-pcb](PCB/schematics-v24-2-jlcpcb/readme-media/board.png)
 ![board-pcb](PCB/schematics-v24-2-jlcpcb/readme-media/3d_board_1.png)
 ![board-pcb](PCB/schematics-v24.2-jlcpcb/readme-media/3d_board_2.png)
 ![board-pcb](PCB/schematics-v24.2-jlcpcb/readme-media/3d_board_3.png)
 ![board-pcb](PCB/schematics-v24.2-jlcpcb/readme-media/3d_board_4.png)
-
-# Version 23: Eight channels
-
-Compared to version 22:
-* Eight channels controlled via I2C for relays and mains sensing
-* Added RGB Led controller
-* Capacitor for 5v line
-* Compatible with case: RS PRO Modular Enclosure for DIN rail Stock number: 1862291 (https://uk.rs-online.com/web/p/din-rail-enclosures/1862291/)
-* Added MCP23018 as IO expander and TXB0108PW to shift the output of the darlington (~2.5V) to the logical high (3.3V)
-
-Bugs
-* MCP23018 is open drain and not a direct replace from MCP23017: Outputs are GND or disconnected, not Vcc
-* Mid-PCB mounting hole in the cuted version is not properly placed
-
-![board-schematics](PCB/schematics-v23.8/-jlcpcbreadme-media/hamodule.svg)
-![board-pcb](PCB/schematics-v23.8-jlcpcb/readme-media/board.png)
-![board-pcb](PCB/schematics-v23.8-jlcpcb/readme-media/3d_board_2.png)
-![board-pcb](PCB/schematics-v23.8-jlcpcb/readme-media/3d_board_3.png)
-![board-pcb](PCB/schematics-v23.8-jlcpcb/readme-media/3d_board_4.png)
-
-
-# Version 22: Four channels
-[Detailed information](PCB/schematics-v22-jlcpcb/)
-
-Since Version 17: 
-* Cut-out ESP32 Antena area
-* Move silkscreen for readability
-* Improved schematic readability
-* Add leds to indicate when relays are ON
-
-![board-schematics](PCB/schematics-v22-jlcpcb/readme-media/board-schematics.svg)
-![board-pcb](PCB/schematics-v22-jlcpcb/readme-media/board-pcb.jpg)
-![board-pcb-3d](PCB/schematics-v22-jlcpcb/readme-media/board-pcb-3d-4.png)
-![board-pcb-3d](PCB/schematics-v22-jlcpcb/readme-media/board-pcb-3d-5.png)
-![board-pcb-3d](PCB/schematics-v22-jlcpcb/readme-media/board-pcb-3d-2.png)
-![board-pcb-3d](PCB/schematics-v22-jlcpcb/readme-media/board-pcb-3d.png)
-![board-pcb-3d](PCB/schematics-v22-jlcpcb/readme-media/board-pcb-3d-3.png)
-![board-real-image](PCB/schematics-v22-jlcpcb/readme-media/board-real-1.jpg)
-![board-real-image](PCB/schematics-v22-jlcpcb/readme-media/board-real-2.jpg)
-![board-real-image](PCB/schematics-v22-jlcpcb/readme-media/board-real-3.jpg)
-![board-real-image](PCB/schematics-v22-jlcpcb/readme-media/board-real-4.jpg)
 
 # How does it work?
 Section under development.
@@ -182,6 +147,48 @@ schematics:
 
 PCB:
 Print to PDF, and use a high-resolution PDF to JPG converting website like: https://pdf2jpg.net/
+
+
+# Older Versions: 23 Eight channels
+
+Compared to version 22:
+* Eight channels controlled via I2C for relays and mains sensing
+* Added RGB Led controller
+* Capacitor for 5v line
+* Compatible with case: RS PRO Modular Enclosure for DIN rail Stock number: 1862291 (https://uk.rs-online.com/web/p/din-rail-enclosures/1862291/)
+* Added MCP23018 as IO expander and TXB0108PW to shift the output of the darlington (~2.5V) to the logical high (3.3V)
+
+Bugs
+* MCP23018 is open drain and not a direct replace from MCP23017: Outputs are GND or disconnected, not Vcc
+* Mid-PCB mounting hole in the cuted version is not properly placed
+
+![board-schematics](PCB/schematics-v23.8/-jlcpcbreadme-media/hamodule.svg)
+![board-pcb](PCB/schematics-v23.8-jlcpcb/readme-media/board.png)
+![board-pcb](PCB/schematics-v23.8-jlcpcb/readme-media/3d_board_2.png)
+![board-pcb](PCB/schematics-v23.8-jlcpcb/readme-media/3d_board_3.png)
+![board-pcb](PCB/schematics-v23.8-jlcpcb/readme-media/3d_board_4.png)
+
+
+# Older versions: 22 Four channels
+[Detailed information](PCB/schematics-v22-jlcpcb/)
+
+Since Version 17: 
+* Cut-out ESP32 Antena area
+* Move silkscreen for readability
+* Improved schematic readability
+* Add leds to indicate when relays are ON
+
+![board-schematics](PCB/schematics-v22-jlcpcb/readme-media/board-schematics.svg)
+![board-pcb](PCB/schematics-v22-jlcpcb/readme-media/board-pcb.jpg)
+![board-pcb-3d](PCB/schematics-v22-jlcpcb/readme-media/board-pcb-3d-4.png)
+![board-pcb-3d](PCB/schematics-v22-jlcpcb/readme-media/board-pcb-3d-5.png)
+![board-pcb-3d](PCB/schematics-v22-jlcpcb/readme-media/board-pcb-3d-2.png)
+![board-pcb-3d](PCB/schematics-v22-jlcpcb/readme-media/board-pcb-3d.png)
+![board-pcb-3d](PCB/schematics-v22-jlcpcb/readme-media/board-pcb-3d-3.png)
+![board-real-image](PCB/schematics-v22-jlcpcb/readme-media/board-real-1.jpg)
+![board-real-image](PCB/schematics-v22-jlcpcb/readme-media/board-real-2.jpg)
+![board-real-image](PCB/schematics-v22-jlcpcb/readme-media/board-real-3.jpg)
+![board-real-image](PCB/schematics-v22-jlcpcb/readme-media/board-real-4.jpg)
 
 # Older versions: 21
 * Using the new ESP32-S3
