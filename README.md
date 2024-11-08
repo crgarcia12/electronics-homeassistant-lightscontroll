@@ -38,6 +38,7 @@ Latest versions use ESP32-S3, which is a very powerful microcontroller with a lo
 # Version 24: Eight channels with IO expander
 Compared to version 23:
 * Using TCAL6416A instead of MCP23108 due to having push-pull instead of open-drain ouputs
+* MCP23017 has released an amendum to the datasheet declaring a bug in two pins. Making them read only
 * Adjust the border cut-outs to fit the middle mounting hole
 * There are two versions of this board, the only difference is the size of the cutouts. After having the board printed and the case I will test out which one fits better
 
@@ -48,34 +49,57 @@ Version 24.8-1
 Version 24.8-2
 ![board-schematics](PCB/schematics-v24-2-jlcpcb/readme-media/schematics.svg)
 ![board-pcb](PCB/schematics-v24-2-jlcpcb/readme-media/board.png)
-![board-pcb](PCB/schematics-v24-2-jlcpcb/readme-media/3d_board_1.png)
-![board-pcb](PCB/schematics-v24.2-jlcpcb/readme-media/3d_board_2.png)
-![board-pcb](PCB/schematics-v24.2-jlcpcb/readme-media/3d_board_3.png)
-![board-pcb](PCB/schematics-v24.2-jlcpcb/readme-media/3d_board_4.png)
+![board-pcb](PCB/schematics-v24-2-jlcpcb/readme-media/3d-board-1.png)
+![board-pcb](PCB/schematics-v24-2-jlcpcb/readme-media/3d-board-2.png)
+![board-pcb](PCB/schematics-v24-2-jlcpcb/readme-media/3d-board-3.png)
+![board-pcb](PCB/schematics-v24-2-jlcpcb/readme-media/3d-board-4.png)
 
 # How does it work?
 Section under development.
 ## Mains sensing
 Section under development.
 
-In here there will be a detailed description on how Mains is sensed.
+The PCB uses an optocoupler (LDA210 or ILD755) to detect the presence of mains voltage. These darlington optocouplers are chosen specifically for their low current requirements, drawing only 0.7mA at less than 2V. This low-power design allows for efficient sensing without overheating components.
 
-Few teaser pictures that show how optocouplers with darlington behave. This allows the board to use very large resistors, very little current, and hence small fuses. All that improves safety and lowers the board consumption: 
-![oscilloscope-sensing-mains-1](PCB/schematics-v22-jlcpcb/readme-media/osc-sens-switch-on.jpg)
-![oscilloscope-sensing-mains-2](PCB/schematics-v22-jlcpcb/readme-media/osc-sens-on.jpg)
+To reduce the mains voltage to a safe level for the optocoupler, a 300kΩ resistance setup is used. This configuration dissipates only 0.17W, which is split across two resistors. Each resistor, therefore, dissipates about 0.08W, preventing overheating issues commonly seen with other designs (such as those using the HCP chip). This improvement enhances both the safety and longevity of the PCB.
+
+Each mains sensing channel is equipped with a fuse to protect against failures. In the event that one of the resistors fails short, the remaining resistor can carry up to 1.5mA until the fuse burns out, effectively preventing further damage. During this failure condition, the resistor would dissipate about 0.4W, so large resistors are used to withstand this potential load.
+
+## Optocoupler and capacitors behaviour
+
+This PCB uses a Darlington optocoupler (LDA210), chosen for its high-gain behavior, which allows the system to react more quickly when mains power is turned on and requires less current on the LED side. 
+
+The oscilloscope images bellow show two different channels after the optocoupler while they are sensing mains. The yellow channel does not have any capacitors on the outpu, while the blue line has the capacitors.
+
+In the first image, the optocoupler’s response to the sine wave is shown when mains power is ON. The blue line illustrates how capacitors help maintain the output in a high state when the AC cycle is crossing zero. This capacitor-induced holding effect ensures that the output remains stable, preventing fluctuations in the DC output that could cause false OFF triggers. However, this design means the line must be off for several cycles before the microcontroller can reliably detect the "off" state. Using excessively large capacitors can increase the detection delay to a noticeable extent, so capacitor size must be carefully selected to balance responsiveness and stability.
+
+![oscilloscope-sensing-mains-1](PCB/schematics-v22-jlcpcb/readme-media/osc-sens-on.jpg)
+
+When mains power is first applied (yellow line), the capacitor requires time to charge before the optocoupler’s output reaches a high state (blue line). This results in a slight delay before the microcontroller detects the power-on state. If overly large capacitors are used, this delay becomes more pronounced, which can reduce responsiveness. The capacitor size muist be carefully selected to minimize this delay while ensuring system stability.
+
+![oscilloscope-sensing-mains-2](PCB/schematics-v22-jlcpcb/readme-media/osc-sens-switch-on.jpg)
+
+Switching off mains power can generate noise, particularly depending on where in the sine wave the power is cut (e.g., at zero-crossing). Capacitors on the PCB help absorb much of this noise, reducing the likelihood of transient spikes or false "on" triggers that could interfere with other components or the microcontroller. This filtering helps improve system reliability, especially in noisy environments.
+
 ![oscilloscope-sensing-mains-3](PCB/schematics-v22-jlcpcb/readme-media/osc-sens-switch-off.jpg)
-## Relays
-Section under development. In here there will be a detailed description on why SSR with snubber relay was selected
 
-This picture shows standard relays. Those have very large spikes
+## Relays
+The initial design for this system included small PCB-mounted mechanical relays, such as the PCN105D model. These relays, while compact and effective for basic switching, generated significant electromagnetic interference (EMI) due to the mechanical contacts. Despite efforts to mitigate this noise by adding flyback diodes and isolating the ground plane, the interference remained high. Under certain conditions, EMI levels were high enough to cause the microcontroller to reset, making this setup unreliable for stable home automation.
+
+The image below illustrates the noise generated by the PCN105D mechanical relay during operation. This noise spike, especially during switching events, demonstrated the limitations of PCB-mounted relays in applications requiring low EMI.
+
+These PCB relays are intended to trigger DIN-mounted latching relays, which are commonly used in electrical installations typically without flyback diodes, resulting in voltage spikes of several KV when switched off.
+
+This picture shows PCN105D relays when switced off
 ![oscilloscope-relays-mechanical](readme-media/relay-analysis/Mechanical-PCN-105D.png)
 
-This picture shows SSR relays with snubber. Spikes still exist, but they are much smaller and more isolated, reducing noise-related issues
+To address the noise and stability issues, the design was upgraded to use AQG22205 solid-state relays. These relays are only rated at 2A, but they incorporate an internal snubber circuit, making them far more resistant to voltage spikes on the mains side. Unlike mechanical relays, these solid-state relays do not generate any noise during switching.
+
 ![oscilloscope-relays-ssr](readme-media/relay-analysis/SSR-AQG12105.png)
 
 # Simulate mains sensing cirquit
 
-The mains sensing circuit can be simulated online at [lushprojects](http://lushprojects.com/circuitjs/circuitjs.html?ctz=CQAgjCAMB0l3BWEBmGZkDYAcmte2AJwYYgDskISClCApgLRhgBQAbiA8Stp91pUoQaIAEyookmAhYB3EABYsIAYuVgFCqCwAma8JvBhRYyMpM66AMwCGAVwA2AF137RZE8xOizYkJdtHFz0mUh9lJQMtC2t7Z1dQ0wjzDz8AuJd5SPcTSNxtLOV8rlJ8yDlOMDDfRNQtcvkvJPAMSnCCytLIaNEtOu0AJz5SVUjVSlR4coAPEAxkZBQECDIRZAQtaMoAUQBlAAVkUQAdAGcAcX2ASQB5FgVIMkVs3wRRc19WeVFesQexX79cocVbeVKg5qCRQTaCLKHSCoYX7tDZbZTlIZI6Lgt5iVK0KYVVF-WiGHLaADGc2RvixeJMglgUwUhFZbPZHNIaDAZkwGh5ZiwZAoXKZXyoZNSdPJDWpaPIuPa5VO9OaC2q6MktgcpzoLExgJ8CpMRyhAsJ8mlUsNggqEPJENN2lmPkI4CwSAeWjAeEUphAAFkbABLAB2pzOuzo4bDAHNI7Jg04KQALCqaD5FTCQirk9pVNq+WUZkkA6L-coAe0kGHq0NZKCNMHgZCwxiQbUkyBY1bAT1rkgeDY7TLghDIGAQSKQEE8T271fEczrQ7dI6m48n0783kW3aAA). 
+If you want to understand how the mains sensing circuit work, you can use this simulation: [lushprojects](http://lushprojects.com/circuitjs/circuitjs.html?ctz=CQAgjCAMB0l3BWEBmGZkDYAcmte2AJwYYgDskISClCApgLRhgBQAbiA8Stp91pUoQaIAEyookmAhYB3EABYsIAYuVgFCqCwAma8JvBhRYyMpM66AMwCGAVwA2AF137RZE8xOizYkJdtHFz0mUh9lJQMtC2t7Z1dQ0wjzDz8AuJd5SPcTSNxtLOV8rlJ8yDlOMDDfRNQtcvkvJPAMSnCCytLIaNEtOu0AJz5SVUjVSlR4coAPEAxkZBQECDIRZAQtaMoAUQBlAAVkUQAdAGcAcX2ASQB5FgVIMkVs3wRRc19WeVFesQexX79cocVbeVKg5qCRQTaCLKHSCoYX7tDZbZTlIZI6Lgt5iVK0KYVVF-WiGHLaADGc2RvixeJMglgUwUhFZbPZHNIaDAZkwGh5ZiwZAoXKZXyoZNSdPJDWpaPIuPa5VO9OaC2q6MktgcpzoLExgJ8CpMRyhAsJ8mlUsNggqEPJENN2lmPkI4CwSAeWjAeEUphAAFkbABLAB2pzOuzo4bDAHNI7Jg04KQALCqaD5FTCQirk9pVNq+WUZkkA6L-coAe0kGHq0NZKCNMHgZCwxiQbUkyBY1bAT1rkgeDY7TLghDIGAQSKQEE8T271fEczrQ7dI6m48n0783kW3aAA). 
 
 ```
 $ 1 0.000005 30.13683688681966 70 5 50 5e-11
