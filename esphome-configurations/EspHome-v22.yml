@@ -48,6 +48,11 @@ i2c:
   scan: false
   frequency: 10kHz
 
+  # TCAL6416A I2C expander
+  - platform: tca9534
+    id: tca9534
+    address: 0x20
+
 # I2C temp sensor in the PCB (U7)
 sensor:
   - platform: sht4x
@@ -94,6 +99,40 @@ binary_sensor:
     name: sensor_4
     pin:
       number: GPIO5
+      mode: INPUT
+      inverted: false
+
+  # TCAL6416A pins
+  - platform: gpio
+    name: tca9534_p0
+    id: tca9534_p0
+    pin:
+      tca9534_id: tca9534
+      number: 0
+      mode: INPUT
+      inverted: false
+  - platform: gpio
+    name: tca9534_p1
+    id: tca9534_p1
+    pin:
+      tca9534_id: tca9534
+      number: 1
+      mode: INPUT
+      inverted: false
+  - platform: gpio
+    name: tca9534_p2
+    id: tca9534_p2
+    pin:
+      tca9534_id: tca9534
+      number: 2
+      mode: INPUT
+      inverted: false
+  - platform: gpio
+    name: tca9534_p3
+    id: tca9534_p3
+    pin:
+      tca9534_id: tca9534
+      number: 3
       mode: INPUT
       inverted: false
 
@@ -260,3 +299,41 @@ switch:
     on_turn_on:
       - delay: 500ms
       - switch.turn_off: relay_4
+
+  # TCAL6416A pins
+  - platform: gpio
+    id: relay_5
+    name: Relay 5
+    pin:
+      tca9534_id: tca9534
+      number: 4
+    on_turn_on:
+      - delay: 500ms
+      - switch.turn_off: relay_5
+  - platform: gpio
+    id: relay_6
+    name: Relay 6
+    pin:
+      tca9534_id: tca9534
+      number: 5
+    on_turn_on:
+      - delay: 500ms
+      - switch.turn_off: relay_6
+  - platform: gpio
+    id: relay_7
+    name: Relay 7
+    pin:
+      tca9534_id: tca9534
+      number: 6
+    on_turn_on:
+      - delay: 500ms
+      - switch.turn_off: relay_7
+  - platform: gpio
+    id: relay_8
+    name: Relay 8
+    pin:
+      tca9534_id: tca9534
+      number: 7
+    on_turn_on:
+      - delay: 500ms
+      - switch.turn_off: relay_8
