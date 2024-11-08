@@ -36,9 +36,16 @@ There are two versions of the board, one with four channels and another with eig
 Latest versions use ESP32-S3, which is a very powerful microcontroller with a lot of features.
 
 # Version 24: Eight channels
-Compared to version 22:
+Compared to version 23:
 * Using TCAL6416A instead of MCP23108 due to having push-pull instead of open-drain ouputs
 * Adjust the border cut-outs to fit the middle mounting hole
+
+![board-schematics](PCB/schematics-v24-2-jlcpcb/readme-media/schematics.svg)
+![board-pcb](PCB/schematics-v24-2-jlcpcb/readme-media/board.png)
+![board-pcb](PCB/schematics-v24-2-jlcpcb/readme-media/3d_board_1.png)
+![board-pcb](PCB/schematics-v24.2-jlcpcb/readme-media/3d_board_2.png)
+![board-pcb](PCB/schematics-v24.2-jlcpcb/readme-media/3d_board_3.png)
+![board-pcb](PCB/schematics-v24.2-jlcpcb/readme-media/3d_board_4.png)
 
 # Version 23: Eight channels
 
