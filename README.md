@@ -40,13 +40,13 @@ Compared to version 23:
 * Using TCAL6416A instead of MCP23108 due to having push-pull instead of open-drain ouputs
 * MCP23017 has released an amendum to the datasheet declaring a bug in two pins. Making them read only
 * Adjust the border cut-outs to fit the middle mounting hole
-* There are two versions of this board, the only difference is the size of the cutouts. After having the board printed and the case I will test out which one fits better
+* There are two versions of this board, one using SN74LVCH8 and the otherone using TXB0108. If you want to compare them, switch between the two schematics in two tabs of the browser
 
-Version 24.8-1
+Version 24.8-1 (TXB0108)
 ![board-schematics](PCB/schematics-v24-1-jlcpcb/readme-media/schematics.svg)
 ![board-pcb](PCB/schematics-v24-1-jlcpcb/readme-media/board.png)
 
-Version 24.8-2
+Version 24.8-2 (SN74LVCH8 + OUTPUT_ENABLED)
 ![board-schematics](PCB/schematics-v24-2-jlcpcb/readme-media/schematics.svg)
 ![board-pcb](PCB/schematics-v24-2-jlcpcb/readme-media/board.png)
 ![board-pcb](PCB/schematics-v24-2-jlcpcb/readme-media/3d-board-1.png)
