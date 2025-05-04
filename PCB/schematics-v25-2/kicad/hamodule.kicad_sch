@@ -2874,6 +2874,15 @@
 					(hide yes)
 				)
 			)
+			(property "Sim.Pins" "1=K 2=A"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 			(property "ki_keywords" "LED diode"
 				(at 0 0 0)
 				(effects
@@ -3256,21 +3265,19 @@
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "R"
-				(at 0.762 0.508 0)
+				(at 0 0 90)
 				(effects
 					(font
-						(size 1.27 1.27)
+						(size 1.016 1.016)
 					)
-					(justify left)
 				)
 			)
 			(property "Value" "R_Small"
-				(at 0.762 -1.016 0)
+				(at 1.778 0 90)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
 			(property "Footprint" ""
@@ -3460,7 +3467,7 @@
 					(hide yes)
 				)
 			)
-			(property "Sim.Library" "${KICAD7_SYMBOL_DIR}/Simulation_SPICE.sp"
+			(property "Sim.Library" "${KICAD9_SYMBOL_DIR}/Simulation_SPICE.sp"
 				(at 0 0 0)
 				(effects
 					(font
@@ -4531,7 +4538,7 @@
 				(offset 0)
 				(hide yes)
 			)
-			(exclude_from_sim yes)
+			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "JP"
@@ -6003,7 +6010,7 @@
 				(offset 1.016)
 				(hide yes)
 			)
-			(exclude_from_sim yes)
+			(exclude_from_sim no)
 			(in_bom no)
 			(on_board yes)
 			(property "Reference" "H"
@@ -11685,6 +11692,10 @@
 		(uuid "47fa6225-81bf-4158-9873-31b480860750")
 	)
 	(no_connect
+		(at 176.53 199.39)
+		(uuid "59c1f313-2392-4659-9cce-8f4f8fb5eebe")
+	)
+	(no_connect
 		(at 44.45 218.44)
 		(uuid "5e32fc38-195e-4fba-90a9-630a83a93ce8")
 	)
@@ -11703,6 +11714,10 @@
 	(no_connect
 		(at 60.96 146.05)
 		(uuid "6bf73506-420b-4791-8fda-ea6bb1a15e01")
+	)
+	(no_connect
+		(at 176.53 201.93)
+		(uuid "71d2b8bf-65e8-4f30-bef9-3d9c540f1f97")
 	)
 	(no_connect
 		(at 276.86 279.4)
@@ -21857,7 +21872,7 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Library" "${KICAD7_SYMBOL_DIR}/Simulation_SPICE.sp"
+		(property "Sim.Library" "${KICAD9_SYMBOL_DIR}/Simulation_SPICE.sp"
 			(at 58.42 36.83 0)
 			(effects
 				(font
@@ -22915,7 +22930,7 @@
 			)
 		)
 		(property "Footprint" "wago-2604-1104:big_pads_2604-1104"
-			(at 139.7 144.526 0)
+			(at 140.97 133.35 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -22932,23 +22947,6 @@
 			)
 		)
 		(property "Description" ""
-			(at 139.7 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "PcbText" ""
-			(at 139.7 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Field4" ""
 			(at 139.7 146.05 0)
 			(effects
 				(font
@@ -23016,7 +23014,7 @@
 			)
 		)
 		(property "Footprint" "wago-2604-1104:big_pads_2604-1104"
-			(at 403.86 92.964 0)
+			(at 402.59 104.14 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -23033,23 +23031,6 @@
 			)
 		)
 		(property "Description" ""
-			(at 403.86 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "PcbText" ""
-			(at 403.86 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Field4" ""
 			(at 403.86 91.44 0)
 			(effects
 				(font
@@ -23665,9 +23646,19 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Field4" ""
+			(at 96.52 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 96.52 59.69 0)
 			(effects
 				(font
@@ -25206,7 +25197,7 @@
 			)
 		)
 		(property "Footprint" "wago-2604-1104:big_pads_2604-1104"
-			(at 403.86 147.574 0)
+			(at 402.59 158.75 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -25223,23 +25214,6 @@
 			)
 		)
 		(property "Description" ""
-			(at 403.86 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "PcbText" ""
-			(at 403.86 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Field4" ""
 			(at 403.86 146.05 0)
 			(effects
 				(font
@@ -25743,6 +25717,15 @@
 			)
 		)
 		(property "Field4" ""
+			(at 273.05 275.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 273.05 275.59 0)
 			(effects
 				(font
@@ -26667,6 +26650,23 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 321.31 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PcbText" ""
+			(at 321.31 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "cc5f8396-76ef-4062-a10f-37dcea3ebbed")
 		)
@@ -27499,6 +27499,23 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 321.31 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PcbText" ""
+			(at 321.31 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -28663,6 +28680,23 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 321.31 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PcbText" ""
+			(at 321.31 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "774fe349-3936-4dfb-af14-d927fcc9b981")
 		)
@@ -29182,7 +29216,7 @@
 			)
 		)
 		(property "Footprint" "wago-2604-1104:big_pads_2604-1104"
-			(at 139.7 86.106 0)
+			(at 140.97 74.93 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -29199,23 +29233,6 @@
 			)
 		)
 		(property "Description" ""
-			(at 139.7 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "PcbText" ""
-			(at 139.7 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Field4" ""
 			(at 139.7 87.63 0)
 			(effects
 				(font
@@ -29533,6 +29550,15 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 269.24 275.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -30453,9 +30479,19 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Field4" ""
+			(at 321.31 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 321.31 128.27 0)
 			(effects
 				(font
@@ -35259,6 +35295,23 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 321.31 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PcbText" ""
+			(at 321.31 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "9eb0afe1-f6a8-4c9e-bd8d-c2bbd68571f4")
 		)
@@ -35970,6 +36023,23 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 321.31 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PcbText" ""
+			(at 321.31 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -37921,6 +37991,23 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 364.49 244.856 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PcbText" ""
+			(at 364.49 241.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "c5a60fb6-3306-4dcd-835f-9353c159de35")
 		)
@@ -38899,9 +38986,19 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Field4" ""
+			(at 96.52 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 96.52 64.77 0)
 			(effects
 				(font
@@ -39004,6 +39101,23 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 321.31 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PcbText" ""
+			(at 321.31 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -39891,6 +40005,23 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 321.31 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PcbText" ""
+			(at 321.31 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "a1ddae8e-d55d-43e0-83bd-de5abc2f5e15")
 		)
@@ -39942,7 +40073,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74lvch8t245.pdf"
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74lvch8t245.pd"
 			(at 235.966 129.032 0)
 			(effects
 				(font

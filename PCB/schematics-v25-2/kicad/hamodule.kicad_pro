@@ -579,7 +579,6 @@
       "Net-(D1-A)": [
         "USB"
       ],
-      "Net-(D3-A)": "USB",
       "Net-(F1-Pad1)": [
         "Mains"
       ],
@@ -679,8 +678,6 @@
       "Net-(F9-Pad2)": [
         "Mains"
       ],
-      "Net-(J11-CC1)": "USB",
-      "Net-(J11-CC2)": "USB",
       "Net-(J3-CC1)": [
         "USB"
       ],
@@ -702,18 +699,12 @@
       "Net-(R14-Pad2)": [
         "Mains"
       ],
-      "Net-(R15-Pad1)": "Mains",
       "Net-(R15-Pad2)": [
         "Mains"
       ],
-      "Net-(R16-Pad1)": "Mains",
       "Net-(R16-Pad2)": [
         "Mains"
       ],
-      "Net-(R17-Pad1)": "Mains",
-      "Net-(R17-Pad2)": "Mains-LowVoltage",
-      "Net-(R18-Pad1)": "Mains",
-      "Net-(R18-Pad2)": "Mains-LowVoltage",
       "Net-(R19-Pad2)": [
         "Mains-LowVoltage"
       ],
@@ -740,15 +731,7 @@
       ],
       "Net-(R26-Pad2)": [
         "Mains-LowVoltage"
-      ],
-      "Net-(R27-Pad2)": "Mains",
-      "Net-(R28-Pad2)": "Mains",
-      "Net-(R29-Pad2)": "Mains",
-      "Net-(R30-Pad2)": "Mains",
-      "Net-(R31-Pad2)": "Mains-LowVoltage",
-      "Net-(R32-Pad2)": "Mains-LowVoltage",
-      "Net-(R33-Pad2)": "Mains-LowVoltage",
-      "Net-(R34-Pad2)": "Mains-LowVoltage"
+      ]
     },
     "netclass_patterns": []
   },
@@ -966,7 +949,7 @@
       ],
       "filter_string": "",
       "group_symbols": true,
-      "include_excluded_from_bom": false,
+      "include_excluded_from_bom": true,
       "name": "",
       "sort_asc": true,
       "sort_field": "Reference"
