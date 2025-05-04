@@ -70,16 +70,19 @@
         "copper_edge_clearance": "error",
         "copper_sliver": "warning",
         "courtyards_overlap": "error",
+        "creepage": "error",
         "diff_pair_gap_out_of_range": "error",
         "diff_pair_uncoupled_length_too_long": "error",
         "drill_out_of_range": "error",
         "duplicate_footprints": "warning",
         "extra_footprint": "warning",
         "footprint": "error",
+        "footprint_filters_mismatch": "ignore",
         "footprint_symbol_mismatch": "warning",
         "footprint_type_mismatch": "error",
         "hole_clearance": "error",
         "hole_near_hole": "error",
+        "hole_to_hole": "error",
         "holes_co_located": "warning",
         "invalid_outline": "error",
         "isolated_copper": "warning",
@@ -90,9 +93,11 @@
         "lib_footprint_mismatch": "warning",
         "malformed_courtyard": "error",
         "microvia_drill_out_of_range": "error",
+        "mirrored_text_on_front_layer": "warning",
         "missing_courtyard": "ignore",
         "missing_footprint": "warning",
         "net_conflict": "warning",
+        "nonmirrored_text_on_back_layer": "warning",
         "npth_inside_courtyard": "error",
         "padstack": "error",
         "pth_inside_courtyard": "error",
@@ -104,10 +109,13 @@
         "solder_mask_bridge": "error",
         "starved_thermal": "error",
         "text_height": "warning",
+        "text_on_edge_cuts": "error",
         "text_thickness": "warning",
         "through_hole_pad_without_hole": "error",
         "too_many_vias": "error",
+        "track_angle": "error",
         "track_dangling": "warning",
+        "track_segment_length": "error",
         "track_width": "error",
         "tracks_crossing": "error",
         "unconnected_items": "error",
@@ -124,6 +132,7 @@
         "min_clearance": 0.0,
         "min_connection": 0.0,
         "min_copper_edge_clearance": 0.01,
+        "min_groove_width": 0.0,
         "min_hole_clearance": 0.25,
         "min_hole_to_hole": 0.25,
         "min_microvia_diameter": 0.2,
@@ -145,10 +154,11 @@
       },
       "teardrop_options": [
         {
-          "td_onpadsmd": true,
+          "td_onpthpad": true,
           "td_onroundshapesonly": false,
+          "td_onsmdpad": true,
           "td_ontrackend": false,
-          "td_onviapad": true
+          "td_onvia": true
         }
       ],
       "teardrop_parameters": [
@@ -240,6 +250,7 @@
       "mfg": "",
       "mpn": ""
     },
+    "layer_pairs": [],
     "layer_presets": [],
     "viewports": []
   },
@@ -434,10 +445,15 @@
       "duplicate_sheet_names": "error",
       "endpoint_off_grid": "warning",
       "extra_units": "error",
+      "footprint_filter": "ignore",
+      "footprint_link_issues": "warning",
+      "four_way_junction": "ignore",
       "global_label_dangling": "warning",
       "hier_label_mismatch": "error",
       "label_dangling": "error",
+      "label_multiple_wires": "warning",
       "lib_symbol_issues": "warning",
+      "lib_symbol_mismatch": "warning",
       "missing_bidi_pin": "warning",
       "missing_input_pin": "warning",
       "missing_power_pin": "error",
@@ -450,9 +466,14 @@
       "pin_not_driven": "error",
       "pin_to_pin": "error",
       "power_pin_not_driven": "error",
+      "same_local_global_label": "warning",
+      "similar_label_and_power": "warning",
       "similar_labels": "warning",
+      "similar_power": "warning",
       "simulation_model_issue": "ignore",
+      "single_global_label": "ignore",
       "unannotated": "error",
+      "unconnected_wire_endpoint": "warning",
       "unit_value_mismatch": "error",
       "unresolved_variable": "error",
       "wire_dangling": "error"
@@ -464,7 +485,7 @@
   },
   "meta": {
     "filename": "hamodule.kicad_pro",
-    "version": 1
+    "version": 3
   },
   "net_settings": {
     "classes": [
@@ -479,6 +500,7 @@
         "microvia_drill": 0.1,
         "name": "Default",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 2147483647,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.25,
         "via_diameter": 0.8,
@@ -496,6 +518,7 @@
         "microvia_drill": 0.1,
         "name": "Mains",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.25,
         "via_diameter": 0.8,
@@ -513,6 +536,7 @@
         "microvia_drill": 0.1,
         "name": "Mains-LowVoltage",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 1,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.25,
         "via_diameter": 0.8,
@@ -530,6 +554,7 @@
         "microvia_drill": 0.1,
         "name": "USB",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 2,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.25,
         "via_diameter": 0.5,
@@ -538,74 +563,184 @@
       }
     ],
     "meta": {
-      "version": 3
+      "version": 4
     },
     "net_colors": null,
     "netclass_assignments": {
-      "220VAC(L)": "Mains",
-      "220VAC(N)": "Mains",
-      "220VAC(N)-LowV": "Mains-LowVoltage",
-      "Net-(D1-A)": "USB",
+      "220VAC(L)": [
+        "Mains"
+      ],
+      "220VAC(N)": [
+        "Mains"
+      ],
+      "220VAC(N)-LowV": [
+        "Mains-LowVoltage"
+      ],
+      "Net-(D1-A)": [
+        "USB"
+      ],
       "Net-(D3-A)": "USB",
-      "Net-(F1-Pad1)": "Mains",
-      "Net-(F10-Pad1)": "Mains",
-      "Net-(F10-Pad2)": "Mains",
-      "Net-(F11-Pad1)": "Mains",
-      "Net-(F11-Pad2)": "Mains",
-      "Net-(F12-Pad1)": "Mains",
-      "Net-(F12-Pad2)": "Mains",
-      "Net-(F13-Pad1)": "Mains",
-      "Net-(F13-Pad2)": "Mains",
-      "Net-(F14-Pad1)": "Mains",
-      "Net-(F14-Pad2)": "Mains",
-      "Net-(F15-Pad1)": "Mains",
-      "Net-(F15-Pad2)": "Mains",
-      "Net-(F16-Pad1)": "Mains",
-      "Net-(F16-Pad2)": "Mains",
-      "Net-(F17-Pad1)": "Mains",
-      "Net-(F17-Pad2)": "Mains",
-      "Net-(F2-Pad1)": "Mains",
-      "Net-(F2-Pad2)": "Mains",
-      "Net-(F3-Pad1)": "Mains",
-      "Net-(F3-Pad2)": "Mains",
-      "Net-(F4-Pad1)": "Mains",
-      "Net-(F4-Pad2)": "Mains",
-      "Net-(F5-Pad1)": "Mains",
-      "Net-(F5-Pad2)": "Mains",
-      "Net-(F6-Pad1)": "Mains",
-      "Net-(F6-Pad2)": "Mains",
-      "Net-(F7-Pad1)": "Mains",
-      "Net-(F7-Pad2)": "Mains",
-      "Net-(F8-Pad1)": "Mains",
-      "Net-(F8-Pad2)": "Mains",
-      "Net-(F9-Pad1)": "Mains",
-      "Net-(F9-Pad2)": "Mains",
+      "Net-(F1-Pad1)": [
+        "Mains"
+      ],
+      "Net-(F10-Pad1)": [
+        "Mains"
+      ],
+      "Net-(F10-Pad2)": [
+        "Mains"
+      ],
+      "Net-(F11-Pad1)": [
+        "Mains"
+      ],
+      "Net-(F11-Pad2)": [
+        "Mains"
+      ],
+      "Net-(F12-Pad1)": [
+        "Mains"
+      ],
+      "Net-(F12-Pad2)": [
+        "Mains"
+      ],
+      "Net-(F13-Pad1)": [
+        "Mains"
+      ],
+      "Net-(F13-Pad2)": [
+        "Mains"
+      ],
+      "Net-(F14-Pad1)": [
+        "Mains"
+      ],
+      "Net-(F14-Pad2)": [
+        "Mains"
+      ],
+      "Net-(F15-Pad1)": [
+        "Mains"
+      ],
+      "Net-(F15-Pad2)": [
+        "Mains"
+      ],
+      "Net-(F16-Pad1)": [
+        "Mains"
+      ],
+      "Net-(F16-Pad2)": [
+        "Mains"
+      ],
+      "Net-(F17-Pad1)": [
+        "Mains"
+      ],
+      "Net-(F17-Pad2)": [
+        "Mains"
+      ],
+      "Net-(F2-Pad1)": [
+        "Mains"
+      ],
+      "Net-(F2-Pad2)": [
+        "Mains"
+      ],
+      "Net-(F3-Pad1)": [
+        "Mains"
+      ],
+      "Net-(F3-Pad2)": [
+        "Mains"
+      ],
+      "Net-(F4-Pad1)": [
+        "Mains"
+      ],
+      "Net-(F4-Pad2)": [
+        "Mains"
+      ],
+      "Net-(F5-Pad1)": [
+        "Mains"
+      ],
+      "Net-(F5-Pad2)": [
+        "Mains"
+      ],
+      "Net-(F6-Pad1)": [
+        "Mains"
+      ],
+      "Net-(F6-Pad2)": [
+        "Mains"
+      ],
+      "Net-(F7-Pad1)": [
+        "Mains"
+      ],
+      "Net-(F7-Pad2)": [
+        "Mains"
+      ],
+      "Net-(F8-Pad1)": [
+        "Mains"
+      ],
+      "Net-(F8-Pad2)": [
+        "Mains"
+      ],
+      "Net-(F9-Pad1)": [
+        "Mains"
+      ],
+      "Net-(F9-Pad2)": [
+        "Mains"
+      ],
       "Net-(J11-CC1)": "USB",
       "Net-(J11-CC2)": "USB",
-      "Net-(J3-CC1)": "USB",
-      "Net-(J3-CC2)": "USB",
-      "Net-(R10-Pad2)": "Mains",
-      "Net-(R11-Pad2)": "Mains",
-      "Net-(R12-Pad2)": "Mains",
-      "Net-(R13-Pad2)": "Mains",
-      "Net-(R14-Pad2)": "Mains",
+      "Net-(J3-CC1)": [
+        "USB"
+      ],
+      "Net-(J3-CC2)": [
+        "USB"
+      ],
+      "Net-(R10-Pad2)": [
+        "Mains"
+      ],
+      "Net-(R11-Pad2)": [
+        "Mains"
+      ],
+      "Net-(R12-Pad2)": [
+        "Mains"
+      ],
+      "Net-(R13-Pad2)": [
+        "Mains"
+      ],
+      "Net-(R14-Pad2)": [
+        "Mains"
+      ],
       "Net-(R15-Pad1)": "Mains",
-      "Net-(R15-Pad2)": "Mains",
+      "Net-(R15-Pad2)": [
+        "Mains"
+      ],
       "Net-(R16-Pad1)": "Mains",
-      "Net-(R16-Pad2)": "Mains",
+      "Net-(R16-Pad2)": [
+        "Mains"
+      ],
       "Net-(R17-Pad1)": "Mains",
       "Net-(R17-Pad2)": "Mains-LowVoltage",
       "Net-(R18-Pad1)": "Mains",
       "Net-(R18-Pad2)": "Mains-LowVoltage",
-      "Net-(R19-Pad2)": "Mains-LowVoltage",
-      "Net-(R20-Pad2)": "Mains-LowVoltage",
-      "Net-(R21-Pad1)": "Mains",
-      "Net-(R21-Pad2)": "Mains-LowVoltage",
-      "Net-(R22-Pad2)": "Mains-LowVoltage",
-      "Net-(R23-Pad2)": "Mains-LowVoltage",
-      "Net-(R24-Pad2)": "Mains-LowVoltage",
-      "Net-(R25-Pad2)": "Mains-LowVoltage",
-      "Net-(R26-Pad2)": "Mains-LowVoltage",
+      "Net-(R19-Pad2)": [
+        "Mains-LowVoltage"
+      ],
+      "Net-(R20-Pad2)": [
+        "Mains-LowVoltage"
+      ],
+      "Net-(R21-Pad1)": [
+        "Mains"
+      ],
+      "Net-(R21-Pad2)": [
+        "Mains-LowVoltage"
+      ],
+      "Net-(R22-Pad2)": [
+        "Mains-LowVoltage"
+      ],
+      "Net-(R23-Pad2)": [
+        "Mains-LowVoltage"
+      ],
+      "Net-(R24-Pad2)": [
+        "Mains-LowVoltage"
+      ],
+      "Net-(R25-Pad2)": [
+        "Mains-LowVoltage"
+      ],
+      "Net-(R26-Pad2)": [
+        "Mains-LowVoltage"
+      ],
       "Net-(R27-Pad2)": "Mains",
       "Net-(R28-Pad2)": "Mains",
       "Net-(R29-Pad2)": "Mains",
@@ -831,6 +966,7 @@
       ],
       "filter_string": "",
       "group_symbols": true,
+      "include_excluded_from_bom": false,
       "name": "",
       "sort_asc": true,
       "sort_field": "Reference"
@@ -880,6 +1016,7 @@
     },
     "page_layout_descr_file": "",
     "plot_directory": "../readme-media/",
+    "space_save_all_events": true,
     "spice_adjust_passive_values": false,
     "spice_current_sheet_as_root": false,
     "spice_external_command": "spice \"%I\"",
