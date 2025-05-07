@@ -18,35 +18,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - uses: INTI-CMNB/KiBot@v2_k7
-      name: generating files for 4 channels PCB
+    - uses: INTI-CMNB/KiBot@v2_k9
+      name: generating files for v25
       with:
         # Required - kibot config file
-        config: PCB/schematics-v23.4/kicad/config.kibot.yaml 
+        config: PCB/schematics-v25-2/kicad/config.kibot.yaml 
         # optional - prefix to output defined in config
-        dir: PCB/schematics-v23.4/kicad/fabrication
+        dir: PCB/schematics-v25-2/kicad/fabrication
         # optional - schematic file
-        schema: 'PCB/schematics-v23.4/kicad/hamodule.kicad_sch'
+        schema: 'PCB/schematics-v25-2/kicad/hamodule.kicad_sch'
         # optional - PCB design file
-        board: 'PCB/schematics-v23.4/kicad/hamodule.kicad_pcb'
-    - name: upload results for 4 channels PCB
-      uses: actions/upload-artifact@v2
+        board: 'PCB/schematics-v25-2/kicad/hamodule.kicad_pcb'
+    - name: upload results for v25
+      uses: actions/upload-artifact@v4
       with:
-        name: output-4-channels-PCB
-        path: PCB/schematics-v23.4/kicad/fabrication
-    - uses: INTI-CMNB/KiBot@v2_k7
-      name: generating files for 8 channels PCB
-      with:
-        # Required - kibot config file
-        config: PCB/schematics-v23.8/kicad/config.kibot.yaml 
-        # optional - prefix to output defined in config
-        dir: PCB/schematics-v23.8/kicad/fabrication
-        # optional - schematic file
-        schema: 'PCB/schematics-v23.8/kicad/hamodule.kicad_sch'
-        # optional - PCB design file
-        board: 'PCB/schematics-v23.8/kicad/hamodule.kicad_pcb'
-    - name: upload results for 8 channels PCB
-      uses: actions/upload-artifact@v2
-      with:
-        name: output-8-channels-PCB
-        path: PCB/schematics-v23.8/kicad/fabrication
+        name: output-4-channels-PCB-v25-2
+        path: PCB/schematics-v25-2/kicad/fabrication
