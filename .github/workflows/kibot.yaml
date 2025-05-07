@@ -30,7 +30,7 @@ jobs:
         # optional - PCB design file
         board: 'PCB/schematics-v25-2/kicad/hamodule.kicad_pcb'
     - name: upload results for v25
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
-        name: output-4-channels-PCB
+        name: output-4-channels-PCB-v25-2
         path: PCB/schematics-v25-2/kicad/fabrication
