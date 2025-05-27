@@ -3,8 +3,8 @@ kibot:
   version: 1
 
 preflight:
-  run_erc: false
-  run_drc: false
+  run_erc: true
+  run_drc: true
   check_zone_fills: false
   ignore_unconnected: false
 
@@ -130,6 +130,10 @@ outputs:
     layers:
       - layer: F.Cu
         suffix: F_Cu
+      - layer: In1.Cu
+        suffix: In1_Cu
+      - layer: In2.Cu
+        suffix: In2_Cu
       - layer: B.Cu
         suffix: B_Cu
       - layer: F.SilkS
