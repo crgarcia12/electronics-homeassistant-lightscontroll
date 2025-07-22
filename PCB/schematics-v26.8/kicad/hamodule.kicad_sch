@@ -13089,7 +13089,7 @@
 	)
 	(rectangle
 		(start 246.38 127)
-		(end 269.24 142.24)
+		(end 269.24 143.51)
 		(stroke
 			(width 0)
 			(type dash)
@@ -13114,7 +13114,7 @@
 	)
 	(text "Must be = VccA"
 		(exclude_from_sim no)
-		(at 258.318 140.97 0)
+		(at 258.318 142.24 0)
 		(effects
 			(font
 				(size 1.27 1.27)
