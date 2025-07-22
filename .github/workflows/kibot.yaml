@@ -22,15 +22,15 @@ jobs:
       name: generating files for v25
       with:
         # Required - kibot config file
-        config: PCB/schematics-v25-2/kicad/config.kibot.yaml 
+        config: PCB/schematics-v26.8/kicad/config.kibot.yaml 
         # optional - prefix to output defined in config
-        dir: PCB/schematics-v25-2/kicad/fabrication
+        dir: PCB/schematics-v26.8/kicad/fabrication
         # optional - schematic file
-        schema: 'PCB/schematics-v25-2/kicad/hamodule.kicad_sch'
+        schema: 'PCB/schematics-v26.8/kicad/hamodule.kicad_sch'
         # optional - PCB design file
-        board: 'PCB/schematics-v25-2/kicad/hamodule.kicad_pcb'
-    - name: upload results for v25
+        board: 'PCB/schematics-v26.8/kicad/hamodule.kicad_pcb'
+    - name: upload results for v26.8
       uses: actions/upload-artifact@v4
       with:
-        name: output-4-channels-PCB-v25-2
-        path: PCB/schematics-v25-2/kicad/fabrication
+        name: output-4-channels-PCB-v26.8
+        path: PCB/schematics-v26.8/kicad/fabrication

@@ -35,24 +35,25 @@ This device has several security measurements:
 There are two versions of the board, one with four channels and another with eight channels.
 Latest versions use ESP32-S3, which is a very powerful microcontroller with a lot of features.
 
-# Version 24: Eight channels with IO expander
+
+# Version 26.8: Eight channels with IO expander
 Compared to version 23:
-* Using TCAL6416A instead of MCP23108 due to having push-pull instead of open-drain ouputs
+* Using TCAL6416A instead of MCP23108 due to having push-pull instead of open-drain ouputs.
 * MCP23017 has released an amendum to the datasheet declaring a bug in two pins. Making them read only
 * Adjust the border cut-outs to fit the middle mounting hole
-* There are two versions of this board, one using SN74LVCH8 and the otherone using TXB0108. If you want to compare them, switch between the two schematics in two tabs of the browser
-
-Version 24.8-1 (TXB0108)
-![board-schematics](PCB/schematics-v24-1-jlcpcb/readme-media/schematics.svg)
-![board-pcb](PCB/schematics-v24-1-jlcpcb/readme-media/board.png)
+* There was a bug in the TXB0108 implementation. OE and DIR pins should be referencing VccA. This means they need voltage divider (VccA = 3V and not 3.3)
+* Adding descriptions in the schematics
 
 Version 24.8-2 (SN74LVCH8 + OUTPUT_ENABLED)
-![board-schematics](PCB/schematics-v24-2-jlcpcb/readme-media/schematics.svg)
-![board-pcb](PCB/schematics-v24-2-jlcpcb/readme-media/board.png)
-![board-pcb](PCB/schematics-v24-2-jlcpcb/readme-media/3d-board-1.png)
-![board-pcb](PCB/schematics-v24-2-jlcpcb/readme-media/3d-board-2.png)
-![board-pcb](PCB/schematics-v24-2-jlcpcb/readme-media/3d-board-3.png)
-![board-pcb](PCB/schematics-v24-2-jlcpcb/readme-media/3d-board-4.png)
+![board-schematics](PCB/schematics-v26.8/readme-media/schematics.svg)
+![board-pcb](PCB/schematics-v26.8/readme-media/board.png)
+![board-pcb](PCB/schematics-v26.8/readme-media/board-front.svg)
+![board-pcb](PCB/schematics-v26.8/readme-media/board-back.svg)
+![board-pcb](PCB/schematics-v26.8/readme-media/board-3d-1.png)
+![board-pcb](PCB/schematics-v26.8/readme-media/board-3d-2.png)
+![board-pcb](PCB/schematics-v26.8/readme-media/board-3d-3.png)
+![board-pcb](PCB/schematics-v26.8/readme-media/board-3d-4.png)
+![board-pcb](PCB/schematics-v26.8/readme-media/board-3d-5.png)
 
 # How does it work?
 Section under development.
@@ -172,6 +173,25 @@ schematics:
 PCB:
 Print to PDF, and use a high-resolution PDF to JPG converting website like: https://pdf2jpg.net/
 
+
+# Older Versions: 24 Eight channels with IO expander
+Compared to version 23:
+* Using TCAL6416A instead of MCP23108 due to having push-pull instead of open-drain ouputs
+* MCP23017 has released an amendum to the datasheet declaring a bug in two pins. Making them read only
+* Adjust the border cut-outs to fit the middle mounting hole
+* There are two versions of this board, one using SN74LVCH8 and the otherone using TXB0108. If you want to compare them, switch between the two schematics in two tabs of the browser
+
+Version 24.8-1 (TXB0108)
+![board-schematics](PCB/schematics-v24-1-jlcpcb/readme-media/schematics.svg)
+![board-pcb](PCB/schematics-v24-1-jlcpcb/readme-media/board.png)
+
+Version 24.8-2 (SN74LVCH8 + OUTPUT_ENABLED)
+![board-schematics](PCB/schematics-v24-2-jlcpcb/readme-media/schematics.svg)
+![board-pcb](PCB/schematics-v24-2-jlcpcb/readme-media/board.png)
+![board-pcb](PCB/schematics-v24-2-jlcpcb/readme-media/3d-board-1.png)
+![board-pcb](PCB/schematics-v24-2-jlcpcb/readme-media/3d-board-2.png)
+![board-pcb](PCB/schematics-v24-2-jlcpcb/readme-media/3d-board-3.png)
+![board-pcb](PCB/schematics-v24-2-jlcpcb/readme-media/3d-board-4.png)
 
 # Older Versions: 23 Eight channels
 
