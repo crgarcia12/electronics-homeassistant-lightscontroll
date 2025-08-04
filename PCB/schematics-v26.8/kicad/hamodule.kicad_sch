@@ -4929,8 +4929,8 @@
 					(justify left)
 				)
 			)
-			(property "Value" "LDA210-PDIP"
-				(at -5.842 -12.7 0)
+			(property "Value" "LDA210"
+				(at -2.794 -12.7 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -4977,7 +4977,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "SO*4.4x3.6mm*P2.54mm*"
+			(property "ki_fp_filters" "SO*4.4x3.6mm*P2.54mm* Package_DIP:DIP-8_W7.62mm_Socket_LongPads"
 				(at 0 0 0)
 				(effects
 					(font
@@ -8183,14 +8183,6 @@
 					(hide yes)
 				)
 			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
 			(property "ki_keywords" "PTCAL6416PWR"
 				(at 0 0 0)
 				(effects
@@ -8200,7 +8192,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "TSSOP24_PW_TEX TSSOP24_PW_TEX-M TSSOP24_PW_TEX-L"
+			(property "ki_fp_filters" "TSSOP24_PW_TEX TSSOP24_PW_TEX-M TSSOP24_PW_TEX-L TSSOP-24_4.4x7.8mm_P0.65mm"
 				(at 0 0 0)
 				(effects
 					(font
@@ -10753,8 +10745,8 @@
 		(uuid ce240aab-686a-410b-ac92-f3647a466732)
 	)
 	(rectangle
-		(start 294.64 13.97)
-		(end 350.52 49.53)
+		(start 350.52 12.7)
+		(end 407.67 50.8)
 		(stroke
 			(width 0)
 			(type dash)

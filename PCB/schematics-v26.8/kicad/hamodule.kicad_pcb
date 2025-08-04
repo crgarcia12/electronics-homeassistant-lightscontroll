@@ -5846,7 +5846,7 @@
 				)
 			)
 		)
-		(property ki_fp_filters "SO*4.4x3.6mm*P2.54mm*")
+		(property ki_fp_filters "SO*4.4x3.6mm*P2.54mm* Package_DIP:DIP-8_W7.62mm_Socket_LongPads")
 		(path "/e5302330-d0d4-4d5c-9081-45db554d95f3")
 		(sheetname "/")
 		(sheetfile "hamodule.kicad_sch")
@@ -6903,7 +6903,7 @@
 				)
 			)
 		)
-		(property ki_fp_filters "SO*4.4x3.6mm*P2.54mm*")
+		(property ki_fp_filters "SO*4.4x3.6mm*P2.54mm* Package_DIP:DIP-8_W7.62mm_Socket_LongPads")
 		(path "/00000000-0000-0000-0000-000061b6b5bb")
 		(sheetname "/")
 		(sheetfile "hamodule.kicad_sch")
@@ -7238,7 +7238,7 @@
 				)
 			)
 		)
-		(property ki_fp_filters "SO*4.4x3.6mm*P2.54mm*")
+		(property ki_fp_filters "SO*4.4x3.6mm*P2.54mm* Package_DIP:DIP-8_W7.62mm_Socket_LongPads")
 		(path "/00000000-0000-0000-0000-000061cd2f67")
 		(sheetname "/")
 		(sheetfile "hamodule.kicad_sch")
@@ -15849,7 +15849,7 @@
 		(locked yes)
 		(layer "F.Cu")
 		(uuid "1a6a4e02-d59e-4fa8-a621-c6ee4bb06d43")
-		(at 150.3 44.45 90)
+		(at 146.6 45.2 90)
 		(descr "Electrostatic discharge Logo")
 		(tags "Logo ESD")
 		(property "Reference" "G8"
@@ -22675,171 +22675,6 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Symbol:Symbol_Attention_Triangle_8x7mm_Copper"
-		(locked yes)
-		(layer "F.Cu")
-		(uuid "34fd2ec6-be00-4ec4-87b1-10ffd682032e")
-		(at 149.5 73 90)
-		(descr "Symbol, Attention, 8x7mm, copper layer")
-		(tags "warning graphic")
-		(property "Reference" "G9"
-			(at 0 -4.5 90)
-			(layer "F.SilkS")
-			(hide yes)
-			(uuid "519dd5a3-b732-4b8d-bbdb-34e9160296df")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Value" "Symbol_Attention_Triangle_8x7mm_Copper"
-			(at 0 4.5 90)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "2fd815f7-0062-478b-a496-52f40909876d")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 0 0 90)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "407df16f-df42-4d3c-8487-9bda17f562e2")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 0 0 90)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "1ac914bb-e5c4-44c2-b5be-87f17852d013")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-			)
-		)
-		(attr exclude_from_pos_files exclude_from_bom allow_missing_courtyard)
-		(fp_line
-			(start 0 -3.46)
-			(end 4 3.46)
-			(stroke
-				(width 0.381)
-				(type solid)
-			)
-			(layer "F.Cu")
-			(uuid "353790cb-da2f-4c63-b6c8-a0eca1f359e3")
-		)
-		(fp_line
-			(start -0.15 -3.04)
-			(end 0.16 -3.04)
-			(stroke
-				(width 0.2)
-				(type default)
-			)
-			(layer "F.Cu")
-			(uuid "301b7801-02ba-4d59-babc-ad0559113ee2")
-		)
-		(fp_line
-			(start 3.51 3.44)
-			(end 3.776322 3.030736)
-			(stroke
-				(width 0.2)
-				(type default)
-			)
-			(layer "F.Cu")
-			(uuid "8580b4bd-9025-4cff-b11c-0b8102e10736")
-		)
-		(fp_line
-			(start -3.51 3.44)
-			(end -3.776322 3.030736)
-			(stroke
-				(width 0.2)
-				(type default)
-			)
-			(layer "F.Cu")
-			(uuid "91f7e6ca-4e58-4848-8d5e-87e8ba4e9cb5")
-		)
-		(fp_line
-			(start 4 3.46)
-			(end -4 3.46)
-			(stroke
-				(width 0.381)
-				(type solid)
-			)
-			(layer "F.Cu")
-			(uuid "381bba30-f337-48f0-8288-1aaf666e5125")
-		)
-		(fp_line
-			(start -4 3.46)
-			(end 0 -3.46)
-			(stroke
-				(width 0.381)
-				(type solid)
-			)
-			(layer "F.Cu")
-			(uuid "020674d7-6585-47c7-babf-884e0b4f54f9")
-		)
-		(fp_circle
-			(center 0 -1.5)
-			(end 0.45 -1.5)
-			(stroke
-				(width 0)
-				(type solid)
-			)
-			(fill yes)
-			(layer "F.Cu")
-			(uuid "abd316ae-6a94-4144-a18a-498ba2d27a01")
-		)
-		(fp_circle
-			(center 0 1.5)
-			(end 0.25 1.5)
-			(stroke
-				(width 0)
-				(type solid)
-			)
-			(fill yes)
-			(layer "F.Cu")
-			(uuid "0d457a74-c27e-4026-bfcf-c748e7769095")
-		)
-		(fp_circle
-			(center 0 2.5)
-			(end 0.4 2.5)
-			(stroke
-				(width 0)
-				(type solid)
-			)
-			(fill yes)
-			(layer "F.Cu")
-			(uuid "c4656547-8919-477e-a928-e072427fec04")
-		)
-		(fp_poly
-			(pts
-				(xy -0.25 1.5) (xy 0.25 1.5) (xy 0.45 -1.5) (xy -0.45 -1.5)
-			)
-			(stroke
-				(width 0)
-				(type solid)
-			)
-			(fill yes)
-			(layer "F.Cu")
-			(uuid "5acd2c8f-402d-4983-9ccd-be527c127617")
-		)
-		(embedded_fonts no)
-	)
 	(footprint "Resistor_SMD:R_2512_6332Metric_Pad1.40x3.35mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "3a7f0a54-7b55-4fbb-a1a1-8611ab025e64")
@@ -24939,7 +24774,7 @@
 				)
 			)
 		)
-		(property ki_fp_filters "TSSOP24_PW_TEX TSSOP24_PW_TEX-M TSSOP24_PW_TEX-L")
+		(property ki_fp_filters "TSSOP24_PW_TEX TSSOP24_PW_TEX-M TSSOP24_PW_TEX-L TSSOP-24_4.4x7.8mm_P0.65mm")
 		(path "/0cb18acf-0861-439c-8337-9f83efd7dcd9")
 		(sheetname "/")
 		(sheetfile "hamodule.kicad_sch")
@@ -26045,7 +25880,7 @@
 		(locked yes)
 		(layer "F.Cu")
 		(uuid "49801886-d1a4-450d-aaf6-d9c6199799ab")
-		(at 150 62 90)
+		(at 146.6 62.5 90)
 		(descr "KiCad Logo")
 		(tags "Logo KiCad")
 		(property "Reference" "G6"
@@ -29243,7 +29078,7 @@
 		(locked yes)
 		(layer "F.Cu")
 		(uuid "5b663779-ee2d-4e0f-a294-3a3b21c7025f")
-		(at 150.5 51.5 90)
+		(at 147.1 52.1 90)
 		(descr "Open Source Hardware Symbol")
 		(tags "Logo Symbol OSHW")
 		(property "Reference" "G7"
@@ -30758,7 +30593,7 @@
 				)
 			)
 		)
-		(property ki_fp_filters "SO*4.4x3.6mm*P2.54mm*")
+		(property ki_fp_filters "SO*4.4x3.6mm*P2.54mm* Package_DIP:DIP-8_W7.62mm_Socket_LongPads")
 		(path "/4b694554-7afd-4d70-a8ff-f7088836d117")
 		(sheetname "/")
 		(sheetfile "hamodule.kicad_sch")
@@ -48456,7 +48291,7 @@
 		(descr "Mounting Hole 3.2mm, M3, generated by kicad-footprint-generator mountinghole.py")
 		(tags "mountinghole M3 ISO14580")
 		(property "Reference" "H4"
-			(at 2.2 -3.3882 0)
+			(at -3.2 2.5118 0)
 			(layer "F.SilkS")
 			(uuid "3e1e1bfc-170b-4882-aab2-4c4f5332c7d6")
 			(effects
@@ -90326,7 +90161,7 @@
 		)
 	)
 	(gr_text "https://github.com/\ncrgarcia12/electronics-homeassistant-lightscontroll"
-		(at 145 56.5 90)
+		(at 151.9 78.8 90)
 		(layer "F.SilkS")
 		(uuid "e36bf93c-5aba-4649-a71c-0c195046f86d")
 		(effects
@@ -90334,6 +90169,7 @@
 				(size 0.9 0.9)
 				(thickness 0.15)
 			)
+			(justify left)
 		)
 	)
 	(gr_text "DANGER!\n\nMAINS HIGH VOLTAGE"

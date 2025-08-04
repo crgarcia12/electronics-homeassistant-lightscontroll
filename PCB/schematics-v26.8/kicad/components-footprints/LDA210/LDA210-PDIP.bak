@@ -18,8 +18,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "LDA210"
-			(at -2.794 -12.7 0)
+		(property "Value" "LDA210-PDIP"
+			(at -5.842 -12.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
