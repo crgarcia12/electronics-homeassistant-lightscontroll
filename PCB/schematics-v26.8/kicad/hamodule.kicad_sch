@@ -6978,7 +6978,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Regulator_Linear:LD1117S33TR_SOT223"
+		(symbol "Regulator_Linear:LD1117V33"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -6990,7 +6990,7 @@
 					)
 				)
 			)
-			(property "Value" "LD1117S33TR_SOT223"
+			(property "Value" "LD1117V33"
 				(at 0 3.175 0)
 				(effects
 					(font
@@ -6999,7 +6999,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
+			(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
 				(at 0 5.08 0)
 				(effects
 					(font
@@ -7008,7 +7008,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000544.pdf"
+			(property "Datasheet" "https://www.st.com/resource/en/datasheet/ld1117.pdf"
 				(at 2.54 -6.35 0)
 				(effects
 					(font
@@ -7017,7 +7017,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "800mA Fixed Low Drop Positive Voltage Regulator, Fixed Output 3.3V, SOT-223"
+			(property "Description" "800 mA Fixed Low Drop Positive Voltage Regulator (ldo). Max input 15V. Fixed Output 3.3V. TO-220-3"
 				(at 0 0 0)
 				(effects
 					(font
@@ -7026,7 +7026,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "REGULATOR LDO 3.3V"
+			(property "ki_keywords" "low-dropout-regulator ldo"
 				(at 0 0 0)
 				(effects
 					(font
@@ -7035,7 +7035,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "SOT?223*TabPin2*"
+			(property "ki_fp_filters" "*TO?220*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -7044,7 +7044,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "LD1117S33TR_SOT223_0_1"
+			(symbol "LD1117V33_0_1"
 				(rectangle
 					(start -5.08 -5.08)
 					(end 5.08 1.905)
@@ -7057,7 +7057,7 @@
 					)
 				)
 			)
-			(symbol "LD1117S33TR_SOT223_1_1"
+			(symbol "LD1117V33_1_1"
 				(pin power_in line
 					(at -7.62 0 0)
 					(length 2.54)
@@ -7105,6 +7105,162 @@
 						)
 					)
 					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Sensor_Humidity:SHT4x"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at 0 8.89 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify right)
+				)
+			)
+			(property "Value" "SHT4x"
+				(at 0 6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify right)
+				)
+			)
+			(property "Footprint" "Sensor_Humidity:Sensirion_DFN-4_1.5x1.5mm_P0.8mm_SHT4x_NoCentralPad"
+				(at 3.81 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://sensirion.com/media/documents/33FD6951/624C4357/Datasheet_SHT4x.pdf"
+				(at 3.81 -8.89 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Description" "Digital Humidity and Temperature Sensor, ±1%RH, ±0.1°C, I2C, 1.08-3.6V, 16bit, DFN-4"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "Sensirion environment environmental measurement digital SHT40 SHT41 SHT45"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Sensirion?DFN*1.5x1.5mm*P0.8mm*SHT4x*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "SHT4x_1_1"
+				(rectangle
+					(start -5.08 5.08)
+					(end 5.08 -5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin input line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "SCL"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "SDA"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 2.54 7.62 270)
+					(length 2.54)
+					(name "VDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 2.54 -7.62 90)
+					(length 2.54)
+					(name "VSS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -8598,160 +8754,6 @@
 					)
 					(fill
 						(type none)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "sht40:SHT4x"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "U"
-				(at 3.81 6.35 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "SHT4x"
-				(at 2.54 -6.35 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "Sensor:SHT4x"
-				(at 5.08 -8.89 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://sensirion.com/media/documents/33FD6951/61641E1E/Sensirion_Humidity_Sensors_SHT4x_Datasheet.pdf"
-				(at 6.35 -17.78 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Temperature and humidity module"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "digital temperature humidity sensor"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "SHT1x*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "SHT4x_0_1"
-				(rectangle
-					(start -5.08 5.08)
-					(end 5.08 -5.08)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-			)
-			(symbol "SHT4x_1_1"
-				(pin power_in line
-					(at -2.54 7.62 270)
-					(length 2.54)
-					(name "VDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -2.54 -7.62 90)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 7.62 2.54 180)
-					(length 2.54)
-					(name "SDA"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 7.62 -2.54 180)
-					(length 2.54)
-					(name "SCL"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
 					)
 				)
 			)
@@ -10690,7 +10692,7 @@
 	)
 	(rectangle
 		(start 137.16 19.05)
-		(end 231.14 39.37)
+		(end 231.14 40.64)
 		(stroke
 			(width 0)
 			(type dash)
@@ -10809,9 +10811,9 @@
 		)
 		(uuid "148517ad-b23d-4c86-bd37-431964b4d275")
 	)
-	(text "NOTES\n- Tracks from from LDA210 to TCAL6416 are not 3.3V\n  They are < ~2.7V due to darlington voltage drop.\n  For that reason a level shifter is required.\n  The port A of the level shifter has a resistor-based voltage divider, leaving VccA in 3 v.\n  the OE and DIR pins are based on VccA, so another equal voltage divider must be used.\n- Consider using MAX809 to monitor power stability\n  https://github.com/S5NC/EBYTE_ESP32-S3/blob/main/V1.5%20(WIP)%20Schematic.pdf\n- Alternatives to LDA210: ILD755 | TCM1600 (not tested) | TLP292-4 (Not Tested)\n"
+	(text "NOTES\n- Tracks from from LDA210 to TCAL6416 are not 3.3V\n  They are < ~2.7V due to darlington voltage drop.\n  Even when in practice it works. In theory a level shifter is required.\n  The port A of the level shifter has a resistor-based voltage divider, leaving VccA in 3 v.\n  the OE and DIR pins are based on VccA, so another equal voltage divider must be used.\n- Consider using MAX809 to monitor power stability\n  https://github.com/S5NC/EBYTE_ESP32-S3/blob/main/V1.5%20(WIP)%20Schematic.pdf\n- Alternatives to LDA210: ILD755 | TCM1600 (not tested) | TLP292-4 (Not Tested)\n"
 		(exclude_from_sim no)
-		(at 138.938 27.94 0)
+		(at 138.938 29.464 0)
 		(effects
 			(font
 				(face "Consolas")
@@ -11336,6 +11338,12 @@
 		(uuid "653b1372-6865-4945-8d84-4009696a6cd6")
 	)
 	(junction
+		(at 210.82 226.06)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "67cb7292-4c7c-4e9c-800e-256f330b0d9b")
+	)
+	(junction
 		(at 297.18 135.89)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -11346,12 +11354,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "68265ec8-ef09-4574-bc57-7981ef97eec5")
-	)
-	(junction
-		(at 217.17 226.06)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "68efb95d-6d2f-4ead-8395-a7d0e5132a81")
 	)
 	(junction
 		(at 328.93 138.43)
@@ -11768,12 +11770,6 @@
 		(uuid "d3e6609e-a6d3-4fd8-8d9c-f73fe5182cdd")
 	)
 	(junction
-		(at 207.01 215.9)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d44e6892-6095-425d-bad5-4cf079e225fb")
-	)
-	(junction
 		(at 201.93 156.21)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -11940,6 +11936,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "fb799181-ae66-4337-ae8a-8808cc0f2b2a")
+	)
+	(junction
+		(at 219.71 215.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fc39b9c1-2a11-4e55-9896-7f56885182be")
 	)
 	(junction
 		(at 205.74 127)
@@ -12163,16 +12165,6 @@
 	)
 	(wire
 		(pts
-			(xy 207.01 215.9) (xy 209.55 215.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "02782fec-07cc-4a07-b89f-8fa7aab120b1")
-	)
-	(wire
-		(pts
 			(xy 15.24 271.78) (xy 19.05 271.78)
 		)
 		(stroke
@@ -12180,16 +12172,6 @@
 			(type default)
 		)
 		(uuid "02b5ae8d-d7b5-4eac-b12b-570691dcea12")
-	)
-	(wire
-		(pts
-			(xy 204.47 215.9) (xy 207.01 215.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "02f1d77a-aecc-4bed-8875-d94cff8da8f0")
 	)
 	(wire
 		(pts
@@ -12280,16 +12262,6 @@
 			(type default)
 		)
 		(uuid "051f5780-660f-4bad-abb7-5a4463067bab")
-	)
-	(wire
-		(pts
-			(xy 224.79 215.9) (xy 224.79 226.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "05321cf9-7f19-4ef6-84a5-be972f32bf13")
 	)
 	(wire
 		(pts
@@ -13053,7 +13025,7 @@
 	)
 	(wire
 		(pts
-			(xy 207.01 226.06) (xy 217.17 226.06)
+			(xy 219.71 226.06) (xy 210.82 226.06)
 		)
 		(stroke
 			(width 0)
@@ -13783,7 +13755,7 @@
 	)
 	(wire
 		(pts
-			(xy 217.17 226.06) (xy 217.17 227.33)
+			(xy 210.82 226.06) (xy 210.82 227.33)
 		)
 		(stroke
 			(width 0)
@@ -13820,16 +13792,6 @@
 			(type default)
 		)
 		(uuid "4cafcbfa-6de8-4ba7-a4d4-7b9f6eb34d66")
-	)
-	(wire
-		(pts
-			(xy 224.79 226.06) (xy 217.17 226.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4d1d3bcc-9ce1-4448-9fd9-e9c4e1766b58")
 	)
 	(wire
 		(pts
@@ -13910,16 +13872,6 @@
 			(type default)
 		)
 		(uuid "50b997b0-3e8d-43ea-857b-a524f3aee5ed")
-	)
-	(wire
-		(pts
-			(xy 207.01 223.52) (xy 207.01 226.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5170343b-7397-4ff7-9560-a31b21fe2a4f")
 	)
 	(wire
 		(pts
@@ -14053,6 +14005,16 @@
 	)
 	(wire
 		(pts
+			(xy 210.82 226.06) (xy 201.93 226.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "59068a03-c24d-49f4-8790-e5d5537fad5f")
+	)
+	(wire
+		(pts
 			(xy 201.93 106.68) (xy 201.93 102.87)
 		)
 		(stroke
@@ -14090,6 +14052,16 @@
 			(type default)
 		)
 		(uuid "5985f641-a319-4645-b76e-dfc219678351")
+	)
+	(wire
+		(pts
+			(xy 219.71 215.9) (xy 219.71 219.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5a5c5e25-4251-4f8f-b3f8-22d3ed3d162c")
 	)
 	(wire
 		(pts
@@ -14763,6 +14735,16 @@
 	)
 	(wire
 		(pts
+			(xy 201.93 215.9) (xy 203.2 215.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "76fe6a55-85f7-4a43-a623-e26c339633e6")
+	)
+	(wire
+		(pts
 			(xy 172.72 102.87) (xy 184.15 102.87)
 		)
 		(stroke
@@ -14900,6 +14882,16 @@
 			(type default)
 		)
 		(uuid "7fbe96a8-8bca-488b-ae6b-dc8ec3c276f4")
+	)
+	(wire
+		(pts
+			(xy 219.71 215.9) (xy 218.44 215.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7fc82014-9eb6-4c66-97ed-125a04acf0b4")
 	)
 	(wire
 		(pts
@@ -15580,16 +15572,6 @@
 			(type default)
 		)
 		(uuid "a5e6ffce-f532-49ca-8066-4aeb6a1ff052")
-	)
-	(wire
-		(pts
-			(xy 207.01 215.9) (xy 207.01 218.44)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a5e9a17d-d240-4aba-a8b1-7dc5f1df6199")
 	)
 	(wire
 		(pts
@@ -16473,6 +16455,16 @@
 	)
 	(wire
 		(pts
+			(xy 201.93 226.06) (xy 201.93 215.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ca4fb5ef-41d0-4aaf-b1a0-7f1e0ac9384a")
+	)
+	(wire
+		(pts
 			(xy 152.4 140.97) (xy 153.67 140.97)
 		)
 		(stroke
@@ -16973,6 +16965,16 @@
 	)
 	(wire
 		(pts
+			(xy 220.98 215.9) (xy 219.71 215.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "df9e9233-0638-44e6-bc14-ce91cd324548")
+	)
+	(wire
+		(pts
 			(xy 172.72 77.47) (xy 184.15 77.47)
 		)
 		(stroke
@@ -17090,6 +17092,16 @@
 			(type default)
 		)
 		(uuid "e29d8902-0d20-443a-a5be-cd966a268233")
+	)
+	(wire
+		(pts
+			(xy 219.71 226.06) (xy 219.71 224.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e29fcf4b-e6c1-4cb4-95cb-2792bb2e3076")
 	)
 	(wire
 		(pts
@@ -18249,7 +18261,7 @@
 	)
 	(global_label "GND"
 		(shape input)
-		(at 217.17 227.33 270)
+		(at 210.82 227.33 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -18259,7 +18271,7 @@
 		)
 		(uuid "23345f3e-d08d-4834-b1dc-64de02569916")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 100.33 468.63 0)
+			(at 93.98 468.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18422,7 +18434,7 @@
 	)
 	(global_label "SDA"
 		(shape input)
-		(at 214.63 205.74 90)
+		(at 208.28 205.74 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -18432,7 +18444,7 @@
 		)
 		(uuid "2ea8fa6f-efc3-40fe-bcf9-05bfa46ead4f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 214.5506 199.8477 90)
+			(at 208.2006 199.8477 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18684,21 +18696,22 @@
 	)
 	(global_label "3.3V+"
 		(shape input)
-		(at 204.47 215.9 180)
+		(at 220.98 215.9 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "4cc0e615-05a0-4f42-a208-4011ba8ef841")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 90.17 462.28 0)
+			(at 228.9958 215.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -20558,7 +20571,7 @@
 	)
 	(global_label "SCL"
 		(shape input)
-		(at 219.71 205.74 90)
+		(at 213.36 205.74 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -20568,7 +20581,7 @@
 		)
 		(uuid "ee0404f1-775a-4f9c-8b75-b98271704a27")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 219.6306 199.9082 90)
+			(at 213.2806 199.9082 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22441,7 +22454,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Regulator_Linear:LD1117S33TR_SOT223")
+		(lib_id "Regulator_Linear:LD1117V33")
 		(at 60.96 77.47 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -22465,7 +22478,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
+		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
 			(at 60.96 72.39 0)
 			(effects
 				(font
@@ -22474,7 +22487,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000544.pdf"
+		(property "Datasheet" "https://www.st.com/resource/en/datasheet/ld1117.pdf"
 			(at 63.5 83.82 0)
 			(effects
 				(font
@@ -22483,7 +22496,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "800mA Fixed Low Drop Positive Voltage Regulator, Fixed Output 3.3V, SOT-223"
+		(property "Description" "800 mA Fixed Low Drop Positive Voltage Regulator (ldo). Max input 15V. Fixed Output 3.3V. TO-220-3"
 			(at 60.96 77.47 0)
 			(effects
 				(font
@@ -22672,7 +22685,7 @@
 				)
 			)
 		)
-		(property "Footprint" "CONV_RAC05-05SK/277"
+		(property "Footprint" "rac05-05sk:277"
 			(at 81.28 36.83 0)
 			(effects
 				(font
@@ -22970,7 +22983,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "Conn_01x02_Pin"
+		(property "Value" "Jumper 3.3v"
 			(at 114.935 71.12 90)
 			(effects
 				(font
@@ -23030,6 +23043,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "PcbText" ""
+			(at 115.57 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -25542,7 +25563,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 207.01 220.98 0)
+		(at 219.71 222.25 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -25550,7 +25571,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000061ea135e")
 		(property "Reference" "C30"
-			(at 203.2 223.52 0)
+			(at 226.314 224.282 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25559,7 +25580,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 204.47 220.98 0)
+			(at 227.838 221.234 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25568,7 +25589,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
-			(at 207.01 220.98 0)
+			(at 219.71 222.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25577,7 +25598,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 207.01 220.98 0)
+			(at 219.71 222.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25586,7 +25607,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 207.01 220.98 0)
+			(at 219.71 222.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25595,7 +25616,7 @@
 			)
 		)
 		(property "JLCPCB" "C14663"
-			(at 207.01 220.98 0)
+			(at 219.71 222.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25604,7 +25625,7 @@
 			)
 		)
 		(property "LCSC" "C14663"
-			(at 207.01 220.98 0)
+			(at 219.71 222.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25613,7 +25634,7 @@
 			)
 		)
 		(property "Field4" ""
-			(at 207.01 220.98 0)
+			(at 219.71 222.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -29675,7 +29696,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "AQG12205"
+		(property "Footprint" "AQG12205:AQG12205"
 			(at 381 133.35 0)
 			(effects
 				(font
@@ -29782,6 +29803,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "PcbText" ""
+			(at 356.87 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -30985,7 +31014,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "AQG12205"
+		(property "Footprint" "AQG12205:AQG12205"
 			(at 381 106.68 0)
 			(effects
 				(font
@@ -31092,6 +31121,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "PcbText" ""
+			(at 356.87 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -32090,7 +32127,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "AQG12205"
+		(property "Footprint" "AQG12205:AQG12205"
 			(at 381 78.74 0)
 			(effects
 				(font
@@ -32197,6 +32234,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "PcbText" ""
+			(at 356.87 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -34403,7 +34448,7 @@
 				)
 			)
 		)
-		(property "Footprint" "AQG12205"
+		(property "Footprint" "AQG12205:AQG12205"
 			(at 347.98 130.81 0)
 			(effects
 				(font
@@ -34510,6 +34555,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "PcbText" ""
+			(at 356.87 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -35537,7 +35590,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "AQG12205"
+		(property "Footprint" "AQG12205:AQG12205"
 			(at 381 161.29 0)
 			(effects
 				(font
@@ -35644,6 +35697,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "PcbText" ""
+			(at 356.87 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -36193,7 +36254,7 @@
 				)
 			)
 		)
-		(property "Footprint" "AQG12205"
+		(property "Footprint" "AQG12205:AQG12205"
 			(at 347.98 76.2 0)
 			(effects
 				(font
@@ -38619,7 +38680,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "AQG12205"
+		(property "Footprint" "AQG12205:AQG12205"
 			(at 381 92.71 0)
 			(effects
 				(font
@@ -38726,6 +38787,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "PcbText" ""
+			(at 356.87 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -39255,8 +39324,8 @@
 		)
 	)
 	(symbol
-		(lib_id "sht40:SHT4x")
-		(at 217.17 213.36 90)
+		(lib_id "Sensor_Humidity:SHT4x")
+		(at 210.82 213.36 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -39265,7 +39334,7 @@
 		(fields_autoplaced yes)
 		(uuid "dafd9677-af65-491a-93b5-9dbe8829377b")
 		(property "Reference" "U8"
-			(at 217.17 220.4704 90)
+			(at 210.82 220.98 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -39273,33 +39342,35 @@
 			)
 		)
 		(property "Value" "SHT4x"
-			(at 217.17 223.0073 90)
+			(at 210.82 223.52 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "Sensor:SHT4x"
-			(at 226.06 208.28 0)
+		(property "Footprint" "Sensor_Humidity:Sensirion_DFN-4_1.5x1.5mm_P0.8mm_SHT4x_NoCentralPad"
+			(at 204.47 217.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://sensirion.com/media/documents/33FD6951/61641E1E/Sensirion_Humidity_Sensors_SHT4x_Datasheet.pdf"
-			(at 234.95 207.01 0)
+		(property "Datasheet" "https://sensirion.com/media/documents/33FD6951/624C4357/Datasheet_SHT4x.pdf"
+			(at 201.93 217.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 				(hide yes)
 			)
 		)
-		(property "Description" "Temperature and humidity module"
-			(at 217.17 213.36 0)
+		(property "Description" "Digital Humidity and Temperature Sensor, ±1%RH, ±0.1°C, I2C, 1.08-3.6V, 16bit, DFN-4"
+			(at 210.82 213.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -39308,7 +39379,7 @@
 			)
 		)
 		(property "JLCPCB" "C2909890"
-			(at 217.17 213.36 0)
+			(at 210.82 213.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -39317,7 +39388,7 @@
 			)
 		)
 		(property "LCSC" "C2909890"
-			(at 217.17 213.36 0)
+			(at 210.82 213.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -39326,7 +39397,7 @@
 			)
 		)
 		(property "PcbText" ""
-			(at 217.17 213.36 0)
+			(at 210.82 213.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -39334,7 +39405,7 @@
 			)
 		)
 		(property "Field4" ""
-			(at 217.17 213.36 0)
+			(at 210.82 213.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -40575,7 +40646,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "AQG12205"
+		(property "Footprint" "AQG12205:AQG12205"
 			(at 381 147.32 0)
 			(effects
 				(font
@@ -40682,6 +40753,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "PcbText" ""
+			(at 356.87 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
