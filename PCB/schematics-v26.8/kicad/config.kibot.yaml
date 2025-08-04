@@ -5,7 +5,7 @@ kibot:
 preflight:
   run_erc: true
   run_drc: true
-  check_zone_fills: false
+  check_zone_fills: true
   ignore_unconnected: false
 
 global:

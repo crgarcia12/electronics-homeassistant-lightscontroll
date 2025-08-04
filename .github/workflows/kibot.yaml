@@ -19,7 +19,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: INTI-CMNB/KiBot@v2_k9
-      name: generating files for v25
+      name: generating files for v26.8
       with:
         # Required - kibot config file
         config: PCB/schematics-v26.8/kicad/config.kibot.yaml 
