@@ -13231,6 +13231,10 @@
 		(uuid "16bfe94d-2b11-43d9-97e9-f9dd773f194f")
 	)
 	(no_connect
+		(at 245.11 279.4)
+		(uuid "267f763f-c0aa-4fa7-b5d4-ceffb10caf6e")
+	)
+	(no_connect
 		(at 44.45 241.3)
 		(uuid "2b89917c-b462-4f3f-81bf-eec8e8bece3c")
 	)
@@ -13265,6 +13269,10 @@
 	(no_connect
 		(at 44.45 226.06)
 		(uuid "89846f40-33b8-4592-af02-aee7183dccc5")
+	)
+	(no_connect
+		(at 245.11 274.32)
+		(uuid "8bea65a5-ab22-4376-ace1-83bf5bf9ae1d")
 	)
 	(no_connect
 		(at 222.25 279.4)
