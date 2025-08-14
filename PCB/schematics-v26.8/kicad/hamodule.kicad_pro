@@ -37,7 +37,7 @@
         "other_text_thickness": 0.15,
         "other_text_upright": true,
         "pads": {
-          "drill": 3.5,
+          "drill": 3.2,
           "height": 5.5,
           "width": 5.5
         },
@@ -147,7 +147,7 @@
         "min_via_diameter": 0.4,
         "solder_mask_clearance": 0.05,
         "solder_mask_min_width": 0.0,
-        "solder_mask_to_copper_clearance": 0.0,
+        "solder_mask_to_copper_clearance": 0.005,
         "solder_paste_clearance": 0.0,
         "solder_paste_margin_ratio": -0.0,
         "use_height_for_length_calcs": true
@@ -447,7 +447,7 @@
       "extra_units": "error",
       "footprint_filter": "warning",
       "footprint_link_issues": "warning",
-      "four_way_junction": "ignore",
+      "four_way_junction": "warning",
       "global_label_dangling": "warning",
       "hier_label_mismatch": "error",
       "label_dangling": "error",
