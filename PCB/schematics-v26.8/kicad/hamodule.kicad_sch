@@ -11872,6 +11872,19 @@
 		(uuid 7c751da8-77c0-46cf-a4f7-04454a057fe3)
 	)
 	(rectangle
+		(start 33.02 156.21)
+		(end 57.15 170.18)
+		(stroke
+			(width 0)
+			(type dash)
+			(color 255 0 255 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 91b1c941-7055-4001-94ee-86a530d5642e)
+	)
+	(rectangle
 		(start 355.6 24.13)
 		(end 388.62 45.72)
 		(stroke
@@ -12211,6 +12224,17 @@
 	)
 	(text "Not required"
 		(exclude_from_sim no)
+		(at 45.212 171.704 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 0 255 1)
+			)
+		)
+		(uuid "df283e17-f82e-476e-a43f-d25810114df0")
+	)
+	(text "Not required"
+		(exclude_from_sim no)
 		(at 35.052 72.644 0)
 		(effects
 			(font
@@ -12485,6 +12509,12 @@
 		(uuid "48554ba2-db49-4ddc-a433-fb21bd26e07a")
 	)
 	(junction
+		(at 45.72 160.02)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4b512e91-b859-4490-93d0-758fc2a24e9a")
+	)
+	(junction
 		(at 292.1 91.44)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -12501,12 +12531,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4d50c77d-dbc3-419c-aeab-384788a26fe2")
-	)
-	(junction
-		(at 45.72 156.21)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4e86eed9-5b7a-49b2-85ee-d31fa30a99ea")
 	)
 	(junction
 		(at 119.38 77.47)
@@ -13968,16 +13992,6 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 156.21) (xy 48.26 156.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "19c2f6a2-c0e9-4b7a-9dd2-ce1d1da063e0")
-	)
-	(wire
-		(pts
 			(xy 276.86 228.6) (xy 288.29 228.6)
 		)
 		(stroke
@@ -14195,6 +14209,16 @@
 			(type default)
 		)
 		(uuid "235daada-0163-4d4d-917d-eb4f84e12b73")
+	)
+	(wire
+		(pts
+			(xy 38.1 156.21) (xy 38.1 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2386cd01-3a26-448f-a11b-237aa5481c3e")
 	)
 	(wire
 		(pts
@@ -15195,6 +15219,26 @@
 			(type default)
 		)
 		(uuid "538ab170-326b-4189-b222-f46e74e98d3d")
+	)
+	(wire
+		(pts
+			(xy 45.72 156.21) (xy 45.72 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "54282234-079e-4298-9e56-828bd8211ff8")
+	)
+	(wire
+		(pts
+			(xy 46.99 161.29) (xy 46.99 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "554ce4d7-393c-4b03-adec-811d0e794cc4")
 	)
 	(wire
 		(pts
@@ -16945,6 +16989,16 @@
 			(type default)
 		)
 		(uuid "a86c02aa-0b75-44aa-9663-fe26301cd9b9")
+	)
+	(wire
+		(pts
+			(xy 46.99 160.02) (xy 45.72 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a8d1846d-fb50-4ba0-b3d2-57b77320ccdf")
 	)
 	(wire
 		(pts
@@ -19769,7 +19823,7 @@
 	)
 	(global_label "GND"
 		(shape input)
-		(at 48.26 156.21 270)
+		(at 46.99 161.29 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -19779,7 +19833,7 @@
 		)
 		(uuid "30042508-456f-449d-b7d5-761c82b2f89d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at -3.81 381 0)
+			(at -5.08 386.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -37014,7 +37068,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 41.91 156.21 90)
+		(at 41.91 160.02 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -37022,7 +37076,7 @@
 		(dnp no)
 		(uuid "9edde34b-a90e-461d-a5f5-4abaa51b2e4f")
 		(property "Reference" "R2"
-			(at 41.91 161.4678 90)
+			(at 41.91 165.2778 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -37031,7 +37085,7 @@
 			)
 		)
 		(property "Value" "150kΩ"
-			(at 40.64 158.75 90)
+			(at 40.64 162.56 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -37039,7 +37093,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 41.91 157.988 90)
+			(at 41.91 161.798 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -37048,7 +37102,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 41.91 156.21 0)
+			(at 41.91 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -37057,7 +37111,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 41.91 156.21 0)
+			(at 41.91 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -37066,7 +37120,7 @@
 			)
 		)
 		(property "JLCPCB" "C17470"
-			(at 41.91 156.21 0)
+			(at 41.91 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -37075,7 +37129,7 @@
 			)
 		)
 		(property "LCSC" "C17470"
-			(at 41.91 156.21 0)
+			(at 41.91 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -37084,7 +37138,7 @@
 			)
 		)
 		(property "PcbText" ""
-			(at 41.91 156.21 0)
+			(at 41.91 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -37092,7 +37146,7 @@
 			)
 		)
 		(property "Field4" ""
-			(at 41.91 156.21 0)
+			(at 41.91 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
