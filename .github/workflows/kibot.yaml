@@ -28,7 +28,7 @@ jobs:
         # Required - kibot config file
         config: PCB/schematics-v26.1/kicad/kibot-configs/config.kibot.yaml 
         # optional - prefix to output defined in config
-        dir: PCB/schematics-v26.1/kicad/fabrication/general
+        dir: PCB/schematics-v26.1/kicad/fabrication/
         # optional - schematic file
         schema: 'PCB/schematics-v26.1/kicad/hamodule.kicad_sch'
         # optional - PCB design file
@@ -37,4 +37,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: output-4-channels-PCB-v26.1
-        path: PCB/schematics-v26.1/kicad/fabrication/general
+        path: PCB/schematics-v26.1/kicad/fabrication/
