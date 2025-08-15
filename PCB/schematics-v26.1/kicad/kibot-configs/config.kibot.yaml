@@ -14,7 +14,7 @@ global:
   kiauto_time_out_scale: 10
 
 import:
-  - configs/JLCPCB.kibot.yaml
+  - JLCPCB.kibot.yaml
 
 filters:
  - name: 'exclude_any'
