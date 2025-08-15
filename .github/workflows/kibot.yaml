@@ -19,18 +19,18 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: INTI-CMNB/KiBot@v2_k9
-      name: generating files for v26.8
+      name: generating files for v26.1
       with:
         # Required - kibot config file
-        config: PCB/schematics-v26.8/kicad/config.kibot.yaml 
+        config: PCB/schematics-v26.1/kicad/kibot-config/config.kibot.yaml 
         # optional - prefix to output defined in config
-        dir: PCB/schematics-v26.8/kicad/fabrication
+        dir: PCB/schematics-v26.1/kicad/fabrication
         # optional - schematic file
-        schema: 'PCB/schematics-v26.8/kicad/hamodule.kicad_sch'
+        schema: 'PCB/schematics-v26.1/kicad/hamodule.kicad_sch'
         # optional - PCB design file
-        board: 'PCB/schematics-v26.8/kicad/hamodule.kicad_pcb'
-    - name: upload results for v26.8
+        board: 'PCB/schematics-v26.1/kicad/hamodule.kicad_pcb'
+    - name: upload results for v26.1
       uses: actions/upload-artifact@v4
       with:
-        name: output-4-channels-PCB-v26.8
-        path: PCB/schematics-v26.8/kicad/fabrication
+        name: output-4-channels-PCB-v26.1
+        path: PCB/schematics-v26.1/kicad/fabrication

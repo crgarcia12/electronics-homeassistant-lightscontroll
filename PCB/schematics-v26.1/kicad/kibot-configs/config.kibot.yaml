@@ -66,6 +66,8 @@ outputs:
           name: Parte
         - field: Value
           name: Valor
+        - field: JLCPCB
+          name: JLCPCB
         - field: manf#
           name: P/N
         - field: manf

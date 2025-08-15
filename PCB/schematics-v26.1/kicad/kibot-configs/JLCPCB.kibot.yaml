@@ -30,6 +30,8 @@ outputs:
       # are slightly different.
       - F.Cu
       - B.Cu
+      - In1.Cu
+      - In2.Cu
       - F.SilkS
       - B.SilkS
       - F.Mask
