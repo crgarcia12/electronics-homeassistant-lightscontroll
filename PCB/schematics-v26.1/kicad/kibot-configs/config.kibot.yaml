@@ -1,10 +1,9 @@
-# Example KiBot config file
 kibot:
   version: 1
 
 preflight:
-  run_erc: true
-  run_drc: true
+  erc: true
+  drc: true
   check_zone_fills: true
   ignore_unconnected: false
 
@@ -25,22 +24,27 @@ filters:
        regex: '^(G|#|TP|F).*'
 
 outputs:
-  - name: 'print_sch'
+  - name: 'schematic_print'
     comment: "Print schematic (PDF)"
     type: pdf_sch_print
     dir: .
 
-  - name: 'print_front'
+  - name: 'schematic_svg'
+    comment: "Print schematic (SVG)"
+    type: svg_sch_print
+    dir: .
+
+  - name: 'pcb_print_front'
     comment: "Print F.Cu+Dwgs.User"
-    type: pdf_pcb_print
+    type: pcbdraw
     dir: .
     layers:
       - layer: F.Cu
       - layer: Dwgs.User
 
-  - name: 'print_bottom'
+  - name: 'pcb_print_bottom'
     comment: "Print B.Cu+Dwgs.User"
-    type: pdf_pcb_print
+    type: pcbdraw
     dir: .
     layers:
       - layer: B.Cu
@@ -200,55 +204,7 @@ outputs:
       show_components: none
       dpi: 600
 
-  - name: pcb_top_b
-    comment: "PCB render top blue"
-    type: pcbdraw
-    dir: PCB/blue
-    options:
-      format: jpg
-      style: set-blue-enig
-      show_components: none
-      dpi: 600
 
-  - name: pcb_bot_b
-    comment: "PCB render bottom blue"
-    type: pcbdraw
-    dir: PCB/blue
-    options:
-      format: jpg
-      style: set-blue-enig
-      bottom: True
-      show_components: none
-      dpi: 600
-
-  - name: pcb_top_r
-    comment: "PCB render top red"
-    type: pcbdraw
-    dir: PCB/red
-    options:
-      format: jpg
-      style: set-red-enig
-      show_components: none
-      dpi: 600
-
-  - name: pcb_bot_r
-    comment: "PCB render bottom red"
-    type: pcbdraw
-    dir: PCB/red
-    options:
-      format: jpg
-      style: set-red-enig
-      bottom: True
-      show_components: none
-      dpi: 600
-
-  - name: step
-    comment: "Generate 3D model (STEP)"
-    type: step
-    dir: 3D
-    options:
-      metric_units: true
-      origin: 85,66.2
 
   - name: render_3d
     comment: "Generate 3D model (IMG)"
