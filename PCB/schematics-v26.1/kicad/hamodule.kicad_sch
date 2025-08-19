@@ -6,8 +6,8 @@
 	(paper "A3")
 	(title_block
 		(title "Home Assistant module for lights control")
-		(date "2025-08-14")
-		(rev "20250814.26.1")
+		(date "2025-08-19")
+		(rev "20250819.26.1.2L")
 	)
 	(lib_symbols
 		(symbol "74xGxx:74AHC1G04"
