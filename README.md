@@ -18,7 +18,7 @@ This device is extensible:
 - Expose Serial pins
 - Expose many GPIOs
 - 3.3V jumper: Allows to disconnect the internal ESP32, and replace it by any other microcontroller
-- Relays pins: Relays can be controlled with an external microcontroller or device directly 
+- Relays pins (4 channel version): Relays can be controlled with an external microcontroller or device directly 
 - Current sensing pins: Current sensing information is exposed through those pins. This can be used to connect any external microcontroller or any other device
 - Provides 3.3V and 5V
 - ESPHome compatible - It's very easy to integrate to Home Assistant
@@ -35,25 +35,29 @@ This device has several security measurements:
 There are two versions of the board, one with four channels and another with eight channels.
 Latest versions use ESP32-S3, which is a very powerful microcontroller with a lot of features.
 
+# Version 27
+This is an evolution of 26.1. This is the right size for the case
 
-# Version 26.8: Eight channels with IO expander
+# Version 26.1, 2 3: Eight channels with IO expander
 Compared to version 23:
 * Using TCAL6416A instead of MCP23108 due to having push-pull instead of open-drain ouputs.
 * MCP23017 has released an amendum to the datasheet declaring a bug in two pins. Making them read only
 * Adjust the border cut-outs to fit the middle mounting hole
 * There was a bug in the TXB0108 implementation. OE and DIR pins should be referencing VccA. This means they need voltage divider (VccA = 3V and not 3.3)
 * Adding descriptions in the schematics
+* Having 3 subversions made by jlcpcb to test fitting in the case. They are all the same, different board size
+* BUG: The resistors R27-R34 are too week, because 74LVCH8T245PWE4 level shifter has bus voltage holder.
 
-Version 24.8-2 (SN74LVCH8 + OUTPUT_ENABLED)
-![board-schematics](PCB/schematics-v26.8/readme-media/schematics.svg)
-![board-pcb](PCB/schematics-v26.8/readme-media/board.png)
-![board-pcb](PCB/schematics-v26.8/readme-media/board-front.svg)
-![board-pcb](PCB/schematics-v26.8/readme-media/board-back.svg)
-![board-pcb](PCB/schematics-v26.8/readme-media/board-3d-1.png)
-![board-pcb](PCB/schematics-v26.8/readme-media/board-3d-2.png)
-![board-pcb](PCB/schematics-v26.8/readme-media/board-3d-3.png)
-![board-pcb](PCB/schematics-v26.8/readme-media/board-3d-4.png)
-![board-pcb](PCB/schematics-v26.8/readme-media/board-3d-5.png)
+Version 26.1 (SN74LVCH8 + OUTPUT_ENABLED)
+![board-schematics](PCB/schematics-v26.1-jlcpcb/readme-media/schematics.svg)
+![board-pcb](PCB/schematics-v26.1-jlcpcb/readme-media/board.png)
+![board-pcb](PCB/schematics-v26.1-jlcpcb/readme-media/board-front.svg)
+![board-pcb](PCB/schematics-v26.1-jlcpcb/readme-media/board-back.svg)
+![board-pcb](PCB/schematics-v26.1-jlcpcb/readme-media/board-3d-1.png)
+![board-pcb](PCB/schematics-v26.1-jlcpcb/readme-media/board-3d-2.png)
+![board-pcb](PCB/schematics-v26.1-jlcpcb/readme-media/board-3d-3.png)
+![board-pcb](PCB/schematics-v26.1-jlcpcb/readme-media/board-3d-4.png)
+![board-pcb](PCB/schematics-v26.1-jlcpcb/readme-media/board-3d-5.png)
 
 # How does it work?
 Section under development.
