@@ -18,7 +18,7 @@
 #define OUTPUT_ENABLED_PIN 16
 #define TACL_INT_PIN 17
 
-#define BUTTON_PIN 26
+#define BUTTON_PIN 15
 int button_push;
 int store_moving;
 
@@ -161,6 +161,11 @@ void setup() {
 	Serial.println("STARTING");
 	Serial.println("---------------------------------------------------");
 
+	pinMode(STAUS_LED_PIN, OUTPUT);
+	pinMode(BUTTON_PIN, INPUT);
+	pinMode(OUTPUT_ENABLED_PIN, OUTPUT);
+	digitalWrite(OUTPUT_ENABLED_PIN, LOW);
+
 	for (int i = 0; i < 10; i ++)
 	{
   	digitalWrite(STAUS_LED_PIN, LOW);
@@ -168,14 +173,12 @@ void setup() {
 		digitalWrite(STAUS_LED_PIN, HIGH);
 		delay(500);
 	}
-
-	delay(1000);
-  pinMode(STAUS_LED_PIN, OUTPUT);
-	pinMode(BUTTON_PIN, INPUT);
+  delay(1000);	
 
   // Resetting TCAL6416
-  pinMode(OUTPUT_ENABLED_PIN, OUTPUT);
-  digitalWrite(OUTPUT_ENABLED_PIN, LOW);
+	
+  
+  
   delay(1000);
   digitalWrite(OUTPUT_ENABLED_PIN, HIGH);
 
@@ -183,7 +186,7 @@ void setup() {
 
   Serial.println("Connecting");
 	while (!TCA6416A_begin(TCAL6416_ADDR, &Wire)) { // replace 0 with the address bit of your TCA6416A
-    	Serial.println("TCA6416A not found");
+    Serial.println("TCA6416A not found");
 		delay(1000);
 	}
   Serial.println("TCA6416A found");
@@ -208,13 +211,13 @@ void loop() {
 	}
 
 	// Reading
-	Serial.print("Reading pins: ");
+	//Serial.print("Reading pins: ");
 	for(int i = 0; i < 8; i++)
 	{
   	int value = TCA6416A_pin_read(i);
-  	Serial.print(value);
+  	//Serial.print(value);
 	}
-	Serial.println("");
+	//Serial.println("");
 
 	// Writing
 	int button = digitalRead(BUTTON_PIN);
@@ -223,20 +226,22 @@ void loop() {
   } else {
     button_push = 0;
   }
+	Serial.print("Button push: ");
+	Serial.println(button_push);
 
-	if(button_push > 10)
+	if(button_push == 10)
 	{
 		store_moving = !store_moving;
 		Serial.print("Store moving: ");
 		Serial.println(store_moving);
 	}
 
-  digitalWrite(STAUS_LED_PIN, button);
+  digitalWrite(STAUS_LED_PIN, true);
 	
-	TCA6416A_pin_write(8, store_moving);
+	TCA6416A_pin_write(15, store_moving);
 
-	Serial.print("Writing output pins: ");
-  Serial.println(store_moving);
+	//Serial.print("Writing output pins: ");
+  //Serial.println(store_moving);
 
-  delay(100);
+  delay(1000);
 }
