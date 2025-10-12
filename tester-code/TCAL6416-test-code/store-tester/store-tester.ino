@@ -1,10 +1,11 @@
 
 ///////////// IMPORTANT ////////////////
-// To get the Serial debug you need to configure Arduino IDE as follow
+// To be able to deploy and get the Serial working you need to configure Arduino IDE as follow
 //
 // USB Mode: Hardware CDC and JTAG
 // Upload mode: Hardware CDC / JTAG
 // USB CDC on boot: enabled
+// board: ESP32S3 DevModule
 
 #include <Arduino.h>
 #include "Wire.h"
@@ -17,7 +18,9 @@
 #define OUTPUT_ENABLED_PIN 16
 #define TACL_INT_PIN 17
 
-int test_output_state;
+#define BUTTON_PIN 26
+int button_push;
+int store_moving;
 
 //////////////////////////////2/////////
 /// TCAL6416 SPECIFIC CONSTANTS
@@ -38,79 +41,10 @@ uint16_t pinModes;
 
 
 /// interrupt from TCAL6416A
+volatile bool interrupted = false;
 void IRAM_ATTR isr() {
-    Serial.println("INTERRUPTED");
+    interrupted = true;
 }
-
-void setup() {
-  Serial.begin(115200);
-  pinMode(STAUS_LED_PIN, OUTPUT);
-
-
-  // Resetting TCAL6416
-  pinMode(OUTPUT_ENABLED_PIN, OUTPUT);
-  digitalWrite(OUTPUT_ENABLED_PIN, LOW);
-  delay(1000);
-  digitalWrite(OUTPUT_ENABLED_PIN, HIGH);
-
-  Wire.begin(I2C_SDA, I2C_SCL);
-
-  Serial.println("Connecting");
-	while (!TCA6416A_begin(TCAL6416_ADDR, &Wire)) { // replace 0 with the address bit of your TCA6416A
-    	Serial.println("TCA6416A not found");
-		delay(1000);
-	}
-  Serial.println("TCA6416A found");
-
-	// Configure interrupt
-	pinMode(TACL_INT_PIN, INPUT_PULLUP);
-	attachInterrupt(TACL_INT_PIN, isr, FALLING);
-
-	for (int i = 0; i < 8; i ++)
-	{
-		TCA6416A_pin_mode(i, INPUT);
-		TCA6416A_pin_mode(i+8, OUTPUT);
-	}
-
-}
-
-void loop() {
-
-  digitalWrite(STAUS_LED_PIN, HIGH);
-
-	// Reading
-	Serial.print("Reading test pin: ");
-	for(int i = 0; i < 8; i++)
-	{
-  	int value = TCA6416A_pin_read(i);
-  	Serial.print(value);
-	}
-	Serial.println("");
-
-	// Writing
-	if(test_output_state == LOW)
-	{
-		test_output_state = HIGH;
-	}
-	else
-	{
-		test_output_state = LOW;
-	}
-	for(int i = 8; i < 16; i++)
-	{
-		TCA6416A_pin_write(i, test_output_state);
-	}
-	Serial.print("Writing output pins: ");
-  Serial.println(test_output_state);
-
-
-  digitalWrite(STAUS_LED_PIN, LOW);
-  delay(1000);
-}
-
-
-
-
 /////////////////////////////////////////////////////
 bool TCA6416A_begin(uint8_t addr_bit, TwoWire *theWire) {
 	i2caddr = 0x20 | addr_bit;
@@ -218,4 +152,91 @@ uint16_t TCA6416A_mode_read() {
 	pinModes |= TW->read() << 8;
 
 	return pinModes;
+}
+
+
+void setup() {
+  Serial.begin(115200);
+	Serial.println("---------------------------------------------------");
+	Serial.println("STARTING");
+	Serial.println("---------------------------------------------------");
+
+	for (int i = 0; i < 10; i ++)
+	{
+  	digitalWrite(STAUS_LED_PIN, LOW);
+		delay(500);
+		digitalWrite(STAUS_LED_PIN, HIGH);
+		delay(500);
+	}
+
+	delay(1000);
+  pinMode(STAUS_LED_PIN, OUTPUT);
+	pinMode(BUTTON_PIN, INPUT);
+
+  // Resetting TCAL6416
+  pinMode(OUTPUT_ENABLED_PIN, OUTPUT);
+  digitalWrite(OUTPUT_ENABLED_PIN, LOW);
+  delay(1000);
+  digitalWrite(OUTPUT_ENABLED_PIN, HIGH);
+
+  Wire.begin(I2C_SDA, I2C_SCL);
+
+  Serial.println("Connecting");
+	while (!TCA6416A_begin(TCAL6416_ADDR, &Wire)) { // replace 0 with the address bit of your TCA6416A
+    	Serial.println("TCA6416A not found");
+		delay(1000);
+	}
+  Serial.println("TCA6416A found");
+
+	// Configure interrupt
+	pinMode(TACL_INT_PIN, INPUT_PULLUP);
+	attachInterrupt(TACL_INT_PIN, isr, FALLING);
+
+	for (int i = 0; i < 8; i ++)
+	{
+		TCA6416A_pin_mode(i, INPUT);
+		TCA6416A_pin_mode(i+8, OUTPUT);
+	}
+}
+
+void loop() {
+
+	if(interrupted)
+	{
+		Serial.println("INTERRUPTED");
+		interrupted = false;
+	}
+
+	// Reading
+	Serial.print("Reading pins: ");
+	for(int i = 0; i < 8; i++)
+	{
+  	int value = TCA6416A_pin_read(i);
+  	Serial.print(value);
+	}
+	Serial.println("");
+
+	// Writing
+	int button = digitalRead(BUTTON_PIN);
+  if (button == HIGH) {
+    button_push ++;
+  } else {
+    button_push = 0;
+  }
+
+	if(button_push > 10)
+	{
+		store_moving = !store_moving;
+		Serial.print("Store moving: ");
+		Serial.println(store_moving);
+	}
+
+  digitalWrite(STAUS_LED_PIN, button);
+	
+	TCA6416A_pin_write(8, store_moving);
+
+	Serial.print("Writing output pins: ");
+  Serial.println(store_moving);
+
+  delay(100);
 }
