@@ -12178,9 +12178,9 @@
 		)
 		(uuid "c35c98e9-b8ac-4a91-9fa1-791b76866201")
 	)
-	(text "4 layer test: Some boards \nare 2 layers only to test fit. \nConnecting two probes via \nlayer 3 is an easy test to \ncheck if the board is \na 2 or 4 layers one"
+	(text "4 layer test: Some boards \nare 2 layers only to test\nfit. Connecting two probes\nvia layer 3 is an easy \ntest to check if the board\nis a 2 or 4 layers one"
 		(exclude_from_sim no)
-		(at 196.596 276.098 0)
+		(at 198.628 276.098 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -12413,12 +12413,6 @@
 		(uuid "1eb539b2-0b20-4016-912d-f5c1bc8c7956")
 	)
 	(junction
-		(at 207.01 82.55)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "1fb3f015-a603-4052-b043-6df49d647a16")
-	)
-	(junction
 		(at 201.93 111.76)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -12489,12 +12483,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3d87925a-17fc-4508-a3f0-1aa050f4773f")
-	)
-	(junction
-		(at 207.01 90.17)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "3d96a6a0-811a-4284-944d-e14bc0d5798d")
 	)
 	(junction
 		(at 69.85 77.47)
@@ -12599,6 +12587,12 @@
 		(uuid "53a74f32-bf6d-4ec6-bc38-7687befa5eb1")
 	)
 	(junction
+		(at 207.01 90.17)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "53c84774-433d-4109-a2f6-fd227a739aa9")
+	)
+	(junction
 		(at 256.54 63.5)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -12701,10 +12695,22 @@
 		(uuid "70be286e-0b26-40c5-bb5d-6537ca78d54c")
 	)
 	(junction
+		(at 207.01 82.55)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "74dc79f4-ab97-477d-8e6a-a6ee3730637f")
+	)
+	(junction
 		(at 292.1 208.28)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "753e490a-564f-4fa5-a4b0-210cb9a733f4")
+	)
+	(junction
+		(at 193.04 275.59)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "75f30e1b-29f1-4aca-aa11-5464e016c7b1")
 	)
 	(junction
 		(at 278.13 135.89)
@@ -13751,6 +13757,16 @@
 			(type default)
 		)
 		(uuid "0a84acaa-425b-4de1-b874-8b5c9796feeb")
+	)
+	(wire
+		(pts
+			(xy 207.01 90.17) (xy 208.28 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0af7ff71-b461-4ce9-9855-ffbf99071cde")
 	)
 	(wire
 		(pts
@@ -15151,16 +15167,6 @@
 			(type default)
 		)
 		(uuid "49139704-d920-4081-8e99-abfe45314e80")
-	)
-	(wire
-		(pts
-			(xy 207.01 90.17) (xy 205.74 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "49978b19-6467-4988-90ac-f99c9c536b5a")
 	)
 	(wire
 		(pts
@@ -16954,7 +16960,7 @@
 	)
 	(wire
 		(pts
-			(xy 186.69 280.67) (xy 191.77 280.67)
+			(xy 187.96 275.59) (xy 193.04 275.59)
 		)
 		(stroke
 			(width 0)
@@ -17244,16 +17250,6 @@
 	)
 	(wire
 		(pts
-			(xy 208.28 90.17) (xy 207.01 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ae953f13-62d1-4d3d-a486-04edcaea59fc")
-	)
-	(wire
-		(pts
 			(xy 377.19 20.32) (xy 383.54 20.32)
 		)
 		(stroke
@@ -17441,6 +17437,16 @@
 			(type default)
 		)
 		(uuid "b5f6605a-5f50-489f-b9ce-c0510ee45d9c")
+	)
+	(wire
+		(pts
+			(xy 193.04 279.4) (xy 193.04 275.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b66c675d-224a-4cd1-b2ec-2a79468f9d5e")
 	)
 	(wire
 		(pts
@@ -18204,6 +18210,16 @@
 	)
 	(wire
 		(pts
+			(xy 205.74 90.17) (xy 207.01 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5fc2a0a-8f5e-4e7c-b38a-f9571391bfd6")
+	)
+	(wire
+		(pts
 			(xy 60.96 133.35) (xy 63.5 133.35)
 		)
 		(stroke
@@ -18664,17 +18680,7 @@
 	)
 	(wire
 		(pts
-			(xy 207.01 82.55) (xy 214.63 82.55)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e3df3f08-e23d-47a0-a4d0-936f8ab830dc")
-	)
-	(wire
-		(pts
-			(xy 186.69 278.13) (xy 186.69 280.67)
+			(xy 187.96 273.05) (xy 187.96 275.59)
 		)
 		(stroke
 			(width 0)
@@ -18964,6 +18970,16 @@
 	)
 	(wire
 		(pts
+			(xy 207.01 82.55) (xy 214.63 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f06ed24f-e2c3-41d4-8b6d-63e798cf74c6")
+	)
+	(wire
+		(pts
 			(xy 69.85 77.47) (xy 69.85 83.82)
 		)
 		(stroke
@@ -18984,7 +19000,7 @@
 	)
 	(wire
 		(pts
-			(xy 191.77 278.13) (xy 191.77 280.67)
+			(xy 193.04 273.05) (xy 193.04 275.59)
 		)
 		(stroke
 			(width 0)
@@ -25546,7 +25562,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "100Ω"
+		(property "Value" "150Ω"
 			(at 88.9 57.15 90)
 			(effects
 				(font
@@ -25581,7 +25597,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C17408"
+		(property "JLCPCB" ""
 			(at 88.9 59.69 0)
 			(effects
 				(font
@@ -25590,7 +25606,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C17408"
+		(property "LCSC" ""
 			(at 88.9 59.69 0)
 			(effects
 				(font
@@ -25606,6 +25622,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "PcbText" ""
+			(at 88.9 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -27449,7 +27473,7 @@
 				)
 			)
 		)
-		(property "Value" "10kΩ"
+		(property "Value" "5kΩ"
 			(at 209.55 144.78 90)
 			(effects
 				(font
@@ -27484,7 +27508,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C25804"
+		(property "JLCPCB" ""
 			(at 207.01 144.78 0)
 			(effects
 				(font
@@ -27493,7 +27517,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C25804"
+		(property "LCSC" ""
 			(at 207.01 144.78 0)
 			(effects
 				(font
@@ -30029,7 +30053,7 @@
 				)
 			)
 		)
-		(property "Value" "10kΩ"
+		(property "Value" "5kΩ"
 			(at 209.55 115.57 90)
 			(effects
 				(font
@@ -30064,7 +30088,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C25804"
+		(property "JLCPCB" ""
 			(at 207.01 115.57 0)
 			(effects
 				(font
@@ -30073,7 +30097,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C25804"
+		(property "LCSC" ""
 			(at 207.01 115.57 0)
 			(effects
 				(font
@@ -30399,6 +30423,90 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint_Probe")
+		(at 193.04 279.4 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "287aaa99-1186-469b-800f-171f82947df8")
+		(property "Reference" "TP5"
+			(at 192.786 280.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "4 layer test"
+			(at 196.85 279.0824 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_1.0x1.0mm_Drill0.5mm"
+			(at 198.12 279.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 198.12 279.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point (alternative probe-style design)"
+			(at 193.04 279.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" ""
+			(at 193.04 279.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PcbText" ""
+			(at 193.04 279.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f0d5d62a-acea-49c3-a147-c0e35da5a16c")
+		)
+		(instances
+			(project "hamodule"
+				(path "/e5217a0c-7f55-4c30-adda-7f8d95709d1b"
+					(reference "TP5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 88.9 64.77 270)
 		(unit 1)
@@ -30510,7 +30618,7 @@
 				)
 			)
 		)
-		(property "Value" "10kΩ"
+		(property "Value" "5kΩ"
 			(at 208.28 93.98 90)
 			(effects
 				(font
@@ -30545,7 +30653,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C25804"
+		(property "JLCPCB" ""
 			(at 205.74 93.98 0)
 			(effects
 				(font
@@ -30554,7 +30662,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C25804"
+		(property "LCSC" ""
 			(at 205.74 93.98 0)
 			(effects
 				(font
@@ -31516,7 +31624,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint_Probe")
-		(at 191.77 278.13 0)
+		(at 193.04 273.05 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -31524,7 +31632,7 @@
 		(dnp no)
 		(uuid "36e89df6-4869-4656-aef2-8ce64b4e7636")
 		(property "Reference" "TP4"
-			(at 192.532 273.812 0)
+			(at 193.04 268.732 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -31533,7 +31641,7 @@
 			)
 		)
 		(property "Value" "4 layer test"
-			(at 195.58 277.8124 0)
+			(at 196.85 272.7324 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -31543,7 +31651,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_1.0x1.0mm_Drill0.5mm"
-			(at 196.85 278.13 0)
+			(at 198.12 273.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -31552,7 +31660,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 196.85 278.13 0)
+			(at 198.12 273.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -31561,7 +31669,7 @@
 			)
 		)
 		(property "Description" "test point (alternative probe-style design)"
-			(at 191.77 278.13 0)
+			(at 193.04 273.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -31570,7 +31678,7 @@
 			)
 		)
 		(property "Field4" ""
-			(at 191.77 278.13 0)
+			(at 193.04 273.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -31579,7 +31687,7 @@
 			)
 		)
 		(property "PcbText" ""
-			(at 191.77 278.13 0)
+			(at 193.04 273.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -31600,7 +31708,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint_Probe")
-		(at 186.69 278.13 0)
+		(at 187.96 273.05 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -31608,7 +31716,7 @@
 		(dnp no)
 		(uuid "3c7133dc-4b1e-4d97-a07c-76fd32c73cda")
 		(property "Reference" "TP3"
-			(at 187.452 273.812 0)
+			(at 187.96 268.732 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -31617,7 +31725,7 @@
 			)
 		)
 		(property "Value" "4 layer test"
-			(at 190.5 277.8124 0)
+			(at 191.77 272.7324 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -31627,7 +31735,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_1.0x1.0mm_Drill0.5mm"
-			(at 191.77 278.13 0)
+			(at 193.04 273.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -31636,7 +31744,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 191.77 278.13 0)
+			(at 193.04 273.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -31645,7 +31753,7 @@
 			)
 		)
 		(property "Description" "test point (alternative probe-style design)"
-			(at 186.69 278.13 0)
+			(at 187.96 273.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -31654,7 +31762,7 @@
 			)
 		)
 		(property "Field4" ""
-			(at 186.69 278.13 0)
+			(at 187.96 273.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -31663,7 +31771,7 @@
 			)
 		)
 		(property "PcbText" ""
-			(at 186.69 278.13 0)
+			(at 187.96 273.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -32623,7 +32731,7 @@
 				)
 			)
 		)
-		(property "Value" "10kΩ"
+		(property "Value" "5kΩ"
 			(at 208.28 123.19 90)
 			(effects
 				(font
@@ -32658,7 +32766,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C25804"
+		(property "JLCPCB" ""
 			(at 205.74 123.19 0)
 			(effects
 				(font
@@ -32667,7 +32775,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C25804"
+		(property "LCSC" ""
 			(at 205.74 123.19 0)
 			(effects
 				(font
@@ -34403,7 +34511,7 @@
 				)
 			)
 		)
-		(property "Value" "10kΩ"
+		(property "Value" "5kΩ"
 			(at 209.55 86.36 90)
 			(effects
 				(font
@@ -34438,7 +34546,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C25804"
+		(property "JLCPCB" ""
 			(at 207.01 86.36 0)
 			(effects
 				(font
@@ -34447,7 +34555,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C25804"
+		(property "LCSC" ""
 			(at 207.01 86.36 0)
 			(effects
 				(font
@@ -36114,7 +36222,7 @@
 				)
 			)
 		)
-		(property "Value" "10kΩ"
+		(property "Value" "5kΩ"
 			(at 208.28 64.77 90)
 			(effects
 				(font
@@ -36149,7 +36257,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C25804"
+		(property "JLCPCB" ""
 			(at 205.74 64.77 0)
 			(effects
 				(font
@@ -36158,7 +36266,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C25804"
+		(property "LCSC" ""
 			(at 205.74 64.77 0)
 			(effects
 				(font
@@ -38185,7 +38293,7 @@
 				)
 			)
 		)
-		(property "Value" "10kΩ"
+		(property "Value" "5kΩ"
 			(at 208.28 173.99 90)
 			(effects
 				(font
@@ -38220,7 +38328,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C25804"
+		(property "JLCPCB" ""
 			(at 205.74 173.99 0)
 			(effects
 				(font
@@ -38229,7 +38337,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C25804"
+		(property "LCSC" ""
 			(at 205.74 173.99 0)
 			(effects
 				(font
@@ -40823,7 +40931,7 @@
 				)
 			)
 		)
-		(property "Value" "10kΩ"
+		(property "Value" "5kΩ"
 			(at 208.28 152.4 90)
 			(effects
 				(font
@@ -40858,7 +40966,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C25804"
+		(property "JLCPCB" ""
 			(at 205.74 152.4 0)
 			(effects
 				(font
@@ -40867,7 +40975,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C25804"
+		(property "LCSC" ""
 			(at 205.74 152.4 0)
 			(effects
 				(font
