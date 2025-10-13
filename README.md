@@ -36,34 +36,21 @@ There are two versions of the board, one with four channels and another with eig
 Latest versions use ESP32-S3, which is a very powerful microcontroller with a lot of features.
 
 # Version 27
-This is an evolution of 26.1. This is the right size for the case
+This is an evolution of 26.1. That is the right size that fit perfectly the case
 
-# Version 26.1, 2 3: Eight channels with IO expander
-Compared to version 23:
-* Using TCAL6416A instead of MCP23108 due to having push-pull instead of open-drain ouputs.
-* MCP23017 has released an amendum to the datasheet declaring a bug in two pins. Making them read only
-* Adjust the border cut-outs to fit the middle mounting hole
-* There was a bug in the TXB0108 implementation. OE and DIR pins should be referencing VccA. This means they need voltage divider (VccA = 3V and not 3.3)
-* Adding descriptions in the schematics
-* Having 3 subversions made by jlcpcb to test fitting in the case. They are all the same, different board size
-* BUG: The resistors R27-R34 are too week, because 74LVCH8T245PWE4 level shifter has bus voltage holder.
-
-Version 26.1 (SN74LVCH8 + OUTPUT_ENABLED)
-![board-schematics](PCB/schematics-v26.1-jlcpcb/readme-media/schematics.svg)
-![board-pcb](PCB/schematics-v26.1-jlcpcb/readme-media/board.png)
-![board-pcb](PCB/schematics-v26.1-jlcpcb/readme-media/board-front.svg)
-![board-pcb](PCB/schematics-v26.1-jlcpcb/readme-media/board-back.svg)
-![board-pcb](PCB/schematics-v26.1-jlcpcb/readme-media/board-3d-1.png)
-![board-pcb](PCB/schematics-v26.1-jlcpcb/readme-media/board-3d-2.png)
-![board-pcb](PCB/schematics-v26.1-jlcpcb/readme-media/board-3d-3.png)
-![board-pcb](PCB/schematics-v26.1-jlcpcb/readme-media/board-3d-4.png)
-![board-pcb](PCB/schematics-v26.1-jlcpcb/readme-media/board-3d-5.png)
+Version 7 (SN74LVCH8 + OUTPUT_ENABLED)
+![board-schematics](PCB/schematics-v27/readme-media/schematics.svg)
+![board-pcb](PCB/schematics-v27/readme-media/board.png)
+![board-pcb](PCB/schematics-v27/readme-media/board-front.svg)
+![board-pcb](PCB/schematics-v27/readme-media/board-back.svg)
+![board-pcb](PCB/schematics-v27/readme-media/board-3d-1.png)
+![board-pcb](PCB/schematics-v27/readme-media/board-3d-2.png)
+![board-pcb](PCB/schematics-v27/readme-media/board-3d-3.png)
+![board-pcb](PCB/schematics-v27/readme-media/board-3d-4.png)
+![board-pcb](PCB/schematics-v27/readme-media/board-3d-5.png)
 
 # How does it work?
-Section under development.
 ## Mains sensing
-Section under development.
-
 The PCB uses an optocoupler (LDA210 or ILD755) to detect the presence of mains voltage. These darlington optocouplers are chosen specifically for their low current requirements, drawing only 0.7mA at less than 2V. This low-power design allows for efficient sensing without overheating components.
 
 To reduce the mains voltage to a safe level for the optocoupler, a 300kΩ resistance setup is used. This configuration dissipates only 0.17W, which is split across two resistors. Each resistor, therefore, dissipates about 0.08W, preventing overheating issues commonly seen with other designs (such as those using the HCP chip). This improvement enhances both the safety and longevity of the PCB.
@@ -177,6 +164,27 @@ schematics:
 PCB:
 Print to PDF, and use a high-resolution PDF to JPG converting website like: https://pdf2jpg.net/
 
+
+# Older Versions: 26.1, 2 3: Eight channels with IO expander
+Compared to version 23:
+* Using TCAL6416A instead of MCP23108 due to having push-pull instead of open-drain ouputs.
+* MCP23017 has released an amendum to the datasheet declaring a bug in two pins. Making them read only
+* Adjust the border cut-outs to fit the middle mounting hole
+* There was a bug in the TXB0108 implementation. OE and DIR pins should be referencing VccA. This means they need voltage divider (VccA = 3V and not 3.3)
+* Adding descriptions in the schematics
+* Having 3 subversions made by jlcpcb to test fitting in the case. They are all the same, different board size
+* BUG: The resistors R27-R34 are too week, because 74LVCH8T245PWE4 level shifter has bus voltage holder.
+
+Version 26.1 (SN74LVCH8 + OUTPUT_ENABLED)
+![board-schematics](PCB/schematics-v26.1-jlcpcb/readme-media/schematics.svg)
+![board-pcb](PCB/schematics-v26.1-jlcpcb/readme-media/board.png)
+![board-pcb](PCB/schematics-v26.1-jlcpcb/readme-media/board-front.svg)
+![board-pcb](PCB/schematics-v26.1-jlcpcb/readme-media/board-back.svg)
+![board-pcb](PCB/schematics-v26.1-jlcpcb/readme-media/board-3d-1.png)
+![board-pcb](PCB/schematics-v26.1-jlcpcb/readme-media/board-3d-2.png)
+![board-pcb](PCB/schematics-v26.1-jlcpcb/readme-media/board-3d-3.png)
+![board-pcb](PCB/schematics-v26.1-jlcpcb/readme-media/board-3d-4.png)
+![board-pcb](PCB/schematics-v26.1-jlcpcb/readme-media/board-3d-5.png)
 
 # Older Versions: 24 Eight channels with IO expander
 Compared to version 23:
