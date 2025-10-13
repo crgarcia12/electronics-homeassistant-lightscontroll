@@ -38,17 +38,17 @@ outputs:
     comment: "Print F.Cu+Dwgs.User"
     type: pcbdraw
     dir: .
-    layers:
-      - layer: F.Cu
-      - layer: Dwgs.User
+    # layers:
+    #   - layer: F.Cu
+    #   - layer: Dwgs.User
 
   - name: 'pcb_print_bottom'
     comment: "Print B.Cu+Dwgs.User"
     type: pcbdraw
     dir: .
-    layers:
-      - layer: B.Cu
-      - layer: Dwgs.User
+    # layers:
+    #   - layer: B.Cu
+    #   - layer: Dwgs.User
 
   - name: 'interactive_bom'
     comment: "Interactive Bill of Materials (HTML)"
@@ -203,8 +203,6 @@ outputs:
       bottom: True
       show_components: none
       dpi: 600
-
-
 
   - name: render_3d
     comment: "Generate 3D model (IMG)"
