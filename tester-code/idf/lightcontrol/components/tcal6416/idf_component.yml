@@ -1,0 +1,7 @@
+## IDF Component Manager Manifest File
+version: "1.0.0"
+description: "TCAL6416 16-bit I/O Expander Driver for ESP32"
+url: https://github.com/crgarcia12/electronics-homeassistant-lightscontroll
+dependencies:
+  idf:
+    version: ">=4.4.0"
