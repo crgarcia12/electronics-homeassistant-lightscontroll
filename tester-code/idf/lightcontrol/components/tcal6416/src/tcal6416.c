@@ -70,26 +70,30 @@ esp_err_t tcal6416_init(tcal6416_handle_t *handle, uint8_t i2c_port, uint8_t i2c
     ESP_RETURN_ON_ERROR(ret, TAG, "Communication test failed");
     
     // Apply default configuration
-    // Port 0: All outputs (0x00)
-    ESP_RETURN_ON_ERROR(tcal6416_write_register(handle, TCAL6416_REG_CONFIG_PORT0, 0x00), 
+    // Port 0: All inputs (0xFF)
+    ESP_RETURN_ON_ERROR(tcal6416_write_register(handle, TCAL6416_REG_CONFIG_PORT0, 0xFF), 
                        TAG, "Failed to configure port 0");
     
-    // Port 1: All inputs (0xFF)
-    ESP_RETURN_ON_ERROR(tcal6416_write_register(handle, TCAL6416_REG_CONFIG_PORT1, 0xFF), 
+    // Port 1: All outputs (0xFF00)
+    ESP_RETURN_ON_ERROR(tcal6416_write_register(handle, TCAL6416_REG_CONFIG_PORT1, 0x00), 
                        TAG, "Failed to configure port 1");
     
-    // Clear polarity inversion
+    // // Clear polarity inversion
     ESP_RETURN_ON_ERROR(tcal6416_write_register(handle, TCAL6416_REG_POL_INV_PORT0, 0x00), 
-                       TAG, "Failed to set port 0 polarity");
+                        TAG, "Failed to set port 0 polarity");
     ESP_RETURN_ON_ERROR(tcal6416_write_register(handle, TCAL6416_REG_POL_INV_PORT1, 0x00), 
-                       TAG, "Failed to set port 1 polarity");
+                        TAG, "Failed to set port 1 polarity");
     
     // Initialize outputs to LOW
-    ESP_RETURN_ON_ERROR(tcal6416_write_register(handle, TCAL6416_REG_OUTPUT_PORT0, 0x00), 
+    ESP_RETURN_ON_ERROR(tcal6416_write_register(handle, TCAL6416_REG_OUTPUT_PORT1, 0x00), 
                        TAG, "Failed to initialize port 0 outputs");
     
+    // // Configure port 1 for strong push-pull outputs (1.0x drive strength)
+    ESP_RETURN_ON_ERROR(tcal6416_set_port_drive_strength(handle, TCAL6416_PORT1, TCAL6416_DRIVE_1_00X), 
+                       TAG, "Failed to set port 0 drive strength");
+    
     ESP_LOGI(TAG, "TCAL6416 initialized successfully at address 0x%02X", i2c_address);
-    ESP_LOGI(TAG, "Default config: Port 0 = outputs, Port 1 = inputs");
+    ESP_LOGI(TAG, "Default config: Port 0 = outputs (push-pull), Port 1 = inputs");
     
     return ESP_OK;
 }
@@ -269,16 +273,90 @@ esp_err_t tcal6416_set_pin_polarity(const tcal6416_handle_t *handle, uint8_t pin
     return tcal6416_write_register(handle, reg_addr, current_polarity);
 }
 
+esp_err_t tcal6416_set_pin_drive_strength(const tcal6416_handle_t *handle, uint8_t pin, tcal6416_drive_strength_t strength)
+{
+    ESP_RETURN_ON_FALSE(handle, ESP_ERR_INVALID_ARG, TAG, "Handle pointer is NULL");
+    ESP_RETURN_ON_FALSE(pin < 16, ESP_ERR_INVALID_ARG, TAG, "Invalid pin number: %d (valid: 0-15)", pin);
+    ESP_RETURN_ON_FALSE(strength <= TCAL6416_DRIVE_1_00X, ESP_ERR_INVALID_ARG, TAG, "Invalid drive strength: %d", strength);
+    
+    tcal6416_port_t port = (pin < 8) ? TCAL6416_PORT0 : TCAL6416_PORT1;
+    uint8_t port_pin = pin % 8;
+    
+    // TCAL6416 uses two registers per port for drive strength (2-bit per pin)
+    tcal6416_reg_t reg0_addr = (port == TCAL6416_PORT0) ? TCAL6416_REG_OUTPUT_DRIVE_0_PORT0 : TCAL6416_REG_OUTPUT_DRIVE_0_PORT1;
+    tcal6416_reg_t reg1_addr = (port == TCAL6416_PORT0) ? TCAL6416_REG_OUTPUT_DRIVE_1_PORT0 : TCAL6416_REG_OUTPUT_DRIVE_1_PORT1;
+    
+    // Read current drive strength registers
+    uint8_t drive0, drive1;
+    ESP_RETURN_ON_ERROR(tcal6416_read_register(handle, reg0_addr, &drive0), TAG, "Failed to read drive0 register");
+    ESP_RETURN_ON_ERROR(tcal6416_read_register(handle, reg1_addr, &drive1), TAG, "Failed to read drive1 register");
+    
+    // Clear the current pin's drive strength bits
+    uint8_t pin_mask = (1 << port_pin);
+    drive0 &= ~pin_mask;
+    drive1 &= ~pin_mask;
+    
+    // Set the new drive strength (2-bit value split across two registers)
+    if (strength & 0x01) {
+        drive0 |= pin_mask;  // Set bit 0 of drive strength
+    }
+    if (strength & 0x02) {
+        drive1 |= pin_mask;  // Set bit 1 of drive strength
+    }
+    
+    // Write back the modified drive strength registers
+    ESP_RETURN_ON_ERROR(tcal6416_write_register(handle, reg0_addr, drive0), TAG, "Failed to write drive0 register");
+    ESP_RETURN_ON_ERROR(tcal6416_write_register(handle, reg1_addr, drive1), TAG, "Failed to write drive1 register");
+    
+    ESP_LOGI(TAG, "Pin %d drive strength set to %s", pin, 
+             (strength == TCAL6416_DRIVE_1_00X) ? "1.0x (push-pull)" :
+             (strength == TCAL6416_DRIVE_0_75X) ? "0.75x" :
+             (strength == TCAL6416_DRIVE_0_50X) ? "0.5x" : "0.25x (weak)");
+    
+    return ESP_OK;
+}
+
+esp_err_t tcal6416_set_port_drive_strength(const tcal6416_handle_t *handle, tcal6416_port_t port, tcal6416_drive_strength_t strength)
+{
+    ESP_RETURN_ON_FALSE(handle, ESP_ERR_INVALID_ARG, TAG, "Handle pointer is NULL");
+    ESP_RETURN_ON_FALSE(port <= TCAL6416_PORT1, ESP_ERR_INVALID_ARG, TAG, "Invalid port: %d (valid: 0-1)", port);
+    ESP_RETURN_ON_FALSE(strength <= TCAL6416_DRIVE_1_00X, ESP_ERR_INVALID_ARG, TAG, "Invalid drive strength: %d", strength);
+    
+    tcal6416_reg_t reg0_addr = (port == TCAL6416_PORT0) ? TCAL6416_REG_OUTPUT_DRIVE_0_PORT0 : TCAL6416_REG_OUTPUT_DRIVE_0_PORT1;
+    tcal6416_reg_t reg1_addr = (port == TCAL6416_PORT0) ? TCAL6416_REG_OUTPUT_DRIVE_1_PORT0 : TCAL6416_REG_OUTPUT_DRIVE_1_PORT1;
+    
+    // Calculate register values for all pins in the port
+    uint8_t drive0_val = (strength & 0x01) ? 0xFF : 0x00;  // Bit 0 of drive strength
+    uint8_t drive1_val = (strength & 0x02) ? 0xFF : 0x00;  // Bit 1 of drive strength
+    
+    // Write drive strength registers
+    ESP_RETURN_ON_ERROR(tcal6416_write_register(handle, reg0_addr, drive0_val), TAG, "Failed to write drive0 register");
+    ESP_RETURN_ON_ERROR(tcal6416_write_register(handle, reg1_addr, drive1_val), TAG, "Failed to write drive1 register");
+    
+    ESP_LOGI(TAG, "Port %d drive strength set to %s for all pins", port,
+             (strength == TCAL6416_DRIVE_1_00X) ? "1.0x (push-pull)" :
+             (strength == TCAL6416_DRIVE_0_75X) ? "0.75x" :
+             (strength == TCAL6416_DRIVE_0_50X) ? "0.5x" : "0.25x (weak)");
+    
+    return ESP_OK;
+}
+
 esp_err_t tcal6416_print_status(const tcal6416_handle_t *handle)
 {
     ESP_RETURN_ON_FALSE(handle, ESP_ERR_INVALID_ARG, TAG, "Handle pointer is NULL");
     
-    uint8_t reg_values[8];
+    uint8_t reg_values[12];  // Extended to include drive strength registers
     
-    // Read all registers
+    // Read basic registers (0x00-0x07)
     for (int i = 0; i < 8; i++) {
         esp_err_t ret = tcal6416_read_register(handle, (tcal6416_reg_t)i, &reg_values[i]);
         ESP_RETURN_ON_ERROR(ret, TAG, "Failed to read register 0x%02X", i);
+    }
+    
+    // Read drive strength registers (0x40-0x43)
+    for (int i = 0; i < 4; i++) {
+        esp_err_t ret = tcal6416_read_register(handle, (tcal6416_reg_t)(0x40 + i), &reg_values[8 + i]);
+        ESP_RETURN_ON_ERROR(ret, TAG, "Failed to read register 0x%02X", 0x40 + i);
     }
     
     ESP_LOGI(TAG, "=== TCAL6416 Status (Address: 0x%02X) ===", handle->i2c_address);
@@ -290,6 +368,10 @@ esp_err_t tcal6416_print_status(const tcal6416_handle_t *handle)
     ESP_LOGI(TAG, "Polarity Inv Port 1: 0x%02X", reg_values[5]);
     ESP_LOGI(TAG, "Config Port 0:       0x%02X (1=in, 0=out)", reg_values[6]);
     ESP_LOGI(TAG, "Config Port 1:       0x%02X (1=in, 0=out)", reg_values[7]);
+    ESP_LOGI(TAG, "Drive 0 Port 0:      0x%02X (strength bit 0)", reg_values[8]);
+    ESP_LOGI(TAG, "Drive 0 Port 1:      0x%02X (strength bit 0)", reg_values[9]);
+    ESP_LOGI(TAG, "Drive 1 Port 0:      0x%02X (strength bit 1)", reg_values[10]);
+    ESP_LOGI(TAG, "Drive 1 Port 1:      0x%02X (strength bit 1)", reg_values[11]);
     ESP_LOGI(TAG, "=====================================");
     
     return ESP_OK;

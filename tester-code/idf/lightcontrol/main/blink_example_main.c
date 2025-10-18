@@ -30,6 +30,7 @@ static const char *TAG = "lightcontrol_app";
 #define I2C_MASTER_NUM              0     // I2C port number
 #define I2C_MASTER_FREQ_HZ          100000 // I2C frequency (100kHz)
 #define TCAL6416_I2C_ADDR           0x20  // TCAL6416 I2C address
+#define STATUS_LED_PIN              1   
 
 // Macro for binary representation of a byte
 #define BYTE_TO_BINARY_PATTERN "%c%c%c%c%c%c%c%c"
@@ -55,9 +56,11 @@ static esp_err_t configure_output_enable_pin(void)
     
     // Reset the GPIO pin to ensure clean state
     gpio_reset_pin(OUTPUT_ENABLED_PIN);
+    gpio_reset_pin(STATUS_LED_PIN);
     
     // Configure as output
-    esp_err_t ret = gpio_set_direction(OUTPUT_ENABLED_PIN, GPIO_MODE_OUTPUT);
+    esp_err_t ret = gpio_set_direction(STATUS_LED_PIN, GPIO_MODE_OUTPUT);
+    ret |= gpio_set_direction(OUTPUT_ENABLED_PIN, GPIO_MODE_OUTPUT);
     if (ret != ESP_OK) {
         ESP_LOGE(TAG, "Failed to set GPIO %d as output: %s", OUTPUT_ENABLED_PIN, esp_err_to_name(ret));
         return ret;
@@ -66,11 +69,12 @@ static esp_err_t configure_output_enable_pin(void)
     // Enable outputs by setting the pin LOW
     ESP_LOGI(TAG, "Configuring OUTPUT_ENABLED_PIN on GPIO %d to LOW", OUTPUT_ENABLED_PIN);
     ret = gpio_set_level(OUTPUT_ENABLED_PIN, 0);
+    ret = gpio_set_level(STATUS_LED_PIN, 1);
     if (ret != ESP_OK) {
         ESP_LOGE(TAG, "Failed to set GPIO %d LOW: %s", OUTPUT_ENABLED_PIN, esp_err_to_name(ret));
         return ret;
     }
-    vTaskDelay(pdMS_TO_TICKS(10));
+    vTaskDelay(pdMS_TO_TICKS(1000));
 
     // Enable outputs by setting the pin HIGH
     ESP_LOGI(TAG, "Configuring OUTPUT_ENABLED_PIN on GPIO %d to HIGH", OUTPUT_ENABLED_PIN);
@@ -83,8 +87,8 @@ static esp_err_t configure_output_enable_pin(void)
     ESP_LOGI(TAG, "OUTPUT_ENABLED_PIN configured and enabled successfully");
     
     // Small delay to ensure the enable signal is stable before proceeding
-    vTaskDelay(pdMS_TO_TICKS(10));
-    
+    vTaskDelay(pdMS_TO_TICKS(1000));
+    ret = gpio_set_level(STATUS_LED_PIN, 0);
     return ESP_OK;
 }
 
@@ -131,45 +135,44 @@ static esp_err_t i2c_master_init(void)
  */
 static void tcal6416_demo_task(void *pvParameters)
 {
-    uint8_t output_pin = 0;        // Current output pin on port 0 (0-7)
+    uint8_t input_pin = 0;        // Current output pin on port 0 (0-7)
     bool pin_state = false;        // Current state of the output pin
     uint8_t input_port_state;      // State of all input pins on port 1
     uint32_t cycle_count = 0;
     
     ESP_LOGI(TAG, "Starting TCAL6416 demo loop...");
-    ESP_LOGI(TAG, "Port 0 (pins 0-7): OUTPUTS - will cycle through each pin");
-    ESP_LOGI(TAG, "Port 1 (pins 8-15): INPUTS - will read and display state");
-    
+    ESP_LOGI(TAG, "Port 0 (pins 8-15): INPUTS - will read and display state");
+    ESP_LOGI(TAG, "Port 1 (pins 0-7): OUTPUTS - will cycle through each pin");
+        
     while (1) {
-        // === CONTROL PORT 0 OUTPUTS ===
-        ESP_LOGI(TAG, "Cycle %lu: Setting PORT 0 pin %d to %s", 
-                 cycle_count, output_pin, pin_state ? "HIGH" : "LOW");
+        // === CONTROL PORT 1 OUTPUTS ===
+        int output_pin = input_pin + 8;
+        ESP_LOGI(TAG, "Cycle %lu: Setting PORT 1 pin %d to %s", cycle_count, output_pin, pin_state ? "HIGH" : "LOW");
         
         esp_err_t ret = tcal6416_set_pin(&tcal_handle, output_pin, pin_state);
         if (ret != ESP_OK) {
-            ESP_LOGE(TAG, "Failed to set PORT 0 pin %d: %s", output_pin, esp_err_to_name(ret));
+            ESP_LOGE(TAG, "Failed to set PORT 1 pin %d: %s", output_pin, esp_err_to_name(ret));
         }
         
-        // === READ PORT 1 INPUTS ===
-        ret = tcal6416_read_port(&tcal_handle, TCAL6416_PORT1, &input_port_state);
+        // === READ PORT 0 INPUTS ===
+        ret = tcal6416_read_port(&tcal_handle, TCAL6416_PORT0, &input_port_state);
         if (ret == ESP_OK) {
-            ESP_LOGI(TAG, "PORT 1 input state: 0x%02X (binary: " BYTE_TO_BINARY_PATTERN ")", 
+            ESP_LOGI(TAG, "PORT 0 input state: 0x%02X (binary: " BYTE_TO_BINARY_PATTERN ")", 
                      input_port_state, BYTE_TO_BINARY(input_port_state));
             
             // Log individual pin states for clarity
             for (int i = 0; i < 8; i++) {
                 bool pin_input_state = (input_port_state & (1 << i)) != 0;
-                ESP_LOGD(TAG, "  PORT 1 pin %d (global pin %d): %s", 
-                         i, i + 8, pin_input_state ? "HIGH" : "LOW");
+                ESP_LOGD(TAG, "  PORT 0 pin %d (global pin %d): %s", i, i, pin_input_state ? "HIGH" : "LOW");
             }
         } else {
-            ESP_LOGE(TAG, "Failed to read PORT 1 inputs: %s", esp_err_to_name(ret));
+            ESP_LOGE(TAG, "Failed to read PORT 0 inputs: %s", esp_err_to_name(ret));
         }
         
         // === STATUS REPORTING ===
         if (cycle_count % 10 == 0) {
             ESP_LOGI(TAG, "=== Status Report (Cycle %lu) ===", cycle_count);
-            ESP_LOGI(TAG, "Current OUTPUT pin: PORT 0 pin %d", output_pin);
+            ESP_LOGI(TAG, "Current OUTPUT pin: PORT 1 pin %d", output_pin);
             ESP_LOGI(TAG, "Current OUTPUT state: %s", pin_state ? "HIGH" : "LOW");
             tcal6416_print_status(&tcal_handle);
         }
@@ -178,13 +181,13 @@ static void tcal6416_demo_task(void *pvParameters)
         pin_state = !pin_state;
         if (!pin_state) {
             // When we go from HIGH to LOW, move to next pin
-            output_pin = (output_pin + 1) % 8;  // Keep in port 0 range (0-7)
+            input_pin = (input_pin + 1) % 8;  // Keep in port 0 range (0-7)
             cycle_count++;
             
-            if (output_pin == 0) {
+            if (input_pin == 0) {
                 ESP_LOGI(TAG, "Completed full cycle through all PORT 0 pins, starting over...");
             }
-        }
+        //}
         
         vTaskDelay(pdMS_TO_TICKS(1000)); // 1 second delay
     }
@@ -275,7 +278,17 @@ void app_main(void)
     
     // Run individual pin test first
     test_individual_pins();
+
+    // Set all pins in port 0 to HIGH
+    ESP_LOGI(TAG, "Setting all PORT 0 pins to HIGH...");
+    ret = tcal6416_set_port(&tcal_handle, TCAL6416_PORT1, 0xFF);
+    if (ret == ESP_OK) {
+        ESP_LOGI(TAG, "All PORT 0 pins set to HIGH successfully");
+    } else {
+        ESP_LOGE(TAG, "Failed to set all PORT 0 pins HIGH: %s", esp_err_to_name(ret));
+    }
     
+    tcal6416_print_status(&tcal_handle);
     // Create demo task for continuous operation
     xTaskCreate(tcal6416_demo_task, "tcal6416_demo", 4096, NULL, 5, NULL);
     

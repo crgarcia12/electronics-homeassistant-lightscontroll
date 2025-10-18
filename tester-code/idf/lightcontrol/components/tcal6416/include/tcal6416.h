@@ -46,15 +46,29 @@ extern "C" {
  * @brief TCAL6416 Register addresses
  */
 typedef enum {
-    TCAL6416_REG_INPUT_PORT0    = 0x00,  ///< Input port 0 register (P0_7-P0_0)
-    TCAL6416_REG_INPUT_PORT1    = 0x01,  ///< Input port 1 register (P1_7-P1_0)
-    TCAL6416_REG_OUTPUT_PORT0   = 0x02,  ///< Output port 0 register (P0_7-P0_0)
-    TCAL6416_REG_OUTPUT_PORT1   = 0x03,  ///< Output port 1 register (P1_7-P1_0)
-    TCAL6416_REG_POL_INV_PORT0  = 0x04,  ///< Polarity inversion port 0
-    TCAL6416_REG_POL_INV_PORT1  = 0x05,  ///< Polarity inversion port 1
-    TCAL6416_REG_CONFIG_PORT0   = 0x06,  ///< Configuration port 0 (1=input, 0=output)
-    TCAL6416_REG_CONFIG_PORT1   = 0x07,  ///< Configuration port 1 (1=input, 0=output)
+    TCAL6416_REG_INPUT_PORT0           = 0x00,  ///< Input port 0 register (P0_7-P0_0)
+    TCAL6416_REG_INPUT_PORT1           = 0x01,  ///< Input port 1 register (P1_7-P1_0)
+    TCAL6416_REG_OUTPUT_PORT0          = 0x02,  ///< Output port 0 register (P0_7-P0_0)
+    TCAL6416_REG_OUTPUT_PORT1          = 0x03,  ///< Output port 1 register (P1_7-P1_0)
+    TCAL6416_REG_POL_INV_PORT0         = 0x04,  ///< Polarity inversion port 0
+    TCAL6416_REG_POL_INV_PORT1         = 0x05,  ///< Polarity inversion port 1
+    TCAL6416_REG_CONFIG_PORT0          = 0x06,  ///< Configuration port 0 (1=input, 0=output)
+    TCAL6416_REG_CONFIG_PORT1          = 0x07,  ///< Configuration port 1 (1=input, 0=output)
+    TCAL6416_REG_OUTPUT_DRIVE_0_PORT0  = 0x40,  ///< Output drive strength 0 for port 0
+    TCAL6416_REG_OUTPUT_DRIVE_0_PORT1  = 0x41,  ///< Output drive strength 0 for port 1
+    TCAL6416_REG_OUTPUT_DRIVE_1_PORT0  = 0x42,  ///< Output drive strength 1 for port 0
+    TCAL6416_REG_OUTPUT_DRIVE_1_PORT1  = 0x43,  ///< Output drive strength 1 for port 1
 } tcal6416_reg_t;
+
+/**
+ * @brief Output drive strength definitions
+ */
+typedef enum {
+    TCAL6416_DRIVE_0_25X = 0,  ///< 0.25x drive strength (weakest, more open-drain like)
+    TCAL6416_DRIVE_0_50X = 1,  ///< 0.5x drive strength
+    TCAL6416_DRIVE_0_75X = 2,  ///< 0.75x drive strength
+    TCAL6416_DRIVE_1_00X = 3,  ///< 1.0x drive strength (strongest, full push-pull)
+} tcal6416_drive_strength_t;
 
 /**
  * @brief Port definitions
@@ -213,6 +227,26 @@ esp_err_t tcal6416_config_port(const tcal6416_handle_t *handle, tcal6416_port_t 
  * @return esp_err_t ESP_OK on success, error code otherwise
  */
 esp_err_t tcal6416_set_pin_polarity(const tcal6416_handle_t *handle, uint8_t pin, bool inverted);
+
+/**
+ * @brief Set output drive strength for a specific pin
+ * 
+ * @param handle Pointer to device handle
+ * @param pin Pin number (0-15)
+ * @param strength Drive strength setting
+ * @return esp_err_t ESP_OK on success, error code otherwise
+ */
+esp_err_t tcal6416_set_pin_drive_strength(const tcal6416_handle_t *handle, uint8_t pin, tcal6416_drive_strength_t strength);
+
+/**
+ * @brief Set output drive strength for an entire port
+ * 
+ * @param handle Pointer to device handle
+ * @param port Port number (0 or 1)
+ * @param strength Drive strength setting (applied to all pins in the port)
+ * @return esp_err_t ESP_OK on success, error code otherwise
+ */
+esp_err_t tcal6416_set_port_drive_strength(const tcal6416_handle_t *handle, tcal6416_port_t port, tcal6416_drive_strength_t strength);
 
 /**
  * @brief Print complete TCAL6416 status and register values
