@@ -178,18 +178,15 @@ static void tcal6416_demo_task(void *pvParameters)
         }
         
         // === ADVANCE TO NEXT PIN ===
-        pin_state = !pin_state;
-        if (!pin_state) {
-            // When we go from HIGH to LOW, move to next pin
-            input_pin = (input_pin + 1) % 8;  // Keep in port 0 range (0-7)
-            cycle_count++;
-            
-            if (input_pin == 0) {
-                ESP_LOGI(TAG, "Completed full cycle through all PORT 0 pins, starting over...");
-            }
-        //}
-        
-        vTaskDelay(pdMS_TO_TICKS(1000)); // 1 second delay
+        input_pin = (input_pin + 1) % 8;  // Keep in port 0 range (0-7)
+        cycle_count++;
+
+        if (input_pin == 0) {
+            pin_state = !pin_state;
+            ESP_LOGI(TAG, "Completed full cycle through all PORT 0 pins, starting over...");
+        }
+                
+        vTaskDelay(pdMS_TO_TICKS(500)); // 1 second delay
     }
 }
 
