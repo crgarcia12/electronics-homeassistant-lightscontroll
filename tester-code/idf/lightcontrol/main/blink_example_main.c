@@ -13,10 +13,11 @@
 #include <stdio.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
-#include "driver/i2c.h"
+#include "driver/i2c_master.h"
 #include "driver/gpio.h"
 #include "esp_log.h"
 #include "esp_err.h"
+#include "esp_mac.h"
 
 // Include the TCAL6416 managed component
 #include "tcal6416.h"
@@ -45,7 +46,7 @@ static const char *TAG = "lightcontrol_app";
   (byte & 0x01 ? '1' : '0')
 
 // Global device handle
-static tcal6416_handle_t tcal_handle;
+static tcal6416_handle_t *tcal_handle;
 
 /**
  * @brief Configure and enable the output enable pin
@@ -95,35 +96,24 @@ static esp_err_t configure_output_enable_pin(void)
 /**
  * @brief Initialize I2C master
  */
-static esp_err_t i2c_master_init(void)
+static esp_err_t i2c_master_init(int sda_pin, int scl_pin, int i2c_freq_hz, i2c_master_bus_handle_t *bus_handle)
 {
     ESP_LOGI(TAG, "Initializing I2C master...");
     
-    i2c_config_t conf = {
-        .mode = I2C_MODE_MASTER,
-        .sda_io_num = I2C_MASTER_SDA_IO,
-        .sda_pullup_en = GPIO_PULLUP_ENABLE,
-        .scl_io_num = I2C_MASTER_SCL_IO,
-        .scl_pullup_en = GPIO_PULLUP_ENABLE,
-        .master.clk_speed = I2C_MASTER_FREQ_HZ,
-        .clk_flags = 0,
+    // 1. Create I2C bus
+    i2c_master_bus_config_t bus_config = {
+        .clk_source = I2C_CLK_SRC_DEFAULT,
+        .i2c_port = -1, // Auto select
+        .scl_io_num = scl_pin,
+        .sda_io_num = sda_pin,
+        .glitch_ignore_cnt = 7,
+        .flags.enable_internal_pullup = true,
     };
 
-    esp_err_t err = i2c_param_config(I2C_MASTER_NUM, &conf);
-    if (err != ESP_OK) {
-        ESP_LOGE(TAG, "I2C parameter configuration failed: %s", esp_err_to_name(err));
-        return err;
-    }
-
-    err = i2c_driver_install(I2C_MASTER_NUM, conf.mode, 0, 0, 0);
-    if (err != ESP_OK) {
-        ESP_LOGE(TAG, "I2C driver installation failed: %s", esp_err_to_name(err));
-        return err;
-    }
-
+    ESP_ERROR_CHECK(i2c_new_master_bus(&bus_config, bus_handle));
+    
     ESP_LOGI(TAG, "I2C master initialized successfully");
-    ESP_LOGI(TAG, "SDA: GPIO%d, SCL: GPIO%d, Frequency: %d Hz", 
-             I2C_MASTER_SDA_IO, I2C_MASTER_SCL_IO, I2C_MASTER_FREQ_HZ);
+    ESP_LOGI(TAG, "SDA: GPIO%d, SCL: GPIO%d, Frequency: %d Hz", sda_pin, scl_pin, i2c_freq_hz);
     
     return ESP_OK;
 }
@@ -149,13 +139,13 @@ static void tcal6416_demo_task(void *pvParameters)
         int output_pin = input_pin + 8;
         ESP_LOGI(TAG, "Cycle %lu: Setting PORT 1 pin %d to %s", cycle_count, output_pin, pin_state ? "HIGH" : "LOW");
         
-        esp_err_t ret = tcal6416_set_pin(&tcal_handle, output_pin, pin_state);
+        esp_err_t ret = tcal6416_set_pin(tcal_handle, output_pin, pin_state);
         if (ret != ESP_OK) {
             ESP_LOGE(TAG, "Failed to set PORT 1 pin %d: %s", output_pin, esp_err_to_name(ret));
         }
         
         // === READ PORT 0 INPUTS ===
-        ret = tcal6416_read_port(&tcal_handle, TCAL6416_PORT0, &input_port_state);
+        ret = tcal6416_read_port(tcal_handle, TCAL6416_PORT0, &input_port_state);
         if (ret == ESP_OK) {
             ESP_LOGI(TAG, "PORT 0 input state: 0x%02X (binary: " BYTE_TO_BINARY_PATTERN ")", 
                      input_port_state, BYTE_TO_BINARY(input_port_state));
@@ -174,7 +164,7 @@ static void tcal6416_demo_task(void *pvParameters)
             ESP_LOGI(TAG, "=== Status Report (Cycle %lu) ===", cycle_count);
             ESP_LOGI(TAG, "Current OUTPUT pin: PORT 1 pin %d", output_pin);
             ESP_LOGI(TAG, "Current OUTPUT state: %s", pin_state ? "HIGH" : "LOW");
-            tcal6416_print_status(&tcal_handle);
+            tcal6416_print_status(tcal_handle);
         }
         
         // === ADVANCE TO NEXT PIN ===
@@ -191,39 +181,39 @@ static void tcal6416_demo_task(void *pvParameters)
 }
 
 /**
- * @brief Test individual pin operations on PORT 0 (outputs only)
+ * @brief Test individual pin operations on PORT 1 (outputs only)
  */
 static void test_individual_pins(void)
 {
-    ESP_LOGI(TAG, "=== Testing Individual PORT 0 Pin Operations (OUTPUTS) ===");
+    ESP_LOGI(TAG, "=== Testing Individual PORT 1 Pin Operations (OUTPUTS) ===");
     
-    // Test setting individual pins on port 0 (configured as outputs)
-    for (int pin = 0; pin < 8; pin++) {
-        ESP_LOGI(TAG, "Testing PORT 0 pin %d (output)...", pin);
+    // Test setting individual pins on port 1 (configured as outputs)
+    for (int pin = 8; pin < 16; pin++) {
+        ESP_LOGI(TAG, "Testing PORT 1 pin %d (output)...", pin);
         
         // Set pin HIGH
-        esp_err_t ret = tcal6416_set_pin(&tcal_handle, pin, true);
+        esp_err_t ret = tcal6416_set_pin(tcal_handle, pin, true);
         if (ret == ESP_OK) {
-            ESP_LOGI(TAG, "PORT 0 pin %d set to HIGH", pin);
+            ESP_LOGI(TAG, "PORT 1 pin %d set to HIGH", pin);
         } else {
-            ESP_LOGE(TAG, "Failed to set PORT 0 pin %d HIGH", pin);
+            ESP_LOGE(TAG, "Failed to set PORT 1 pin %d HIGH", pin);
         }
         
         vTaskDelay(pdMS_TO_TICKS(200));
         
         // Set pin LOW
-        ret = tcal6416_set_pin(&tcal_handle, pin, false);
+        ret = tcal6416_set_pin(tcal_handle, pin, false);
         if (ret == ESP_OK) {
-            ESP_LOGI(TAG, "PORT 0 pin %d set to LOW", pin);
+            ESP_LOGI(TAG, "PORT 1 pin %d set to LOW", pin);
         } else {
-            ESP_LOGE(TAG, "Failed to set PORT 0 pin %d LOW", pin);
+            ESP_LOGE(TAG, "Failed to set PORT 1 pin %d LOW", pin);
         }
         
         vTaskDelay(pdMS_TO_TICKS(200));
     }
     
-    ESP_LOGI(TAG, "PORT 0 individual pin test completed");
-    ESP_LOGI(TAG, "Note: PORT 1 pins (8-15) are configured as inputs - use external signals to test");
+    ESP_LOGI(TAG, "PORT 1 individual pin test completed");
+    ESP_LOGI(TAG, "Note: PORT 0 pins (0-7) are configured as inputs - use external signals to test");
 }
 
 void app_main(void)
@@ -244,14 +234,28 @@ void app_main(void)
     }
     
     // STEP 2: Initialize I2C master (after outputs are enabled)
-    ret = i2c_master_init();
+    i2c_master_bus_handle_t bus_handle;
+    ret = i2c_master_init(I2C_MASTER_SDA_IO, I2C_MASTER_SCL_IO, I2C_MASTER_FREQ_HZ, &bus_handle);
     if (ret != ESP_OK) {
         ESP_LOGE(TAG, "I2C master initialization failed: %s", esp_err_to_name(ret));
         return;
     }
     
-    // STEP 3: Initialize TCAL6416 with default configuration
-    ret = tcal6416_init(&tcal_handle, I2C_MASTER_NUM, TCAL6416_I2C_ADDR);
+    // STEP 3: Configure TCAL6416 for this application
+    // Port 0: All inputs (for reading external signals)
+    // Port 1: All outputs (for controlling LEDs/devices)
+    tcal6416_config_t tcal_config = tcal6416_get_default_config();
+    tcal_config.port0_config = 0xFF;        // Port 0: All inputs
+    tcal_config.port1_config = 0x00;        // Port 1: All outputs
+    tcal_config.port0_polarity = 0x00;      // No polarity inversion
+    tcal_config.port1_polarity = 0x00;      // No polarity inversion
+    tcal_config.port0_initial_output = 0x00; // Not used for inputs
+    tcal_config.port1_initial_output = 0x00; // Start with all outputs LOW
+    tcal_config.port0_drive_strength = TCAL6416_DRIVE_1_00X; // Not used for inputs
+    tcal_config.port1_drive_strength = TCAL6416_DRIVE_1_00X; // Full strength for outputs
+    
+    // STEP 4: Initialize TCAL6416 with custom configuration
+    ret = tcal6416_init(&tcal_handle, bus_handle, TCAL6416_I2C_ADDR, &tcal_config);
     if (ret != ESP_OK) {
         ESP_LOGE(TAG, "TCAL6416 initialization failed: %s", esp_err_to_name(ret));
         ESP_LOGE(TAG, "Please check:");
@@ -271,21 +275,21 @@ void app_main(void)
     ESP_LOGI(TAG, "  - TCAL6416 address: 0x%02X", TCAL6416_I2C_ADDR);
     
     // Print initial status
-    tcal6416_print_status(&tcal_handle);
+    tcal6416_print_status(tcal_handle);
     
     // Run individual pin test first
     test_individual_pins();
 
-    // Set all pins in port 0 to HIGH
-    ESP_LOGI(TAG, "Setting all PORT 0 pins to HIGH...");
-    ret = tcal6416_set_port(&tcal_handle, TCAL6416_PORT1, 0xFF);
+    // Set all pins in port 1 to HIGH
+    ESP_LOGI(TAG, "Setting all PORT 1 pins to HIGH...");
+    ret = tcal6416_set_port(tcal_handle, TCAL6416_PORT1, 0xFF);
     if (ret == ESP_OK) {
-        ESP_LOGI(TAG, "All PORT 0 pins set to HIGH successfully");
+        ESP_LOGI(TAG, "All PORT 1 pins set to HIGH successfully");
     } else {
-        ESP_LOGE(TAG, "Failed to set all PORT 0 pins HIGH: %s", esp_err_to_name(ret));
+        ESP_LOGE(TAG, "Failed to set all PORT 1 pins HIGH: %s", esp_err_to_name(ret));
     }
     
-    tcal6416_print_status(&tcal_handle);
+    tcal6416_print_status(tcal_handle);
     // Create demo task for continuous operation
     xTaskCreate(tcal6416_demo_task, "tcal6416_demo", 4096, NULL, 5, NULL);
     

@@ -6,34 +6,29 @@
 #include "tcal6416.h"
 #include "esp_log.h"
 #include "esp_check.h"
-#include "driver/i2c.h"
+#include "driver/i2c_master.h"
+#include "freertos/FreeRTOS.h"
 #include <string.h>
+#include <stdlib.h>
 
 static const char *TAG = "tcal6416";
 
-// I2C operation parameters
-#define I2C_MASTER_TIMEOUT_MS   1000
-#define WRITE_BIT              I2C_MASTER_WRITE
-#define READ_BIT               I2C_MASTER_READ
-#define ACK_CHECK_EN           0x1
-#define NACK_VAL               0x1
+/**
+ * @brief Internal TCAL6416 device handle structure
+ */
+struct tcal6416_handle_s {
+    i2c_master_dev_handle_t i2c_dev_handle;
+    uint8_t i2c_address;
+    tcal6416_config_t config;
+};
 
 /**
  * @brief Write a byte to I2C device register
  */
 static esp_err_t tcal6416_i2c_write_byte(const tcal6416_handle_t *handle, uint8_t reg_addr, uint8_t data)
 {
-    i2c_cmd_handle_t cmd = i2c_cmd_link_create();
-    i2c_master_start(cmd);
-    i2c_master_write_byte(cmd, (handle->i2c_address << 1) | WRITE_BIT, ACK_CHECK_EN);
-    i2c_master_write_byte(cmd, reg_addr, ACK_CHECK_EN);
-    i2c_master_write_byte(cmd, data, ACK_CHECK_EN);
-    i2c_master_stop(cmd);
-    
-    esp_err_t ret = i2c_master_cmd_begin(handle->i2c_port, cmd, I2C_MASTER_TIMEOUT_MS / portTICK_PERIOD_MS);
-    i2c_cmd_link_delete(cmd);
-    
-    return ret;
+    uint8_t write_buf[2] = {reg_addr, data};
+    return i2c_master_transmit(handle->i2c_dev_handle, write_buf, sizeof(write_buf), -1);
 }
 
 /**
@@ -41,91 +36,29 @@ static esp_err_t tcal6416_i2c_write_byte(const tcal6416_handle_t *handle, uint8_
  */
 static esp_err_t tcal6416_i2c_read_byte(const tcal6416_handle_t *handle, uint8_t reg_addr, uint8_t *data)
 {
-    i2c_cmd_handle_t cmd = i2c_cmd_link_create();
-    i2c_master_start(cmd);
-    i2c_master_write_byte(cmd, (handle->i2c_address << 1) | WRITE_BIT, ACK_CHECK_EN);
-    i2c_master_write_byte(cmd, reg_addr, ACK_CHECK_EN);
-    i2c_master_start(cmd);
-    i2c_master_write_byte(cmd, (handle->i2c_address << 1) | READ_BIT, ACK_CHECK_EN);
-    i2c_master_read_byte(cmd, data, NACK_VAL);
-    i2c_master_stop(cmd);
-    
-    esp_err_t ret = i2c_master_cmd_begin(handle->i2c_port, cmd, I2C_MASTER_TIMEOUT_MS / portTICK_PERIOD_MS);
-    i2c_cmd_link_delete(cmd);
-    
-    return ret;
+    return i2c_master_transmit_receive(handle->i2c_dev_handle, &reg_addr, 1, data, 1, -1);
 }
 
-esp_err_t tcal6416_init(tcal6416_handle_t *handle, uint8_t i2c_port, uint8_t i2c_address)
+tcal6416_config_t tcal6416_get_default_config(void)
 {
-    ESP_RETURN_ON_FALSE(handle, ESP_ERR_INVALID_ARG, TAG, "Handle pointer is NULL");
-    ESP_RETURN_ON_FALSE(i2c_address >= 0x20 && i2c_address <= 0x27, ESP_ERR_INVALID_ARG, 
-                       TAG, "Invalid I2C address: 0x%02X (valid range: 0x20-0x27)", i2c_address);
-    
-    handle->i2c_address = i2c_address;
-    handle->i2c_port = i2c_port;
-    
-    // Test communication
-    esp_err_t ret = tcal6416_test_communication(handle);
-    ESP_RETURN_ON_ERROR(ret, TAG, "Communication test failed");
-    
-    // Apply default configuration
-    // Port 0: All inputs (0xFF)
-    ESP_RETURN_ON_ERROR(tcal6416_write_register(handle, TCAL6416_REG_CONFIG_PORT0, 0xFF), 
-                       TAG, "Failed to configure port 0");
-    
-    // Port 1: All outputs (0xFF00)
-    ESP_RETURN_ON_ERROR(tcal6416_write_register(handle, TCAL6416_REG_CONFIG_PORT1, 0x00), 
-                       TAG, "Failed to configure port 1");
-    
-    // // Clear polarity inversion
-    ESP_RETURN_ON_ERROR(tcal6416_write_register(handle, TCAL6416_REG_POL_INV_PORT0, 0x00), 
-                        TAG, "Failed to set port 0 polarity");
-    ESP_RETURN_ON_ERROR(tcal6416_write_register(handle, TCAL6416_REG_POL_INV_PORT1, 0x00), 
-                        TAG, "Failed to set port 1 polarity");
-    
-    // Initialize outputs to LOW
-    ESP_RETURN_ON_ERROR(tcal6416_write_register(handle, TCAL6416_REG_OUTPUT_PORT1, 0x00), 
-                       TAG, "Failed to initialize port 0 outputs");
-    
-    // // Configure port 1 for strong push-pull outputs (1.0x drive strength)
-    ESP_RETURN_ON_ERROR(tcal6416_set_port_drive_strength(handle, TCAL6416_PORT1, TCAL6416_DRIVE_1_00X), 
-                       TAG, "Failed to set port 0 drive strength");
-    
-    ESP_LOGI(TAG, "TCAL6416 initialized successfully at address 0x%02X", i2c_address);
-    ESP_LOGI(TAG, "Default config: Port 0 = outputs (push-pull), Port 1 = inputs");
-    
-    return ESP_OK;
+    tcal6416_config_t config = {
+        .port0_config = 0xFF,                    // Port 0: All inputs
+        .port1_config = 0x00,                    // Port 1: All outputs
+        .port0_polarity = 0x00,                  // No polarity inversion
+        .port1_polarity = 0x00,                  // No polarity inversion
+        .port0_initial_output = 0x00,            // Initial outputs LOW
+        .port1_initial_output = 0x00,            // Initial outputs LOW
+        .port0_drive_strength = TCAL6416_DRIVE_1_00X, // Full drive strength
+        .port1_drive_strength = TCAL6416_DRIVE_1_00X, // Full drive strength
+    };
+    return config;
 }
 
-esp_err_t tcal6416_init_with_config(tcal6416_handle_t *handle, const tcal6416_config_t *config)
+/**
+ * @brief Test device communication
+ */
+static esp_err_t tcal6416_test_communication(const tcal6416_handle_t *handle)
 {
-    ESP_RETURN_ON_FALSE(handle && config, ESP_ERR_INVALID_ARG, TAG, "Handle or config pointer is NULL");
-    
-    handle->i2c_address = config->i2c_address;
-    handle->i2c_port = config->i2c_port;
-    
-    // Test communication
-    ESP_RETURN_ON_ERROR(tcal6416_test_communication(handle), TAG, "Communication test failed");
-    
-    // Apply custom configuration
-    ESP_RETURN_ON_ERROR(tcal6416_write_register(handle, TCAL6416_REG_CONFIG_PORT0, config->port0_config), 
-                       TAG, "Failed to configure port 0");
-    ESP_RETURN_ON_ERROR(tcal6416_write_register(handle, TCAL6416_REG_CONFIG_PORT1, config->port1_config), 
-                       TAG, "Failed to configure port 1");
-    ESP_RETURN_ON_ERROR(tcal6416_write_register(handle, TCAL6416_REG_POL_INV_PORT0, config->port0_polarity), 
-                       TAG, "Failed to set port 0 polarity");
-    ESP_RETURN_ON_ERROR(tcal6416_write_register(handle, TCAL6416_REG_POL_INV_PORT1, config->port1_polarity), 
-                       TAG, "Failed to set port 1 polarity");
-    
-    ESP_LOGI(TAG, "TCAL6416 initialized with custom configuration");
-    return ESP_OK;
-}
-
-esp_err_t tcal6416_test_communication(const tcal6416_handle_t *handle)
-{
-    ESP_RETURN_ON_FALSE(handle, ESP_ERR_INVALID_ARG, TAG, "Handle pointer is NULL");
-    
     uint8_t test_data;
     esp_err_t ret = tcal6416_read_register(handle, TCAL6416_REG_INPUT_PORT0, &test_data);
     
@@ -135,6 +68,95 @@ esp_err_t tcal6416_test_communication(const tcal6416_handle_t *handle)
         ESP_LOGE(TAG, "Communication test failed with device at 0x%02X: %s", 
                  handle->i2c_address, esp_err_to_name(ret));
     }
+    
+    return ret;
+}
+
+esp_err_t tcal6416_init(tcal6416_handle_t **handle, void *bus_handle, uint8_t i2c_address, const tcal6416_config_t *config)
+{
+    ESP_RETURN_ON_FALSE(handle, ESP_ERR_INVALID_ARG, TAG, "Handle pointer is NULL");
+    ESP_RETURN_ON_FALSE(bus_handle, ESP_ERR_INVALID_ARG, TAG, "Bus handle is NULL");
+    ESP_RETURN_ON_FALSE(i2c_address >= 0x20 && i2c_address <= 0x27, ESP_ERR_INVALID_ARG, 
+                       TAG, "Invalid I2C address: 0x%02X (valid range: 0x20-0x27)", i2c_address);
+    
+    // Allocate handle
+    tcal6416_handle_t *dev_handle = calloc(1, sizeof(tcal6416_handle_t));
+    ESP_RETURN_ON_FALSE(dev_handle, ESP_ERR_NO_MEM, TAG, "Failed to allocate device handle");
+    
+    dev_handle->i2c_address = i2c_address;
+    
+    // Use provided config or default
+    if (config) {
+        dev_handle->config = *config;
+    } else {
+        dev_handle->config = tcal6416_get_default_config();
+    }
+    
+    // Create I2C device
+    i2c_device_config_t dev_cfg = {
+        .device_address = i2c_address,
+        .scl_speed_hz = 100000, // Default to 100kHz
+    };
+    
+    esp_err_t ret = i2c_master_bus_add_device((i2c_master_bus_handle_t)bus_handle, &dev_cfg, &dev_handle->i2c_dev_handle);
+    if (ret != ESP_OK) {
+        ESP_LOGE(TAG, "Failed to add I2C device: %s", esp_err_to_name(ret));
+        free(dev_handle);
+        return ret;
+    }
+    
+    // Test communication
+    ret = tcal6416_test_communication(dev_handle);
+    if (ret != ESP_OK) {
+        ESP_LOGE(TAG, "Communication test failed");
+        i2c_master_bus_rm_device(dev_handle->i2c_dev_handle);
+        free(dev_handle);
+        return ret;
+    }
+    
+    // Apply configuration
+    ESP_RETURN_ON_ERROR(tcal6416_write_register(dev_handle, TCAL6416_REG_CONFIG_PORT0, dev_handle->config.port0_config), 
+                       TAG, "Failed to configure port 0");
+    ESP_RETURN_ON_ERROR(tcal6416_write_register(dev_handle, TCAL6416_REG_CONFIG_PORT1, dev_handle->config.port1_config), 
+                       TAG, "Failed to configure port 1");
+    
+    // Set polarity inversion
+    ESP_RETURN_ON_ERROR(tcal6416_write_register(dev_handle, TCAL6416_REG_POL_INV_PORT0, dev_handle->config.port0_polarity), 
+                        TAG, "Failed to set port 0 polarity");
+    ESP_RETURN_ON_ERROR(tcal6416_write_register(dev_handle, TCAL6416_REG_POL_INV_PORT1, dev_handle->config.port1_polarity), 
+                        TAG, "Failed to set port 1 polarity");
+    
+    // Set initial output values
+    ESP_RETURN_ON_ERROR(tcal6416_write_register(dev_handle, TCAL6416_REG_OUTPUT_PORT0, dev_handle->config.port0_initial_output), 
+                       TAG, "Failed to initialize port 0 outputs");
+    ESP_RETURN_ON_ERROR(tcal6416_write_register(dev_handle, TCAL6416_REG_OUTPUT_PORT1, dev_handle->config.port1_initial_output), 
+                       TAG, "Failed to initialize port 1 outputs");
+    
+    // Set drive strength
+    ESP_RETURN_ON_ERROR(tcal6416_set_port_drive_strength(dev_handle, TCAL6416_PORT0, dev_handle->config.port0_drive_strength), 
+                       TAG, "Failed to set port 0 drive strength");
+    ESP_RETURN_ON_ERROR(tcal6416_set_port_drive_strength(dev_handle, TCAL6416_PORT1, dev_handle->config.port1_drive_strength), 
+                       TAG, "Failed to set port 1 drive strength");
+    
+    *handle = dev_handle;
+    
+    ESP_LOGI(TAG, "TCAL6416 initialized successfully at address 0x%02X", i2c_address);
+    ESP_LOGI(TAG, "Config: Port 0 = 0x%02X, Port 1 = 0x%02X", dev_handle->config.port0_config, dev_handle->config.port1_config);
+    
+    return ESP_OK;
+}
+
+esp_err_t tcal6416_deinit(tcal6416_handle_t *handle)
+{
+    ESP_RETURN_ON_FALSE(handle, ESP_ERR_INVALID_ARG, TAG, "Handle is NULL");
+    
+    esp_err_t ret = i2c_master_bus_rm_device(handle->i2c_dev_handle);
+    if (ret != ESP_OK) {
+        ESP_LOGE(TAG, "Failed to remove I2C device: %s", esp_err_to_name(ret));
+    }
+    
+    free(handle);
+    ESP_LOGI(TAG, "TCAL6416 deinitialized");
     
     return ret;
 }
@@ -156,8 +178,16 @@ esp_err_t tcal6416_set_pin(const tcal6416_handle_t *handle, uint8_t pin, bool st
     ESP_RETURN_ON_FALSE(handle, ESP_ERR_INVALID_ARG, TAG, "Handle pointer is NULL");
     ESP_RETURN_ON_FALSE(pin < 16, ESP_ERR_INVALID_ARG, TAG, "Invalid pin number: %d (valid: 0-15)", pin);
     
+    // Check if pin is configured as output
     tcal6416_port_t port = (pin < 8) ? TCAL6416_PORT0 : TCAL6416_PORT1;
     uint8_t port_pin = pin % 8;
+    uint8_t port_config = (port == TCAL6416_PORT0) ? handle->config.port0_config : handle->config.port1_config;
+    
+    if (port_config & (1 << port_pin)) {
+        ESP_LOGW(TAG, "Pin %d is configured as input, cannot set output state", pin);
+        return ESP_ERR_INVALID_STATE;
+    }
+    
     tcal6416_reg_t reg_addr = (port == TCAL6416_PORT0) ? TCAL6416_REG_OUTPUT_PORT0 : TCAL6416_REG_OUTPUT_PORT1;
     
     // Read current port state

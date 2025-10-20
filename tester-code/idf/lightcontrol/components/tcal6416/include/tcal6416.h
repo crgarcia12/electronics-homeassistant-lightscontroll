@@ -89,54 +89,54 @@ typedef enum {
 /**
  * @brief TCAL6416 device handle
  */
-typedef struct {
-    uint8_t i2c_address;        ///< I2C address of the device
-    uint8_t i2c_port;           ///< I2C port number
-} tcal6416_handle_t;
+typedef struct tcal6416_handle_s tcal6416_handle_t;
 
 /**
  * @brief TCAL6416 configuration structure
  */
 typedef struct {
-    uint8_t i2c_address;        ///< I2C address of the device (0x20-0x27)
-    uint8_t i2c_port;           ///< I2C port number (usually 0 or 1)
     uint8_t port0_config;       ///< Port 0 configuration (1=input, 0=output per bit)
     uint8_t port1_config;       ///< Port 1 configuration (1=input, 0=output per bit)
     uint8_t port0_polarity;     ///< Port 0 polarity inversion (1=inverted, 0=normal)
     uint8_t port1_polarity;     ///< Port 1 polarity inversion (1=inverted, 0=normal)
+    uint8_t port0_initial_output; ///< Port 0 initial output state (for output pins)
+    uint8_t port1_initial_output; ///< Port 1 initial output state (for output pins)
+    tcal6416_drive_strength_t port0_drive_strength; ///< Port 0 drive strength
+    tcal6416_drive_strength_t port1_drive_strength; ///< Port 1 drive strength
 } tcal6416_config_t;
 
 /**
- * @brief Initialize TCAL6416 with default configuration
+ * @brief Initialize TCAL6416 device
+ * 
+ * @param handle Pointer to device handle (will be allocated)
+ * @param bus_handle I2C master bus handle
+ * @param i2c_address I2C address of the TCAL6416 device (0x20-0x27)
+ * @param config Device configuration (NULL for default)
+ * @return esp_err_t ESP_OK on success, error code otherwise
+ */
+esp_err_t tcal6416_init(tcal6416_handle_t **handle, void *bus_handle, uint8_t i2c_address, const tcal6416_config_t *config);
+
+/**
+ * @brief Deinitialize TCAL6416 device and free resources
+ * 
+ * @param handle Pointer to device handle
+ * @return esp_err_t ESP_OK on success, error code otherwise
+ */
+esp_err_t tcal6416_deinit(tcal6416_handle_t *handle);
+
+/**
+ * @brief Get default TCAL6416 configuration
  * 
  * Default configuration:
- * - Port 0: All pins as outputs
- * - Port 1: All pins as inputs
+ * - Port 0: All pins as inputs (0xFF)
+ * - Port 1: All pins as outputs (0x00)
  * - No polarity inversion
+ * - Initial outputs: LOW
+ * - Drive strength: 1.0x (full strength)
  * 
- * @param handle Pointer to device handle
- * @param i2c_port I2C port number
- * @param i2c_address I2C address of the TCAL6416 device
- * @return esp_err_t ESP_OK on success, error code otherwise
+ * @return tcal6416_config_t Default configuration structure
  */
-esp_err_t tcal6416_init(tcal6416_handle_t *handle, uint8_t i2c_port, uint8_t i2c_address);
-
-/**
- * @brief Initialize TCAL6416 with custom configuration
- * 
- * @param handle Pointer to device handle
- * @param config Pointer to configuration structure
- * @return esp_err_t ESP_OK on success, error code otherwise
- */
-esp_err_t tcal6416_init_with_config(tcal6416_handle_t *handle, const tcal6416_config_t *config);
-
-/**
- * @brief Test device communication
- * 
- * @param handle Pointer to device handle
- * @return esp_err_t ESP_OK if device responds, error code otherwise
- */
-esp_err_t tcal6416_test_communication(const tcal6416_handle_t *handle);
+tcal6416_config_t tcal6416_get_default_config(void);
 
 /**
  * @brief Write data to a TCAL6416 register
