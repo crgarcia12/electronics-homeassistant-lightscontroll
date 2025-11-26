@@ -20,14 +20,14 @@ A managed component is a reusable, self-contained piece of functionality that ca
 ```
 lightcontrol/
 ├── main/
-│   ├── blink_example_main.c     # 🎯 Clean application code only
+│   ├── main.cpp     # 🎯 Clean application code only
 │   └── CMakeLists.txt           # 📋 Simplified build config
 ├── managed_components/
 │   └── tcal6416/               # 📦 Self-contained component
 │       ├── include/
-│       │   └── tcal6416.h      # 🔗 Public API header
+│       │   └── tcal6416.hpp      # 🔗 Public API header
 │       ├── src/
-│       │   └── tcal6416.c      # ⚙️ Implementation
+│       │   └── tcal6416.cpp      # ⚙️ Implementation
 │       ├── CMakeLists.txt      # 🔧 Component build config
 │       ├── idf_component.yml   # 📋 Component manifest
 │       └── README.md           # 📚 Component documentation
@@ -37,9 +37,9 @@ lightcontrol/
 
 ## 🎯 **Key Improvements**
 
-### **Application Code (`main/blink_example_main.c`)**
+### **Application Code (`main/main.c`)**
 - ✅ **Clean & Focused** - Only application logic
-- ✅ **Simple Includes** - Just `#include "tcal6416.h"`
+- ✅ **Simple Includes** - Just `#include "tcal6416.hpp"`
 - ✅ **Handle-Based API** - Modern, safe device management
 - ✅ **Better Error Handling** - Uses ESP_CHECK macros
 
@@ -59,7 +59,7 @@ lightcontrol/
 
 ### **Basic Usage (Handle-Based API)**
 ```c
-#include "tcal6416.h"
+#include "tcal6416.hpp"
 
 void app_main(void) {
     // Initialize I2C first
@@ -109,7 +109,7 @@ tcal6416_init_with_config(&tcal_handle, &config);
 ```c
 // Multiple includes needed
 #include "i2c_driver.h"
-#include "tcal6416.h"
+#include "tcal6416.hpp"
 
 // Address passed to every function
 tcal6416_set_pin(0x20, pin, state);
@@ -119,7 +119,7 @@ tcal6416_read_port(0x20, port, &value);
 ### **New Managed Component Approach**
 ```c
 // Single include
-#include "tcal6416.h"
+#include "tcal6416.hpp"
 
 // Handle-based API (safer, cleaner)
 tcal6416_set_pin(&handle, pin, state);

@@ -6,10 +6,10 @@ This project has been refactored into a clean, modular architecture for better m
 
 ```
 main/
-├── blink_example_main.c    # Main application logic
+├── main.c    # Main application logic
 ├── i2c_driver.h           # I2C driver header
 ├── i2c_driver.c           # I2C driver implementation
-├── tcal6416.h            # TCAL6416 driver header  
+├── tcal6416.hpp            # TCAL6416 driver header  
 ├── tcal6416.c            # TCAL6416 driver implementation
 ├── CMakeLists.txt        # Build configuration
 └── idf_component.yml     # Component dependencies
@@ -39,7 +39,7 @@ esp_err_t i2c_master_read_bytes(uint8_t device_addr, uint8_t reg_addr, uint8_t *
 esp_err_t i2c_master_test_device(uint8_t device_addr);
 ```
 
-### 2. TCAL6416 Driver Module (`tcal6416.h` / `tcal6416.c`)
+### 2. TCAL6416 Driver Module (`tcal6416.hpp` / `tcal6416.cpp`)
 **Purpose**: Specific functionality for TCAL6416 I/O expander
 
 **Key Features**:
@@ -63,7 +63,7 @@ esp_err_t tcal6416_config_port(uint8_t i2c_address, uint8_t port, uint8_t config
 esp_err_t tcal6416_print_status(uint8_t i2c_address);
 ```
 
-### 3. Main Application (`blink_example_main.c`)
+### 3. Main Application (`main.c`)
 **Purpose**: Application-specific logic and demo functionality
 
 **Key Features**:
@@ -105,7 +105,7 @@ esp_err_t tcal6416_print_status(uint8_t i2c_address);
 #define I2C_MASTER_FREQ_HZ          100000 // I2C frequency (100kHz)
 ```
 
-### Application Configuration (in `blink_example_main.c`):
+### Application Configuration (in `main.c`):
 ```c
 #define TCAL6416_I2C_ADDR           0x20  // TCAL6416 I2C address
 ```

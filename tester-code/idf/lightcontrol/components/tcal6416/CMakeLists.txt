@@ -1,6 +1,6 @@
 include($ENV{IDF_PATH}/tools/cmake/version.cmake)
 
-set(srcs "src/tcal6416.c")
+set(srcs "src/tcal6416.cpp")
 set(public_requires)
 
 # Handle different IDF versions and I2C driver components
