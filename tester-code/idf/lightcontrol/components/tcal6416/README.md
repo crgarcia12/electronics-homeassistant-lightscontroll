@@ -26,7 +26,7 @@ This is a comprehensive ESP-IDF component for the Texas Instruments TCAL6416 16-
 ### Basic Example
 
 ```c
-#include "tcal6416.h"
+#include "tcal6416.hpp"
 
 void app_main(void)
 {
