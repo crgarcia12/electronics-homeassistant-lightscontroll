@@ -6,8 +6,8 @@
 	(paper "A3")
 	(title_block
 		(title "Home Assistant module for lights control")
-		(date "2025-08-19")
-		(rev "20250819.26.1.2L")
+		(date "2025-11-26")
+		(rev "20251126.27")
 	)
 	(lib_symbols
 		(symbol "74xGxx:74AHC1G04"
@@ -25597,7 +25597,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" ""
+		(property "JLCPCB" "C17437"
 			(at 88.9 59.69 0)
 			(effects
 				(font
@@ -25606,7 +25606,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C17437"
 			(at 88.9 59.69 0)
 			(effects
 				(font
@@ -27473,7 +27473,7 @@
 				)
 			)
 		)
-		(property "Value" "5kΩ"
+		(property "Value" "1kΩ"
 			(at 209.55 144.78 90)
 			(effects
 				(font
@@ -27508,7 +27508,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" ""
+		(property "JLCPCB" "C21190"
 			(at 207.01 144.78 0)
 			(effects
 				(font
@@ -27517,7 +27517,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C21190"
 			(at 207.01 144.78 0)
 			(effects
 				(font
@@ -30053,7 +30053,7 @@
 				)
 			)
 		)
-		(property "Value" "5kΩ"
+		(property "Value" "1kΩ"
 			(at 209.55 115.57 90)
 			(effects
 				(font
@@ -30088,7 +30088,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" ""
+		(property "JLCPCB" "C21190"
 			(at 207.01 115.57 0)
 			(effects
 				(font
@@ -30097,7 +30097,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C21190"
 			(at 207.01 115.57 0)
 			(effects
 				(font
@@ -30618,7 +30618,7 @@
 				)
 			)
 		)
-		(property "Value" "5kΩ"
+		(property "Value" "1kΩ"
 			(at 208.28 93.98 90)
 			(effects
 				(font
@@ -30653,7 +30653,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" ""
+		(property "JLCPCB" "C21190"
 			(at 205.74 93.98 0)
 			(effects
 				(font
@@ -30662,7 +30662,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C21190"
 			(at 205.74 93.98 0)
 			(effects
 				(font
@@ -32731,7 +32731,7 @@
 				)
 			)
 		)
-		(property "Value" "5kΩ"
+		(property "Value" "1kΩ"
 			(at 208.28 123.19 90)
 			(effects
 				(font
@@ -32766,7 +32766,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" ""
+		(property "JLCPCB" "C21190"
 			(at 205.74 123.19 0)
 			(effects
 				(font
@@ -32775,7 +32775,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C21190"
 			(at 205.74 123.19 0)
 			(effects
 				(font
@@ -34511,7 +34511,7 @@
 				)
 			)
 		)
-		(property "Value" "5kΩ"
+		(property "Value" "1kΩ"
 			(at 209.55 86.36 90)
 			(effects
 				(font
@@ -34546,7 +34546,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" ""
+		(property "JLCPCB" "C21190"
 			(at 207.01 86.36 0)
 			(effects
 				(font
@@ -34555,7 +34555,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C21190"
 			(at 207.01 86.36 0)
 			(effects
 				(font
@@ -36222,7 +36222,7 @@
 				)
 			)
 		)
-		(property "Value" "5kΩ"
+		(property "Value" "1kΩ"
 			(at 208.28 64.77 90)
 			(effects
 				(font
@@ -36257,7 +36257,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" ""
+		(property "JLCPCB" "C21190"
 			(at 205.74 64.77 0)
 			(effects
 				(font
@@ -36266,7 +36266,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C21190"
 			(at 205.74 64.77 0)
 			(effects
 				(font
@@ -38293,7 +38293,7 @@
 				)
 			)
 		)
-		(property "Value" "5kΩ"
+		(property "Value" "1kΩ"
 			(at 208.28 173.99 90)
 			(effects
 				(font
@@ -38328,7 +38328,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" ""
+		(property "JLCPCB" "C21190"
 			(at 205.74 173.99 0)
 			(effects
 				(font
@@ -38337,7 +38337,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C21190"
 			(at 205.74 173.99 0)
 			(effects
 				(font
@@ -40931,7 +40931,7 @@
 				)
 			)
 		)
-		(property "Value" "5kΩ"
+		(property "Value" "1kΩ"
 			(at 208.28 152.4 90)
 			(effects
 				(font
@@ -40966,7 +40966,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" ""
+		(property "JLCPCB" "C21190"
 			(at 205.74 152.4 0)
 			(effects
 				(font
@@ -40975,7 +40975,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C21190"
 			(at 205.74 152.4 0)
 			(effects
 				(font

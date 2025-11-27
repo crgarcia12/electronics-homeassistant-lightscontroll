@@ -9,8 +9,8 @@
 	(paper "User" 170.002 170.002)
 	(title_block
 		(title "Home Assistant module for lights control")
-		(date "2025-08-19")
-		(rev "20250819.26.1")
+		(date "2025-11-26")
+		(rev "20251126.27")
 		(comment 1 "https://docs.rs-online.com/e49b/0900766b816e00ad.pdf")
 		(comment 2 "https://media.distrelec.com/Web/Downloads/_t/ds/1862291_eng_tds.pdf")
 		(comment 3 "case size: 62.8 (H) x 88.8 (W) x 138.8 (L)")
@@ -91165,9 +91165,9 @@
 		(layer "User.2")
 		(uuid "e54b1cbf-ce26-4a41-8c7c-c198e7433a14")
 	)
-	(gr_text "20250814.26.1.2L"
+	(gr_text "20251126.27"
 		(locked yes)
-		(at 25.5 48 90)
+		(at 25.25 47.33 90)
 		(layer "F.SilkS")
 		(uuid "00000000-0000-0000-0000-0000617a2755")
 		(effects
