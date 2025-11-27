@@ -60,13 +60,21 @@ The current code implements:
 
 To build and flash the project:
 
+1. **From VSCode**:
+   ```
+   Install the extension
+   Click in the Build Fash and Monitor icon in the tray (like a flame) 
+   ```
+
+Alternative 
+
 1. **Set up ESP-IDF environment** (if not already done):
    ```bash
-   # Windows (Command Prompt)
-   %IDF_PATH%\export.bat
-   
+   $env:IDF_PATH = "C:/Users/Carlos/esp/v5.5.1/esp-idf"
+     
    # Or Windows (PowerShell)
-   .$env:IDF_PATH/export.ps1
+   . $env:IDF_PATH/install.ps1
+   . $env:IDF_PATH/export.ps1
    ```
 
 2. **Build the project**:

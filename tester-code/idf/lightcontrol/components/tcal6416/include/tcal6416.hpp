@@ -288,11 +288,14 @@ public:
     void setPortDriveStrength(Port port, DriveStrength strength);
     
     /**
-     * @brief Print complete TCAL6416 status and register values
+     * @brief Read a register value
+     * 
+     * @param reg Register to read
+     * @return Register value
      * 
      * @throws CommunicationException if I2C communication fails
      */
-    void printStatus();
+    uint8_t readRegister(Register reg);
     
     /**
      * @brief Get I2C address of the device
@@ -324,24 +327,24 @@ private:
     bool initialized_;
     
     /**
-     * @brief Write a byte to I2C device register
+     * @brief Write a byte to I2C device register (internal use)
      * 
      * @param reg_addr Register address
      * @param data Data to write
      * 
      * @throws CommunicationException if I2C communication fails
      */
-    void writeRegister(Register reg_addr, uint8_t data);
+    void writeRegisterInternal(Register reg_addr, uint8_t data);
     
     /**
-     * @brief Read a byte from I2C device register
+     * @brief Read a byte from I2C device register (internal use)
      * 
      * @param reg_addr Register address
      * @return Read data
      * 
      * @throws CommunicationException if I2C communication fails
      */
-    uint8_t readRegister(Register reg_addr);
+    uint8_t readRegisterInternal(Register reg_addr);
     
     /**
      * @brief Test device communication

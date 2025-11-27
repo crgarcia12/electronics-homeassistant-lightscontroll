@@ -29,9 +29,35 @@ static const char *TAG = "main";
 // TCAL6416 configuration
 #define TCAL6416_I2C_ADDR           0x20   /*!< TCAL6416 I2C address */
 
+// Application-specific pin definitions
+#define LED_PIN                     8      /*!< LED connected to P1_0 (pin 8) */
+
+/**
+ * @brief Print LED port status in binary format
+ * 
+ * This is application-specific - it knows we're using Port 1 for the LED
+ * and formats the output in a user-friendly binary format.
+ */
+void printLEDStatus(tcal6416::Device* device) {
+    // Read Output Port 1 register where our LED is connected
+    uint8_t output_port1 = device->readRegister(tcal6416::Register::OUTPUT_PORT1);
+    
+    // Convert to binary string (P1_7 to P1_0)
+    std::string binary;
+    for (int i = 7; i >= 0; i--) {
+        binary += (output_port1 & (1 << i)) ? '1' : '0';
+    }
+    
+    ESP_LOGI(TAG, "LED Port Status: %s (P1_7-P1_0)", binary.c_str());
+}
+
 extern "C" void app_main(void)
 {
+    ESP_LOGI(TAG, "==============================================");
+    ESP_LOGI(TAG, "Application Version: 2.0.0");
     ESP_LOGI(TAG, "Starting ESP32-S3 TCAL6416 I/O Expander Example (C++ Version)");
+    ESP_LOGI(TAG, "==============================================");
+    
     // Wait 1 second
     vTaskDelay(pdMS_TO_TICKS(1000));
     
@@ -76,33 +102,20 @@ extern "C" void app_main(void)
 
         ESP_LOGI(TAG, "TCAL6416 initialized successfully");
 
-        // Print initial status
-        tcal_device->printStatus();
-
         // Example: Blink LED on P1_0 (Pin 8)
-        uint8_t led_pin = 8;  // P1_0
         bool led_state = false;
 
-        ESP_LOGI(TAG, "Starting LED blink on pin P1_%d (GPIO %d)", led_pin % 8, led_pin);
+        ESP_LOGI(TAG, "Starting LED blink on pin P1_%d", LED_PIN % 8);
 
         while (1) {
             try {
                 // Toggle LED
                 led_state = !led_state;
-                tcal_device->setPin(led_pin, led_state);
-                ESP_LOGI(TAG, "LED %s (pin %d)", led_state ? "ON" : "OFF", led_pin);
+                tcal_device->setPin(LED_PIN, led_state);
+                ESP_LOGI(TAG, "LED %s (pin %d)", led_state ? "ON" : "OFF", LED_PIN);
 
-                // Read input port 0 (as an example)
-                uint8_t input_state = tcal_device->readPort(tcal6416::Port::PORT0);
-                ESP_LOGI(TAG, "Input Port 0 state: 0x%02X", input_state);
-
-                // Example: Read individual pin state from port 0
-                for (int pin = 0; pin < 8; pin++) {
-                    bool pin_state = tcal_device->getPin(pin);
-                    if (pin_state) {  // Only log if pin is high to reduce spam
-                        ESP_LOGI(TAG, "Pin P0_%d is HIGH", pin);
-                    }
-                }
+                // Print LED port status (application-specific formatting)
+                printLEDStatus(tcal_device.get());
 
             } catch (const tcal6416::CommunicationException& e) {
                 ESP_LOGE(TAG, "Communication error: %s (ESP error: %s)", 
