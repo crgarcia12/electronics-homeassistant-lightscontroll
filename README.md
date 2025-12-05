@@ -1,6 +1,6 @@
 # Home Automation Lights Controller - ESPHome & Home Assistant Compatible
 
-A smart lighting controllerr PCB that integrates seamlessly with ESPHome and Home Assistant while maintaining full compatibility with traditional mechanical switches. This device acts as a "sidecar" to existing latching relays, adding smart home capabilities without compromising safety or requiring rewiring.
+A smart lighting controller PCB that integrates seamlessly with ESPHome and Home Assistant while maintaining full compatibility with traditional mechanical switches. This device acts as a "sidecar" to existing latching relays, adding smart home capabilities without compromising safety or requiring rewiring.
 
 ## Table of Contents
 
@@ -27,9 +27,9 @@ This circuit controls home lights following these core principles:
 3. **Follows standard installation**: This device does not require you to rewire your house
 4. **Centrally installable**: Can be installed in a central electrical panel
 
-Following those principles and using as a reference a multi-switch light controllerd with a mechanical latching relay, this is the wiring concept:
+Following those principles and using as a reference a multi-switch light controlled with a mechanical latching relay, this is the wiring concept:
 
-![Relay wiring diagram showing how the controllerr integrates with existing latching relay setup](PCB/schematics-v19-jlcpcb/readme-media/relay-wiring.png)
+![Relay wiring diagram showing how the controller integrates with existing latching relay setup](PCB/schematics-v19-jlcpcb/readme-media/relay-wiring.png)
 
 A normal circuit sends all push buttons to the latching relay, which controls the lights. This circuit (ESPHome) acts as a sidecar to the latching relay, functioning as a standard push button while also sensing the output of the latching relay to detect whether the lights are on or off.
 
@@ -42,7 +42,7 @@ A normal circuit sends all push buttons to the latching relay, which controls th
   - Exposed Serial pins
   - Multiple GPIO pins available
   - 3.3V jumper: Allows disconnecting the internal ESP32 and replacing it with any other microcontroller
-  - Relay pins (4-channel version): Relays can be controllerd with an external microcontroller or device directly
+  - Relay pins (4-channel version): Relays can be controlled with an external microcontroller or device directly
   - Current sensing pins: Current sensing information is exposed for external microcontroller or device integration
   - Provides both 3.3V and 5V power rails
 - **ESPHome compatible**: Easy integration with Home Assistant
@@ -88,7 +88,7 @@ For detailed instructions, see the [Installation Guide](#installation-guide) sec
 
 ## Prerequisites
 
-Before installing this controllerr, ensure you have:
+Before installing this controller, ensure you have:
 
 - Basic understanding of electrical wiring and safety
 - Existing mechanical latching relay installation
@@ -364,8 +364,8 @@ Version 24.8-2 (SN74LVCH8 + OUTPUT_ENABLED)
 ### Older Versions: 23 - Eight Channels
 
 **Changes compared to version 22:**
-* Eight channels controllerd via I2C for relays and mains sensing
-* Added RGB Led controllerr
+* Eight channels controlled via I2C for relays and mains sensing
+* Added RGB Led controller
 * Capacitor for 5v line
 * Compatible with case: RS PRO Modular Enclosure for DIN rail Stock number: 1862291 (https://uk.rs-online.com/web/p/din-rail-enclosures/1862291/)
 * Added MCP23018 as IO expander and TXB0108PW to shift the output of the Darlington (~2.5V) to the logical high (3.3V)
