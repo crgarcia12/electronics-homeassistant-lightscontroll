@@ -782,7 +782,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "hamodule.net",
-      "plot": "../readme-media/",
+      "plot": "jlcpcb/",
       "pos_files": "production-files-jlcpcb/",
       "specctra_dsn": "",
       "step": "",
@@ -1065,7 +1065,7 @@
         "uuid": "e5217a0c-7f55-4c30-adda-7f8d95709d1b"
       }
     ],
-    "used_designators": "",
+    "used_designators": "J18,J20,C51",
     "variants": []
   },
   "sheets": [
