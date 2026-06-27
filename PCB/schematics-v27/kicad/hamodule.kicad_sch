@@ -6,8 +6,8 @@
 	(paper "A3")
 	(title_block
 		(title "Home Assistant module for lights control")
-		(date "2025-11-26")
-		(rev "20251126.27")
+		(date "2026-06-27")
+		(rev "20260627.27")
 	)
 	(lib_symbols
 		(symbol "74xGxx:74AHC1G04"
@@ -25535,7 +25535,7 @@
 				)
 			)
 		)
-		(property "JLCPCB" "C492401"
+		(property "JLCPCB" "C158012"
 			(at 17.78 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -25546,7 +25546,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C492401"
+		(property "LCSC" "C158012"
 			(at 17.78 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -25895,7 +25895,7 @@
 				)
 			)
 		)
-		(property "JLCPCB" "C492401"
+		(property "JLCPCB" "C158012"
 			(at 105.41 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -25906,7 +25906,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C492401"
+		(property "LCSC" "C158012"
 			(at 105.41 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -26606,6 +26606,28 @@
 				)
 			)
 		)
+		(property "JLCPCB" "C3309598"
+			(at 139.7 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C3309598"
+			(at 139.7 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "536f520d-0ac1-4be7-8db4-77812585612c")
 		)
@@ -26714,6 +26736,28 @@
 			)
 		)
 		(property "PcbText" ""
+			(at 403.86 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" "C3309598"
+			(at 403.86 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C3309598"
 			(at 403.86 91.44 0)
 			(hide yes)
 			(show_name no)
@@ -27307,7 +27351,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C49678"
+		(property "LCSC" "C45783"
 			(at 73.66 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -29340,6 +29384,28 @@
 				)
 			)
 		)
+		(property "JLCPCB" "C3309598"
+			(at 403.86 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C3309598"
+			(at 403.86 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "81bdc193-a573-44e5-b756-a8c7e5793a78")
 		)
@@ -29507,7 +29573,7 @@
 				)
 			)
 		)
-		(property "Value" "3.3v|GND|7|15"
+		(property "Value" "j14"
 			(at 391.16 228.6 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29562,6 +29628,28 @@
 		)
 		(property "Field4" ""
 			(at 389.89 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" "C49257"
+			(at 389.89 223.52 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C49257"
+			(at 389.89 223.52 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -32024,7 +32112,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C49678"
+		(property "LCSC" "C45783"
 			(at 48.26 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -33293,7 +33381,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C49678"
+		(property "LCSC" "C45783"
 			(at 367.03 35.56 0)
 			(hide yes)
 			(show_name no)
@@ -34796,6 +34884,28 @@
 			)
 		)
 		(property "PcbText" ""
+			(at 139.7 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" "C3309598"
+			(at 139.7 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C3309598"
 			(at 139.7 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -41922,7 +42032,7 @@
 				)
 			)
 		)
-		(property "JLCPCB" "C1648"
+		(property "JLCPCB" "C45783"
 			(at 377.19 35.56 0)
 			(hide yes)
 			(show_name no)
@@ -42045,6 +42155,28 @@
 			)
 		)
 		(property "Field4" ""
+			(at 309.88 218.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" "C32713270"
+			(at 309.88 218.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C32713270"
 			(at 309.88 218.44 0)
 			(hide yes)
 			(show_name no)
@@ -45178,7 +45310,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C49678"
+		(property "LCSC" "C45783"
 			(at 29.21 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -45302,7 +45434,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C49678"
+		(property "LCSC" "C45783"
 			(at 78.74 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -46196,7 +46328,7 @@
 				)
 			)
 		)
-		(property "JLCPCB" "C59461"
+		(property "JLCPCB" "C45783"
 			(at 251.46 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -46207,7 +46339,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C59461"
+		(property "LCSC" "C45783"
 			(at 251.46 60.96 0)
 			(hide yes)
 			(show_name no)

@@ -275,7 +275,7 @@
       "internal_id": "",
       "mfg": "",
       "mpn": "",
-      "sch_revision": "20251126.27"
+      "sch_revision": "20260627.27"
     },
     "layer_pairs": [],
     "layer_presets": [],
@@ -998,7 +998,7 @@
       "include_excluded_from_bom": true,
       "name": "",
       "sort_asc": true,
-      "sort_field": "Value"
+      "sort_field": "Reference"
     },
     "bus_aliases": {},
     "connection_grid_size": 50.0,
