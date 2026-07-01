@@ -15213,7 +15213,7 @@
 				)
 			)
 		)
-		(property "Value" "LD1117AV33"
+		(property "Value" "LD1117AS18TR"
 			(at 50.8 72.3646 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15246,6 +15246,38 @@
 			)
 		)
 		(property "Description" "800mA Fixed Low Drop Positive Voltage Regulator, Fixed Output 3.3V, SOT-223"
+			(at 50.8 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PcbText" ""
+			(at 50.8 76.2 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" "C2845037"
+			(at 50.8 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2845037"
 			(at 50.8 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -18322,7 +18354,7 @@
 				)
 			)
 		)
-		(property "JLCPCB" "C49257"
+		(property "JLCPCB" "C5116483"
 			(at 109.22 194.31 90)
 			(hide yes)
 			(show_name no)
@@ -18333,7 +18365,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C49257"
+		(property "LCSC" "C5116483"
 			(at 109.22 194.31 90)
 			(hide yes)
 			(show_name no)
@@ -20730,7 +20762,7 @@
 				)
 			)
 		)
-		(property "JLCPCB" "1"
+		(property "JLCPCB" "C124711"
 			(at 161.29 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -20741,7 +20773,7 @@
 				)
 			)
 		)
-		(property "LCSC" "1"
+		(property "LCSC" "C124711"
 			(at 161.29 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -21551,6 +21583,28 @@
 		)
 		(property "PcbText" ""
 			(at 161.29 45.72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" "C124711"
+			(at 161.29 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C124711"
+			(at 161.29 45.72 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23439,6 +23493,28 @@
 				)
 			)
 		)
+		(property "JLCPCB" "C124711"
+			(at 161.29 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C124711"
+			(at 161.29 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "82210e12-0d9e-40e3-851d-46d8ad570536")
 		)
@@ -24646,6 +24722,28 @@
 				)
 			)
 		)
+		(property "JLCPCB" "C124711"
+			(at 161.29 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C124711"
+			(at 161.29 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "ad4453e1-67b9-4a30-83c7-a9507a784dd8")
 		)
@@ -25407,7 +25505,7 @@
 				)
 			)
 		)
-		(property "JLCPCB" "C49257"
+		(property "JLCPCB" "C5116483"
 			(at 91.44 194.31 90)
 			(hide yes)
 			(show_name no)
@@ -25418,7 +25516,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C49257"
+		(property "LCSC" "C5116483"
 			(at 91.44 194.31 90)
 			(hide yes)
 			(show_name no)

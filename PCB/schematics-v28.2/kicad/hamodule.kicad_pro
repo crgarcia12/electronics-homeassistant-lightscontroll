@@ -170,7 +170,7 @@
         "min_via_diameter": 0.4,
         "solder_mask_clearance": 0.05,
         "solder_mask_min_width": 0.0,
-        "solder_mask_to_copper_clearance": 0.0,
+        "solder_mask_to_copper_clearance": 0.005,
         "solder_paste_clearance": 0.0,
         "solder_paste_margin_ratio": -0.0,
         "use_height_for_length_calcs": true
@@ -882,7 +882,7 @@
       "include_excluded_from_bom": true,
       "name": "",
       "sort_asc": true,
-      "sort_field": "Footprint"
+      "sort_field": "Reference"
     },
     "bus_aliases": {},
     "connection_grid_size": 50.0,
@@ -947,7 +947,7 @@
         "uuid": "e5217a0c-7f55-4c30-adda-7f8d95709d1b"
       }
     ],
-    "used_designators": "R26,J14-15,Rr1,C21,U11,D8",
+    "used_designators": "Rr1,J14-15,R26,C21,U11,D8",
     "variants": []
   },
   "sheets": [
