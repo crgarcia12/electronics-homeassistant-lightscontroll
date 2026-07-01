@@ -1,0 +1,11 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "RAC05-05SK_277")(type "KiCad")(uri "${KIPRJMOD}/components-footprints/rac05-05sk/RAC05-05SK_277.kicad_sym")(options "")(descr ""))
+  (lib (name "wago-2604-1104")(type "KiCad")(uri "${KIPRJMOD}/components-footprints/wago/wago-2604-1104/2021-11-12_14-48-51.kicad_sym")(options "")(descr ""))
+  (lib (name "wago-2604-1102")(type "KiCad")(uri "${KIPRJMOD}/components-footprints/wago/wago-2604-1102/wago-2604-1102.kicad_sym")(options "")(descr ""))
+  (lib (name "LDA210-PDIP")(type "KiCad")(uri "${KIPRJMOD}/components-footprints/LDA210/LDA210-PDIP.kicad_sym")(options "")(descr ""))
+  (lib (name "RST-80-AMMO")(type "Legacy")(uri "${KIPRJMOD}/components-footprints/RST-80-AMMO/RST-80-AMMO.lib")(options "")(descr ""))
+  (lib (name "sht40")(type "KiCad")(uri "${KIPRJMOD}/components-footprints/sht40/sht40.kicad_sym")(options "")(descr ""))
+  (lib (name "AQG12205")(type "KiCad")(uri "${KIPRJMOD}/components-footprints/AQG12205/AQG12205/KiCad/AQG12205.kicad_sym")(options "")(descr ""))
+  (lib (name "Espressif")(type "KiCad")(uri "${KIPRJMOD}/components-footprints/ESP32-S3/kicad-libraries-main/libraries/Espressif.kicad_sym")(options "")(descr ""))
+)

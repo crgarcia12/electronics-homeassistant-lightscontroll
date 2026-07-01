@@ -1,0 +1,27 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model AQG12205
+#/15701359/647162/2.49/4/3/Relay or Contactor
+DEF AQG12205 K 0 30 Y Y 1 F N
+F0 "K" 950 300 50 H V L CNN
+F1 "AQG12205" 950 200 50 H V L CNN
+F2 "AQG12205" 950 100 50 H I L CNN
+F3 "https://www3.panasonic.biz/ac/e_download/control/relay/solid-state/catalog/semi_eng_aqg.pdf" 950 0 50 H I L CNN
+F4 "Solid State Relays - PCB Mount 1A 5V Random Non-Zero Cross" 950 -100 50 H I L CNN "Description"
+F5 "13.5" 950 -200 50 H I L CNN "Height"
+F6 "Panasonic" 950 -300 50 H I L CNN "Manufacturer_Name"
+F7 "AQG12205" 950 -400 50 H I L CNN "Manufacturer_Part_Number"
+F8 "769-AQG12205" 950 -500 50 H I L CNN "Mouser Part Number"
+F9 "https://www.mouser.co.uk/ProductDetail/Panasonic-Industrial-Devices/AQG12205?qs=g5ciJ0jwZaFrZwmjjqozuQ%3D%3D" 950 -600 50 H I L CNN "Mouser Price/Stock"
+F10 "" 950 -700 50 H I L CNN "Arrow Part Number"
+F11 "" 950 -800 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X -INPUT 1 0 0 200 R 50 50 0 0 P
+X +INPUT 2 0 -100 200 R 50 50 0 0 P
+X OUTPUT_1 3 0 -200 200 R 50 50 0 0 P
+X OUTPUT_2 4 0 -300 200 R 50 50 0 0 P
+P 5 0 1 6 200 100 900 100 900 -400 200 -400 200 100 N
+ENDDRAW
+ENDDEF
+#
+#End Library

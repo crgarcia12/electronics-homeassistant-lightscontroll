@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP AQG12205
+D Solid State Relays - PCB Mount 1A 5V Random Non-Zero Cross
+K
+F https://www3.panasonic.biz/ac/e_download/control/relay/solid-state/catalog/semi_eng_aqg.pdf
+$ENDCMP
+#
+#End Doc Library
