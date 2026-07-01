@@ -13272,17 +13272,17 @@
 	)
 	(global_label "EspRel1"
 		(shape output)
-		(at 160.02 130.81 0)
+		(at 36.83 121.92 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
 		(uuid "86e98417-f5e4-48ba-8147-ef66cc03dde6")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 169.9037 130.7306 0)
+			(at 26.9396 121.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13290,7 +13290,7 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 	)
@@ -13576,19 +13576,19 @@
 			)
 		)
 	)
-	(global_label "GPIO16"
+	(global_label "GPIO46"
 		(shape output)
-		(at 36.83 154.94 180)
+		(at 160.02 130.81 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "9e70dbd9-87cb-4b49-b0f0-a67f80626cc5")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 27.6115 154.8606 0)
+			(at 169.2453 130.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13596,7 +13596,7 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 	)
@@ -14256,7 +14256,7 @@
 			)
 		)
 	)
-	(global_label "GPIO16"
+	(global_label "GPIO46"
 		(shape input)
 		(at 62.23 189.23 90)
 		(fields_autoplaced yes)
@@ -14268,7 +14268,7 @@
 		)
 		(uuid "fc076352-7fbe-4acf-90dc-67655a8b0b83")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 62.3094 180.0115 90)
+			(at 62.23 180.0047 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14282,7 +14282,7 @@
 	)
 	(global_label "GPIO3"
 		(shape output)
-		(at 36.83 121.92 180)
+		(at 36.83 154.94 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -14292,7 +14292,7 @@
 		)
 		(uuid "ff2b6e0d-898c-4145-855d-f4718f8bc793")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 28.821 121.8406 0)
+			(at 28.821 154.8606 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18391,7 +18391,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "9|3|16"
+		(property "Value" "9|3|46"
 			(at 55.88 177.8 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19598,8 +19598,18 @@
 				)
 			)
 		)
-		(property "Field4" "GND|3.3V"
+		(property "Field4" "3.3V|GND"
 			(at 90.424 88.392 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PcbText" ""
+			(at 90.17 86.36 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -21774,7 +21784,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "83122d7f-d7ac-482c-9d47-e8b104c104b2")
-		(property "Reference" "Rr1"
+		(property "Reference" "R27"
 			(at 113.03 78.74 90)
 			(hide yes)
 			(show_name no)
@@ -21869,7 +21879,7 @@
 		(instances
 			(project "hamodule"
 				(path "/e5217a0c-7f55-4c30-adda-7f8d95709d1b"
-					(reference "Rr1")
+					(reference "R27")
 					(unit 1)
 				)
 			)
@@ -25348,8 +25358,18 @@
 				)
 			)
 		)
-		(property "Field4" "GND|5V"
+		(property "Field4" "5V|GND"
 			(at 16.764 88.9 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PcbText" ""
+			(at 16.51 83.82 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
