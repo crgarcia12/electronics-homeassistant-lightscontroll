@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "Home Assistant module for lights control")
-		(date "2023-05-29")
-		(rev "20230529.23")
+		(date "2026-07-01")
+		(rev "20260701.28")
 	)
 	(lib_symbols
 		(symbol "AQG12205:AQG12205"
@@ -9230,6 +9230,10 @@
 		(uuid "fa1b61c5-6a5b-4c66-b361-8655796089f9")
 	)
 	(no_connect
+		(at 115.57 43.18)
+		(uuid "120270a5-0d1e-41bc-80e0-06cc93c67ed1")
+	)
+	(no_connect
 		(at 135.89 48.26)
 		(uuid "2e0a9f64-1b78-4597-8d50-d12d2268a95a")
 	)
@@ -9308,6 +9312,10 @@
 	(no_connect
 		(at 115.57 45.72)
 		(uuid "d3e133b7-2c84-4206-a2b1-e693cb57fe56")
+	)
+	(no_connect
+		(at 135.89 43.18)
+		(uuid "d78cac99-f85d-4646-9c28-4aeecc3e7a8f")
 	)
 	(no_connect
 		(at 115.57 50.8)
@@ -9520,16 +9528,6 @@
 			(type default)
 		)
 		(uuid "12aa8d26-43a2-4793-864c-4406477616f8")
-	)
-	(wire
-		(pts
-			(xy 154.94 110.49) (xy 168.91 110.49)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "13635dfc-4c93-4651-a2a3-992a42498508")
 	)
 	(wire
 		(pts
@@ -9930,6 +9928,16 @@
 			(type default)
 		)
 		(uuid "3f2aa2c0-351f-4729-814c-2ff50c08db68")
+	)
+	(wire
+		(pts
+			(xy 154.94 110.49) (xy 168.91 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "41e184d4-71ae-48c4-8f7f-88d41f10912b")
 	)
 	(wire
 		(pts
@@ -10603,16 +10611,6 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 107.95) (xy 168.91 107.95)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "89b45145-bfe7-4364-a513-e04334735e53")
-	)
-	(wire
-		(pts
 			(xy 29.21 62.23) (xy 33.02 62.23)
 		)
 		(stroke
@@ -10810,6 +10808,16 @@
 			(type default)
 		)
 		(uuid "9bce9194-000c-433d-b650-ab2ebd8ed2e0")
+	)
+	(wire
+		(pts
+			(xy 154.94 107.95) (xy 168.91 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9bee735c-f2f7-41c0-a8fd-714a31767481")
 	)
 	(wire
 		(pts
@@ -11782,22 +11790,22 @@
 		(uuid "ffe6315b-a3dd-47a9-bb90-b96c19d33ca6")
 	)
 	(label "ESP-D+"
-		(at 156.21 107.95 0)
+		(at 168.91 107.95 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "4a227b20-b47a-4961-8072-07eece9045aa")
 	)
 	(label "ESP-D-"
-		(at 156.21 110.49 0)
+		(at 168.91 110.49 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "4c4ddc56-3a92-408d-b24f-0ddf10222488")
 	)
@@ -16026,7 +16034,7 @@
 				)
 			)
 		)
-		(property "Footprint" "CONN_2604-1104_8_WAG"
+		(property "Footprint" "wago-2604-1104:big_pads_2604-1104"
 			(at 213.36 59.436 0)
 			(hide yes)
 			(show_name no)
@@ -16050,6 +16058,16 @@
 		(property "Description" ""
 			(at 213.36 60.96 0)
 			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PcbText" ""
+			(at 213.36 60.96 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16122,9 +16140,8 @@
 				)
 			)
 		)
-		(property "Footprint" "CONN_2604-1104_8_WAG"
+		(property "Footprint" "wago-2604-1104:big_pads_2604-1104"
 			(at 205.74 57.404 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16146,6 +16163,16 @@
 		(property "Description" ""
 			(at 205.74 55.88 0)
 			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PcbText" ""
+			(at 205.74 55.88 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16297,7 +16324,7 @@
 				)
 			)
 		)
-		(property "Footprint" "CONN_2604-1102_4_WAG"
+		(property "Footprint" "wago-2604-1102:big_pads_2604-1102"
 			(at 24.13 31.496 0)
 			(hide yes)
 			(show_name no)
@@ -16332,6 +16359,16 @@
 		)
 		(property "Text" "Input 230V"
 			(at 26.67 41.91 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PcbText" ""
+			(at 24.13 33.02 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -20255,7 +20292,7 @@
 				)
 			)
 		)
-		(property "Footprint" "AQG12205"
+		(property "Footprint" "AQG12205:AQG12205"
 			(at 185.42 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -20373,6 +20410,16 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+		(property "PcbText" ""
+			(at 161.29 73.66 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -21019,7 +21066,7 @@
 				)
 			)
 		)
-		(property "Footprint" "AQG12205"
+		(property "Footprint" "AQG12205:AQG12205"
 			(at 185.42 43.18 0)
 			(hide yes)
 			(show_name no)
@@ -21137,6 +21184,16 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+		(property "PcbText" ""
+			(at 161.29 45.72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -22834,7 +22891,7 @@
 				)
 			)
 		)
-		(property "Footprint" "AQG12205"
+		(property "Footprint" "AQG12205:AQG12205"
 			(at 152.4 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -22952,6 +23009,16 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+		(property "PcbText" ""
+			(at 161.29 33.02 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -23943,7 +24010,7 @@
 				)
 			)
 		)
-		(property "Footprint" "AQG12205"
+		(property "Footprint" "AQG12205:AQG12205"
 			(at 185.42 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -24061,6 +24128,16 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+		(property "PcbText" ""
+			(at 161.29 59.69 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -24333,7 +24410,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Sensor:SHT4x"
+		(property "Footprint" "Sensor_Humidity:Sensirion_DFN-4_1.5x1.5mm_P0.8mm_SHT4x_NoCentralPad"
 			(at 280.67 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -24380,6 +24457,16 @@
 		(property "LCSC" "C2909890"
 			(at 271.78 124.46 0)
 			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PcbText" ""
+			(at 271.78 124.46 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
