@@ -15442,7 +15442,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10uF"
+		(property "Value" "100uF"
 			(at 55.88 91.44 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15464,7 +15464,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "FVH016ADA101M0654"
 			(at 59.69 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -15498,6 +15498,28 @@
 		)
 		(property "PcbText" ""
 			(at 59.69 83.82 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" "C7469977"
+			(at 59.69 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C7469977"
+			(at 59.69 83.82 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15579,6 +15601,28 @@
 		)
 		(property "Description" "Jumper, 2-pole, closed/bridged"
 			(at 90.17 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" "C492401"
+			(at 90.17 76.2 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C492401"
+			(at 90.17 76.2 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15829,7 +15873,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "NC"
+		(property "Value" "22uF"
 			(at 44.45 91.44 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15851,7 +15895,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.distrelec.ch/en/ceramic-capacitor-100nf-50vdc-0805-rnd-components-rnd-1500805b104j500nt/p/30086635?q=smd+capacitor+&pos=5&origPos=990&origPageSize=50&track=true"
+		(property "Datasheet" ""
 			(at 41.91 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -15873,7 +15917,18 @@
 				)
 			)
 		)
-		(property "JLCPCB" ""
+		(property "JLCPCB" "C45783"
+			(at 41.91 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C45783"
 			(at 41.91 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -16076,6 +16131,28 @@
 				)
 			)
 		)
+		(property "JLCPCB" "C3309598"
+			(at 213.36 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C3309598"
+			(at 213.36 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "dd054d69-7703-4745-9a43-51e8a2c0bca5")
 		)
@@ -16173,6 +16250,28 @@
 		)
 		(property "PcbText" ""
 			(at 205.74 55.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" "C3309598"
+			(at 205.74 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C3309598"
+			(at 205.74 55.88 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16369,6 +16468,28 @@
 		)
 		(property "PcbText" ""
 			(at 24.13 33.02 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" "C3309286"
+			(at 24.13 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C3309286"
+			(at 24.13 33.02 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17345,7 +17466,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "NC"
+		(property "Value" "100uF"
 			(at 17.78 165.1 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17367,7 +17488,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "CL10A226MQ8NRNC"
+		(property "Datasheet" "CL31A107MQHNNNE"
 			(at 17.78 172.72 0)
 			(hide yes)
 			(show_name no)
@@ -17389,8 +17510,19 @@
 				)
 			)
 		)
-		(property "JLCPCB" ""
+		(property "JLCPCB" "C15008"
 			(at 17.78 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C15008"
+			(at 17.78 172.72 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18190,6 +18322,28 @@
 				)
 			)
 		)
+		(property "JLCPCB" "C49257"
+			(at 109.22 194.31 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C49257"
+			(at 109.22 194.31 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "5fdae60b-238f-4307-a4d2-2e28bc1de53d")
 		)
@@ -18279,6 +18433,28 @@
 		)
 		(property "Field4" "Rx | Tx"
 			(at 33.02 194.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" "C492401"
+			(at 33.02 194.31 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C492401"
+			(at 33.02 194.31 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18483,6 +18659,28 @@
 				)
 			)
 		)
+		(property "JLCPCB" "C49257"
+			(at 59.69 194.31 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C49257"
+			(at 59.69 194.31 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "bf891391-9d0a-448f-8358-3c9dd415a49c")
 		)
@@ -18646,7 +18844,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "CL10A226MQ8NRNC"
+		(property "Datasheet" ""
 			(at 21.59 172.72 0)
 			(hide yes)
 			(show_name no)
@@ -18852,7 +19050,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "2010T200mA250V"
 			(at 229.87 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -18865,6 +19063,28 @@
 		)
 		(property "Description" "Fuse"
 			(at 229.87 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" "C2840857"
+			(at 229.87 85.09 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2840857"
+			(at 229.87 85.09 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19453,7 +19673,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "2010T200mA250V"
 			(at 191.77 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -19466,6 +19686,28 @@
 		)
 		(property "Description" "Fuse"
 			(at 191.77 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" "C2840857"
+			(at 191.77 63.5 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2840857"
+			(at 191.77 63.5 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19532,7 +19774,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "2010T200mA250V"
 			(at 191.77 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -19545,6 +19787,28 @@
 		)
 		(property "Description" "Fuse"
 			(at 191.77 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" "C2840857"
+			(at 191.77 58.42 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2840857"
+			(at 191.77 58.42 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19591,7 +19855,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "I2C"
+		(property "Value" ""
 			(at 73.66 86.36 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19647,6 +19911,28 @@
 		)
 		(property "PcbText" ""
 			(at 90.17 86.36 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" "C492401"
+			(at 90.17 86.36 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C492401"
+			(at 90.17 86.36 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19873,7 +20159,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10uF"
+		(property "Value" "100uF"
 			(at 25.4 91.44 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19895,7 +20181,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "FVH016ADA101M0654"
 			(at 29.21 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -19930,6 +20216,28 @@
 		)
 		(property "PcbText" ""
 			(at 29.21 83.82 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" "C7469977"
+			(at 29.21 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C7469977"
+			(at 29.21 83.82 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -20422,6 +20730,28 @@
 				)
 			)
 		)
+		(property "JLCPCB" "1"
+			(at 161.29 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "1"
+			(at 161.29 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "6233d8f5-288e-4eff-8726-3eba7346f305")
 		)
@@ -20599,7 +20929,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "2010T200mA250V"
 			(at 191.77 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -20612,6 +20942,28 @@
 		)
 		(property "Description" "Fuse"
 			(at 191.77 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" "C2840857"
+			(at 191.77 53.34 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2840857"
+			(at 191.77 53.34 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20658,7 +21010,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "NC"
+		(property "Value" "22uF"
 			(at 29.21 165.1 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20680,7 +21032,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "CL10A226MQ8NRNC"
+		(property "Datasheet" ""
 			(at 29.21 172.72 0)
 			(hide yes)
 			(show_name no)
@@ -20702,8 +21054,19 @@
 				)
 			)
 		)
-		(property "JLCPCB" ""
+		(property "JLCPCB" "C45783"
 			(at 29.21 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C45783"
+			(at 29.21 172.72 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21578,7 +21941,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "NC"
+		(property "Value" "22uF"
 			(at 76.2 91.44 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21600,7 +21963,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.distrelec.ch/en/ceramic-capacitor-100nf-50vdc-0805-rnd-components-rnd-1500805b104j500nt/p/30086635?q=smd+capacitor+&pos=5&origPos=990&origPageSize=50&track=true"
+		(property "Datasheet" ""
 			(at 74.93 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -21622,7 +21985,18 @@
 				)
 			)
 		)
-		(property "JLCPCB" ""
+		(property "JLCPCB" "C45783"
+			(at 74.93 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C45783"
 			(at 74.93 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -22187,6 +22561,28 @@
 				)
 			)
 		)
+		(property "JLCPCB" "C2913202"
+			(at 96.52 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2913202"
+			(at 96.52 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "b4f051ee-f44b-407c-a3a5-0264df73e9c3")
 		)
@@ -22621,7 +23017,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "2010T200mA250V"
 			(at 191.77 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -22634,6 +23030,28 @@
 		)
 		(property "Description" "Fuse"
 			(at 191.77 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" "C2840857"
+			(at 191.77 48.26 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2840857"
+			(at 191.77 48.26 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23200,7 +23618,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "2010T200mA250V"
 			(at 229.87 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -23213,6 +23631,28 @@
 		)
 		(property "Description" "Fuse"
 			(at 229.87 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" "C2840857"
+			(at 229.87 71.12 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2840857"
+			(at 229.87 71.12 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23303,6 +23743,28 @@
 		)
 		(property "PcbText" "USB|PS"
 			(at 38.1 67.31 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" "C49257"
+			(at 38.1 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C49257"
+			(at 38.1 59.69 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23497,6 +23959,28 @@
 		)
 		(property "Field4" "12|13"
 			(at 78.74 187.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" "C492401"
+			(at 73.66 194.31 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C492401"
+			(at 73.66 194.31 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23715,7 +24199,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "NC"
+		(property "Value" "22uF"
 			(at 39.37 91.44 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23737,7 +24221,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.distrelec.ch/en/ceramic-capacitor-100nf-50vdc-0805-rnd-components-rnd-1500805b104j500nt/p/30086635?q=smd+capacitor+&pos=5&origPos=990&origPageSize=50&track=true"
+		(property "Datasheet" ""
 			(at 38.1 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -23759,7 +24243,18 @@
 				)
 			)
 		)
-		(property "JLCPCB" ""
+		(property "JLCPCB" "C45783"
+			(at 38.1 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C45783"
 			(at 38.1 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -23807,7 +24302,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "NC"
+		(property "Value" "22uF"
 			(at 71.12 91.44 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23829,7 +24324,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.distrelec.ch/en/ceramic-capacitor-100nf-50vdc-0805-rnd-components-rnd-1500805b104j500nt/p/30086635?q=smd+capacitor+&pos=5&origPos=990&origPageSize=50&track=true"
+		(property "Datasheet" ""
 			(at 69.85 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -23851,7 +24346,18 @@
 				)
 			)
 		)
-		(property "JLCPCB" ""
+		(property "JLCPCB" "C45783"
+			(at 69.85 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C45783"
 			(at 69.85 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -24518,7 +25024,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "I2C"
+		(property "Value" ""
 			(at 44.45 177.8 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24564,6 +25070,28 @@
 		)
 		(property "Field4" "SDA|SCL"
 			(at 49.53 187.96 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" "C492401"
+			(at 44.45 194.31 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C492401"
+			(at 44.45 194.31 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -24870,6 +25398,28 @@
 		)
 		(property "Description" "Generic connector, single row, 01x04, script generated"
 			(at 91.44 194.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" "C49257"
+			(at 91.44 194.31 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C49257"
+			(at 91.44 194.31 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25262,7 +25812,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "2010T200mA250V"
 			(at 229.87 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -25275,6 +25825,28 @@
 		)
 		(property "Description" "Fuse"
 			(at 229.87 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" "C2840857"
+			(at 229.87 55.88 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2840857"
+			(at 229.87 55.88 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25342,7 +25914,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "2010T200mA250V"
 			(at 229.87 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -25355,6 +25927,28 @@
 		)
 		(property "Description" "Fuse"
 			(at 229.87 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" "C2840857"
+			(at 229.87 41.91 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2840857"
+			(at 229.87 41.91 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25401,7 +25995,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "I2C"
+		(property "Value" ""
 			(at 33.02 83.82 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25457,6 +26051,28 @@
 		)
 		(property "PcbText" ""
 			(at 16.51 83.82 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB" "C492401"
+			(at 16.51 83.82 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C492401"
+			(at 16.51 83.82 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
