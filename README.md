@@ -180,10 +180,11 @@ To address the noise and stability issues, the design was upgraded to use AQG222
 
 ### ESPHome Configuration
 
-Example configuration files are provided in the [`esphome-configurations`](esphome-configurations/) directory:
+Example configuration files are provided in the
+[`firmware/tester-code-esphome`](firmware/tester-code-esphome/) directory:
 
-- [`EspHome.yml`](esphome-configurations/EspHome.yml) - Basic 4-channel configuration
-- [`EspHome-v22.yml`](esphome-configurations/EspHome-v22.yml) - Configuration for version 22
+- [`EspHome.yml`](firmware/tester-code-esphome/EspHome.yml) - Basic 4-channel configuration
+- [`EspHome-v22.yml`](firmware/tester-code-esphome/EspHome-v22.yml) - Configuration for version 22
 
 #### Basic Configuration Example
 
@@ -230,6 +231,17 @@ Once configured with ESPHome, the device will automatically be discovered by Hom
 4. Add it to your dashboard
 
 Example floorplan integrations are available in the [`home-assistant`](home-assistant/) directory.
+
+### ESP-IDF MQTT Firmware
+
+The unified C++ firmware in [`firmware/lightcontrol`](firmware/lightcontrol/) supports the four-channel and
+eight-channel boards. On first boot, connect to the `LightsSetup-XXXX` access point and open
+`http://192.168.4.1` to configure WiFi, MQTT, room/device names, and the HTTPS firmware update URL.
+Home Assistant discovers the light controls, firmware version sensor, and firmware update button through MQTT.
+
+The first OTA-capable image must be installed over USB because it introduces the dual-slot partition table.
+Afterward, pressing **Install firmware update** in Home Assistant downloads the configured HTTPS image into
+the inactive slot. ESP-IDF retains the previous image for automatic rollback if the new image cannot boot.
 
 ## Technical Specifications
 
