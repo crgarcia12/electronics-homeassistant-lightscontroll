@@ -238,6 +238,34 @@ The unified C++ firmware in [`firmware/lightcontrol`](firmware/lightcontrol/) su
 eight-channel boards. On first boot, connect to the `LightsSetup-XXXX` access point and open
 `http://192.168.4.1` to configure WiFi, MQTT, room/device names, and the HTTPS firmware update URL.
 Home Assistant discovers the light controls, firmware version sensor, and firmware update button through MQTT.
+When an SHT40 is present at I2C address `0x44`, the firmware also publishes temperature and relative humidity
+every 30 seconds. The onboard WS2812B on GPIO38 is exposed as a full RGB and brightness-controlled Home
+Assistant light.
+
+Configuration can instead be written directly over USB without using the setup access point. Store one
+version-controlled JSON file per controller under
+[`firmware/lightcontrol/provisioning/devices`](firmware/lightcontrol/provisioning/devices/). These files contain
+the expected MAC address, WiFi SSID, MQTT broker/user, device name, room, and OTA URL, but never passwords.
+
+Copy `secrets.example.json` to the ignored `secrets.local.json` and enter the shared WiFi and MQTT passwords:
+
+```powershell
+Copy-Item .\firmware\lightcontrol\provisioning\secrets.example.json `
+  .\firmware\lightcontrol\provisioning\secrets.local.json
+```
+
+Then provision a connected controller:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\firmware\lightcontrol\provision.ps1 `
+  -Port COM3 `
+  -ConfigPath .\firmware\lightcontrol\provisioning\devices\lightscontrol-36d4.json
+```
+
+The script verifies the connected ESP32 MAC, merges the tracked configuration with the ignored passwords,
+flashes only the NVS partition, and deletes its temporary credential files. Missing secrets are requested
+interactively instead of being added to the device configuration. `mqttPassword` can be shared by every
+controller, or `mqttPasswords` can map each tracked MQTT username to a separate password.
 
 The first OTA-capable image must be installed over USB because it introduces the dual-slot partition table.
 Afterward, pressing **Install firmware update** in Home Assistant downloads the configured HTTPS image into

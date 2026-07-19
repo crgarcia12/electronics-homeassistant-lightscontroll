@@ -1,0 +1,9 @@
+{
+  "expectedMac": "A4:CB:8F:F5:36:D4",
+  "wifiSsid": "gugelmatt-iot",
+  "mqttUri": "mqtt://gugelmatt-ha.home.arpa:1883",
+  "mqttUsername": "lightcontrol",
+  "deviceName": "lightcontrol_kitchen",
+  "roomName": "Kitchen",
+  "otaUrl": ""
+}

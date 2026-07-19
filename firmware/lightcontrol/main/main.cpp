@@ -15,6 +15,7 @@
 #include <utility>
 #include <vector>
 
+#include "cJSON.h"
 #include "driver/gpio.h"
 #include "driver/i2c_master.h"
 #include "esp_event.h"
@@ -31,9 +32,11 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/event_groups.h"
 #include "freertos/task.h"
+#include "led_strip.h"
 #include "mqtt_client.h"
 #include "nvs.h"
 #include "nvs_flash.h"
+#include "sht40.hpp"
 #include "tcal6416.hpp"
 
 static const char* TAG = "ha_bridge";
@@ -42,8 +45,11 @@ static constexpr int I2C_FREQ_HZ = 100000;
 static constexpr gpio_num_t I2C_SDA = GPIO_NUM_42;
 static constexpr gpio_num_t I2C_SCL = GPIO_NUM_41;
 static constexpr uint8_t TCAL_ADDR = 0x20;
+static constexpr uint8_t SHT40_ADDR = 0x44;
+static constexpr gpio_num_t RGB_LED_GPIO = GPIO_NUM_38;
 static constexpr int RELAY_PULSE_MS = 500;
 static constexpr int CHANNEL_POLL_MS = 250;
+static constexpr int SHT40_POLL_MS = 30000;
 static constexpr int WIFI_CONNECT_TIMEOUT_MS = 20000;
 static constexpr gpio_num_t SETUP_MODE_BUTTON = GPIO_NUM_0;
 
@@ -70,11 +76,23 @@ struct RuntimeConfig {
     bool configured = false;
 };
 
+struct RgbLedState {
+    bool on = false;
+    uint8_t red = 255;
+    uint8_t green = 255;
+    uint8_t blue = 255;
+    uint8_t brightness = 255;
+};
+
 struct AppContext {
     BoardType board = BoardType::V28_4CH_GPIO;
     int channel_count = 4;
     i2c_master_bus_handle_t i2c_bus = nullptr;
     std::unique_ptr<tcal6416::Device> tcal;
+    std::unique_ptr<sht40::Device> environment_sensor;
+    TaskHandle_t environment_task = nullptr;
+    led_strip_handle_t rgb_led = nullptr;
+    RgbLedState rgb_led_state;
     esp_mqtt_client_handle_t mqtt = nullptr;
     httpd_handle_t setup_httpd = nullptr;
     std::string node_id;
@@ -87,6 +105,7 @@ static EventGroupHandle_t wifi_event_group;
 static constexpr int WIFI_CONNECTED_BIT = BIT0;
 static AppContext g_ctx;
 static std::atomic_bool ota_in_progress = false;
+static std::atomic_bool mqtt_connected = false;
 
 static std::string sanitize_topic_part(const char* src) {
     std::string out;
@@ -253,6 +272,155 @@ static void publish_channel_state(int ch, bool on) {
     esp_mqtt_client_publish(g_ctx.mqtt, topic, on ? "ON" : "OFF", 0, 1, true);
 }
 
+static void publish_environment_state(const sht40::Measurement& measurement) {
+    if (!mqtt_connected.load()) {
+        return;
+    }
+
+    char value[24];
+    std::string temperature_topic = g_ctx.base_topic + "/environment/temperature";
+    std::snprintf(value, sizeof(value), "%.2f", measurement.temperature_c);
+    esp_mqtt_client_publish(g_ctx.mqtt, temperature_topic.c_str(), value, 0, 1, true);
+
+    std::string humidity_topic = g_ctx.base_topic + "/environment/humidity";
+    std::snprintf(value, sizeof(value), "%.2f", measurement.relative_humidity);
+    esp_mqtt_client_publish(g_ctx.mqtt, humidity_topic.c_str(), value, 0, 1, true);
+}
+
+static bool apply_rgb_led_state() {
+    if (!g_ctx.rgb_led) {
+        return false;
+    }
+
+    auto scale = [](uint8_t component, uint8_t brightness) {
+        return static_cast<uint8_t>(
+            (static_cast<uint16_t>(component) * brightness + 127) / 255);
+    };
+    uint8_t red = g_ctx.rgb_led_state.on
+        ? scale(g_ctx.rgb_led_state.red, g_ctx.rgb_led_state.brightness)
+        : 0;
+    uint8_t green = g_ctx.rgb_led_state.on
+        ? scale(g_ctx.rgb_led_state.green, g_ctx.rgb_led_state.brightness)
+        : 0;
+    uint8_t blue = g_ctx.rgb_led_state.on
+        ? scale(g_ctx.rgb_led_state.blue, g_ctx.rgb_led_state.brightness)
+        : 0;
+
+    esp_err_t err = led_strip_set_pixel(g_ctx.rgb_led, 0, red, green, blue);
+    if (err == ESP_OK) {
+        err = led_strip_refresh(g_ctx.rgb_led);
+    }
+    if (err != ESP_OK) {
+        ESP_LOGE(TAG, "Failed updating RGB LED: %s", esp_err_to_name(err));
+        return false;
+    }
+    return true;
+}
+
+static void publish_rgb_led_state() {
+    if (!mqtt_connected.load() || !g_ctx.rgb_led) {
+        return;
+    }
+
+    char payload[192];
+    std::snprintf(
+        payload,
+        sizeof(payload),
+        "{\"state\":\"%s\",\"brightness\":%u,"
+        "\"color\":{\"r\":%u,\"g\":%u,\"b\":%u},\"color_mode\":\"rgb\"}",
+        g_ctx.rgb_led_state.on ? "ON" : "OFF",
+        g_ctx.rgb_led_state.brightness,
+        g_ctx.rgb_led_state.red,
+        g_ctx.rgb_led_state.green,
+        g_ctx.rgb_led_state.blue);
+    std::string topic = g_ctx.base_topic + "/rgb_led/state";
+    esp_mqtt_client_publish(g_ctx.mqtt, topic.c_str(), payload, 0, 1, true);
+}
+
+static bool update_rgb_component(cJSON* color, const char* name, uint8_t& output) {
+    cJSON* item = cJSON_GetObjectItemCaseSensitive(color, name);
+    if (!item) {
+        return true;
+    }
+    if (!cJSON_IsNumber(item) || item->valuedouble < 0 || item->valuedouble > 255) {
+        ESP_LOGW(TAG, "RGB LED '%s' must be a number from 0 to 255", name);
+        return false;
+    }
+    output = static_cast<uint8_t>(item->valueint);
+    return true;
+}
+
+static void handle_rgb_led_command(const char* data, int data_len) {
+    if (!g_ctx.rgb_led) {
+        ESP_LOGW(TAG, "Ignoring RGB LED command because the LED is unavailable");
+        return;
+    }
+
+    std::unique_ptr<cJSON, decltype(&cJSON_Delete)> root(
+        cJSON_ParseWithLength(data, static_cast<size_t>(data_len)),
+        cJSON_Delete);
+    if (!root || !cJSON_IsObject(root.get())) {
+        ESP_LOGW(TAG, "Ignoring invalid RGB LED JSON command");
+        return;
+    }
+
+    RgbLedState next = g_ctx.rgb_led_state;
+    bool changed = false;
+
+    cJSON* state = cJSON_GetObjectItemCaseSensitive(root.get(), "state");
+    if (state) {
+        if (!cJSON_IsString(state) || !state->valuestring) {
+            ESP_LOGW(TAG, "RGB LED state must be ON or OFF");
+            return;
+        }
+        if (std::strcmp(state->valuestring, "ON") == 0) {
+            next.on = true;
+        } else if (std::strcmp(state->valuestring, "OFF") == 0) {
+            next.on = false;
+        } else {
+            ESP_LOGW(TAG, "Unsupported RGB LED state: %s", state->valuestring);
+            return;
+        }
+        changed = true;
+    }
+
+    cJSON* brightness = cJSON_GetObjectItemCaseSensitive(root.get(), "brightness");
+    if (brightness) {
+        if (!cJSON_IsNumber(brightness) ||
+            brightness->valuedouble < 0 ||
+            brightness->valuedouble > 255) {
+            ESP_LOGW(TAG, "RGB LED brightness must be a number from 0 to 255");
+            return;
+        }
+        next.brightness = static_cast<uint8_t>(brightness->valueint);
+        changed = true;
+    }
+
+    cJSON* color = cJSON_GetObjectItemCaseSensitive(root.get(), "color");
+    if (color) {
+        if (!cJSON_IsObject(color) ||
+            !update_rgb_component(color, "r", next.red) ||
+            !update_rgb_component(color, "g", next.green) ||
+            !update_rgb_component(color, "b", next.blue)) {
+            return;
+        }
+        changed = true;
+    }
+
+    if (!changed) {
+        ESP_LOGW(TAG, "RGB LED command did not contain state, brightness, or color");
+        return;
+    }
+
+    RgbLedState previous = g_ctx.rgb_led_state;
+    g_ctx.rgb_led_state = next;
+    if (!apply_rgb_led_state()) {
+        g_ctx.rgb_led_state = previous;
+        return;
+    }
+    publish_rgb_led_state();
+}
+
 static void publish_ota_status(const char* status, bool retain = true) {
     if (!g_ctx.mqtt) {
         return;
@@ -263,9 +431,11 @@ static void publish_ota_status(const char* status, bool retain = true) {
 
 static void publish_discovery() {
     std::string topic_device = sanitize_topic_part(g_ctx.cfg.device_name);
+    const char* model = g_ctx.board == BoardType::V27_8CH_TCAL ? "v27-8ch" : "v28-4ch";
+    char topic[256];
+    char payload[1024];
 
     for (int ch = 1; ch <= g_ctx.channel_count; ++ch) {
-        char topic[256];
         std::snprintf(topic, sizeof(topic), "homeassistant/switch/%s_light_%d/config", g_ctx.node_id.c_str(), ch);
 
         char display_name[128];
@@ -274,7 +444,6 @@ static void publish_discovery() {
         char object_id[96];
         std::snprintf(object_id, sizeof(object_id), "%s_light_%d", topic_device.c_str(), ch);
 
-        char payload[1024];
         std::snprintf(
             payload,
             sizeof(payload),
@@ -297,17 +466,98 @@ static void publish_discovery() {
             g_ctx.base_topic.c_str(), ch,
             g_ctx.base_topic.c_str(),
             g_ctx.node_id.c_str(), g_ctx.cfg.device_name, g_ctx.cfg.room_name,
-            g_ctx.board == BoardType::V27_8CH_TCAL ? "v27-8ch" : "v28-4ch");
+            model);
 
         esp_mqtt_client_publish(g_ctx.mqtt, topic, payload, 0, 1, true);
     }
 
-    char update_topic[256];
-    std::snprintf(update_topic, sizeof(update_topic), "homeassistant/button/%s_firmware_update/config", g_ctx.node_id.c_str());
-    char update_payload[900];
+    if (g_ctx.rgb_led) {
+        std::snprintf(
+            topic,
+            sizeof(topic),
+            "homeassistant/light/%s_rgb_led/config",
+            g_ctx.node_id.c_str());
+        std::snprintf(
+            payload,
+            sizeof(payload),
+            "{\"name\":\"RGB LED\","
+            "\"uniq_id\":\"%s_rgb_led\","
+            "\"obj_id\":\"%s_rgb_led\","
+            "\"schema\":\"json\","
+            "\"cmd_t\":\"%s/rgb_led/set\","
+            "\"stat_t\":\"%s/rgb_led/state\","
+            "\"avty_t\":\"%s/status\","
+            "\"pl_avail\":\"online\","
+            "\"pl_not_avail\":\"offline\","
+            "\"brightness\":true,"
+            "\"supported_color_modes\":[\"rgb\"],"
+            "\"icon\":\"mdi:led-strip-variant\","
+            "\"dev\":{\"ids\":[\"%s\"],\"name\":\"%s (%s)\",\"mf\":\"crgarcia12\",\"mdl\":\"%s\"}}",
+            g_ctx.node_id.c_str(),
+            topic_device.c_str(),
+            g_ctx.base_topic.c_str(),
+            g_ctx.base_topic.c_str(),
+            g_ctx.base_topic.c_str(),
+            g_ctx.node_id.c_str(), g_ctx.cfg.device_name, g_ctx.cfg.room_name, model);
+        esp_mqtt_client_publish(g_ctx.mqtt, topic, payload, 0, 1, true);
+    }
+
+    if (g_ctx.environment_sensor) {
+        std::snprintf(
+            topic,
+            sizeof(topic),
+            "homeassistant/sensor/%s_temperature/config",
+            g_ctx.node_id.c_str());
+        std::snprintf(
+            payload,
+            sizeof(payload),
+            "{\"name\":\"Temperature\","
+            "\"uniq_id\":\"%s_temperature\","
+            "\"stat_t\":\"%s/environment/temperature\","
+            "\"avty_t\":\"%s/status\","
+            "\"pl_avail\":\"online\","
+            "\"pl_not_avail\":\"offline\","
+            "\"device_class\":\"temperature\","
+            "\"unit_of_measurement\":\"\\u00b0C\","
+            "\"state_class\":\"measurement\","
+            "\"suggested_display_precision\":1,"
+            "\"dev\":{\"ids\":[\"%s\"],\"name\":\"%s (%s)\",\"mf\":\"crgarcia12\",\"mdl\":\"%s\"}}",
+            g_ctx.node_id.c_str(),
+            g_ctx.base_topic.c_str(),
+            g_ctx.base_topic.c_str(),
+            g_ctx.node_id.c_str(), g_ctx.cfg.device_name, g_ctx.cfg.room_name, model);
+        esp_mqtt_client_publish(g_ctx.mqtt, topic, payload, 0, 1, true);
+
+        std::snprintf(
+            topic,
+            sizeof(topic),
+            "homeassistant/sensor/%s_humidity/config",
+            g_ctx.node_id.c_str());
+        std::snprintf(
+            payload,
+            sizeof(payload),
+            "{\"name\":\"Humidity\","
+            "\"uniq_id\":\"%s_humidity\","
+            "\"stat_t\":\"%s/environment/humidity\","
+            "\"avty_t\":\"%s/status\","
+            "\"pl_avail\":\"online\","
+            "\"pl_not_avail\":\"offline\","
+            "\"device_class\":\"humidity\","
+            "\"unit_of_measurement\":\"%%\","
+            "\"state_class\":\"measurement\","
+            "\"suggested_display_precision\":1,"
+            "\"dev\":{\"ids\":[\"%s\"],\"name\":\"%s (%s)\",\"mf\":\"crgarcia12\",\"mdl\":\"%s\"}}",
+            g_ctx.node_id.c_str(),
+            g_ctx.base_topic.c_str(),
+            g_ctx.base_topic.c_str(),
+            g_ctx.node_id.c_str(), g_ctx.cfg.device_name, g_ctx.cfg.room_name, model);
+        esp_mqtt_client_publish(g_ctx.mqtt, topic, payload, 0, 1, true);
+    }
+
+    std::snprintf(topic, sizeof(topic), "homeassistant/button/%s_firmware_update/config", g_ctx.node_id.c_str());
     std::snprintf(
-        update_payload,
-        sizeof(update_payload),
+        payload,
+        sizeof(payload),
         "{\"name\":\"Install firmware update\","
         "\"uniq_id\":\"%s_firmware_update\","
         "\"cmd_t\":\"%s/firmware/update\","
@@ -317,15 +567,13 @@ static void publish_discovery() {
         g_ctx.node_id.c_str(),
         g_ctx.base_topic.c_str(),
         g_ctx.node_id.c_str(), g_ctx.cfg.device_name, g_ctx.cfg.room_name,
-        g_ctx.board == BoardType::V27_8CH_TCAL ? "v27-8ch" : "v28-4ch");
-    esp_mqtt_client_publish(g_ctx.mqtt, update_topic, update_payload, 0, 1, true);
+        model);
+    esp_mqtt_client_publish(g_ctx.mqtt, topic, payload, 0, 1, true);
 
-    char version_topic[256];
-    std::snprintf(version_topic, sizeof(version_topic), "homeassistant/sensor/%s_firmware_version/config", g_ctx.node_id.c_str());
-    char version_payload[900];
+    std::snprintf(topic, sizeof(topic), "homeassistant/sensor/%s_firmware_version/config", g_ctx.node_id.c_str());
     std::snprintf(
-        version_payload,
-        sizeof(version_payload),
+        payload,
+        sizeof(payload),
         "{\"name\":\"Firmware version\","
         "\"uniq_id\":\"%s_firmware_version\","
         "\"stat_t\":\"%s/firmware/version\","
@@ -335,8 +583,8 @@ static void publish_discovery() {
         g_ctx.node_id.c_str(),
         g_ctx.base_topic.c_str(),
         g_ctx.node_id.c_str(), g_ctx.cfg.device_name, g_ctx.cfg.room_name,
-        g_ctx.board == BoardType::V27_8CH_TCAL ? "v27-8ch" : "v28-4ch");
-    esp_mqtt_client_publish(g_ctx.mqtt, version_topic, version_payload, 0, 1, true);
+        model);
+    esp_mqtt_client_publish(g_ctx.mqtt, topic, payload, 0, 1, true);
 }
 
 static void subscribe_channel_commands() {
@@ -344,6 +592,10 @@ static void subscribe_channel_commands() {
         char topic[192];
         std::snprintf(topic, sizeof(topic), "%s/light/%d/set", g_ctx.base_topic.c_str(), ch);
         esp_mqtt_client_subscribe(g_ctx.mqtt, topic, 1);
+    }
+    if (g_ctx.rgb_led) {
+        std::string rgb_led_topic = g_ctx.base_topic + "/rgb_led/set";
+        esp_mqtt_client_subscribe(g_ctx.mqtt, rgb_led_topic.c_str(), 1);
     }
     std::string ota_topic = g_ctx.base_topic + "/firmware/update";
     esp_mqtt_client_subscribe(g_ctx.mqtt, ota_topic.c_str(), 1);
@@ -446,6 +698,7 @@ static void mqtt_event_handler(void* handler_args, esp_event_base_t base, int32_
     switch (event_id) {
         case MQTT_EVENT_CONNECTED: {
             ESP_LOGI(TAG, "MQTT connected");
+            mqtt_connected.store(true);
             esp_mqtt_client_publish(g_ctx.mqtt, (g_ctx.base_topic + "/status").c_str(), "online", 0, 1, true);
             publish_discovery();
             subscribe_channel_commands();
@@ -463,6 +716,14 @@ static void mqtt_event_handler(void* handler_args, esp_event_base_t base, int32_
                 g_ctx.last_state[ch - 1] = st;
                 publish_channel_state(ch, st);
             }
+            publish_rgb_led_state();
+            if (g_ctx.environment_task) {
+                xTaskNotifyGive(g_ctx.environment_task);
+            }
+            break;
+        }
+        case MQTT_EVENT_DISCONNECTED: {
+            mqtt_connected.store(false);
             break;
         }
         case MQTT_EVENT_DATA: {
@@ -471,7 +732,9 @@ static void mqtt_event_handler(void* handler_args, esp_event_base_t base, int32_
                 handle_set_command(ch, event->data, event->data_len);
             } else {
                 std::string event_topic(event->topic, static_cast<size_t>(event->topic_len));
-                if (event_topic == g_ctx.base_topic + "/firmware/update") {
+                if (event_topic == g_ctx.base_topic + "/rgb_led/set") {
+                    handle_rgb_led_command(event->data, event->data_len);
+                } else if (event_topic == g_ctx.base_topic + "/firmware/update") {
                     handle_ota_command(event->data, event->data_len);
                 }
             }
@@ -542,6 +805,7 @@ static void init_mqtt() {
     mqtt_cfg.broker.address.uri = g_ctx.cfg.mqtt_uri;
     mqtt_cfg.credentials.username = g_ctx.cfg.mqtt_username;
     mqtt_cfg.credentials.authentication.password = g_ctx.cfg.mqtt_password;
+    mqtt_cfg.task.stack_size = 8192;
 
     g_ctx.mqtt = esp_mqtt_client_init(&mqtt_cfg);
     ESP_ERROR_CHECK(esp_mqtt_client_register_event(g_ctx.mqtt, MQTT_EVENT_ANY, mqtt_event_handler, nullptr));
@@ -612,6 +876,52 @@ static void detect_board() {
 
     init_v28_gpio_board();
     ESP_LOGI(TAG, "Using v28 4-channel GPIO board");
+}
+
+static void init_environment_sensor() {
+    try {
+        auto sensor = std::make_unique<sht40::Device>(g_ctx.i2c_bus, SHT40_ADDR);
+        sht40::Measurement measurement = sensor->read();
+        ESP_LOGI(
+            TAG,
+            "Detected SHT40 at 0x%02X: %.2f C, %.2f%% RH",
+            SHT40_ADDR,
+            measurement.temperature_c,
+            measurement.relative_humidity);
+        g_ctx.environment_sensor = std::move(sensor);
+    } catch (const std::exception& e) {
+        ESP_LOGW(TAG, "SHT40 not available: %s", e.what());
+    }
+}
+
+static void init_rgb_led() {
+    led_strip_config_t strip_config = {};
+    strip_config.strip_gpio_num = RGB_LED_GPIO;
+    strip_config.max_leds = 1;
+    strip_config.led_model = LED_MODEL_WS2812;
+    strip_config.color_component_format = LED_STRIP_COLOR_COMPONENT_FMT_GRB;
+    strip_config.flags.invert_out = false;
+
+    led_strip_rmt_config_t rmt_config = {};
+    rmt_config.clk_src = RMT_CLK_SRC_DEFAULT;
+    rmt_config.resolution_hz = 10 * 1000 * 1000;
+    rmt_config.mem_block_symbols = 0;
+    rmt_config.flags.with_dma = false;
+
+    esp_err_t err = led_strip_new_rmt_device(&strip_config, &rmt_config, &g_ctx.rgb_led);
+    if (err == ESP_OK) {
+        err = led_strip_clear(g_ctx.rgb_led);
+    }
+    if (err != ESP_OK) {
+        ESP_LOGE(TAG, "Failed initializing WS2812B on GPIO%d: %s", RGB_LED_GPIO, esp_err_to_name(err));
+        if (g_ctx.rgb_led) {
+            led_strip_del(g_ctx.rgb_led);
+            g_ctx.rgb_led = nullptr;
+        }
+        return;
+    }
+
+    ESP_LOGI(TAG, "Initialized Home Assistant RGB LED on GPIO%d", RGB_LED_GPIO);
 }
 
 static void confirm_running_firmware() {
@@ -774,7 +1084,7 @@ static void start_setup_portal() {
 static void state_publisher_task(void* arg) {
     (void)arg;
     while (true) {
-        if (g_ctx.mqtt) {
+        if (mqtt_connected.load()) {
             for (int ch = 1; ch <= g_ctx.channel_count; ++ch) {
                 bool st = read_channel_state(ch);
                 if (g_ctx.last_state[ch - 1] != st) {
@@ -784,6 +1094,28 @@ static void state_publisher_task(void* arg) {
             }
         }
         vTaskDelay(pdMS_TO_TICKS(CHANNEL_POLL_MS));
+    }
+}
+
+static void environment_publisher_task(void* arg) {
+    (void)arg;
+    while (true) {
+        ulTaskNotifyTake(pdTRUE, pdMS_TO_TICKS(SHT40_POLL_MS));
+        if (!mqtt_connected.load() || !g_ctx.environment_sensor) {
+            continue;
+        }
+
+        try {
+            sht40::Measurement measurement = g_ctx.environment_sensor->read();
+            publish_environment_state(measurement);
+            ESP_LOGI(
+                TAG,
+                "Published SHT40 measurement: %.2f C, %.2f%% RH",
+                measurement.temperature_c,
+                measurement.relative_humidity);
+        } catch (const std::exception& e) {
+            ESP_LOGW(TAG, "SHT40 measurement failed: %s", e.what());
+        }
     }
 }
 
@@ -801,6 +1133,8 @@ extern "C" void app_main(void) {
 
     init_i2c_bus();
     detect_board();
+    init_environment_sensor();
+    init_rgb_led();
     confirm_running_firmware();
     g_ctx.last_state.assign(g_ctx.channel_count, false);
 
@@ -823,6 +1157,17 @@ extern "C" void app_main(void) {
     }
 
     g_ctx.base_topic = std::string("home/") + sanitize_topic_part(g_ctx.cfg.device_name);
+    if (g_ctx.environment_sensor &&
+        xTaskCreate(
+            environment_publisher_task,
+            "environment_publisher",
+            4096,
+            nullptr,
+            5,
+            &g_ctx.environment_task) != pdPASS) {
+        ESP_LOGE(TAG, "Failed to start SHT40 publisher task");
+        g_ctx.environment_sensor.reset();
+    }
     init_mqtt();
     xTaskCreate(state_publisher_task, "state_publisher_task", 4096, nullptr, 5, nullptr);
 }
