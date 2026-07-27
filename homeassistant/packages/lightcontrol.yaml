@@ -1,0 +1,11 @@
+script:
+  lightcontrol_update_all:
+    alias: Update all LightControl controllers
+    description: Publish UPDATE to every controller firmware topic.
+    mode: single
+    icon: mdi:update
+    sequence:
+      - action: mqtt.publish
+        data:
+          topic: home/lightcontrol/all/firmware/update
+          payload: UPDATE
