@@ -1,15 +1,5 @@
 # Home Assistant setup
 
-The dashboard publishes the fleet MQTT command directly, so the package is optional. To also
-install `script.lightcontrol_update_all` for automations, copy
-`homeassistant/packages/lightcontrol.yaml` to `/config/packages/lightcontrol.yaml` and enable
-packages in `configuration.yaml`:
-
-```yaml
-homeassistant:
-  packages: !include_dir_named packages
-```
-
 Copy `homeassistant/lightcontrol-dashboard.yaml` to
 `/config/lightcontrol-dashboard.yaml`, then add an additional YAML dashboard:
 
@@ -33,8 +23,7 @@ Restart Home Assistant after changing `configuration.yaml`.
 - The dashboard creates one collapsed Online/Offline summary per discovered controller. Expanding
   it shows every switch, update entity, and sensor belonging to that device. New controllers appear
   automatically.
-- The dashboard and optional `script.lightcontrol_update_all` publish `UPDATE` to
-  `home/lightcontrol/all/firmware/update`.
+- The dashboard publishes `UPDATE` to `home/lightcontrol/all/firmware/update`.
 - **Check for updates in all controllers** publishes `CHECK` to
   `home/lightcontrol/all/firmware/check`, waking each
   online controller's release task immediately.
