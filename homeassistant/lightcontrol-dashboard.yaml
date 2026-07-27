@@ -31,6 +31,16 @@ views:
             show_header_toggle: false
             entities:
               - type: button
+                name: Check for updates in all controllers
+                icon: mdi:refresh
+                action_name: Check
+                tap_action:
+                  action: perform-action
+                  perform_action: mqtt.publish
+                  data:
+                    topic: home/lightcontrol/all/firmware/check
+                    payload: CHECK
+              - type: button
                 name: All controllers
                 icon: mdi:update
                 action_name: Update
@@ -88,6 +98,11 @@ views:
                               label: Firmware
                             - device: "${device}"
                               domain: update
+                              options:
+                                eval_js: true
+                                name: "${'${'}state.attributes.friendly_name.startsWith(device + ' ') ? state.attributes.friendly_name.slice(device.length + 1) : state.attributes.friendly_name}"
+                            - device: "${device}"
+                              domain: button
                               options:
                                 eval_js: true
                                 name: "${'${'}state.attributes.friendly_name.startsWith(device + ' ') ? state.attributes.friendly_name.slice(device.length + 1) : state.attributes.friendly_name}"

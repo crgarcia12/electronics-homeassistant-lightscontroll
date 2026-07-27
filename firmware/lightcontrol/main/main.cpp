@@ -79,6 +79,7 @@ static constexpr bool V28_SENSOR_ACTIVE_HIGH = true;
 
 static constexpr const char* NVS_NS = "cfg";
 static constexpr const char* GLOBAL_OTA_TOPIC = "home/lightcontrol/all/firmware/update";
+static constexpr const char* GLOBAL_RELEASE_CHECK_TOPIC = "home/lightcontrol/all/firmware/check";
 static constexpr const char* GITHUB_RELEASES_API =
     "https://api.github.com/repos/crgarcia12/"
     "electronics-homeassistant-lightscontroll/releases?per_page=5";
@@ -147,6 +148,7 @@ static SemaphoreHandle_t state_mutex;
 static constexpr int WIFI_CONNECTED_BIT = BIT0;
 static AppContext g_ctx;
 static std::atomic_bool ota_in_progress = false;
+static std::atomic_bool release_check_requested = false;
 static std::atomic_bool wifi_connected = false;
 static std::atomic_bool mqtt_connected = false;
 static std::atomic<RgbLedMode> rgb_led_mode = RgbLedMode::OFF;
@@ -838,6 +840,36 @@ static void publish_discovery() {
         esp_mqtt_client_publish(g_ctx.mqtt, topic, payload, 0, 1, true);
     }
 
+    std::snprintf(
+        topic,
+        sizeof(topic),
+        "homeassistant/button/%s_firmware_check/config",
+        g_ctx.node_id.c_str());
+    std::snprintf(
+        payload,
+        sizeof(payload),
+        "{\"name\":\"Check for updates\","
+        "\"unique_id\":\"%s_firmware_check\","
+        "\"object_id\":\"%s_firmware_check\","
+        "\"command_topic\":\"%s/firmware/check\","
+        "\"payload_press\":\"CHECK\","
+        "\"entity_category\":\"diagnostic\","
+        "\"icon\":\"mdi:refresh\","
+        "\"availability_topic\":\"%s/status\","
+        "\"payload_available\":\"online\","
+        "\"payload_not_available\":\"offline\","
+        "\"device\":{\"identifiers\":[\"%s\"],\"name\":\"%s (%s)\","
+        "\"manufacturer\":\"crgarcia12\",\"model\":\"%s\"}}",
+        g_ctx.node_id.c_str(),
+        topic_device.c_str(),
+        g_ctx.base_topic.c_str(),
+        g_ctx.base_topic.c_str(),
+        g_ctx.node_id.c_str(),
+        g_ctx.cfg.device_name,
+        g_ctx.cfg.room_name,
+        model);
+    esp_mqtt_client_publish(g_ctx.mqtt, topic, payload, 0, 1, true);
+
     std::snprintf(topic, sizeof(topic), "homeassistant/update/%s_firmware/config", g_ctx.node_id.c_str());
     std::snprintf(
         payload,
@@ -978,7 +1010,10 @@ static void subscribe_channel_commands() {
     }
     std::string ota_topic = g_ctx.base_topic + "/firmware/update";
     esp_mqtt_client_subscribe(g_ctx.mqtt, ota_topic.c_str(), 1);
+    std::string release_check_topic = g_ctx.base_topic + "/firmware/check";
+    esp_mqtt_client_subscribe(g_ctx.mqtt, release_check_topic.c_str(), 1);
     esp_mqtt_client_subscribe(g_ctx.mqtt, GLOBAL_OTA_TOPIC, 1);
+    esp_mqtt_client_subscribe(g_ctx.mqtt, GLOBAL_RELEASE_CHECK_TOPIC, 1);
 }
 
 static int topic_to_channel(const char* topic, int topic_len) {
@@ -1160,6 +1195,26 @@ static void handle_ota_command(const char* data, int data_len, bool fleet_update
     }
 }
 
+static void handle_release_check_command(const char* data, int data_len) {
+    if (data_len != 5 || std::strncmp(data, "CHECK", 5) != 0) {
+        ESP_LOGW(TAG, "Ignoring invalid firmware release-check command");
+        return;
+    }
+    if (ota_in_progress.load()) {
+        ESP_LOGW(TAG, "Ignoring firmware release check while an OTA update is running");
+        return;
+    }
+    if (!g_ctx.release_task) {
+        ESP_LOGE(TAG, "Firmware release-check task is unavailable");
+        publish_ota_status("failed: release checker unavailable");
+        return;
+    }
+
+    release_check_requested.store(true);
+    publish_ota_status("checking release");
+    xTaskNotifyGive(g_ctx.release_task);
+}
+
 static void mqtt_event_handler(void* handler_args, esp_event_base_t base, int32_t event_id, void* event_data) {
     (void)handler_args;
     (void)base;
@@ -1213,6 +1268,9 @@ static void mqtt_event_handler(void* handler_args, esp_event_base_t base, int32_
                     handle_ota_command(event->data, event->data_len, false);
                 } else if (event_topic == GLOBAL_OTA_TOPIC) {
                     handle_ota_command(event->data, event->data_len, true);
+                } else if (event_topic == g_ctx.base_topic + "/firmware/check" ||
+                           event_topic == GLOBAL_RELEASE_CHECK_TOPIC) {
+                    handle_release_check_command(event->data, event->data_len);
                 }
             }
             break;
@@ -1672,15 +1730,21 @@ static void diagnostics_publisher_task(void* arg) {
 static void release_publisher_task(void* arg) {
     (void)arg;
     while (true) {
+        bool requested = release_check_requested.exchange(false);
+        bool success = false;
         if (wifi_connected.load()) {
             ReleaseInfo release;
             if (fetch_latest_release(release)) {
                 store_release_info(release);
                 publish_update_state();
                 publish_diagnostics_state();
+                success = true;
             }
         }
-        vTaskDelay(pdMS_TO_TICKS(RELEASE_CHECK_MS));
+        if (requested && mqtt_connected.load() && !ota_in_progress.load()) {
+            publish_ota_status(success ? "idle" : "failed: release check");
+        }
+        ulTaskNotifyTake(pdTRUE, pdMS_TO_TICKS(RELEASE_CHECK_MS));
     }
 }
 

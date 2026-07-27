@@ -28,12 +28,16 @@ Restart Home Assistant after changing `configuration.yaml`.
 
 ## What it does
 
-- MQTT discovery exposes the controller switches, firmware update entities, diagnostics, and sensors.
+- MQTT discovery exposes the controller switches, firmware update entities, update-check buttons,
+  diagnostics, and sensors.
 - The dashboard creates one collapsed Online/Offline summary per discovered controller. Expanding
   it shows every switch, update entity, and sensor belonging to that device. New controllers appear
   automatically.
 - The dashboard and optional `script.lightcontrol_update_all` publish `UPDATE` to
   `home/lightcontrol/all/firmware/update`.
+- **Check for updates in all controllers** publishes `CHECK` to
+  `home/lightcontrol/all/firmware/check`, waking each
+  online controller's release task immediately.
 - Each device keeps its own `update.lightcontrol_*_firmware` entity for individual updates.
 - Identity diagnostics include the configured device name, room, board model, and channel count.
 
@@ -48,9 +52,11 @@ Install **Auto Entities** and **Expander Card** from **HACS → Frontend**.
 
 ## Update flow
 
-1. Use an individual `update.lightcontrol_*_firmware` entity for one controller.
-2. Test that controller.
-3. Use **Update all controllers** to publish the global MQTT update command.
+1. Press a controller's **Check for updates** button, or
+   **Check for updates in all controllers** for the fleet.
+2. Use an individual `update.lightcontrol_*_firmware` entity for one controller.
+3. Test that controller.
+4. Use **Update all controllers** to publish the global MQTT update command.
 
 While an update runs, the update entity reports that installation is in progress and the expanded
 controller card's **Firmware status** sensor moves through `scheduled`, `checking release`,
