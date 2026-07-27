@@ -1,0 +1,102 @@
+title: LightControl
+views:
+  - title: Controllers
+    path: controllers
+    icon: mdi:home-lightbulb
+    panel: true
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            content: |
+              {% set ns = namespace(total=0, online=0) %}
+              {% for item in states.sensor %}
+                {% if item.entity_id.startswith('sensor.lightcontrol_') and item.entity_id.endswith('_device_name') %}
+                  {% set ns.total = ns.total + 1 %}
+                  {% if item.state not in ['unknown', 'unavailable'] %}
+                    {% set ns.online = ns.online + 1 %}
+                  {% endif %}
+                {% endif %}
+              {% endfor %}
+
+              # LightControl fleet
+
+              **{{ ns.online }} online / {{ ns.total }} discovered**
+
+              Every controller is listed below with all of its controls, firmware information,
+              identity, network, and environment data.
+
+          - type: entities
+            title: Fleet actions
+            show_header_toggle: false
+            entities:
+              - type: button
+                name: All controllers
+                icon: mdi:update
+                action_name: Update
+                tap_action:
+                  action: perform-action
+                  perform_action: mqtt.publish
+                  data:
+                    topic: home/lightcontrol/all/firmware/update
+                    payload: UPDATE
+                  confirmation:
+                    text: Send UPDATE to every controller now?
+
+          - type: custom:auto-entities
+            show_empty: false
+            unique: entity
+            sort:
+              method: entity_id
+            card_param: cards
+            card:
+              type: vertical-stack
+            else:
+              type: markdown
+              content: No LightControl controllers are currently discovered.
+            filter:
+              include:
+                - entity_id: "sensor.lightcontrol_*_device_name"
+                  options:
+                    type: custom:expander-card
+                    eval_js: true
+                    title: "${device} - ${state.state === 'unavailable' ? 'Offline' : 'Online'}"
+                    arrow-color: "${state.state === 'unavailable' ? 'var(--error-color)' : 'var(--success-color)'}"
+                    storage-id: "lightcontrol_${entity_id}"
+                    expanded: false
+                    title-card-clickable: true
+                    child-margin-top: 0.6em
+                    cards:
+                      - type: custom:auto-entities
+                        show_empty: false
+                        card_param: entities
+                        card:
+                          type: entities
+                          show_header_toggle: false
+                        filter:
+                          include:
+                            - type: section
+                              label: Controls
+                            - device: "${device}"
+                              domain: switch
+                              options:
+                                eval_js: true
+                                name: "Light ${'${'}entity_id.split('_').pop()}"
+                              sort:
+                                method: entity_id
+                            - type: section
+                              label: Firmware
+                            - device: "${device}"
+                              domain: update
+                              options:
+                                eval_js: true
+                                name: "${'${'}state.attributes.friendly_name.startsWith(device + ' ') ? state.attributes.friendly_name.slice(device.length + 1) : state.attributes.friendly_name}"
+                            - type: section
+                              label: Data
+                            - device: "${device}"
+                              domain: sensor
+                              options:
+                                eval_js: true
+                                name: "${'${'}state.attributes.friendly_name.startsWith(device + ' ') ? state.attributes.friendly_name.slice(device.length + 1) : state.attributes.friendly_name}"
+                              sort:
+                                method: entity_id
