@@ -57,6 +57,7 @@ static constexpr int CHANNEL_POLL_MS = 250;
 static constexpr int SHT40_POLL_MS = 30000;
 static constexpr int DIAGNOSTICS_POLL_MS = 30000;
 static constexpr int WIFI_CONNECT_TIMEOUT_MS = 20000;
+static constexpr int MQTT_KEEPALIVE_SECONDS = 30;
 static constexpr int STATUS_LED_BLINK_MS = 400;
 static constexpr int RELEASE_CHECK_MS = 6 * 60 * 60 * 1000;
 static constexpr int GLOBAL_OTA_MAX_DELAY_MS = 30000;
@@ -122,6 +123,7 @@ struct AppContext {
     httpd_handle_t setup_httpd = nullptr;
     std::string node_id;
     std::string base_topic;
+    std::string availability_topic;
     std::string mac_address;
     std::string ip_address;
     ReleaseInfo release;
@@ -1028,7 +1030,7 @@ static void mqtt_event_handler(void* handler_args, esp_event_base_t base, int32_
             ESP_LOGI(TAG, "MQTT connected");
             mqtt_connected.store(true);
             refresh_status_led_mode();
-            esp_mqtt_client_publish(g_ctx.mqtt, (g_ctx.base_topic + "/status").c_str(), "online", 0, 1, true);
+            esp_mqtt_client_publish(g_ctx.mqtt, g_ctx.availability_topic.c_str(), "online", 0, 1, true);
             publish_discovery();
             subscribe_channel_commands();
             esp_mqtt_client_publish(
@@ -1153,6 +1155,11 @@ static void init_mqtt() {
     mqtt_cfg.broker.address.uri = g_ctx.cfg.mqtt_uri;
     mqtt_cfg.credentials.username = g_ctx.cfg.mqtt_username;
     mqtt_cfg.credentials.authentication.password = g_ctx.cfg.mqtt_password;
+    mqtt_cfg.session.last_will.topic = g_ctx.availability_topic.c_str();
+    mqtt_cfg.session.last_will.msg = "offline";
+    mqtt_cfg.session.last_will.qos = 1;
+    mqtt_cfg.session.last_will.retain = 1;
+    mqtt_cfg.session.keepalive = MQTT_KEEPALIVE_SECONDS;
     mqtt_cfg.task.stack_size = 8192;
 
     g_ctx.mqtt = esp_mqtt_client_init(&mqtt_cfg);
@@ -1547,6 +1554,7 @@ extern "C" void app_main(void) {
     }
 
     g_ctx.base_topic = std::string("home/") + sanitize_topic_part(g_ctx.cfg.device_name);
+    g_ctx.availability_topic = g_ctx.base_topic + "/status";
     if (g_ctx.environment_sensor &&
         xTaskCreate(
             environment_publisher_task,
