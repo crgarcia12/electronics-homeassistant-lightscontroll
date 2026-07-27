@@ -59,6 +59,7 @@ static constexpr int DIAGNOSTICS_POLL_MS = 30000;
 static constexpr int WIFI_CONNECT_TIMEOUT_MS = 20000;
 static constexpr int MQTT_KEEPALIVE_SECONDS = 30;
 static constexpr int STATUS_LED_BLINK_MS = 400;
+static constexpr int OTA_STATUS_LED_BLINK_MS = 200;
 static constexpr int RELEASE_CHECK_MS = 6 * 60 * 60 * 1000;
 static constexpr int GLOBAL_OTA_MAX_DELAY_MS = 30000;
 static constexpr size_t MAX_RELEASE_RESPONSE_BYTES = 96 * 1024;
@@ -81,6 +82,7 @@ enum class BoardType {
 };
 
 enum class StatusLedMode {
+    OTA_UPDATING,
     WIFI_CONNECTING,
     MQTT_ERROR,
     OFF,
@@ -461,7 +463,9 @@ static bool write_status_led_color(uint8_t red, uint8_t green, uint8_t blue) {
 
 static void refresh_status_led_mode() {
     StatusLedMode next = StatusLedMode::OFF;
-    if (!wifi_connected.load()) {
+    if (ota_in_progress.load()) {
+        next = StatusLedMode::OTA_UPDATING;
+    } else if (!wifi_connected.load()) {
         next = StatusLedMode::WIFI_CONNECTING;
     } else if (!mqtt_connected.load()) {
         next = StatusLedMode::MQTT_ERROR;
@@ -473,6 +477,9 @@ static void refresh_status_led_mode() {
     }
 
     switch (next) {
+        case StatusLedMode::OTA_UPDATING:
+            ESP_LOGI(TAG, "Status LED: blinking purple while firmware updates");
+            break;
         case StatusLedMode::WIFI_CONNECTING:
             ESP_LOGI(TAG, "Status LED: alternating blue and green while WiFi connects");
             break;
@@ -488,21 +495,35 @@ static void refresh_status_led_mode() {
 static void status_led_task_main(void* arg) {
     (void)arg;
     bool first_render = true;
-    bool show_blue = false;
+    bool blink_phase = false;
     StatusLedMode previous = StatusLedMode::OFF;
 
     while (true) {
         StatusLedMode current = status_led_mode.load();
-        if (current == StatusLedMode::WIFI_CONNECTING) {
+        if (current == StatusLedMode::OTA_UPDATING ||
+            current == StatusLedMode::WIFI_CONNECTING) {
             if (first_render || previous != current) {
-                show_blue = true;
+                blink_phase = true;
             } else {
-                show_blue = !show_blue;
+                blink_phase = !blink_phase;
             }
-            write_status_led_color(0, show_blue ? 0 : 255, show_blue ? 255 : 0);
+            if (current == StatusLedMode::OTA_UPDATING) {
+                write_status_led_color(
+                    blink_phase ? 255 : 0,
+                    0,
+                    blink_phase ? 255 : 0);
+            } else {
+                write_status_led_color(
+                    0,
+                    blink_phase ? 0 : 255,
+                    blink_phase ? 255 : 0);
+            }
             first_render = false;
             previous = current;
-            vTaskDelay(pdMS_TO_TICKS(STATUS_LED_BLINK_MS));
+            vTaskDelay(pdMS_TO_TICKS(
+                current == StatusLedMode::OTA_UPDATING
+                    ? OTA_STATUS_LED_BLINK_MS
+                    : STATUS_LED_BLINK_MS));
             continue;
         }
 
@@ -517,6 +538,11 @@ static void status_led_task_main(void* arg) {
         }
         vTaskDelay(pdMS_TO_TICKS(100));
     }
+}
+
+static void set_ota_in_progress(bool in_progress) {
+    ota_in_progress.store(in_progress);
+    refresh_status_led_mode();
 }
 
 static void publish_ota_status(const char* status, bool retain = true) {
@@ -952,7 +978,7 @@ static void ota_update_task(void* arg) {
     std::string ota_url = release.asset_url.empty() ? g_ctx.cfg.ota_url : release.asset_url;
     if (ota_url.empty() || ota_url.rfind("https://", 0) != 0) {
         ESP_LOGE(TAG, "OTA requires a GitHub release asset or configured HTTPS URL");
-        ota_in_progress.store(false);
+        set_ota_in_progress(false);
         publish_ota_status("failed: no HTTPS firmware URL");
         vTaskDelete(nullptr);
         return;
@@ -961,7 +987,7 @@ static void ota_update_task(void* arg) {
     if (!release.version.empty() &&
         release.version == installed_firmware_version()) {
         ESP_LOGI(TAG, "Firmware %s is already installed", release.version.c_str());
-        ota_in_progress.store(false);
+        set_ota_in_progress(false);
         publish_ota_status("already current");
         vTaskDelete(nullptr);
         return;
@@ -990,7 +1016,7 @@ static void ota_update_task(void* arg) {
     ESP_LOGE(TAG, "OTA update failed: %s", esp_err_to_name(err));
     char status[96];
     std::snprintf(status, sizeof(status), "failed: %s", esp_err_to_name(err));
-    ota_in_progress.store(false);
+    set_ota_in_progress(false);
     publish_ota_status(status);
     vTaskDelete(nullptr);
 }
@@ -1004,10 +1030,11 @@ static void handle_ota_command(const char* data, int data_len, bool fleet_update
         publish_ota_status("already running", false);
         return;
     }
+    refresh_status_led_mode();
 
     auto* request = new (std::nothrow) OtaRequest{.fleet_update = fleet_update};
     if (!request) {
-        ota_in_progress.store(false);
+        set_ota_in_progress(false);
         publish_ota_status("failed: out of memory");
         return;
     }
@@ -1015,7 +1042,7 @@ static void handle_ota_command(const char* data, int data_len, bool fleet_update
     publish_update_state();
     if (xTaskCreate(ota_update_task, "ota_update", 16384, request, 5, nullptr) != pdPASS) {
         delete request;
-        ota_in_progress.store(false);
+        set_ota_in_progress(false);
         publish_ota_status("failed: could not start update task");
     }
 }

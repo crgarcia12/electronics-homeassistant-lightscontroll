@@ -270,6 +270,10 @@ controller, or `mqttPasswords` can map each tracked MQTT username to a separate 
 The first OTA-capable image must be installed over USB because it introduces the dual-slot partition table.
 Afterward, pressing **Install firmware update** in Home Assistant downloads the configured HTTPS image into
 the inactive slot. ESP-IDF retains the previous image for automatic rollback if the new image cannot boot.
+The Home Assistant **Firmware status** diagnostic reports each OTA phase. Firmware with the OTA LED behavior
+rapidly blinks purple while updating, then alternates blue and green during the reboot connection sequence
+and turns the LED off once WiFi and MQTT are healthy. The first update that installs this LED behavior is
+still executed by the previous firmware, so purple indication begins with subsequent updates.
 
 ## Technical Specifications
 
