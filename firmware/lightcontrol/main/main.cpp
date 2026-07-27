@@ -587,6 +587,28 @@ static esp_err_t release_http_event_handler(esp_http_client_event_t* event) {
     return ESP_OK;
 }
 
+static bool is_numeric_release_version(const char* version) {
+    if (!version || version[0] == '\0') {
+        return false;
+    }
+
+    int separators = 0;
+    bool has_digit = false;
+    for (size_t i = 0; version[i] != '\0'; ++i) {
+        unsigned char c = static_cast<unsigned char>(version[i]);
+        if (std::isdigit(c)) {
+            has_digit = true;
+            continue;
+        }
+        if (c != '.' || !has_digit || separators >= 2) {
+            return false;
+        }
+        ++separators;
+        has_digit = false;
+    }
+    return separators == 2 && has_digit;
+}
+
 static bool fetch_latest_release(ReleaseInfo& output) {
     HttpResponseBuffer response;
     esp_http_client_config_t config = {};
@@ -631,14 +653,17 @@ static bool fetch_latest_release(ReleaseInfo& output) {
     cJSON* release = nullptr;
     cJSON_ArrayForEach(release, releases.get()) {
         cJSON* draft = cJSON_GetObjectItemCaseSensitive(release, "draft");
-        if (cJSON_IsTrue(draft)) {
+        cJSON* prerelease = cJSON_GetObjectItemCaseSensitive(release, "prerelease");
+        if (cJSON_IsTrue(draft) || cJSON_IsTrue(prerelease)) {
             continue;
         }
 
         cJSON* tag_name = cJSON_GetObjectItemCaseSensitive(release, "tag_name");
         cJSON* html_url = cJSON_GetObjectItemCaseSensitive(release, "html_url");
         cJSON* assets = cJSON_GetObjectItemCaseSensitive(release, "assets");
-        if (!cJSON_IsString(tag_name) || !tag_name->valuestring || !cJSON_IsArray(assets)) {
+        if (!cJSON_IsString(tag_name) || !tag_name->valuestring ||
+            !is_numeric_release_version(tag_name->valuestring) ||
+            !cJSON_IsArray(assets)) {
             continue;
         }
 

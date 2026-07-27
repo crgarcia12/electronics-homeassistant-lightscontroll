@@ -64,18 +64,16 @@ purple because the previous firmware performs that download.
 The global command is not retained, so offline controllers do not unexpectedly update later.
 Online controllers wait a random 0-30 seconds before downloading to avoid a download spike.
 
-## Release tags
+## Release versions
 
 The firmware release workflow builds `firmware/lightcontrol` with ESP-IDF `v5.3.1`.
 
-- `v1.2.3` → stable release
-- `v1.2.3-rc1` → prerelease
-- `v1.2.3-beta.2` → prerelease
-- `v1.2.3-alpha` → prerelease
+Firmware versions are stable numeric `MAJOR.MINOR.PATCH` values without a prefix or suffix:
 
-You can also run the workflow manually with a tag and explicit prerelease flag.
-The manual tag must already exist.
+- `1.0.1`
+- `1.0.2`
+- `1.0.3`
 
-Controllers select the newest published release that contains `lightcontrol.bin`, including
-prereleases. This supports a pilot flow: publish an `-rc` release, update one controller from its
-individual update entity, test it, and then use the fleet button.
+Push a numeric tag to publish a stable release. You can also run the workflow manually with an
+existing numeric tag. Controllers ignore drafts, prereleases, and tags that do not exactly match
+the numeric version format.

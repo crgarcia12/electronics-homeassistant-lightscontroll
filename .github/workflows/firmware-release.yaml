@@ -3,17 +3,13 @@ name: firmware-release
 on:
   push:
     tags:
-      - v*
+      - '[0-9]*.[0-9]*.[0-9]*'
   workflow_dispatch:
     inputs:
       tag:
-        description: Release tag to build and publish
+        description: Numeric release tag to build and publish, for example 1.0.1
         required: true
         type: string
-      prerelease:
-        description: Mark the release as a prerelease
-        required: true
-        type: boolean
 
 permissions:
   contents: write
@@ -44,18 +40,17 @@ jobs:
           set -euo pipefail
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             tag="${{ inputs.tag }}"
-            prerelease="${{ inputs.prerelease }}"
           else
             tag="${GITHUB_REF_NAME}"
-            if [[ "$tag" =~ (-alpha|-beta|-rc) ]]; then
-              prerelease=true
-            else
-              prerelease=false
-            fi
+          fi
+
+          if [[ ! "$tag" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "Release tag must be numeric MAJOR.MINOR.PATCH without a prefix or suffix: $tag" >&2
+            exit 1
           fi
 
           echo "tag_name=$tag" >> "$GITHUB_OUTPUT"
-          echo "prerelease=$prerelease" >> "$GITHUB_OUTPUT"
+          echo "prerelease=false" >> "$GITHUB_OUTPUT"
           echo "target_commitish=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
       - name: Publish GitHub Release
