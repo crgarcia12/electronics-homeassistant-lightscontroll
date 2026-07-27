@@ -60,6 +60,8 @@ static constexpr int WIFI_CONNECT_TIMEOUT_MS = 20000;
 static constexpr int MQTT_KEEPALIVE_SECONDS = 30;
 static constexpr int STATUS_LED_BLINK_MS = 400;
 static constexpr int OTA_STATUS_LED_BLINK_MS = 200;
+static constexpr int OTA_HTTP_TX_BUFFER_SIZE = 2048;
+static constexpr int OTA_PROGRESS_STEP_PERCENT = 5;
 static constexpr int RELEASE_CHECK_MS = 6 * 60 * 60 * 1000;
 static constexpr int GLOBAL_OTA_MAX_DELAY_MS = 30000;
 static constexpr size_t MAX_RELEASE_RESPONSE_BYTES = 96 * 1024;
@@ -963,16 +965,14 @@ static void ota_update_task(void* arg) {
         vTaskDelay(pdMS_TO_TICKS(delay_ms));
     }
 
+    publish_ota_status("checking release");
     ReleaseInfo release = release_snapshot();
-    if (release.asset_url.empty()) {
-        publish_ota_status("checking release");
-        ReleaseInfo fetched;
-        if (fetch_latest_release(fetched)) {
-            store_release_info(fetched);
-            release = std::move(fetched);
-            publish_update_state();
-            publish_diagnostics_state();
-        }
+    ReleaseInfo fetched;
+    if (fetch_latest_release(fetched)) {
+        store_release_info(fetched);
+        release = std::move(fetched);
+        publish_update_state();
+        publish_diagnostics_state();
     }
 
     std::string ota_url = release.asset_url.empty() ? g_ctx.cfg.ota_url : release.asset_url;
@@ -1000,12 +1000,61 @@ static void ota_update_task(void* arg) {
     http_config.crt_bundle_attach = esp_crt_bundle_attach;
     http_config.timeout_ms = 15000;
     http_config.keep_alive_enable = true;
+    // GitHub release assets redirect to a signed URL whose request target exceeds the 512-byte default.
+    http_config.buffer_size_tx = OTA_HTTP_TX_BUFFER_SIZE;
 
     esp_https_ota_config_t ota_config = {};
     ota_config.http_config = &http_config;
 
     ESP_LOGI(TAG, "Starting OTA update from %s", ota_url.c_str());
-    esp_err_t err = esp_https_ota(&ota_config);
+    esp_https_ota_handle_t ota_handle = nullptr;
+    esp_err_t err = esp_https_ota_begin(&ota_config, &ota_handle);
+    if (err != ESP_OK) {
+        ESP_LOGE(TAG, "OTA initialization failed: %s", esp_err_to_name(err));
+        char status[96];
+        std::snprintf(status, sizeof(status), "failed to start: %s", esp_err_to_name(err));
+        set_ota_in_progress(false);
+        publish_ota_status(status);
+        vTaskDelete(nullptr);
+        return;
+    }
+
+    int image_size = esp_https_ota_get_image_size(ota_handle);
+    int last_progress = 0;
+    while ((err = esp_https_ota_perform(ota_handle)) == ESP_ERR_HTTPS_OTA_IN_PROGRESS) {
+        if (image_size <= 0) {
+            continue;
+        }
+
+        int bytes_read = esp_https_ota_get_image_len_read(ota_handle);
+        int progress = static_cast<int>(
+            (static_cast<int64_t>(bytes_read) * 100) / image_size);
+        if (progress > 99) {
+            progress = 99;
+        }
+        if (progress >= last_progress + OTA_PROGRESS_STEP_PERCENT) {
+            char status[32];
+            std::snprintf(status, sizeof(status), "downloading %d%%", progress);
+            publish_ota_status(status);
+            last_progress = progress;
+        }
+    }
+
+    bool complete = err == ESP_OK && esp_https_ota_is_complete_data_received(ota_handle);
+    if (!complete) {
+        esp_https_ota_abort(ota_handle);
+        if (err == ESP_OK) {
+            ESP_LOGE(TAG, "OTA update failed: incomplete image");
+            set_ota_in_progress(false);
+            publish_ota_status("failed: incomplete image");
+            vTaskDelete(nullptr);
+            return;
+        }
+    } else {
+        publish_ota_status("downloading 100%");
+        err = esp_https_ota_finish(ota_handle);
+    }
+
     if (err == ESP_OK) {
         ESP_LOGI(TAG, "OTA update complete; rebooting");
         publish_ota_status("restarting");

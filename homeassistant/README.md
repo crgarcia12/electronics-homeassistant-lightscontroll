@@ -54,7 +54,7 @@ Install **Auto Entities** and **Expander Card** from **HACS → Frontend**.
 
 While an update runs, the update entity reports that installation is in progress and the expanded
 controller card's **Firmware status** sensor moves through `scheduled`, `checking release`,
-`downloading`, and `restarting`. A failure is retained there with its ESP-IDF error.
+`downloading N%`, and `restarting`. A failure is retained there with its ESP-IDF error.
 
 Firmware with OTA LED indication rapidly blinks the board's status LED purple throughout the update.
 After installation, the controller reboots, alternates blue and green while reconnecting, and turns
