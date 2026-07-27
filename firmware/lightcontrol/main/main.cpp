@@ -63,8 +63,8 @@ static constexpr int SHT40_POLL_MS = 30000;
 static constexpr int DIAGNOSTICS_POLL_MS = 30000;
 static constexpr int WIFI_CONNECT_TIMEOUT_MS = 20000;
 static constexpr int MQTT_KEEPALIVE_SECONDS = 30;
-static constexpr int STATUS_LED_BLINK_MS = 100;
-static constexpr int STATUS_LED_ACTIVITY_MS = 1000;
+static constexpr int STATUS_LED_PULSE_MS = 20;
+static constexpr int STATUS_LED_PULSE_GAP_MS = 20;
 static constexpr int STATUS_LED_ACTIVE_LEVEL = 0;
 static constexpr int STATUS_LED_INACTIVE_LEVEL = 1;
 static constexpr int RGB_LED_BLINK_MS = 400;
@@ -554,30 +554,22 @@ static void rgb_led_task_main(void* arg) {
 static void status_led_task_main(void* arg) {
     (void)arg;
     while (true) {
-        ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
-        int64_t active_until =
-            esp_timer_get_time() + static_cast<int64_t>(STATUS_LED_ACTIVITY_MS) * 1000;
-        bool on = true;
+        uint32_t pending_pulses = ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
+        while (pending_pulses > 0) {
+            gpio_set_level(STATUS_LED_GPIO, STATUS_LED_ACTIVE_LEVEL);
+            vTaskDelay(pdMS_TO_TICKS(STATUS_LED_PULSE_MS));
+            gpio_set_level(STATUS_LED_GPIO, STATUS_LED_INACTIVE_LEVEL);
 
-        while (true) {
-            gpio_set_level(
-                STATUS_LED_GPIO,
-                on ? STATUS_LED_ACTIVE_LEVEL : STATUS_LED_INACTIVE_LEVEL);
-            if (ulTaskNotifyTake(pdTRUE, pdMS_TO_TICKS(STATUS_LED_BLINK_MS)) > 0) {
-                active_until =
-                    esp_timer_get_time() + static_cast<int64_t>(STATUS_LED_ACTIVITY_MS) * 1000;
+            --pending_pulses;
+            pending_pulses += ulTaskNotifyTake(pdTRUE, 0);
+            if (pending_pulses > 0) {
+                vTaskDelay(pdMS_TO_TICKS(STATUS_LED_PULSE_GAP_MS));
             }
-            if (esp_timer_get_time() >= active_until) {
-                break;
-            }
-            on = !on;
         }
-
-        gpio_set_level(STATUS_LED_GPIO, STATUS_LED_INACTIVE_LEVEL);
     }
 }
 
-static void trigger_status_led_activity() {
+static void trigger_status_led_pulse() {
     if (g_ctx.status_led_task) {
         xTaskNotifyGive(g_ctx.status_led_task);
     }
@@ -1257,8 +1249,12 @@ static void mqtt_event_handler(void* handler_args, esp_event_base_t base, int32_
             refresh_rgb_led_mode();
             break;
         }
+        case MQTT_EVENT_PUBLISHED: {
+            trigger_status_led_pulse();
+            break;
+        }
         case MQTT_EVENT_DATA: {
-            trigger_status_led_activity();
+            trigger_status_led_pulse();
             int ch = topic_to_channel(event->topic, event->topic_len);
             if (ch > 0) {
                 handle_set_command(ch, event->data, event->data_len);
@@ -1520,7 +1516,7 @@ static void init_status_led() {
         return;
     }
 
-    ESP_LOGI(TAG, "Initialized active-low status LED on GPIO%d", STATUS_LED_GPIO);
+    ESP_LOGI(TAG, "Initialized active-low MQTT activity LED on GPIO%d", STATUS_LED_GPIO);
 }
 
 static void confirm_running_firmware() {
@@ -1688,7 +1684,6 @@ static void state_publisher_task(void* arg) {
                 bool st = read_channel_state(ch);
                 if (g_ctx.last_state[ch - 1] != st) {
                     g_ctx.last_state[ch - 1] = st;
-                    trigger_status_led_activity();
                     publish_channel_state(ch, st);
                 }
             }
