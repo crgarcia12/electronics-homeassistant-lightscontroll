@@ -56,10 +56,11 @@ While an update runs, the update entity reports that installation is in progress
 controller card's **Firmware status** sensor moves through `scheduled`, `checking release`,
 `downloading N%`, and `restarting`. A failure is retained there with its ESP-IDF error.
 
-Firmware with OTA LED indication rapidly blinks the board's status LED purple throughout the update.
-After installation, the controller reboots, alternates blue and green while reconnecting, and turns
-the LED off when WiFi and MQTT are healthy. The update that first installs this behavior cannot blink
-purple because the previous firmware performs that download.
+The RGB LED rapidly blinks purple throughout the update. After installation, the controller reboots,
+alternates blue and green while reconnecting, and turns the RGB LED off when WiFi and MQTT are healthy.
+The update that first installs this behavior cannot blink purple because the previous firmware performs
+that download. The separate active-low status LED on GPIO1 fast-blinks for one second whenever an MQTT
+command arrives or the firmware detects a light state change.
 
 The global command is not retained, so offline controllers do not unexpectedly update later.
 Online controllers wait a random 0-30 seconds before downloading to avoid a download spike.

@@ -46,29 +46,35 @@
 
 static const char* TAG = "ha_bridge";
 
-static constexpr int I2C_FREQ_HZ = 100000;
+static constexpr gpio_num_t SETUP_MODE_BUTTON = GPIO_NUM_0;
+static constexpr gpio_num_t V28_RELAY_GPIO[] = {GPIO_NUM_46, GPIO_NUM_8, GPIO_NUM_18, GPIO_NUM_17};
+static constexpr gpio_num_t V28_SENSOR_GPIO[] = {GPIO_NUM_15, GPIO_NUM_7, GPIO_NUM_6, GPIO_NUM_5};
 static constexpr gpio_num_t I2C_SDA = GPIO_NUM_42;
 static constexpr gpio_num_t I2C_SCL = GPIO_NUM_41;
+static constexpr gpio_num_t STATUS_LED_GPIO = GPIO_NUM_1;
+static constexpr gpio_num_t RGB_LED_GPIO = GPIO_NUM_38;
+
+static constexpr int I2C_FREQ_HZ = 100000;
 static constexpr uint8_t TCAL_ADDR = 0x20;
 static constexpr uint8_t SHT40_ADDR = 0x44;
-static constexpr gpio_num_t RGB_LED_GPIO = GPIO_NUM_38;
 static constexpr int RELAY_PULSE_MS = 300;
 static constexpr int CHANNEL_POLL_MS = 250;
 static constexpr int SHT40_POLL_MS = 30000;
 static constexpr int DIAGNOSTICS_POLL_MS = 30000;
 static constexpr int WIFI_CONNECT_TIMEOUT_MS = 20000;
 static constexpr int MQTT_KEEPALIVE_SECONDS = 30;
-static constexpr int STATUS_LED_BLINK_MS = 400;
-static constexpr int OTA_STATUS_LED_BLINK_MS = 200;
+static constexpr int STATUS_LED_BLINK_MS = 100;
+static constexpr int STATUS_LED_ACTIVITY_MS = 1000;
+static constexpr int STATUS_LED_ACTIVE_LEVEL = 0;
+static constexpr int STATUS_LED_INACTIVE_LEVEL = 1;
+static constexpr int RGB_LED_BLINK_MS = 400;
+static constexpr int OTA_RGB_LED_BLINK_MS = 200;
 static constexpr int OTA_HTTP_TX_BUFFER_SIZE = 2048;
 static constexpr int OTA_PROGRESS_STEP_PERCENT = 5;
 static constexpr int RELEASE_CHECK_MS = 6 * 60 * 60 * 1000;
 static constexpr int GLOBAL_OTA_MAX_DELAY_MS = 30000;
 static constexpr size_t MAX_RELEASE_RESPONSE_BYTES = 96 * 1024;
-static constexpr gpio_num_t SETUP_MODE_BUTTON = GPIO_NUM_0;
 
-static constexpr gpio_num_t V28_RELAY_GPIO[] = {GPIO_NUM_46, GPIO_NUM_8, GPIO_NUM_18, GPIO_NUM_17};
-static constexpr gpio_num_t V28_SENSOR_GPIO[] = {GPIO_NUM_15, GPIO_NUM_7, GPIO_NUM_6, GPIO_NUM_5};
 static constexpr bool V28_SENSOR_ACTIVE_HIGH = true;
 
 static constexpr const char* NVS_NS = "cfg";
@@ -83,7 +89,7 @@ enum class BoardType {
     V28_4CH_GPIO,
 };
 
-enum class StatusLedMode {
+enum class RgbLedMode {
     OTA_UPDATING,
     WIFI_CONNECTING,
     MQTT_ERROR,
@@ -121,8 +127,9 @@ struct AppContext {
     TaskHandle_t environment_task = nullptr;
     TaskHandle_t diagnostics_task = nullptr;
     TaskHandle_t release_task = nullptr;
-    led_strip_handle_t status_led = nullptr;
     TaskHandle_t status_led_task = nullptr;
+    led_strip_handle_t rgb_led = nullptr;
+    TaskHandle_t rgb_led_task = nullptr;
     esp_mqtt_client_handle_t mqtt = nullptr;
     httpd_handle_t setup_httpd = nullptr;
     std::string node_id;
@@ -142,7 +149,7 @@ static AppContext g_ctx;
 static std::atomic_bool ota_in_progress = false;
 static std::atomic_bool wifi_connected = false;
 static std::atomic_bool mqtt_connected = false;
-static std::atomic<StatusLedMode> status_led_mode = StatusLedMode::OFF;
+static std::atomic<RgbLedMode> rgb_led_mode = RgbLedMode::OFF;
 
 static std::string sanitize_topic_part(const char* src) {
     std::string out;
@@ -447,75 +454,75 @@ static void publish_diagnostics_state() {
         ota_url.empty() ? "not configured" : ota_url.c_str());
 }
 
-static bool write_status_led_color(uint8_t red, uint8_t green, uint8_t blue) {
-    if (!g_ctx.status_led) {
+static bool write_rgb_led_color(uint8_t red, uint8_t green, uint8_t blue) {
+    if (!g_ctx.rgb_led) {
         return false;
     }
 
-    esp_err_t err = led_strip_set_pixel(g_ctx.status_led, 0, red, green, blue);
+    esp_err_t err = led_strip_set_pixel(g_ctx.rgb_led, 0, red, green, blue);
     if (err == ESP_OK) {
-        err = led_strip_refresh(g_ctx.status_led);
+        err = led_strip_refresh(g_ctx.rgb_led);
     }
     if (err != ESP_OK) {
-        ESP_LOGE(TAG, "Failed updating status LED: %s", esp_err_to_name(err));
+        ESP_LOGE(TAG, "Failed updating RGB LED: %s", esp_err_to_name(err));
         return false;
     }
     return true;
 }
 
-static void refresh_status_led_mode() {
-    StatusLedMode next = StatusLedMode::OFF;
+static void refresh_rgb_led_mode() {
+    RgbLedMode next = RgbLedMode::OFF;
     if (ota_in_progress.load()) {
-        next = StatusLedMode::OTA_UPDATING;
+        next = RgbLedMode::OTA_UPDATING;
     } else if (!wifi_connected.load()) {
-        next = StatusLedMode::WIFI_CONNECTING;
+        next = RgbLedMode::WIFI_CONNECTING;
     } else if (!mqtt_connected.load()) {
-        next = StatusLedMode::MQTT_ERROR;
+        next = RgbLedMode::MQTT_ERROR;
     }
 
-    StatusLedMode previous = status_led_mode.exchange(next);
+    RgbLedMode previous = rgb_led_mode.exchange(next);
     if (previous == next) {
         return;
     }
 
     switch (next) {
-        case StatusLedMode::OTA_UPDATING:
-            ESP_LOGI(TAG, "Status LED: blinking purple while firmware updates");
+        case RgbLedMode::OTA_UPDATING:
+            ESP_LOGI(TAG, "RGB LED: blinking purple while firmware updates");
             break;
-        case StatusLedMode::WIFI_CONNECTING:
-            ESP_LOGI(TAG, "Status LED: alternating blue and green while WiFi connects");
+        case RgbLedMode::WIFI_CONNECTING:
+            ESP_LOGI(TAG, "RGB LED: alternating blue and green while WiFi connects");
             break;
-        case StatusLedMode::MQTT_ERROR:
-            ESP_LOGI(TAG, "Status LED: red while MQTT is disconnected");
+        case RgbLedMode::MQTT_ERROR:
+            ESP_LOGI(TAG, "RGB LED: red while MQTT is disconnected");
             break;
-        case StatusLedMode::OFF:
-            ESP_LOGI(TAG, "Status LED: off, controller is connected");
+        case RgbLedMode::OFF:
+            ESP_LOGI(TAG, "RGB LED: off, controller is connected");
             break;
     }
 }
 
-static void status_led_task_main(void* arg) {
+static void rgb_led_task_main(void* arg) {
     (void)arg;
     bool first_render = true;
     bool blink_phase = false;
-    StatusLedMode previous = StatusLedMode::OFF;
+    RgbLedMode previous = RgbLedMode::OFF;
 
     while (true) {
-        StatusLedMode current = status_led_mode.load();
-        if (current == StatusLedMode::OTA_UPDATING ||
-            current == StatusLedMode::WIFI_CONNECTING) {
+        RgbLedMode current = rgb_led_mode.load();
+        if (current == RgbLedMode::OTA_UPDATING ||
+            current == RgbLedMode::WIFI_CONNECTING) {
             if (first_render || previous != current) {
                 blink_phase = true;
             } else {
                 blink_phase = !blink_phase;
             }
-            if (current == StatusLedMode::OTA_UPDATING) {
-                write_status_led_color(
+            if (current == RgbLedMode::OTA_UPDATING) {
+                write_rgb_led_color(
                     blink_phase ? 255 : 0,
                     0,
                     blink_phase ? 255 : 0);
             } else {
-                write_status_led_color(
+                write_rgb_led_color(
                     0,
                     blink_phase ? 0 : 255,
                     blink_phase ? 255 : 0);
@@ -523,17 +530,17 @@ static void status_led_task_main(void* arg) {
             first_render = false;
             previous = current;
             vTaskDelay(pdMS_TO_TICKS(
-                current == StatusLedMode::OTA_UPDATING
-                    ? OTA_STATUS_LED_BLINK_MS
-                    : STATUS_LED_BLINK_MS));
+                current == RgbLedMode::OTA_UPDATING
+                    ? OTA_RGB_LED_BLINK_MS
+                    : RGB_LED_BLINK_MS));
             continue;
         }
 
         if (first_render || previous != current) {
-            if (current == StatusLedMode::MQTT_ERROR) {
-                write_status_led_color(255, 0, 0);
+            if (current == RgbLedMode::MQTT_ERROR) {
+                write_rgb_led_color(255, 0, 0);
             } else {
-                write_status_led_color(0, 0, 0);
+                write_rgb_led_color(0, 0, 0);
             }
             first_render = false;
             previous = current;
@@ -542,9 +549,41 @@ static void status_led_task_main(void* arg) {
     }
 }
 
+static void status_led_task_main(void* arg) {
+    (void)arg;
+    while (true) {
+        ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
+        int64_t active_until =
+            esp_timer_get_time() + static_cast<int64_t>(STATUS_LED_ACTIVITY_MS) * 1000;
+        bool on = true;
+
+        while (true) {
+            gpio_set_level(
+                STATUS_LED_GPIO,
+                on ? STATUS_LED_ACTIVE_LEVEL : STATUS_LED_INACTIVE_LEVEL);
+            if (ulTaskNotifyTake(pdTRUE, pdMS_TO_TICKS(STATUS_LED_BLINK_MS)) > 0) {
+                active_until =
+                    esp_timer_get_time() + static_cast<int64_t>(STATUS_LED_ACTIVITY_MS) * 1000;
+            }
+            if (esp_timer_get_time() >= active_until) {
+                break;
+            }
+            on = !on;
+        }
+
+        gpio_set_level(STATUS_LED_GPIO, STATUS_LED_INACTIVE_LEVEL);
+    }
+}
+
+static void trigger_status_led_activity() {
+    if (g_ctx.status_led_task) {
+        xTaskNotifyGive(g_ctx.status_led_task);
+    }
+}
+
 static void set_ota_in_progress(bool in_progress) {
     ota_in_progress.store(in_progress);
-    refresh_status_led_mode();
+    refresh_rgb_led_mode();
 }
 
 static void publish_ota_status(const char* status, bool retain = true) {
@@ -1104,7 +1143,7 @@ static void handle_ota_command(const char* data, int data_len, bool fleet_update
         publish_ota_status("already running", false);
         return;
     }
-    refresh_status_led_mode();
+    refresh_rgb_led_mode();
 
     auto* request = new (std::nothrow) OtaRequest{.fleet_update = fleet_update};
     if (!request) {
@@ -1130,7 +1169,7 @@ static void mqtt_event_handler(void* handler_args, esp_event_base_t base, int32_
         case MQTT_EVENT_CONNECTED: {
             ESP_LOGI(TAG, "MQTT connected");
             mqtt_connected.store(true);
-            refresh_status_led_mode();
+            refresh_rgb_led_mode();
             esp_mqtt_client_publish(g_ctx.mqtt, g_ctx.availability_topic.c_str(), "online", 0, 1, true);
             publish_discovery();
             subscribe_channel_commands();
@@ -1155,15 +1194,16 @@ static void mqtt_event_handler(void* handler_args, esp_event_base_t base, int32_
         }
         case MQTT_EVENT_DISCONNECTED: {
             mqtt_connected.store(false);
-            refresh_status_led_mode();
+            refresh_rgb_led_mode();
             break;
         }
         case MQTT_EVENT_ERROR: {
             mqtt_connected.store(false);
-            refresh_status_led_mode();
+            refresh_rgb_led_mode();
             break;
         }
         case MQTT_EVENT_DATA: {
+            trigger_status_led_activity();
             int ch = topic_to_channel(event->topic, event->topic_len);
             if (ch > 0) {
                 handle_set_command(ch, event->data, event->data_len);
@@ -1186,13 +1226,13 @@ static void wifi_event_handler(void* arg, esp_event_base_t event_base, int32_t e
     (void)arg;
     if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_START) {
         wifi_connected.store(false);
-        refresh_status_led_mode();
+        refresh_rgb_led_mode();
         esp_wifi_connect();
     } else if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_DISCONNECTED) {
         wifi_connected.store(false);
         mqtt_connected.store(false);
         xEventGroupClearBits(wifi_event_group, WIFI_CONNECTED_BIT);
-        refresh_status_led_mode();
+        refresh_rgb_led_mode();
         esp_wifi_connect();
     } else if (event_base == IP_EVENT && event_id == IP_EVENT_STA_GOT_IP) {
         auto* event = static_cast<ip_event_got_ip_t*>(event_data);
@@ -1203,7 +1243,7 @@ static void wifi_event_handler(void* arg, esp_event_base_t event_base, int32_t e
             xSemaphoreGive(state_mutex);
         }
         wifi_connected.store(true);
-        refresh_status_led_mode();
+        refresh_rgb_led_mode();
         xEventGroupSetBits(wifi_event_group, WIFI_CONNECTED_BIT);
     }
 }
@@ -1350,7 +1390,7 @@ static void init_environment_sensor() {
     }
 }
 
-static void init_status_led() {
+static void init_rgb_led() {
     led_strip_config_t strip_config = {};
     strip_config.strip_gpio_num = RGB_LED_GPIO;
     strip_config.max_leds = 1;
@@ -1364,34 +1404,65 @@ static void init_status_led() {
     rmt_config.mem_block_symbols = 0;
     rmt_config.flags.with_dma = false;
 
-    esp_err_t err = led_strip_new_rmt_device(&strip_config, &rmt_config, &g_ctx.status_led);
+    esp_err_t err = led_strip_new_rmt_device(&strip_config, &rmt_config, &g_ctx.rgb_led);
     if (err == ESP_OK) {
-        err = led_strip_clear(g_ctx.status_led);
+        err = led_strip_clear(g_ctx.rgb_led);
     }
     if (err != ESP_OK) {
         ESP_LOGE(TAG, "Failed initializing WS2812B on GPIO%d: %s", RGB_LED_GPIO, esp_err_to_name(err));
-        if (g_ctx.status_led) {
-            led_strip_del(g_ctx.status_led);
-            g_ctx.status_led = nullptr;
+        if (g_ctx.rgb_led) {
+            led_strip_del(g_ctx.rgb_led);
+            g_ctx.rgb_led = nullptr;
         }
+        return;
+    }
+
+    if (xTaskCreate(
+            rgb_led_task_main,
+            "rgb_led",
+            3072,
+            nullptr,
+            4,
+            &g_ctx.rgb_led_task) != pdPASS) {
+        ESP_LOGE(TAG, "Failed starting RGB LED task");
+        led_strip_del(g_ctx.rgb_led);
+        g_ctx.rgb_led = nullptr;
+        return;
+    }
+
+    ESP_LOGI(TAG, "Initialized connectivity RGB LED on GPIO%d", RGB_LED_GPIO);
+    refresh_rgb_led_mode();
+}
+
+static void init_status_led() {
+    gpio_config_t config = {};
+    config.pin_bit_mask = 1ULL << STATUS_LED_GPIO;
+    config.mode = GPIO_MODE_OUTPUT;
+    config.pull_up_en = GPIO_PULLUP_DISABLE;
+    config.pull_down_en = GPIO_PULLDOWN_DISABLE;
+    config.intr_type = GPIO_INTR_DISABLE;
+
+    esp_err_t err = gpio_config(&config);
+    if (err == ESP_OK) {
+        err = gpio_set_level(STATUS_LED_GPIO, STATUS_LED_INACTIVE_LEVEL);
+    }
+    if (err != ESP_OK) {
+        ESP_LOGE(TAG, "Failed initializing status LED on GPIO%d: %s", STATUS_LED_GPIO, esp_err_to_name(err));
         return;
     }
 
     if (xTaskCreate(
             status_led_task_main,
             "status_led",
-            3072,
+            2048,
             nullptr,
             4,
             &g_ctx.status_led_task) != pdPASS) {
         ESP_LOGE(TAG, "Failed starting status LED task");
-        led_strip_del(g_ctx.status_led);
-        g_ctx.status_led = nullptr;
         return;
     }
 
-    ESP_LOGI(TAG, "Initialized connectivity status LED on GPIO%d", RGB_LED_GPIO);
-    refresh_status_led_mode();
+    ESP_LOGI(TAG, "Initialized active-low status LED on GPIO%d", STATUS_LED_GPIO);
 }
 
 static void confirm_running_firmware() {
@@ -1559,6 +1630,7 @@ static void state_publisher_task(void* arg) {
                 bool st = read_channel_state(ch);
                 if (g_ctx.last_state[ch - 1] != st) {
                     g_ctx.last_state[ch - 1] = st;
+                    trigger_status_led_activity();
                     publish_channel_state(ch, st);
                 }
             }
@@ -1632,6 +1704,7 @@ extern "C" void app_main(void) {
     init_i2c_bus();
     detect_board();
     init_environment_sensor();
+    init_rgb_led();
     init_status_led();
     confirm_running_firmware();
     g_ctx.last_state.assign(g_ctx.channel_count, false);
