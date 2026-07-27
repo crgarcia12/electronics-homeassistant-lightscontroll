@@ -1,0 +1,71 @@
+name: firmware-release
+
+on:
+  push:
+    tags:
+      - v*
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Release tag to build and publish
+        required: true
+        type: string
+      prerelease:
+        description: Mark the release as a prerelease
+        required: true
+        type: boolean
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout release tag
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          submodules: recursive
+          ref: ${{ github.event_name == 'workflow_dispatch' && format('refs/tags/{0}', inputs.tag) || github.ref }}
+
+      - name: Set up ESP-IDF 5.3.1
+        uses: espressif/esp-idf-ci-action@v1
+        with:
+          esp_idf_version: v5.3.1
+          target: esp32s3
+          path: firmware/lightcontrol
+
+      - name: Capture release metadata
+        id: meta
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            tag="${{ inputs.tag }}"
+            prerelease="${{ inputs.prerelease }}"
+          else
+            tag="${GITHUB_REF_NAME}"
+            if [[ "$tag" =~ (-alpha|-beta|-rc) ]]; then
+              prerelease=true
+            else
+              prerelease=false
+            fi
+          fi
+
+          echo "tag_name=$tag" >> "$GITHUB_OUTPUT"
+          echo "prerelease=$prerelease" >> "$GITHUB_OUTPUT"
+          echo "target_commitish=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Publish GitHub Release
+        uses: softprops/action-gh-release@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ steps.meta.outputs.tag_name }}
+          target_commitish: ${{ steps.meta.outputs.target_commitish }}
+          prerelease: ${{ steps.meta.outputs.prerelease }}
+          files: lightcontrol.bin
+          working_directory: firmware/lightcontrol/build
+          fail_on_unmatched_files: true
