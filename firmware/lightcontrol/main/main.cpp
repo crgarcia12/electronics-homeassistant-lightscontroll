@@ -65,8 +65,8 @@ static constexpr int WIFI_CONNECT_TIMEOUT_MS = 20000;
 static constexpr int MQTT_KEEPALIVE_SECONDS = 30;
 static constexpr int STATUS_LED_PULSE_MS = 20;
 static constexpr int STATUS_LED_PULSE_GAP_MS = 20;
-static constexpr int STATUS_LED_ACTIVE_LEVEL = 0;
-static constexpr int STATUS_LED_INACTIVE_LEVEL = 1;
+static constexpr int STATUS_LED_ACTIVE_LEVEL = 1;
+static constexpr int STATUS_LED_INACTIVE_LEVEL = 0;
 static constexpr int RGB_LED_BLINK_MS = 400;
 static constexpr int OTA_RGB_LED_BLINK_MS = 200;
 static constexpr int OTA_HTTP_TX_BUFFER_SIZE = 2048;
@@ -1494,8 +1494,8 @@ static void init_status_led() {
     gpio_config_t config = {};
     config.pin_bit_mask = 1ULL << STATUS_LED_GPIO;
     config.mode = GPIO_MODE_OUTPUT;
-    config.pull_up_en = GPIO_PULLUP_ENABLE;
-    config.pull_down_en = GPIO_PULLDOWN_DISABLE;
+    config.pull_up_en = GPIO_PULLUP_DISABLE;
+    config.pull_down_en = GPIO_PULLDOWN_ENABLE;
     config.intr_type = GPIO_INTR_DISABLE;
 
     if (err == ESP_OK) {
@@ -1517,7 +1517,7 @@ static void init_status_led() {
         return;
     }
 
-    ESP_LOGI(TAG, "Initialized active-low MQTT activity LED on GPIO%d", STATUS_LED_GPIO);
+    ESP_LOGI(TAG, "Initialized active-high MQTT activity LED on GPIO%d", STATUS_LED_GPIO);
 }
 
 static void confirm_running_firmware() {

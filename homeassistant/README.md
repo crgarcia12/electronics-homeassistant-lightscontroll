@@ -54,7 +54,7 @@ controller card's **Firmware status** sensor moves through `scheduled`, `checkin
 The RGB LED rapidly blinks purple throughout the update. After installation, the controller reboots,
 alternates blue and green while reconnecting, and turns the RGB LED off when WiFi and MQTT are healthy.
 The update that first installs this behavior cannot blink purple because the previous firmware performs
-that download. The separate active-low status LED on GPIO1 stays off and emits one brief pulse whenever
+that download. The separate active-high status LED on GPIO1 stays off and emits one brief pulse whenever
 an MQTT message is published or received.
 
 The global command is not retained, so offline controllers do not unexpectedly update later.

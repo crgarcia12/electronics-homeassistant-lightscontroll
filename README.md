@@ -274,7 +274,7 @@ The Home Assistant **Firmware status** diagnostic reports each OTA phase and dow
 The RGB LED rapidly blinks purple while updating, then alternates blue and green during the reboot
 connection sequence and turns off once WiFi and MQTT are healthy. The first update that installs this
 behavior is still executed by the previous firmware, so purple indication begins with subsequent updates.
-The separate active-low status LED on GPIO1 stays off and emits one brief pulse whenever an MQTT
+The separate active-high status LED on GPIO1 stays off and emits one brief pulse whenever an MQTT
 message is published or received.
 
 ## Technical Specifications
