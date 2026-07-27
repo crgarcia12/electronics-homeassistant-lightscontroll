@@ -1489,16 +1489,17 @@ static void init_rgb_led() {
 }
 
 static void init_status_led() {
+    esp_err_t err = gpio_set_level(STATUS_LED_GPIO, STATUS_LED_INACTIVE_LEVEL);
+
     gpio_config_t config = {};
     config.pin_bit_mask = 1ULL << STATUS_LED_GPIO;
     config.mode = GPIO_MODE_OUTPUT;
-    config.pull_up_en = GPIO_PULLUP_DISABLE;
+    config.pull_up_en = GPIO_PULLUP_ENABLE;
     config.pull_down_en = GPIO_PULLDOWN_DISABLE;
     config.intr_type = GPIO_INTR_DISABLE;
 
-    esp_err_t err = gpio_config(&config);
     if (err == ESP_OK) {
-        err = gpio_set_level(STATUS_LED_GPIO, STATUS_LED_INACTIVE_LEVEL);
+        err = gpio_config(&config);
     }
     if (err != ESP_OK) {
         ESP_LOGE(TAG, "Failed initializing status LED on GPIO%d: %s", STATUS_LED_GPIO, esp_err_to_name(err));
@@ -1744,6 +1745,8 @@ static void release_publisher_task(void* arg) {
 }
 
 extern "C" void app_main(void) {
+    init_status_led();
+
     esp_err_t err = nvs_flash_init();
     if (err == ESP_ERR_NVS_NO_FREE_PAGES || err == ESP_ERR_NVS_NEW_VERSION_FOUND) {
         ESP_ERROR_CHECK(nvs_flash_erase());
@@ -1764,7 +1767,6 @@ extern "C" void app_main(void) {
     detect_board();
     init_environment_sensor();
     init_rgb_led();
-    init_status_led();
     confirm_running_firmware();
     g_ctx.last_state.assign(g_ctx.channel_count, false);
 
